@@ -1,0 +1,35 @@
+{
+  "phase": "failed",
+  "allocation": "2618555",
+  "host": "g20.ttic.edu",
+  "supervisor_pid": 2681990,
+  "slurm_step_id": "2",
+  "started_utc": "2026-09-24T21:26:27.650853+00:00",
+  "workers": [
+    {
+      "name": "qualification",
+      "gpu": 0,
+      "pid": 2682113,
+      "command": [
+        "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+        "-u",
+        "-m",
+        "adamw_spectra.train",
+        "--config",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246/qualification_config.json",
+        "--out",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246/qualification",
+        "--stop-after",
+        "5"
+      ],
+      "started_unix": 1790285187.6607454,
+      "timeout_seconds": 900,
+      "state": "succeeded",
+      "exit_code": 0,
+      "ended_unix": 1790285283.6666481,
+      "worker_seconds": 96.0059027671814
+    }
+  ],
+  "error": "RuntimeError: Qualification spectra failed normalization",
+  "ended_utc": "2026-09-24T21:28:03.673661+00:00"
+}

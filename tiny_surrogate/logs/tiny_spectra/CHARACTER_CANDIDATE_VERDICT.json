@@ -1,0 +1,394 @@
+{
+  "status": "not_qualified",
+  "development_runs": 75,
+  "new_panel_scored": false,
+  "findings": [
+    "Endpoint geometry gap grows with batch on discovery seed.",
+    "Common-momentum beta0.7 TS beats SOAP-PD on both development summaries.",
+    "Small and large momentum minima are close/overlapping; no clear robust shift established.",
+    "Original early common-loss crossing estimates are coarsely sampled.",
+    "No fresh-seed independent-document confirmation was conducted."
+  ],
+  "decision": "Freeze this character candidate as an unqualified reproduction; do not tune against the new unseen-play panel. Prepare one fresh-text subword transfer candidate with data roles fixed before any training.",
+  "references": [
+    "research/adamw_spectra/MUON_CASE.md",
+    "data/tiny_shakespeare_confirmation_20260928/manifest.json"
+  ],
+  "runs": [
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "pd_b8192_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.5418907403945923
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "adamw_b8192_lr0.001_m0.9_s20260928",
+      "full_development_nll": 1.8064953088760376
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "muon_b8192_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.571211576461792
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "ts_b8192_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.5466127395629883
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "adamw_b8192_lr0.002_m0.9_s20260928",
+      "full_development_nll": 1.748487949371338
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "pd_b8192_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.5326248407363892
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "ts_b8192_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.5357614755630493
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "muon_b8192_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.572855830192566
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "spd_b8192_lr0.004_m0.9_s20260928",
+      "full_development_nll": 1.5683759450912476
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "spd_b8192_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.5510374307632446
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "muon_b8192_lr0.004_m0.9_s20260928",
+      "full_development_nll": 1.5906181335449219
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "spd_b8192_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.5293382406234741
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "ts_b8192_lr0.004_m0.9_s20260928",
+      "full_development_nll": 1.5611764192581177
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "adamw_b8192_lr0.0005_m0.9_s20260928",
+      "full_development_nll": 1.8563240766525269
+    },
+    {
+      "cohort": "shakespeare_screen_20260928",
+      "run_id": "pd_b8192_lr0.004_m0.9_s20260928",
+      "full_development_nll": 1.5805792808532715
+    },
+    {
+      "cohort": "shakespeare_edges_20260928",
+      "run_id": "muon_b8192_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.5639785528182983
+    },
+    {
+      "cohort": "shakespeare_edges_20260928",
+      "run_id": "adamw_b8192_lr0.004_m0.9_s20260928",
+      "full_development_nll": 1.697770357131958
+    },
+    {
+      "cohort": "shakespeare_edges_20260928",
+      "run_id": "spd_b8192_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.546512484550476
+    },
+    {
+      "cohort": "shakespeare_edges_20260928",
+      "run_id": "ts_b8192_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.556496024131775
+    },
+    {
+      "cohort": "shakespeare_edges_20260928",
+      "run_id": "pd_b8192_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.543422818183899
+    },
+    {
+      "cohort": "shakespeare_batchprobe_20260928",
+      "run_id": "muon_b2048_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.5415512323379517
+    },
+    {
+      "cohort": "shakespeare_batchprobe_20260928",
+      "run_id": "muon_b32768_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.6833958625793457
+    },
+    {
+      "cohort": "shakespeare_batchprobe_20260928",
+      "run_id": "adamw_b8192_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.7550615072250366
+    },
+    {
+      "cohort": "shakespeare_batchprobe_20260928",
+      "run_id": "spd_b32768_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.597870945930481
+    },
+    {
+      "cohort": "shakespeare_batchprobe_20260928",
+      "run_id": "spd_b2048_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.5181188583374023
+    },
+    {
+      "cohort": "shakespeare_batchprobe_20260928",
+      "run_id": "muon_b8192_lr0.064_m0.9_s20260928",
+      "full_development_nll": 1.5699573755264282
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b32768_lr0.032_m0.95_s20260928",
+      "full_development_nll": 1.7347890138626099
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b32768_lr0.064_m0.9_s20260928",
+      "full_development_nll": 1.6781021356582642
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "adamw_b32768_lr0.004_m0.9_s20260928",
+      "full_development_nll": 2.266145944595337
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b2048_lr0.016_m0.7_s20260928",
+      "full_development_nll": 1.5151309967041016
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b32768_lr0.064_m0.7_s20260928",
+      "full_development_nll": 1.6457303762435913
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "pd_b32768_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.619577169418335
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "ts_b32768_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.6749085187911987
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b32768_lr0.032_m0.8_s20260928",
+      "full_development_nll": 1.593388557434082
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b32768_lr0.016_m0.7_s20260928",
+      "full_development_nll": 1.5793945789337158
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b2048_lr0.008_m0.7_s20260928",
+      "full_development_nll": 1.5166198015213013
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b2048_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.5405633449554443
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b2048_lr0.016_m0.95_s20260928",
+      "full_development_nll": 1.5272294282913208
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b2048_lr0.016_m0.7_s20260928",
+      "full_development_nll": 1.524908185005188
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b2048_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.5188820362091064
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b2048_lr0.032_m0.8_s20260928",
+      "full_development_nll": 1.5321006774902344
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b32768_lr0.032_m0.7_s20260928",
+      "full_development_nll": 1.6500110626220703
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "ts_b32768_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.5987777709960938
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b32768_lr0.016_m0.95_s20260928",
+      "full_development_nll": 1.6293506622314453
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b2048_lr0.008_m0.8_s20260928",
+      "full_development_nll": 1.5156359672546387
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b2048_lr0.032_m0.7_s20260928",
+      "full_development_nll": 1.528158187866211
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b2048_lr0.016_m0.8_s20260928",
+      "full_development_nll": 1.5336380004882812
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "adamw_b32768_lr0.002_m0.9_s20260928",
+      "full_development_nll": 2.0923781394958496
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b32768_lr0.032_m0.95_s20260928",
+      "full_development_nll": 1.6448866128921509
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "pd_b32768_lr0.008_m0.9_s20260928",
+      "full_development_nll": 1.6894209384918213
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b32768_lr0.032_m0.8_s20260928",
+      "full_development_nll": 1.6569873094558716
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "ts_b32768_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.6068792343139648
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b32768_lr0.032_m0.9_s20260928",
+      "full_development_nll": 1.6089284420013428
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b2048_lr0.016_m0.8_s20260928",
+      "full_development_nll": 1.5138049125671387
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b2048_lr0.016_m0.95_s20260928",
+      "full_development_nll": 1.5431777238845825
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "pd_b32768_lr0.016_m0.9_s20260928",
+      "full_development_nll": 1.6301213502883911
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "adamw_b32768_lr0.008_m0.9_s20260928",
+      "full_development_nll": 2.4732279777526855
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b32768_lr0.064_m0.8_s20260928",
+      "full_development_nll": 1.6457514762878418
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b2048_lr0.032_m0.95_s20260928",
+      "full_development_nll": 1.5457063913345337
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "muon_b32768_lr0.064_m0.95_s20260928",
+      "full_development_nll": 1.7645453214645386
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b32768_lr0.016_m0.8_s20260928",
+      "full_development_nll": 1.5808786153793335
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b32768_lr0.032_m0.7_s20260928",
+      "full_development_nll": 1.5799758434295654
+    },
+    {
+      "cohort": "shakespeare_dynamics_20260928",
+      "run_id": "spd_b2048_lr0.008_m0.95_s20260928",
+      "full_development_nll": 1.525844931602478
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "ts_b32768_lr0.032_m0.7_s20260928",
+      "full_development_nll": 1.5768955945968628
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "muon_b32768_lr0.064_m0.6_s20260928",
+      "full_development_nll": 1.6510097980499268
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "spd_b32768_lr0.032_m0.6_s20260928",
+      "full_development_nll": 1.5741612911224365
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "adamw_b32768_lr0.001_m0.9_s20260928",
+      "full_development_nll": 2.0881874561309814
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "muon_b32768_lr0.032_m0.6_s20260928",
+      "full_development_nll": 1.6555242538452148
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "pd_b32768_lr0.016_m0.7_s20260928",
+      "full_development_nll": 1.5982609987258911
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "spd_b32768_lr0.064_m0.7_s20260928",
+      "full_development_nll": 1.5993598699569702
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "pd_b32768_lr0.032_m0.7_s20260928",
+      "full_development_nll": 1.5885472297668457
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "pd_b32768_lr0.064_m0.9_s20260928",
+      "full_development_nll": 1.631512999534607
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "muon_b32768_lr0.128_m0.7_s20260928",
+      "full_development_nll": 1.6511342525482178
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "ts_b32768_lr0.016_m0.7_s20260928",
+      "full_development_nll": 1.5788966417312622
+    },
+    {
+      "cohort": "shakespeare_fairness_20260928",
+      "run_id": "spd_b32768_lr0.016_m0.6_s20260928",
+      "full_development_nll": 1.5847792625427246
+    }
+  ]
+}

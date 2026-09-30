@@ -1,0 +1,16 @@
+{
+  "runs": [
+    {
+      "all_checkpoint_tensors_finite": true,
+      "final_sha256": "872fe5fd7193965c1261ef986e8b75bb8de6f6d52e6b592d3e4a7dff626af966",
+      "final_step_forwards": 18,
+      "last_input_root_refresh": 361,
+      "modules": 48,
+      "run": "pd_D_lr0.01_m0.9_s20261001",
+      "training_forwards": 46994
+    }
+  ],
+  "scientific_ordering_readout": false,
+  "scope": "Execution-only check on completed geometry arms; no loss or ordering comparison",
+  "sealed_test_scored": false
+}

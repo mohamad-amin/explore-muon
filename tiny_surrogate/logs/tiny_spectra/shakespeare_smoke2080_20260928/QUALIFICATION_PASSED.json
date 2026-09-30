@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "job_id": "2626757_0",
+  "configured_precision": "unchanged BF16 forward and NS, FP32 state",
+  "gpu": "RTX2080 Ti, 11GB",
+  "scope": "execution qualification; not bitwise equivalence or scientific replication",
+  "checks": [
+    "all five complete",
+    "all saved tensors finite",
+    "same CPU initial parameter hashes",
+    "same training windows",
+    "GPU physical VRAM below48GB"
+  ],
+  "runs": [
+    {
+      "run_id": "adamw_b8192_lr0.002_m0.9_s20260928",
+      "peak_bytes": 227557888,
+      "seconds": 1.192194353789091,
+      "full_nll_delta_vs_a4000": -0.00018858909606933594
+    },
+    {
+      "run_id": "muon_b8192_lr0.016_m0.9_s20260928",
+      "peak_bytes": 224739840,
+      "seconds": 0.6800309419631958,
+      "full_nll_delta_vs_a4000": -0.0001804828643798828
+    },
+    {
+      "run_id": "pd_b8192_lr0.016_m0.9_s20260928",
+      "peak_bytes": 259343872,
+      "seconds": 2.57352127879858,
+      "full_nll_delta_vs_a4000": -0.00010323524475097656
+    },
+    {
+      "run_id": "spd_b8192_lr0.016_m0.9_s20260928",
+      "peak_bytes": 284509696,
+      "seconds": 2.5607001446187496,
+      "full_nll_delta_vs_a4000": 0.0007777214050292969
+    },
+    {
+      "run_id": "ts_b8192_lr0.016_m0.9_s20260928",
+      "peak_bytes": 275858944,
+      "seconds": 2.967079445719719,
+      "full_nll_delta_vs_a4000": 4.220008850097656e-05
+    }
+  ]
+}

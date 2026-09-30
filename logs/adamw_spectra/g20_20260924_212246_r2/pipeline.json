@@ -1,0 +1,127 @@
+{
+  "phase": "complete",
+  "allocation": "2618555",
+  "host": "g20.ttic.edu",
+  "supervisor_pid": 2698287,
+  "slurm_step_id": "3",
+  "started_utc": "2026-09-24T21:32:08.449732+00:00",
+  "workers": [
+    {
+      "name": "qualification",
+      "gpu": 0,
+      "pid": 2698379,
+      "command": [
+        "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+        "-u",
+        "-m",
+        "adamw_spectra.train",
+        "--config",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/qualification_config.json",
+        "--out",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/qualification",
+        "--stop-after",
+        "5"
+      ],
+      "started_unix": 1790285528.5011902,
+      "timeout_seconds": 900,
+      "state": "succeeded",
+      "exit_code": 0,
+      "ended_unix": 1790285564.5043943,
+      "worker_seconds": 36.003204107284546
+    },
+    {
+      "name": "pilot_lr_0.0003",
+      "gpu": 0,
+      "pid": 2699714,
+      "command": [
+        "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+        "-u",
+        "-m",
+        "adamw_spectra.train",
+        "--config",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0003_config.json",
+        "--out",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0003",
+        "--stop-after",
+        "300"
+      ],
+      "started_unix": 1790285564.516181,
+      "timeout_seconds": 7200,
+      "state": "succeeded",
+      "exit_code": 0,
+      "ended_unix": 1790286878.5862985,
+      "worker_seconds": 1314.0701174736023
+    },
+    {
+      "name": "pilot_lr_0.0006",
+      "gpu": 1,
+      "pid": 2699715,
+      "command": [
+        "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+        "-u",
+        "-m",
+        "adamw_spectra.train",
+        "--config",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0006_config.json",
+        "--out",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0006",
+        "--stop-after",
+        "300"
+      ],
+      "started_unix": 1790285564.5203152,
+      "timeout_seconds": 7200,
+      "state": "succeeded",
+      "exit_code": 0,
+      "ended_unix": 1790286923.591515,
+      "worker_seconds": 1359.0711998939514
+    },
+    {
+      "name": "pilot_lr_0.0012",
+      "gpu": 2,
+      "pid": 2699716,
+      "command": [
+        "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+        "-u",
+        "-m",
+        "adamw_spectra.train",
+        "--config",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0012_config.json",
+        "--out",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0012",
+        "--stop-after",
+        "300"
+      ],
+      "started_unix": 1790285564.524571,
+      "timeout_seconds": 7200,
+      "state": "succeeded",
+      "exit_code": 0,
+      "ended_unix": 1790286872.5835128,
+      "worker_seconds": 1308.0589418411255
+    },
+    {
+      "name": "77m_seed260924",
+      "gpu": 0,
+      "pid": 2792145,
+      "command": [
+        "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+        "-u",
+        "-m",
+        "adamw_spectra.train",
+        "--config",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/77m_seed260924_config.json",
+        "--out",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/77m_seed260924"
+      ],
+      "started_unix": 1790286928.9593768,
+      "timeout_seconds": 21600,
+      "state": "succeeded",
+      "exit_code": 0,
+      "ended_unix": 1790293502.2926915,
+      "worker_seconds": 6573.333314657211
+    }
+  ],
+  "selected_learning_rate": 0.0012,
+  "ended_utc": "2026-09-24T23:45:21.630070+00:00",
+  "active_worker_gpu_seconds": 10590.536777973175,
+  "result_summary": "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/77m_seed260924/summary.json"
+}

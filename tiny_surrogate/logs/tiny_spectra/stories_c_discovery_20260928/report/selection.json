@@ -1,0 +1,631 @@
+{
+  "discovery_only": true,
+  "groups": [
+    {
+      "boundary_lr": true,
+      "bracket_qualified": false,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "adamw_b16384_lr0.0005_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.0005,
+          "mean_endpoint_bank_nll": 2.883750872330526,
+          "mean_full_validation_nll": 2.8754635614605495,
+          "mean_selection_nll": 2.8754635614605495,
+          "planned_run_ids": [
+            "adamw_b16384_lr0.0005_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "adamw_b16384_lr0.001_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.001,
+          "mean_endpoint_bank_nll": 2.8743043605141287,
+          "mean_full_validation_nll": 2.865417745613985,
+          "mean_selection_nll": 2.865417745613985,
+          "planned_run_ids": [
+            "adamw_b16384_lr0.001_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "adamw_b16384_lr0.002_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.002,
+          "mean_endpoint_bank_nll": 2.8447911502638448,
+          "mean_full_validation_nll": 2.837876432586647,
+          "mean_selection_nll": 2.837876432586647,
+          "planned_run_ids": [
+            "adamw_b16384_lr0.002_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "adamw_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 2.8068919109161556,
+          "mean_full_validation_nll": 2.797844030666325,
+          "mean_selection_nll": 2.797844030666325,
+          "planned_run_ids": [
+            "adamw_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 16384,
+        "cooldown_fraction": 0.1,
+        "corpus_kind": "tiny_stories_byte_bpe_v1",
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_stories_20260928/training_manifest_v2.json",
+        "data_sha256": "15a4968d198013e014c8666d602fcdb3e1e1a66f01c3a2ed98ea5ebab2660b1d",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 8,
+        "grad_clip": 1.0,
+        "hardware_family": "rtx2080ti",
+        "keep_model_every": 0,
+        "method": "adamw",
+        "microbatch_sequences": 32,
+        "momentum": 0.8,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "selection_metric": "full",
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 8388608,
+        "validation_tokens": 131072,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "adamw_b16384_lr0.004_m0.8_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.004,
+        "mean_endpoint_bank_nll": 2.8068919109161556,
+        "mean_full_validation_nll": 2.797844030666325,
+        "mean_selection_nll": 2.797844030666325,
+        "planned_run_ids": [
+          "adamw_b16384_lr0.004_m0.8_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final full-development-split validation NLL",
+      "selection_policy": "full"
+    },
+    {
+      "boundary_lr": false,
+      "bracket_qualified": true,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "muon_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 2.6283920632713533,
+          "mean_full_validation_nll": 2.6194193635095644,
+          "mean_selection_nll": 2.6194193635095644,
+          "planned_run_ids": [
+            "muon_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "muon_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 2.580023971991538,
+          "mean_full_validation_nll": 2.571820259540799,
+          "mean_selection_nll": 2.571820259540799,
+          "planned_run_ids": [
+            "muon_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "muon_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 2.585620162389998,
+          "mean_full_validation_nll": 2.5774910203295605,
+          "mean_selection_nll": 2.5774910203295605,
+          "planned_run_ids": [
+            "muon_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "muon_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.032,
+          "mean_endpoint_bank_nll": 2.60689415165239,
+          "mean_full_validation_nll": 2.5974119214299587,
+          "mean_selection_nll": 2.5974119214299587,
+          "planned_run_ids": [
+            "muon_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 16384,
+        "cooldown_fraction": 0.1,
+        "corpus_kind": "tiny_stories_byte_bpe_v1",
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_stories_20260928/training_manifest_v2.json",
+        "data_sha256": "15a4968d198013e014c8666d602fcdb3e1e1a66f01c3a2ed98ea5ebab2660b1d",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 8,
+        "grad_clip": 1.0,
+        "hardware_family": "rtx2080ti",
+        "keep_model_every": 0,
+        "method": "muon",
+        "microbatch_sequences": 32,
+        "momentum": 0.8,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "selection_metric": "full",
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 8388608,
+        "validation_tokens": 131072,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "muon_b16384_lr0.008_m0.8_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.008,
+        "mean_endpoint_bank_nll": 2.580023971991538,
+        "mean_full_validation_nll": 2.571820259540799,
+        "mean_selection_nll": 2.571820259540799,
+        "planned_run_ids": [
+          "muon_b16384_lr0.008_m0.8_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final full-development-split validation NLL",
+      "selection_policy": "full"
+    },
+    {
+      "boundary_lr": false,
+      "bracket_qualified": true,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "pd_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 2.5699022549066433,
+          "mean_full_validation_nll": 2.559748015335307,
+          "mean_selection_nll": 2.559748015335307,
+          "planned_run_ids": [
+            "pd_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "pd_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 2.5487409898855016,
+          "mean_full_validation_nll": 2.5430164470019596,
+          "mean_selection_nll": 2.5430164470019596,
+          "planned_run_ids": [
+            "pd_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "pd_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.032,
+          "mean_endpoint_bank_nll": 2.5742472503261733,
+          "mean_full_validation_nll": 2.565537599024608,
+          "mean_selection_nll": 2.565537599024608,
+          "planned_run_ids": [
+            "pd_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 16384,
+        "cooldown_fraction": 0.1,
+        "corpus_kind": "tiny_stories_byte_bpe_v1",
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_stories_20260928/training_manifest_v2.json",
+        "data_sha256": "15a4968d198013e014c8666d602fcdb3e1e1a66f01c3a2ed98ea5ebab2660b1d",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 8,
+        "grad_clip": 1.0,
+        "hardware_family": "rtx2080ti",
+        "keep_model_every": 0,
+        "method": "pd",
+        "microbatch_sequences": 32,
+        "momentum": 0.8,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "selection_metric": "full",
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 8388608,
+        "validation_tokens": 131072,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "pd_b16384_lr0.016_m0.8_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.016,
+        "mean_endpoint_bank_nll": 2.5487409898855016,
+        "mean_full_validation_nll": 2.5430164470019596,
+        "mean_selection_nll": 2.5430164470019596,
+        "planned_run_ids": [
+          "pd_b16384_lr0.016_m0.8_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final full-development-split validation NLL",
+      "selection_policy": "full"
+    },
+    {
+      "boundary_lr": false,
+      "bracket_qualified": true,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "spd_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 2.5854258035945037,
+          "mean_full_validation_nll": 2.5723604962307367,
+          "mean_selection_nll": 2.5723604962307367,
+          "planned_run_ids": [
+            "spd_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "spd_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 2.543388846348284,
+          "mean_full_validation_nll": 2.5323385633089592,
+          "mean_selection_nll": 2.5323385633089592,
+          "planned_run_ids": [
+            "spd_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "spd_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 2.541686827112018,
+          "mean_full_validation_nll": 2.533814056983666,
+          "mean_selection_nll": 2.533814056983666,
+          "planned_run_ids": [
+            "spd_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "spd_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.032,
+          "mean_endpoint_bank_nll": 2.543593845772397,
+          "mean_full_validation_nll": 2.541130294603162,
+          "mean_selection_nll": 2.541130294603162,
+          "planned_run_ids": [
+            "spd_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 16384,
+        "cooldown_fraction": 0.1,
+        "corpus_kind": "tiny_stories_byte_bpe_v1",
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_stories_20260928/training_manifest_v2.json",
+        "data_sha256": "15a4968d198013e014c8666d602fcdb3e1e1a66f01c3a2ed98ea5ebab2660b1d",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 8,
+        "grad_clip": 1.0,
+        "hardware_family": "rtx2080ti",
+        "keep_model_every": 0,
+        "method": "spd",
+        "microbatch_sequences": 32,
+        "momentum": 0.8,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "selection_metric": "full",
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 8388608,
+        "validation_tokens": 131072,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "spd_b16384_lr0.008_m0.8_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.008,
+        "mean_endpoint_bank_nll": 2.543388846348284,
+        "mean_full_validation_nll": 2.5323385633089592,
+        "mean_selection_nll": 2.5323385633089592,
+        "planned_run_ids": [
+          "spd_b16384_lr0.008_m0.8_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final full-development-split validation NLL",
+      "selection_policy": "full"
+    },
+    {
+      "boundary_lr": false,
+      "bracket_qualified": true,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "ts_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 2.5830109504588505,
+          "mean_full_validation_nll": 2.5722920332328814,
+          "mean_selection_nll": 2.5722920332328814,
+          "planned_run_ids": [
+            "ts_b16384_lr0.004_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "ts_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 2.5408848173122784,
+          "mean_full_validation_nll": 2.5316757212073067,
+          "mean_selection_nll": 2.5316757212073067,
+          "planned_run_ids": [
+            "ts_b16384_lr0.008_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "ts_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 2.540860493328472,
+          "mean_full_validation_nll": 2.534680428663154,
+          "mean_selection_nll": 2.534680428663154,
+          "planned_run_ids": [
+            "ts_b16384_lr0.016_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "ts_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.032,
+          "mean_endpoint_bank_nll": 2.561823066935037,
+          "mean_full_validation_nll": 2.551429567995914,
+          "mean_selection_nll": 2.551429567995914,
+          "planned_run_ids": [
+            "ts_b16384_lr0.032_m0.8_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 16384,
+        "cooldown_fraction": 0.1,
+        "corpus_kind": "tiny_stories_byte_bpe_v1",
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_stories_20260928/training_manifest_v2.json",
+        "data_sha256": "15a4968d198013e014c8666d602fcdb3e1e1a66f01c3a2ed98ea5ebab2660b1d",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 8,
+        "grad_clip": 1.0,
+        "hardware_family": "rtx2080ti",
+        "keep_model_every": 0,
+        "method": "ts",
+        "microbatch_sequences": 32,
+        "momentum": 0.8,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "selection_metric": "full",
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 8388608,
+        "validation_tokens": 131072,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "ts_b16384_lr0.008_m0.8_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.008,
+        "mean_endpoint_bank_nll": 2.5408848173122784,
+        "mean_full_validation_nll": 2.5316757212073067,
+        "mean_selection_nll": 2.5316757212073067,
+        "planned_run_ids": [
+          "ts_b16384_lr0.008_m0.8_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final full-development-split validation NLL",
+      "selection_policy": "full"
+    }
+  ],
+  "rule": "Minimum mean declared endpoint development NLL across identical planned seeds: selection_metric='bank' (default) or 'full'. Policies are never pooled.",
+  "scope": "Separate complete recipes; incomplete LR grids yield provisional candidates only."
+}

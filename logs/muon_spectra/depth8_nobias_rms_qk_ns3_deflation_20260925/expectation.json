@@ -1,0 +1,294 @@
+{
+ "source": "logs/muon_spectra/depth8_w512_nobias_rms_qk_20260925/muon/scientific",
+ "step": 1469,
+ "matrices": {
+  "block01.q": {
+   "paper5_steps5": 1.00217326010483,
+   "jordan_steps3": 0.8746322463563729,
+   "deflated_jordan_steps3": 0.8746564826817119,
+   "deflated_pairs": 0
+  },
+  "block01.k": {
+   "paper5_steps5": 1.0014753178227125,
+   "jordan_steps3": 0.8680835529036751,
+   "deflated_jordan_steps3": 0.8681083739821174,
+   "deflated_pairs": 0
+  },
+  "block01.v": {
+   "paper5_steps5": 1.001630710443838,
+   "jordan_steps3": 0.8416142516648832,
+   "deflated_jordan_steps3": 0.8416145649723175,
+   "deflated_pairs": 0
+  },
+  "block01.o": {
+   "paper5_steps5": 0.9992889614524711,
+   "jordan_steps3": 0.8215090826232423,
+   "deflated_jordan_steps3": 0.821506183006926,
+   "deflated_pairs": 0
+  },
+  "block01.up": {
+   "paper5_steps5": 1.0081267479373968,
+   "jordan_steps3": 0.7343334948967386,
+   "deflated_jordan_steps3": 0.8576562684771661,
+   "deflated_pairs": 11
+  },
+  "block01.down": {
+   "paper5_steps5": 0.9995041450419655,
+   "jordan_steps3": 0.8152704121427217,
+   "deflated_jordan_steps3": 0.8152596706680312,
+   "deflated_pairs": 0
+  },
+  "block02.q": {
+   "paper5_steps5": 1.0038158482793182,
+   "jordan_steps3": 0.8296008425433365,
+   "deflated_jordan_steps3": 0.8296160327335047,
+   "deflated_pairs": 0
+  },
+  "block02.k": {
+   "paper5_steps5": 0.9963574944407174,
+   "jordan_steps3": 0.7899264128300935,
+   "deflated_jordan_steps3": 0.7899459330944627,
+   "deflated_pairs": 0
+  },
+  "block02.v": {
+   "paper5_steps5": 1.000193782966435,
+   "jordan_steps3": 0.666202544017484,
+   "deflated_jordan_steps3": 0.8123595539388613,
+   "deflated_pairs": 5
+  },
+  "block02.o": {
+   "paper5_steps5": 1.0020646924997334,
+   "jordan_steps3": 0.8178639971092323,
+   "deflated_jordan_steps3": 0.817854336717059,
+   "deflated_pairs": 0
+  },
+  "block02.up": {
+   "paper5_steps5": 1.0072092108506638,
+   "jordan_steps3": 0.7968870782919005,
+   "deflated_jordan_steps3": 0.8894288645172596,
+   "deflated_pairs": 8
+  },
+  "block02.down": {
+   "paper5_steps5": 0.9997623813888145,
+   "jordan_steps3": 0.8993463848626756,
+   "deflated_jordan_steps3": 0.8993440256185332,
+   "deflated_pairs": 0
+  },
+  "block03.q": {
+   "paper5_steps5": 1.0011453041621323,
+   "jordan_steps3": 0.8249470435759793,
+   "deflated_jordan_steps3": 0.8249503822338937,
+   "deflated_pairs": 0
+  },
+  "block03.k": {
+   "paper5_steps5": 1.0036118889730719,
+   "jordan_steps3": 0.8101614232274782,
+   "deflated_jordan_steps3": 0.8101421849165804,
+   "deflated_pairs": 0
+  },
+  "block03.v": {
+   "paper5_steps5": 0.9963148897587752,
+   "jordan_steps3": 0.6871196741884601,
+   "deflated_jordan_steps3": 0.8133859297576628,
+   "deflated_pairs": 5
+  },
+  "block03.o": {
+   "paper5_steps5": 1.0017089790105984,
+   "jordan_steps3": 0.8512010273360873,
+   "deflated_jordan_steps3": 0.8511998321468734,
+   "deflated_pairs": 0
+  },
+  "block03.up": {
+   "paper5_steps5": 0.9976967596131163,
+   "jordan_steps3": 0.8204069242781311,
+   "deflated_jordan_steps3": 0.9020303280807449,
+   "deflated_pairs": 12
+  },
+  "block03.down": {
+   "paper5_steps5": 0.9989051683835344,
+   "jordan_steps3": 0.9182502202863356,
+   "deflated_jordan_steps3": 0.9182448832162188,
+   "deflated_pairs": 0
+  },
+  "block04.q": {
+   "paper5_steps5": 1.0037638610640303,
+   "jordan_steps3": 0.8399444233312144,
+   "deflated_jordan_steps3": 0.8399435554920217,
+   "deflated_pairs": 0
+  },
+  "block04.k": {
+   "paper5_steps5": 1.0026836796523948,
+   "jordan_steps3": 0.8072155843529996,
+   "deflated_jordan_steps3": 0.8071949830252287,
+   "deflated_pairs": 0
+  },
+  "block04.v": {
+   "paper5_steps5": 0.9956005667138366,
+   "jordan_steps3": 0.7053960551448467,
+   "deflated_jordan_steps3": 0.8108842005506957,
+   "deflated_pairs": 5
+  },
+  "block04.o": {
+   "paper5_steps5": 1.0008423848209855,
+   "jordan_steps3": 0.8722703115775281,
+   "deflated_jordan_steps3": 0.8722481791679906,
+   "deflated_pairs": 0
+  },
+  "block04.up": {
+   "paper5_steps5": 1.0002443151712461,
+   "jordan_steps3": 0.8554622873388151,
+   "deflated_jordan_steps3": 0.8554707151844676,
+   "deflated_pairs": 0
+  },
+  "block04.down": {
+   "paper5_steps5": 0.9984844965257016,
+   "jordan_steps3": 0.9274437237725458,
+   "deflated_jordan_steps3": 0.9274472109445543,
+   "deflated_pairs": 0
+  },
+  "block05.q": {
+   "paper5_steps5": 1.001008205110963,
+   "jordan_steps3": 0.8548458006625276,
+   "deflated_jordan_steps3": 0.8548509369057913,
+   "deflated_pairs": 0
+  },
+  "block05.k": {
+   "paper5_steps5": 1.0011482960800049,
+   "jordan_steps3": 0.821809323503664,
+   "deflated_jordan_steps3": 0.8218270051717083,
+   "deflated_pairs": 0
+  },
+  "block05.v": {
+   "paper5_steps5": 1.0016976289543773,
+   "jordan_steps3": 0.7634406684743964,
+   "deflated_jordan_steps3": 0.8209584292622476,
+   "deflated_pairs": 7
+  },
+  "block05.o": {
+   "paper5_steps5": 1.001031771234694,
+   "jordan_steps3": 0.8773069750418543,
+   "deflated_jordan_steps3": 0.8773208092940953,
+   "deflated_pairs": 0
+  },
+  "block05.up": {
+   "paper5_steps5": 0.9981873518566265,
+   "jordan_steps3": 0.8812724186387055,
+   "deflated_jordan_steps3": 0.8812645110174432,
+   "deflated_pairs": 0
+  },
+  "block05.down": {
+   "paper5_steps5": 0.9999932180799416,
+   "jordan_steps3": 0.922744888066065,
+   "deflated_jordan_steps3": 0.9227356556561033,
+   "deflated_pairs": 0
+  },
+  "block06.q": {
+   "paper5_steps5": 1.003554344785656,
+   "jordan_steps3": 0.8453671778177745,
+   "deflated_jordan_steps3": 0.8453685592521765,
+   "deflated_pairs": 0
+  },
+  "block06.k": {
+   "paper5_steps5": 1.0036570278345738,
+   "jordan_steps3": 0.8505751916611272,
+   "deflated_jordan_steps3": 0.850621944839645,
+   "deflated_pairs": 0
+  },
+  "block06.v": {
+   "paper5_steps5": 0.9988355420151196,
+   "jordan_steps3": 0.7214330770360978,
+   "deflated_jordan_steps3": 0.8165859992710713,
+   "deflated_pairs": 6
+  },
+  "block06.o": {
+   "paper5_steps5": 1.0004793432931163,
+   "jordan_steps3": 0.8767941288581192,
+   "deflated_jordan_steps3": 0.8767946373159895,
+   "deflated_pairs": 0
+  },
+  "block06.up": {
+   "paper5_steps5": 0.9993761978508667,
+   "jordan_steps3": 0.8916462359368985,
+   "deflated_jordan_steps3": 0.8916754551178191,
+   "deflated_pairs": 0
+  },
+  "block06.down": {
+   "paper5_steps5": 0.9983860714745039,
+   "jordan_steps3": 0.9233197165057102,
+   "deflated_jordan_steps3": 0.9232963136110098,
+   "deflated_pairs": 0
+  },
+  "block07.q": {
+   "paper5_steps5": 1.000243189842704,
+   "jordan_steps3": 0.8333699004964582,
+   "deflated_jordan_steps3": 0.8333783655291284,
+   "deflated_pairs": 0
+  },
+  "block07.k": {
+   "paper5_steps5": 1.0037157791192983,
+   "jordan_steps3": 0.8396936997503538,
+   "deflated_jordan_steps3": 0.8396882371540403,
+   "deflated_pairs": 0
+  },
+  "block07.v": {
+   "paper5_steps5": 0.9997948265150396,
+   "jordan_steps3": 0.6954408244923044,
+   "deflated_jordan_steps3": 0.816428384215957,
+   "deflated_pairs": 5
+  },
+  "block07.o": {
+   "paper5_steps5": 1.0028631417354377,
+   "jordan_steps3": 0.8696156940701778,
+   "deflated_jordan_steps3": 0.8695967203171703,
+   "deflated_pairs": 0
+  },
+  "block07.up": {
+   "paper5_steps5": 0.9996795556370738,
+   "jordan_steps3": 0.9016969488362979,
+   "deflated_jordan_steps3": 0.9016754756333325,
+   "deflated_pairs": 0
+  },
+  "block07.down": {
+   "paper5_steps5": 1.0002396511154195,
+   "jordan_steps3": 0.8978545643687744,
+   "deflated_jordan_steps3": 0.8978651166898514,
+   "deflated_pairs": 0
+  },
+  "block08.q": {
+   "paper5_steps5": 1.0022598761542316,
+   "jordan_steps3": 0.8381864473008349,
+   "deflated_jordan_steps3": 0.8381140799973873,
+   "deflated_pairs": 0
+  },
+  "block08.k": {
+   "paper5_steps5": 1.002614661444089,
+   "jordan_steps3": 0.8665671178451658,
+   "deflated_jordan_steps3": 0.8665360283605481,
+   "deflated_pairs": 0
+  },
+  "block08.v": {
+   "paper5_steps5": 1.000219057088829,
+   "jordan_steps3": 0.7935759475816321,
+   "deflated_jordan_steps3": 0.8365508714233897,
+   "deflated_pairs": 11
+  },
+  "block08.o": {
+   "paper5_steps5": 1.000448067445515,
+   "jordan_steps3": 0.8328757829806084,
+   "deflated_jordan_steps3": 0.8630670746541584,
+   "deflated_pairs": 10
+  },
+  "block08.up": {
+   "paper5_steps5": 0.9980242399162303,
+   "jordan_steps3": 0.890815115681541,
+   "deflated_jordan_steps3": 0.8907800840371437,
+   "deflated_pairs": 0
+  },
+  "block08.down": {
+   "paper5_steps5": 1.0005531756867998,
+   "jordan_steps3": 0.8167347358830157,
+   "deflated_jordan_steps3": 0.8167492505218034,
+   "deflated_pairs": 0
+  }
+ }
+}

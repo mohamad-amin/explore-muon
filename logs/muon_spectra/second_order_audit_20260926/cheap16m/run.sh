@@ -1,0 +1,7 @@
+#!/bin/bash
+# Cheaper coordination schemes on the momentum at 16M (2026-09-29 02:53 CDT), g20 GPUs 1 and 3.
+cd /share/data/dl-theory/amin/projects/explore_muon
+PY=.venv/bin/python
+CUDA_VISIBLE_DEVICES=1 $PY -u /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/second_order_audit_20260926/one_step_blockgn.py /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/second_order_audit_20260926/cheap16m/PD_mom16M.json /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:46 --input momentum16M --momentum-c 0.9 --partitions gsmap,gsmap_only_extra,gslayer,lookahead > /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/second_order_audit_20260926/cheap16m/PD_mom16M.log 2>&1 &
+CUDA_VISIBLE_DEVICES=3 $PY -u /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/second_order_audit_20260926/one_step_blockgn.py /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/second_order_audit_20260926/cheap16m/M_mom16M.json /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:46 --input momentum16M --momentum-c 0.9 --partitions gsmap,gsmap_only_extra,gslayer,lookahead > /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/second_order_audit_20260926/cheap16m/M_mom16M.log 2>&1 &
+wait

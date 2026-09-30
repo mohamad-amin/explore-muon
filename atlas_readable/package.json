@@ -1,0 +1,10 @@
+{
+  "name": "atlas-readable-tools",
+  "private": true,
+  "description": "Local-only verification tools for the readable Gauss-Newton Atlas (screenshots, JS checks).",
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.49.1",
+    "plotly.js-dist-min": "^2.35.2"
+  }
+}

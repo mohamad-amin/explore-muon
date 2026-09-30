@@ -1,0 +1,65 @@
+# The GitHub copy keeps code, notes, plots and HTML artifacts. Data, checkpoints,
+# raw run outputs and per-run source snapshots stay on the cluster.
+
+# Environments, caches and local installs
+.venv
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+.pw-browsers/
+.syslibs/
+.tmp/
+.ipynb_checkpoints/
+.DS_Store
+
+# Data (datasets, token shards, tokenizers, sealed panels)
+/data/
+/tiny_surrogate/data/
+/tiny_surrogate/scratch/
+
+# Compatibility symlinks to absolute cluster paths
+/research/tiny_spectra
+/track3/data
+/track3/smoke/data
+
+# Logs trees: keep notes, code, plots and HTML artifacts only
+**/logs/**
+!**/logs/**/
+!**/logs/**/*.md
+!**/logs/**/*.py
+!**/logs/**/*.sh
+!**/logs/**/*.sbatch
+!**/logs/**/*.mjs
+!**/logs/**/*.png
+!**/logs/**/*.pdf
+!**/logs/**/*.svg
+!**/logs/**/*.jpg
+!**/logs/**/*.jpeg
+!**/logs/**/*.gif
+!**/logs/**/*.html
+
+# Per-run source snapshots and backups (provenance copies of research/)
+**/source/
+**/frozen/
+**/frozen_readout/
+**/executed_source/
+**/source_backups/
+**/runtime_before/
+**/readout_sources/
+**/cache/
+**/pycache/
+
+# Checkpoints and binary arrays anywhere
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.npz
+*.npy
+*.u16
+*.i16
+*.u32
+*.i64
+*.dat

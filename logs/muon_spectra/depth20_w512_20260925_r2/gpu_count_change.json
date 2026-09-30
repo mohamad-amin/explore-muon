@@ -1,0 +1,13 @@
+{
+  "requested_unix": 1790301279.388328,
+  "previous_job_id": "2620619",
+  "previous_world_size": 8,
+  "world_size": 4,
+  "gpu_constraint": "96g",
+  "config_sha256": "3914fb81d3cbcfdbd16aef470fee3dbc31b8776d03b06ebea0670c99eb9bd5be",
+  "previous_scheduler_state": "JobId=2620619 JobName=muon-d20-w512\n   UserId=mohamadamin(1457) GroupId=ttic(2002) MCS_label=N/A\n   Priority=14228 Nice=0 Account=mohamadamin QOS=normal\n   JobState=PENDING Reason=Priority Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=08:00:00 TimeMin=N/A\n   SubmitTime=2026-09-24T20:48:02 EligibleTime=2026-09-24T20:48:02\n   AccrueTime=2026-09-24T20:48:02\n   StartTime=2026-09-25T10:37:00 EndTime=2026-09-25T18:37:00 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-24T20:54:35 Scheduler=Main\n   Partition=gpu AllocNode:Sid=128.135.221.168:3373399\n   ReqNodeList=(null) ExcNodeList=(null)\n   NodeList= SchedNodeList=g2\n   NumNodes=1-1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   TRES=cpu=16,mem=128G,node=1,billing=16,gres/gpu=8\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=96g DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth20_w512_20260925_r2/job.sbatch\n   WorkDir=/share/data/dl-theory/amin/projects/last_layer\n   StdErr=/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth20_w512_20260925_r2/slurm-2620619.log\n   StdIn=/dev/null\n   StdOut=/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth20_w512_20260925_r2/slurm-2620619.log\n   Power=\n   MemPerTres=gpu:20000\n   TresPerNode=gres:gpu:8\n   \n\n",
+  "reason": "User requested moving one depth-20 job to four GPUs; choose pending Muon job, retain AdamW20 on eight.",
+  "new_job_id": "2620623",
+  "previous_job_canceled": true,
+  "completed_unix": 1790301279.577521
+}

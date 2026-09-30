@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "engineering_override": "warmup_steps=1 tests peak rates; scientific warmup remains50",
+  "status": {
+    "status": "stopped_at_requested_step",
+    "step": 5,
+    "tokens": 5242880,
+    "budget_tokens": 1539870720,
+    "world_size": 4,
+    "setup_seconds": 10.411323762033135,
+    "invocation_seconds": 39.946270865853876,
+    "peak_cuda_allocated_bytes_per_rank_max": 3690702336
+  },
+  "steady_step_seconds": 1.019565337182333,
+  "spectral_collection_seconds": 0.7393751926720142,
+  "validation_seconds": 0.2866611070930958,
+  "rough_main_seconds_including_io_and_300s_allowance": 1886.981652896075,
+  "remaining_controller_seconds": 27846.486748933792,
+  "limit": "Short qualification forecast; measured full-run time remains the outcome"
+}

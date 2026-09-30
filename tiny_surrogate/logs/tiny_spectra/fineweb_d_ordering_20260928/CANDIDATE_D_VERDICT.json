@@ -1,0 +1,426 @@
+{
+  "accounting": {
+    "edge_slurm_accounting.psv": 3.8497222222222223,
+    "initial_slurm_accounting.psv": 18.263055555555557
+  },
+  "all_artifact_validation_passed": true,
+  "all_runs_completed_exit0": true,
+  "candidate": "reference_directed_D",
+  "failed_gates": [
+    "SoapMuon+PD versus TS sign reverses in seed20261001 at the jointly selected rates",
+    "Mean SoapMuon+PD advantage over TS is0.00369001 rather than the required0.005",
+    "SoapMuon+PD selectedLR0.02 remains at the upper boundary"
+  ],
+  "final_report_sha256": "6c1e67e0ecd540f2180377770f9b309fc4573f108f63fbe76d9d7993355eb646",
+  "full_surrogate_goal_achieved": false,
+  "joint_lr_selection": {
+    "adamw": {
+      "ambiguous_both_boundaries": false,
+      "bracket_closed": true,
+      "candidates": [
+        {
+          "by_seed": {
+            "20261001": 5.168650058335455,
+            "20261002": 5.174727796903092
+          },
+          "lr": 0.0003,
+          "mean_nll": 5.1716889276192735,
+          "run_ids": [
+            "adamw_D_lr0.0003_m0.9_s20261002",
+            "adamw_D_lr0.0003_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 5.132191794505976,
+            "20261002": 5.1294319768574255
+          },
+          "lr": 0.0006,
+          "mean_nll": 5.130811885681701,
+          "run_ids": [
+            "adamw_D_lr0.0006_m0.9_s20261002",
+            "adamw_D_lr0.0006_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 5.209165257093784,
+            "20261002": 5.158138266229653
+          },
+          "lr": 0.0012,
+          "mean_nll": 5.183651761661718,
+          "run_ids": [
+            "adamw_D_lr0.0012_m0.9_s20261002",
+            "adamw_D_lr0.0012_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 5.28101018234172,
+            "20261002": 5.3258656431636995
+          },
+          "lr": 0.0024,
+          "mean_nll": 5.30343791275271,
+          "run_ids": [
+            "adamw_D_lr0.0024_m0.9_s20261001",
+            "adamw_D_lr0.0024_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        }
+      ],
+      "minimizing_rates": [
+        0.0006
+      ],
+      "proposed_single_outward_lr": null,
+      "selected": {
+        "by_seed": {
+          "20261001": 5.132191794505976,
+          "20261002": 5.1294319768574255
+        },
+        "lr": 0.0006,
+        "mean_nll": 5.130811885681701,
+        "run_ids": [
+          "adamw_D_lr0.0006_m0.9_s20261002",
+          "adamw_D_lr0.0006_m0.9_s20261001"
+        ],
+        "stable_both_seeds": true
+      }
+    },
+    "muon": {
+      "ambiguous_both_boundaries": false,
+      "bracket_closed": true,
+      "candidates": [
+        {
+          "by_seed": {
+            "20261001": 4.61194149343499,
+            "20261002": 4.597201096380408
+          },
+          "lr": 0.005,
+          "mean_nll": 4.604571294907698,
+          "run_ids": [
+            "muon_D_lr0.005_m0.9_s20261002",
+            "muon_D_lr0.005_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.5550068121765,
+            "20261002": 4.574028283483549
+          },
+          "lr": 0.01,
+          "mean_nll": 4.564517547830024,
+          "run_ids": [
+            "muon_D_lr0.01_m0.9_s20261002",
+            "muon_D_lr0.01_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.56728357881025,
+            "20261002": 4.58653285112032
+          },
+          "lr": 0.02,
+          "mean_nll": 4.576908214965285,
+          "run_ids": [
+            "muon_D_lr0.02_m0.9_s20261001",
+            "muon_D_lr0.02_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        }
+      ],
+      "minimizing_rates": [
+        0.01
+      ],
+      "proposed_single_outward_lr": null,
+      "selected": {
+        "by_seed": {
+          "20261001": 4.5550068121765,
+          "20261002": 4.574028283483549
+        },
+        "lr": 0.01,
+        "mean_nll": 4.564517547830024,
+        "run_ids": [
+          "muon_D_lr0.01_m0.9_s20261002",
+          "muon_D_lr0.01_m0.9_s20261001"
+        ],
+        "stable_both_seeds": true
+      }
+    },
+    "pd": {
+      "ambiguous_both_boundaries": false,
+      "bracket_closed": true,
+      "candidates": [
+        {
+          "by_seed": {
+            "20261001": 4.5495271068389425,
+            "20261002": 4.574444732805022
+          },
+          "lr": 0.005,
+          "mean_nll": 4.561985919821982,
+          "run_ids": [
+            "pd_D_lr0.005_m0.9_s20261001",
+            "pd_D_lr0.005_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.5200222677232995,
+            "20261002": 4.5135498929222155
+          },
+          "lr": 0.01,
+          "mean_nll": 4.516786080322758,
+          "run_ids": [
+            "pd_D_lr0.01_m0.9_s20261001",
+            "pd_D_lr0.01_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.537877442751505,
+            "20261002": 4.514003856183016
+          },
+          "lr": 0.02,
+          "mean_nll": 4.525940649467261,
+          "run_ids": [
+            "pd_D_lr0.02_m0.9_s20261002",
+            "pd_D_lr0.02_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        }
+      ],
+      "minimizing_rates": [
+        0.01
+      ],
+      "proposed_single_outward_lr": null,
+      "selected": {
+        "by_seed": {
+          "20261001": 4.5200222677232995,
+          "20261002": 4.5135498929222155
+        },
+        "lr": 0.01,
+        "mean_nll": 4.516786080322758,
+        "run_ids": [
+          "pd_D_lr0.01_m0.9_s20261001",
+          "pd_D_lr0.01_m0.9_s20261002"
+        ],
+        "stable_both_seeds": true
+      }
+    },
+    "spd": {
+      "ambiguous_both_boundaries": false,
+      "bracket_closed": false,
+      "candidates": [
+        {
+          "by_seed": {
+            "20261001": 4.630253239049891,
+            "20261002": 4.673708055777526
+          },
+          "lr": 0.0025,
+          "mean_nll": 4.651980647413708,
+          "run_ids": [
+            "spd_D_lr0.0025_m0.9_s20261001",
+            "spd_D_lr0.0025_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.506811167852091,
+            "20261002": 4.520941536779487
+          },
+          "lr": 0.005,
+          "mean_nll": 4.513876352315789,
+          "run_ids": [
+            "spd_D_lr0.005_m0.9_s20261001",
+            "spd_D_lr0.005_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.479170363706346,
+            "20261002": 4.506782422279573
+          },
+          "lr": 0.01,
+          "mean_nll": 4.49297639299296,
+          "run_ids": [
+            "spd_D_lr0.01_m0.9_s20261002",
+            "spd_D_lr0.01_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.486029454434797,
+            "20261002": 4.498386995400413
+          },
+          "lr": 0.02,
+          "mean_nll": 4.492208224917604,
+          "run_ids": [
+            "spd_D_lr0.02_m0.9_s20261001",
+            "spd_D_lr0.02_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        }
+      ],
+      "minimizing_rates": [
+        0.02
+      ],
+      "proposed_single_outward_lr": 0.04,
+      "selected": {
+        "by_seed": {
+          "20261001": 4.486029454434797,
+          "20261002": 4.498386995400413
+        },
+        "lr": 0.02,
+        "mean_nll": 4.492208224917604,
+        "run_ids": [
+          "spd_D_lr0.02_m0.9_s20261001",
+          "spd_D_lr0.02_m0.9_s20261002"
+        ],
+        "stable_both_seeds": true
+      }
+    },
+    "ts": {
+      "ambiguous_both_boundaries": false,
+      "bracket_closed": true,
+      "candidates": [
+        {
+          "by_seed": {
+            "20261001": 4.648406899339074,
+            "20261002": 4.696942794231188
+          },
+          "lr": 0.0025,
+          "mean_nll": 4.672674846785132,
+          "run_ids": [
+            "ts_D_lr0.0025_m0.9_s20261001",
+            "ts_D_lr0.0025_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.53444411572835,
+            "20261002": 4.54646060075684
+          },
+          "lr": 0.005,
+          "mean_nll": 4.540452358242595,
+          "run_ids": [
+            "ts_D_lr0.005_m0.9_s20261001",
+            "ts_D_lr0.005_m0.9_s20261002"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.482912482223429,
+            "20261002": 4.508883984945563
+          },
+          "lr": 0.01,
+          "mean_nll": 4.495898233584496,
+          "run_ids": [
+            "ts_D_lr0.01_m0.9_s20261002",
+            "ts_D_lr0.01_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        },
+        {
+          "by_seed": {
+            "20261001": 4.534935694006368,
+            "20261002": 4.500564825493403
+          },
+          "lr": 0.02,
+          "mean_nll": 4.517750259749885,
+          "run_ids": [
+            "ts_D_lr0.02_m0.9_s20261002",
+            "ts_D_lr0.02_m0.9_s20261001"
+          ],
+          "stable_both_seeds": true
+        }
+      ],
+      "minimizing_rates": [
+        0.01
+      ],
+      "proposed_single_outward_lr": null,
+      "selected": {
+        "by_seed": {
+          "20261001": 4.482912482223429,
+          "20261002": 4.508883984945563
+        },
+        "lr": 0.01,
+        "mean_nll": 4.495898233584496,
+        "run_ids": [
+          "ts_D_lr0.01_m0.9_s20261002",
+          "ts_D_lr0.01_m0.9_s20261001"
+        ],
+        "stable_both_seeds": true
+      }
+    }
+  },
+  "matched_rate_sensitivity": [
+    {
+      "differences": [
+        -0.018153660289183193,
+        -0.023234738453662196
+      ],
+      "lr": 0.0025,
+      "mean": -0.020694199371422695
+    },
+    {
+      "differences": [
+        -0.027632947876258918,
+        -0.025519063977353262
+      ],
+      "lr": 0.005,
+      "mean": -0.02657600592680609
+    },
+    {
+      "differences": [
+        -0.0037421185170831706,
+        -0.002101562665989931
+      ],
+      "lr": 0.01,
+      "mean": -0.002921840591536551
+    },
+    {
+      "differences": [
+        -0.04890623957157114,
+        -0.0021778300929904404
+      ],
+      "lr": 0.02,
+      "mean": -0.02554203483228079
+    }
+  ],
+  "matched_rate_sensitivity_is_not_primary_selection": true,
+  "mean_order": [
+    "adamw",
+    "muon",
+    "pd",
+    "ts",
+    "spd"
+  ],
+  "no_further_outward_rate_or_recipe_repair_authorized": true,
+  "primary_soapmuon_pd_minus_ts": {
+    "differences": {
+      "20261001": 0.0031169722113677523,
+      "20261002": -0.010496989545150548
+    },
+    "earlier": "ts",
+    "later": "spd",
+    "mean_advantage_at_least_005": false,
+    "mean_difference": -0.003690008666891398,
+    "negative_in_both_seeds": false
+  },
+  "runs": 36,
+  "source_manifest_sha256": "2d73039df1814b59f0cd016a0ef1498fc7e002344f41263a9971c98f34f10d76",
+  "status": "closed_without_robust_ordering_qualification",
+  "test_panels_scored": false,
+  "total_gpu_hours": 22.11277777777778
+}

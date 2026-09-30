@@ -1,0 +1,41 @@
+{
+  "phase": "failed",
+  "job_id": "2618555",
+  "host": "g20.ttic.edu",
+  "pid": 3102530,
+  "started_unix": 1790300396.34799,
+  "world_size": 4,
+  "step_id": "5",
+  "workers": [
+    {
+      "name": "tiny_cuda",
+      "pid": 3102584,
+      "started_unix": 1790300396.429895,
+      "command": [
+        "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+        "-u",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nnodes=1",
+        "--nproc_per_node=4",
+        "--max_restarts=0",
+        "-m",
+        "adamw_spectra.distributed",
+        "--config",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth8_w512_20260925/tiny_cuda_config.json",
+        "--out",
+        "/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth8_w512_20260925/tiny_cuda",
+        "--audit-replicas"
+      ],
+      "state": "failed",
+      "exit_code": 1,
+      "worker_seconds": 24.96994400024414,
+      "ended_unix": 1790300421.3998406
+    }
+  ],
+  "depth": 8,
+  "gpu_inventory": "index, uuid, name, memory.total [MiB]\n0, GPU-45bb5d54-a5f7-1a6a-827b-e07fd17d88f0, NVIDIA RTX 6000 Ada Generation, 49140 MiB\n1, GPU-cad9910b-e186-4154-fd43-371869662cca, NVIDIA RTX 6000 Ada Generation, 49140 MiB\n2, GPU-da1f2af0-d183-17b8-b889-8242220b23c5, NVIDIA RTX 6000 Ada Generation, 49140 MiB\n3, GPU-42c1d937-9311-82ec-583b-1f3358a1c481, NVIDIA RTX 6000 Ada Generation, 49140 MiB\n",
+  "error": "RuntimeError: tiny_cuda worker group failed with exit code 1",
+  "ended_unix": 1790300421.4026754
+}

@@ -1,0 +1,29 @@
+JobId=2620623 JobName=muon-d20-w512
+   UserId=mohamadamin(1457) GroupId=ttic(2002) MCS_label=N/A
+   Priority=9152 Nice=0 Account=mohamadamin QOS=normal
+   JobState=PENDING Reason=Priority Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:00 TimeLimit=08:00:00 TimeMin=N/A
+   SubmitTime=2026-09-24T20:54:39 EligibleTime=2026-09-24T20:54:39
+   AccrueTime=2026-09-24T20:54:39
+   StartTime=2026-09-24T22:44:37 EndTime=2026-09-25T06:44:37 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-24T22:04:14 Scheduler=Main
+   Partition=gpu AllocNode:Sid=128.135.221.168:3376223
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList= SchedNodeList=g11
+   NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=8,mem=128G,node=1,billing=8,gres/gpu=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=8 MinMemoryNode=128G MinTmpDiskNode=0
+   Features=96g DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth20_w512_20260925_r2/job_4gpu.sbatch
+   WorkDir=/share/data/dl-theory/amin/projects/last_layer
+   StdErr=/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth20_w512_20260925_r2/slurm-2620623.log
+   StdIn=/dev/null
+   StdOut=/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth20_w512_20260925_r2/slurm-2620623.log
+   Power=
+   MemPerTres=gpu:20000
+   TresPerNode=gres:gpu:4
+   
+

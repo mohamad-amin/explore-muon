@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "world_size": 3,
+  "tokens": 168,
+  "updates": 3,
+  "resume_bitwise": false,
+  "exact_parameter_and_moment_agreement_across_ranks": true,
+  "errors": {
+    "resume": {
+      "max_parameter_abs_difference": 1.862645149230957e-09,
+      "max_exp_avg_abs_difference": 9.313225746154785e-10,
+      "max_exp_avg_sq_abs_difference": 5.820766091346741e-11
+    },
+    "single_reference": {
+      "max_parameter_abs_difference": 4.423409336595796e-07,
+      "max_exp_avg_abs_difference": 6.51925802230835e-09,
+      "max_exp_avg_sq_abs_difference": 4.94765117764473e-10
+    }
+  },
+  "dummy_sequence_path_exercised": true,
+  "uneven_final_batch_tokens": 40,
+  "uneven_validation_tokens": 40,
+  "interpretation": "Same math; distributed resume/reference comparisons use explicit FP32 tolerances. Initial bitwise-resume assertion was too strong: observed max difference1.86e-9."
+}

@@ -1,0 +1,131 @@
+{
+  "decision": "Numerical checks pass but forecast exceeds cap; stop for an execution decision.",
+  "forecast_within_eight_gpu_hours": false,
+  "fp32_ema_reference_weights": {
+    "input_cov_weight": 0.9953984618186951,
+    "input_weight": 0.9999970197677612
+  },
+  "maximum_40_arm_forecast_gpu_hours": 16.55027219270477,
+  "numerical_qualification_passed": true,
+  "qualification_plan_sha256": "06a165b5ef6ca7ccd46ce9996a7a10c57fd42078335c65d10a90af4a6c815efa",
+  "runs": [
+    {
+      "artifact_sha256": {
+        "final.pt": "56eec773cfcbd66ecfae33fe93f5696217c00197133df081630ff6075aa026f9",
+        "final_validation.pt": "91857bc81e87d476d021cacd963d0d5015f6a17eb8a90bfc90089dbdcebff15f",
+        "metadata.json": "a06b8c8572791ffbf7cf93c6fcaa272f16614c0e7a9af9c184a05033dd7da2e2",
+        "summary.json": "48bf409283a3d36baf5ce7177b3e1b67720e84986696471a7c2400f47bd524d7"
+      },
+      "full_development_nll": 7.3185899545440645,
+      "hardware": {
+        "capability": [
+          8,
+          6
+        ],
+        "name": "NVIDIA RTX A4000",
+        "total_memory_bytes": 16750149632
+      },
+      "method": "adamw",
+      "peak_cuda_allocated_bytes": 2156808704,
+      "projected_full_run_seconds": 1074.560331017447,
+      "run_id": "adamw_d_smoke_s20261001",
+      "total_seconds": 66.96007966995239,
+      "training_seconds": 47.369122326374054
+    },
+    {
+      "artifact_sha256": {
+        "final.pt": "a462d13b9268dcb94ad1e083b4b629f26fa7d78bf357944bf35acac4bff46556",
+        "final_validation.pt": "6af13e50726ffb99bc8629629544c6c9801fe0eaf683fc1d67fa9fd32ab3ee5b",
+        "metadata.json": "bf857a92556a9367cb4a4762d947cf2147b15e9aad17fa336f6d8940f8f25471",
+        "summary.json": "9a6984376a8273b347511eb9165c9a374d91fba602bd38772d32d19427e4ca51"
+      },
+      "full_development_nll": 7.013436436010121,
+      "hardware": {
+        "capability": [
+          8,
+          6
+        ],
+        "name": "NVIDIA RTX A4000",
+        "total_memory_bytes": 16750149632
+      },
+      "method": "muon",
+      "peak_cuda_allocated_bytes": 2150844928,
+      "projected_full_run_seconds": 1006.4553836017895,
+      "run_id": "muon_d_smoke_s20261001",
+      "total_seconds": 61.450987100601196,
+      "training_seconds": 47.49642965011299
+    },
+    {
+      "artifact_sha256": {
+        "final.pt": "c5c55453bf5442d86f52b5fcfe4a74415708442fc0f01946e0f7c7220cf3bd33",
+        "final_validation.pt": "5fe249e925f4c1b16839264ee8dfb65bbd9cbbdfbff73b096d15825e002c59c8",
+        "metadata.json": "4aabcb8b6de273150e44e5a87959cb2e0c261cfda17932db91d828e9b5493869",
+        "summary.json": "0948236b57f98ea37a40a6a09ad122063f4e83ae0f8fb78ee51e719a22d730f8"
+      },
+      "full_development_nll": 7.028605527216696,
+      "hardware": {
+        "capability": [
+          8,
+          6
+        ],
+        "name": "NVIDIA RTX A4000",
+        "total_memory_bytes": 16750149632
+      },
+      "method": "pd",
+      "peak_cuda_allocated_bytes": 2195163648,
+      "projected_full_run_seconds": 1809.9250624208032,
+      "run_id": "pd_d_smoke_s20261001",
+      "total_seconds": 107.28014063835144,
+      "training_seconds": 93.39859119988978
+    },
+    {
+      "artifact_sha256": {
+        "final.pt": "741e069031a2e7e331c34053a1cc9dcc93d4f0e5cb2f5a363b4062ccc773ff96",
+        "final_validation.pt": "20d39f77c6a136f17c4c88a660a72825711ef1b7879ecdf23440c50dbed9b479",
+        "metadata.json": "58bf253fc2865078dd80e62c472ca00c2890e121bf721919fc39c14731e44b40",
+        "summary.json": "44a62bba2651fddd6349b1f821b72a78b114ba0452b4f4304b4190d9c473296f"
+      },
+      "full_development_nll": 6.948008246204721,
+      "hardware": {
+        "capability": [
+          8,
+          6
+        ],
+        "name": "NVIDIA RTX A4000",
+        "total_memory_bytes": 16750149632
+      },
+      "method": "spd",
+      "peak_cuda_allocated_bytes": 2244512768,
+      "projected_full_run_seconds": 1809.2062227323495,
+      "run_id": "spd_d_smoke_s20261001",
+      "total_seconds": 107.17192459106445,
+      "training_seconds": 93.52378049865365
+    },
+    {
+      "artifact_sha256": {
+        "final.pt": "66a650fd31fb81ad28b50ecf303302ce5b83971aa0026f5d68d17f3bd46f10cd",
+        "final_validation.pt": "b165a44c3279a79539ffa9d1291ea3fc48d1f37bdb85920b10761c75fd6168e4",
+        "metadata.json": "879525020f87556c869f750e7a0652fdfc789a3d022ad6b90e8b09ee053f54fd",
+        "summary.json": "8ff596bcdaf474dfd7d6bafba4b2b2f9b44b9bc4032c10f8bec6a4f2ab91c39a"
+      },
+      "full_development_nll": 7.0302713822379905,
+      "hardware": {
+        "capability": [
+          8,
+          6
+        ],
+        "name": "NVIDIA RTX A4000",
+        "total_memory_bytes": 16750149632
+      },
+      "method": "ts",
+      "peak_cuda_allocated_bytes": 2228193792,
+      "projected_full_run_seconds": 1747.4754869447593,
+      "run_id": "ts_d_smoke_s20261001",
+      "total_seconds": 103.68310594558716,
+      "training_seconds": 89.9173506423831
+    }
+  ],
+  "scientific_ranking_claim": false,
+  "source_manifest_sha256": "2d73039df1814b59f0cd016a0ef1498fc7e002344f41263a9971c98f34f10d76",
+  "test_scored": false
+}

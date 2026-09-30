@@ -1,0 +1,300 @@
+{
+  "sample_microbatches": 64,
+  "micro_tokens": 16384,
+  "seed": 260928,
+  "monte_carlo_entries": 2000000,
+  "null_assumptions": "Independent Gaussian microbatch noise, zero mean, fixed externally chosen basis, homogeneous variances; not an empirical null fitted to the network",
+  "null": {
+    "1M": {
+      "exact": {
+        "entry_fraction_snr_gt_1": 0.16222231954155183,
+        "signal_fraction_snr_gt_1": 0.8610864450227665,
+        "mean_clipped_squared_signal_over_true_noise_variance": 0.007621046449360625
+      },
+      "monte_carlo": {
+        "entry_fraction_snr_gt_1": 0.1623945,
+        "signal_fraction_snr_gt_1": 0.8609881041716299
+      }
+    },
+    "4M": {
+      "exact": {
+        "entry_fraction_snr_gt_1": 0.2677977643564714,
+        "signal_fraction_snr_gt_1": 0.9869018200034251,
+        "mean_clipped_squared_signal_over_true_noise_variance": 0.007621046449360625
+      },
+      "monte_carlo": {
+        "entry_fraction_snr_gt_1": 0.268171,
+        "signal_fraction_snr_gt_1": 0.9868675856839376
+      }
+    },
+    "16M": {
+      "exact": {
+        "entry_fraction_snr_gt_1": 0.30658675701077687,
+        "signal_fraction_snr_gt_1": 0.9990779850876447,
+        "mean_clipped_squared_signal_over_true_noise_variance": 0.007621046449360625
+      },
+      "monte_carlo": {
+        "entry_fraction_snr_gt_1": 0.307079,
+        "signal_fraction_snr_gt_1": 0.9990783936040183
+      }
+    }
+  },
+  "weighting_counterexample": {
+    "description": "1000 independent coordinates; means [100, .1 x 999], batch noise variance 1",
+    "raw_true_signal_energy_in_high_snr": 0.9990019970049917,
+    "normalized_mean_direction_energy_in_high_snr": 0.09180984381509348,
+    "expected_stochastic_normalized_energy_in_high_snr": 0.001,
+    "scope": "Entrywise normalization before any polar map; mathematical counterexample, not real SOAP measurement"
+  },
+  "saved_aggregates": [
+    {
+      "state": "PD1M_900",
+      "frame": "soap",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9542849055419245,
+      "entry_fraction_snr_gt_1": 0.20524164040883383,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "soap",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.9960130132724134,
+      "entry_fraction_snr_gt_1": 0.31478432814280194,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "soap",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9997230830382922,
+      "entry_fraction_snr_gt_1": 0.3535819848378499,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "gn_out",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9532405577765434,
+      "entry_fraction_snr_gt_1": 0.21123365561167398,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "gn_out",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.9958472861122867,
+      "entry_fraction_snr_gt_1": 0.32109248638153076,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "gn_out",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9997275643257327,
+      "entry_fraction_snr_gt_1": 0.35984476407368976,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "raw",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9516870846548403,
+      "entry_fraction_snr_gt_1": 0.27942848205566406,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "raw",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.9958930026308136,
+      "entry_fraction_snr_gt_1": 0.38977189858754474,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "PD1M_900",
+      "frame": "raw",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9997198767533187,
+      "entry_fraction_snr_gt_1": 0.42720603942871094,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "soap",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9718804344004812,
+      "entry_fraction_snr_gt_1": 0.2404879331588745,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "soap",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.997275106502077,
+      "entry_fraction_snr_gt_1": 0.3511561155319214,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "soap",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9998289955999868,
+      "entry_fraction_snr_gt_1": 0.3893946011861165,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "gn_out",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9707520935720573,
+      "entry_fraction_snr_gt_1": 0.2527679204940796,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "gn_out",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.9975489911899467,
+      "entry_fraction_snr_gt_1": 0.36342740058898926,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "gn_out",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9998247039610643,
+      "entry_fraction_snr_gt_1": 0.401444673538208,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "raw",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9709840978523779,
+      "entry_fraction_snr_gt_1": 0.34891974925994873,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "raw",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.9976212401872264,
+      "entry_fraction_snr_gt_1": 0.4563295841217041,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "PD4M_183",
+      "frame": "raw",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.999839980346746,
+      "entry_fraction_snr_gt_1": 0.4916230042775472,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "soap",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9884632756273065,
+      "entry_fraction_snr_gt_1": 0.3514833450317383,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "soap",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.9991220943592345,
+      "entry_fraction_snr_gt_1": 0.4577987591425578,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "soap",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9999403269096035,
+      "entry_fraction_snr_gt_1": 0.4927651087443034,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "gn_out",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9886434339862858,
+      "entry_fraction_snr_gt_1": 0.38981767495473224,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "gn_out",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.999051716881493,
+      "entry_fraction_snr_gt_1": 0.49287180105845135,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "gn_out",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9999379052096659,
+      "entry_fraction_snr_gt_1": 0.5263251066207886,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "raw",
+      "batch": "1M",
+      "signal_fraction_snr_gt_1": 0.9901781711949517,
+      "entry_fraction_snr_gt_1": 0.5407535632451376,
+      "fixed_frame_gaussian_null_entry_fraction": 0.16222231954155183,
+      "fixed_frame_gaussian_null_signal_fraction": 0.8610864450227665
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "raw",
+      "batch": "4M",
+      "signal_fraction_snr_gt_1": 0.9992308906739346,
+      "entry_fraction_snr_gt_1": 0.6271539131800333,
+      "fixed_frame_gaussian_null_entry_fraction": 0.2677977643564714,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9869018200034251
+    },
+    {
+      "state": "SPD16M_46",
+      "frame": "raw",
+      "batch": "16M",
+      "signal_fraction_snr_gt_1": 0.9999488721863126,
+      "entry_fraction_snr_gt_1": 0.6539097627003988,
+      "fixed_frame_gaussian_null_entry_fraction": 0.30658675701077687,
+      "fixed_frame_gaussian_null_signal_fraction": 0.9990779850876447
+    }
+  ],
+  "source_sha256": {
+    "logs/muon_spectra/second_order_audit_20260926/frame_snr/PD1M_900.json": "bbfae75fd12dcd037db025f9be0fa28a9c39beb647fe91f5dd40edc7959c7efa",
+    "logs/muon_spectra/second_order_audit_20260926/frame_snr/PD4M_183.json": "37ef374b65cbcd723683caa3c0293bef011140efaea1a4625a812c1b40a90669",
+    "logs/muon_spectra/second_order_audit_20260926/frame_snr/SPD16M_46.json": "e90420e7c3cbe1218f622b52df886226eb85369b3c9fcf552d5b2e56688bdbdd",
+    "logs/muon_spectra/second_order_audit_20260926/frame_snr_probe.py": "dfa50f71d58fb21d7b780d05ac5b83051b9e05f28989567d486a2bc1a0a907e1"
+  }
+}

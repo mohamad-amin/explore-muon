@@ -1,0 +1,15 @@
+{
+  "adamw_spectra/model.py": "fe39a6cd11675bb9403a83dcf122a6c6a191539fd73bfaa4836e865c6b30d281",
+  "adamw_spectra/QUALIFICATION.md": "2f9d925dc4fdc341a10a7874a57a9d552685403f3c7e4d4f17c7b8e34114264c",
+  "adamw_spectra/README.md": "0ce21bfe2fb185a8c642ae571e9198342988f0e25120043ae57baf744a161fd6",
+  "adamw_spectra/PROTOCOL.md": "8a335d72c9fffc967abc6ac1b7328f89a2cdd1875e1f9abd3b1e80dcdfbd9942",
+  "adamw_spectra/data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+  "adamw_spectra/analyze.py": "89dfb9a2724f7f1526da6b57110730b636c4943eaec61add64bb2ebd517e1eb6",
+  "adamw_spectra/EFFICIENCY.md": "41644300b606b30bf64a9ece07e306833191ad0283355b3902e0a73348b9be6c",
+  "adamw_spectra/__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+  "adamw_spectra/train.py": "9f422bb97672056a6839a812bb1b21cf79eb0ca52c5e9d7e39b96802c966fe90",
+  "adamw_spectra/measure.py": "9fb5d5395bf01361b7fd4e00479c7904232caff3b6a3b0eda108c6c58e4c7046",
+  "adamw_spectra/test_study.py": "527735782791574ede9a6c3fad056612c60ddac88fcf23b596d12a13ec3b4fd1",
+  "adamw_spectra/sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+  "adamw_spectra/configs/77m.json": "0e5af58b2166528a7c597e531a2c4992a006838d647374d238a60e9e44b32f5c"
+}

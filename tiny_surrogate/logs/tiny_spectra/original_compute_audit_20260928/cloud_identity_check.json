@@ -1,0 +1,54 @@
+[
+  {
+    "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/gcp_validation_20260925/M_lr0.007_s260924_h100/pipeline.json",
+    "host": "muon-h100-1.c.ucsd-hdsi-tianhaowang.internal",
+    "gpu_uuids": [
+      "GPU-0987f0bf-de1d-fec9-8e1c-480bf4092d87",
+      "GPU-43f6fcd6-3abe-482f-8c1d-140ab8ed2601",
+      "GPU-9020cb5f-d3a3-7ec3-717c-880ca3b81b40",
+      "GPU-e2dca179-d090-e12c-f078-583162952f60"
+    ],
+    "start": 1790368233.9793706,
+    "end": 1790368962.8625073,
+    "gpu_hours": 0.8098701524734497
+  },
+  {
+    "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/gcp_validation_20260925/PD_a0.25_lr0.01_s260924_h100/pipeline.json",
+    "host": "muon-h100-1.c.ucsd-hdsi-tianhaowang.internal",
+    "gpu_uuids": [
+      "GPU-2ddacbda-1b20-b3b1-49a9-131c9f51ca5a",
+      "GPU-7936759a-16cc-468b-d56f-a99620e89d89",
+      "GPU-a486efe9-bc84-3e41-85c3-7a4440379e9f",
+      "GPU-b2ec94cc-acba-d38a-8c7d-6b33c8698fc4"
+    ],
+    "start": 1790369723.1975427,
+    "end": 1790370591.2476375,
+    "gpu_hours": 0.964500105910831
+  },
+  {
+    "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/h2h_h100_20260925/NM_lr0.005_s260924_h100/pipeline.json",
+    "host": "h2h-1.c.ucsd-hdsi-tianhaowang.internal",
+    "gpu_uuids": [
+      "GPU-0987f0bf-de1d-fec9-8e1c-480bf4092d87",
+      "GPU-43f6fcd6-3abe-482f-8c1d-140ab8ed2601",
+      "GPU-9020cb5f-d3a3-7ec3-717c-880ca3b81b40",
+      "GPU-e2dca179-d090-e12c-f078-583162952f60"
+    ],
+    "start": 1790370557.222348,
+    "end": 1790371447.669538,
+    "gpu_hours": 0.9893857669830323
+  },
+  {
+    "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/h2h_h100_20260925/PM_lr0.007_s260924_h100/pipeline.json",
+    "host": "h2h-1.c.ucsd-hdsi-tianhaowang.internal",
+    "gpu_uuids": [
+      "GPU-0987f0bf-de1d-fec9-8e1c-480bf4092d87",
+      "GPU-43f6fcd6-3abe-482f-8c1d-140ab8ed2601",
+      "GPU-9020cb5f-d3a3-7ec3-717c-880ca3b81b40",
+      "GPU-e2dca179-d090-e12c-f078-583162952f60"
+    ],
+    "start": 1790371474.9183078,
+    "end": 1790372298.8089316,
+    "gpu_hours": 0.9154340269830492
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "resolved_root": "/share/data/dl-theory/amin/projects/explore_muon/logs/adamw_spectra/depth20_w512_20260924",
+    "resolved_project": "/share/data/dl-theory/amin/projects/explore_muon",
+    "trainer_file": "/share/data/dl-theory/amin/projects/explore_muon/logs/adamw_spectra/depth20_w512_20260924/frozen/adamw_spectra/distributed.py",
+    "train_tokens_available": 3200000000,
+    "global_batch_tokens": 1048576,
+    "total_tokens": 1539870720
+  },
+  {
+    "resolved_root": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/depth20_w512_20260925_r2",
+    "resolved_project": "/share/data/dl-theory/amin/projects/explore_muon",
+    "trainer_file": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/depth20_w512_20260925_r2/frozen/adamw_spectra/distributed.py",
+    "train_tokens_available": 3200000000,
+    "global_batch_tokens": 1048576,
+    "total_tokens": 1539870720
+  }
+]

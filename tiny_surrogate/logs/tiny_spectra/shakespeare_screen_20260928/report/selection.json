@@ -1,0 +1,522 @@
+{
+  "discovery_only": true,
+  "groups": [
+    {
+      "boundary_lr": true,
+      "bracket_qualified": false,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "adamw_b8192_lr0.0005_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.0005,
+          "mean_endpoint_bank_nll": 1.8482061624526978,
+          "mean_full_validation_nll": 1.8563240766525269,
+          "planned_run_ids": [
+            "adamw_b8192_lr0.0005_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "adamw_b8192_lr0.001_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.001,
+          "mean_endpoint_bank_nll": 1.7987788915634155,
+          "mean_full_validation_nll": 1.8064953088760376,
+          "planned_run_ids": [
+            "adamw_b8192_lr0.001_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "adamw_b8192_lr0.002_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.002,
+          "mean_endpoint_bank_nll": 1.7380284070968628,
+          "mean_full_validation_nll": 1.748487949371338,
+          "planned_run_ids": [
+            "adamw_b8192_lr0.002_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 8192,
+        "cooldown_fraction": 0.1,
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare/input.txt",
+        "data_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 32,
+        "grad_clip": 1.0,
+        "method": "adamw",
+        "microbatch_sequences": 32,
+        "momentum": 0.9,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 4194304,
+        "validation_tokens": 32768,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "adamw_b8192_lr0.002_m0.9_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.002,
+        "mean_endpoint_bank_nll": 1.7380284070968628,
+        "mean_full_validation_nll": 1.748487949371338,
+        "planned_run_ids": [
+          "adamw_b8192_lr0.002_m0.9_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final fixed-bank validation NLL"
+    },
+    {
+      "boundary_lr": true,
+      "bracket_qualified": false,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "muon_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 1.5811169147491455,
+          "mean_full_validation_nll": 1.5906181335449219,
+          "planned_run_ids": [
+            "muon_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "muon_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 1.560532808303833,
+          "mean_full_validation_nll": 1.572855830192566,
+          "planned_run_ids": [
+            "muon_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "muon_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 1.5539357662200928,
+          "mean_full_validation_nll": 1.571211576461792,
+          "planned_run_ids": [
+            "muon_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 8192,
+        "cooldown_fraction": 0.1,
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare/input.txt",
+        "data_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 32,
+        "grad_clip": 1.0,
+        "method": "muon",
+        "microbatch_sequences": 32,
+        "momentum": 0.9,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 4194304,
+        "validation_tokens": 32768,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "muon_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.016,
+        "mean_endpoint_bank_nll": 1.5539357662200928,
+        "mean_full_validation_nll": 1.571211576461792,
+        "planned_run_ids": [
+          "muon_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final fixed-bank validation NLL"
+    },
+    {
+      "boundary_lr": true,
+      "bracket_qualified": false,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "pd_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 1.5666080713272095,
+          "mean_full_validation_nll": 1.5805792808532715,
+          "planned_run_ids": [
+            "pd_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "pd_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 1.5273956060409546,
+          "mean_full_validation_nll": 1.5418907403945923,
+          "planned_run_ids": [
+            "pd_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "pd_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 1.521111249923706,
+          "mean_full_validation_nll": 1.5326248407363892,
+          "planned_run_ids": [
+            "pd_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 8192,
+        "cooldown_fraction": 0.1,
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare/input.txt",
+        "data_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 32,
+        "grad_clip": 1.0,
+        "method": "pd",
+        "microbatch_sequences": 32,
+        "momentum": 0.9,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 4194304,
+        "validation_tokens": 32768,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "pd_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.016,
+        "mean_endpoint_bank_nll": 1.521111249923706,
+        "mean_full_validation_nll": 1.5326248407363892,
+        "planned_run_ids": [
+          "pd_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final fixed-bank validation NLL"
+    },
+    {
+      "boundary_lr": true,
+      "bracket_qualified": false,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "spd_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 1.5545848608016968,
+          "mean_full_validation_nll": 1.5683759450912476,
+          "planned_run_ids": [
+            "spd_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "spd_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 1.5386309623718262,
+          "mean_full_validation_nll": 1.5510374307632446,
+          "planned_run_ids": [
+            "spd_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "spd_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 1.5147613286972046,
+          "mean_full_validation_nll": 1.5293382406234741,
+          "planned_run_ids": [
+            "spd_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 8192,
+        "cooldown_fraction": 0.1,
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare/input.txt",
+        "data_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 32,
+        "grad_clip": 1.0,
+        "method": "spd",
+        "microbatch_sequences": 32,
+        "momentum": 0.9,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 4194304,
+        "validation_tokens": 32768,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "spd_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.016,
+        "mean_endpoint_bank_nll": 1.5147613286972046,
+        "mean_full_validation_nll": 1.5293382406234741,
+        "planned_run_ids": [
+          "spd_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final fixed-bank validation NLL"
+    },
+    {
+      "boundary_lr": true,
+      "bracket_qualified": false,
+      "candidates": [
+        {
+          "completed_run_ids": [
+            "ts_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.004,
+          "mean_endpoint_bank_nll": 1.5480886697769165,
+          "mean_full_validation_nll": 1.5611764192581177,
+          "planned_run_ids": [
+            "ts_b8192_lr0.004_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "ts_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.008,
+          "mean_endpoint_bank_nll": 1.5325936079025269,
+          "mean_full_validation_nll": 1.5466127395629883,
+          "planned_run_ids": [
+            "ts_b8192_lr0.008_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        },
+        {
+          "completed_run_ids": [
+            "ts_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "eligible": true,
+          "lr": 0.016,
+          "mean_endpoint_bank_nll": 1.5195001363754272,
+          "mean_full_validation_nll": 1.5357614755630493,
+          "planned_run_ids": [
+            "ts_b8192_lr0.016_m0.9_s20260928"
+          ],
+          "seeds": [
+            20260928
+          ]
+        }
+      ],
+      "discovery_only": true,
+      "expected_seeds": [
+        20260928
+      ],
+      "grid_complete": true,
+      "recipe": {
+        "alpha": 0.25,
+        "aux_lr": 0.002,
+        "batch_tokens": 8192,
+        "cooldown_fraction": 0.1,
+        "cov_ema": 0.9,
+        "cov_stride": 4,
+        "cpu_threads": 2,
+        "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare/input.txt",
+        "data_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+        "decay": 0.01,
+        "device": "cuda",
+        "eval_every": 32,
+        "grad_clip": 1.0,
+        "method": "ts",
+        "microbatch_sequences": 32,
+        "momentum": 0.9,
+        "n_embd": 128,
+        "n_head": 4,
+        "n_layer": 4,
+        "out_beta": 0.25,
+        "out_ema": 0.8,
+        "out_sequences": 16,
+        "precision": "bf16",
+        "root_refresh": 5,
+        "seq_len": 128,
+        "soap_beta2": 0.9,
+        "total_tokens": 4194304,
+        "validation_tokens": 32768,
+        "warmup_fraction": 0.034
+      },
+      "selected": {
+        "completed_run_ids": [
+          "ts_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "eligible": true,
+        "lr": 0.016,
+        "mean_endpoint_bank_nll": 1.5195001363754272,
+        "mean_full_validation_nll": 1.5357614755630493,
+        "planned_run_ids": [
+          "ts_b8192_lr0.016_m0.9_s20260928"
+        ],
+        "seeds": [
+          20260928
+        ]
+      },
+      "selection_metric": "mean final fixed-bank validation NLL"
+    }
+  ],
+  "rule": "Minimum mean endpoint fixed-bank NLL across identical planned seeds; full validation is not used.",
+  "scope": "Separate complete recipes; incomplete LR grids yield provisional candidates only."
+}

@@ -1,0 +1,204 @@
+{
+  "qualification_only": true,
+  "parameter_count": 76993536,
+  "budget_tokens": 1539870720,
+  "steps": 1469,
+  "final_batch_tokens": 561152,
+  "train_tokens_available": 3200000000,
+  "validation_tokens_available": 100000000,
+  "random_matrix_svd_24_panels_seconds": 1.3216057047247887,
+  "panels": {
+    "block02.q": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000027781739305,
+      "singular_values": 512
+    },
+    "block02.k": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000028660668465,
+      "singular_values": 512
+    },
+    "block02.v": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000029343073016,
+      "singular_values": 512
+    },
+    "block02.o": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.000001749511178,
+      "singular_values": 512
+    },
+    "block02.up": {
+      "shape": [
+        2048,
+        512
+      ],
+      "energy_sum": 1.0000226320097352,
+      "singular_values": 512
+    },
+    "block02.down": {
+      "shape": [
+        512,
+        2048
+      ],
+      "energy_sum": 1.0000192918960766,
+      "singular_values": 512
+    },
+    "block04.q": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000008022940157,
+      "singular_values": 512
+    },
+    "block04.k": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000031851849307,
+      "singular_values": 512
+    },
+    "block04.v": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000016421169675,
+      "singular_values": 512
+    },
+    "block04.o": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000023775196345,
+      "singular_values": 512
+    },
+    "block04.up": {
+      "shape": [
+        2048,
+        512
+      ],
+      "energy_sum": 1.0000186302802383,
+      "singular_values": 512
+    },
+    "block04.down": {
+      "shape": [
+        512,
+        2048
+      ],
+      "energy_sum": 1.0000228044016646,
+      "singular_values": 512
+    },
+    "block06.q": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000014408863118,
+      "singular_values": 512
+    },
+    "block06.k": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000013461839323,
+      "singular_values": 512
+    },
+    "block06.v": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000031629143415,
+      "singular_values": 512
+    },
+    "block06.o": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.000001705756371,
+      "singular_values": 512
+    },
+    "block06.up": {
+      "shape": [
+        2048,
+        512
+      ],
+      "energy_sum": 1.0000227614319857,
+      "singular_values": 512
+    },
+    "block06.down": {
+      "shape": [
+        512,
+        2048
+      ],
+      "energy_sum": 1.000022926212265,
+      "singular_values": 512
+    },
+    "block08.q": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000019017977377,
+      "singular_values": 512
+    },
+    "block08.k": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000031671669192,
+      "singular_values": 512
+    },
+    "block08.v": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.00000257842665,
+      "singular_values": 512
+    },
+    "block08.o": {
+      "shape": [
+        512,
+        512
+      ],
+      "energy_sum": 1.0000019641845603,
+      "singular_values": 512
+    },
+    "block08.up": {
+      "shape": [
+        2048,
+        512
+      ],
+      "energy_sum": 1.0000190175283286,
+      "singular_values": 512
+    },
+    "block08.down": {
+      "shape": [
+        512,
+        2048
+      ],
+      "energy_sum": 1.0000205925927683,
+      "singular_values": 512
+    }
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "input_manifest": {
+    "logs/observer_connections_20260928/pdtop_interpretation/check.py": {
+      "bytes": 5035,
+      "sha256": "3b15ff288fe4d1b6680165cc80b6bdea6e273cadc4b414f1960d19c7d50d20b3"
+    },
+    "logs/observer_connections_20260928/pdtop_interpretation/PROTOCOL.md": {
+      "bytes": 3375,
+      "sha256": "84a65c9c2d8de04b4d945af147e9b9d44dfec4222341142483282d8a830e1f2d"
+    },
+    "logs/observer_connections_20260928/progress_lead/PD_TOP_INTERPRETATION.md": {
+      "bytes": 8402,
+      "sha256": "3f87ffda787939ac137479454451eb43399b69b8903fe64b3088120d7145a9c9"
+    },
+    "research/adamw_spectra/muon.py": {
+      "bytes": 56044,
+      "sha256": "3452e24453ef2fd1e74263cdb9abafb6583764a04924b3b521f178fb6bad1ef5"
+    },
+    "logs/muon_spectra/second_order_audit_20260926/step_profile_probe.py": {
+      "bytes": 9513,
+      "sha256": "629499800c68ffbf9324485bcb27a2929d828c9c63f10104c95102ba10d01577"
+    },
+    "logs/muon_spectra/second_order_audit_20260926/step_profile_pdtop/soaudit_batch16m_20260927__M_b16M_lr0.02_mom0.9_s260925_l40s__46.json": {
+      "bytes": 5605,
+      "sha256": "6c6ab478bde067981d344f66cc6105a510dbe3a8cf52a19fafc88c66c5e403fe"
+    },
+    "logs/muon_spectra/second_order_audit_20260926/step_profile_pdtop/soaudit_batch16m_20260927__M_b16M_lr0.02_mom0.9_s260925_l40s__83.json": {
+      "bytes": 5595,
+      "sha256": "24885ae70bd8b43cfa895fb8feea345c7861a8233b4ebd1e986a915de6256fc8"
+    },
+    "logs/muon_spectra/second_order_audit_20260926/step_profile_pdtop/soaudit_batch16m_20260927__PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s__46.json": {
+      "bytes": 5544,
+      "sha256": "5977a82f346c17f42827e80eded63f6608f60f8ac77702eb729dbf87ab896fd2"
+    },
+    "logs/muon_spectra/second_order_audit_20260926/step_profile_pdtop/soaudit_batch16m_20260927__PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s__83.json": {
+      "bytes": 5550,
+      "sha256": "60d1b580ff4f9ab27f59bb919bcb2bdeca67b01beae0e9169dd3c660f49ad65c"
+    }
+  },
+  "algebra": [
+    {
+      "shape": [
+        6,
+        6
+      ],
+      "scale_errors": [
+        5.98244066247953e-16,
+        4.764840477790144e-16
+      ],
+      "projector_gram_error": 2.006384501973189e-15,
+      "simple_gram_error": 1.9934803353052227e-15,
+      "contractive_root_raw_norm": 1.6064345904492443
+    },
+    {
+      "shape": [
+        12,
+        6
+      ],
+      "scale_errors": [
+        5.84252960982347e-16,
+        5.750192942322961e-16
+      ],
+      "projector_gram_error": 7.65168414856311e-16,
+      "simple_gram_error": 1.1470812255482868e-15,
+      "contractive_root_raw_norm": 1.6064345904492443
+    },
+    {
+      "shape": [
+        6,
+        12
+      ],
+      "scale_errors": [
+        7.123609268225901e-16,
+        5.88087569136074e-16
+      ],
+      "projector_gram_error": 8.44282537715411e-16,
+      "simple_gram_error": 0.18722316006199782,
+      "contractive_root_raw_norm": 2.0729397187676732
+    }
+  ],
+  "example": {
+    "full_energy": [
+      0.10000000000000003,
+      1.9000000000000004
+    ],
+    "top_energy": [
+      0.6896551724137933,
+      1.3103448275862073
+    ]
+  },
+  "preflight": [
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "method": "muon",
+      "norm": 156.78005094717886,
+      "slope": 1.5740157254040241,
+      "energy_fraction_top16": 0.0007435636944137514,
+      "absolute_energy_top16": 18.276783990507283,
+      "curvature": 136.3164119720459,
+      "curvature_per_norm2": 0.005545829887129287,
+      "curvature_curv_set": 132.37197875976562,
+      "c_star": -0.011546780777407815
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "method": "pd",
+      "norm": 1083.8075820919505,
+      "slope": 0.03905502753332257,
+      "energy_fraction_top16": 8.37659683838865e-07,
+      "absolute_energy_top16": 0.9839476286573401,
+      "curvature": 25.63763201236725,
+      "curvature_per_norm2": 2.182596928981024e-05,
+      "curvature_curv_set": 17.98604393005371,
+      "c_star": -0.001523347691178458
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "method": "pdtop",
+      "norm": 149.676460970822,
+      "slope": 0.30367330193985254,
+      "energy_fraction_top16": 4.83951298519969e-05,
+      "absolute_energy_top16": 1.0841981735525226,
+      "curvature": 19.023270845413208,
+      "curvature_per_norm2": 0.0008491378100711033,
+      "curvature_curv_set": 15.942416191101074,
+      "c_star": -0.01596325386982926
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "method": "muon",
+      "norm": 156.7798640809782,
+      "slope": 3.0140056163072586,
+      "energy_fraction_top16": 0.0004083288658875972,
+      "absolute_energy_top16": 10.036693217859124,
+      "curvature": 230.08625411987305,
+      "curvature_per_norm2": 0.009360738358916727,
+      "curvature_curv_set": 234.61753845214844,
+      "c_star": -0.013099459712777916
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "method": "pd",
+      "norm": 561.2901990058263,
+      "slope": 0.8517291024327278,
+      "energy_fraction_top16": 1.8052634231935372e-06,
+      "absolute_energy_top16": 0.5687422615420347,
+      "curvature": 55.56677007675171,
+      "curvature_per_norm2": 0.00017637630320030488,
+      "curvature_curv_set": 38.601924896240234,
+      "c_star": -0.015328029706536395
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "method": "pdtop",
+      "norm": 147.8510190297145,
+      "slope": 0.9763351045548916,
+      "energy_fraction_top16": 2.7222638891544193e-05,
+      "absolute_energy_top16": 0.5950848125697092,
+      "curvature": 38.73483717441559,
+      "curvature_per_norm2": 0.0017719566398753553,
+      "curvature_curv_set": 32.776145935058594,
+      "c_star": -0.02520560755576797
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "method": "muon",
+      "norm": 156.78010700699562,
+      "slope": 14.3072949051857,
+      "energy_fraction_top16": 0.0010140504455193877,
+      "absolute_energy_top16": 24.925361931433823,
+      "curvature": 3863.3335876464844,
+      "curvature_per_norm2": 0.1571738519392313,
+      "curvature_curv_set": 3795.048095703125,
+      "c_star": -0.0037033547791304254
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "method": "pd",
+      "norm": 703.2779500311381,
+      "slope": 4.1530198603868484,
+      "energy_fraction_top16": 2.4336075057362905e-06,
+      "absolute_energy_top16": 1.2036619681362308,
+      "curvature": 579.8764972686768,
+      "curvature_per_norm2": 0.0011724153736769078,
+      "curvature_curv_set": 354.30462646484375,
+      "c_star": -0.007161904095006995
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "method": "pdtop",
+      "norm": 149.48737927497424,
+      "slope": 3.7984071522951126,
+      "energy_fraction_top16": 4.722120866063051e-05,
+      "absolute_energy_top16": 1.0552276325877017,
+      "curvature": 366.24875259399414,
+      "curvature_per_norm2": 0.016389552579783532,
+      "curvature_curv_set": 287.16497802734375,
+      "c_star": -0.010371112871764086
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "method": "muon",
+      "norm": 156.7798453943459,
+      "slope": 12.781043589115143,
+      "energy_fraction_top16": 0.0012281629024073482,
+      "absolute_energy_top16": 30.188145792190202,
+      "curvature": 6169.763244628906,
+      "curvature_per_norm2": 0.25100827277871235,
+      "curvature_curv_set": 6355.9677734375,
+      "c_star": -0.0020715614331298197
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "method": "pd",
+      "norm": 619.0311987291109,
+      "slope": 4.748875454068184,
+      "energy_fraction_top16": 4.1619082367105875e-06,
+      "absolute_energy_top16": 1.5948416755919084,
+      "curvature": 833.6141586303711,
+      "curvature_per_norm2": 0.0021754044217302433,
+      "curvature_curv_set": 645.39208984375,
+      "c_star": -0.005696730801538437
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "method": "pdtop",
+      "norm": 148.85813427765711,
+      "slope": 4.136334240436554,
+      "energy_fraction_top16": 6.262639362830669e-05,
+      "absolute_energy_top16": 1.3877222328597154,
+      "curvature": 562.4294471740723,
+      "curvature_per_norm2": 0.025381828663427527,
+      "curvature_curv_set": 496.5679931640625,
+      "c_star": -0.007354405536942585
+    }
+  ],
+  "ratios": [
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "muon_over_top_fraction": 15.364432261835747,
+      "muon_over_top_absolute": 16.857420014480304,
+      "muon_over_pd_fraction": 887.6679978271292,
+      "muon_over_pd_absolute": 18.574956083228873,
+      "top_over_pd_fraction": 57.774214022345554,
+      "top_over_pd_absolute": 1.1018860577284797,
+      "top_over_muon_norm": 0.954690727975652,
+      "pd_over_muon_norm": 6.912917654664487,
+      "top_over_muon_curvature_per_norm2": 0.15311284827574226,
+      "slopes": {
+        "muon": 1.5740157254040241,
+        "pd": 0.03905502753332257,
+        "pdtop": 0.30367330193985254
+      }
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "muon_over_top_fraction": 14.999606302474628,
+      "muon_over_top_absolute": 16.865987848889034,
+      "muon_over_pd_fraction": 226.1879682718312,
+      "muon_over_pd_absolute": 17.647173239151545,
+      "top_over_pd_fraction": 15.07959367136955,
+      "top_over_pd_absolute": 1.0463172034310442,
+      "top_over_muon_norm": 0.9430485215457779,
+      "pd_over_muon_norm": 3.580116632298615,
+      "top_over_muon_curvature_per_norm2": 0.18929667425085636,
+      "slopes": {
+        "muon": 3.0140056163072586,
+        "pd": 0.8517291024327278,
+        "pdtop": 0.9763351045548916
+      }
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:46",
+      "step": 46,
+      "muon_over_top_fraction": 21.474470355199244,
+      "muon_over_top_absolute": 23.62083891824377,
+      "muon_over_pd_fraction": 416.68611028243265,
+      "muon_over_pd_absolute": 20.707941757126918,
+      "top_over_pd_fraction": 19.40378986723403,
+      "top_over_pd_absolute": 0.8766810454447047,
+      "top_over_muon_norm": 0.9534843554374155,
+      "pd_over_muon_norm": 4.485760109857288,
+      "top_over_muon_curvature_per_norm2": 0.10427658530707948,
+      "slopes": {
+        "muon": 14.3072949051857,
+        "pd": 4.1530198603868484,
+        "pdtop": 3.7984071522951126
+      }
+    },
+    {
+      "state": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:83",
+      "step": 83,
+      "muon_over_top_fraction": 19.61094725806193,
+      "muon_over_top_absolute": 21.75373794363783,
+      "muon_over_pd_fraction": 295.0961031707035,
+      "muon_over_pd_absolute": 18.928616084092607,
+      "top_over_pd_fraction": 15.047519086534253,
+      "top_over_pd_absolute": 0.8701316588962834,
+      "top_over_muon_norm": 0.949472388515479,
+      "pd_over_muon_norm": 3.948410570070862,
+      "top_over_muon_curvature_per_norm2": 0.10111949053489572,
+      "slopes": {
+        "muon": 12.781043589115143,
+        "pd": 4.748875454068184,
+        "pdtop": 4.136334240436554
+      }
+    }
+  ],
+  "seconds": 0.014086205512285233,
+  "scope": "Raw exact-polar maps of lagged momentum; no online per-matrix matching, no training rate or feedback claim."
+}

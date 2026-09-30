@@ -1,0 +1,154 @@
+{
+  "scope": "One fixed full-rank2\u00d72analytic qualification. Errors measure equivariance, not loss, stability, empirical gauge drift or optimizer quality.",
+  "matrices": {
+    "V": [
+      [
+        0.8,
+        0.3
+      ],
+      [
+        -0.2,
+        1.1
+      ]
+    ],
+    "O": [
+      [
+        1.2,
+        -0.4
+      ],
+      [
+        0.1,
+        0.9
+      ]
+    ],
+    "C": [
+      [
+        2.0,
+        0.3
+      ],
+      [
+        0.3,
+        0.5
+      ]
+    ],
+    "K": [
+      [
+        0.2,
+        -0.4
+      ],
+      [
+        0.6,
+        0.1
+      ]
+    ],
+    "S": [
+      [
+        2.0,
+        0.25
+      ],
+      [
+        0.0,
+        0.5
+      ]
+    ]
+  },
+  "positive_controls": {
+    "product": 1.5184334157854995e-16,
+    "covector_V": 1.0250635974771411e-16,
+    "covector_O": 2.1223946520564615e-16
+  },
+  "maps": {
+    "raw": {
+      "V_covariance_error": 0.8916442842901988,
+      "O_covariance_error": 5.093565265206626e-16,
+      "O_best_scalar": 1.0000000000000004,
+      "O_ray_error_after_scalar": 2.6974556011255596e-16,
+      "pair_tangent_error": 0.3638442790636712,
+      "original_norms": [
+        1.6574838603294906,
+        1.5857766760612912
+      ],
+      "transformed_norms": [
+        1.6574838603294901,
+        2.7633061563360988
+      ]
+    },
+    "mean_normalized": {
+      "V_covariance_error": 0.8916442842901988,
+      "O_covariance_error": 0.7425569426330101,
+      "O_best_scalar": 1.7425569426330103,
+      "O_ray_error_after_scalar": 2.7620682200759084e-16,
+      "pair_tangent_error": 0.5016500284894057,
+      "original_norms": [
+        1.8531232916527538,
+        1.5944745939241978
+      ],
+      "transformed_norms": [
+        1.8531232916527534,
+        4.841629595800309
+      ]
+    },
+    "mean_damped": {
+      "V_covariance_error": 0.8912603726839816,
+      "O_covariance_error": 0.7294628975849329,
+      "O_best_scalar": 1.7294180373314938,
+      "O_ray_error_after_scalar": 0.004677790866669807,
+      "pair_tangent_error": 0.49925745466354166,
+      "original_norms": [
+        1.850872749661134,
+        1.5932466116184172
+      ],
+      "transformed_norms": [
+        1.8508727496611344,
+        4.78822585519442
+      ]
+    },
+    "raw_grafted": {
+      "V_covariance_error": 0.8916442842901992,
+      "O_covariance_error": 0.42613066148128426,
+      "O_best_scalar": 0.5738693385187157,
+      "O_ray_error_after_scalar": 2.6559866312722134e-16,
+      "pair_tangent_error": 0.4028624939897649,
+      "original_norms": [
+        1.4142135623730951,
+        1.4142135623730951
+      ],
+      "transformed_norms": [
+        1.4142135623730951,
+        1.4142135623730951
+      ]
+    },
+    "online_geometry_ideal_polar": {
+      "V_covariance_error": 0.8912603726839813,
+      "O_covariance_error": 0.4245575187535483,
+      "O_best_scalar": 0.5754510149225818,
+      "O_ray_error_after_scalar": 0.004677790866669827,
+      "pair_tangent_error": 0.40320359670259903,
+      "original_norms": [
+        1.414213562373095,
+        1.4142135623730951
+      ],
+      "transformed_norms": [
+        1.4142135623730951,
+        1.414213562373095
+      ]
+    },
+    "full_two_sided_raw": {
+      "V_covariance_error": 7.543927530361142e-16,
+      "O_covariance_error": 5.093565265206626e-16,
+      "pair_tangent_error": 3.216726326004846e-16
+    },
+    "full_two_sided_grafted": {
+      "V_covariance_error": 0.41241444872523875,
+      "O_covariance_error": 0.42613066148128426,
+      "pair_tangent_error": 0.4189333427747681
+    }
+  },
+  "decay": {
+    "scalar_product_equivariance_error": 9.077678779672053e-17,
+    "V_covariance_error": 0.0,
+    "O_covariance_error": 0.5006555151843495,
+    "pair_tangent_error": 0.2570326325092407
+  },
+  "script_sha256": "9a96629cb068b24c247830546dd5b734532739ebe3871406b504df1ab0153284"
+}

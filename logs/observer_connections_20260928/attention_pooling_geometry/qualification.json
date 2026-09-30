@@ -1,0 +1,204 @@
+{
+  "status": "passed",
+  "scope": "Exact synthetic algebra only; no trained model, checkpoint or optimizer outcome.",
+  "seconds": 0.014492243528366089,
+  "errors": {
+    "full_Jacobian_partial_trace": 2.6278795601481626e-16,
+    "pre_value_trace": 2.921288576986977e-16,
+    "independent_position_covariance": 6.453544378663091e-17,
+    "pre_value_trace_iid": 0.0
+  },
+  "moment_cases": [
+    {
+      "T": 4,
+      "attention": "identity",
+      "q": 1.0,
+      "a": 1.0,
+      "b": 1.0,
+      "b_over_a": 1.0,
+      "moment_identity_error": 0.0,
+      "coefficient_relation_error": 0.0
+    },
+    {
+      "T": 4,
+      "attention": "uniform_causal",
+      "q": 0.5208333333333334,
+      "a": 0.6933333333333335,
+      "b": 1.92,
+      "b_over_a": 2.7692307692307687,
+      "moment_identity_error": 0.0,
+      "coefficient_relation_error": 0.0
+    },
+    {
+      "T": 4,
+      "attention": "uniform_full",
+      "q": 0.25,
+      "a": 0.0,
+      "b": 4.0,
+      "b_over_a": null,
+      "moment_identity_error": 0.0,
+      "coefficient_relation_error": 0.0
+    },
+    {
+      "T": 4,
+      "attention": "causal_mixture",
+      "q": 0.5639583333333333,
+      "a": 0.7422731190740056,
+      "b": 1.773180642777983,
+      "b_over_a": 2.3888520238885205,
+      "moment_identity_error": 0.0,
+      "coefficient_relation_error": 0.0
+    },
+    {
+      "T": 512,
+      "attention": "identity",
+      "q": 1.0,
+      "a": 1.0,
+      "b": 1.0,
+      "b_over_a": 1.0,
+      "moment_identity_error": 0.0,
+      "coefficient_relation_error": 0.0
+    },
+    {
+      "T": 512,
+      "attention": "uniform_causal",
+      "q": 0.013313508856542427,
+      "a": 0.8549673606068925,
+      "b": 75.11167872987798,
+      "b_over_a": 87.85327041790285,
+      "moment_identity_error": 1.328304856413846e-17,
+      "coefficient_relation_error": 0.0
+    },
+    {
+      "T": 512,
+      "attention": "uniform_full",
+      "q": 0.001953125,
+      "a": 0.0,
+      "b": 512.0,
+      "b_over_a": null,
+      "moment_identity_error": 0.0,
+      "coefficient_relation_error": 0.0
+    },
+    {
+      "T": 512,
+      "attention": "causal_mixture",
+      "q": 0.1021152930594536,
+      "a": 0.9827928523065539,
+      "b": 9.792852471350981,
+      "b_over_a": 9.964309822123516,
+      "moment_identity_error": 6.586396390065508e-17,
+      "coefficient_relation_error": 0.0
+    }
+  ],
+  "fixed_input_same_q_counterexample": {
+    "q": 1.0,
+    "X": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.0
+      ],
+      [
+        -1.0,
+        0.0
+      ]
+    ],
+    "A1": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "A2": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "C_AX_1": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "C_AX_2": [
+      [
+        0.3333333333333333,
+        0.0
+      ],
+      [
+        0.0,
+        2.6666666666666665
+      ]
+    ],
+    "frobenius_difference": 2.748737083745107
+  },
+  "downstream_same_q_counterexamples": [
+    {
+      "name": "independent_equal",
+      "q": 0.5208333333333334,
+      "Gamma": 1.92,
+      "a": 0.6933333333333334,
+      "b": 1.92,
+      "moment_identity_error": 0.0
+    },
+    {
+      "name": "independent_unequal",
+      "q": 0.5208333333333334,
+      "Gamma": 3.633802816901408,
+      "a": 0.12206572769953065,
+      "b": 3.633802816901408,
+      "moment_identity_error": 0.0
+    },
+    {
+      "name": "coherent",
+      "q": 0.5208333333333334,
+      "Gamma": 2.704225352112677,
+      "a": 0.4319248826291077,
+      "b": 2.704225352112677,
+      "moment_identity_error": 1.5850760338347447e-16
+    },
+    {
+      "name": "centered",
+      "q": 0.5208333333333334,
+      "Gamma": 0.0,
+      "a": 1.3333333333333333,
+      "b": 0.0,
+      "moment_identity_error": 0.0
+    }
+  ],
+  "historical_tensors_read": false,
+  "model_calls": 0,
+  "gpu_calls": 0,
+  "source_sha256": "1236d4cbba62626aa65d7e793a88579ec886ef104a7df6415f0af04b926070a1",
+  "protocol_sha256": "0866919f55e1e19845d436e2c2c74b1d6372218b3fd4498ff085e3d848a360cc"
+}

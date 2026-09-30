@@ -1,0 +1,41 @@
+{
+  "old_root": "/share/data/dl-theory/amin/projects/last_layer",
+  "new_root": "/share/data/dl-theory/amin/projects/explore_muon",
+  "started_utc": "2026-09-25T03:04:17.741036+00:00",
+  "phase": "complete",
+  "queued_job_ids": [
+    "2620278",
+    "2620623"
+  ],
+  "moved_paths": [
+    "research/adamw_spectra",
+    "logs/adamw_spectra",
+    "logs/muon_spectra",
+    "data/fineweb10B_scaling"
+  ],
+  "compatibility_symlinks": {
+    "/share/data/dl-theory/amin/projects/last_layer/research/adamw_spectra": "../../explore_muon/research/adamw_spectra",
+    "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra": "../../explore_muon/logs/adamw_spectra",
+    "/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra": "../../explore_muon/logs/muon_spectra",
+    "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B_scaling": "../../explore_muon/data/fineweb10B_scaling"
+  },
+  "shared_dependencies": {
+    ".venv": "/share/data/dl-theory/amin/projects/last_layer/.venv",
+    "data/fineweb10B": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B"
+  },
+  "file_entries_verified": 8707,
+  "regular_file_logical_bytes": 19268682349,
+  "queued_frozen_source_files_verified": {
+    "logs/adamw_spectra/depth20_w512_20260924": 17,
+    "logs/muon_spectra/depth20_w512_20260925_r2": 25
+  },
+  "released_job_ids": [
+    "2620278",
+    "2620623"
+  ],
+  "release_errors": [],
+  "finished_utc": "2026-09-25T03:04:19.374739+00:00",
+  "unit_tests_passed": 16,
+  "runtime_paths_verified": true,
+  "completed_utc": "2026-09-25T03:08:08.657667+00:00"
+}

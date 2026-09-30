@@ -1,0 +1,18 @@
+{
+  "__init__.py": {
+    "sha256": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+    "source": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra/stories_c_edges_20260928/frozen/research/adamw_spectra/__init__.py"
+  },
+  "data_norm_muon.py": {
+    "sha256": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+    "source": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra/stories_c_edges_20260928/frozen/research/adamw_spectra/data_norm_muon.py"
+  },
+  "model.py": {
+    "sha256": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+    "source": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra/stories_c_edges_20260928/frozen/research/adamw_spectra/model.py"
+  },
+  "muon.py": {
+    "sha256": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+    "source": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra/stories_c_edges_20260928/frozen/research/adamw_spectra/muon.py"
+  }
+}

@@ -1,0 +1,3988 @@
+{
+  "status": "complete",
+  "labels": [
+    "h1_b08",
+    "h1_b09",
+    "h1_warm",
+    "h2_b08",
+    "h2_b09",
+    "h2_warm"
+  ],
+  "arms": {
+    "h1_b08": "soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada",
+    "h1_b09": "soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada",
+    "h1_warm": "soaudit_momwarm16m_20260928/SPD_a0.5_b16M_lr0.028_momwarm0.8to0.9_s260925_ada",
+    "h2_b08": "soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada",
+    "h2_b09": "soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada",
+    "h2_warm": "soaudit_momwarm16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_momwarm0.8to0.9_s260925_ada"
+  },
+  "scales": [
+    0.8,
+    0.9,
+    1.0,
+    1.1,
+    1.2
+  ],
+  "offsets": [
+    3140131072,
+    3150131072
+  ],
+  "metadata": {
+    "h1_b08": {
+      "schema_version": 2,
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true,
+          "track_input_stats": true,
+          "track_input_cov": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.028,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 16777216,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 1539870720,
+        "warmup_steps": 3,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.8,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "muon_prefilter": "none",
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": true,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.5,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 2,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "data_norm_out_beta": 0.0,
+        "data_norm_out_source": "ef",
+        "data_norm_out_refresh": 2,
+        "data_norm_out_sequences": 8,
+        "data_norm_out_ema": 0.8,
+        "data_norm_out_placebo": false,
+        "muon_track_displacement": false,
+        "keep_checkpoints": [
+          9,
+          46,
+          83
+        ]
+      },
+      "parameter_count": 76948992,
+      "budget_tokens": 1539870720,
+      "total_steps": 92,
+      "world_size": 4,
+      "initial_model_sha256": "f8efae98b3d9e0dd5e9cd2318ea2b56a8b01358742af2d91e8c86ea9caf41d19",
+      "source_sha256": {
+        "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+        "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+        "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+        "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+        "distributed.py": "077b64dcb53224de27020bd4ecbb1166fbca7525a54b6d30c5b91d21d06bb59a",
+        "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+        "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+        "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+        "muon.py": "1bf6df6fbd35471450d8bb1e0de82027ed99532791f2911e167f349cd53e461d",
+        "run_arm.py": "8fdcc688e832ee922e218c0ab6d484f9a6f77e60ba6e2a33c0413f7466423f89",
+        "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+        "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+        "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+        "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+        "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+        "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+        "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+        "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+        "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+        "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+        "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+        "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+        "test_whitening.py": "24d0ba873532082e1db565403a129dfdc7dd97efa0ab52e4fdb63fb2133010ce",
+        "train.py": "ddcadd58dc10ae0d29a869d43ef216d41ff76bab5af82c2f6c565be60423ec7f"
+      },
+      "train_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000001.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181691636593929
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000002.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181693842670783
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000003.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181696856775787
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000004.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181699420865114
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000005.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181702509972732
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000006.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181706520112435
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000007.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181709802226777
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000008.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181713595358920
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000009.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181715680431559
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000010.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181719179553461
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000011.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181723542705463
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000012.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181727947858928
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000013.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181730386943900
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000014.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181733484051796
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000015.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181735906136176
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000016.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181740341290686
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000017.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181744440433491
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000018.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181748098560931
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000019.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181750383640538
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000020.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181754099769999
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000021.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787488800500564819
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000022.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528145904025423
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000023.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528291307095336
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000024.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531953033712333
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000025.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531958272894897
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000026.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531965464145484
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000027.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531971766365091
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000028.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531978315593306
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000029.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787537545689567473
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000030.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787539812935592137
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000031.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542278265464368
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000032.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542281914591356
+        }
+      ],
+      "validation_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_val_000000.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181688651489935
+        }
+      ],
+      "measured_parameters": {
+        "block02.q": [
+          512,
+          512
+        ],
+        "block02.k": [
+          512,
+          512
+        ],
+        "block02.v": [
+          512,
+          512
+        ],
+        "block02.o": [
+          512,
+          512
+        ],
+        "block02.up": [
+          2048,
+          512
+        ],
+        "block02.down": [
+          512,
+          2048
+        ],
+        "block04.q": [
+          512,
+          512
+        ],
+        "block04.k": [
+          512,
+          512
+        ],
+        "block04.v": [
+          512,
+          512
+        ],
+        "block04.o": [
+          512,
+          512
+        ],
+        "block04.up": [
+          2048,
+          512
+        ],
+        "block04.down": [
+          512,
+          2048
+        ],
+        "block06.q": [
+          512,
+          512
+        ],
+        "block06.k": [
+          512,
+          512
+        ],
+        "block06.v": [
+          512,
+          512
+        ],
+        "block06.o": [
+          512,
+          512
+        ],
+        "block06.up": [
+          2048,
+          512
+        ],
+        "block06.down": [
+          512,
+          2048
+        ],
+        "block08.q": [
+          512,
+          512
+        ],
+        "block08.k": [
+          512,
+          512
+        ],
+        "block08.v": [
+          512,
+          512
+        ],
+        "block08.o": [
+          512,
+          512
+        ],
+        "block08.up": [
+          2048,
+          512
+        ],
+        "block08.down": [
+          512,
+          2048
+        ]
+      },
+      "torch_version": "2.11.0+cu130",
+      "device": "cuda",
+      "device_name": "NVIDIA RTX 6000 Ada Generation",
+      "effective_precision": "bf16",
+      "effective_optimizer_impl": "muon_ns5+adamw_fused",
+      "effective_compile": true,
+      "compilers": {
+        "CC": "/usr/bin/x86_64-linux-gnu-gcc",
+        "CXX": "/usr/bin/x86_64-linux-gnu-g++"
+      },
+      "gradient_reduction": "DDP mean with micro-loss weight world_size * actual_micro_tokens / actual_global_batch",
+      "measurement": "captured post-NS update (including shape scaling), excluding LR and decay",
+      "momentum_measurement": "FP32 momentum normalized before BF16 casting; not the rounded BF16 NS input",
+      "ns_coefficients": [
+        [
+          4.0848,
+          -6.8946,
+          2.927
+        ],
+        [
+          3.9505,
+          -6.3029,
+          2.6377
+        ],
+        [
+          3.7418,
+          -5.5913,
+          2.3037
+        ],
+        [
+          2.8769,
+          -3.1427,
+          1.2046
+        ],
+        [
+          2.8366,
+          -3.0525,
+          1.2012
+        ]
+      ],
+      "nesterov": false,
+      "ns_execution": "eager batched BF16 polynomial; model compilation independent",
+      "ns_normalization": "FP32 Frobenius norm clamped at 1e-7, then BF16 on CUDA",
+      "muon_shape_scale": "sqrt(max(1, original rows / original columns))",
+      "muon_direction_distribution": "single owner per matrix, round-robin within shape; sum disjoint FP32 direction slices",
+      "parameter_optimizers": {
+        "embed.weight": "adamw",
+        "position.weight": "adamw",
+        "blocks.0.ln1.weight": "adamw",
+        "blocks.0.ln2.weight": "adamw",
+        "blocks.0.attn.q.weight": "muon",
+        "blocks.0.attn.k.weight": "muon",
+        "blocks.0.attn.v.weight": "muon",
+        "blocks.0.attn.o.weight": "muon",
+        "blocks.0.attn.q_norm.weight": "adamw",
+        "blocks.0.attn.k_norm.weight": "adamw",
+        "blocks.0.mlp.up.weight": "muon",
+        "blocks.0.mlp.down.weight": "muon",
+        "blocks.1.ln1.weight": "adamw",
+        "blocks.1.ln2.weight": "adamw",
+        "blocks.1.attn.q.weight": "muon",
+        "blocks.1.attn.k.weight": "muon",
+        "blocks.1.attn.v.weight": "muon",
+        "blocks.1.attn.o.weight": "muon",
+        "blocks.1.attn.q_norm.weight": "adamw",
+        "blocks.1.attn.k_norm.weight": "adamw",
+        "blocks.1.mlp.up.weight": "muon",
+        "blocks.1.mlp.down.weight": "muon",
+        "blocks.2.ln1.weight": "adamw",
+        "blocks.2.ln2.weight": "adamw",
+        "blocks.2.attn.q.weight": "muon",
+        "blocks.2.attn.k.weight": "muon",
+        "blocks.2.attn.v.weight": "muon",
+        "blocks.2.attn.o.weight": "muon",
+        "blocks.2.attn.q_norm.weight": "adamw",
+        "blocks.2.attn.k_norm.weight": "adamw",
+        "blocks.2.mlp.up.weight": "muon",
+        "blocks.2.mlp.down.weight": "muon",
+        "blocks.3.ln1.weight": "adamw",
+        "blocks.3.ln2.weight": "adamw",
+        "blocks.3.attn.q.weight": "muon",
+        "blocks.3.attn.k.weight": "muon",
+        "blocks.3.attn.v.weight": "muon",
+        "blocks.3.attn.o.weight": "muon",
+        "blocks.3.attn.q_norm.weight": "adamw",
+        "blocks.3.attn.k_norm.weight": "adamw",
+        "blocks.3.mlp.up.weight": "muon",
+        "blocks.3.mlp.down.weight": "muon",
+        "blocks.4.ln1.weight": "adamw",
+        "blocks.4.ln2.weight": "adamw",
+        "blocks.4.attn.q.weight": "muon",
+        "blocks.4.attn.k.weight": "muon",
+        "blocks.4.attn.v.weight": "muon",
+        "blocks.4.attn.o.weight": "muon",
+        "blocks.4.attn.q_norm.weight": "adamw",
+        "blocks.4.attn.k_norm.weight": "adamw",
+        "blocks.4.mlp.up.weight": "muon",
+        "blocks.4.mlp.down.weight": "muon",
+        "blocks.5.ln1.weight": "adamw",
+        "blocks.5.ln2.weight": "adamw",
+        "blocks.5.attn.q.weight": "muon",
+        "blocks.5.attn.k.weight": "muon",
+        "blocks.5.attn.v.weight": "muon",
+        "blocks.5.attn.o.weight": "muon",
+        "blocks.5.attn.q_norm.weight": "adamw",
+        "blocks.5.attn.k_norm.weight": "adamw",
+        "blocks.5.mlp.up.weight": "muon",
+        "blocks.5.mlp.down.weight": "muon",
+        "blocks.6.ln1.weight": "adamw",
+        "blocks.6.ln2.weight": "adamw",
+        "blocks.6.attn.q.weight": "muon",
+        "blocks.6.attn.k.weight": "muon",
+        "blocks.6.attn.v.weight": "muon",
+        "blocks.6.attn.o.weight": "muon",
+        "blocks.6.attn.q_norm.weight": "adamw",
+        "blocks.6.attn.k_norm.weight": "adamw",
+        "blocks.6.mlp.up.weight": "muon",
+        "blocks.6.mlp.down.weight": "muon",
+        "blocks.7.ln1.weight": "adamw",
+        "blocks.7.ln2.weight": "adamw",
+        "blocks.7.attn.q.weight": "muon",
+        "blocks.7.attn.k.weight": "muon",
+        "blocks.7.attn.v.weight": "muon",
+        "blocks.7.attn.o.weight": "muon",
+        "blocks.7.attn.q_norm.weight": "adamw",
+        "blocks.7.attn.k_norm.weight": "adamw",
+        "blocks.7.mlp.up.weight": "muon",
+        "blocks.7.mlp.down.weight": "muon",
+        "norm.weight": "adamw",
+        "head.weight": "adamw"
+      },
+      "data_norm": "partial data-norm Muon (sandwich, SOAP in whitened coordinates): polar(M R) R, R = C^-0.5 with C the EMA  uncentered input second moment (every 32nd position from 1, decay 0.998 per training forward, per-rank), scaled to unit mean eigenvalue plus 0.001 I, FP64 eigh every 2 steps (owner-local cache); update rescaled to Muon's Frobenius norm sqrt(min(m, n)) before the shape scale",
+      "soap_precondition": "SOAP-style momentum preconditioning before NS (Track-3 SOAP-Muon core): eigenbases of EMA(GG^T), EMA(G^T G) (beta2 0.9, sorted-QR refresh every step; rotated sides: both), divided by the EMA second moment of the projected momentum ^0.5 (entrywise; layers all; right_act = input basis from the activation second moment), Frobenius norm restored; statistics owner-local, not checkpointed"
+    },
+    "h1_b09": {
+      "schema_version": 2,
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true,
+          "track_input_stats": true,
+          "track_input_cov": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.028,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 16777216,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 1539870720,
+        "warmup_steps": 3,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.9,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": true,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.5,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 2,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "data_norm_out_beta": 0.0,
+        "data_norm_out_source": "ef",
+        "data_norm_out_refresh": 2,
+        "data_norm_out_sequences": 8,
+        "data_norm_out_ema": 0.8,
+        "data_norm_out_placebo": false,
+        "muon_track_displacement": false,
+        "keep_checkpoints": [
+          9,
+          46,
+          83
+        ]
+      },
+      "parameter_count": 76948992,
+      "budget_tokens": 1539870720,
+      "total_steps": 92,
+      "world_size": 4,
+      "initial_model_sha256": "f8efae98b3d9e0dd5e9cd2318ea2b56a8b01358742af2d91e8c86ea9caf41d19",
+      "source_sha256": {
+        "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+        "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+        "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+        "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+        "distributed.py": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+        "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+        "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+        "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+        "muon.py": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+        "run_arm.py": "494b1c94e94353d04c2e86fe69d78091ba8015697a3205874f385d7ea7e2a6f0",
+        "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+        "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+        "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+        "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+        "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+        "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+        "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+        "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+        "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+        "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+        "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+        "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+        "test_whitening.py": "3560d8fac32b8a19ef95b8d7d6af9da99b844b96500a20e4545acf25e6b779a1",
+        "train.py": "b637265f9fe47ebfecdc5615d29c94b0f8c8242068ef1d1cba6afdb7c3acab5f"
+      },
+      "train_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000001.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181691636593929
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000002.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181693842670783
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000003.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181696856775787
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000004.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181699420865114
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000005.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181702509972732
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000006.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181706520112435
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000007.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181709802226777
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000008.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181713595358920
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000009.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181715680431559
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000010.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181719179553461
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000011.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181723542705463
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000012.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181727947858928
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000013.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181730386943900
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000014.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181733484051796
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000015.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181735906136176
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000016.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181740341290686
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000017.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181744440433491
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000018.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181748098560931
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000019.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181750383640538
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000020.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181754099769999
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000021.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787488800500564819
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000022.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528145904025423
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000023.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528291307095336
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000024.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531953033712333
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000025.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531958272894897
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000026.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531965464145484
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000027.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531971766365091
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000028.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531978315593306
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000029.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787537545689567473
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000030.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787539812935592137
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000031.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542278265464368
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000032.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542281914591356
+        }
+      ],
+      "validation_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_val_000000.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181688651489935
+        }
+      ],
+      "measured_parameters": {
+        "block02.q": [
+          512,
+          512
+        ],
+        "block02.k": [
+          512,
+          512
+        ],
+        "block02.v": [
+          512,
+          512
+        ],
+        "block02.o": [
+          512,
+          512
+        ],
+        "block02.up": [
+          2048,
+          512
+        ],
+        "block02.down": [
+          512,
+          2048
+        ],
+        "block04.q": [
+          512,
+          512
+        ],
+        "block04.k": [
+          512,
+          512
+        ],
+        "block04.v": [
+          512,
+          512
+        ],
+        "block04.o": [
+          512,
+          512
+        ],
+        "block04.up": [
+          2048,
+          512
+        ],
+        "block04.down": [
+          512,
+          2048
+        ],
+        "block06.q": [
+          512,
+          512
+        ],
+        "block06.k": [
+          512,
+          512
+        ],
+        "block06.v": [
+          512,
+          512
+        ],
+        "block06.o": [
+          512,
+          512
+        ],
+        "block06.up": [
+          2048,
+          512
+        ],
+        "block06.down": [
+          512,
+          2048
+        ],
+        "block08.q": [
+          512,
+          512
+        ],
+        "block08.k": [
+          512,
+          512
+        ],
+        "block08.v": [
+          512,
+          512
+        ],
+        "block08.o": [
+          512,
+          512
+        ],
+        "block08.up": [
+          2048,
+          512
+        ],
+        "block08.down": [
+          512,
+          2048
+        ]
+      },
+      "torch_version": "2.11.0+cu130",
+      "device": "cuda",
+      "device_name": "NVIDIA RTX 6000 Ada Generation",
+      "effective_precision": "bf16",
+      "effective_optimizer_impl": "muon_ns5+adamw_fused",
+      "effective_compile": true,
+      "compilers": {
+        "CC": "/usr/bin/x86_64-linux-gnu-gcc",
+        "CXX": "/usr/bin/x86_64-linux-gnu-g++"
+      },
+      "gradient_reduction": "DDP mean with micro-loss weight world_size * actual_micro_tokens / actual_global_batch",
+      "measurement": "captured post-NS update (including shape scaling), excluding LR and decay",
+      "momentum_measurement": "FP32 momentum normalized before BF16 casting; not the rounded BF16 NS input",
+      "ns_coefficients": [
+        [
+          4.0848,
+          -6.8946,
+          2.927
+        ],
+        [
+          3.9505,
+          -6.3029,
+          2.6377
+        ],
+        [
+          3.7418,
+          -5.5913,
+          2.3037
+        ],
+        [
+          2.8769,
+          -3.1427,
+          1.2046
+        ],
+        [
+          2.8366,
+          -3.0525,
+          1.2012
+        ]
+      ],
+      "nesterov": false,
+      "ns_execution": "eager batched BF16 polynomial; model compilation independent",
+      "ns_normalization": "FP32 Frobenius norm clamped at 1e-7, then BF16 on CUDA",
+      "muon_shape_scale": "sqrt(max(1, original rows / original columns))",
+      "muon_direction_distribution": "single owner per matrix, round-robin within shape; sum disjoint FP32 direction slices",
+      "parameter_optimizers": {
+        "embed.weight": "adamw",
+        "position.weight": "adamw",
+        "blocks.0.ln1.weight": "adamw",
+        "blocks.0.ln2.weight": "adamw",
+        "blocks.0.attn.q.weight": "muon",
+        "blocks.0.attn.k.weight": "muon",
+        "blocks.0.attn.v.weight": "muon",
+        "blocks.0.attn.o.weight": "muon",
+        "blocks.0.attn.q_norm.weight": "adamw",
+        "blocks.0.attn.k_norm.weight": "adamw",
+        "blocks.0.mlp.up.weight": "muon",
+        "blocks.0.mlp.down.weight": "muon",
+        "blocks.1.ln1.weight": "adamw",
+        "blocks.1.ln2.weight": "adamw",
+        "blocks.1.attn.q.weight": "muon",
+        "blocks.1.attn.k.weight": "muon",
+        "blocks.1.attn.v.weight": "muon",
+        "blocks.1.attn.o.weight": "muon",
+        "blocks.1.attn.q_norm.weight": "adamw",
+        "blocks.1.attn.k_norm.weight": "adamw",
+        "blocks.1.mlp.up.weight": "muon",
+        "blocks.1.mlp.down.weight": "muon",
+        "blocks.2.ln1.weight": "adamw",
+        "blocks.2.ln2.weight": "adamw",
+        "blocks.2.attn.q.weight": "muon",
+        "blocks.2.attn.k.weight": "muon",
+        "blocks.2.attn.v.weight": "muon",
+        "blocks.2.attn.o.weight": "muon",
+        "blocks.2.attn.q_norm.weight": "adamw",
+        "blocks.2.attn.k_norm.weight": "adamw",
+        "blocks.2.mlp.up.weight": "muon",
+        "blocks.2.mlp.down.weight": "muon",
+        "blocks.3.ln1.weight": "adamw",
+        "blocks.3.ln2.weight": "adamw",
+        "blocks.3.attn.q.weight": "muon",
+        "blocks.3.attn.k.weight": "muon",
+        "blocks.3.attn.v.weight": "muon",
+        "blocks.3.attn.o.weight": "muon",
+        "blocks.3.attn.q_norm.weight": "adamw",
+        "blocks.3.attn.k_norm.weight": "adamw",
+        "blocks.3.mlp.up.weight": "muon",
+        "blocks.3.mlp.down.weight": "muon",
+        "blocks.4.ln1.weight": "adamw",
+        "blocks.4.ln2.weight": "adamw",
+        "blocks.4.attn.q.weight": "muon",
+        "blocks.4.attn.k.weight": "muon",
+        "blocks.4.attn.v.weight": "muon",
+        "blocks.4.attn.o.weight": "muon",
+        "blocks.4.attn.q_norm.weight": "adamw",
+        "blocks.4.attn.k_norm.weight": "adamw",
+        "blocks.4.mlp.up.weight": "muon",
+        "blocks.4.mlp.down.weight": "muon",
+        "blocks.5.ln1.weight": "adamw",
+        "blocks.5.ln2.weight": "adamw",
+        "blocks.5.attn.q.weight": "muon",
+        "blocks.5.attn.k.weight": "muon",
+        "blocks.5.attn.v.weight": "muon",
+        "blocks.5.attn.o.weight": "muon",
+        "blocks.5.attn.q_norm.weight": "adamw",
+        "blocks.5.attn.k_norm.weight": "adamw",
+        "blocks.5.mlp.up.weight": "muon",
+        "blocks.5.mlp.down.weight": "muon",
+        "blocks.6.ln1.weight": "adamw",
+        "blocks.6.ln2.weight": "adamw",
+        "blocks.6.attn.q.weight": "muon",
+        "blocks.6.attn.k.weight": "muon",
+        "blocks.6.attn.v.weight": "muon",
+        "blocks.6.attn.o.weight": "muon",
+        "blocks.6.attn.q_norm.weight": "adamw",
+        "blocks.6.attn.k_norm.weight": "adamw",
+        "blocks.6.mlp.up.weight": "muon",
+        "blocks.6.mlp.down.weight": "muon",
+        "blocks.7.ln1.weight": "adamw",
+        "blocks.7.ln2.weight": "adamw",
+        "blocks.7.attn.q.weight": "muon",
+        "blocks.7.attn.k.weight": "muon",
+        "blocks.7.attn.v.weight": "muon",
+        "blocks.7.attn.o.weight": "muon",
+        "blocks.7.attn.q_norm.weight": "adamw",
+        "blocks.7.attn.k_norm.weight": "adamw",
+        "blocks.7.mlp.up.weight": "muon",
+        "blocks.7.mlp.down.weight": "muon",
+        "norm.weight": "adamw",
+        "head.weight": "adamw"
+      },
+      "data_norm": "partial data-norm Muon (sandwich, SOAP in whitened coordinates): polar(M R) R, R = C^-0.5 with C the EMA  uncentered input second moment (every 32nd position from 1, decay 0.998 per training forward, per-rank), scaled to unit mean eigenvalue plus 0.001 I, FP64 eigh every 2 steps (owner-local cache); update rescaled to Muon's Frobenius norm sqrt(min(m, n)) before the shape scale",
+      "soap_precondition": "SOAP-style momentum preconditioning before NS (Track-3 SOAP-Muon core): eigenbases of EMA(GG^T), EMA(G^T G) (beta2 0.9, sorted-QR refresh every step; rotated sides: both), divided by the EMA second moment of the projected momentum ^0.5 (entrywise; layers all; right_act = input basis from the activation second moment), Frobenius norm restored; statistics owner-local, not checkpointed"
+    },
+    "h1_warm": {
+      "schema_version": 2,
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true,
+          "track_input_stats": true,
+          "track_input_cov": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.028,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 16777216,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 1539870720,
+        "warmup_steps": 3,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.9,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "muon_prefilter": "none",
+        "head_whitening_alpha": 0.0,
+        "head_whitening_center": false,
+        "head_whitening_norm": "match",
+        "muon_momentum_start": 0.8,
+        "muon_momentum_warmup": 0.5,
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": true,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.5,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 2,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "data_norm_out_beta": 0.0,
+        "data_norm_out_source": "ef",
+        "data_norm_out_refresh": 2,
+        "data_norm_out_sequences": 8,
+        "data_norm_out_ema": 0.8,
+        "data_norm_out_placebo": false,
+        "muon_track_displacement": false,
+        "keep_checkpoints": [
+          9,
+          46,
+          83
+        ]
+      },
+      "parameter_count": 76948992,
+      "budget_tokens": 1539870720,
+      "total_steps": 92,
+      "world_size": 4,
+      "initial_model_sha256": "f8efae98b3d9e0dd5e9cd2318ea2b56a8b01358742af2d91e8c86ea9caf41d19",
+      "source_sha256": {
+        "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+        "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+        "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+        "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+        "distributed.py": "7312fc88c8654f26b67a87046d4a530dbb46db657e65b72402a2a686212d522c",
+        "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+        "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+        "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+        "muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+        "run_arm.py": "ed41821c85fff13b25a3cd534224dde93fad8269d28053711c022057613344cd",
+        "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+        "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+        "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+        "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+        "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+        "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+        "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+        "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+        "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+        "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+        "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+        "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+        "test_whitening.py": "769f32bd56957a2a994193763b610f64c09500eade66389a7f9e653bf6c36001",
+        "train.py": "a73307e7dfb51e5f17a65cf5114fcedbda25b52df639e98460baf5fda1fc5025"
+      },
+      "train_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000001.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181691636593929
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000002.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181693842670783
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000003.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181696856775787
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000004.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181699420865114
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000005.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181702509972732
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000006.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181706520112435
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000007.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181709802226777
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000008.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181713595358920
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000009.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181715680431559
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000010.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181719179553461
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000011.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181723542705463
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000012.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181727947858928
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000013.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181730386943900
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000014.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181733484051796
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000015.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181735906136176
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000016.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181740341290686
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000017.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181744440433491
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000018.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181748098560931
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000019.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181750383640538
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000020.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181754099769999
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000021.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787488800500564819
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000022.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528145904025423
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000023.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528291307095336
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000024.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531953033712333
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000025.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531958272894897
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000026.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531965464145484
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000027.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531971766365091
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000028.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531978315593306
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000029.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787537545689567473
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000030.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787539812935592137
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000031.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542278265464368
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000032.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542281914591356
+        }
+      ],
+      "validation_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_val_000000.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181688651489935
+        }
+      ],
+      "measured_parameters": {
+        "block02.q": [
+          512,
+          512
+        ],
+        "block02.k": [
+          512,
+          512
+        ],
+        "block02.v": [
+          512,
+          512
+        ],
+        "block02.o": [
+          512,
+          512
+        ],
+        "block02.up": [
+          2048,
+          512
+        ],
+        "block02.down": [
+          512,
+          2048
+        ],
+        "block04.q": [
+          512,
+          512
+        ],
+        "block04.k": [
+          512,
+          512
+        ],
+        "block04.v": [
+          512,
+          512
+        ],
+        "block04.o": [
+          512,
+          512
+        ],
+        "block04.up": [
+          2048,
+          512
+        ],
+        "block04.down": [
+          512,
+          2048
+        ],
+        "block06.q": [
+          512,
+          512
+        ],
+        "block06.k": [
+          512,
+          512
+        ],
+        "block06.v": [
+          512,
+          512
+        ],
+        "block06.o": [
+          512,
+          512
+        ],
+        "block06.up": [
+          2048,
+          512
+        ],
+        "block06.down": [
+          512,
+          2048
+        ],
+        "block08.q": [
+          512,
+          512
+        ],
+        "block08.k": [
+          512,
+          512
+        ],
+        "block08.v": [
+          512,
+          512
+        ],
+        "block08.o": [
+          512,
+          512
+        ],
+        "block08.up": [
+          2048,
+          512
+        ],
+        "block08.down": [
+          512,
+          2048
+        ]
+      },
+      "torch_version": "2.11.0+cu130",
+      "device": "cuda",
+      "device_name": "NVIDIA RTX 6000 Ada Generation",
+      "effective_precision": "bf16",
+      "effective_optimizer_impl": "muon_ns5+adamw_fused",
+      "effective_compile": true,
+      "compilers": {
+        "CC": "/usr/bin/x86_64-linux-gnu-gcc",
+        "CXX": "/usr/bin/x86_64-linux-gnu-g++"
+      },
+      "gradient_reduction": "DDP mean with micro-loss weight world_size * actual_micro_tokens / actual_global_batch",
+      "measurement": "captured post-NS update (including shape scaling), excluding LR and decay",
+      "momentum_measurement": "FP32 momentum normalized before BF16 casting; not the rounded BF16 NS input",
+      "ns_coefficients": [
+        [
+          4.0848,
+          -6.8946,
+          2.927
+        ],
+        [
+          3.9505,
+          -6.3029,
+          2.6377
+        ],
+        [
+          3.7418,
+          -5.5913,
+          2.3037
+        ],
+        [
+          2.8769,
+          -3.1427,
+          1.2046
+        ],
+        [
+          2.8366,
+          -3.0525,
+          1.2012
+        ]
+      ],
+      "nesterov": false,
+      "ns_execution": "eager batched BF16 polynomial; model compilation independent",
+      "ns_normalization": "FP32 Frobenius norm clamped at 1e-7, then BF16 on CUDA",
+      "muon_shape_scale": "sqrt(max(1, original rows / original columns))",
+      "muon_direction_distribution": "single owner per matrix, round-robin within shape; sum disjoint FP32 direction slices",
+      "parameter_optimizers": {
+        "embed.weight": "adamw",
+        "position.weight": "adamw",
+        "blocks.0.ln1.weight": "adamw",
+        "blocks.0.ln2.weight": "adamw",
+        "blocks.0.attn.q.weight": "muon",
+        "blocks.0.attn.k.weight": "muon",
+        "blocks.0.attn.v.weight": "muon",
+        "blocks.0.attn.o.weight": "muon",
+        "blocks.0.attn.q_norm.weight": "adamw",
+        "blocks.0.attn.k_norm.weight": "adamw",
+        "blocks.0.mlp.up.weight": "muon",
+        "blocks.0.mlp.down.weight": "muon",
+        "blocks.1.ln1.weight": "adamw",
+        "blocks.1.ln2.weight": "adamw",
+        "blocks.1.attn.q.weight": "muon",
+        "blocks.1.attn.k.weight": "muon",
+        "blocks.1.attn.v.weight": "muon",
+        "blocks.1.attn.o.weight": "muon",
+        "blocks.1.attn.q_norm.weight": "adamw",
+        "blocks.1.attn.k_norm.weight": "adamw",
+        "blocks.1.mlp.up.weight": "muon",
+        "blocks.1.mlp.down.weight": "muon",
+        "blocks.2.ln1.weight": "adamw",
+        "blocks.2.ln2.weight": "adamw",
+        "blocks.2.attn.q.weight": "muon",
+        "blocks.2.attn.k.weight": "muon",
+        "blocks.2.attn.v.weight": "muon",
+        "blocks.2.attn.o.weight": "muon",
+        "blocks.2.attn.q_norm.weight": "adamw",
+        "blocks.2.attn.k_norm.weight": "adamw",
+        "blocks.2.mlp.up.weight": "muon",
+        "blocks.2.mlp.down.weight": "muon",
+        "blocks.3.ln1.weight": "adamw",
+        "blocks.3.ln2.weight": "adamw",
+        "blocks.3.attn.q.weight": "muon",
+        "blocks.3.attn.k.weight": "muon",
+        "blocks.3.attn.v.weight": "muon",
+        "blocks.3.attn.o.weight": "muon",
+        "blocks.3.attn.q_norm.weight": "adamw",
+        "blocks.3.attn.k_norm.weight": "adamw",
+        "blocks.3.mlp.up.weight": "muon",
+        "blocks.3.mlp.down.weight": "muon",
+        "blocks.4.ln1.weight": "adamw",
+        "blocks.4.ln2.weight": "adamw",
+        "blocks.4.attn.q.weight": "muon",
+        "blocks.4.attn.k.weight": "muon",
+        "blocks.4.attn.v.weight": "muon",
+        "blocks.4.attn.o.weight": "muon",
+        "blocks.4.attn.q_norm.weight": "adamw",
+        "blocks.4.attn.k_norm.weight": "adamw",
+        "blocks.4.mlp.up.weight": "muon",
+        "blocks.4.mlp.down.weight": "muon",
+        "blocks.5.ln1.weight": "adamw",
+        "blocks.5.ln2.weight": "adamw",
+        "blocks.5.attn.q.weight": "muon",
+        "blocks.5.attn.k.weight": "muon",
+        "blocks.5.attn.v.weight": "muon",
+        "blocks.5.attn.o.weight": "muon",
+        "blocks.5.attn.q_norm.weight": "adamw",
+        "blocks.5.attn.k_norm.weight": "adamw",
+        "blocks.5.mlp.up.weight": "muon",
+        "blocks.5.mlp.down.weight": "muon",
+        "blocks.6.ln1.weight": "adamw",
+        "blocks.6.ln2.weight": "adamw",
+        "blocks.6.attn.q.weight": "muon",
+        "blocks.6.attn.k.weight": "muon",
+        "blocks.6.attn.v.weight": "muon",
+        "blocks.6.attn.o.weight": "muon",
+        "blocks.6.attn.q_norm.weight": "adamw",
+        "blocks.6.attn.k_norm.weight": "adamw",
+        "blocks.6.mlp.up.weight": "muon",
+        "blocks.6.mlp.down.weight": "muon",
+        "blocks.7.ln1.weight": "adamw",
+        "blocks.7.ln2.weight": "adamw",
+        "blocks.7.attn.q.weight": "muon",
+        "blocks.7.attn.k.weight": "muon",
+        "blocks.7.attn.v.weight": "muon",
+        "blocks.7.attn.o.weight": "muon",
+        "blocks.7.attn.q_norm.weight": "adamw",
+        "blocks.7.attn.k_norm.weight": "adamw",
+        "blocks.7.mlp.up.weight": "muon",
+        "blocks.7.mlp.down.weight": "muon",
+        "norm.weight": "adamw",
+        "head.weight": "adamw"
+      },
+      "data_norm": "partial data-norm Muon (sandwich, SOAP in whitened coordinates): polar(M R) R, R = C^-0.5 with C the EMA  uncentered input second moment (every 32nd position from 1, decay 0.998 per training forward, per-rank), scaled to unit mean eigenvalue plus 0.001 I, FP64 eigh every 2 steps (owner-local cache); update rescaled to Muon's Frobenius norm sqrt(min(m, n)) before the shape scale",
+      "soap_precondition": "SOAP-style momentum preconditioning before NS (Track-3 SOAP-Muon core): eigenbases of EMA(GG^T), EMA(G^T G) (beta2 0.9, sorted-QR refresh every step; rotated sides: both), divided by the EMA second moment of the projected momentum ^0.5 (entrywise; layers all; right_act = input basis from the activation second moment), Frobenius norm restored; statistics owner-local, not checkpointed",
+      "momentum_schedule": "linear in tokens from 0.8 to 0.9 over the first 0.5 of the budget"
+    },
+    "h2_b08": {
+      "schema_version": 2,
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true,
+          "track_input_stats": true,
+          "track_input_cov": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.028,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 16777216,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 3079741440,
+        "warmup_steps": 3,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.8,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "muon_prefilter": "none",
+        "head_whitening_alpha": 0.0,
+        "head_whitening_center": false,
+        "head_whitening_norm": "match",
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": true,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.5,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 2,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "data_norm_out_beta": 0.0,
+        "data_norm_out_source": "ef",
+        "data_norm_out_refresh": 2,
+        "data_norm_out_sequences": 8,
+        "data_norm_out_ema": 0.8,
+        "data_norm_out_placebo": false,
+        "muon_track_displacement": false,
+        "keep_checkpoints": [
+          37,
+          92,
+          165
+        ]
+      },
+      "parameter_count": 76948992,
+      "budget_tokens": 3079741440,
+      "total_steps": 184,
+      "world_size": 4,
+      "initial_model_sha256": "f8efae98b3d9e0dd5e9cd2318ea2b56a8b01358742af2d91e8c86ea9caf41d19",
+      "source_sha256": {
+        "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+        "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+        "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+        "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+        "distributed.py": "ae840a2d33e875110cbd2371b52889c43d355bbd4e3177ae4d69d5397530d145",
+        "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+        "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+        "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+        "muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+        "run_arm.py": "f3632fbc851aaba1facca0186dbc46b82a22d00559f25b554f3d6f32d8fc3b3e",
+        "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+        "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+        "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+        "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+        "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+        "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+        "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+        "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+        "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+        "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+        "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+        "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+        "test_whitening.py": "57b5496579873ba053505de10229b14e09edcc5338284d5bb689fe112dcc510c",
+        "train.py": "3ca87d3eb1682e699f2ef48ce954cfdbeed6610f88ad73d4d4275b798d6b173a"
+      },
+      "train_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000001.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181691636593929
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000002.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181693842670783
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000003.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181696856775787
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000004.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181699420865114
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000005.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181702509972732
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000006.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181706520112435
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000007.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181709802226777
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000008.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181713595358920
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000009.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181715680431559
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000010.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181719179553461
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000011.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181723542705463
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000012.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181727947858928
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000013.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181730386943900
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000014.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181733484051796
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000015.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181735906136176
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000016.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181740341290686
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000017.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181744440433491
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000018.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181748098560931
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000019.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181750383640538
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000020.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181754099769999
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000021.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787488800500564819
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000022.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528145904025423
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000023.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528291307095336
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000024.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531953033712333
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000025.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531958272894897
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000026.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531965464145484
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000027.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531971766365091
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000028.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531978315593306
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000029.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787537545689567473
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000030.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787539812935592137
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000031.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542278265464368
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000032.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542281914591356
+        }
+      ],
+      "validation_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_val_000000.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181688651489935
+        }
+      ],
+      "measured_parameters": {
+        "block02.q": [
+          512,
+          512
+        ],
+        "block02.k": [
+          512,
+          512
+        ],
+        "block02.v": [
+          512,
+          512
+        ],
+        "block02.o": [
+          512,
+          512
+        ],
+        "block02.up": [
+          2048,
+          512
+        ],
+        "block02.down": [
+          512,
+          2048
+        ],
+        "block04.q": [
+          512,
+          512
+        ],
+        "block04.k": [
+          512,
+          512
+        ],
+        "block04.v": [
+          512,
+          512
+        ],
+        "block04.o": [
+          512,
+          512
+        ],
+        "block04.up": [
+          2048,
+          512
+        ],
+        "block04.down": [
+          512,
+          2048
+        ],
+        "block06.q": [
+          512,
+          512
+        ],
+        "block06.k": [
+          512,
+          512
+        ],
+        "block06.v": [
+          512,
+          512
+        ],
+        "block06.o": [
+          512,
+          512
+        ],
+        "block06.up": [
+          2048,
+          512
+        ],
+        "block06.down": [
+          512,
+          2048
+        ],
+        "block08.q": [
+          512,
+          512
+        ],
+        "block08.k": [
+          512,
+          512
+        ],
+        "block08.v": [
+          512,
+          512
+        ],
+        "block08.o": [
+          512,
+          512
+        ],
+        "block08.up": [
+          2048,
+          512
+        ],
+        "block08.down": [
+          512,
+          2048
+        ]
+      },
+      "torch_version": "2.11.0+cu130",
+      "device": "cuda",
+      "device_name": "NVIDIA RTX 6000 Ada Generation",
+      "effective_precision": "bf16",
+      "effective_optimizer_impl": "muon_ns5+adamw_fused",
+      "effective_compile": true,
+      "compilers": {
+        "CC": "/usr/bin/x86_64-linux-gnu-gcc",
+        "CXX": "/usr/bin/x86_64-linux-gnu-g++"
+      },
+      "gradient_reduction": "DDP mean with micro-loss weight world_size * actual_micro_tokens / actual_global_batch",
+      "measurement": "captured post-NS update (including shape scaling), excluding LR and decay",
+      "momentum_measurement": "FP32 momentum normalized before BF16 casting; not the rounded BF16 NS input",
+      "ns_coefficients": [
+        [
+          4.0848,
+          -6.8946,
+          2.927
+        ],
+        [
+          3.9505,
+          -6.3029,
+          2.6377
+        ],
+        [
+          3.7418,
+          -5.5913,
+          2.3037
+        ],
+        [
+          2.8769,
+          -3.1427,
+          1.2046
+        ],
+        [
+          2.8366,
+          -3.0525,
+          1.2012
+        ]
+      ],
+      "nesterov": false,
+      "ns_execution": "eager batched BF16 polynomial; model compilation independent",
+      "ns_normalization": "FP32 Frobenius norm clamped at 1e-7, then BF16 on CUDA",
+      "muon_shape_scale": "sqrt(max(1, original rows / original columns))",
+      "muon_direction_distribution": "single owner per matrix, round-robin within shape; sum disjoint FP32 direction slices",
+      "parameter_optimizers": {
+        "embed.weight": "adamw",
+        "position.weight": "adamw",
+        "blocks.0.ln1.weight": "adamw",
+        "blocks.0.ln2.weight": "adamw",
+        "blocks.0.attn.q.weight": "muon",
+        "blocks.0.attn.k.weight": "muon",
+        "blocks.0.attn.v.weight": "muon",
+        "blocks.0.attn.o.weight": "muon",
+        "blocks.0.attn.q_norm.weight": "adamw",
+        "blocks.0.attn.k_norm.weight": "adamw",
+        "blocks.0.mlp.up.weight": "muon",
+        "blocks.0.mlp.down.weight": "muon",
+        "blocks.1.ln1.weight": "adamw",
+        "blocks.1.ln2.weight": "adamw",
+        "blocks.1.attn.q.weight": "muon",
+        "blocks.1.attn.k.weight": "muon",
+        "blocks.1.attn.v.weight": "muon",
+        "blocks.1.attn.o.weight": "muon",
+        "blocks.1.attn.q_norm.weight": "adamw",
+        "blocks.1.attn.k_norm.weight": "adamw",
+        "blocks.1.mlp.up.weight": "muon",
+        "blocks.1.mlp.down.weight": "muon",
+        "blocks.2.ln1.weight": "adamw",
+        "blocks.2.ln2.weight": "adamw",
+        "blocks.2.attn.q.weight": "muon",
+        "blocks.2.attn.k.weight": "muon",
+        "blocks.2.attn.v.weight": "muon",
+        "blocks.2.attn.o.weight": "muon",
+        "blocks.2.attn.q_norm.weight": "adamw",
+        "blocks.2.attn.k_norm.weight": "adamw",
+        "blocks.2.mlp.up.weight": "muon",
+        "blocks.2.mlp.down.weight": "muon",
+        "blocks.3.ln1.weight": "adamw",
+        "blocks.3.ln2.weight": "adamw",
+        "blocks.3.attn.q.weight": "muon",
+        "blocks.3.attn.k.weight": "muon",
+        "blocks.3.attn.v.weight": "muon",
+        "blocks.3.attn.o.weight": "muon",
+        "blocks.3.attn.q_norm.weight": "adamw",
+        "blocks.3.attn.k_norm.weight": "adamw",
+        "blocks.3.mlp.up.weight": "muon",
+        "blocks.3.mlp.down.weight": "muon",
+        "blocks.4.ln1.weight": "adamw",
+        "blocks.4.ln2.weight": "adamw",
+        "blocks.4.attn.q.weight": "muon",
+        "blocks.4.attn.k.weight": "muon",
+        "blocks.4.attn.v.weight": "muon",
+        "blocks.4.attn.o.weight": "muon",
+        "blocks.4.attn.q_norm.weight": "adamw",
+        "blocks.4.attn.k_norm.weight": "adamw",
+        "blocks.4.mlp.up.weight": "muon",
+        "blocks.4.mlp.down.weight": "muon",
+        "blocks.5.ln1.weight": "adamw",
+        "blocks.5.ln2.weight": "adamw",
+        "blocks.5.attn.q.weight": "muon",
+        "blocks.5.attn.k.weight": "muon",
+        "blocks.5.attn.v.weight": "muon",
+        "blocks.5.attn.o.weight": "muon",
+        "blocks.5.attn.q_norm.weight": "adamw",
+        "blocks.5.attn.k_norm.weight": "adamw",
+        "blocks.5.mlp.up.weight": "muon",
+        "blocks.5.mlp.down.weight": "muon",
+        "blocks.6.ln1.weight": "adamw",
+        "blocks.6.ln2.weight": "adamw",
+        "blocks.6.attn.q.weight": "muon",
+        "blocks.6.attn.k.weight": "muon",
+        "blocks.6.attn.v.weight": "muon",
+        "blocks.6.attn.o.weight": "muon",
+        "blocks.6.attn.q_norm.weight": "adamw",
+        "blocks.6.attn.k_norm.weight": "adamw",
+        "blocks.6.mlp.up.weight": "muon",
+        "blocks.6.mlp.down.weight": "muon",
+        "blocks.7.ln1.weight": "adamw",
+        "blocks.7.ln2.weight": "adamw",
+        "blocks.7.attn.q.weight": "muon",
+        "blocks.7.attn.k.weight": "muon",
+        "blocks.7.attn.v.weight": "muon",
+        "blocks.7.attn.o.weight": "muon",
+        "blocks.7.attn.q_norm.weight": "adamw",
+        "blocks.7.attn.k_norm.weight": "adamw",
+        "blocks.7.mlp.up.weight": "muon",
+        "blocks.7.mlp.down.weight": "muon",
+        "norm.weight": "adamw",
+        "head.weight": "adamw"
+      },
+      "data_norm": "partial data-norm Muon (sandwich, SOAP in whitened coordinates): polar(M R) R, R = C^-0.5 with C the EMA  uncentered input second moment (every 32nd position from 1, decay 0.998 per training forward, per-rank), scaled to unit mean eigenvalue plus 0.001 I, FP64 eigh every 2 steps (owner-local cache); update rescaled to Muon's Frobenius norm sqrt(min(m, n)) before the shape scale",
+      "soap_precondition": "SOAP-style momentum preconditioning before NS (Track-3 SOAP-Muon core): eigenbases of EMA(GG^T), EMA(G^T G) (beta2 0.9, sorted-QR refresh every step; rotated sides: both), divided by the EMA second moment of the projected momentum ^0.5 (entrywise; layers all; right_act = input basis from the activation second moment), Frobenius norm restored; statistics owner-local, not checkpointed"
+    },
+    "h2_b09": {
+      "schema_version": 2,
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true,
+          "track_input_stats": true,
+          "track_input_cov": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.028,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 16777216,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 3079741440,
+        "warmup_steps": 3,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.9,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": true,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.5,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 2,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "data_norm_out_beta": 0.0,
+        "data_norm_out_source": "ef",
+        "data_norm_out_refresh": 2,
+        "data_norm_out_sequences": 8,
+        "data_norm_out_ema": 0.8,
+        "data_norm_out_placebo": false,
+        "muon_track_displacement": false,
+        "keep_checkpoints": [
+          37,
+          92,
+          165
+        ]
+      },
+      "parameter_count": 76948992,
+      "budget_tokens": 3079741440,
+      "total_steps": 184,
+      "world_size": 4,
+      "initial_model_sha256": "f8efae98b3d9e0dd5e9cd2318ea2b56a8b01358742af2d91e8c86ea9caf41d19",
+      "source_sha256": {
+        "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+        "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+        "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+        "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+        "distributed.py": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+        "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+        "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+        "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+        "muon.py": "c6e29f41b035988bf80d1544c5e5369c3804ba7fc869afdb765b0ba97d3e321e",
+        "run_arm.py": "494b1c94e94353d04c2e86fe69d78091ba8015697a3205874f385d7ea7e2a6f0",
+        "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+        "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+        "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+        "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+        "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+        "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+        "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+        "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+        "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+        "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+        "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+        "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+        "test_whitening.py": "3560d8fac32b8a19ef95b8d7d6af9da99b844b96500a20e4545acf25e6b779a1",
+        "train.py": "b637265f9fe47ebfecdc5615d29c94b0f8c8242068ef1d1cba6afdb7c3acab5f"
+      },
+      "train_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000001.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181691636593929
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000002.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181693842670783
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000003.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181696856775787
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000004.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181699420865114
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000005.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181702509972732
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000006.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181706520112435
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000007.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181709802226777
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000008.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181713595358920
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000009.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181715680431559
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000010.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181719179553461
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000011.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181723542705463
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000012.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181727947858928
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000013.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181730386943900
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000014.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181733484051796
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000015.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181735906136176
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000016.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181740341290686
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000017.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181744440433491
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000018.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181748098560931
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000019.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181750383640538
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000020.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181754099769999
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000021.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787488800500564819
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000022.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528145904025423
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000023.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528291307095336
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000024.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531953033712333
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000025.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531958272894897
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000026.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531965464145484
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000027.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531971766365091
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000028.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531978315593306
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000029.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787537545689567473
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000030.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787539812935592137
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000031.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542278265464368
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000032.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542281914591356
+        }
+      ],
+      "validation_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_val_000000.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181688651489935
+        }
+      ],
+      "measured_parameters": {
+        "block02.q": [
+          512,
+          512
+        ],
+        "block02.k": [
+          512,
+          512
+        ],
+        "block02.v": [
+          512,
+          512
+        ],
+        "block02.o": [
+          512,
+          512
+        ],
+        "block02.up": [
+          2048,
+          512
+        ],
+        "block02.down": [
+          512,
+          2048
+        ],
+        "block04.q": [
+          512,
+          512
+        ],
+        "block04.k": [
+          512,
+          512
+        ],
+        "block04.v": [
+          512,
+          512
+        ],
+        "block04.o": [
+          512,
+          512
+        ],
+        "block04.up": [
+          2048,
+          512
+        ],
+        "block04.down": [
+          512,
+          2048
+        ],
+        "block06.q": [
+          512,
+          512
+        ],
+        "block06.k": [
+          512,
+          512
+        ],
+        "block06.v": [
+          512,
+          512
+        ],
+        "block06.o": [
+          512,
+          512
+        ],
+        "block06.up": [
+          2048,
+          512
+        ],
+        "block06.down": [
+          512,
+          2048
+        ],
+        "block08.q": [
+          512,
+          512
+        ],
+        "block08.k": [
+          512,
+          512
+        ],
+        "block08.v": [
+          512,
+          512
+        ],
+        "block08.o": [
+          512,
+          512
+        ],
+        "block08.up": [
+          2048,
+          512
+        ],
+        "block08.down": [
+          512,
+          2048
+        ]
+      },
+      "torch_version": "2.11.0+cu130",
+      "device": "cuda",
+      "device_name": "NVIDIA RTX 6000 Ada Generation",
+      "effective_precision": "bf16",
+      "effective_optimizer_impl": "muon_ns5+adamw_fused",
+      "effective_compile": true,
+      "compilers": {
+        "CC": "/usr/bin/x86_64-linux-gnu-gcc",
+        "CXX": "/usr/bin/x86_64-linux-gnu-g++"
+      },
+      "gradient_reduction": "DDP mean with micro-loss weight world_size * actual_micro_tokens / actual_global_batch",
+      "measurement": "captured post-NS update (including shape scaling), excluding LR and decay",
+      "momentum_measurement": "FP32 momentum normalized before BF16 casting; not the rounded BF16 NS input",
+      "ns_coefficients": [
+        [
+          4.0848,
+          -6.8946,
+          2.927
+        ],
+        [
+          3.9505,
+          -6.3029,
+          2.6377
+        ],
+        [
+          3.7418,
+          -5.5913,
+          2.3037
+        ],
+        [
+          2.8769,
+          -3.1427,
+          1.2046
+        ],
+        [
+          2.8366,
+          -3.0525,
+          1.2012
+        ]
+      ],
+      "nesterov": false,
+      "ns_execution": "eager batched BF16 polynomial; model compilation independent",
+      "ns_normalization": "FP32 Frobenius norm clamped at 1e-7, then BF16 on CUDA",
+      "muon_shape_scale": "sqrt(max(1, original rows / original columns))",
+      "muon_direction_distribution": "single owner per matrix, round-robin within shape; sum disjoint FP32 direction slices",
+      "parameter_optimizers": {
+        "embed.weight": "adamw",
+        "position.weight": "adamw",
+        "blocks.0.ln1.weight": "adamw",
+        "blocks.0.ln2.weight": "adamw",
+        "blocks.0.attn.q.weight": "muon",
+        "blocks.0.attn.k.weight": "muon",
+        "blocks.0.attn.v.weight": "muon",
+        "blocks.0.attn.o.weight": "muon",
+        "blocks.0.attn.q_norm.weight": "adamw",
+        "blocks.0.attn.k_norm.weight": "adamw",
+        "blocks.0.mlp.up.weight": "muon",
+        "blocks.0.mlp.down.weight": "muon",
+        "blocks.1.ln1.weight": "adamw",
+        "blocks.1.ln2.weight": "adamw",
+        "blocks.1.attn.q.weight": "muon",
+        "blocks.1.attn.k.weight": "muon",
+        "blocks.1.attn.v.weight": "muon",
+        "blocks.1.attn.o.weight": "muon",
+        "blocks.1.attn.q_norm.weight": "adamw",
+        "blocks.1.attn.k_norm.weight": "adamw",
+        "blocks.1.mlp.up.weight": "muon",
+        "blocks.1.mlp.down.weight": "muon",
+        "blocks.2.ln1.weight": "adamw",
+        "blocks.2.ln2.weight": "adamw",
+        "blocks.2.attn.q.weight": "muon",
+        "blocks.2.attn.k.weight": "muon",
+        "blocks.2.attn.v.weight": "muon",
+        "blocks.2.attn.o.weight": "muon",
+        "blocks.2.attn.q_norm.weight": "adamw",
+        "blocks.2.attn.k_norm.weight": "adamw",
+        "blocks.2.mlp.up.weight": "muon",
+        "blocks.2.mlp.down.weight": "muon",
+        "blocks.3.ln1.weight": "adamw",
+        "blocks.3.ln2.weight": "adamw",
+        "blocks.3.attn.q.weight": "muon",
+        "blocks.3.attn.k.weight": "muon",
+        "blocks.3.attn.v.weight": "muon",
+        "blocks.3.attn.o.weight": "muon",
+        "blocks.3.attn.q_norm.weight": "adamw",
+        "blocks.3.attn.k_norm.weight": "adamw",
+        "blocks.3.mlp.up.weight": "muon",
+        "blocks.3.mlp.down.weight": "muon",
+        "blocks.4.ln1.weight": "adamw",
+        "blocks.4.ln2.weight": "adamw",
+        "blocks.4.attn.q.weight": "muon",
+        "blocks.4.attn.k.weight": "muon",
+        "blocks.4.attn.v.weight": "muon",
+        "blocks.4.attn.o.weight": "muon",
+        "blocks.4.attn.q_norm.weight": "adamw",
+        "blocks.4.attn.k_norm.weight": "adamw",
+        "blocks.4.mlp.up.weight": "muon",
+        "blocks.4.mlp.down.weight": "muon",
+        "blocks.5.ln1.weight": "adamw",
+        "blocks.5.ln2.weight": "adamw",
+        "blocks.5.attn.q.weight": "muon",
+        "blocks.5.attn.k.weight": "muon",
+        "blocks.5.attn.v.weight": "muon",
+        "blocks.5.attn.o.weight": "muon",
+        "blocks.5.attn.q_norm.weight": "adamw",
+        "blocks.5.attn.k_norm.weight": "adamw",
+        "blocks.5.mlp.up.weight": "muon",
+        "blocks.5.mlp.down.weight": "muon",
+        "blocks.6.ln1.weight": "adamw",
+        "blocks.6.ln2.weight": "adamw",
+        "blocks.6.attn.q.weight": "muon",
+        "blocks.6.attn.k.weight": "muon",
+        "blocks.6.attn.v.weight": "muon",
+        "blocks.6.attn.o.weight": "muon",
+        "blocks.6.attn.q_norm.weight": "adamw",
+        "blocks.6.attn.k_norm.weight": "adamw",
+        "blocks.6.mlp.up.weight": "muon",
+        "blocks.6.mlp.down.weight": "muon",
+        "blocks.7.ln1.weight": "adamw",
+        "blocks.7.ln2.weight": "adamw",
+        "blocks.7.attn.q.weight": "muon",
+        "blocks.7.attn.k.weight": "muon",
+        "blocks.7.attn.v.weight": "muon",
+        "blocks.7.attn.o.weight": "muon",
+        "blocks.7.attn.q_norm.weight": "adamw",
+        "blocks.7.attn.k_norm.weight": "adamw",
+        "blocks.7.mlp.up.weight": "muon",
+        "blocks.7.mlp.down.weight": "muon",
+        "norm.weight": "adamw",
+        "head.weight": "adamw"
+      },
+      "data_norm": "partial data-norm Muon (sandwich, SOAP in whitened coordinates): polar(M R) R, R = C^-0.5 with C the EMA  uncentered input second moment (every 32nd position from 1, decay 0.998 per training forward, per-rank), scaled to unit mean eigenvalue plus 0.001 I, FP64 eigh every 2 steps (owner-local cache); update rescaled to Muon's Frobenius norm sqrt(min(m, n)) before the shape scale",
+      "soap_precondition": "SOAP-style momentum preconditioning before NS (Track-3 SOAP-Muon core): eigenbases of EMA(GG^T), EMA(G^T G) (beta2 0.9, sorted-QR refresh every step; rotated sides: both), divided by the EMA second moment of the projected momentum ^0.5 (entrywise; layers all; right_act = input basis from the activation second moment), Frobenius norm restored; statistics owner-local, not checkpointed"
+    },
+    "h2_warm": {
+      "schema_version": 2,
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true,
+          "track_input_stats": true,
+          "track_input_cov": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.028,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 16777216,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 3079741440,
+        "warmup_steps": 3,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.9,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "muon_prefilter": "none",
+        "head_whitening_alpha": 0.0,
+        "head_whitening_center": false,
+        "head_whitening_norm": "match",
+        "muon_momentum_start": 0.8,
+        "muon_momentum_warmup": 0.5,
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": true,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.5,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 2,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "data_norm_out_beta": 0.0,
+        "data_norm_out_source": "ef",
+        "data_norm_out_refresh": 2,
+        "data_norm_out_sequences": 8,
+        "data_norm_out_ema": 0.8,
+        "data_norm_out_placebo": false,
+        "muon_track_displacement": false,
+        "keep_checkpoints": [
+          37,
+          92,
+          165
+        ]
+      },
+      "parameter_count": 76948992,
+      "budget_tokens": 3079741440,
+      "total_steps": 184,
+      "world_size": 4,
+      "initial_model_sha256": "f8efae98b3d9e0dd5e9cd2318ea2b56a8b01358742af2d91e8c86ea9caf41d19",
+      "source_sha256": {
+        "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+        "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+        "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+        "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+        "distributed.py": "7312fc88c8654f26b67a87046d4a530dbb46db657e65b72402a2a686212d522c",
+        "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+        "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+        "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+        "muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+        "run_arm.py": "ed41821c85fff13b25a3cd534224dde93fad8269d28053711c022057613344cd",
+        "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+        "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+        "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+        "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+        "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+        "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+        "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+        "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+        "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+        "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+        "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+        "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+        "test_whitening.py": "769f32bd56957a2a994193763b610f64c09500eade66389a7f9e653bf6c36001",
+        "train.py": "a73307e7dfb51e5f17a65cf5114fcedbda25b52df639e98460baf5fda1fc5025"
+      },
+      "train_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000001.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181691636593929
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000002.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181693842670783
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000003.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181696856775787
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000004.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181699420865114
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000005.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181702509972732
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000006.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181706520112435
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000007.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181709802226777
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000008.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181713595358920
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000009.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181715680431559
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000010.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181719179553461
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000011.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181723542705463
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000012.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181727947858928
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000013.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181730386943900
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000014.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181733484051796
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000015.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181735906136176
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000016.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181740341290686
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000017.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181744440433491
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000018.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181748098560931
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000019.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181750383640538
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000020.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181754099769999
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000021.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787488800500564819
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000022.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528145904025423
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000023.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787528291307095336
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000024.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531953033712333
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000025.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531958272894897
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000026.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531965464145484
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000027.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531971766365091
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000028.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787531978315593306
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000029.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787537545689567473
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000030.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787539812935592137
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000031.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542278265464368
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000032.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787542281914591356
+        }
+      ],
+      "validation_manifest": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_val_000000.bin",
+          "tokens": 100000000,
+          "size": 200001024,
+          "mtime_ns": 1787181688651489935
+        }
+      ],
+      "measured_parameters": {
+        "block02.q": [
+          512,
+          512
+        ],
+        "block02.k": [
+          512,
+          512
+        ],
+        "block02.v": [
+          512,
+          512
+        ],
+        "block02.o": [
+          512,
+          512
+        ],
+        "block02.up": [
+          2048,
+          512
+        ],
+        "block02.down": [
+          512,
+          2048
+        ],
+        "block04.q": [
+          512,
+          512
+        ],
+        "block04.k": [
+          512,
+          512
+        ],
+        "block04.v": [
+          512,
+          512
+        ],
+        "block04.o": [
+          512,
+          512
+        ],
+        "block04.up": [
+          2048,
+          512
+        ],
+        "block04.down": [
+          512,
+          2048
+        ],
+        "block06.q": [
+          512,
+          512
+        ],
+        "block06.k": [
+          512,
+          512
+        ],
+        "block06.v": [
+          512,
+          512
+        ],
+        "block06.o": [
+          512,
+          512
+        ],
+        "block06.up": [
+          2048,
+          512
+        ],
+        "block06.down": [
+          512,
+          2048
+        ],
+        "block08.q": [
+          512,
+          512
+        ],
+        "block08.k": [
+          512,
+          512
+        ],
+        "block08.v": [
+          512,
+          512
+        ],
+        "block08.o": [
+          512,
+          512
+        ],
+        "block08.up": [
+          2048,
+          512
+        ],
+        "block08.down": [
+          512,
+          2048
+        ]
+      },
+      "torch_version": "2.11.0+cu130",
+      "device": "cuda",
+      "device_name": "NVIDIA RTX 6000 Ada Generation",
+      "effective_precision": "bf16",
+      "effective_optimizer_impl": "muon_ns5+adamw_fused",
+      "effective_compile": true,
+      "compilers": {
+        "CC": "/usr/bin/x86_64-linux-gnu-gcc",
+        "CXX": "/usr/bin/x86_64-linux-gnu-g++"
+      },
+      "gradient_reduction": "DDP mean with micro-loss weight world_size * actual_micro_tokens / actual_global_batch",
+      "measurement": "captured post-NS update (including shape scaling), excluding LR and decay",
+      "momentum_measurement": "FP32 momentum normalized before BF16 casting; not the rounded BF16 NS input",
+      "ns_coefficients": [
+        [
+          4.0848,
+          -6.8946,
+          2.927
+        ],
+        [
+          3.9505,
+          -6.3029,
+          2.6377
+        ],
+        [
+          3.7418,
+          -5.5913,
+          2.3037
+        ],
+        [
+          2.8769,
+          -3.1427,
+          1.2046
+        ],
+        [
+          2.8366,
+          -3.0525,
+          1.2012
+        ]
+      ],
+      "nesterov": false,
+      "ns_execution": "eager batched BF16 polynomial; model compilation independent",
+      "ns_normalization": "FP32 Frobenius norm clamped at 1e-7, then BF16 on CUDA",
+      "muon_shape_scale": "sqrt(max(1, original rows / original columns))",
+      "muon_direction_distribution": "single owner per matrix, round-robin within shape; sum disjoint FP32 direction slices",
+      "parameter_optimizers": {
+        "embed.weight": "adamw",
+        "position.weight": "adamw",
+        "blocks.0.ln1.weight": "adamw",
+        "blocks.0.ln2.weight": "adamw",
+        "blocks.0.attn.q.weight": "muon",
+        "blocks.0.attn.k.weight": "muon",
+        "blocks.0.attn.v.weight": "muon",
+        "blocks.0.attn.o.weight": "muon",
+        "blocks.0.attn.q_norm.weight": "adamw",
+        "blocks.0.attn.k_norm.weight": "adamw",
+        "blocks.0.mlp.up.weight": "muon",
+        "blocks.0.mlp.down.weight": "muon",
+        "blocks.1.ln1.weight": "adamw",
+        "blocks.1.ln2.weight": "adamw",
+        "blocks.1.attn.q.weight": "muon",
+        "blocks.1.attn.k.weight": "muon",
+        "blocks.1.attn.v.weight": "muon",
+        "blocks.1.attn.o.weight": "muon",
+        "blocks.1.attn.q_norm.weight": "adamw",
+        "blocks.1.attn.k_norm.weight": "adamw",
+        "blocks.1.mlp.up.weight": "muon",
+        "blocks.1.mlp.down.weight": "muon",
+        "blocks.2.ln1.weight": "adamw",
+        "blocks.2.ln2.weight": "adamw",
+        "blocks.2.attn.q.weight": "muon",
+        "blocks.2.attn.k.weight": "muon",
+        "blocks.2.attn.v.weight": "muon",
+        "blocks.2.attn.o.weight": "muon",
+        "blocks.2.attn.q_norm.weight": "adamw",
+        "blocks.2.attn.k_norm.weight": "adamw",
+        "blocks.2.mlp.up.weight": "muon",
+        "blocks.2.mlp.down.weight": "muon",
+        "blocks.3.ln1.weight": "adamw",
+        "blocks.3.ln2.weight": "adamw",
+        "blocks.3.attn.q.weight": "muon",
+        "blocks.3.attn.k.weight": "muon",
+        "blocks.3.attn.v.weight": "muon",
+        "blocks.3.attn.o.weight": "muon",
+        "blocks.3.attn.q_norm.weight": "adamw",
+        "blocks.3.attn.k_norm.weight": "adamw",
+        "blocks.3.mlp.up.weight": "muon",
+        "blocks.3.mlp.down.weight": "muon",
+        "blocks.4.ln1.weight": "adamw",
+        "blocks.4.ln2.weight": "adamw",
+        "blocks.4.attn.q.weight": "muon",
+        "blocks.4.attn.k.weight": "muon",
+        "blocks.4.attn.v.weight": "muon",
+        "blocks.4.attn.o.weight": "muon",
+        "blocks.4.attn.q_norm.weight": "adamw",
+        "blocks.4.attn.k_norm.weight": "adamw",
+        "blocks.4.mlp.up.weight": "muon",
+        "blocks.4.mlp.down.weight": "muon",
+        "blocks.5.ln1.weight": "adamw",
+        "blocks.5.ln2.weight": "adamw",
+        "blocks.5.attn.q.weight": "muon",
+        "blocks.5.attn.k.weight": "muon",
+        "blocks.5.attn.v.weight": "muon",
+        "blocks.5.attn.o.weight": "muon",
+        "blocks.5.attn.q_norm.weight": "adamw",
+        "blocks.5.attn.k_norm.weight": "adamw",
+        "blocks.5.mlp.up.weight": "muon",
+        "blocks.5.mlp.down.weight": "muon",
+        "blocks.6.ln1.weight": "adamw",
+        "blocks.6.ln2.weight": "adamw",
+        "blocks.6.attn.q.weight": "muon",
+        "blocks.6.attn.k.weight": "muon",
+        "blocks.6.attn.v.weight": "muon",
+        "blocks.6.attn.o.weight": "muon",
+        "blocks.6.attn.q_norm.weight": "adamw",
+        "blocks.6.attn.k_norm.weight": "adamw",
+        "blocks.6.mlp.up.weight": "muon",
+        "blocks.6.mlp.down.weight": "muon",
+        "blocks.7.ln1.weight": "adamw",
+        "blocks.7.ln2.weight": "adamw",
+        "blocks.7.attn.q.weight": "muon",
+        "blocks.7.attn.k.weight": "muon",
+        "blocks.7.attn.v.weight": "muon",
+        "blocks.7.attn.o.weight": "muon",
+        "blocks.7.attn.q_norm.weight": "adamw",
+        "blocks.7.attn.k_norm.weight": "adamw",
+        "blocks.7.mlp.up.weight": "muon",
+        "blocks.7.mlp.down.weight": "muon",
+        "norm.weight": "adamw",
+        "head.weight": "adamw"
+      },
+      "data_norm": "partial data-norm Muon (sandwich, SOAP in whitened coordinates): polar(M R) R, R = C^-0.5 with C the EMA  uncentered input second moment (every 32nd position from 1, decay 0.998 per training forward, per-rank), scaled to unit mean eigenvalue plus 0.001 I, FP64 eigh every 2 steps (owner-local cache); update rescaled to Muon's Frobenius norm sqrt(min(m, n)) before the shape scale",
+      "soap_precondition": "SOAP-style momentum preconditioning before NS (Track-3 SOAP-Muon core): eigenbases of EMA(GG^T), EMA(G^T G) (beta2 0.9, sorted-QR refresh every step; rotated sides: both), divided by the EMA second moment of the projected momentum ^0.5 (entrywise; layers all; right_act = input basis from the activation second moment), Frobenius norm restored; statistics owner-local, not checkpointed",
+      "momentum_schedule": "linear in tokens from 0.8 to 0.9 over the first 0.5 of the budget"
+    }
+  },
+  "original_validation_nll": {
+    "h1_b08": 4.472392700612545,
+    "h1_b09": 4.57418967038393,
+    "h1_warm": 4.515205945819616,
+    "h2_b08": 3.9740493576973677,
+    "h2_b09": 3.984007218852639,
+    "h2_warm": 3.962814012542367
+  },
+  "manifest": {
+    "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/metadata.json": {
+      "bytes": 18593,
+      "sha256": "d9fbecc1eb32af06b20c2d95e04dfc1f978d4f3b63c54848cd84f5ae10811214"
+    },
+    "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/status.json": {
+      "bytes": 253,
+      "sha256": "791d166ead254093d1fa55aa99ccfebfb53fd7367daf415e5bedb22f62346661"
+    },
+    "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/checkpoint.json": {
+      "bytes": 60,
+      "sha256": "f50813750f7d1bb837b28c34dedf49f6bde5822537fea0f722e5b4b97d812721"
+    },
+    "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/steps/step000092.json": {
+      "bytes": 34283,
+      "sha256": "760105425a91719468bc6f66cd391d2cad3508f1970562b0ffb94a32494e5d21"
+    },
+    "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/metadata.json": {
+      "bytes": 18563,
+      "sha256": "6fb98a76355927894ddf5cba0129bb0fd0dd15c9219710d364b3e249e77af526"
+    },
+    "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/status.json": {
+      "bytes": 252,
+      "sha256": "a1ddeb8d186f21a2e9a5d871ab4e64a0bc6f875594504236a9adfd7834bf5c10"
+    },
+    "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/checkpoint.json": {
+      "bytes": 60,
+      "sha256": "f50813750f7d1bb837b28c34dedf49f6bde5822537fea0f722e5b4b97d812721"
+    },
+    "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/steps/step000092.json": {
+      "bytes": 34270,
+      "sha256": "55e1018744d8c8248625a3ceb72a0ad3283bd4cfcac4ff29d79adb6d0a9efa62"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/metadata.json": {
+      "bytes": 18855,
+      "sha256": "79530b6d71ca7303b1e45e4a9db0397755e3bc87fcf04ceeab52ecf8ee30de5b"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/status.json": {
+      "bytes": 253,
+      "sha256": "280066ddf8f0032977a0a78704a4f4c701a843243417dd0a7f5215a1383f35fb"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/checkpoint.json": {
+      "bytes": 60,
+      "sha256": "f50813750f7d1bb837b28c34dedf49f6bde5822537fea0f722e5b4b97d812721"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/steps/step000092.json": {
+      "bytes": 34279,
+      "sha256": "0239a4cd2cc7388ca0a5309802cc0edc0950ffdcc4655c5f9ebedc7eed591428"
+    },
+    "logs/muon_spectra/soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada/scientific/metadata.json": {
+      "bytes": 18701,
+      "sha256": "8bc6ea919c985f20f069bdd5da25ae3b07898bff10a647467a9b6dc795dd13a7"
+    },
+    "logs/muon_spectra/soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada/scientific/status.json": {
+      "bytes": 254,
+      "sha256": "7fca1f81fb8192aec1d365c86596ae6f055f2f6308c59af6ed2ef97a31e540de"
+    },
+    "logs/muon_spectra/soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada/scientific/checkpoint.json": {
+      "bytes": 61,
+      "sha256": "b29109017f5676ce9a91221dd68a4a6da8633ff0134500837effca2c714cddab"
+    },
+    "logs/muon_spectra/soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada/scientific/steps/step000184.json": {
+      "bytes": 34252,
+      "sha256": "6b774ba228674eb271aaac9eb9256ae912b86cf3bb001f9c2e7d6997daa5dc62"
+    },
+    "logs/muon_spectra/soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada/scientific/metadata.json": {
+      "bytes": 18566,
+      "sha256": "71e32f30166fce6ead04720570fea0a734ed3fbda26a66d2193214ec5515ed04"
+    },
+    "logs/muon_spectra/soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada/scientific/status.json": {
+      "bytes": 253,
+      "sha256": "8e90f0692308bcf3a9264afb37662ad4c7d001655cddb72b95099d7c345adedc"
+    },
+    "logs/muon_spectra/soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada/scientific/checkpoint.json": {
+      "bytes": 61,
+      "sha256": "b29109017f5676ce9a91221dd68a4a6da8633ff0134500837effca2c714cddab"
+    },
+    "logs/muon_spectra/soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada/scientific/steps/step000184.json": {
+      "bytes": 34265,
+      "sha256": "a4ae5beee71ff3fca8c655237898cb8baf2629a9442131ca3b6db52364ae4acc"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/metadata.json": {
+      "bytes": 18858,
+      "sha256": "3d845b09bc7e336d4a4c6f1a51faa2b555a46adbec750afd0779e74f9f093b48"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/status.json": {
+      "bytes": 254,
+      "sha256": "ab7905f7f971add9fc528ff0fcc8111696c27ce2fca579e344caae80b84604b2"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/checkpoint.json": {
+      "bytes": 61,
+      "sha256": "b29109017f5676ce9a91221dd68a4a6da8633ff0134500837effca2c714cddab"
+    },
+    "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/steps/step000184.json": {
+      "bytes": 34276,
+      "sha256": "07bf997ba5b2b10cf568b956dd67e7c1344a1cadd5e3f39cd6e123ebac313f60"
+    }
+  },
+  "source_checks": {
+    "h1_b08": {
+      "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+      "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+      "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+      "distributed.py": "077b64dcb53224de27020bd4ecbb1166fbca7525a54b6d30c5b91d21d06bb59a",
+      "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+      "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+      "muon.py": "1bf6df6fbd35471450d8bb1e0de82027ed99532791f2911e167f349cd53e461d",
+      "run_arm.py": "8fdcc688e832ee922e218c0ab6d484f9a6f77e60ba6e2a33c0413f7466423f89",
+      "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+      "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+      "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+      "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+      "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+      "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+      "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+      "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+      "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+      "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+      "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+      "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+      "test_whitening.py": "24d0ba873532082e1db565403a129dfdc7dd97efa0ab52e4fdb63fb2133010ce",
+      "train.py": "ddcadd58dc10ae0d29a869d43ef216d41ff76bab5af82c2f6c565be60423ec7f"
+    },
+    "h1_b09": {
+      "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+      "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+      "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+      "distributed.py": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+      "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+      "muon.py": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "run_arm.py": "494b1c94e94353d04c2e86fe69d78091ba8015697a3205874f385d7ea7e2a6f0",
+      "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+      "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+      "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+      "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+      "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+      "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+      "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+      "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+      "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+      "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+      "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+      "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+      "test_whitening.py": "3560d8fac32b8a19ef95b8d7d6af9da99b844b96500a20e4545acf25e6b779a1",
+      "train.py": "b637265f9fe47ebfecdc5615d29c94b0f8c8242068ef1d1cba6afdb7c3acab5f"
+    },
+    "h1_warm": {
+      "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+      "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+      "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+      "distributed.py": "7312fc88c8654f26b67a87046d4a530dbb46db657e65b72402a2a686212d522c",
+      "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+      "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+      "muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+      "run_arm.py": "ed41821c85fff13b25a3cd534224dde93fad8269d28053711c022057613344cd",
+      "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+      "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+      "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+      "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+      "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+      "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+      "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+      "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+      "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+      "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+      "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+      "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+      "test_whitening.py": "769f32bd56957a2a994193763b610f64c09500eade66389a7f9e653bf6c36001",
+      "train.py": "a73307e7dfb51e5f17a65cf5114fcedbda25b52df639e98460baf5fda1fc5025"
+    },
+    "h2_b08": {
+      "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+      "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+      "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+      "distributed.py": "ae840a2d33e875110cbd2371b52889c43d355bbd4e3177ae4d69d5397530d145",
+      "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+      "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+      "muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+      "run_arm.py": "f3632fbc851aaba1facca0186dbc46b82a22d00559f25b554f3d6f32d8fc3b3e",
+      "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+      "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+      "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+      "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+      "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+      "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+      "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+      "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+      "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+      "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+      "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+      "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+      "test_whitening.py": "57b5496579873ba053505de10229b14e09edcc5338284d5bb689fe112dcc510c",
+      "train.py": "3ca87d3eb1682e699f2ef48ce954cfdbeed6610f88ad73d4d4275b798d6b173a"
+    },
+    "h2_b09": {
+      "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+      "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+      "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+      "distributed.py": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+      "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+      "muon.py": "c6e29f41b035988bf80d1544c5e5369c3804ba7fc869afdb765b0ba97d3e321e",
+      "run_arm.py": "494b1c94e94353d04c2e86fe69d78091ba8015697a3205874f385d7ea7e2a6f0",
+      "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+      "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+      "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+      "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+      "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+      "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+      "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+      "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+      "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+      "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+      "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+      "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+      "test_whitening.py": "3560d8fac32b8a19ef95b8d7d6af9da99b844b96500a20e4545acf25e6b779a1",
+      "train.py": "b637265f9fe47ebfecdc5615d29c94b0f8c8242068ef1d1cba6afdb7c3acab5f"
+    },
+    "h2_warm": {
+      "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+      "compare.py": "0e0545c087955d228e66cc83ffb339a7fa56f9ecac8575214d9072db5d205687",
+      "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+      "distributed.py": "7312fc88c8654f26b67a87046d4a530dbb46db657e65b72402a2a686212d522c",
+      "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+      "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+      "muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+      "run_arm.py": "ed41821c85fff13b25a3cd534224dde93fad8269d28053711c022057613344cd",
+      "run_deflation.py": "94f52d99a4ad0af6a4f48a2552e421fe805b32b3d0f56fbb1f01bc1d00789602",
+      "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+      "run_variant.py": "addafde3937ab879a1efc4e7b000073fe25a0554286805d0ba09a974569b2510",
+      "spike_diagnostics.py": "49d2820f70751814aee88e2eea7ec634c436d54e0f5437caa979d9b73c98bb45",
+      "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+      "test_arch.py": "9138f19874a2d3460d4b71e3dde9c7cab85ed96bf1858c4a1cde732a99f35e75",
+      "test_baselines.py": "22f2e6b0a9df393be7c6f937a1b59c423e2cdf106c543619e1865ba9f0931bd1",
+      "test_deflation.py": "d2ebbe7a35a1df2b2b08abc953e9c06a9905a3c1f569bbbc166cf7db7cbe04b6",
+      "test_gn_probe.py": "8fbc0bab6359542a36289117b600d921974d824d7218884f1c6cd242a397c143",
+      "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+      "test_spike.py": "fa8e696317c2a5469662edc56f773f4d269562639ed0b99409d0ab5fa048a2e7",
+      "test_study.py": "3f16eaabc25038ed47de79f7a57b03d2a93007cb43cd1d0d1a3587ca58fc084f",
+      "test_whitening.py": "769f32bd56957a2a994193763b610f64c09500eade66389a7f9e653bf6c36001",
+      "train.py": "a73307e7dfb51e5f17a65cf5114fcedbda25b52df639e98460baf5fda1fc5025"
+    }
+  },
+  "helper_hashes": {
+    "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+    "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+    "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+    "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124"
+  },
+  "token_hashes": {
+    "inputs": "7e123903dd089cbc824cf398f678d8b2f2aced2a60cc9b6a6921589b33f155a7",
+    "targets": "767d1b3459d794d28b5e35465d4270d20ced298b31c567f4372ed58e8e795823"
+  },
+  "qualification": {
+    "derivative_finite_difference_error": 1.413474892686395e-11,
+    "common_shift_error": 5.995204332975845e-15,
+    "repeat_logits_error": 0.0,
+    "repeat_forward_seconds": 0.40126705169677734,
+    "first_sequence_seconds": 1.4330343939363956,
+    "forecast_seconds": 405.6664364086464,
+    "max_scale_derivative_identity_error": 5.445643935786393e-14,
+    "max_fp64_fp32_scale_one_nll_error": 3.49881697161436e-05
+  },
+  "checkpoint_provenance": {
+    "h1_b08": {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/checkpoint.pt",
+      "bytes": 822885049,
+      "mtime_ns": 1790615873286056268,
+      "model_tensor_sha256": "2e86390293780f1317f5f82d93da4e44e23f6b997bd52ed060ce0ff33a4b5f0f",
+      "step": 92,
+      "tokens": 1539870720
+    },
+    "h1_b09": {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/checkpoint.pt",
+      "bytes": 822885049,
+      "mtime_ns": 1790556594388964307,
+      "model_tensor_sha256": "3a659eec07b606225c45d5e8841c43e0da96ea5960b87a1d3316ca1db1dc6dca",
+      "step": 92,
+      "tokens": 1539870720
+    },
+    "h1_warm": {
+      "path": "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/checkpoint.pt",
+      "bytes": 822885369,
+      "mtime_ns": 1790635060241566902,
+      "model_tensor_sha256": "9e060779b232d97d376bea7793b8f87e530c0e7315b5273812c7f02e3b80fba1",
+      "step": 92,
+      "tokens": 1539870720
+    },
+    "h2_b08": {
+      "path": "logs/muon_spectra/soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada/scientific/checkpoint.pt",
+      "bytes": 822885177,
+      "mtime_ns": 1790625504572647399,
+      "model_tensor_sha256": "a844a1c508561b15ca7fe2b73afd5007bea1e8cafd0389a74067a78835584ffd",
+      "step": 184,
+      "tokens": 3079741440
+    },
+    "h2_b09": {
+      "path": "logs/muon_spectra/soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada/scientific/checkpoint.pt",
+      "bytes": 822885049,
+      "mtime_ns": 1790584574624558538,
+      "model_tensor_sha256": "773bdcc58e60e28ae4384bc4c627b8c70cf5fd7a6ce9c2901b76c6025bc5844f",
+      "step": 184,
+      "tokens": 3079741440
+    },
+    "h2_warm": {
+      "path": "logs/muon_spectra/soaudit_momwarm16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_momwarm0.8to0.9_s260925_ada/scientific/checkpoint.pt",
+      "bytes": 822885369,
+      "mtime_ns": 1790633109653511492,
+      "model_tensor_sha256": "328a429b30daf25681a5718b5a8f4aea758b41d88590a8b4f36ec02b6a5842a1",
+      "step": 184,
+      "tokens": 3079741440
+    }
+  },
+  "load_seconds": [
+    5.740439034998417,
+    3.9689621925354004,
+    4.010896395891905,
+    5.0488035418093204,
+    3.9846679493784904,
+    4.644593797624111
+  ],
+  "probe_sha256": "b48af6367d42690a89506afcd68914c9b386ae59faac672ce4ea5d68decfaf06",
+  "protocol_sha256": "18d468f87c86f2718efc969e300427f7b432b27da06ea45d435d968cff247837",
+  "seconds": 227.9148891940713,
+  "scientific_forwards": 192,
+  "qualification_forwards": 1,
+  "sequence_seconds": [
+    1.4330343939363956,
+    1.478222705423832,
+    1.4895951710641384,
+    1.4724839963018894,
+    1.462797176092863,
+    1.4038379862904549,
+    1.3543916121125221,
+    1.3902545757591724,
+    1.3444036208093166,
+    1.3536186255514622,
+    1.365346547216177,
+    1.344341080635786,
+    1.3483172953128815,
+    1.3418423049151897,
+    1.1714154332876205,
+    1.2245699390769005,
+    1.2658175230026245,
+    1.266963817179203,
+    1.1963960565626621,
+    1.3110266774892807,
+    1.398985430598259,
+    1.3005196191370487,
+    1.2423049956560135,
+    1.2020797207951546,
+    1.2166295982897282,
+    1.2798436507582664,
+    1.2064676694571972,
+    1.2020533680915833,
+    1.210280455648899,
+    1.238818146288395,
+    1.269836813211441,
+    1.2791386991739273,
+    1.3286741860210896,
+    1.2246989458799362,
+    1.161644872277975,
+    1.1284576803445816,
+    0.9186106286942959,
+    0.9016795009374619,
+    1.1256491355597973,
+    1.1554460749030113,
+    1.3766831085085869,
+    1.2705452963709831,
+    1.2290036007761955,
+    1.079667054116726,
+    1.2618928253650665,
+    1.2539546638727188,
+    1.2835996970534325,
+    1.121550116688013,
+    1.0443179458379745,
+    0.9720451533794403,
+    0.9626160077750683,
+    0.9128016941249371,
+    0.9072638750076294,
+    0.8380975611507893,
+    0.8124070763587952,
+    0.8540182672441006,
+    0.8198716416954994,
+    0.8008623905479908,
+    0.8084023185074329,
+    0.7993188612163067,
+    0.7739687077701092,
+    0.8850244507193565,
+    0.8574182130396366,
+    0.948068305850029,
+    1.3165261819958687,
+    1.4375094063580036,
+    1.4329686276614666,
+    0.9538509473204613,
+    0.7935043908655643,
+    0.766333419829607,
+    0.7914563044905663,
+    0.7637446857988834,
+    0.7389628365635872,
+    0.7551659159362316,
+    0.7849491350352764,
+    0.7380371317267418,
+    0.7452192530035973,
+    0.7383605502545834,
+    0.7453459352254868,
+    0.7401508241891861,
+    0.7438760809600353,
+    0.9895451553165913,
+    0.9626526609063148,
+    0.9672181867063046,
+    0.8936563991010189,
+    0.8434982150793076,
+    0.800319142639637,
+    0.8282084576785564,
+    0.8499440215528011,
+    0.8645843900740147,
+    0.8596129715442657,
+    0.8850034922361374,
+    0.8864076361060143,
+    0.8009590171277523,
+    0.796567477285862,
+    0.8005009368062019,
+    1.5306348763406277,
+    1.3056718558073044,
+    1.3518135510385036,
+    1.152022272348404,
+    1.1226720437407494,
+    1.0951899364590645,
+    1.0193656273186207,
+    1.010060653090477,
+    0.9380497224628925,
+    0.9110781289637089,
+    0.8254133723676205,
+    0.9955043718218803,
+    0.9299865402281284,
+    0.8583308830857277,
+    0.901418998837471,
+    0.7698966227471828,
+    0.7862031161785126,
+    0.8145950771868229,
+    0.8013862296938896,
+    1.2752640172839165,
+    0.7952506728470325,
+    0.757044643163681,
+    0.7603061608970165,
+    0.7378909513354301,
+    0.8330623395740986,
+    1.0794281102716923,
+    0.8742721490561962,
+    0.8127187639474869,
+    1.157589863985777,
+    1.0953821241855621,
+    1.0871209762990475,
+    1.3882461488246918,
+    1.3044382110238075,
+    1.4177351519465446,
+    1.496331263333559,
+    1.5085449516773224,
+    1.1221294812858105,
+    1.4048050865530968,
+    1.401945821940899,
+    1.375249084085226,
+    1.3937735110521317,
+    1.3603612445294857,
+    1.3632872812449932,
+    1.011818889528513,
+    1.093262292444706,
+    1.1173707768321037,
+    1.2703776322305202,
+    1.203124575316906,
+    1.0600100606679916,
+    0.7340791411697865,
+    0.8977801464498043,
+    0.86988540366292,
+    0.8723638877272606,
+    0.8583497144281864,
+    0.8967035859823227,
+    0.7465022467076778,
+    0.8223586119711399,
+    0.8119978830218315,
+    0.8127623945474625,
+    0.8025768510997295,
+    0.8078814595937729,
+    0.8058909848332405,
+    0.8053687512874603,
+    0.8072267360985279,
+    0.9487348832190037,
+    0.966853991150856,
+    1.0263243839144707,
+    1.2554848976433277,
+    0.9988637343049049,
+    0.9782034941017628,
+    0.9921092614531517,
+    0.9738437086343765,
+    0.9210602976381779,
+    0.7334224246442318,
+    0.911705493927002,
+    0.8660320527851582,
+    1.0406383872032166,
+    1.177254680544138,
+    0.8568969033658504,
+    0.8824921064078808,
+    0.8692971281707287,
+    0.8674412332475185,
+    0.8798695392906666,
+    0.8773522302508354,
+    0.8699970617890358,
+    0.8723888657987118,
+    0.8855449818074703,
+    0.8694183528423309,
+    0.8868929259479046,
+    0.874768078327179,
+    0.882931537926197,
+    0.881592970341444,
+    0.7310205474495888,
+    0.942676804959774,
+    1.2971881702542305,
+    1.2675979062914848
+  ]
+}

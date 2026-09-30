@@ -1,0 +1,2259 @@
+<meta charset="utf-8">
+<title>Readable Gauss-Newton Atlas</title>
+<meta name="description" content="Measured Gauss-Newton structure of a 77M-parameter GPT along the trajectories of Muon, PD, SOAP-Muon and S∘PD, laid out for reading.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Design tokens. Optimizer hues were validated with the dataviz palette checker (all pairs, both themes):
+   light on #ffffff and dark on #151c23 pass lightness band, chroma floor, CVD (protan/deutan) and the normal-vision floor. */
+:root {
+  --scheme: light;
+  --bg: #edf0f2;
+  --side: #f6f8f9;
+  --surface: #ffffff;
+  --surface-2: #f3f6f7;
+  --ink: #16202a;
+  --ink-2: #394755;
+  --muted: #5a6a78;
+  --line: #d3dbe1;
+  --grid: #e6ebee;
+  --axis: #a3b0ba;
+  --ref: #4f5d6a;
+  --warn-bg: #fbf5e6;
+  --warn-line: #d9bf7f;
+  --c-muon: #0c8dd9;
+  --c-pd: #ab4c12;
+  --c-soap: #33a463;
+  --c-spd: #7543dd;
+  --c-ts: #c40a8f;
+  --c-gn: #1d2833;
+  --c-gnpd: #b98b00;
+  --c-kfac: #5d7185;
+  --c-gd: #9aa4ad;
+  /* arms that are not optimizers (e.g. coordination variants of PD); validated all-pairs in both themes */
+  --v1: #27528e; --v2: #fc4257; --v3: #385f04; --v4: #b178c8;
+  /* diverging heatmap scale: blue - neutral gray - red */
+  --div-neg: #1c5cab; --div-neg-soft: #9ec5f4; --div-mid: #dfe3e6; --div-pos-soft: #f2a590; --div-pos: #b3261e;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --scheme: dark;
+    --bg: #0b1015; --side: #0f151b; --surface: #151c23; --surface-2: #1b242d; --ink: #e6edf2; --ink-2: #c3ced7;
+    --muted: #93a3b1; --line: #2b3743; --grid: #222d37; --axis: #45535f; --ref: #a9b7c3; --warn-bg: #2a2416; --warn-line: #7a6430;
+    --c-muon: #129fe7; --c-pd: #c35408; --c-soap: #0ab074; --c-spd: #7f52f5; --c-ts: #c93196; --c-gn: #e6edf2;
+    --c-gnpd: #d4a520; --c-kfac: #8ea3b6; --c-gd: #6d7780;
+    --v1: #0864cd; --v2: #ff3966; --v3: #717c16; --v4: #af77d0;
+    --div-neg: #7fb2ee; --div-neg-soft: #28507f; --div-mid: #2e3842; --div-pos-soft: #7c332d; --div-pos: #f28b82;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --scheme: dark;
+  --bg: #0b1015; --side: #0f151b; --surface: #151c23; --surface-2: #1b242d; --ink: #e6edf2; --ink-2: #c3ced7;
+  --muted: #93a3b1; --line: #2b3743; --grid: #222d37; --axis: #45535f; --ref: #a9b7c3; --warn-bg: #2a2416; --warn-line: #7a6430;
+  --c-muon: #129fe7; --c-pd: #c35408; --c-soap: #0ab074; --c-spd: #7f52f5; --c-ts: #c93196; --c-gn: #e6edf2;
+  --c-gnpd: #d4a520; --c-kfac: #8ea3b6; --c-gd: #6d7780;
+  --v1: #0864cd; --v2: #ff3966; --v3: #717c16; --v4: #af77d0;
+  --div-neg: #7fb2ee; --div-neg-soft: #28507f; --div-mid: #2e3842; --div-pos-soft: #7c332d; --div-pos: #f28b82;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+button, select { font-family: var(--sans); }
+button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.app { display: grid; grid-template-columns: 240px minmax(0, 1fr); max-width: 1900px; margin-inline: auto; min-height: 100vh; }
+
+/* Sidebar: view navigation and the shared color key */
+.side { position: sticky; top: env(safe-area-inset-top, 0px); align-self: start; height: calc(100vh - env(safe-area-inset-top, 0px));
+  overflow-y: auto; padding: 26px 14px 26px 18px; border-right: 1px solid var(--line); background: var(--side);
+  display: flex; flex-direction: column; gap: 26px; }
+.brand-name { font: 600 25px/1.15 var(--serif); letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.brand-sub { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: var(--muted); }
+.side-label { font: 600 12px/1 var(--sans); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px 10px; }
+.nav { display: flex; flex-direction: column; gap: 2px; }
+.nav button { text-align: left; font: 500 15.5px/1.3 var(--sans); padding: 9px 12px; border-radius: 8px; border: 0;
+  background: transparent; color: var(--ink-2); cursor: pointer; }
+.nav button:hover { background: var(--surface-2); color: var(--ink); }
+.nav button[aria-current="page"] { background: var(--ink); color: var(--surface); }
+.key { list-style: none; margin: 0; padding: 0 0 0 10px; display: grid; gap: 7px; }
+.key li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--ink); }
+.key svg { flex: none; }
+.key-note { margin: 10px 0 0 10px; font-size: 13px; line-height: 1.45; color: var(--muted); }
+
+/* Narrow screens: a top bar with a view picker replaces the sidebar */
+.topbar { display: none; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--side);
+  border-bottom: 1px solid var(--line); padding: 10px 16px; gap: 12px; align-items: center; justify-content: space-between; }
+.topbar .brand-name { font-size: 19px; }
+.topbar select { flex: 1; max-width: 420px; }
+
+main { min-width: 0; padding-inline: 28px; padding-block: 28px 64px; container-type: inline-size; container-name: main; }
+.viewhead { display: grid; gap: 12px; max-width: 1180px; margin-bottom: 22px; }
+.eyebrow { font: 600 12.5px/1 var(--sans); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.viewhead h2 { font: 600 34px/1.12 var(--serif); letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.lede { margin: 0; max-width: 95ch; font-size: 17px; line-height: 1.6; color: var(--ink-2); }
+.help { margin: 0; font-size: 14px; color: var(--muted); }
+.callout { border: 1px solid var(--warn-line); background: var(--warn-bg); border-radius: 10px; padding: 14px 18px; max-width: 110ch; }
+.callout b { display: block; font: 600 12.5px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 8px; }
+.callout p { margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink); }
+.mkey { display: none; }
+
+/* Controls */
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg);
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 30px; padding-block: 16px; margin-block: 0 26px;
+  border-block: 1px solid var(--line); }
+.ctl { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.ctl-label { font: 600 12.5px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.seg { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 3px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.seg button { font: 500 15.5px/1 var(--sans); min-width: 44px; min-height: 38px; padding: 0 14px; border: 0; border-radius: 7px;
+  background: transparent; color: var(--ink-2); cursor: pointer; font-variant-numeric: tabular-nums; }
+.seg button:hover { background: var(--surface-2); color: var(--ink); }
+.seg button[aria-checked="true"] { background: var(--ink); color: var(--surface); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 9px; min-height: 40px; font: 500 15.5px/1 var(--sans); padding: 0 16px 0 12px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); cursor: pointer; }
+.chip .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--c); border: 2px solid var(--c); }
+.chip[aria-pressed="false"] { background: transparent; color: var(--muted); }
+.chip[aria-pressed="false"] .dot { background: transparent; }
+select { font: 500 15.5px/1.2 var(--sans); min-height: 40px; padding: 6px 12px; border-radius: 9px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); max-width: 100%; }
+
+/* Panels */
+.panels { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+/* two columns only when each plot stays at least 600px wide */
+@container main (min-width: 1296px) { .panels { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 16px; min-width: 0;
+  display: flex; flex-direction: column; gap: 10px; }
+.wide, .section, .note, .callout-row { grid-column: 1 / -1; }
+.card h3 { font: 600 19px/1.3 var(--sans); margin: 0; text-wrap: balance; }
+.card .sub { margin: -4px 0 0; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
+.legend { display: flex; flex-direction: column; gap: 4px; }
+.lg-row { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 4px; }
+.lg-title { font: 600 12px/1 var(--sans); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
+.lg-item { display: inline-flex; align-items: center; gap: 8px; font: 400 14.5px/1.25 var(--sans); color: var(--ink);
+  background: transparent; border: 1px solid transparent; border-radius: 7px; padding: 4px 8px; text-align: left; }
+button.lg-item { cursor: pointer; }
+button.lg-item:hover { background: var(--surface-2); border-color: var(--line); }
+.lg-item[aria-pressed="false"] { color: var(--muted); }
+.lg-item[aria-pressed="false"] svg { opacity: 0.3; }
+.lg-item[aria-pressed="false"] .lg-text { text-decoration: line-through; }
+.lg-hint { font-size: 13px; color: var(--muted); margin-left: 6px; }
+.plot { width: 100%; height: var(--h, 540px); min-height: 280px; }
+.look { margin: 2px 0 0; font-size: 15.5px; line-height: 1.55; color: var(--ink-2); max-width: 120ch; }
+.look b { font-weight: 600; color: var(--ink); }
+.empty { border: 1px dashed var(--line); border-radius: 10px; padding: 26px 20px; color: var(--muted); font-size: 16px; background: var(--surface-2); }
+.note { border: 1px dashed var(--line); border-radius: 12px; padding: 22px 24px; color: var(--ink-2); font-size: 16.5px; background: var(--surface); }
+.note.warn { border-style: solid; border-color: var(--warn-line); background: var(--warn-bg); color: var(--ink); }
+
+.section { display: grid; gap: 10px; padding-top: 14px; scroll-margin-top: 150px; }
+.jump { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.jump > span { font: 600 12.5px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.jump button { font: 500 14.5px/1.2 var(--sans); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
+  background: var(--surface); color: var(--ink); cursor: pointer; }
+.jump button:hover { border-color: var(--ink-2); }
+.section h3 { font: 600 24px/1.2 var(--serif); margin: 0; text-wrap: balance; }
+.section p { margin: 0; max-width: 100ch; font-size: 16px; color: var(--ink-2); }
+.stats { display: flex; flex-wrap: wrap; gap: 10px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; display: grid; gap: 4px; }
+.stat span { font-size: 13px; color: var(--muted); }
+.stat strong { font: 600 19px/1.1 var(--sans); }
+
+/* Tables */
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; max-height: 720px; }
+table.data { border-collapse: collapse; width: 100%; font: 400 15px/1.4 var(--sans); font-variant-numeric: tabular-nums; }
+table.data th { position: sticky; top: 0; z-index: 1; background: var(--surface-2); font-weight: 600; font-size: 14px; color: var(--ink-2);
+  text-align: right; padding: 11px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table.data td { padding: 10px 14px; border-bottom: 1px solid var(--grid); text-align: right; white-space: nowrap; vertical-align: top; }
+table.data th:first-child, table.data td:first-child { text-align: left; }
+table.data tbody tr:hover { background: var(--surface-2); }
+table.data.narrowtable { width: auto; min-width: min(100%, 680px); }
+table.data .raw { display: block; margin-top: 2px; font: 400 12.5px/1.3 var(--mono); color: var(--muted); }
+table.data td.num-strong { font-weight: 600; }
+
+/* Principles */
+.principles { grid-column: 1 / -1; display: grid; gap: 18px; max-width: 1060px; counter-reset: pr; }
+.pr { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 0 18px; padding: 24px 28px 22px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 12px; }
+.pr-num { font: 600 30px/1 var(--serif); color: var(--muted); font-variant-numeric: lining-nums; padding-top: 2px; }
+.pr h3 { font: 600 21.5px/1.35 var(--serif); margin: 0 0 10px; text-wrap: balance; }
+.pr p { margin: 0; font-size: 17px; line-height: 1.68; color: var(--ink-2); max-width: 80ch; }
+.pr-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+.pr-links span { font: 600 12px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.pr-link { font: 500 14.5px/1.2 var(--sans); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
+  background: var(--surface-2); color: var(--ink); cursor: pointer; }
+.pr-link:hover { border-color: var(--ink-2); }
+
+footer { overflow-wrap: anywhere; margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; line-height: 1.6; max-width: 130ch; }
+footer code { font: 400 12.5px var(--mono); }
+
+@media (max-width: 1100px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .side { display: none; }
+  .topbar { display: flex; }
+  .controls { top: calc(env(safe-area-inset-top, 0px) + 62px); }
+  main { padding-inline: 24px; }
+  .mkey { display: block; }
+  .mkey summary { cursor: pointer; font-size: 14.5px; color: var(--ink-2); }
+  .mkey .key { padding: 10px 0 0; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+}
+@media (max-width: 640px) {
+  main { padding-inline: 16px; padding-block: 20px 48px; }
+  .topbar { padding-inline: 16px; }
+  .topbar .brand-name { display: none; }
+  .topbar select { max-width: none; }
+  .viewhead h2 { font-size: 27px; }
+  .lede { font-size: 16px; }
+  .controls { position: static; gap: 12px 18px; }
+  .card { padding: 14px 12px 12px; border-radius: 10px; }
+  .plot { height: var(--hm, 420px); }
+  .pr { grid-template-columns: minmax(0, 1fr); padding: 18px 16px; }
+  .pr-num { margin-bottom: 8px; }
+  .seg button { min-width: 40px; padding: 0 11px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="topbar" id="topbar">
+  <p class="brand-name">Gauss‑Newton Atlas</p>
+  <label class="sr-only" for="view-select">View</label>
+  <select id="view-select"></select>
+</div>
+
+<div class="app">
+  <aside class="side" aria-label="Atlas navigation">
+    <div>
+      <p class="brand-name">Gauss‑Newton Atlas</p>
+      <p class="brand-sub">Measured Gauss-Newton structure of a 77M-parameter GPT (width 512, 8 layers) along the training trajectories of four optimizers at 1M- to 16M-token batches.</p>
+    </div>
+    <nav aria-label="Views">
+      <p class="side-label">Views</p>
+      <div class="nav" id="nav"></div>
+    </nav>
+    <div>
+      <p class="side-label">Colors, all views</p>
+      <ul class="key" id="key"></ul>
+      <p class="key-note">Within one optimizer's panel, lighter to darker (dimmer to brighter in dark mode) means earlier to later.</p>
+    </div>
+  </aside>
+
+  <main id="main">
+    <header class="viewhead">
+      <p class="eyebrow" id="eyebrow"></p>
+      <h2 id="view-title"></h2>
+      <p class="lede" id="lede"></p>
+      <div class="callout" id="caveat" hidden><b>Caveat</b><p id="caveat-text"></p></div>
+      <p class="help" id="help">Hover a chart for values. Drag to zoom and double-click to reset. Click a legend entry to hide or show its series.</p>
+      <details class="mkey"><summary>Color key</summary><ul class="key" id="key-m"></ul></details>
+    </header>
+
+    <div class="controls" id="controls" aria-label="View controls">
+      <div class="ctl" id="ctl-runs"><span class="ctl-label" id="lbl-runs">Optimizers</span><div class="chips" id="chips" role="group" aria-labelledby="lbl-runs"></div></div>
+      <div class="ctl" id="ctl-kind"><span class="ctl-label" id="lbl-kind">Matrix kind</span><div class="seg" id="seg-kind" role="radiogroup" aria-labelledby="lbl-kind"></div></div>
+      <div class="ctl" id="ctl-depth"><span class="ctl-label" id="lbl-depth">Layer</span><div class="seg" id="seg-depth" role="radiogroup" aria-labelledby="lbl-depth"></div></div>
+      <div class="ctl" id="ctl-step"><span class="ctl-label" id="lbl-step">Training step</span><div class="seg" id="seg-step" role="radiogroup" aria-labelledby="lbl-step"></div></div>
+      <div class="ctl" id="ctl-gnstate"><span class="ctl-label" id="lbl-gnstate">Saved state</span><div class="seg" id="seg-gnstate" role="radiogroup" aria-labelledby="lbl-gnstate"></div></div>
+    </div>
+
+    <div class="panels" id="panels"></div>
+
+    <footer id="footer"></footer>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<script id="atlas-data" type="application/json">__ATLAS_DATA__</script>
+<script id="atlas-text" type="application/json">__ATLAS_TEXT__</script>
+<script id="atlas-meta" type="application/json">__ATLAS_META__</script>
+<script>
+(function () {
+  "use strict";
+
+  // ------------------------------------------------------------------ data
+  const $ = (s, r) => (r || document).querySelector(s);
+  const readJSON = (id) => { try { return JSON.parse(document.getElementById(id).textContent); } catch (e) { return null; } };
+  const D = readJSON("atlas-data") || {};
+  const TEXT = readJSON("atlas-text") || {};
+  const META = readJSON("atlas-meta") || {};
+  const KINDS = Array.isArray(D.kinds) && D.kinds.length ? D.kinds : ["q", "k", "v", "o", "up", "down"];
+  const RUNS = Array.isArray(D.runs) && D.runs.length ? D.runs : ["M", "PD", "S", "SPD"];
+  const LABELS = Object.assign({ M: "Muon", PD: "PD α¼", S: "SOAP-Muon", SPD: "S∘PD" }, D.labels || {});
+  const RUNFAM = { M: "muon", PD: "pd", S: "soap", SPD: "spd" };
+  const FONT = '"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif';
+
+  // The explanation texts below are the original Atlas's; at build time they are refreshed from the original template.
+  const VIEWS = [
+    { id: "principles", label: "Principles", controls: [],
+      how: "What the second-order audit has established so far (2026-09-28). Each principle points to the view that shows its evidence." },
+    { id: "curv", label: "Curvature vs K-FAC", controls: ["runs", "kind", "depth"],
+      how: "Exact Gauss-Newton input curvature along each eigenvector of the activation second moment C, divided by what K-FAC predicts (tr B × eigenvalue). 1 = K-FAC is exact. One panel per optimizer; color = training step (teal early, orange late)." },
+    { id: "train", label: "Over training", controls: ["runs", "kind", "depth"],
+      how: "Summaries along training for one matrix kind: the mean input direction's exact/K-FAC curvature and share of C, the fit of the exact input factor to within-sequence (a) and sequence-mean (b) parts of C, and the gradient noise scale (sequences). Lines = optimizers." },
+    { id: "gap", label: "Gap map", controls: ["runs", "kind", "step"],
+      how: "Every frame direction binned by its exact curvature. Where the Newton decrement lives, the critical batch b* (dotted line = our 2048-sequence batch), each optimizer's effective step relative to the noise-aware Newton step (shape only), the overshoot along the actual update, and momentum-gradient alignment (negative = oscillation). Caveat (2026-09-27): these sums treat frame pairs as independent. Along the actual updates the exact curvature is 20 to 37 times the diagonal sum (see Coupling), so the effective-step and overshoot panels overstate how under-stepped the flat directions are." },
+    { id: "spec", label: "Spectra", controls: ["runs", "kind", "depth"],
+      how: "Eigenvalue spectra of the input factor C and the output factor B (model-sampled labels), each divided by its mean. Color = training step." },
+    { id: "gn", label: "Exact Gauss-Newton", controls: ["gnstate"],
+      how: "One step from a saved state. Each direction's loss decrease at its own best scale, on held-out sequences, as a share of the exact Gauss-Newton direction's (Lanczos/CG on the exact GN matrix of all 48 hidden matrices, best damping). Inputs: a fresh 1M- or 4M-token gradient, or the optimizer's next momentum. The swaps separate a direction's within-matrix shape from its per-matrix step allocation; the second chart asks which matrix kind carries the within-matrix gap." },
+    { id: "lags", label: "Persistence", controls: ["runs", "kind"],
+      how: "Correlation of the true (held-out) gradient at step 501 with the gradient 1 to 31 steps later, by K-FAC curvature class within each matrix. Filled markers are odd lags and open markers even lags, so a period-2 oscillation shows as a zig-zag. One trajectory per optimizer: each point is one realization, not an average over time." },
+    { id: "coupling", label: "Coupling", controls: [],
+      how: "Why the frame-diagonal picture failed. Each optimizer's actual update is split into its stiff (top 1% of Kronecker pairs), middle (next 9%) and flat parts; the exact GN curvature of each part is compared with the frame-diagonal sum, and the one-step quadratic model is scored at the step taken, at the best single scale and at separate scales per part." },
+    { id: "blocks", label: "Blocks & stability", controls: [],
+      how: "Left: one-step decrease (cross-fitted on two halves of the held-out sequences) of the exact Gauss-Newton direction restricted to block-diagonal pieces (per matrix, per layer, per kind) against the full GN and the optimizers, as a share of full GN. Tables: the edge of each optimizer's linearized dynamics, LR μ_max(J G) against heavy ball's bound, with J the Jacobian of the run's own update map; and the raw number LR × s × λ_max(R G R) (Muon: R = I; PD: R = C^-α, s its norm-matching factor)." },
+    { id: "momentum", label: "Momentum & noise", controls: ["kind"],
+      how: "Exact replay: the run's last 100 training batches re-evaluated at the current weights give the stale-free momentum M*, so the staleness β(M − M*) of the next momentum is known exactly. Table: how well curvature transport (−G Q exact GN, −H Q true Hessian, per-matrix GN blocks, K-FAC) predicts it (cos and best multiplier s*; Q is the tracked displacement sum). Curves: Kronecker-frame pairs binned by their exact GN diagonal h, pooled per kind: the signal-to-noise of one 1M-token batch, the momentum's gain on the current gradient (1 = a fresh average; M solid, M* dotted), the stale fraction and the transport cosine. Bars: projections on the top exact GN eigenvectors, and each input's one-step decrease under each map." },
+    { id: "gap2gn", label: "Gap to GN", controls: [],
+      how: "Is the gap to Gauss-Newton oscillation or bulk? Left: held-out loss during 16-step LR anneals from kept states (the run's own optimizer, LR taken to ~0): the loss the LR maintains. Middle: one-step decreases as a share of damped exact GN, at the oscillating states and after the anneal (valley floor), for fresh 4M- and 16M-token gradients (cross-fitted). Right: validation loss of GN-trainer runs (the GN paper's recipe: inner Muon on a frozen linearization, line search) and the no-linearization control, against the baselines." },
+    { id: "edge", label: "Edge & co-adaptation", controls: [],
+      how: "Each optimizer's own step at its own state, from the kept checkpoints and the weights one step later (exact GN on 128 held-out sequences, top Ritz pairs from Lanczos 48). Lines: optimizer; solid 16M, dashed 4M, dotted 1M. The last chart is the 16M pre-flight for the exact-GN rate test: at PD's own states, each direction's best one-step decrease under the GN model (a²/2q, held-out)." },
+    { id: "steprule", label: "Step rule & floors", controls: [],
+      how: "What the Newton-trainer results measured, and where the preconditioners gain. Top: validation after switching the step rule at step 500 (1M): the greedy held-out line search gives the same trajectory whether the direction is Muon's or Newton's, while GN's direction at Muon's own step norms (normalized GN) sharpens the network. Middle: 16-step LR anneals at kept steps split the loss into the floor under the oscillation and the excess the LR maintains; step-equivalent speedup = Muon's step t over the steps an arm needs to reach Muon's loss at t. Bottom: one step along each direction at c times the trainer's step (held-out, hidden matrices only), GN's direction rescaled per matrix to the trainer's norms, by curvature set." },
+    { id: "batch", label: "Batch size", controls: [],
+      how: "Validation loss against tokens for the 1M-token-batch trajectories (solid) and the 4M-token batch-size study (dashed, one line per learning rate). Same 1.54B tokens." },
+  ];
+  let PRINCIPLES = [
+    ["The realized gains come from the geometry of a normalized update, not from Newton-type step sizes.",
+     "The winners keep the polar (unit-singular-value) step and improve the coordinates it acts in: input whitening from forward statistics (PD), plus normalization of the gradient's own signal magnitudes in its output-side eigenbasis (SOAP). Greedy/line-searched Newton steps lose because of the step rule (greedy Muon ≈ greedy Newton). GN's direction at a fixed step norm also lost; corrected 2026-09-28: not because it sharpens the network (the winning whitening maps sharpen it 30–400× and train better), but because the per-step GN direction is dominated by its curvature sample. (Step rule & floors; Edge & co-adaptation)"],
+    ["The gain grows with batch size and through training.",
+     "Step-equivalent speedup over Muon at matched loss: ~1.2× at 1M, 1.27–1.36× at 4M, 1.34–1.37× at 16M (loss 4.6–4.4); two seeds and two LRs at 16M agree. Loss gaps mislead in both directions (flat curves shrink them, steep curves inflate them). (Step rule & floors: matched-loss chart)"],
+    ["On the output side at large batch, gradient statistics beat GN curvature.",
+     "SOAP's output-side normalization carries 68–79% of its gain on PD; the GN output factor adds nothing at 16M; the two are substitutes, and SOAP's second-moment source does not matter at ≥ 4M. Per-entry SNR is high for 95–100% of the signal energy in every frame, so the mechanism is sign-like equalization of uneven signal magnitudes, not SNR weighting. (Step rule & floors: SNR chart, 16M table)"],
+    ["A state is co-adapted to its optimizer.",
+     "Each optimizer's own step is neutral at c = 1 and best at c ≈ ½; another direction at the same norm meets curvature the dynamics never regulated. One-step scores at a state measure what that state's optimizer left unexploited, not a rate; better geometries harvest it once. (Step rule & floors: one-step curves, floor steps)"],
+    ["Exact GN geometry is the largest one-step prize at valley floors, but not a per-step rate at large batch.",
+     "PD in the exact GN geometry is ~2× PD and 1.2–1.4× damped GN at valley floors (true loss), and in training it gave a front-loaded one-time gain. At 16M, at PD's own states, the per-step exact-GN direction depends on its curvature sample (cosine 0.15–0.40 between disjoint samples) and reaches only 0.5–0.8× the Kronecker map's best one-step decrease. The estimable curvature is the Kronecker bulk; what remains after Kronecker whitening is a stiff band that the optimizers must keep regulating. (Edge & co-adaptation: pre-flight)"],
+    ["Every optimizer runs at the edge of its own geometry, and carves its own landscape.",
+     "Across 1M, 4M and 16M, each optimizer's own step sits at 0.45–0.94 of its GN-optimal length (converging to 0.55–0.65). The network sharpens where the optimizer does not step: λ_max at own states is ~5–25 for Muon, ~100–600 for PD, ~500–2250 for S∘PD and TS, mirroring the step's stiff energy (1e-3, 1e-5, 1e-6). At large batch the gradient is mostly a period-2 oscillation of those stiff directions; one-step measures at own states do not rank the optimizers, and the speedups accumulate along the trajectory. (Edge & co-adaptation)"],
+    ["The per-step gap to a second-order step lives in the flattest curvature band; the momentum's lag and the edge feedback decide how much of it a method can use.",
+     "Split along the exact GN spectrum at each optimizer's own state, every step sits at the edge (c* 0.3–0.9) in all bands above 1e-3·λ_max, while the flattest band, which holds 95–100% of the step's energy, is under-stepped 1.3–29× (Muon most, S∘PD least, largest early). The period-2 gradient oscillation along the stiff directions is the stabilizing feedback: a two-tap filter that cancels it costs Muon +0.60, PD +0.19, S∘PD +0.09 at 16M. A fresher momentum (β 0.8) makes S∘PD's middle bands productive again and reaches 4.4724 at 16M (−0.102). (Edge & co-adaptation)"],
+    ["Measurement hygiene that changed conclusions.",
+     "Fixed held-out sets and greedy line searches throttle any direction; smoothed step rules lag after large steps; the stored oscillation excess must be separated from the floor; Krylov-approximated matrix functions understate geometries; model decreases need true-loss checks."],
+  ];
+  // Refresh texts from the original template (extracted at build time), keeping this page's layouts.
+  if (Array.isArray(TEXT.views)) {
+    TEXT.views.forEach((tv) => {
+      const v = VIEWS.find((x) => x.id === tv.id);
+      if (v) { if (tv.how) v.how = tv.how; if (tv.label) v.label = tv.label; }
+      else VIEWS.push({ id: tv.id, label: tv.label || tv.id, controls: [], how: tv.how || "", missing: true });
+    });
+  }
+  if (Array.isArray(TEXT.principles) && TEXT.principles.length) PRINCIPLES = TEXT.principles;
+  // The explanations describe the original page's colors and panel positions; adjust those few phrases to this layout.
+  const HOW_FIXES = {
+    curv: [["color = training step (teal early, orange late)", "color = training step (lighter early, darker late; dimmer to brighter in dark mode)"]],
+    spec: [["Color = training step.", "Color = training step (lighter early, darker late)."]],
+    blocks: [["Left: one-step decrease", "Charts: one-step decrease"]],
+    gap2gn: [["Left: held-out loss", "First: held-out loss"], ["Middle: one-step decreases", "Second: one-step decreases"], ["Right: validation loss", "Third: validation loss"]],
+    steprule: [["Top: validation", "First: validation"], ["Middle: 16-step", "Then: 16-step"], ["Bottom: one step", "Later: one step"]],
+  };
+  VIEWS.forEach((v) => (HOW_FIXES[v.id] || []).forEach(([a, b]) => { v.how = v.how.split(a).join(b); }));
+
+  // ------------------------------------------------------------------ state
+  const DEFAULT = { view: "principles", kind: "v", depth: "median", step: "500", runs: RUNS.slice(), gnstate: "" };
+  let state = Object.assign({}, DEFAULT);
+  try {
+    const saved = JSON.parse(localStorage.getItem("gn-atlas-readable") || "null");
+    if (saved && typeof saved === "object") state = Object.assign({}, DEFAULT, saved);
+  } catch (e) { /* storage unavailable */ }
+  if (!Array.isArray(state.runs)) state.runs = RUNS.slice();
+  state.runs = RUNS.filter((r) => state.runs.includes(r));
+  if (!KINDS.includes(state.kind)) state.kind = DEFAULT.kind;
+  if (!(state.depth === "median" || (+state.depth >= 1 && +state.depth <= 8))) state.depth = "median";
+  const hashView = () => { const h = decodeURIComponent((location.hash || "").replace(/^#/, "")); return VIEWS.some((v) => v.id === h) ? h : null; };
+  if (hashView()) state.view = hashView();
+  if (!VIEWS.some((v) => v.id === state.view)) state.view = DEFAULT.view;
+  const save = () => { try { localStorage.setItem("gn-atlas-readable", JSON.stringify(state)); } catch (e) { /* ignore */ } };
+
+  // ------------------------------------------------------------------ color
+  const cssVar = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const FAMS = [
+    ["muon", "Muon", "--c-muon"], ["pd", "PD", "--c-pd"], ["soap", "SOAP-Muon", "--c-soap"], ["spd", "S∘PD", "--c-spd"],
+    ["ts", "TS (two-sided)", "--c-ts"], ["gn", "exact / damped GN", "--c-gn"], ["gnpd", "PD in GN geometry", "--c-gnpd"],
+    ["kfac", "K-FAC, EKFAC", "--c-kfac"], ["gd", "gradient (GD), baselines", "--c-gd"],
+  ];
+  let T = null;
+  function readTheme() {
+    const t = { dark: cssVar("--scheme") === "dark", surface: cssVar("--surface"), surface2: cssVar("--surface-2"), ink: cssVar("--ink"),
+      ink2: cssVar("--ink-2"), muted: cssVar("--muted"), line: cssVar("--line"), grid: cssVar("--grid"), axis: cssVar("--axis"),
+      ref: cssVar("--ref"), fam: {} };
+    FAMS.forEach(([k, , v]) => { t.fam[k] = cssVar(v) || "#888888"; });
+    t.fam.other = t.muted;
+    t.surfaceA = rgba(t.surface, 0.86);
+    t.v = ["--v1", "--v2", "--v3", "--v4"].map((v) => cssVar(v) || t.muted);
+    t.div = { neg: cssVar("--div-neg"), negSoft: cssVar("--div-neg-soft"), mid: cssVar("--div-mid"), posSoft: cssVar("--div-pos-soft"), pos: cssVar("--div-pos") };
+    return t;
+  }
+  const fam = (k) => (T.fam[k] || T.fam.other);
+  function hexToRgb(h) {
+    h = String(h).trim().replace("#", "");
+    if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+    return [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
+  }
+  function rgba(hex, a) { const [r, g, b] = hexToRgb(hex).map((v) => Math.round(v * 255)); return `rgba(${r},${g},${b},${a})`; }
+  const s2l = (c) => (c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
+  const l2s = (c) => (c <= 0.0031308 ? 12.92 * c : 1.055 * c ** (1 / 2.4) - 0.055);
+  function toOklch(hex) {
+    const [r, g, b] = hexToRgb(hex).map(s2l);
+    const l = Math.cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b);
+    const m = Math.cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b);
+    const s = Math.cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
+    const L = 0.2104542553 * l + 0.793617785 * m - 0.0040720468 * s;
+    const A = 1.9779984951 * l - 2.428592205 * m + 0.4505937099 * s;
+    const B = 0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s;
+    return [L, Math.hypot(A, B), ((Math.atan2(B, A) * 180) / Math.PI + 360) % 360];
+  }
+  function fromOklch(L, C, H) {
+    let c = C, rgb = [0, 0, 0];
+    for (let i = 0; i < 60; i++) {
+      const a = c * Math.cos((H * Math.PI) / 180), b = c * Math.sin((H * Math.PI) / 180);
+      const l_ = L + 0.3963377774 * a + 0.2158037573 * b, m_ = L - 0.1055613458 * a - 0.0638541728 * b, s_ = L - 0.0894841775 * a - 1.291485548 * b;
+      const l = l_ ** 3, m = m_ ** 3, s = s_ ** 3;
+      rgb = [4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s, -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s,
+        -0.0041960863 * l - 0.7034186147 * m + 1.707614701 * s];
+      if (rgb.every((v) => v >= -0.0005 && v <= 1.0005)) break;
+      c *= 0.94;
+    }
+    return "#" + rgb.map((v) => Math.round(Math.max(0, Math.min(1, l2s(Math.max(0, Math.min(1, v))))) * 255).toString(16).padStart(2, "0")).join("");
+  }
+  // lighter (+) or darker (-) version of a hue, in OKLCH lightness
+  function shade(hex, dL) { const [L, C, H] = toOklch(hex); return fromOklch(Math.max(0.08, Math.min(0.96, L + dL)), C, H); }
+  // n ordered colors of one hue: early/low -> late/high. Light theme: light -> dark. Dark theme: dim -> bright.
+  function ramp(hex, n) {
+    const [, C, H] = toOklch(hex);
+    const neutral = C < 0.04;
+    const [a, b] = T.dark ? [0.47, 0.93] : (neutral ? [0.74, 0.2] : [0.79, 0.34]);
+    return Array.from({ length: n }, (_, i) => {
+      const t = n === 1 ? 1 : i / (n - 1);
+      return fromOklch(a + (b - a) * t, neutral ? C : Math.max(0.06, C * (0.55 + 0.45 * t)), H);
+    });
+  }
+  // k shades of one hue centred on its base color (lighter to slightly darker; dimmer to slightly brighter in dark mode)
+  function spread(hex, k) {
+    if (k <= 1) return [hex];
+    const [L, C, H] = toOklch(hex);
+    return Array.from({ length: k }, (_, i) => { const t = i / (k - 1); const d = T.dark ? -0.16 + 0.24 * t : 0.16 - 0.24 * t;
+      return fromOklch(Math.max(0.22, Math.min(0.92, L + d)), C, H); });
+  }
+  function mix(a, b, t) { const A = hexToRgb(a), B = hexToRgb(b); return "#" + A.map((v, i) => Math.round((v + (B[i] - v) * t) * 255).toString(16).padStart(2, "0")).join(""); }
+
+  // ------------------------------------------------------------------ names
+  const FRAC = { "0.25": "¼", "0.5": "½", "0.75": "¾" };
+  const frac = (v) => FRAC[v] || v;
+  const OPT = {
+    M: { fam: "muon", name: "Muon" }, PD: { fam: "pd", name: "PD", defAlpha: "0.25" }, S: { fam: "soap", name: "SOAP-Muon" },
+    SPD: { fam: "spd", name: "S∘PD" }, TS: { fam: "ts", name: "TS" }, SPDgrad: { fam: "spd", name: "S∘PD", suffix: " (gradient 2nd moment)" },
+    SleftPD: { fam: "spd", name: "S_left∘PD" }, SrightPD: { fam: "spd", name: "S_right∘PD" }, STS: { fam: "ts", name: "STS", suffix: " (SOAP on TS)" },
+  };
+  // run/arm names such as PD_a0.5_b4M_lr0.02_mom0.9_s260925_ada[_a183][:step]
+  function parseArm(name) {
+    const [arm, step] = String(name).split(":");
+    const toks = arm.split("_");
+    const info = { raw: String(name), arm, opt: toks[0], step: step != null && step !== "" ? +step : null, batch: "1M", alpha: null, beta2: null,
+      lr: null, mom: null, nesterov: false, t2x: false, noclip: false, track: false, extra: [], seed: null, hw: null, anneal: null };
+    let phase = 0;
+    for (const t of toks.slice(1)) {
+      let m;
+      if ((m = t.match(/^s(\d{6})$/))) { info.seed = m[1]; phase = 1; continue; }
+      if (phase === 1) { info.hw = t; phase = 2; continue; }
+      if (phase === 2 && (m = t.match(/^a(\d+)$/))) { info.anneal = +m[1]; continue; }
+      if ((m = t.match(/^a([\d.]+)$/))) { info.alpha = m[1]; continue; }
+      if ((m = t.match(/^b([\d.]+)gn$/))) { info.beta2 = m[1]; continue; }
+      if ((m = t.match(/^b(\d+M)$/))) { info.batch = m[1]; continue; }
+      if ((m = t.match(/^lr([\d.]+)$/))) { info.lr = m[1]; continue; }
+      if ((m = t.match(/^mom([\d.]+)$/))) { info.mom = m[1]; continue; }
+      if (t === "nesterov") { info.nesterov = true; continue; }
+      if (t === "T2x") { info.t2x = true; continue; }
+      if (t === "noclip") { info.noclip = true; continue; }
+      if (t === "track") { info.track = true; continue; }
+      info.extra.push(t);
+    }
+    info.fam = (OPT[info.opt] || {}).fam || "other";
+    return info;
+  }
+  function optName(i) {
+    const o = OPT[i.opt] || { name: i.opt };
+    const suffix = o.suffix || "";
+    if (i.opt === "TS" || i.opt === "STS") return ((i.alpha || i.beta2) ? `${o.name} ${frac(i.alpha || "?")}/${frac(i.beta2 || "?")}` : o.name) + suffix;
+    const a = i.alpha || o.defAlpha;
+    return (a ? `${o.name} α${frac(a)}` : o.name) + suffix;
+  }
+  const FIELDS = [
+    ["batch", (i) => `${i.batch}`],
+    ["t2x", (i) => (i.t2x ? "2× duration" : "")],
+    ["lr", (i) => (i.lr ? `lr ${i.lr}` : "")],
+    ["mom", (i) => `β ${i.mom || "0.95"}`],
+    ["nesterov", (i) => (i.nesterov ? "Nesterov" : "")],
+    ["noclip", (i) => (i.noclip ? "no clipping" : "")],
+    ["track", (i) => (i.track ? "track run" : "")],
+    ["extra", (i) => i.extra.join(" ")],
+    ["seed", (i) => (i.seed ? `seed ${i.seed}` : "")],
+    ["hw", (i) => i.hw || ""],
+    ["anneal", (i) => (i.anneal != null ? `from step ${i.anneal}` : "")],
+    ["step", (i) => (i.step != null ? `@${i.step}` : "")],
+  ];
+  // Compact labels: the optimizer name plus only the fields that differ between the runs of one panel.
+  function armLabels(names, keep) {
+    const infos = names.map(parseArm);
+    const base = infos.map(optName);
+    const NOISE = ["seed", "hw"];
+    const varies = ([k, f]) => {
+      if ((keep || []).includes(k)) return true;
+      const by = {};
+      infos.forEach((i, j) => { (by[base[j]] = by[base[j]] || new Set()).add(f(i)); });
+      return Object.values(by).some((set) => set.size > 1);
+    };
+    let fields = FIELDS.filter((fd) => !NOISE.includes(fd[0]) && varies(fd));
+    const make = (fs) => infos.map((i, j) => [base[j]].concat(fs.map(([, f]) => f(i)).filter(Boolean)).join(" · "));
+    let labels = make(fields);
+    if (new Set(labels).size < labels.length) { fields = fields.concat(FIELDS.filter((fd) => NOISE.includes(fd[0]) && varies(fd))); labels = make(fields); }
+    const count = {}; labels.forEach((l) => { count[l] = (count[l] || 0) + 1; });
+    labels = labels.map((l, k) => (count[l] > 1 ? `${l} (${infos[k].raw})` : l));
+    const shown = new Set(fields.map((f) => f[0]));
+    const shared = infos.length ? FIELDS.filter(([k, f]) => !shown.has(k) && !NOISE.includes(k) && !["extra", "step", "anneal"].includes(k) && new Set(infos.map(f)).size === 1)
+      .map(([, f]) => f(infos[0])).filter(Boolean) : [];
+    return { labels, infos, shared };
+  }
+  function fullArmLabel(name) {
+    const i = parseArm(name);
+    return [optName(i), i.batch, i.t2x ? "2× duration" : "", i.lr ? `lr ${i.lr}` : "", i.mom ? `β ${i.mom}` : "", i.nesterov ? "Nesterov" : "",
+      i.noclip ? "no clipping" : "", i.track ? "track run" : "", i.extra.join(" "), i.seed && i.seed !== "260925" ? `seed ${i.seed}` : "",
+      i.anneal != null ? `from step ${i.anneal}` : "", i.step != null ? `@${i.step}` : ""].filter(Boolean).join(" · ");
+  }
+  const RUNNAME = { M: "Muon", PD: "PD α¼", S: "SOAP-Muon", SPD: "S∘PD" };
+  const shortKey = (k) => { const [arm, step] = k.split(":"); return `${RUNNAME[arm.split("_")[0]] || arm} @${step}`; };
+  const label = (r) => LABELS[r] || r;
+  const stateName = (k) => { const m = String(k).match(/^(M|PD|S|SPD)(\d+M)$/); return m ? `${{ M: "Muon", PD: "PD", S: "SOAP-Muon", SPD: "S∘PD" }[m[1]]} ${m[2]}` : k; };
+
+  // ------------------------------------------------------------------ small helpers
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const fmt = (x, d) => (x === null || x === undefined || !isFinite(x) ? "–" : Number(x).toFixed(d));
+  const fin = (v) => typeof v === "number" && isFinite(v);
+  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  const names = (kind) => [1, 2, 3, 4, 5, 6, 7, 8].map((d) => `block${String(d).padStart(2, "0")}.${kind}`);
+  function median(arrays) {
+    return arrays[0].map((_, i) => {
+      const v = arrays.map((a) => a[i]).filter((x) => x !== null && isFinite(x)).sort((a, b) => a - b);
+      return v.length ? v[Math.floor((v.length - 1) / 2)] : null;
+    });
+  }
+  function pick(entry, kind, field) {
+    if (state.depth === "median") return median(names(kind).filter((n) => entry[n]).map((n) => entry[n][field]));
+    const e = entry[`block${String(state.depth).padStart(2, "0")}.${kind}`];
+    return e ? e[field] : [];
+  }
+  function scalar(entry, kind, field) {
+    if (state.depth === "median") {
+      const v = names(kind).filter((n) => entry[n]).map((n) => entry[n][field]).filter((x) => x !== null && x !== undefined).sort((a, b) => a - b);
+      return v.length ? v[Math.floor((v.length - 1) / 2)] : null;
+    }
+    const e = entry[`block${String(state.depth).padStart(2, "0")}.${kind}`];
+    return e ? e[field] : null;
+  }
+  const stepsOf = (run) => Object.keys((D.marg || {})[run] || {}).map(Number).sort((a, b) => a - b);
+  const gapSteps = () => [...new Set(Object.values(D.gap || {}).flatMap((s) => Object.keys(s).map(Number)))].sort((a, b) => a - b);
+  const depthText = () => (state.depth === "median" ? "median over the 8 layers" : `layer ${state.depth}`);
+  const narrow = () => window.matchMedia("(max-width: 640px)").matches;
+  const wrapAt = (s, n) => { const words = String(s).split(" "); const out = []; let cur = "";
+    words.forEach((w) => { if ((cur + " " + w).trim().length > n && cur) { out.push(cur); cur = w; } else cur = (cur + " " + w).trim(); }); if (cur) out.push(cur); return out.join("<br>"); };
+  const wrapLabel = (s, n) => { if (!narrow()) return s; const words = String(s).split(" "); const out = []; let cur = "";
+    words.forEach((w) => { if ((cur + " " + w).trim().length > n && cur) { out.push(cur); cur = w; } else cur = (cur + " " + w).trim(); }); if (cur) out.push(cur); return out.join("<br>"); };
+
+  // hover text: series name, then x and y with their meaning
+  function hov(title, xl, yl, xf, yf, more) {
+    const xs = xf === "" ? "%{x}" : `%{x:${xf || ".4~g"}}`;
+    return `<b>${esc(title)}</b><br>${esc(xl)}: ${xs}<br>${esc(yl)}: %{y:${yf || ".4~g"}}${more || ""}<extra></extra>`;
+  }
+
+  // ------------------------------------------------------------------ traces
+  function line(o) {
+    const mode = o.mode || "lines+markers";
+    return {
+      type: "scatter", mode, x: o.x, y: o.y, name: o.name,
+      line: { color: o.color, width: o.width != null ? o.width : 2.5, dash: o.dash || "solid" },
+      marker: { size: o.size != null ? o.size : 8, symbol: o.symbol || "circle", color: o.color,
+        line: { color: o.ring === false ? o.color : T.surface, width: o.ring === false ? 2 : 1.5 } },
+      connectgaps: false, hovertemplate: o.hover, meta: o.meta || {}, legendgroup: o.group, showlegend: o.legend !== false,
+      visible: o.visible != null ? o.visible : true, customdata: o.customdata, text: o.text, error_y: o.error_y,
+    };
+  }
+  function bar(o) {
+    return {
+      type: "bar", x: o.x, y: o.y, name: o.name, orientation: o.orientation,
+      marker: { color: o.color, line: o.gap ? { color: T.surface, width: 1.5 } : { width: 0 }, pattern: o.pattern },
+      hovertemplate: o.hover, meta: o.meta || {}, legendgroup: o.group, showlegend: o.legend !== false,
+      visible: o.visible != null ? o.visible : true, customdata: o.customdata, text: o.text, textposition: o.textposition,
+      textfont: { size: 13.5, color: T.ink2, family: FONT }, cliponaxis: false, error_y: o.error_y,
+    };
+  }
+  const HATCH = (n, fg) => ({ shape: Array.isArray(n) ? n : "/", fillmode: "overlay", fgcolor: fg || T.surface, size: 7, solidity: 0.28 });
+  // diverging scale: blue (below the midpoint) - neutral gray - red (above), theme-aware
+  const divScale = () => [[0, T.div.neg], [0.25, T.div.negSoft], [0.5, T.div.mid], [0.75, T.div.posSoft], [1, T.div.pos]];
+  function heat(o) {
+    return { type: "heatmap", z: o.z, x: o.x, y: o.y, text: o.text, hovertemplate: o.hover, hoverongaps: false, name: o.name || "",
+      colorscale: o.colorscale || divScale(), zmin: o.zmin, zmax: o.zmax, xgap: o.gap != null ? o.gap : 2, ygap: o.gap != null ? o.gap : 2,
+      showscale: true, colorbar: Object.assign({ title: { text: o.cbTitle || "", side: "top", font: { size: 14, color: T.ink2, family: FONT } },
+        tickvals: o.cbTicks, ticktext: o.cbText, tickfont: { size: 13, color: T.muted, family: FONT }, thickness: 14, len: 0.92,
+        outlinewidth: 0, ticks: "outside", ticklen: 4, tickcolor: T.axis, bgcolor: "rgba(0,0,0,0)" },
+        narrow() ? { orientation: "h", x: 0.5, xanchor: "center", y: 1.02, yanchor: "bottom", len: 0.95, thickness: 12 } : {}) };
+  }
+  // shared axis range over several panels (log axes in log10 units, as Plotly expects)
+  function rangeOf(values, log, pad) {
+    const v = values.filter((x) => fin(x) && (!log || x > 0)).map((x) => (log ? Math.log10(x) : x));
+    if (!v.length) return undefined;
+    const lo = Math.min(...v), hi = Math.max(...v), d = (hi - lo) || 1, q = pad != null ? pad : 0.06;
+    return [lo - q * d, hi + q * d];
+  }
+
+  // ------------------------------------------------------------------ layout
+  // long axis titles wrap on phones instead of running off the chart
+  function wrapTitle(t) {
+    if (!narrow() || !t || t.length <= 30) return t || "";
+    const mid = Math.floor(t.length / 2);
+    let cut = -1;
+    for (let d = 0; d < mid; d++) { if (t[mid + d] === " ") { cut = mid + d; break; } if (t[mid - d] === " ") { cut = mid - d; break; } }
+    return cut > 0 ? `${t.slice(0, cut)}<br>${t.slice(cut + 1)}` : t;
+  }
+  function axis(a) {
+    a = a || {};
+    const log = !!(a.log || a.type === "log");
+    const ax = {
+      title: { text: wrapTitle(a.title), font: { size: 16, color: T.ink2, family: FONT }, standoff: 12 },
+      type: a.type || (log ? "log" : "linear"), automargin: true,
+      showline: true, linecolor: T.axis, linewidth: 1, mirror: false,
+      ticks: "outside", ticklen: 6, tickwidth: 1, tickcolor: T.axis,
+      tickfont: { size: narrow() ? 13 : 14, color: T.muted, family: FONT },
+      gridcolor: T.grid, gridwidth: 1, zeroline: false, exponentformat: "power", separatethousands: true,
+    };
+    ["range", "tickformat", "dtick", "tick0", "tickvals", "ticktext", "hoverformat", "categoryorder", "categoryarray", "tickangle", "nticks", "rangemode"]
+      .forEach((k) => { if (a[k] !== undefined) ax[k] = a[k]; });
+    if (a.reversed) ax.autorange = "reversed";
+    if (a.zeroline) { ax.zeroline = true; ax.zerolinecolor = T.axis; ax.zerolinewidth = 1; }
+    if (a.grid === false) ax.showgrid = false;
+    return ax;
+  }
+  const isLogAx = (a) => !!(a && (a.log || a.type === "log"));
+  // extent of the plotted values along one axis, in axis units (log10 for log axes)
+  function axisExtent(traces, letter, a) {
+    const log = isLogAx(a);
+    if (a && Array.isArray(a.range)) return [Math.min(a.range[0], a.range[1]), Math.max(a.range[0], a.range[1])];
+    let lo = Infinity, hi = -Infinity;
+    traces.forEach((t) => {
+      if (t.visible === false) return;
+      const v = t[letter];
+      if (!Array.isArray(v)) return;
+      v.forEach((x) => { if (typeof x !== "number" || !isFinite(x) || (log && x <= 0)) return; const u = log ? Math.log10(x) : x; lo = Math.min(lo, u); hi = Math.max(hi, u); });
+    });
+    return hi >= lo ? [lo, hi] : null;
+  }
+  // Log axes: explicit 1-2-5 (or powers-of-ten) ticks, all labels at the full tick size
+  // (Plotly's own log ticks draw the 2 and 5 labels in a much smaller font).
+  const supNum = (e) => (e < 0 ? `−${-e}` : String(e));
+  function logTickText(v, pow) {
+    if (!pow) { const x = +v.toPrecision(3); return x >= 1000 ? x.toLocaleString("en-US") : String(x); }
+    const e = Math.floor(Math.log10(v) + 1e-9), m = +(v / 10 ** e).toPrecision(2);
+    return m === 1 ? `10<sup>${supNum(e)}</sup>` : `${m}×10<sup>${supNum(e)}</sup>`;
+  }
+  function logTicks(lo, hi) {
+    const span = hi - lo;
+    const mant = span < 0.7 ? [1, 1.5, 2, 3, 4, 5, 6, 7, 8, 9] : span <= 3.4 ? [1, 2, 5] : span <= 8 ? [1] : null;
+    if (!mant) return null;
+    const vals = [];
+    for (let e = Math.floor(lo) - 1; e <= Math.ceil(hi) + 1; e++) mant.forEach((m) => vals.push(+(m * 10 ** e).toPrecision(6)));
+    const inside = vals.filter((v) => Math.log10(v) >= lo - 0.2 && Math.log10(v) <= hi + 0.2);
+    const pow = inside.some((v) => v < 1e-3 || v >= 1e5);
+    return { vals, text: vals.map((v) => logTickText(v, pow)) };
+  }
+  // Where a reference line's label can sit without covering data: "right"/"left" (horizontal lines),
+  // "top"/"bottom"/"topleft" (vertical lines), or "legend" when every spot is taken (always for bar charts).
+  function placeRef(r, s, traces) {
+    if (!r.label) return "none";
+    if (r.place) return r.place;
+    if (traces.some((t) => t.type === "bar")) return "legend";
+    const xa = s.x || {}, ya = s.y || {};
+    const vis = traces.filter((t) => t.visible !== "legendonly" && t.visible !== false);
+    const xe = axisExtent(vis, "x", xa), ye = axisExtent(vis, "y", ya);
+    const numericX = vis.every((t) => (t.x || []).every((v) => typeof v === "number" || v == null));
+    const pts = [];
+    vis.forEach((t) => {
+      const xs = t.x || [], ys = t.y || [];
+      const P = [];
+      for (let i = 0; i < ys.length; i++) {
+        const y = ys[i]; if (typeof y !== "number" || !isFinite(y) || (isLogAx(ya) && y <= 0)) continue;
+        let x = xs[i];
+        if (numericX && xe) { if (typeof x !== "number" || (isLogAx(xa) && x <= 0)) continue; x = ((isLogAx(xa) ? Math.log10(x) : x) - xe[0]) / ((xe[1] - xe[0]) || 1); }
+        else x = ys.length > 1 ? i / (ys.length - 1) : 0.5;
+        P.push([x, ((isLogAx(ya) ? Math.log10(y) : y) - ye[0]) / ((ye[1] - ye[0]) || 1)]);
+      }
+      P.forEach((p, i) => { pts.push(p); if (i && (t.mode || "lines").includes("lines")) for (let k = 1; k < 6; k++) pts.push([P[i - 1][0] + ((p[0] - P[i - 1][0]) * k) / 6, P[i - 1][1] + ((p[1] - P[i - 1][1]) * k) / 6]); });
+    });
+    if (!ye || (r.axis === "x" && !xe)) return "legend";
+    const clear = (x0, x1, y0, y1) => !pts.some(([x, y]) => x >= x0 && x <= x1 && y >= y0 && y <= y1);
+    const w = Math.min(0.62, 0.075 + 0.0155 * r.label.length); // label width as a share of the plot, roughly
+    if (r.axis === "y") {
+      const v = ((isLogAx(ya) ? Math.log10(r.value) : r.value) - ye[0]) / ((ye[1] - ye[0]) || 1);
+      if (clear(1 - w, 1.05, v - 0.015, v + 0.1)) return "right";
+      if (clear(-0.05, w, v - 0.015, v + 0.1)) return "left";
+      if (clear(1 - w, 1.05, v - 0.1, v + 0.015)) return "right-below";
+      if (clear(-0.05, w, v - 0.1, v + 0.015)) return "left-below";
+      return "legend";
+    }
+    const v = ((isLogAx(xa) ? Math.log10(r.value) : r.value) - xe[0]) / ((xe[1] - xe[0]) || 1);
+    if (clear(v, v + w, 0.86, 1.1)) return "top";
+    if (clear(v, v + w, -0.1, 0.14)) return "bottom";
+    if (clear(v - w, v, 0.86, 1.1)) return "topleft";
+    return "legend";
+  }
+  function addRef(L, r, s) {
+    const color = r.color || T.ref, dash = r.dash || "dot";
+    const place = r.place || "right";
+    const font = { size: 13.5, color: T.ink2, family: FONT };
+    if (r.axis === "y") {
+      L.shapes.push({ type: "line", xref: "paper", x0: 0, x1: 1, yref: "y", y0: r.value, y1: r.value, layer: "below", line: { color, width: 2, dash } });
+      if (!r.label || place === "legend" || place === "none") return;
+      const left = place.startsWith("left"), below = place.endsWith("below");
+      L.annotations.push({ xref: "paper", x: left ? 0.005 : 0.995, xanchor: left ? "left" : "right", yref: "y", y: isLogAx(s.y) ? Math.log10(r.value) : r.value,
+        yanchor: below ? "top" : "bottom", yshift: below ? -3 : 3, text: esc(r.label), showarrow: false, font, bgcolor: T.surfaceA, borderpad: 2 });
+    } else {
+      L.shapes.push({ type: "line", yref: "paper", y0: 0, y1: 1, xref: "x", x0: r.value, x1: r.value, layer: "below", line: { color, width: 2, dash } });
+      if (!r.label || place === "legend" || place === "none") return;
+      const bottom = place === "bottom", tl = place === "topleft";
+      L.annotations.push({ yref: "paper", y: bottom ? 0.01 : 0.99, yanchor: bottom ? "bottom" : "top", xref: "x", x: isLogAx(s.x) ? Math.log10(r.value) : r.value,
+        xanchor: tl ? "right" : "left", xshift: tl ? -5 : 5, text: esc(r.label), showarrow: false, font, bgcolor: T.surfaceA, borderpad: 2 });
+    }
+  }
+  function makeLayout(s, traces) {
+    const L = {
+      paper_bgcolor: T.surface, plot_bgcolor: T.surface,
+      font: { family: FONT, size: 14, color: T.ink },
+      margin: Object.assign({ l: 12, r: 26, t: 16, b: 12, pad: 0 }, s.margin || {}),
+      xaxis: axis(s.x), yaxis: axis(s.y), showlegend: false,
+      hovermode: s.hovermode || "closest", hoverdistance: 40, spikedistance: -1,
+      hoverlabel: { bgcolor: T.surface, bordercolor: T.line, font: { family: FONT, size: 14, color: T.ink }, align: "left", namelength: -1 },
+      dragmode: narrow() ? false : "zoom",
+      barmode: s.barmode || "group", bargap: s.bargap != null ? s.bargap : 0.28, bargroupgap: s.bargroupgap != null ? s.bargroupgap : 0.06,
+      barcornerradius: 3, shapes: [], annotations: [],
+    };
+    [["x", "xaxis", s.x], ["y", "yaxis", s.y]].forEach(([letter, key, a]) => {
+      if (!isLogAx(a) || (a && (a.dtick !== undefined || a.tickvals !== undefined))) return;
+      const ext = axisExtent(traces || [], letter, a);
+      const ticks = ext && logTicks(ext[0], ext[1]);
+      if (!ticks) return;
+      L[key].tickmode = "array"; L[key].tickvals = ticks.vals; L[key].ticktext = ticks.text;
+    });
+    (s.refs || []).forEach((r) => addRef(L, r, s));
+    (s.shapes || []).forEach((sh) => L.shapes.push(sh));
+    if (s.square) { L.yaxis.scaleanchor = "x"; L.yaxis.scaleratio = 1; L.xaxis.constrain = "domain"; L.yaxis.constrain = "domain"; }
+    if (s.layout) Object.keys(s.layout).forEach((k) => { L[k] = s.layout[k]; });
+    return L;
+  }
+  const CONFIG = { responsive: true, displayModeBar: false, scrollZoom: false, doubleClick: "reset", showTips: false };
+
+  // ------------------------------------------------------------------ legend swatches
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const DASHARRAY = { solid: "", dot: "2 3.2", dash: "7 4", longdash: "11 4", dashdot: "7 3 2 3", longdashdot: "11 3 2 3" };
+  function svgEl(tag, attrs) { const e = document.createElementNS(SVGNS, tag); Object.keys(attrs).forEach((k) => e.setAttribute(k, attrs[k])); return e; }
+  function markerShape(sym, cx, cy, r, color, open) {
+    const base = String(sym || "circle").replace("-open", "");
+    const fill = open ? T.surface : color;
+    const common = { fill, stroke: open ? color : T.surface, "stroke-width": open ? 2 : 1.2 };
+    if (base === "square") return svgEl("rect", Object.assign({ x: cx - r * 0.9, y: cy - r * 0.9, width: r * 1.8, height: r * 1.8 }, common));
+    if (base === "diamond") return svgEl("polygon", Object.assign({ points: `${cx},${cy - r * 1.2} ${cx + r * 1.2},${cy} ${cx},${cy + r * 1.2} ${cx - r * 1.2},${cy}` }, common));
+    if (base === "triangle-up") return svgEl("polygon", Object.assign({ points: `${cx},${cy - r * 1.15} ${cx + r * 1.15},${cy + r * 0.85} ${cx - r * 1.15},${cy + r * 0.85}` }, common));
+    if (base === "triangle-down") return svgEl("polygon", Object.assign({ points: `${cx},${cy + r * 1.15} ${cx + r * 1.15},${cy - r * 0.85} ${cx - r * 1.15},${cy - r * 0.85}` }, common));
+    return svgEl("circle", Object.assign({ cx, cy, r }, common));
+  }
+  function swatch(sw) {
+    const svg = svgEl("svg", { width: 32, height: 18, viewBox: "0 0 32 18", "aria-hidden": "true" });
+    if (sw.kind === "bar") {
+      svg.appendChild(svgEl("rect", { x: 5, y: 3, width: 22, height: 12, rx: 3, fill: sw.color }));
+      if (sw.pattern) [[5, 13], [11, 7], [17, 1]].forEach(([x0]) => svg.appendChild(svgEl("line", { x1: x0 + 4, y1: 15, x2: x0 + 12, y2: 3, stroke: T.surface, "stroke-width": 1.6 })));
+      return svg;
+    }
+    if (sw.kind !== "marker") {
+      const ln = svgEl("line", { x1: 1, y1: 9, x2: 31, y2: 9, stroke: sw.color, "stroke-width": Math.min(sw.width || 2.5, 4.5), "stroke-linecap": "round" });
+      if (sw.dash && DASHARRAY[sw.dash]) ln.setAttribute("stroke-dasharray", DASHARRAY[sw.dash]);
+      svg.appendChild(ln);
+    }
+    if (sw.symbol) svg.appendChild(markerShape(sw.symbol, 16, 9, 4.3, sw.color, sw.open));
+    return svg;
+  }
+  function swatchOf(t) {
+    if (t.type === "bar") {
+      const c = Array.isArray(t.marker.color) ? t.marker.color[0] : t.marker.color;
+      const p = t.marker.pattern && t.marker.pattern.shape; return { kind: "bar", color: c, pattern: Array.isArray(p) ? p.some(Boolean) : !!p };
+    }
+    const mode = t.mode || "lines";
+    let sym = mode.includes("markers") ? t.marker.symbol : null;
+    if (Array.isArray(sym)) sym = sym[0];
+    return { kind: mode.includes("lines") ? "line" : "marker", color: t.line.color, dash: t.line.dash, width: t.line.width, symbol: sym, open: String(sym || "").endsWith("-open") };
+  }
+
+  // ------------------------------------------------------------------ panels (lazy: plotted when near the viewport)
+  let PANELS = [];
+  let IO = null;
+  const host = () => document.getElementById("panels");
+  function purgeAll() {
+    PANELS.forEach((p) => { if (p.plotted && window.Plotly) { try { Plotly.purge(p.plotEl); } catch (e) { /* ignore */ } } });
+    PANELS = [];
+    if (IO) { IO.disconnect(); IO = null; }
+    if ("IntersectionObserver" in window) {
+      IO = new IntersectionObserver((entries) => entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const p = PANELS.find((q) => q.plotEl === en.target);
+        if (p) { IO.unobserve(en.target); draw(p); }
+      }), { rootMargin: "700px 0px 700px 0px" });
+    }
+  }
+  function draw(p) {
+    if (p.plotted || !window.Plotly) return;
+    p.plotted = true;
+    try {
+      Plotly.newPlot(p.plotEl, p.traces, makeLayout(p.spec, p.traces), CONFIG).catch((err) => { console.error(err); p.plotEl.textContent = "This chart could not be drawn."; });
+    } catch (err) { console.error(err); p.plotEl.textContent = "This chart could not be drawn."; }
+  }
+  window.__atlasDrawAll = () => PANELS.forEach(draw);
+  const hasData = (t) => {
+    if (t.type === "heatmap") return Array.isArray(t.z) && t.z.some((row) => Array.isArray(row) && row.some((x) => fin(x)));
+    const catY = Array.isArray(t.y) && t.y.some((v) => typeof v === "string");
+    const v = (t.type === "bar" && t.orientation === "h") || catY ? t.x : t.y;
+    return Array.isArray(v) && v.some((x) => fin(x));
+  };
+  function emptyBox(text) { return el("div", "empty", text); }
+  function panel(s) {
+    const card = el("section", "card" + (s.wide ? " wide" : ""));
+    card.appendChild(el("h3", null, s.title));
+    if (s.sub) card.appendChild(el("p", "sub", s.sub));
+    const lg = el("div", "legend");
+    card.appendChild(lg);
+    const plotEl = el("div", "plot");
+    if (s.height) plotEl.style.setProperty("--h", `${s.height}px`);
+    if (s.mheight) plotEl.style.setProperty("--hm", `${s.mheight}px`);
+    plotEl.setAttribute("role", "img");
+    plotEl.setAttribute("aria-label", s.title);
+    card.appendChild(plotEl);
+    if (s.look) { const p = el("p", "look"); p.appendChild(el("b", null, "What to look for: ")); p.appendChild(document.createTextNode(s.look)); card.appendChild(p); }
+    host().appendChild(card);
+    const traces = (s.traces || []).filter(Boolean);
+    if (!traces.some(hasData)) { plotEl.replaceWith(emptyBox(s.emptyText || "No data yet for this panel.")); lg.hidden = true; return null; }
+    (s.refs || []).forEach((r) => { r.place = placeRef(r, s, traces); });
+    const refItems = (s.refs || []).filter((r) => r.place === "legend")
+      .map((r) => ({ static: true, label: r.label, sw: { kind: "line", color: T.ref, dash: r.dash || "dot", width: 2 } }));
+    const p = { card, plotEl, legendEl: lg, spec: s, traces, plotted: false, items: [], refItems };
+    buildLegend(p);
+    PANELS.push(p);
+    if (IO) IO.observe(plotEl); else draw(p);
+    return p;
+  }
+  function autoItems(traces) {
+    const items = [], byGroup = new Map();
+    traces.forEach((t, i) => {
+      if (t.showlegend === false) return;
+      const key = t.legendgroup || `#${i}`;
+      if (byGroup.has(key)) { byGroup.get(key).idx.push(i); return; }
+      const it = { label: t.name, sw: swatchOf(t), idx: [i] };
+      byGroup.set(key, it); items.push(it);
+    });
+    traces.forEach((t, i) => { if (t.showlegend === false && t.legendgroup && byGroup.has(t.legendgroup) && !byGroup.get(t.legendgroup).idx.includes(i)) byGroup.get(t.legendgroup).idx.push(i); });
+    return items;
+  }
+  function buildLegend(p) {
+    const s = p.spec, box = p.legendEl;
+    let groups;
+    if (s.legend === false) groups = [];
+    else if (s.legend && s.legend.groups) {
+      groups = s.legend.groups.map((g) => ({ title: g.title, items: g.items.map((it) => Object.assign({}, it, {
+        idx: it.static ? [] : p.traces.map((t, i) => (it.match(t, i) ? i : -1)).filter((i) => i >= 0) })) }));
+    } else groups = [{ title: s.legendTitle, items: autoItems(p.traces) }];
+    if (s.legendExtra) groups.push(s.legendExtra);
+    if (p.refItems && p.refItems.length) groups.push({ title: "Reference", items: p.refItems });
+    let interactive = 0;
+    groups.forEach((g) => {
+      const row = el("div", "lg-row");
+      if (g.title) row.appendChild(el("span", "lg-title", g.title));
+      g.items.forEach((it) => {
+        if (!it.static && (!it.idx || !it.idx.length)) return;
+        const b = el(it.static ? "span" : "button", "lg-item");
+        b.appendChild(swatch(it.sw));
+        b.appendChild(el("span", "lg-text", it.label));
+        if (!it.static) {
+          b.type = "button";
+          interactive++;
+          it.off = it.idx.every((i) => p.traces[i].visible === "legendonly");
+          b.addEventListener("click", () => { it.off = !it.off; applyVisibility(p); });
+          p.items.push({ it, b });
+        }
+        row.appendChild(b);
+      });
+      if (row.childNodes.length) box.appendChild(row);
+    });
+    if (!box.childNodes.length) { box.hidden = true; return; }
+    applyVisibility(p, true);
+  }
+  function applyVisibility(p, initial) {
+    const hidden = new Set();
+    p.items.forEach(({ it }) => { if (it.off) it.idx.forEach((i) => hidden.add(i)); });
+    const managed = new Set(); p.items.forEach(({ it }) => it.idx.forEach((i) => managed.add(i)));
+    p.traces.forEach((t, i) => { if (managed.has(i)) t.visible = hidden.has(i) ? "legendonly" : true; });
+    p.items.forEach(({ it, b }) => b.setAttribute("aria-pressed", String(!it.off)));
+    if (!initial && p.plotted) Plotly.restyle(p.plotEl, { visible: p.traces.map((t) => t.visible) });
+  }
+  function note(text, warn) { const n = el("div", "note" + (warn ? " warn" : ""), text); host().appendChild(n); return n; }
+  let SECTIONS = [];
+  function section(title, text, stats, short) {
+    const s = el("div", "section");
+    s.id = `section-${SECTIONS.length + 1}`;
+    SECTIONS.push({ el: s, label: short || title });
+    s.appendChild(el("h3", null, title));
+    if (text) s.appendChild(el("p", null, text));
+    if (stats && stats.length) {
+      const row = el("div", "stats");
+      stats.forEach(([k, v]) => { const c = el("div", "stat"); c.appendChild(el("span", null, k)); c.appendChild(el("strong", null, v)); row.appendChild(c); });
+      s.appendChild(row);
+    }
+    host().appendChild(s);
+  }
+  // cols: [{label, left}], rows: arrays of cells; a cell is a string or {text, raw, strong}
+  function table(o) {
+    const card = el("section", "card wide");
+    card.appendChild(el("h3", null, o.title));
+    if (o.sub) card.appendChild(el("p", "sub", o.sub));
+    const wrap = el("div", "tablewrap");
+    const t = el("table", o.cols.length <= 3 ? "data narrowtable" : "data");
+    const thead = el("thead"), tr = el("tr");
+    o.cols.forEach((c) => { const th = el("th", null, c.label || c); th.scope = "col"; tr.appendChild(th); });
+    thead.appendChild(tr); t.appendChild(thead);
+    const tb = el("tbody");
+    o.rows.forEach((r) => {
+      const row = el("tr");
+      r.forEach((c) => {
+        const td = el("td");
+        if (c && typeof c === "object") {
+          td.appendChild(document.createTextNode(c.text));
+          if (c.raw && c.raw !== c.text) td.appendChild(el("span", "raw", c.raw));
+          if (c.strong) td.className = "num-strong";
+        } else td.textContent = c == null ? "–" : String(c);
+        row.appendChild(td);
+      });
+      tb.appendChild(row);
+    });
+    t.appendChild(tb); wrap.appendChild(t); card.appendChild(wrap);
+    if (o.look) { const p = el("p", "look"); p.appendChild(el("b", null, "What to look for: ")); p.appendChild(document.createTextNode(o.look)); card.appendChild(p); }
+    host().appendChild(card);
+  }
+  const armCell = (k) => ({ text: fullArmLabel(k), raw: k });
+
+  // ------------------------------------------------------------------ views
+  const R = {};
+
+  R.principles = () => {
+    const wrap = el("div", "principles");
+    PRINCIPLES.forEach(([head, body], i) => {
+      let text = body, refs = [];
+      const m = body.match(/\(([^()]*)\)\s*$/);
+      if (m) {
+        const parts = m[1].split(";").map((x) => x.trim()).filter(Boolean).map((pt) => {
+          const c = pt.indexOf(":"); const lab = (c >= 0 ? pt.slice(0, c) : pt).trim(); const detail = c >= 0 ? pt.slice(c + 1).trim() : "";
+          // chart names that live inside a view (the original cites "(Interventions)" for the Edge view's chart)
+          const ALIAS = { Interventions: ["Edge & co-adaptation", "interventions"] };
+          if (ALIAS[lab] && !VIEWS.some((x) => x.label === lab)) { const w = VIEWS.find((x) => x.label === ALIAS[lab][0]); return w ? { v: w, detail: detail || ALIAS[lab][1] } : null; }
+          const v = VIEWS.find((x) => x.label === lab); return v ? { v, detail } : null;
+        });
+        if (parts.length && parts.every(Boolean)) { text = body.slice(0, m.index).trim(); refs = parts; }
+      }
+      const card = el("article", "pr");
+      card.appendChild(el("div", "pr-num", String(i + 1)));
+      const col = el("div");
+      col.appendChild(el("h3", null, head));
+      col.appendChild(el("p", null, text));
+      if (refs.length) {
+        const links = el("div", "pr-links");
+        links.appendChild(el("span", null, "Evidence"));
+        refs.forEach(({ v, detail }) => {
+          const b = el("button", "pr-link", detail ? `${v.label}: ${detail}` : v.label);
+          b.type = "button";
+          b.addEventListener("click", () => setView(v.id, true));
+          links.appendChild(b);
+        });
+        col.appendChild(links);
+      }
+      card.appendChild(col);
+      wrap.appendChild(card);
+    });
+    host().appendChild(wrap);
+  };
+
+  R.curv = () => {
+    const runs = state.runs.filter((r) => D.marg && D.marg[r]);
+    if (!runs.length) return note("No curvature marginals for the selected optimizers yet.");
+    runs.forEach((run) => {
+      const steps = stepsOf(run), cols = ramp(fam(RUNFAM[run] || "other"), steps.length);
+      const traces = steps.map((s, i) => {
+        const e = D.marg[run][s], first = e[names(state.kind)[0]];
+        if (!first) return null;
+        return line({ x: first.ri, y: pick(e, state.kind, "r"), name: String(s), color: cols[i], size: 6,
+          hover: hov(`${label(run)}, step ${s}`, "eigenvector rank", "exact ÷ K-FAC", ".4~g", ".3~g") });
+      });
+      panel({ title: `${label(run)}: exact ÷ K-FAC input curvature`, sub: `${state.kind} matrices · ${depthText()} · one line per training step`,
+        traces, legendTitle: "Training step", x: { title: "eigenvector of C, by rank (log scale)", log: true },
+        y: { title: "exact ÷ K-FAC curvature (log scale)", log: true, range: [-1.4, 1.4] },
+        refs: [{ axis: "y", value: 1, label: "1 = K-FAC exact" }],
+        look: "On the dotted line K-FAC predicts the exact curvature along that eigenvector of C; above it the exact curvature is larger than K-FAC's prediction, below it smaller. Compare the light (early) and dark (late) lines." });
+    });
+  };
+
+  R.train = () => {
+    const runs = state.runs.filter((r) => D.marg && D.marg[r]);
+    if (!runs.length) return note("No curvature marginals for the selected optimizers yet.");
+    const specs = [
+      ["md", "Mean input direction: exact ÷ K-FAC curvature", "exact ÷ K-FAC (log scale)", true, [{ axis: "y", value: 1, label: "1 = K-FAC exact" }],
+        "The mean input direction's exact curvature relative to K-FAC's prediction; 1 means K-FAC is exact along it."],
+      ["sc", "Mean input direction: share of tr C", "share of tr C", false, [], "How much of the input second moment's trace lies along the mean input direction."],
+      ["a", "Exact input factor: weight on within-sequence C (a)", "a (log scale)", true, [], "The fitted weight on the within-sequence part of C; compare with b to see which part of C the exact factor emphasizes."],
+      ["b", "Exact input factor: weight on sequence-mean C (b)", "b (log scale)", true, [], "The fitted weight on the sequence-mean part of C."],
+      ["ns", "Gradient noise scale", "noise scale (sequences, log scale)", true, [{ axis: "y", value: 2048, label: "our batch (2048 seq.)" }],
+        "The gradient noise scale along training, with our 2048-sequence batch marked for comparison."],
+    ];
+    specs.forEach(([field, title, ytitle, logy, refs, look], k) => {
+      const traces = runs.map((run) => {
+        const steps = stepsOf(run);
+        return line({ x: steps, y: steps.map((s) => scalar(D.marg[run][s], state.kind, field)), name: label(run), color: fam(RUNFAM[run]),
+          hover: hov(label(run), "step", ytitle.replace(/ \(.*\)$/, ""), "d", ".4~g") });
+      });
+      panel({ title, sub: `${state.kind} matrices · ${depthText()}`, traces, x: { title: "training step (log scale)", log: true },
+        y: { title: ytitle, log: logy }, refs, look, wide: k === specs.length - 1 && specs.length % 2 === 1 });
+    });
+  };
+
+  R.gap = () => {
+    const step = state.step, kind = state.kind;
+    const runs = state.runs.filter((r) => D.gap && D.gap[r] && D.gap[r][step] && D.gap[r][step][kind]);
+    if (!runs.length) return note(`No gap-map data at step ${step} for the selected optimizers yet.`);
+    const X = { title: "exact curvature of the direction (log scale)", log: true };
+    const specs = [
+      ["dec", "Where the Newton decrement lives", "share of the Newton decrement (log scale)", true, [],
+        "Each curvature bin's share of the Newton decrement: the bins with the largest share are where a second-order step would gain most."],
+      ["bstar", "Critical batch b* per curvature bin", "critical batch b* (sequences, log scale)", true, [{ axis: "y", value: 2048, label: "our batch (2048 seq.)" }],
+        "Bins below the dotted line are reachable in one step at our 2048-sequence batch; bins above it are noise-limited."],
+      ["eff", "Effective step relative to the noise-aware Newton step", "effective ÷ ideal step (shape only, log scale)", true, [],
+        "Shape only: scaled so the decrement-weighted median bin is 1. Per the caveat above, this panel overstates how under-stepped the flat directions are."],
+      ["over", "Overshoot along the actual update", "overshoot h·D² / (2·(−g·D)) (log scale)", true, [],
+        "The overshoot of the actual update in each curvature bin; the caveat above applies here too."],
+      ["cos", "Momentum-gradient alignment", "cos(momentum, gradient)", false, [{ axis: "y", value: 0, label: "0 (below: oscillation)" }],
+        "Negative alignment between momentum and gradient in a bin means the update oscillates there."],
+    ];
+    specs.forEach(([field, title, ytitle, logy, refs, look]) => {
+      const traces = runs.map((run) => {
+        const g = D.gap[run][step][kind];
+        return line({ x: g.x, y: g[field], name: label(run), color: fam(RUNFAM[run]), size: 6,
+          hover: hov(label(run), "curvature", ytitle.replace(/ \(.*\)$/, ""), ".3~g", ".4~g") });
+      });
+      panel({ title, sub: `${kind} matrices · step ${step} · all layers pooled`, traces, x: X, y: { title: ytitle, log: logy }, refs, look });
+    });
+    const B = ["512", "2048", "8192", "32768", "131072"];
+    const traces = runs.map((run) => line({ x: B.map((b) => (Number(b) * 512) / 1e6), y: B.map((b) => (D.gap[run][step][kind].reach || {})[b]),
+      name: label(run), color: fam(RUNFAM[run]), customdata: B.map(Number),
+      hover: `<b>${esc(label(run))}</b><br>batch: %{x:.3~g}M tokens (%{customdata:,} seq.)<br>reachable share: %{y:.3f}<extra></extra>` }));
+    panel({ title: "Share of the decrement reachable in one step, by batch size", sub: `${kind} matrices · step ${step}`, traces,
+      x: { title: "batch (million tokens, log scale)", log: true }, y: { title: "reachable share of the decrement", range: [-0.03, 1.05] },
+      refs: [{ axis: "x", value: (2048 * 512) / 1e6, label: "our batch (2048 seq.)", at: 0.12 }],
+      look: "How much of the Newton decrement a single step can reach as the batch grows; read our batch off the dotted line." });
+  };
+
+  R.spec = () => {
+    const runs = state.runs.filter((r) => D.marg && D.marg[r]);
+    if (!runs.length) return note("No spectra for the selected optimizers yet.");
+    runs.forEach((run) => {
+      const steps = stepsOf(run), cols = ramp(fam(RUNFAM[run] || "other"), steps.length);
+      [["ri", "lc", "Input factor C", "C (input) eigenvalue ÷ mean"], ["rb", "lb", "Output factor B", "B (output) eigenvalue ÷ mean"]].forEach(([xf, yf, what, yl]) => {
+        const traces = steps.map((s, i) => {
+          const e = D.marg[run][s], first = e[names(state.kind)[0]];
+          if (!first) return null;
+          return line({ x: first[xf], y: pick(e, state.kind, yf), name: String(s), color: cols[i], size: 6,
+            hover: hov(`${label(run)}, step ${s}`, "rank", yl, "d", ".4~g") });
+        });
+        panel({ title: `${label(run)}: ${what} spectrum`, sub: `${state.kind} matrices · ${depthText()}${xf === "rb" ? " · model-sampled labels" : ""}`, traces,
+          legendTitle: "Training step", x: { title: "eigenvalue rank (log scale)", log: true }, y: { title: `${yl} (log scale)`, log: true },
+          refs: [{ axis: "y", value: 1, label: "1 = the mean eigenvalue", at: 0.02, below: true }],
+          look: xf === "ri" ? "A steeper fall-off means a more anisotropic input second moment; compare light (early) and dark (late) steps."
+            : "The same for the output factor B, with labels sampled from the model." });
+      });
+    });
+  };
+
+  R.gn = () => {
+    const keys = Object.keys(D.gn || {});
+    const st = (D.gn || {})[state.gnstate];
+    if (!keys.length || !st) return note("No exact-GN data yet.");
+    const INPUTS = { g1M: "Fresh gradient, 1M tokens", g4M: "Fresh gradient, 4M tokens", momentum: "Next momentum M′ = 0.95 M + g" };
+    Object.entries(st).forEach(([source, e]) => {
+      const sc = e.scores || {}, best = e.best || {}, g = best.gnall || best.gn, ref = sc[g];
+      if (!fin(ref)) { note(`${INPUTS[source] || source}: no exact-GN reference score.`); return; }
+      const rows = [["gd", "gradient"], ["gd@muon_norms", "gradient, Muon's per-matrix norms"], ["muon", "Muon"],
+        ["muon_p0.25", "Muon, spectrum ^ 1/4"], ["muon_p0.5", "Muon, spectrum ^ 1/2"], ["pd_a0.25", "PD α 1/4"], ["pd_a0.5", "PD α 1/2"],
+        ["pd_a0.75", "PD α 3/4"], ["pd_a1", "PD α 1"], ["pd_a0.5_p0.25", "PD α 1/2, spectrum ^ 1/4"], ["pd_a0.5_p0.5", "PD α 1/2, spectrum ^ 1/2"],
+        ["two_sided", "two-sided α 1/4 β 1/4"], [best.kfac, "K-FAC"], [best.ekfac, "EKFAC, exact diagonal"],
+        [`muon@${g}_norms`, "Muon's shape, GN's per-matrix norms"], [`${g}@muon_norms`, "GN's shape, Muon's per-matrix norms"],
+        [best.gnpow, "GN, fractional power"], [g, "exact GN"]].filter(([k]) => k && sc[k] !== undefined);
+      const famOf = (k) => (k.startsWith("gd") ? "gd" : k === `muon@${g}_norms` ? "muon" : (k.startsWith("gn") ? "gn"
+        : k.startsWith("muon") ? "muon" : k.startsWith("pd") ? "pd" : k === "two_sided" ? "ts" : (k.startsWith("kfac") || k.startsWith("ekfac")) ? "kfac" : "other"));
+      const hatched = (k) => k.includes("@");
+      const ordered = rows.slice().reverse(); // first row at the top
+      const tr = bar({ orientation: "h", y: ordered.map((r) => wrapLabel(r[1], 22)), x: ordered.map(([k]) => sc[k] / ref),
+        color: ordered.map(([k]) => fam(famOf(k))), pattern: HATCH(ordered.map(([k]) => (hatched(k) ? "/" : ""))),
+        customdata: ordered.map(([k]) => [sc[k], k]), text: ordered.map(([k]) => (sc[k] / ref).toFixed(2)), textposition: "outside",
+        hover: "<b>%{y}</b><br>%{x:.3f} of the exact-GN decrease<br>decrease: %{customdata[0]:.4g} ×10⁻³<br>key: %{customdata[1]}<extra></extra>" });
+      const famItems = [["gd", "gradient"], ["muon", "Muon"], ["pd", "PD"], ["ts", "two-sided"], ["kfac", "K-FAC, EKFAC"], ["gn", "exact GN"]]
+        .filter(([f]) => rows.some(([k]) => famOf(k) === f))
+        .map(([f, lab]) => ({ static: true, label: lab, sw: { kind: "bar", color: fam(f) } }));
+      famItems.push({ static: true, label: "hatched: shape of one direction, per-matrix norms of the other", sw: { kind: "bar", color: T.muted, pattern: true } });
+      panel({ title: `${INPUTS[source] || source}: share of the exact-GN decrease`, sub: `${state.gnstate} · exact GN decrease ${ref.toFixed(2)} ×10⁻³ (${g})`,
+        traces: [tr], legend: { groups: [{ title: "Bar color", items: famItems }] }, height: Math.max(460, 34 * rows.length + 110), mheight: Math.max(460, 40 * rows.length + 90),
+        x: { title: "share of the exact-GN one-step decrease", range: [0, Math.max(1.05, ...ordered.map(([k]) => sc[k] / ref)) * (narrow() ? 1.3 : 1.15)] }, y: { type: "category" }, bargap: 0.3,
+        refs: [{ axis: "x", value: 1, label: "1 = exact GN", at: 1.0 }], margin: { r: 44 },
+        look: "Each direction's held-out one-step decrease at its own best scale, as a share of the exact GN direction's. Hatched bars swap within-matrix shape and per-matrix step allocation between two directions." });
+      const kinds = KINDS.filter((k) => sc[`pd_a0.5+gn[${k}]`] !== undefined);
+      if (!kinds.length) return;
+      const t1 = bar({ x: kinds, y: kinds.map((k) => sc[`pd_a0.5+gn[${k}]`] / sc["pd_a0.5"]), name: "PD α½ with this kind's shape from GN (÷ PD α½)", color: fam("pd"),
+        hover: "<b>PD α½, kind %{x} from GN</b><br>%{y:.3f} × PD α½<extra></extra>" });
+      const t2 = bar({ x: kinds, y: kinds.map((k) => sc[`gn+pd_a0.5[${k}]`] / ref), name: "GN with this kind's shape from PD α½ (÷ GN)", color: fam("gn"),
+        hover: "<b>GN, kind %{x} from PD α½</b><br>%{y:.3f} × exact GN<extra></extra>" });
+      panel({ title: `${INPUTS[source] || source}: which matrix kind carries the within-matrix gap?`,
+        sub: "PD α½ with one kind given GN's shape (at PD's norms), and GN with one kind given PD α½'s shape", traces: [t1, t2],
+        x: { title: "matrix kind", type: "category" }, y: { title: "ratio to the unswapped direction" }, refs: [{ axis: "y", value: 1, label: "1 = no change" }],
+        look: "Bars far from 1 mark the kinds whose within-matrix shape carries the gap between PD α½ and GN." });
+    });
+  };
+
+  R.lags = () => {
+    const classes = ["top 0.1%", "0.1-1%", "1-10%", "10-50%", "50-100%"];
+    const runs = ["M", "PD"].filter((r) => state.runs.includes(r) && D.lags && D.lags[`${r}:${state.kind}`]);
+    if (!runs.length) return note("Dense-lag data exist for Muon and PD only; select one of them above.");
+    runs.forEach((run) => {
+      const e = D.lags[`${run}:${state.kind}`];
+      const cols = ramp(fam(RUNFAM[run]), classes.length).reverse(); // stiffest class = strongest color
+      const traces = classes.filter((c) => e[c]).map((c, i) => line({ x: e.lags, y: e[c], name: c, color: cols[classes.indexOf(c)], width: 2.5, size: 10, ring: false,
+        symbol: e.lags.map((l) => (l % 2 ? "circle" : "circle-open")), hover: hov(`${label(run)}: ${c} of K-FAC curvature`, "lag (steps)", "correlation", "d", ".3f") }));
+      panel({ title: `${label(run)}: persistence of the true gradient`, sub: `${state.kind} matrices · gradient at step 501 vs the gradient lag steps later, by K-FAC curvature class`,
+        traces, legendTitle: "Curvature class (stiffest first)",
+        legendExtra: { title: "Markers", items: [{ static: true, label: "odd lag", sw: { kind: "marker", color: T.ink2, symbol: "circle" } },
+          { static: true, label: "even lag", sw: { kind: "marker", color: T.ink2, symbol: "circle-open", open: true } }] },
+        x: { title: "lag (steps, log scale)", log: true, tickvals: e.lags, ticktext: e.lags.map(String) }, y: { title: "correlation", range: [-1, 1] },
+        refs: [{ axis: "y", value: 0, label: "0 = uncorrelated" }],
+        look: "A zig-zag between filled (odd) and open (even) markers is a period-2 oscillation; compare the stiff classes (dark) with the flat ones (light)." });
+    });
+  };
+
+  R.coupling = () => {
+    const S = D.split || {}, keys = Object.keys(S);
+    if (!keys.length) return note("No coupling data yet.");
+    const x = keys.map(shortKey);
+    const parts = ["stiff (top 1%)", "middle (next 9%)", "flat (rest)"];
+    const cols = [T.ink, mix(T.ink, T.surface, 0.42), mix(T.ink, T.surface, 0.66)];
+    const traces = parts.map((p, i) => bar({ x, y: keys.map((k) => (S[k].ratio_parts || [])[i]), name: p, color: cols[i],
+      hover: `<b>%{x}: ${esc(p)} part</b><br>exact ÷ diagonal: %{y:.3~g}<extra></extra>` }));
+    traces.push(bar({ x, y: keys.map((k) => S[k].ratio_whole), name: "whole update", color: fam("gd"), pattern: HATCH("/"),
+      hover: "<b>%{x}: whole update</b><br>exact ÷ diagonal: %{y:.3~g}<extra></extra>" }));
+    panel({ title: "Exact ÷ frame-diagonal GN curvature of each part of the update", sub: "one group per optimizer state; parts by Kronecker-pair curvature",
+      traces, wide: true, height: 560, legendTitle: "Part of the update", x: { title: "optimizer and step", type: "category" },
+      y: { title: "exact ÷ frame-diagonal curvature (log scale)", log: true }, refs: [{ axis: "y", value: 1, label: "1 = pairs act independently" }],
+      look: "Bars far above 1 mean the Kronecker pairs do not act independently along the actual update, which is why the frame-diagonal picture failed." });
+    table({ title: "One step along the actual update", sub: "quadratic GN model on held-out sequences; loss change ×10⁻³ (negative = decrease)",
+      cols: ["state", "taken", "best single scale", "separate scales", "scale the diagonal model predicts", "corr s–m / s–f / m–f"],
+      rows: keys.map((k) => {
+        const e = S[k], c = e.corr || [[0, null, null], [null, 0, null]];
+        return [{ text: shortKey(k), raw: k }, fmt(e.taken * 1e3, 2), `${fmt(e.best_single * 1e3, 2)} at ${fmt(e.best_single_scale, 2)}`,
+          e.best_separate == null ? "–" : `${fmt(e.best_separate * 1e3, 2)} at ${(e.best_separate_scales || []).map((v) => fmt(v, 2)).join(" / ")}`,
+          fmt(e.diag_best_scale, 1), [c[0][1], c[0][2], c[1][2]].map((v) => fmt(v, 2)).join(" / ")];
+      }),
+      look: "How much better the quadratic model does with the best single scale or separate scales per part than with the step actually taken." });
+  };
+
+  R.blocks = () => {
+    const B = (D.blockgn || {}).blocks || {}, states = Object.keys(B);
+    const fams = [["muon", "Muon"], ["pd_a0.5", "PD α½"], ["matrix", "GN per matrix"], ["gs_forward_layer", "GN Gauss-Seidel within layers"],
+      ["gs_reverse_all", "GN Gauss-Seidel, reverse order"], ["gs", "GN Gauss-Seidel"], ["layer", "GN per layer"], ["kind", "GN per kind"], ["full", "full GN"]];
+    if (states.length) {
+      const stateColor = (st) => { const m = st.match(/^(M|PD|S|SPD)(\d+M)$/); if (!m) return T.muted; const base = fam(RUNFAM[m[1]]);
+        return m[2] === "1M" ? base : shade(base, T.dark ? 0.16 : -0.16); };
+      const traces = states.map((st) => {
+        const f = fams.filter(([k]) => B[st][k] !== undefined);
+        return bar({ x: f.map((q) => wrapAt(q[1], 14)), y: f.map(([k]) => B[st][k] / B[st].full), name: stateName(st), color: stateColor(st),
+          customdata: f.map(([k]) => B[st][k]), hover: `<b>${esc(stateName(st))}: %{x}</b><br>%{y:.3f} of full GN<br>decrease: %{customdata:.4g} ×10⁻³<extra></extra>` });
+      });
+      panel({ title: "Block-diagonal GN: share of the full-GN one-step decrease", sub: "fresh 4M-token gradient · cross-fitted on two halves of the held-out sequences",
+        traces, legendTitle: "State", x: { title: "direction", type: "category", tickangle: 0 }, y: { title: "share of the full-GN decrease" },
+        refs: [{ axis: "y", value: 1, label: "1 = full GN" }], height: 560, wide: true,
+        look: "How close each block-diagonal restriction of exact GN (and Muon, PD α½) comes to the full GN decrease." });
+    } else note("No block-GN data yet.");
+    const S = (D.blockgn || {}).staged || {}, sstates = Object.keys(S);
+    if (sstates.length) {
+      const sf = [["muon", "Muon"], ["gsmuon", "staged Muon"], ["pd_a0.5", "PD α½"], ["gspd", "staged PD α½"]];
+      const order = ["Muon 1M @500, fresh 4M gradient", "Muon 1M @500, g + 0.25 M", "Muon 1M @500, g + 0.5 M", "Muon 1M @500, momentum (c = 0.95)"];
+      const muonStates = sstates.filter((s) => s.startsWith("Muon")).sort((a, b) => (order.indexOf(a) + 99 * (order.indexOf(a) < 0)) - (order.indexOf(b) + 99 * (order.indexOf(b) < 0)));
+      const other = sstates.filter((s) => !s.startsWith("Muon"));
+      const mcols = ramp(fam("muon"), Math.max(1, muonStates.length));
+      const traces = muonStates.concat(other).map((st) => {
+        const f = sf.filter(([k]) => S[st][k] !== undefined);
+        const color = muonStates.includes(st) ? mcols[muonStates.indexOf(st)] : st.startsWith("PD") ? fam("pd") : T.muted;
+        return bar({ x: f.map((q) => q[1]), y: f.map(([k]) => S[st][k]), name: st, color, hover: `<b>${esc(st)}</b><br>%{x}: %{y:.4g} ×10⁻³<extra></extra>` });
+      });
+      panel({ title: "Staged (Gauss-Seidel) Muon and PD: one-step decrease", sub: "each matrix sees the gradient after the earlier matrices stepped · cross-fitted, ×10⁻³ · Muon-state inputs from light (fresh gradient) to dark (momentum)",
+        traces, legendTitle: "Input", x: { title: "direction", type: "category" },
+        y: { title: "one-step decrease (×10⁻³)", rangemode: "tozero" }, height: 560, wide: true,
+        look: "Compare each staged direction with its unstaged version, for inputs from a fresh gradient to the optimizer's momentum." });
+    }
+    const EL = D.eoslin || {}, lrows = Object.entries(EL);
+    if (lrows.length) table({ title: "Edge of each optimizer's linearized dynamics",
+      sub: "A weight perturbation follows heavy ball with preconditioner J = df/dM (the run's own map at the next momentum); stable iff LR μ(J G) < 2(1 + β) (Nesterov: 2(1 + β)/(1 + 2β)). Ratio 1 = at the edge.",
+      cols: ["state", "map", "β", "LR", "top μ (J G)", "LR μ_max", "bound", "ratio"],
+      rows: lrows.map(([k, e]) => [armCell(k), `${e.map}${e.nesterov ? ", Nesterov" : ""}`, String(e.beta), fmt(e.lr, 4),
+        (e.mu_top || []).slice(0, 3).map((m) => fmt(m[0], 0)).join(", "), fmt(e.invariant, 2), fmt(e.threshold, 2), { text: fmt(e.ratio, 2), strong: e.ratio >= 1 }]),
+      look: "Ratios near or above 1 put the run's linearized dynamics at or past the heavy-ball stability edge (bold: at or above 1)." });
+    const E = D.eos || {}, rows = Object.entries(E);
+    if (rows.length) table({ title: "Edge of stability in each optimizer's coordinates", sub: "LR × s × λ_max(R G R); Muon: R = I; PD: R = C^-α, s its norm-matching factor",
+      cols: ["state", "α", "β", "LR", "s", "λ_max", "LR·s·λ_max"],
+      rows: rows.map(([k, e]) => [armCell(k), String(e.alpha), String(e.beta || 0), fmt(e.lr, 4), fmt(e.s, 3), fmt((e.top_ritz || [])[0], 2), fmt(e.invariant, 3)]),
+      look: "The raw invariant LR·s·λ_max for each state, comparable within one optimizer's coordinates." });
+  };
+
+  R.momentum = () => {
+    const MP = D.midpoint || {}, mkeys = Object.keys(MP).filter((k) => !k.endsWith(":50"));
+    if (mkeys.length) {
+      section("Loss along each actual step", "Held-out loss at W_t + c (W_{t+1} − W_t), relative to c = 0, all parameters interpolated. Step 50 is left out, as in the original Atlas.", null, "Loss along each step");
+      const groups = {};
+      mkeys.forEach((k) => { const i = parseArm(k); const g = `${i.batch}|${i.step}`; (groups[g] = groups[g] || []).push(k); });
+      const gkeys = Object.keys(groups).sort((a, b) => { const [ba, sa] = a.split("|"), [bb, sb] = b.split("|"); return parseInt(ba, 10) - parseInt(bb, 10) || sa - sb; });
+      const cs = ["-0.5", "0.0", "0.25", "0.5", "0.75", "1.0", "1.5"];
+      gkeys.forEach((g, gi) => {
+        const ks = groups[g], [batch, step] = g.split("|");
+        const { labels, infos } = armLabels(ks);
+        const DASHES = { "0.95": "solid", "0.9": "dash", "0.81": "dot" };
+        const traces = ks.map((k, j) => {
+          const e = MP[k], i = infos[j];
+          const dash = i.nesterov ? "dashdot" : i.track ? "longdash" : (DASHES[i.mom || "0.95"] || "dot");
+          return line({ x: cs.map(Number), y: cs.map((c) => (e.losses && fin(e.losses[c]) && fin(e.losses["0.0"]) ? e.losses[c] - e.losses["0.0"] : null)),
+            name: labels[j], color: fam(i.fam), dash, hover: hov(labels[j], "c", "loss − loss(W_t)", ".2f", ".5f", `<br><span style="font-size:12px">${esc(k)}</span>`) });
+        });
+        const odd = gkeys.length % 2 === 1 && gi === gkeys.length - 1;
+        panel({ title: `${batch}-token batch, step ${step}`, sub: "one line per run; dashed styles mark momentum variants", traces, wide: odd,
+          x: { title: "c (fraction of the step)", zeroline: true }, y: { title: "loss − loss(W_t)" },
+          refs: [{ axis: "x", value: 0.5, label: "c = ½" }, { axis: "x", value: 1, label: "c = 1: the step taken" }, { axis: "y", value: 0, label: "", dash: "dot" }],
+          look: "A minimum near c = ½ means the step crosses the valley and lands on the far side (overshoot ≈ 2×)." });
+      });
+    }
+    const TR = D.transport || {}, states = Object.keys(TR);
+    if (!states.length) { note("No transport results yet."); return; }
+    states.forEach((st) => {
+      const e = TR[st], info = parseArm(st), base = fam(info.fam), sname = `${optName(info)} state @${info.step}`;
+      section(`${sname}: exact replay`, `Run ${st}. The last ${e.replay} training batches re-evaluated at the current weights give the stale-free momentum M* (β = ${e.beta}).`,
+        [["|M − M*| ÷ |M|", fmt(e.norm_ratio, 3)], ["cos(M, M*)", fmt(e.cos_M_Mstar, 3)], ["replay check: loss", fmt((e.check || [])[0], 5)], ["logged loss", fmt((e.check || [])[1], 5)]], sname);
+      const cols = KINDS.concat(["total"]);
+      const PRED = { G: "exact GN", H: "true Hessian", G_block: "per-matrix GN blocks", kfac: "K-FAC" };
+      table({ title: `${sname}: staleness and its curvature prediction`, sub: "prediction of β(M − M*) by curvature transport; each cell is cos / best multiplier s*; Q is the tracked displacement sum",
+        cols: ["transport"].concat(cols), rows: Object.entries(e.totals || {}).map(([name, g]) => [{ text: `−${name} Q`, raw: PRED[name] || name }]
+          .concat(cols.map((k) => (g[k] ? `${fmt(g[k].cos, 2)} / ${fmt(g[k].s_star, 2)}` : "–")))),
+        look: "Cosines near 1 mean that transport map predicts the staleness well; s* is the multiplier that fits it best." });
+      const panelsSpec = [["snr", null, "Signal-to-noise of one 1M-token batch", "signal ÷ noise (log scale)", true, [{ axis: "y", value: 1, label: "SNR = 1" }],
+        "Where along the curvature axis a single 1M-token batch has more signal than noise."],
+      ["gain_M", "gain_Mstar", "Momentum's gain on the current gradient", "gain (1 = a fresh average)", false, [{ axis: "y", value: 1, label: "1 = a fresh average" }],
+        "Solid: saved momentum M; dotted: stale-free M*. Values below 1 mean the momentum carries less of the current gradient than a fresh average would."],
+      ["stale", null, "Stale fraction of the next momentum", "|β(M − M*)|² ÷ |βM|²", false, [],
+        "The share of the next momentum's energy that is stale, per curvature bin."],
+      ["cos_G", "cos_H", "Transport cosine", "cos(β(M − M*), transport)", false, [{ axis: "y", value: 0, label: "", dash: "dot" }],
+        "Solid: cos with −G Q (exact GN); dotted: with −H Q (true Hessian). High values mean curvature transport explains the staleness in that bin."]];
+      panelsSpec.forEach(([field, second, title, ytitle, logy, refs, look]) => {
+        const traces = [];
+        const kindList = KINDS.filter((k) => e.kinds && e.kinds[k]);
+        const others = kindList.filter((k) => k !== state.kind);
+        const faint = mix(T.muted, T.surface, 0.45);
+        others.forEach((k, j) => {
+          traces.push(line({ x: e.centers, y: e.kinds[k][field], name: "other kinds", color: faint, width: 1.4, mode: "lines", group: "others", legend: j === 0,
+            hover: hov(`kind ${k}${second ? " (solid)" : ""}`, "GN diagonal h", ytitle, ".3~g", ".3~g") }));
+          if (second) traces.push(line({ x: e.centers, y: e.kinds[k][second], name: "other kinds", color: faint, width: 1.2, mode: "lines", dash: "dot", group: "others", legend: false,
+            hover: hov(`kind ${k} (dotted)`, "GN diagonal h", ytitle, ".3~g", ".3~g") }));
+        });
+        if (e.kinds && e.kinds[state.kind]) {
+          traces.push(line({ x: e.centers, y: e.kinds[state.kind][field], name: `kind ${state.kind} (selected)`, color: base, width: 2.8, size: 7, group: "sel",
+            hover: hov(`kind ${state.kind}${second ? ", solid" : ""}`, "GN diagonal h", ytitle, ".3~g", ".3~g") }));
+          if (second) traces.push(line({ x: e.centers, y: e.kinds[state.kind][second], name: `kind ${state.kind} (selected)`, color: base, width: 2.4, size: 6, dash: "dot", group: "sel", legend: false,
+            hover: hov(`kind ${state.kind}, dotted`, "GN diagonal h", ytitle, ".3~g", ".3~g") }));
+        }
+        if (e.kinds && e.kinds.all) {
+          traces.push(line({ x: e.centers, y: e.kinds.all[field], name: "all kinds pooled", color: T.ink, width: 3.2, size: 7, group: "all",
+            hover: hov(`all kinds${second ? ", solid" : ""}`, "GN diagonal h", ytitle, ".3~g", ".3~g") }));
+          if (second) traces.push(line({ x: e.centers, y: e.kinds.all[second], name: "all kinds pooled", color: T.ink, width: 2.6, size: 6, dash: "dot", group: "all", legend: false,
+            hover: hov("all kinds, dotted", "GN diagonal h", ytitle, ".3~g", ".3~g") }));
+        }
+        const styleKey = second ? { title: "Line style", items: [{ static: true, label: field === "gain_M" ? "saved momentum M" : "−G Q (exact GN)", sw: { kind: "line", color: T.ink2 } },
+          { static: true, label: field === "gain_M" ? "stale-free M*" : "−H Q (true Hessian)", sw: { kind: "line", color: T.ink2, dash: "dot" } }] } : null;
+        panel({ title: `${sname}: ${title.charAt(0).toLowerCase()}${title.slice(1)}`, sub: "Kronecker-frame pairs binned by their exact GN diagonal h · change the highlighted kind with the Matrix kind control",
+          traces, legendTitle: "Lines", legendExtra: styleKey, x: { title: "exact per-pair GN diagonal h (log scale)", log: true }, y: { title: logy ? ytitle : ytitle, log: logy }, refs, look });
+      });
+      if (e.ritz && Array.isArray(e.ritz.values)) {
+        const x = e.ritz.values.map((v, i) => `${i + 1} (λ ${v.toFixed(1)})`);
+        const traces = [
+          bar({ x, y: e.ritz.gbar, name: "expected fresh momentum ḡ Σβᵏ (±1 sd of one batch)", color: fam("gd"),
+            error_y: { type: "data", array: e.ritz.noise_sd, visible: true, color: T.ink2, thickness: 1.4, width: 3 }, hover: "<b>ḡ Σβᵏ</b><br>%{x}: %{y:.4g}<extra></extra>" }),
+          bar({ x, y: e.ritz.Mstar, name: "stale-free momentum M*", color: shade(base, T.dark ? -0.14 : 0.16), hover: "<b>M*</b><br>%{x}: %{y:.4g}<extra></extra>" }),
+          bar({ x, y: e.ritz.M, name: "saved momentum M", color: shade(base, T.dark ? 0.12 : -0.12), hover: "<b>M</b><br>%{x}: %{y:.4g}<extra></extra>" })];
+        panel({ title: `${sname}: projections on the top exact GN eigenvectors`, sub: "grey: expected fresh momentum from the replay mean, with ±1 sd of one batch's projection", traces, wide: true, height: 520,
+          x: { title: "eigenvector (eigenvalue λ)", type: "category", tickangle: -30 }, y: { title: "projection" }, refs: [{ axis: "y", value: 0, label: "", dash: "dot" }],
+          look: "Where the saved momentum M departs from the stale-free M* and from the fresh expectation, along the stiffest directions." });
+      }
+      const O = e.one_step || {}, inputs = Object.keys(O);
+      if (inputs.length) {
+        const fams5 = [["gd", "GD", fam("gd")], ["muon", "Muon", fam("muon")], ["pd_a0.25", "PD α¼", shade(fam("pd"), T.dark ? -0.12 : 0.14)], ["pd_a0.5", "PD α½", fam("pd")], ["gn", "damped GN (Krylov 48)", fam("gn")]];
+        const traces = fams5.map(([k, n, c]) => bar({ x: inputs, y: inputs.map((i) => (O[i] || {})[k]), name: n, color: c, hover: `<b>${esc(n)}</b><br>input %{x}: %{y:.4g} ×10⁻³<extra></extra>` }));
+        panel({ title: `${sname}: one step from each input`, sub: "held-out, cross-fitted, ×10⁻³ · g1M: fresh 1M gradient; M′: next momentum; M*′: stale-free next momentum; M′ + X Q: transported; replay_mean: current gradient over the replayed batches",
+          traces, wide: true, height: 540, x: { title: "input", type: "category" }, y: { title: "one-step decrease (×10⁻³)", rangemode: "tozero" },
+          look: "Compare the saved next momentum M′ with its stale-free and transported versions under each map." });
+      }
+    });
+  };
+
+  R.gap2gn = () => {
+    const G = D.gap2gn || {};
+    const A = G.anneal || {}, anames = Object.keys(A);
+    let drew = false;
+    if (anames.length) {
+      drew = true;
+      section("LR anneals from kept states", "Held-out loss during 16-step LR anneals (the run's own optimizer, LR taken to ~0): the loss the LR maintains.", null, "LR anneals");
+      const byBatch = {};
+      anames.forEach((n) => { const i = parseArm(n); (byBatch[i.batch] = byBatch[i.batch] || []).push(n); });
+      Object.keys(byBatch).sort((a, b) => parseInt(a, 10) - parseInt(b, 10)).forEach((batch) => {
+        const ns = byBatch[batch];
+        const { labels, infos } = armLabels(ns, ["anneal"]);
+        const series = {};
+        ns.forEach((n, j) => { const i = infos[j]; const key = `${i.opt}|${i.alpha}|${i.mom}|${i.lr}`; (series[key] = series[key] || []).push(j); });
+        const traces = [];
+        Object.values(series).forEach((js) => {
+          js.sort((a, b) => infos[a].anneal - infos[b].anneal);
+          const i0 = infos[js[0]];
+          const cols = js.length > 1 ? ramp(fam(i0.fam), js.length) : [fam(i0.fam)];
+          js.forEach((j, r) => {
+            const n = ns[j], loss = A[n].loss || [];
+            traces.push(line({ x: loss.map((_, k) => k), y: loss.map((v) => v - loss[0]), name: labels[j], color: cols[r], size: 6,
+              dash: (infos[j].mom || "0.95") === "0.95" && batch !== "1M" ? "dash" : "solid",
+              hover: hov(labels[j], "anneal step k", "loss − loss at k = 0", "d", ".5f", `<br><span style="font-size:12px">${esc(n)}</span>`) }));
+          });
+        });
+        panel({ title: `${batch}-token batch: held-out loss during a 16-step LR anneal`, sub: "k = 0 is the branch point; the drop is the loss the LR maintains (plus ~16 steps of normal progress)",
+          traces, x: { title: "anneal step k" }, y: { title: "held-out loss − loss at k = 0" }, refs: [{ axis: "y", value: 0, label: "" }],
+          look: "Larger drops mean more loss is held up by the learning rate; lighter lines anneal from earlier states, darker from later ones." });
+      });
+    }
+    const Rs = G.rescore || {}, rnames = Object.keys(Rs);
+    if (rnames.length) {
+      drew = true;
+      section("One-step decreases as a share of damped exact GN", "At the oscillating states and after the anneal (valley floor), for the optimizer's momentum and for fresh 4M- and 16M-token gradients; cross-fitted on held-out sequences. Drawn as a dot plot (one row per state and input) because 20 groups of bars do not fit side by side.", null, "Share of damped GN");
+      const maps = [["muon", "Muon", fam("muon"), "circle"], ["pd_a0.25", "PD α¼", shade(fam("pd"), T.dark ? -0.12 : 0.14), "diamond"], ["pd_a0.5", "PD α½", fam("pd"), "square"],
+        ["two_sided", "two-sided", fam("ts"), "triangle-up"], ["kfac", "K-FAC", fam("kfac"), "triangle-down"], ["ekfac", "EKFAC", shade(fam("kfac"), T.dark ? -0.14 : 0.16), "diamond"],
+        ["gd", "GD", fam("gd"), "circle"]];
+      const rows = rnames.map((n) => n.replace(" ", narrow() ? "<br>" : " · "));
+      const traces = maps.filter(([k]) => rnames.some((n) => Rs[n][k] !== undefined)).map(([k, name, c, sym]) => line({ mode: "markers", size: 13, symbol: sym, color: c, name,
+        x: rnames.map((n) => (Rs[n][k] !== undefined && fin(Rs[n].gn) ? Rs[n][k] / Rs[n].gn : null)), y: rows,
+        customdata: rnames.map((n) => [Rs[n][k], Rs[n].gn]),
+        hover: `<b>${esc(name)}</b><br>%{y}<br>%{x:.3f} of damped GN (%{customdata[0]:.4g} vs %{customdata[1]:.4g} ×10⁻³)<extra></extra>` }));
+      panel({ title: "One-step decrease as a share of damped exact GN", sub: "one row per state and input; “a516”, “a199” = after the anneal (valley floor)",
+        traces, wide: true, height: 34 * rows.length + 140, mheight: 46 * rows.length + 150,
+        x: { title: "share of the damped-GN one-step decrease", rangemode: "tozero" }, y: { type: "category", categoryorder: "array", categoryarray: rows.slice().reverse() },
+        refs: [{ axis: "x", value: 1, label: "1 = damped exact GN" }],
+        look: "Markers right of the dotted line beat damped GN's one-step decrease. Compare the oscillating states (…_500, …_183) with the valley floors (…_a516, …_a199), and the momentum input with fresh gradients." });
+      table({ title: "GN's one-step decrease and the stiff part (×10⁻³)", cols: ["state · input", "GN", "PD α½", "Muon", "Newton decrement in the top-16 GN modes"],
+        rows: rnames.map((n) => [n, fmt(Rs[n].gn, 2), fmt(Rs[n]["pd_a0.5"], 2), fmt(Rs[n].muon, 2), fmt(Rs[n].stiff16, 2)]),
+        look: "How much of GN's decrease the 16 stiffest GN modes could account for, at each state." });
+    }
+    const TRN = G.trainer || {}, tnames = Object.keys(TRN), BASE = G.baseline || {};
+    if (tnames.length) {
+      drew = true;
+      section("GN-trainer and Newton-harness runs", "Validation loss of GN-trainer runs (the GN paper's recipe: inner Muon on a frozen linearization, line search), the no-linearization control, and the Newton-harness step rules, against the baselines. Split by starting state (one chart in the original Atlas).", null, "GN-trainer runs");
+      const groupOf = (n) => { const [root, run] = n.split("/"); if (root.startsWith("gntrain")) return "gntrain";
+        const m = (run || "").match(/^(M|PD|S|SPD)(\d+M)_/); if (!m) return root; return m[2] === "1M" ? `${root}:${m[1]}1M` : `${root}:${m[2]}`; };
+      const ORDER = ["gntrain", "newton_ref:M1M", "newton_ref:PD1M", "newton_ref:4M"];
+      const TITLE = { gntrain: "GN trainer from Muon's 1M state at step 100", "newton_ref:M1M": "Newton harness from Muon's 1M state at step 500",
+        "newton_ref:PD1M": "Newton harness from PD's 1M state at step 500", "newton_ref:4M": "Newton harness from the 4M states at step 183" };
+      const groups = {};
+      tnames.forEach((n) => { const g = groupOf(n); (groups[g] = groups[g] || []).push(n); });
+      const gk = Object.keys(groups).sort((a, b) => ((ORDER.indexOf(a) + 1) || 99) - ((ORDER.indexOf(b) + 1) || 99));
+      const DSH = ["solid", "dash", "dot", "dashdot", "longdash", "longdashdot"], SYM = ["circle", "square", "diamond", "triangle-up", "triangle-down"];
+      gk.forEach((g, gi) => {
+        const ns = groups[g];
+        const steps = ns.flatMap((n) => TRN[n].map((r) => r[0]));
+        const lo = Math.min.apply(null, steps) - 5, hi = Math.max.apply(null, steps) + 20;
+        const stateFam = (n) => { const m = (n.split("/")[1] || "").match(/^(M|PD|S|SPD)\d+M_/); return m ? RUNFAM[m[1]] : null; };
+        const byFamily = new Set(ns.map(stateFam).filter(Boolean)).size > 1;
+        const gnish = ns.filter((n) => !/greedymuon|polarcontrol|\/control$/.test(n));
+        const gcols = ramp(fam("gn"), Math.max(2, gnish.length));
+        const traces = ns.map((n, idx) => {
+          const short = n.split("/").slice(1).join("/") || n;
+          let color, dash = "solid", symbol = "circle";
+          if (byFamily) { color = fam(stateFam(n) || "other"); dash = DSH[idx % DSH.length]; symbol = SYM[idx % SYM.length]; }
+          else if (/greedymuon/.test(n)) color = fam("muon");
+          else if (/polarcontrol/.test(n)) { color = fam("muon"); dash = "dash"; symbol = "square"; }
+          else if (/\/control$/.test(n)) { color = T.muted; symbol = "square"; }
+          else { const j = gnish.indexOf(n); color = gcols[gnish.length > 1 ? gcols.length - 1 - (j % gcols.length) : gcols.length - 1]; dash = DSH[j % DSH.length]; symbol = SYM[j % SYM.length]; }
+          return line({ x: TRN[n].map((r) => r[0]), y: TRN[n].map((r) => r[1]), name: short, color, dash, symbol, size: 7,
+            hover: hov(n, "step", "validation loss", "d", ".4f") });
+        });
+        if (g === "gntrain" || /1M$/.test(g)) {
+          Object.entries(BASE).forEach(([bn, rows]) => {
+            const rr = rows.filter((r) => r[0] >= lo && r[0] <= hi);
+            if (rr.length) traces.push(line({ x: rr.map((r) => r[0]), y: rr.map((r) => r[1]), name: `${bn} baseline`, mode: "lines+markers", size: 5,
+              color: bn.startsWith("Muon") ? fam("muon") : fam("pd"), dash: "dot", width: 2, hover: hov(`${bn} baseline`, "step", "validation loss", "d", ".4f") }));
+          });
+        }
+        panel({ title: TITLE[g] || g, sub: g === "gntrain" ? "GN trainer: inner Muon on a frozen linearization with a line search; control: no linearization; dotted: baselines (same data order)"
+          : byFamily ? "colored by the optimizer whose state the run starts from; no 4M baseline in this data" : "greedy / normalized step rules from a kept state; dotted: the 1M baselines where they overlap",
+          traces, wide: gk.length % 2 === 1 && gi === gk.length - 1, x: { title: "step", range: [lo, hi] }, y: { title: "validation loss" },
+          look: byFamily ? "Each line is one run from a 4M state; compare the two starting states." : "Lines below the dotted baseline of the same optimizer beat it at that step." });
+      });
+    }
+    if (!drew) note("No gap-to-GN data yet.");
+  };
+
+  R.edge = () => {
+    const E = D.edge || {}, rows = E.profile || [];
+    const OPTFAM = { "Muon": "muon", "PD": "pd", "SOAP∘Muon": "soap", "S∘PD": "spd", "TS": "ts", "S_left∘PD": "spd", "S_right∘PD": "spd" };
+    const optColor = (o) => { const b = o.replace(" β0.8", ""); const c = fam(OPTFAM[b] || "other");
+      const base = b === "S_left∘PD" ? shade(c, T.dark ? 0.2 : 0.2) : b === "S_right∘PD" ? shade(c, T.dark ? -0.16 : -0.18) : c;
+      return o.includes("β0.8") ? shade(base, T.dark ? -0.14 : 0.16) : base; };
+    const DASH = { "16M": "solid", "4M": "dash", "1M": "dot" }, SYM = { "16M": "circle", "4M": "square", "1M": "triangle-up" };
+    const BATCHES = ["16M", "4M", "1M"];
+    const b08 = (o) => String(o).includes("β0.8");
+    const factorLegend = (traces) => {
+      const opts = [...new Set(traces.map((t) => t.meta.opt))];
+      const batches = BATCHES.filter((b) => traces.some((t) => t.meta.batch === b));
+      return { groups: [
+        { title: "Optimizer", items: opts.map((o) => ({ label: o, sw: { kind: "line", color: optColor(o), symbol: b08(o) ? "circle-open" : null, open: b08(o) }, match: (t) => t.meta.opt === o })) },
+        { title: "Batch", items: batches.map((b) => ({ label: `${b} tokens`, sw: { kind: "line", color: T.ink2, dash: DASH[b], symbol: SYM[b] }, match: (t) => t.meta.batch === b })) }] };
+    };
+    // state tags such as PD16M_46, M1M_900, SPD4M_183, PD16Mb08_9 (β 0.8)
+    const TAGOPT = { M: ["muon", "Muon"], PD: ["pd", "PD"], SPD: ["spd", "S∘PD"], TS: ["ts", "TS"], S: ["soap", "SOAP-Muon"] };
+    const parseTag = (t) => {
+      const m = String(t).match(/^(SPD|PD|TS|M|S)(\d+M)(?:b0?(\d+))?_(\d+)$/);
+      if (!m) return { fam: "other", name: String(t), batch: "", step: 0, beta: null, label: String(t) };
+      const [f, n] = TAGOPT[m[1]], beta = m[3] ? `0.${m[3]}` : null;
+      return { fam: f, name: n, batch: m[2], step: +m[4], beta, label: `${n} ${m[2]} @${m[4]}${beta ? `, β ${beta}` : ""}` };
+    };
+    // decade-bin labels such as "1e-3-1e-2", "<1e-3", ">=10"
+    const SUP = { "-": "⁻", 0: "⁰", 1: "¹", 2: "²", 3: "³", 4: "⁴", 5: "⁵", 6: "⁶", 7: "⁷", 8: "⁸", 9: "⁹" };
+    const num = (x) => { const m = String(x).match(/^1e(-?\d+)$/); return m ? `10${m[1].split("").map((c) => SUP[c] || c).join("")}` : String(x); };
+    const prettyBin = (b) => {
+      let m;
+      if ((m = String(b).match(/^<(.+)$/))) return `<${num(m[1])}`;
+      if ((m = String(b).match(/^>=(.+)$/))) return `≥${num(m[1])}`;
+      if ((m = String(b).match(/^(1(?:e-?\d+)?|10)-(1(?:e-?\d+)?|10)$/))) return `${num(m[1])}–${num(m[2])}`;
+      return String(b);
+    };
+    const VAR = T.v;
+
+    // ---------------------------------------------------------------- 1. each optimizer's own step
+    if (!rows.length) note("No step profiles yet.");
+    else {
+      section("Each optimizer's own step at its own state", "From the kept checkpoints and the weights one step later (exact GN on 128 held-out sequences, top Ritz pairs from Lanczos 48). Color: optimizer; line style and marker: batch size (solid 16M, dashed 4M, dotted 1M).", null, "Own step");
+      const groups = {};
+      rows.forEach((r) => { const k = `${r.opt} ${r.batch}`; (groups[k] = groups[k] || []).push(r); });
+      const chart = (field, title, sub, ytitle, logy, refs, look) => {
+        const traces = Object.entries(groups).map(([k, rs]) => {
+          rs = rs.slice().sort((a, b) => a.frac - b.frac);
+          const opt = rs[0].opt, batch = rs[0].batch;
+          return line({ x: rs.map((r) => r.frac), y: rs.map((r) => r[field]), name: k, color: optColor(opt), dash: DASH[batch], symbol: SYM[batch], size: 10,
+            meta: { opt, batch }, customdata: rs.map((r) => r.step),
+            hover: `<b>${esc(k)}</b><br>step %{customdata} (fraction %{x:.2f})<br>${esc(ytitle.replace(/ \(.*\)$/, ""))}: %{y:.4~g}<extra></extra>` });
+        });
+        panel({ title, sub, traces, legend: factorLegend(traces), x: { title: "fraction of training", range: [0, 1.02] }, y: { title: ytitle, log: logy }, refs, look });
+      };
+      chart("lmax", "The network sharpens where the optimizer does not step", "top GN eigenvalue at each optimizer's own state", "λ_max of G (log scale)", true, [],
+        "Muon sits lowest, then PD and SOAP∘Muon, then S∘PD and TS, at every batch size.");
+      chart("cstar", "Every optimizer runs at the edge of its own geometry", "c* = −a/q of the optimizer's own step", "c* of the own step", false,
+        [{ axis: "y", value: 1, label: "1 = the GN model's optimal length" }, { axis: "y", value: 0.5, label: "½ = twice the optimal length", below: true }],
+        "Values below 1 mean the step is longer than the GN model's optimum; ½ means twice as long.");
+      chart("energy16", "How much of the step lives in the stiffest directions", "share of the own step's energy in the top 16 GN eigenvectors", "energy share (log scale)", true, [],
+        "This mirrors the sharpness ordering in the first chart.");
+      chart("flip", "Large batch: the gradient oscillates along the stiff directions", "median ratio of the gradient's projection on the top 4 GN eigenvectors after ÷ before the step",
+        "after ÷ before", false, [{ axis: "y", value: 0, label: "0", dash: "dot" }, { axis: "y", value: -1, label: "−1 = a clean period-2 flip", below: true }],
+        "Points near −1 mean the gradient's stiff component flips sign every step.");
+    }
+
+    // ---------------------------------------------------------------- 2. curvature bands (with the review caution)
+    const B = E.bands || [];
+    if (B.length) {
+      section("Curvature bands of the own step", "The own step split along the exact GN spectrum, by curvature relative to λ_max. Caution (review 13:50): with 48 Lanczos nodes the lowest band is a single node, the residual after the stiff Krylov directions; its c* > 1 is not a band property.", null, "Curvature bands");
+      const centers = [3e-5, 3e-4, 3e-3, 3e-2, 3e-1];
+      const specs = [];
+      BATCHES.forEach((batch) => {
+        const rowsB = B.filter((r) => r.batch === batch);
+        if (!rowsB.length) return;
+        const steps = [...new Set(rowsB.map((r) => r.step))].sort((a, b) => a - b);
+        const mid = steps[Math.floor(steps.length / 2)];
+        const traces = rowsB.filter((r) => r.step === mid).map((r) => line({ x: centers, y: r.cstar, name: r.opt, color: optColor(r.opt),
+          dash: r.opt.includes("β0.8") ? "dash" : "solid", size: 9, hover: hov(`${r.opt}, ${batch} @${mid}`, "band curvature ÷ λ_max", "c*", ".1~e", ".3~g") }));
+        specs.push({ title: `${batch}-token batch, step ${mid}: c* of the own step in each curvature band`,
+          sub: "bands of the exact GN spectrum, by curvature relative to λ_max; the leftmost point is a single Lanczos node", traces,
+          x: { title: "band curvature ÷ λ_max (log scale)", log: true }, y: { title: "c* in the band (log scale)", log: true },
+          refs: [{ axis: "y", value: 1, label: "1 = GN-optimal length" }],
+          look: "Compare the optimizers in the bands above 1e-4·λ_max. The leftmost point is the residual after the stiff Krylov directions, so its c* > 1 is not a band property (review 13:50)." });
+      });
+      const groupsB = {};
+      B.forEach((r) => { const k = `${r.opt} ${r.batch}`; (groupsB[k] = groupsB[k] || []).push(r); });
+      const TOTAL = { "16M": 92, "4M": 368, "1M": 1468 };
+      const traces = Object.entries(groupsB).map(([k, rs]) => {
+        rs = rs.slice().sort((a, b) => a.step - b.step);
+        const o = rs[0].opt, b = rs[0].batch;
+        return line({ x: rs.map((r) => r.step / TOTAL[r.batch]), y: rs.map((r) => r.share[0]), name: k, color: optColor(o), dash: DASH[b], symbol: b08(o) ? `${SYM[b]}-open` : SYM[b], size: 10, ring: !b08(o),
+          meta: { opt: o, batch: b }, customdata: rs.map((r) => r.step), hover: `<b>${esc(k)}</b><br>step %{customdata} (fraction %{x:.2f})<br>slope share: %{y:.3f}<extra></extra>` });
+      });
+      specs.push({ title: "Share of the own step's slope from the lowest Lanczos node", sub: "node below 1e-4·λ_max: the residual after the stiff Krylov directions; β 0.8 variants: lighter, open markers", traces, legend: factorLegend(traces),
+        x: { title: "fraction of training", range: [0, 1.02] }, y: { title: "slope share from the lowest node" },
+        look: "Its ordering (Muon lowest) survives the review; the band reading does not (review 13:50)." });
+      emit(specs);
+    }
+
+    // ---------------------------------------------------------------- 3. momentum phase (β 0.8 − β 0.9)
+    const PH = Object.entries(E.phase || {});
+    if (PH.length) {
+      section("The fresher momentum is a phase effect", "β 0.8 minus β 0.9 along training, smoothed training loss on unseen data. The whitening methods lead by ~0.07–0.1 over the first ~100–150 steps at 4M and 16M, Muon does not; later a longer average catches up (2× horizon, 4M). One chart in the original, whose step axis is titled “16M tokens each” although the 4M runs count 4M-token steps; split here by horizon and batch size, on a shared y-axis.", null, "Momentum phase");
+      const famOfP = (lab) => (lab.startsWith("Muon") ? "muon" : lab.startsWith("PD") ? "pd" : "spd");
+      const colorP = (lab) => { const c = fam(famOfP(lab));
+        return lab.startsWith("PD-top") ? shade(c, T.dark ? 0.16 : -0.16) : lab.startsWith("PD α¼") ? shade(c, T.dark ? -0.14 : 0.16) : c; };
+      const dashP = (lab) => (lab.includes("warmup") && lab.includes("260926") ? "longdashdot" : lab.includes("warmup") ? "dashdot"
+        : (lab.includes("260926") || lab.includes("clip")) ? "dot" : lab.startsWith("PD-top") ? "dash" : lab.startsWith("PD α¼") ? "longdash" : "solid");
+      const groupP = (lab) => (lab.includes("4M") ? "4M" : lab.includes("2×") ? "2x" : "1x");
+      const shortP = (lab) => lab.replace(/ (1×|2×|4M)(?=,|$)/, "");
+      const yr = rangeOf(PH.flatMap(([, r]) => r.map((q) => q[1])), false, 0.05);
+      const mk = ([lab, r]) => line({ x: r.map((q) => q[0]), y: r.map((q) => q[1]), name: shortP(lab), color: colorP(lab), dash: dashP(lab), mode: "lines",
+        width: lab.includes("warmup") ? 3.2 : 2.4, hover: hov(lab, "step", "β 0.8 − β 0.9", "d", "+.4f") });
+      const G = { "1x": PH.filter(([l]) => groupP(l) === "1x"), "2x": PH.filter(([l]) => groupP(l) === "2x"), "4M": PH.filter(([l]) => groupP(l) === "4M") };
+      const refs = () => [{ axis: "y", value: 0, label: "0 = no difference" }];
+      const specs = [];
+      if (G["1x"].length) specs.push({ title: "16M-token batch, 1× horizon: β 0.8 minus β 0.9", wide: true,
+        sub: "92 steps; line style: dotted = second seed or gradient clip 0.1, dash-dot (thick) = β warmup 0.8→0.9, dashed = PD-top, long-dashed = PD α¼",
+        traces: G["1x"].map(mk), x: { title: "step (16M tokens each)" }, y: { title: "loss difference, β 0.8 − β 0.9", range: yr }, refs: refs(),
+        look: "Below 0 the fresher momentum (β 0.8) is ahead: the whitening methods (PD, S∘PD) lead early by ~0.07–0.1, Muon does not." });
+      if (G["2x"].length) specs.push({ title: "16M-token batch, 2× horizon: β 0.8 minus β 0.9",
+        sub: "184 steps; dash-dot (thick) = β warmup 0.8→0.9, long dash-dot = the same with seed 260926",
+        traces: G["2x"].map(mk), x: { title: "step (16M tokens each)" }, y: { title: "loss difference, β 0.8 − β 0.9", range: yr }, refs: refs(),
+        look: "At the 2× horizon the early lead of β 0.8 shrinks later in the run, as the longer average catches up." });
+      if (G["4M"].length) specs.push({ title: "4M-token batch: β 0.8 minus β 0.9",
+        sub: "368 steps; Muon's pair is β 0.81 minus β 0.9; dash-dot (thick) = β warmup 0.8→0.9 in 120 steps",
+        traces: G["4M"].map(mk), x: { title: "step (4M tokens each)" }, y: { title: "loss difference, β 0.8 − β 0.9", range: yr }, refs: refs(),
+        look: "The whitening methods lead early at 4M too; later in the run the longer average catches up." });
+      emit(specs);
+    }
+
+    // ---------------------------------------------------------------- 4. collective secant multiplier
+    const SE = E.secant || {}, SS = SE.states || {};
+    const halfRefs = () => [{ axis: "y", value: 0.5, label: "½ = stationary balance" }, { axis: "y", value: 1, label: "1 = secant-optimal length" }];
+    const secantHover = (lab) => `<b>${esc(lab)}</b><br>u: %{x:.3~g}<br>c*: %{y:.3f}<br>%{customdata[0]:.1%} of the step, %{customdata[1]:.1%} of the gain<extra></extra>`;
+    // c* ≤ 0 cannot sit on a log axis: break the line there and mark the bin with ▼ at the bottom edge (value in the hover)
+    const cTraces = (r, name, color, hoverLab, yr, size) => {
+      const bad = (c) => typeof c === "number" && !(c > 0);
+      const main = line({ x: r.u, y: r.c.map((c) => (bad(c) ? null : c)), name, color, size, group: name,
+        customdata: r.u.map((_, k) => [(r.energy || [])[k], (r.gain || [])[k]]), hover: secantHover(hoverLab) });
+      const idx = r.c.map((c, k) => (bad(c) ? k : -1)).filter((k) => k >= 0);
+      if (!idx.length || !yr) return [main];
+      const yb = 10 ** (yr[0] + 0.03 * (yr[1] - yr[0]));
+      return [main, line({ x: idx.map((k) => r.u[k]), y: idx.map(() => yb), name, color, mode: "markers", symbol: "triangle-down", size: size + 5, group: name, legend: false,
+        customdata: idx.map((k) => r.c[k]), hover: `<b>${esc(hoverLab)}</b><br>u: %{x:.3~g}<br>c* = %{customdata:.3f}, at or below 0: drawn at the bottom edge<extra></extra>` })];
+    };
+    const negKey = (traces) => (traces.some((t) => t.marker && t.marker.symbol === "triangle-down")
+      ? { title: "Marks", items: [{ static: true, label: "bin with c* ≤ 0, off the log scale (hover for the value)", sw: { kind: "marker", color: T.ink2, symbol: "triangle-down" } }] } : null);
+    const order = ["PD16M_9", "PD16M_46", "PD16M_83", "PD4M_37", "PD4M_183", "PD4M_330", "PD1M_50", "PD1M_200", "PD1M_900", "M16M_46", "M1M_900"].filter((t) => SS[t]);
+    if (order.length) {
+      section("The collective step multiplier per input direction", "c* = −⟨μ_N, D⟩ / ⟨μ_N+1 − μ_N, D⟩ for the actual step D, per input-eigenvalue bin (collective: all matrices stepped). ½ = the step's first-order gain and curvature cost balance, which any stationary process gives (review 03:46); 1 = secant-optimal length. One chart of 11 states in the original; split here by batch size on shared axes.", null, "Secant multiplier");
+      const xr = rangeOf(order.flatMap((t) => SS[t].u), true, 0.04), yr = rangeOf(order.flatMap((t) => SS[t].c).concat([0.5, 1]), true, 0.06);
+      emit(BATCHES.map((b) => {
+        const tags = order.filter((t) => parseTag(t).batch === b);
+        if (!tags.length) return null;
+        const byFam = {};
+        tags.forEach((t) => { const f = parseTag(t).fam; (byFam[f] = byFam[f] || []).push(t); });
+        const traces = [];
+        Object.entries(byFam).forEach(([f, ts]) => {
+          ts.sort((a, c) => parseTag(a).step - parseTag(c).step);
+          const cols = ts.length > 1 ? ramp(fam(f), ts.length) : [fam(f)];
+          ts.forEach((t, i) => { const r = SS[t], p = parseTag(t);
+            traces.push(...cTraces(r, `${p.name} @${p.step} (c* ${fmt(r.all, 2)})`, cols[i], p.label, yr, 8)); });
+        });
+        return { title: `${b}-token batch: c* per input direction`, sub: "one line per state (lighter = earlier); the legend gives each state's overall c*", traces, legendExtra: negKey(traces),
+          x: { title: "input eigenvalue ÷ mean, u (log scale)", log: true, range: xr }, y: { title: "c* (log scale)", log: true, range: yr }, refs: halfRefs(),
+          look: b === "16M" ? "Early states depart from ½ in the weak inputs (small u), most for Muon at large batch." : "Compare early (light) and late (dark) states with the ½ line, a stationary balance rather than a sizing verdict." };
+      }).filter(Boolean));
+    }
+    const TL = SE.timelapse || {};
+    const TLOPT = [["M", "Muon", "muon"], ["S", "SOAP∘Muon", "soap"], ["PD", "PD α¼", "pd"], ["SPD", "S∘PD α¼", "spd"]], TLSTEPS = [10, 50, 100, 200, 500, 900, 1300];
+    const tlPresent = TLOPT.filter(([tag]) => TLSTEPS.some((st) => TL[`${tag}1M_${st}`]));
+    if (tlPresent.length) {
+      section("The multiplier over training (1M-token batch)", "c* per input direction at steps 10 … 1300: early states depart from ½ in the weak directions, and all approach ½ with training (a stationary balance, not a sizing verdict). Shared axes across the four optimizers.", null, "Secant over training");
+      const all = Object.values(TL);
+      const xr = rangeOf(all.flatMap((r) => r.u), true, 0.04), yr = rangeOf(all.flatMap((r) => r.c).concat([0.5, 1]), true, 0.06);
+      emit(tlPresent.map(([tag, lab, f]) => {
+        const steps = TLSTEPS.filter((st) => TL[`${tag}1M_${st}`]);
+        const cols = ramp(fam(f), steps.length);
+        const traces = steps.flatMap((st, k) => cTraces(TL[`${tag}1M_${st}`], `@${st} (c* ${fmt(TL[`${tag}1M_${st}`].all, 2)})`, cols[k], `${lab}, 1M, step ${st}`, yr, 7));
+        return { title: `${lab}, 1M: c* per input direction over training`, sub: "one line per training step; the legend gives each step's overall c*", traces, legendTitle: "Training step", legendExtra: negKey(traces),
+          x: { title: "input eigenvalue ÷ mean, u (log scale)", log: true, range: xr }, y: { title: "c* (log scale)", log: true, range: yr }, refs: halfRefs(),
+          look: "The light (early) lines depart from ½ in the weak directions (small u); the darker, later lines approach ½." };
+      }));
+    }
+    const TS2 = SE.twosided || {};
+    const tsPick = ["M16M_46", "PD16M_46", "SPD16M_46", "TS16M_46", "M1M_900", "PD1M_900"].filter((t) => TS2[t]);
+    if (tsPick.length) {
+      section("Two-sided secant maps", "c* per cell of output directions (GN output factor B, decade bins of eigenvalue ÷ mean; rows) × input directions (C; columns). Color: log2(c* ÷ ½) on a diverging scale: gray = ½ (stationary balance), red = c* above ½, blue = below. Blank cells hold less than 0.2% of the step's energy. Hover for the share of the step and of the first-order gain.", null, "Two-sided maps");
+      emit(tsPick.map((t) => {
+        const g = TS2[t], p = parseTag(t), lab = (g.labels || []).map(prettyBin);
+        const xl = lab.map((l) => l.replace("–", "–<br>")), yl = narrow() ? xl : lab;
+        const z = g.c.map((row, i) => row.map((c, j) => (g.energy[i][j] >= 0.002 && c > 0 ? Math.log2(c / 0.5) : null)));
+        const text = g.c.map((row, i) => row.map((c, j) => (g.energy[i][j] >= 0.002 && c !== null
+          ? `<b>input ${lab[j]}, output ${lab[i]}</b><br>c* ${c.toFixed(2)} · ${(100 * g.energy[i][j]).toFixed(0)}% of the step · ${(100 * g.gain[i][j]).toFixed(0)}% of the gain` : "")));
+        return { title: `${p.label}: two-sided secant map (overall c* ${fmt(g.all, 2)})`, sub: "rows: output bins (B eigenvalue ÷ mean); columns: input bins (C eigenvalue ÷ mean)",
+          traces: [heat({ z, x: xl, y: yl, text, zmin: -2, zmax: 2, cbTitle: "c*", cbTicks: [-2, -1, 0, 1, 2], cbText: ["⅛", "¼", "½", "1", "2"],
+            hover: "%{text}<extra></extra>" })],
+          legend: false, square: true, height: 520, mheight: 470, x: { title: narrow() ? "input bin (C)" : "input bin: C eigenvalue ÷ mean", type: "category", grid: false },
+          y: { title: narrow() ? "output bin (B)" : "output bin: B eigenvalue ÷ mean", type: "category", grid: false },
+          look: "Gray cells sit at ½; red cells are above ½ and blue cells below. Compare where the step's energy sits with where c* departs from ½." };
+      }));
+    }
+
+    // ---------------------------------------------------------------- 5. cross-matrix coupling
+    const CP = E.coupling || {};
+    const cpTags = ["M16M_46", "PD16M_46", "SPD16M_46", "TS16M_46", "M16M_83", "PD16M_83", "SPD16M_83", "TS16M_83", "M4M_183", "PD4M_183", "SPD4M_183",
+      "M1M_100", "PD1M_100", "M1M_200", "PD1M_200", "M1M_900", "PD1M_900", "SPD1M_900", "S1M_900"].filter((t) => CP[t]);
+    if (cpTags.length) {
+      section("How a step's GN curvature splits over pairs of matrices", "Exact GN curvature of the actual step split into pairs of the 48 hidden matrices. Coherence Σ Q ÷ trace Q ≈ 1 + 47 × the mean pairwise correlation of the pieces' output changes (review 03:46); exact GN's own pieces measured in-sample give 0.8–2. The original draws coherence on a second y-axis of the stacked chart; here it has its own chart with the same row order.", null, "Coupling");
+      const labels = cpTags.map((t) => parseTag(t).label);
+      const PARTS = [["diagonal", "own matrix"], ["same_layer_offdiag", "same layer"], ["same_kind_other_layers", "same kind, other layers"], ["other_kind_other_layers", "other kinds, other layers"]];
+      const pcols = [T.ink, mix(T.ink, T.surface, 0.34), mix(T.ink, T.surface, 0.56), mix(T.ink, T.surface, 0.76)];
+      const h = 32 * cpTags.length + 150;
+      const specs = [{ title: "Share of the step's GN curvature by pair of matrices", sub: "stacked to 100% for each state; darker = closer to the matrix itself",
+        traces: PARTS.map(([k, name], i) => bar({ orientation: "h", y: labels, x: cpTags.map((t) => (CP[t].parts || {})[k]), name, color: pcols[i], gap: true,
+          hover: `<b>%{y}</b><br>${esc(name)}: %{x:.1%} of the step's GN curvature<extra></extra>` })),
+        barmode: "stack", legendTitle: "Pair of matrices", bargap: 0.3, height: h, mheight: h,
+        x: { title: "share of the step's GN curvature", range: [0, 1], tickformat: ".0%" }, y: { type: "category", reversed: true },
+        look: "The own-matrix share is what a per-matrix view accounts for; the rest of each bar is curvature between different matrices." }];
+      const famsCP = [...new Set(cpTags.map((t) => parseTag(t).fam))];
+      specs.push({ title: "Coherence Σ Q ÷ trace Q of the step", sub: "≈ 1 + 47 × the mean pairwise correlation of the 48 pieces' output changes",
+        traces: [bar({ orientation: "h", y: labels, x: cpTags.map((t) => CP[t].coherence), color: cpTags.map((t) => fam(parseTag(t).fam)),
+          text: cpTags.map((t) => fmt(CP[t].coherence, 1)), textposition: narrow() ? "none" : "outside",
+          customdata: cpTags.map((t) => [CP[t].top_mode, CP[t].pr, CP[t].c_star_gn]),
+          hover: "<b>%{y}</b><br>coherence %{x:.2f}<br>top mode %{customdata[0]:.0%} of the curvature<extra></extra>" })],
+        legend: { groups: [{ title: "Bar color = optimizer", items: famsCP.map((f) => ({ static: true, label: (FAMS.find((q) => q[0] === f) || [f, f])[1].replace(" (two-sided)", ""), sw: { kind: "bar", color: fam(f) } })) }] },
+        legendExtra: { title: "Band", items: [{ static: true, label: "0.8–2: exact GN's own pieces, measured in-sample", sw: { kind: "bar", color: rgba(T.ref, 0.22) } }] },
+        shapes: [{ type: "rect", xref: "x", x0: 0.8, x1: 2, yref: "paper", y0: 0, y1: 1, fillcolor: rgba(T.ref, 0.12), line: { width: 0 }, layer: "below" }],
+        refs: [{ axis: "x", value: 1, label: "1 = uncorrelated pieces" }], height: h, mheight: h, bargap: 0.3,
+        x: { title: "coherence", rangemode: "tozero" }, y: { type: "category", reversed: true }, margin: { r: 50 },
+        look: "Values far above the 0.8–2 band mean the pieces' output changes add up coherently rather than independently." });
+      const hmTags = ["M16M_46", "PD16M_46", "SPD16M_46", "M1M_900", "PD1M_900", "SPD1M_900"].filter((t) => CP[t] && Array.isArray(CP[t].corr));
+      hmTags.forEach((t) => {
+        const r = CP[t], p = parseTag(t), labs = r.labels || [], n = labs.length, idx = labs.map((_, i) => i);
+        const layerOf = (l) => String(l).split(".")[0];
+        const blocks = [];
+        labs.forEach((l, i) => { if (!blocks.length || blocks[blocks.length - 1].name !== layerOf(l)) blocks.push({ name: layerOf(l), start: i, end: i }); else blocks[blocks.length - 1].end = i; });
+        const tickvals = blocks.map((b) => (b.start + b.end) / 2), ticktext = blocks.map((b) => b.name);
+        const seps = blocks.slice(1).flatMap((b) => [
+          { type: "line", xref: "x", yref: "y", x0: b.start - 0.5, x1: b.start - 0.5, y0: -0.5, y1: n - 0.5, line: { color: T.surface, width: 2.5 } },
+          { type: "line", xref: "x", yref: "y", y0: b.start - 0.5, y1: b.start - 0.5, x0: -0.5, x1: n - 0.5, line: { color: T.surface, width: 2.5 } }]);
+        specs.push({ title: `${p.label}: correlation of the 48 matrices' output changes`,
+          sub: `coherence ${fmt(r.coherence, 1)}, top mode ${fmt(100 * r.top_mode, 0)}% · ordered layer by layer, q, k, v, o, up, down within each layer`,
+          traces: [heat({ z: r.corr, x: idx, y: idx, gap: 0, zmin: -1, zmax: 1, cbTitle: "corr", cbTicks: [-1, -0.5, 0, 0.5, 1], cbText: ["−1", "−0.5", "0", "0.5", "1"],
+            text: labs.map((a) => labs.map((b) => `${a} × ${b}`)), hover: "<b>%{text}</b><br>correlation %{z:.2f}<extra></extra>" })],
+          legend: false, square: true, height: 560, mheight: 480, shapes: seps,
+          x: { title: "matrix, by layer", tickvals, ticktext, grid: false, range: [-0.5, n - 0.5] },
+          y: { title: "matrix, by layer", tickvals, ticktext, grid: false, reversed: true },
+          look: "Cov_p(J_l D_l, J_m D_m), normalized. Every pair is positively correlated for every per-matrix optimizer; hover a cell for the two matrices." });
+      });
+      emit(specs);
+    }
+
+    // ---------------------------------------------------------------- 6. layer-staged PD vs its control
+    const STG = E.staged || {};
+    if (STG.control_9_sharp && STG.staged_9_sharp) {
+      section("A step closer to second order: layer-staged PD", "Each layer's step recomputed after the earlier layers' output change (8 GN products per step), in the run's own harness at 16M, steps 9–92; the control is the same code without the correction and reproduces the run. Switch-off branches: coordinated to step 30 or 50, then plain PD from the same weights and momentum. Colors mark branches of PD, not optimizers.", null, "Layer-staged steps");
+      const c = Object.fromEntries(STG.control_9_sharp.map((r) => [r.step, r]));
+      const ARMS = [["staged_9_sharp", "coordinated from step 9"], ["switch_50", "coordinated to step 50, then plain"], ["switch_30", "coordinated to step 30, then plain"]];
+      const diff = [], sharp = [];
+      ARMS.forEach(([k, lab], i) => {
+        const rs = (STG[k] || []).filter((r) => c[r.step]);
+        if (!rs.length) return;
+        diff.push(line({ x: rs.map((r) => r.step), y: rs.map((r) => r.train - c[r.step].train), name: lab, color: VAR[i], mode: "lines", width: 2.6, group: k,
+          hover: hov(`${lab}: training loss`, "step", "staged − control", "d", "+.4f") }));
+        const v = rs.filter((r) => r.val !== null && c[r.step].val !== null);
+        diff.push(line({ x: v.map((r) => r.step), y: v.map((r) => r.val - c[r.step].val), name: lab, color: VAR[i], mode: "markers", size: 9, group: k, legend: false,
+          hover: hov(`${lab}: validation`, "step", "staged − control", "d", "+.4f") }));
+      });
+      [["control_9_sharp", "control (plain PD)", T.ink]].concat(ARMS.map(([k, lab], i) => [k, lab, VAR[i]])).forEach(([k, lab, color]) => {
+        const rs = (STG[k] || []).filter((r) => r.sharp !== null && r.sharp !== undefined);
+        if (rs.length) sharp.push(line({ x: rs.map((r) => r.step), y: rs.map((r) => r.sharp), name: lab, color, size: 6, width: k.startsWith("control") ? 3 : 2.4,
+          hover: hov(lab, "step", "top GN eigenvalue", "d", ".4~g") }));
+      });
+      emit([
+        { title: "Layer-staged PD minus its control, 16M", sub: "difference in training loss (lines) and validation loss (markers), staged branch minus the control",
+          traces: diff, legendExtra: { title: "Marks", items: [{ static: true, label: "training loss", sw: { kind: "line", color: T.ink2 } },
+            { static: true, label: "validation", sw: { kind: "marker", color: T.ink2, symbol: "circle" } }] },
+          x: { title: "step (16M tokens each)" }, y: { title: "loss difference, staged − control" }, refs: [{ axis: "y", value: 0, label: "0 = level with the control" }],
+          look: "Below 0 the coordinated branch is ahead of the control. After a switch to plain PD the first plain step catapults and the lead is not kept." },
+        { title: "The sharpness each branch leaves", sub: "top GN eigenvalue on each step's curvature sequences",
+          traces: sharp, x: { title: "step (16M tokens each)" }, y: { title: "top GN eigenvalue (log scale)", log: true },
+          look: "Plain PD's oscillation flattens the network and coordinated steps do not: the coordinated branch stays 3–6× sharper and jumps to ~28× between steps 70 and 80 at full LR, where its progress stalls; after a switch to plain PD the sharpness relaxes toward the control's over 20–40 steps, after a catapult." }]);
+    }
+
+    // ---------------------------------------------------------------- 7. coordination variants
+    const CO = E.coordination || {};
+    const coGroups = Object.entries(CO).filter(([, e]) => e && e.arms && Object.keys(e.arms).length);
+    if (coGroups.length) {
+      section("Where cross-layer coordination pays", "Layer-staged PD with the cross-layer correction kept on a chosen part of each matrix's input space (above-mean eigenvectors of C, the rest, the input mean, the 8 largest), at full or half strength, from 32 or 256 curvature sequences per rank, or with each corrected step scaled by the dual norm of its residual. Lead = how many steps an arm is ahead of its same-harness control; the legend gives final validation minus the control's (negative = better; a lead is undefined once the control never reaches the arm's loss). Colors mark variants of PD, not optimizers: solid = full-correction variants, dashed = single-band variants.", null, "Coordination");
+      const FULL = ["full correction", "full, 256 curvature sequences", "full, half strength", "full, dual-norm scaled"];
+      const BAND = ["above-mean input band", "bulk input band", "input-mean direction", "8 largest input directions"];
+      const armStyle = (label) => { const full = label.startsWith("full"); const list = full ? FULL : BAND; let i = list.indexOf(label);
+        if (i < 0) i = [...label].reduce((a, ch) => a + ch.charCodeAt(0), 0); return { color: VAR[i % VAR.length], dash: full ? "solid" : "dash" }; };
+      const armName = (label, a) => `${label}${a.final_gap !== null && a.final_gap !== undefined ? ` (${a.final_gap > 0 ? "+" : a.final_gap < 0 ? "−" : ""}${Math.abs(a.final_gap).toFixed(3)} at ${a.last_step})` : ` (to step ${a.last_step})`}`;
+      const specs = [];
+      coGroups.forEach(([g, e]) => {
+        const arms = Object.entries(e.arms);
+        const fams2 = g === "16M" && arms.length > 4
+          ? [["full-correction variants", arms.filter(([l]) => l.startsWith("full"))], ["single-band variants", arms.filter(([l]) => !l.startsWith("full"))]] : [["", arms]];
+        const lr = rangeOf(arms.flatMap(([, a]) => a.lead.map((q) => q[1])).concat([0]), false, 0.08);
+        const sr = rangeOf(arms.flatMap(([, a]) => a.sharp.map((q) => q[1])).concat((e.control.sharp || []).map((q) => q[1])), true, 0.08);
+        const unit = g.startsWith("4M") ? "4M" : "16M";
+        fams2.forEach(([fname, list]) => { if (!list.length) return;
+          specs.push({ title: `${g}: step lead over the same-harness control${fname ? `, ${fname}` : ""}`,
+            sub: "legend: final validation minus the control's at the last common step",
+            traces: list.map(([label, a]) => { const s = armStyle(label);
+              return line({ x: a.lead.map((q) => q[0]), y: a.lead.map((q) => q[1]), name: armName(label, a), color: s.color, dash: s.dash, mode: "lines", width: 2.6,
+                hover: hov(label, "step", "lead (steps)", "d", "+.2f") }); }),
+            x: { title: `step (${unit} tokens each)` }, y: { title: "lead over the control (steps)", range: lr }, refs: [{ axis: "y", value: 0, label: "0 = level with the control" }],
+            look: fname === "full-correction variants" ? "Negative values: the arm is behind its control. The accurate full correction (256 sequences) is stable but never leads."
+              : fname === "single-band variants" ? "Positive values: the arm is ahead of its control by that many steps; the legend says whether the lead survives to the end."
+                : "Positive values: the arm is ahead of its control by that many steps." });
+        });
+        fams2.forEach(([fname, list]) => { if (!list.length) return;
+          const traces = list.map(([label, a]) => { const s = armStyle(label);
+            return line({ x: a.sharp.map((q) => q[0]), y: a.sharp.map((q) => q[1]), name: label, color: s.color, dash: s.dash, size: 8, width: 2.4, hover: hov(label, "step", "top GN eigenvalue", "d", ".4~g") }); });
+          traces.push(line({ x: (e.control.sharp || []).map((q) => q[0]), y: (e.control.sharp || []).map((q) => q[1]), name: "control (plain PD)", color: T.ink, size: 7, width: 3,
+            hover: hov("control (plain PD)", "step", "top GN eigenvalue", "d", ".4~g") }));
+          specs.push({ title: `${g}: sharpness under each coordination variant${fname ? `, ${fname}` : ""}`, sub: "top GN eigenvalue on the step's curvature sequences",
+            traces, x: { title: `step (${unit} tokens each)` }, y: { title: "top GN eigenvalue (log scale)", log: true, range: sr },
+            look: fname === "full-correction variants" ? "The full correction at 32 sequences and at half strength run away between steps 70 and 80; the accurate full correction stays stable."
+              : fname === "single-band variants" ? "Single-band corrections settle on a sharper plateau than the control." : "The arm's sharpness against its control's." });
+        });
+      });
+      emit(specs);
+    }
+
+    // ---------------------------------------------------------------- 8. momentum noise and gradient autocorrelation
+    const MO = E.momentum || [];
+    if (MO.length) {
+      section("Momentum noise and gradient autocorrelation", "Caveats (review 21:48): the noise estimate is not a signal/noise split, because the gradient at W_N partly responds to the optimizer's own past noise (closed loop) and a signal-free noisy quadratic gives similar values; and the autocorrelation does not separate edge-of-stability oscillation from noise-driven fluctuation, because a signal-free noisy heavy-ball quadratic produces the same signatures and the tail (u < 1) may be leakage from a rotated input basis. Shown as measurements, not decompositions.", null, "Momentum noise");
+      const specs = [];
+      const groupsM = {};
+      MO.forEach((r) => { const k = `${r.opt} ${r.batch} β${r.beta}`; (groupsM[k] = groupsM[k] || []).push(r); });
+      const traces = [];
+      Object.entries(groupsM).forEach(([k, rs]) => {
+        rs = rs.slice().sort((a, b) => a.frac - b.frac);
+        const r0 = rs[0];
+        let col = r0.opt === "Muon" ? fam("muon") : fam("pd");
+        if (String(r0.beta) === "0.8") col = shade(col, T.dark ? -0.14 : 0.16);
+        const name = `${r0.opt} ${r0.batch}, β ${r0.beta}`;
+        traces.push(line({ x: rs.map((r) => r.frac), y: rs.map((r) => r.noise_all), name, color: col, dash: DASH[r0.batch], symbol: SYM[r0.batch], size: 9, group: k,
+          customdata: rs.map((r) => [r.step, r.clip_factor]), hover: `<b>${esc(name)}, all inputs</b><br>step %{customdata[0]} (fraction %{x:.2f})<br>estimate ÷ |M|²: %{y:.4f}<br>clip factor %{customdata[1]}<extra></extra>` }));
+        traces.push(line({ x: rs.map((r) => r.frac), y: rs.map((r) => r.noise_tail_mean), name, color: col, mode: "markers", symbol: `${SYM[r0.batch]}-open`, size: 12, ring: false, group: k, legend: false,
+          customdata: rs.map((r) => r.step), hover: `<b>${esc(name)}, tail mean</b><br>step %{customdata} (fraction %{x:.2f})<br>estimate ÷ |M|²: %{y:.4f}<extra></extra>` }));
+      });
+      specs.push({ title: "White-noise estimate of the momentum buffer's noise energy, relative to |M|²", sub: "r/(1−β²), clip-corrected, over |M|²; line style and marker: batch size",
+        traces, legendExtra: { title: "Marks", items: [{ static: true, label: "all input directions pooled", sw: { kind: "line", color: T.ink2, symbol: "circle" } },
+          { static: true, label: "tail mean (input bins with u ≤ 1)", sw: { kind: "marker", color: T.ink2, symbol: "circle-open", open: true } }] },
+        x: { title: "fraction of training", range: [0, 1.02] }, y: { title: "white-noise estimate ÷ |M|²", rangemode: "tozero" },
+        look: "A measurement, not a signal/noise split (review 21:48): compare batch sizes and states, not signal against noise." });
+      const pick = ["PD16M_46", "M16M_46", "PD16M_83", "PD4M_37", "PD4M_183", "PD4M_330", "PD1M_50", "PD1M_200", "PD1M_900", "M1M_900"];
+      const picked = MO.filter((r) => pick.includes(r.tag));
+      const xr = rangeOf(picked.flatMap((r) => r.u), true, 0.04), yr = rangeOf(picked.flatMap((r) => r.autocorr).concat([0]), false, 0.06);
+      BATCHES.forEach((b) => {
+        const rs = picked.filter((r) => r.batch === b);
+        if (!rs.length) return;
+        const tr = [];
+        ["Muon", "PD"].forEach((o) => {
+          const os = rs.filter((r) => r.opt === o).sort((a, c) => a.step - c.step);
+          const cols = os.length > 1 ? ramp(fam(o === "Muon" ? "muon" : "pd"), os.length) : [fam(o === "Muon" ? "muon" : "pd")];
+          os.forEach((r, i) => tr.push(line({ x: r.u, y: r.autocorr, name: `${o} @${r.step} (β ${r.beta})`, color: cols[i], size: 8,
+            hover: hov(`${o} ${b} @${r.step} (β ${r.beta})`, "u", "one-step autocorrelation", ".3~g", ".3f") })));
+        });
+        specs.push({ title: `${b}-token batch: one-step autocorrelation of the mean gradient`, sub: "per input direction; the same 64 micro-batches at W_N and W_N+1, projected on W_N's input basis (lighter = earlier)",
+          traces: tr, x: { title: "input eigenvalue ÷ mean, u (log scale)", log: true, range: xr }, y: { title: "one-step autocorrelation", range: yr },
+          refs: [{ axis: "y", value: 0, label: "0 = uncorrelated" }],
+          look: "Negative along the high-variance inputs (large u) in every state; read the tail (u < 1) with the review caveat above." });
+      });
+      emit(specs);
+    }
+
+    // ---------------------------------------------------------------- 9. interventions
+    const IV = E.interventions || [];
+    if (IV.length) {
+      section("Interventions: final validation minus the same-hardware reference", "16M-token batch unless labeled. The two-tap filter removes the period-2 feedback (hurts in proportion to stiff stepping); a fresher momentum helps; the whitened head's dominant input direction is its mean. Bars without “(vs …)” compare with the base optimizer's 16M β 0.9 reference run. One chart of 46 bars in the original; split here by batch size and horizon, in the original order.", null, "Interventions");
+      const baseFam = (lab) => OPTFAM[lab.split(":")[0].trim()] || "other";
+      const batchOf = (lab) => (/\b1M\b/.test(lab) ? "1M" : /\b4M\b/.test(lab) ? "4M" : "16M");
+      const horizonOf = (lab) => (lab.includes("2×") ? "2×" : "1×");
+      const GROUPS = [["16M", "1×", "16M-token batch, 1× horizon"], ["16M", "2×", "16M-token batch, 2× horizon"], ["4M", null, "4M-token batch"], ["1M", null, "1M-token batch"]];
+      // each panel gets its own x-range (with a minimum span, so tiny effects are not blown up)
+      const rangeFor = (rs) => { const cs = rs.map((r) => r.change), lo = Math.min(0, ...cs), hi = Math.max(0, ...cs);
+        const pad = Math.max(hi - lo, 0.06) * (narrow() ? 0.45 : 0.3); return [lo - (lo < 0 ? pad * 1.25 : pad * 0.3), hi + (hi > 0 ? pad : pad * 0.3)]; };
+      // keep "β 0.9", "α ¼", "LR 0.014", "seed 260926" together; break long labels before "(vs …)"
+      const ivLabel = (lab) => {
+        const nb = lab.replace(/([αβκ]) (?=[\d¼½¾])/g, "$1\u00a0").replace(/(LR|seed|@) (?=\d)/g, "$1\u00a0");
+        const lim = narrow() ? 24 : 40;
+        if (nb.length <= lim) return nb;
+        const k = nb.indexOf(" (vs ");
+        if (k > 0 && k <= lim + 6 && nb.length - k - 1 <= lim + 8) return `${nb.slice(0, k)}<br>${nb.slice(k + 1)}`;
+        return wrapAt(nb, lim);
+      };
+      const specs = [];
+      GROUPS.forEach(([b, hz, title]) => {
+        const rs = IV.filter((r) => batchOf(r.label) === b && (!hz || horizonOf(r.label) === hz));
+        if (!rs.length) return;
+        const present = [...new Set(rs.map((r) => baseFam(r.label)))];
+        specs.push({ title: `${title}: ${rs.length} intervention${rs.length === 1 ? "" : "s"}`, sub: "change in final validation loss; negative = better than the reference run",
+          traces: [bar({ orientation: "h", y: rs.map((r) => ivLabel(r.label)), x: rs.map((r) => r.change), color: rs.map((r) => fam(baseFam(r.label))),
+            text: rs.map((r) => `${r.change > 0 ? "+" : r.change < 0 ? "−" : ""}${Math.abs(r.change).toFixed(3)}`), textposition: narrow() ? "none" : "outside",
+            customdata: rs.map((r) => [r.final, r.reference]), hover: "<b>%{y}</b><br>change: %{x:+.4f}<br>final %{customdata[0]:.4f} vs reference %{customdata[1]:.4f}<extra></extra>" })],
+          legend: { groups: [{ title: "Bar color = base optimizer", items: present.map((f) => ({ static: true, label: (FAMS.find((q) => q[0] === f) || [f, f])[1], sw: { kind: "bar", color: fam(f) } })) }] },
+          x: { title: "change in final validation loss (negative = better)", zeroline: true, range: rangeFor(rs) }, y: { type: "category", reversed: true },
+          refs: [{ axis: "x", value: 0, label: "" }], height: Math.max(380, 46 * rs.length + 140), mheight: Math.max(380, 56 * rs.length + 120), bargap: 0.32, margin: { r: 70, l: 12 },
+          wide: b === "16M" && hz === "1×",
+          look: b === "16M" && hz === "1×" ? "The two-tap filter hurts in proportion to stiff stepping; a fresher momentum helps PD and S∘PD; the whitened head's dominant input direction is its mean."
+            : "Each bar compares with the reference named in its label; negative means the variant ends lower." });
+      });
+      emit(specs);
+    }
+
+    // ---------------------------------------------------------------- 10. pre-flight for the exact-GN rate test
+    const PF = E.preflight || {}, tags = Object.keys(PF);
+    if (tags.length) {
+      section("16M pre-flight for the exact-GN rate test", "At PD's own states, each direction's best one-step decrease under the GN model (a²/2q, held-out).", null, "Pre-flight");
+      const NAMES = { muon: "Muon", pd: "PD α½", kron: "kron (TS ½/½)", "gnpd_A_bf16_k64_p0.5_d1e-3": "GN-PD harness", "gnpd_B_bf16_k64_p0.5_d1e-3": "GN-PD set B",
+        "gnpd_A_fp32_k128_p0.5_d1e-3": "GN-PD FP32 k128", "gnpd_A_bf16_k64_p0.25_d1e-3": "GN-PD p¼", "gnpd_A_bf16_k64_p0.5_d1e-4": "GN-PD μ 1e-4ρ", nested: "nested" };
+      const keys = Object.keys(PF[tags[0]].rows || {});
+      const cols = tags.length > 1 ? ramp(fam("pd"), tags.length) : [fam("pd")];
+      const traces = tags.map((t, i) => bar({ x: keys.map((k) => wrapAt(NAMES[k] || k, 6)), y: keys.map((k) => ((PF[t].rows || {})[k] || {}).quality), name: `PD state ${t.replace("pd", "@")}`,
+        color: cols[i], customdata: keys, hover: `<b>PD state ${esc(t.replace("pd", "@"))}: %{x}</b><br>a²/2q: %{y:.4g}<br>key: %{customdata}<extra></extra>` }));
+      emit([{ title: "16M pre-flight: exact-GN PD is not a better direction than its Kronecker control",
+        sub: `a²/2q at PD's own states (held-out). Disjoint curvature samples give GN-PD directions with cosine ${tags.map((t) => fmt(PF[t].cos_AB, 2)).join(" / ")}; GN-PD vs kron ${tags.map((t) => fmt(PF[t].cos_kron, 2)).join(" / ")}`,
+        traces, legendTitle: "State (light = earlier)", x: { title: "direction", type: "category", tickangle: 0 }, y: { title: "a²/2q, the GN model's best one-step decrease (log scale)", log: true },
+        look: "Compare the GN-PD bars with kron (TS ½/½) and PD α½ at each state." }]);
+    }
+  };
+
+  // emit a section's panels; an odd count gets its last half-width panel stretched to the full row
+  function emit(specs) {
+    const half = specs.filter((x) => !x.wide);
+    if (half.length % 2 === 1) half[half.length - 1].wide = true;
+    specs.forEach((x) => panel(x));
+  }
+
+  R.steprule = () => {
+    const S = D.steprule || {};
+    if (!Object.keys(S).length) return note("No step-rule data yet.");
+    const gnC = (j, n) => { const c = ramp(fam("gn"), Math.max(3, n)); return c[c.length - 1 - j]; };
+    const pdLight = () => shade(fam("pd"), T.dark ? -0.12 : 0.14);
+
+    // 1. step rule at step 500
+    const greedy = Object.entries(S.greedy || {}), N = (S.normgn || {}).rows || [];
+    if (greedy.length || N.length) {
+      section("Switching the step rule at step 500", "Validation after changing the step rule at step 500 (1M-token batch). Greedy = joint held-out line search on a fixed 64-sequence set (any direction); normalized GN = Muon's LR and per-matrix norms with GN's direction.", null, "Step rule at 500");
+      const specs = greedy.map(([st, arms]) => {
+        const names_ = Object.keys(arms);
+        const newton = names_.filter((n) => n.startsWith("greedy Newton") || n.startsWith("normalized GN"));
+        const traces = names_.map((n) => {
+          const rows = arms[n];
+          let o = { color: T.muted, dash: "solid", symbol: "circle" };
+          if (n === "baseline") o = { color: fam("gd"), dash: "dash", mode: "lines", width: 2.4 };
+          else if (n.startsWith("greedy Muon")) o = { color: fam("muon") };
+          else if (n.startsWith("Muon in the Newton harness")) o = { color: fam("muon"), dash: "dash", symbol: "square" };
+          else if (newton.includes(n)) { const j = newton.indexOf(n); o = { color: gnC(j, newton.length), dash: ["solid", "dash", "dot", "dashdot"][j % 4], symbol: ["circle", "square", "diamond", "triangle-up"][j % 4] }; }
+          return line(Object.assign({ x: rows.map((r) => r[0]), y: rows.map((r) => r[1]), name: n, size: 8, hover: hov(`${st}: ${n}`, "step", "validation loss", "d", ".4f") }, o));
+        });
+        return { title: `${st} (1M): validation after changing the step rule at step 500`, sub: "dashed grey: the run's own baseline", traces,
+          x: { title: "step" }, y: { title: "validation loss" },
+          look: "The greedy held-out line search gives the same trajectory whether the direction is Muon's or Newton's; compare both with the run's own baseline." };
+      });
+      if (N.length) {
+        specs.push({ title: "Normalized GN from Muon's 1M state: training loss minus the baseline", sub: "training loss minus the baseline's on the same batch (one dual-axis chart in the original, split in two)",
+          traces: [line({ x: N.map((r) => r[0]), y: N.map((r) => r[1]), name: "training loss − baseline", color: fam("gn"), size: 4, width: 2, hover: hov("normalized GN", "step", "loss − baseline", "d", ".5f") })],
+          legend: false, x: { title: "step" }, y: { title: "training loss − baseline" }, refs: [{ axis: "y", value: 0, label: "0 = baseline" }],
+          look: "Normalized GN falls behind the baseline as the network sharpens; read it together with the sharpness chart." });
+        specs.push({ title: "Normalized GN from Muon's 1M state: sharpness", sub: "top GN Ritz value on the step's curvature sequences",
+          traces: [line({ x: N.map((r) => r[0]), y: N.map((r) => r[2]), name: "top GN Ritz value", color: fam("gn"), size: 4, width: 2, hover: hov("normalized GN", "step", "top Ritz value", "d", ".4g") })],
+          legend: false, x: { title: "step" }, y: { title: "top GN Ritz value" }, look: "The top GN eigenvalue along the normalized-GN run, step by step." });
+      }
+      emit(specs);
+    }
+
+    // 2. floors and step-equivalent speedup
+    const F = S.floors || {}, fnames = Object.keys(F), SP = S.speedup || {}, sn = Object.keys(SP);
+    if (fnames.length || sn.length) {
+      section("Floors under the oscillation, and step-equivalent speedup", "16-step LR anneals at kept steps split the loss into the floor under the oscillation and the excess the LR maintains; step-equivalent speedup = Muon's step t over the steps an arm needs to reach Muon's loss at t.", null, "Floors and speedup");
+      const specs = [];
+      ["1M", "4M"].forEach((batch) => {
+        const ns = fnames.filter((n) => n.includes(` ${batch} `));
+        if (!ns.length) return;
+        const traces = [];
+        ns.forEach((n) => {
+          const c = n.startsWith("Muon") ? fam("muon") : fam("pd");
+          traces.push(line({ x: F[n].map((r) => r[0]), y: F[n].map((r) => r[1]), name: `${n}: raw`, color: c, dash: "dash", symbol: "circle-open", ring: false, meta: { kind: "raw", name: n },
+            hover: hov(`${n}: raw loss`, "step", "held-out loss", "d", ".4f") }));
+          traces.push(line({ x: F[n].map((r) => r[0]), y: F[n].map((r) => r[2]), name: `${n}: floor`, color: c, meta: { kind: "floor", name: n },
+            hover: hov(`${n}: floor after the anneal`, "step", "held-out loss", "d", ".4f") }));
+        });
+        specs.push({ title: `${batch}: raw loss and the floor under it`, sub: "held-out EVAL sequences", traces,
+          legend: { groups: [{ title: "Run", items: ns.map((n) => ({ label: n, sw: { kind: "line", color: n.startsWith("Muon") ? fam("muon") : fam("pd") }, match: (t) => t.meta.name === n })) },
+            { title: "Line", items: [{ label: "raw loss at the kept step", sw: { kind: "line", color: T.ink2, dash: "dash", symbol: "circle-open", open: true }, match: (t) => t.meta.kind === "raw" },
+              { label: "floor after a 16-step anneal", sw: { kind: "line", color: T.ink2, symbol: "circle" }, match: (t) => t.meta.kind === "floor" }] }] },
+          x: { title: "step" }, y: { title: "held-out loss" }, look: "The vertical gap between the dashed and solid line of one color is the loss stored in the oscillation." });
+      });
+      if (fnames.length) specs.push({ title: "Loss stored in the oscillation (raw − floor)", sub: "dotted: 1M; solid: 4M",
+        traces: fnames.map((n) => line({ x: F[n].map((r) => r[0]), y: F[n].map((r) => r[1] - r[2]), name: n, color: n.startsWith("Muon") ? fam("muon") : fam("pd"),
+          dash: n.includes(" 4M ") ? "solid" : "dot", hover: hov(n, "step", "raw − floor", "d", ".4f") })),
+        x: { title: "step" }, y: { title: "stored excess, raw − floor (log scale)", log: true },
+        look: "1M: Muon and PD store the same excess; 4M: PD stores more early and less later." });
+      if (sn.length) {
+        const colorFor = (n) => (n.startsWith("S∘PD") ? fam("spd") : n.startsWith("TS") ? fam("ts") : n.startsWith("PD α¼") ? pdLight() : n.startsWith("PD") ? fam("pd") : n.startsWith("Muon") ? fam("muon") : T.muted);
+        specs.push({ title: "Step-equivalent speedup over Muon, from the validation curves", sub: "t ÷ the steps an arm needs to reach Muon's validation loss at Muon's step t; 4M arms at β 0.9 vs Muon @0.014; 1M PD vs Muon @0.007",
+          traces: sn.map((n) => line({ x: SP[n].map((r) => r[0]), y: SP[n].map((r) => r[1]), name: n, color: colorFor(n), dash: n.includes("(1M)") ? "dot" : "solid", size: 7,
+            hover: hov(n, "Muon's step t", "speedup", "d", ".3f") })),
+          x: { title: "Muon's step t (log scale)", log: true }, y: { title: "step-equivalent speedup" }, refs: [{ axis: "y", value: 1, label: "1 = Muon's pace" }],
+          look: "Values above 1 mean the arm needs fewer steps than Muon to reach the same validation loss." });
+      }
+      emit(specs);
+    }
+
+    // 3. one step at the Newton trainer's states
+    const probes = Object.entries(S.probe || {});
+    if (probes.length) {
+      section("One step at the Newton trainer's states", "One step along each direction at c times the trainer's step (held-out, hidden matrices only); GN's direction rescaled per matrix to the trainer's norms, by curvature set.", null, "One step at trainer states");
+      emit(probes.map(([st, P]) => {
+        const curves = Object.entries(P.curves || {});
+        const gnSets = curves.filter(([n]) => n.startsWith("GN")).map(([n]) => n);
+        const gcols = ramp(fam("gn"), Math.max(2, gnSets.length));
+        const traces = curves.map(([n, ys]) => {
+          let o = { color: T.muted, dash: "dash" };
+          if (n.startsWith("the run")) o = { color: T.ink, width: 3.6, size: 9 };
+          else if (n.startsWith("Muon")) o = { color: fam("muon"), dash: "dash" };
+          else if (n.startsWith("momentum")) o = { color: fam("gd"), dash: "dot" };
+          else if (n.startsWith("GN")) o = { color: gcols[gnSets.indexOf(n)], dash: "solid", symbol: "diamond" };
+          return line(Object.assign({ x: P.scales, y: ys, name: n, hover: hov(`${st}: ${n}`, "c", "held-out loss change", ".2f", ".5f") }, o));
+        });
+        return { title: `${st}: one step along each direction at c × the trainer's step`, sub: "GN normalized: Krylov 64, damping 1e-3 ρ, rescaled per matrix; 64 in-batch or 64/256/1024 fresh curvature sequences (light → dark)",
+          traces, x: { title: "c, multiple of the trainer's step (log scale)", log: true, tickvals: P.scales, ticktext: P.scales.map(String) },
+          y: { title: "held-out loss change", range: [-0.008, 0.03] }, refs: [{ axis: "y", value: 0, label: "0 = no change" }],
+          look: "The run's own step is best near c ≈ ½ and neutral at c = 1; other directions at the same norms meet curvature the dynamics never regulated. The y-range is clipped as in the original." };
+      }));
+    }
+
+    // 4. speedup at matched loss (one overlay of 19 series in the original; split by batch size on shared axes)
+    const MT = S.matched || {}, mn = Object.keys(MT);
+    if (mn.length) {
+      section("Speedup at matched loss, by batch size", "Step-equivalent speedup over the best Muon at the same batch (and β), against Muon's smoothed training loss at step t; training proceeds to the right. One overlay of all batch sizes in the original Atlas, split here into three charts that share both axes, so heights and positions compare directly. Line styles: solid = the main runs, dashed = β 0.95, dash-dotted = another momentum β named in the arm, dotted = a second seed, long-dashed = the 2× longer schedule; shades of one color = other learning rates, momenta or arms of the same optimizer.", null, "Matched-loss speedup");
+      const head = (n) => n.split(":")[0].trim(), batchOf = (n) => head(n).split(" ")[0], variant = (n) => head(n).split(" ").slice(1).join(" ");
+      const armOf = (n) => n.split(":").slice(1).join(":").trim(), optOf = (a) => a.replace(/ @.*$/, ""), lrOf = (a) => { const m = a.match(/@([\d.]+)/); return m ? +m[1] : 0; };
+      const momOf = (a) => { const m = a.match(/ β([\d.]+)/); return m ? m[1] : ""; };
+      const keyOf = (a) => `${optOf(a)}|${lrOf(a)}|${momOf(a)}`;
+      const famOf = (o) => (/^(S_left|S_right|S∘PD)/.test(o) ? "spd" : o.startsWith("TS") ? "ts" : o.startsWith("PD") ? "pd" : o.startsWith("Muon") ? "muon" : "other");
+      const VDASH = { "": "solid", "β0.95": "dash", "long": "longdash" };
+      const xs = mn.flatMap((n) => MT[n].map((r) => r[0])), ys = mn.flatMap((n) => MT[n].map((r) => r[1])).filter(fin);
+      const xr = [Math.max(...xs) + 0.05, Math.min(...xs) - 0.05], yr = [Math.min(...ys) - 0.02, Math.max(...ys) + 0.02];
+      const batches = [...new Set(mn.map(batchOf))].sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
+      emit(batches.map((b) => {
+        const ns = mn.filter((n) => batchOf(n) === b);
+        const traces = [];
+        [...new Set(ns.map((n) => famOf(optOf(armOf(n)))))].forEach((f) => {
+          const members = ns.filter((n) => famOf(optOf(armOf(n))) === f);
+          const keys = [...new Set(members.map((n) => keyOf(armOf(n))))].sort((a, c) => a.localeCompare(c));
+          const cols = spread(fam(f), keys.length);
+          members.forEach((n) => {
+            const a = armOf(n), v = variant(n);
+            const label = v ? `${v}: ${a}` : a;
+            traces.push(line({ x: MT[n].map((r) => r[0]), y: MT[n].map((r) => r[1]), name: label, mode: "lines", width: famOf(optOf(a)) === "spd" ? 2.8 : 2.2,
+              color: cols[keys.indexOf(keyOf(a))], dash: momOf(a) && !v ? "dashdot" : VDASH[v] != null ? VDASH[v] : "dot", hover: hov(n, "Muon's training loss", "speedup", ".3f", ".3f") }));
+          });
+        });
+        return { title: `${b}-token batch: speedup at matched loss`, sub: `${ns.length} arm${ns.length === 1 ? "" : "s"} against the best Muon at ${b}`,
+          traces, x: { title: "Muon's training loss at step t (training proceeds →)", range: xr }, y: { title: "step-equivalent speedup", range: yr },
+          refs: [{ axis: "y", value: 1, label: "1 = Muon's pace" }], height: 560,
+          look: "The speedup grows with batch size and through training (to the right); compare the same loss across the three charts." };
+      }));
+    }
+
+    // 5. maps at the oscillating state and at the valley floor
+    const MPs = S.maps || {}, mstates = Object.keys(MPs), DC = S.decomp || {}, dstates = Object.keys(DC);
+    if (mstates.length || dstates.length) {
+      section("Maps at the oscillating state and at the valley floor", "One step on the next momentum M′ from Muon's 1M state; cross-fitted held-out decrease ×10⁻³. PD in exact GN geometry: −(G+μ)^-p polar((G+μ)^-p M′) per matrix at Muon's norms.", null, "Oscillation vs floor");
+      const specs = [];
+      if (mstates.length) {
+        const mapColors = { muon: fam("muon"), "pd_a0.25": pdLight(), "pd_a0.5": fam("pd"), "pdw_a0.5": fam("pd"), gn: fam("gn"), "gnpd_p0.25": shade(fam("gnpd"), T.dark ? -0.12 : 0.14), "gnpd_p0.5": fam("gnpd") };
+        const nm = [["muon", "Muon"], ["pd_a0.25", "PD α¼"], ["pd_a0.5", "PD α½"], ["pdw_a0.5", "PD α½, token-weighted C"], ["gn", "damped GN"], ["gnpd_p0.25", "PD in GN geometry, p ¼"], ["gnpd_p0.5", "PD in GN geometry, p ½"]];
+        specs.push({ title: "One step on the next momentum M′: oscillating state vs valley floor (Muon 1M)", sub: "cross-fitted held-out decrease ×10⁻³",
+          traces: nm.filter(([k]) => mstates.some((st) => MPs[st][k] !== undefined)).map(([k, n]) => bar({ x: mstates, y: mstates.map((st) => (MPs[st][k] != null ? MPs[st][k] : null)), name: n,
+            color: mapColors[k], pattern: k === "pdw_a0.5" ? HATCH("/") : undefined, hover: `<b>${esc(n)}</b><br>%{x}: %{y:.3f} ×10⁻³<extra></extra>` })),
+          x: { title: "state", type: "category" }, y: { title: "one-step decrease (×10⁻³)", rangemode: "tozero" }, height: 560,
+          look: "Compare each map at the oscillating state with the same map at the valley floor." });
+      }
+      if (dstates.length) {
+        const keys = ["PD α½", "GN-PD, Kronecker B⊗C", "GN-PD, exact per-matrix blocks", "GN-PD, exact per-layer blocks", "damped GN", "GN-PD, full GN"];
+        const gp = ramp(fam("gnpd"), 4);
+        const cmap = { "PD α½": fam("pd"), "GN-PD, Kronecker B⊗C": gp[0], "GN-PD, exact per-matrix blocks": gp[1], "GN-PD, exact per-layer blocks": gp[2], "GN-PD, full GN": gp[3], "damped GN": fam("gn") };
+        specs.push({ title: "Where PD-in-GN-geometry's gain comes from (next momentum M′, Muon 1M)", sub: "G = Kronecker factors, exact GN per matrix or per layer, or the full exact GN (gold, light → dark = coarser → finer curvature)",
+          traces: keys.filter((k) => dstates.some((st) => DC[st][k] !== undefined)).map((k) => bar({ x: dstates, y: dstates.map((st) => (DC[st][k] != null ? DC[st][k] : null)), name: k,
+            color: cmap[k] || T.muted, hover: `<b>${esc(k)}</b><br>%{x}: %{y:.3f} ×10⁻³<extra></extra>` })),
+          x: { title: "state", type: "category" }, y: { title: "one-step decrease (×10⁻³)", rangemode: "tozero" }, height: 560,
+          look: "Read the gold bars from light to dark: GN-PD with coarser to finer curvature, against PD α½ and damped GN." });
+      }
+      emit(specs);
+    }
+
+    // 6. cooldown and floor steps
+    const CO = S.cooldown || {}, cn = Object.keys(CO), FS = S.floorsteps || {}, fsn = Object.keys(FS);
+    if (cn.length || fsn.length) {
+      section("Cooldown and floor steps", "Does PD in GN geometry keep gaining at the end of the schedule, and is its gain at the floor a rate or a one-time release?", null, "Cooldown and floor steps");
+      const specs = [];
+      if (cn.length) {
+        const style = (n) => (n === "Muon baseline" ? { color: fam("gd"), dash: "dash", mode: "lines", width: 2.4 } : n.startsWith("A") ? { color: fam("muon") }
+          : n.startsWith("B3") ? { color: shade(fam("gnpd"), T.dark ? 0.14 : -0.16), dash: "dash", symbol: "square" } : n.startsWith("B") ? { color: fam("gnpd") }
+            : n.startsWith("C") ? { color: fam("gnpd"), dash: "dot", symbol: "diamond" } : { color: T.muted });
+        specs.push({ title: "The cooldown test: PD in GN geometry from Muon's 1M state at step 1300", sub: "validation to the end of the schedule; A must reproduce the baseline (dashed)", wide: true,
+          traces: cn.map((n) => line(Object.assign({ x: CO[n].map((r) => r[0]), y: CO[n].map((r) => r[1]), name: n, hover: hov(n, "step", "validation loss", "d", ".5f") }, style(n)))),
+          x: { title: "step" }, y: { title: "validation loss" }, refs: [{ axis: "x", value: 1322, label: "cooldown starts (~1322)" }],
+          look: "The cooldown runs from step ~1322 (LR linearly to 0 at 1469); compare where each arm ends at 1469." });
+      }
+      const colorFor = (n) => (n.startsWith("PD in GN geometry") ? fam("gnpd") : n.startsWith("Muon") ? fam("muon") : n.startsWith("PD") ? fam("pd") : T.muted);
+      ["instantaneous rule", "smoothed rule"].forEach((rule) => {
+        const ns = fsn.filter((n) => n.includes(`(${rule})`));
+        if (!ns.length) return;
+        specs.push({ title: `Floor steps under the ${rule} (from the 1M floor at step 516)`,
+          sub: `every direction at Muon's norms with scale κ(−slope/curvature) measured on fresh sequences each step${rule === "smoothed rule" ? " (EMA 0.7)" : ""}; dashed: transported momentum M + G·D; κ 2 arms start hidden`,
+          traces: ns.map((n) => line({ x: FS[n].map((r) => r[0]), y: FS[n].map((r) => r[1]), name: n.replace(` (${rule})`, ""), color: colorFor(n),
+            dash: n.includes("transported") ? "dash" : "solid", width: n.includes("κ 2") ? 1.8 : 2.6, symbol: n.includes("κ 2") ? "square" : "circle",
+            visible: n.includes("κ 2") ? "legendonly" : true, hover: hov(n, "step k from the floor", "held-out loss", "d", ".5f") })),
+          x: { title: "step k from the floor" }, y: { title: "held-out loss" },
+          look: "Is the gain of PD in GN geometry a rate or a one-time release? Compare how fast each line falls after the first steps." });
+      });
+      emit(specs);
+    }
+
+    // 7. signal-to-noise and 16M finals
+    const SN = S.framesnr || {}, snn = Object.keys(SN), F16 = S.finals16m || {}, fn16 = Object.keys(F16);
+    if (snn.length || fn16.length) {
+      section("Output-side signal-to-noise, and 16M finals", "Why SOAP's output-side normalization works at large batch, and the final validation of the 16M-token runs.", null, "SNR and 16M finals");
+      if (snn.length) {
+        const FR = [["soap", "SOAP frame", fam("soap")], ["gn_out", "GN output frame", fam("gn")], ["raw", "raw basis", fam("gd")]];
+        const DS = ["solid", "dash", "dot", "dashdot"], SY = ["circle", "square", "diamond", "triangle-up"];
+        const traces = [];
+        snn.forEach((st, i) => FR.forEach(([f, fn, c]) => { if (SN[st][f]) traces.push(line({ x: ["1M", "4M", "16M"], y: SN[st][f], name: `${st}: ${fn}`, color: c, dash: DS[i % 4], symbol: SY[i % 4], size: 10,
+          meta: { st, f }, hover: hov(`${st}: ${fn}`, "batch", "fraction with SNR > 1", "", ".3f") })); }));
+        emit([{ title: "Per-entry signal-to-noise of the PD-whitened gradient, by frame and batch size", sub: "fraction of gradient entries whose signal beats the noise at a batch of 1M / 4M / 16M tokens (64 micro-batch gradients)",
+          traces, legend: { groups: [
+            { title: "Frame", items: FR.map(([f, fn, c]) => ({ label: fn, sw: { kind: "line", color: c }, match: (t) => t.meta.f === f })) },
+            { title: "State", items: snn.map((st, i) => ({ label: st, sw: { kind: "line", color: T.ink2, dash: DS[i % 4], symbol: SY[i % 4] }, match: (t) => t.meta.st === st })) }] },
+          x: { title: "batch (tokens)", type: "category" }, y: { title: "fraction of entries with SNR > 1", range: [0, 1] },
+          look: "In every frame 95–100% of the signal energy is in entries with SNR > 1, even though the fraction of such entries is well below 1." }]);
+      }
+      if (fn16.length) table({ title: "16M-token batch: final validation", sub: "92 steps = 1.54B tokens unless 2× duration (T2x) = 184 steps; STS = SOAP on the two-sided map; Sleft/Sright = SOAP on one side only; SPDgrad = SOAP with the gradient second moment",
+        cols: ["run", "val loss"], rows: fn16.map((n) => [n, F16[n]]).sort((a, b) => a[1] - b[1]).map(([n, v]) => [armCell(n), fmt(v, 4)]),
+        look: "Sorted from best to worst final validation loss." });
+    }
+  };
+
+  R.batch = () => {
+    const entries = Object.entries(D.batch || {});
+    if (!entries.length) return note("No batch-size runs yet.");
+    const rows = entries.map(([n, c]) => ({ n, c, i: parseArm(n) }));
+    const yr = { title: "validation loss", range: [3.6, 4.6] };
+    const specs = [];
+    const one = rows.filter((r) => r.i.batch === "1M");
+    if (one.length) {
+      const { labels } = armLabels(one.map((r) => r.n));
+      specs.push({ title: "1M-token batch: the four trajectories", sub: "validation loss against tokens; y-axis clipped to 3.6–4.6 as in the original",
+        traces: one.map((r, j) => line({ x: r.c.tokens.map((t) => t / 1e9), y: r.c.val, name: labels[j], color: fam(r.i.fam), width: 2.8, size: 5,
+          hover: hov(labels[j], "tokens (B)", "validation loss", ".3f", ".4f", `<br><span style="font-size:12px">${esc(r.n)}</span>`) })),
+        x: { title: "tokens (billions)" }, y: yr, look: "The four optimizers at the 1M-token batch over the same 1.54B tokens." });
+    }
+    const four = rows.filter((r) => r.i.batch !== "1M");
+    const order = ["muon", "pd", "soap", "spd", "ts", "other"];
+    [...new Set(four.map((r) => r.i.fam))].sort((a, b) => order.indexOf(a) - order.indexOf(b)).forEach((f) => {
+      const rs = four.filter((r) => r.i.fam === f);
+      const { labels, shared } = armLabels(rs.map((r) => r.n));
+      const lrs = [...new Set(rs.map((r) => r.i.lr))].sort((a, b) => a - b);
+      const cols = ramp(fam(f), Math.max(2, lrs.length));
+      const vkey = (r) => `${r.i.alpha}|${r.i.mom}|${r.i.nesterov}|${r.i.noclip}|${r.i.hw}|${r.i.beta2}`;
+      const variants = [...new Set(rs.map(vkey))];
+      const DS = ["dash", "dot", "dashdot", "longdash", "longdashdot", "solid"], SY = ["circle", "square", "diamond", "triangle-up", "triangle-down"];
+      const traces = rs.map((r, j) => {
+        const v = variants.indexOf(vkey(r));
+        return line({ x: r.c.tokens.map((t) => t / 1e9), y: r.c.val, name: labels[j], color: cols[lrs.length > 1 ? Math.round((lrs.indexOf(r.i.lr) * (cols.length - 1)) / (lrs.length - 1)) : cols.length - 1],
+          dash: DS[v % DS.length], symbol: SY[v % SY.length], size: 8, hover: hov(labels[j], "tokens (B)", "validation loss", ".3f", ".4f", `<br><span style="font-size:12px">${esc(r.n)}</span>`) });
+      });
+      const ref1 = one.find((r) => r.i.fam === f);
+      if (ref1) traces.unshift(line({ x: ref1.c.tokens.map((t) => t / 1e9), y: ref1.c.val, name: `${optName(ref1.i)} at 1M (reference)`, color: fam(f), width: 3.4, mode: "lines",
+        hover: hov(`${optName(ref1.i)} at the 1M-token batch`, "tokens (B)", "validation loss", ".3f", ".4f") }));
+      const fname = (FAMS.find((q) => q[0] === f) || [f, f])[1];
+      specs.push({ title: `${fname}: 4M-token batch runs`, sub: `${shared.length ? shared.join(" · ") + " · " : ""}color: learning rate (light = lower); line style: variant${ref1 ? "; thick solid: the 1M trajectory" : ""}`,
+        traces, x: { title: "tokens (billions)" }, y: yr,
+        look: ref1 ? "Where each 4M run ends relative to the same optimizer's 1M trajectory at the same token count." : "Where each 4M run ends at the same token count." });
+    });
+    emit(specs);
+    const tr = entries.map(([n, c]) => [n, c.tokens[c.tokens.length - 1], c.val[c.val.length - 1]]).sort((a, b) => a[2] - b[2]);
+    table({ title: "Finals so far", cols: ["run", "batch", "tokens", "val loss"],
+      rows: tr.map((r) => [armCell(r[0]), parseArm(r[0]).batch, `${(r[1] / 1e9).toFixed(3)}B`, fmt(r[2], 5)]), look: "Sorted from best to worst final validation loss." });
+  };
+
+  R.__missing = (view) => note(`“${view.label}” was added to the original Atlas after this readable edition was laid out, so it has no readable layout yet. Its explanation is shown above; open the original Atlas for its charts.`);
+
+  // ------------------------------------------------------------------ chrome: nav, key, controls, header
+  function currentView() { return VIEWS.find((v) => v.id === state.view) || VIEWS[0]; }
+  function setView(id, scroll) {
+    if (!VIEWS.some((v) => v.id === id)) return;
+    state.view = id; save();
+    try { history.replaceState(null, "", `#${id}`); } catch (e) { /* ignore */ }
+    renderView();
+    if (scroll) { try { window.scrollTo({ top: 0, behavior: "auto" }); } catch (e) { window.scrollTo(0, 0); } }
+  }
+  function buildNav() {
+    const nav = $("#nav"), sel = $("#view-select");
+    nav.innerHTML = ""; sel.innerHTML = "";
+    VIEWS.forEach((v) => {
+      const b = el("button", null, v.label); b.type = "button"; b.dataset.view = v.id;
+      b.addEventListener("click", () => setView(v.id, true));
+      nav.appendChild(b);
+      const o = el("option", null, v.label); o.value = v.id; sel.appendChild(o);
+    });
+    sel.addEventListener("change", () => setView(sel.value, true));
+  }
+  function syncNav(view) {
+    document.querySelectorAll("#nav button").forEach((b) => { if (b.dataset.view === view.id) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+    $("#view-select").value = view.id;
+  }
+  function buildKey() {
+    [$("#key"), $("#key-m")].forEach((ul) => {
+      ul.innerHTML = "";
+      FAMS.forEach(([k, lab]) => {
+        const li = el("li");
+        li.appendChild(swatch({ kind: "line", color: T.fam[k], symbol: "circle", width: 3 }));
+        li.appendChild(el("span", null, lab));
+        ul.appendChild(li);
+      });
+    });
+  }
+  function seg(id, options, value, onPick) {
+    const box = document.getElementById(id);
+    box.innerHTML = "";
+    options.forEach(([v, text]) => {
+      const b = el("button", null, text); b.type = "button"; b.setAttribute("role", "radio");
+      b.setAttribute("aria-checked", String(String(v) === String(value)));
+      b.addEventListener("click", () => onPick(String(v)));
+      box.appendChild(b);
+    });
+  }
+  function renderControls(view) {
+    const c = view.controls || [];
+    ["runs", "kind", "depth", "step", "gnstate"].forEach((k) => { document.getElementById(`ctl-${k}`).hidden = !c.includes(k); });
+    $("#controls").hidden = !c.length;
+    if (c.includes("runs")) {
+      const chips = $("#chips"); chips.innerHTML = "";
+      RUNS.forEach((r) => {
+        const b = el("button", "chip"); b.type = "button";
+        b.style.setProperty("--c", fam(RUNFAM[r] || "other"));
+        b.appendChild(el("span", "dot")); b.appendChild(el("span", null, label(r)));
+        b.setAttribute("aria-pressed", String(state.runs.includes(r)));
+        b.addEventListener("click", () => {
+          state.runs = state.runs.includes(r) ? state.runs.filter((x) => x !== r) : RUNS.filter((x) => x === r || state.runs.includes(x));
+          save(); renderView();
+        });
+        chips.appendChild(b);
+      });
+      $("#lbl-runs").textContent = view.id === "lags" ? "Optimizers (dense lags: Muon and PD)" : "Optimizers";
+    }
+    if (c.includes("kind")) {
+      seg("seg-kind", KINDS.map((k) => [k, k]), state.kind, (v) => { state.kind = v; save(); renderView(); });
+      $("#lbl-kind").textContent = view.id === "momentum" ? "Highlighted matrix kind" : "Matrix kind";
+    }
+    if (c.includes("depth")) seg("seg-depth", [["median", "median of 8"]].concat([1, 2, 3, 4, 5, 6, 7, 8].map((d) => [String(d), String(d)])), state.depth,
+      (v) => { state.depth = v; save(); renderView(); });
+    if (c.includes("step")) {
+      const gs = gapSteps();
+      if (!gs.includes(Number(state.step)) && gs.length) state.step = String(gs[Math.floor(gs.length / 2)]);
+      seg("seg-step", gs.map((s) => [String(s), String(s)]), state.step, (v) => { state.step = v; save(); renderView(); });
+    }
+    if (c.includes("gnstate")) {
+      const keys = Object.keys(D.gn || {});
+      if (!keys.includes(state.gnstate) && keys.length) state.gnstate = keys[0];
+      seg("seg-gnstate", keys.map((k) => [k, k]), state.gnstate, (v) => { state.gnstate = v; save(); renderView(); });
+    }
+  }
+  function renderHeader(view) {
+    const idx = VIEWS.indexOf(view);
+    $("#eyebrow").textContent = `View ${idx + 1} of ${VIEWS.length}`;
+    $("#view-title").textContent = view.label;
+    let how = view.how || "", cav = "";
+    const k = how.search(/Caveat\b/);
+    if (k > 0) { cav = how.slice(k).replace(/^Caveat\s*/, ""); how = how.slice(0, k).trim(); }
+    $("#lede").textContent = how;
+    $("#caveat").hidden = !cav;
+    $("#caveat-text").textContent = cav.replace(/^\(([^)]*)\):\s*/, "($1) ");
+    $("#help").hidden = view.id === "principles";
+    document.title = view.id === "principles" ? "Readable Gauss-Newton Atlas" : `${view.label} · Readable Gauss-Newton Atlas`;
+  }
+  function renderFooter() {
+    const f = $("#footer");
+    f.textContent = "";
+    f.appendChild(document.createTextNode("Source: logs/muon_spectra/second_order_audit_20260926 (marginals, gap map, one_step_gn.py, dense-lag persistence, one-step split) and the soaudit trajectory and batch-size cohorts. "));
+    if (META && META.built) {
+      f.appendChild(document.createTextNode(`Data built ${META.built} by the original builder `));
+      f.appendChild(el("code", null, META.builder || "make_atlas.py"));
+      f.appendChild(document.createTextNode(` (payload ${META.payload_mb} MB, sha256 ${String(META.payload_sha256 || "").slice(0, 12)}…); every number is taken unchanged from that payload.`));
+    }
+  }
+
+  // ------------------------------------------------------------------ render loop
+  function renderView() {
+    T = readTheme();
+    purgeAll();
+    host().innerHTML = "";
+    const view = currentView();
+    renderHeader(view); renderControls(view); syncNav(view); buildKey();
+    if (view.id !== "principles" && !view.missing) {
+      if (typeof window.Plotly === "undefined") { note("The plotting library (plotly.js from cdn.jsdelivr.net) did not load, so the charts cannot be drawn. Reload the page to try again.", true); return; }
+      if (!Object.keys(D).length) { note("This page was opened without its data. Rebuild it with build_readable_atlas.py.", true); return; }
+      if ((view.controls || []).includes("runs") && !state.runs.length) { note("Select at least one optimizer above."); return; }
+    }
+    SECTIONS = [];
+    try { (view.missing ? R.__missing : (R[view.id] || R.__missing))(view); } catch (err) { console.error(err); note(`This view could not be drawn (${err.message}).`, true); }
+    if (SECTIONS.length >= 3) {
+      const nav = el("nav", "jump");
+      nav.setAttribute("aria-label", "Sections of this view");
+      nav.appendChild(el("span", null, "Jump to"));
+      SECTIONS.forEach(({ el: target, label }) => {
+        const b = el("button", null, label); b.type = "button";
+        b.addEventListener("click", () => target.scrollIntoView({ block: "start" }));
+        nav.appendChild(b);
+      });
+      host().insertBefore(nav, host().firstChild);
+    }
+  }
+
+  buildNav();
+  renderFooter();
+  const start = () => renderView();
+  let started = false;
+  const go = () => { if (!started) { started = true; start(); } };
+  try { if (document.fonts && document.fonts.ready) { document.fonts.ready.then(go); setTimeout(go, 1500); } else go(); } catch (e) { go(); }
+  window.addEventListener("hashchange", () => { const h = hashView(); if (h && h !== state.view) setView(h, true); });
+  const rerender = () => { if (started) renderView(); };
+  try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", rerender); } catch (e) { /* ignore */ }
+  try { window.matchMedia("(max-width: 640px)").addEventListener("change", rerender); } catch (e) { /* ignore */ }
+  new MutationObserver(rerender).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

@@ -1,0 +1,1758 @@
+[
+ {
+  "width": 1600,
+  "view": "principles",
+  "firstPaintMs": 750,
+  "title": "Principles",
+  "panels": 0,
+  "plotted": 0,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 5133,
+  "plotSizes": [],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "curv",
+  "firstPaintMs": 854,
+  "title": "Curvature vs K-FAC",
+  "panels": 4,
+  "plotted": 12,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 2271,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "train",
+  "firstPaintMs": 865,
+  "title": "Over training",
+  "panels": 5,
+  "plotted": 15,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 2866,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "gap",
+  "firstPaintMs": 837,
+  "title": "Gap map",
+  "panels": 6,
+  "plotted": 18,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 2945,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "spec",
+  "firstPaintMs": 859,
+  "title": "Spectra",
+  "panels": 8,
+  "plotted": 24,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 3743,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "gn",
+  "firstPaintMs": 765,
+  "title": "Exact Gauss-Newton",
+  "panels": 6,
+  "plotted": 18,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 3773,
+  "plotSizes": [
+   [
+    602,
+    722
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    722
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    722
+   ],
+   [
+    602,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "lags",
+  "firstPaintMs": 863,
+  "title": "Persistence",
+  "panels": 2,
+  "plotted": 6,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 1383,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "coupling",
+  "firstPaintMs": 815,
+  "title": "Coupling",
+  "panels": 1,
+  "plotted": 3,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 1876,
+  "plotSizes": [
+   [
+    1266,
+    560
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "blocks",
+  "firstPaintMs": 701,
+  "title": "Blocks & stability",
+  "panels": 2,
+  "plotted": 6,
+  "tables": 2,
+  "empties": [],
+  "overflowX": 0,
+  "height": 3735,
+  "plotSizes": [
+   [
+    1266,
+    560
+   ],
+   [
+    1266,
+    560
+   ]
+  ],
+  "missing": [
+   [
+    "D.blockgn.blocks.M4M.gs_forward_layer",
+    1
+   ],
+   [
+    "D.blockgn.blocks.M4M.gs_reverse_all",
+    1
+   ],
+   [
+    "D.blockgn.blocks.PD1M.gs_forward_layer",
+    1
+   ],
+   [
+    "D.blockgn.blocks.PD1M.gs_reverse_all",
+    1
+   ],
+   [
+    "D.eos.M_lr0.007_s260925_l40s:500.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.25_lr0.01_s260925_ada:500.beta",
+    1
+   ],
+   [
+    "D.eos.M_b4M_lr0.014_s260925_l40s:183.beta",
+    1
+   ],
+   [
+    "D.eos.PD_b4M_lr0.02_s260925_ada:183.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.5_b4M_lr0.02_s260925_ada:183.beta",
+    1
+   ],
+   [
+    "D.eos.M_lr0.007_s260925_l40s:900.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.25_lr0.01_s260925_ada:900.beta",
+    1
+   ],
+   [
+    "D.eos.M_lr0.007_s260925_l40s:200.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.25_lr0.01_s260925_ada:200.beta",
+    1
+   ]
+  ],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "momentum",
+  "firstPaintMs": 776,
+  "title": "Momentum & noise",
+  "panels": 17,
+  "plotted": 51,
+  "tables": 2,
+  "empties": [],
+  "overflowX": 0,
+  "height": 10689,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    520
+   ],
+   [
+    1266,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    520
+   ],
+   [
+    1266,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "gap2gn",
+  "firstPaintMs": 844,
+  "title": "Gap to GN",
+  "panels": 7,
+  "plotted": 21,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 5497,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    820
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ]
+  ],
+  "missing": [
+   [
+    "D.gap2gn.rescore.M1M_500 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_500 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_500 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_500 g16M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g16M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g16M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g16M.ekfac",
+    2
+   ]
+  ],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "edge",
+  "firstPaintMs": 954,
+  "title": "Edge & co-adaptation",
+  "panels": 51,
+  "plotted": 153,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 25562,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    520
+   ],
+   [
+    602,
+    520
+   ],
+   [
+    602,
+    520
+   ],
+   [
+    602,
+    520
+   ],
+   [
+    602,
+    520
+   ],
+   [
+    602,
+    520
+   ],
+   [
+    602,
+    758
+   ],
+   [
+    602,
+    758
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    1290
+   ],
+   [
+    602,
+    462
+   ],
+   [
+    602,
+    462
+   ],
+   [
+    1266,
+    462
+   ],
+   [
+    1266,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "steprule",
+  "firstPaintMs": 809,
+  "title": "Step rule & floors",
+  "panels": 19,
+  "plotted": 57,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 11497,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    1266,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    602,
+    560
+   ],
+   [
+    1266,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    540
+   ]
+  ],
+  "missing": [
+   [
+    "D.steprule.decomp.oscillating @500.GN-PD, exact per-matrix blocks",
+    2
+   ]
+  ],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "batch",
+  "firstPaintMs": 793,
+  "title": "Batch size",
+  "panels": 5,
+  "plotted": 15,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 3694,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    1266,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "principles",
+  "firstPaintMs": 666,
+  "title": "Principles",
+  "panels": 0,
+  "plotted": 0,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 10969,
+  "plotSizes": [],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "curv",
+  "firstPaintMs": 781,
+  "title": "Curvature vs K-FAC",
+  "panels": 4,
+  "plotted": 12,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 4365,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "train",
+  "firstPaintMs": 820,
+  "title": "Over training",
+  "panels": 5,
+  "plotted": 15,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 4575,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "gap",
+  "firstPaintMs": 778,
+  "title": "Gap map",
+  "panels": 6,
+  "plotted": 18,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 5620,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "spec",
+  "firstPaintMs": 798,
+  "title": "Spectra",
+  "panels": 8,
+  "plotted": 24,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 6761,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "gn",
+  "firstPaintMs": 748,
+  "title": "Exact Gauss-Newton",
+  "panels": 6,
+  "plotted": 18,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 7678,
+  "plotSizes": [
+   [
+    332,
+    810
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    810
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    810
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "lags",
+  "firstPaintMs": 709,
+  "title": "Persistence",
+  "panels": 2,
+  "plotted": 6,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 2705,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "coupling",
+  "firstPaintMs": 830,
+  "title": "Coupling",
+  "panels": 1,
+  "plotted": 3,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 2345,
+  "plotSizes": [
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "blocks",
+  "firstPaintMs": 727,
+  "title": "Blocks & stability",
+  "panels": 2,
+  "plotted": 6,
+  "tables": 2,
+  "empties": [],
+  "overflowX": 0,
+  "height": 4417,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [
+   [
+    "D.blockgn.blocks.M4M.gs_forward_layer",
+    1
+   ],
+   [
+    "D.blockgn.blocks.M4M.gs_reverse_all",
+    1
+   ],
+   [
+    "D.blockgn.blocks.PD1M.gs_forward_layer",
+    1
+   ],
+   [
+    "D.blockgn.blocks.PD1M.gs_reverse_all",
+    1
+   ],
+   [
+    "D.eos.M_lr0.007_s260925_l40s:500.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.25_lr0.01_s260925_ada:500.beta",
+    1
+   ],
+   [
+    "D.eos.M_b4M_lr0.014_s260925_l40s:183.beta",
+    1
+   ],
+   [
+    "D.eos.PD_b4M_lr0.02_s260925_ada:183.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.5_b4M_lr0.02_s260925_ada:183.beta",
+    1
+   ],
+   [
+    "D.eos.M_lr0.007_s260925_l40s:900.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.25_lr0.01_s260925_ada:900.beta",
+    1
+   ],
+   [
+    "D.eos.M_lr0.007_s260925_l40s:200.beta",
+    1
+   ],
+   [
+    "D.eos.PD_a0.25_lr0.01_s260925_ada:200.beta",
+    1
+   ]
+  ],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "momentum",
+  "firstPaintMs": 820,
+  "title": "Momentum & noise",
+  "panels": 17,
+  "plotted": 51,
+  "tables": 2,
+  "empties": [],
+  "overflowX": 0,
+  "height": 16658,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "gap2gn",
+  "firstPaintMs": 771,
+  "title": "Gap to GN",
+  "panels": 7,
+  "plotted": 21,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 9461,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    1070
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [
+   [
+    "D.gap2gn.rescore.M1M_500 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_500 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g4M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g16M.kfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_500 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_500 g16M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.M1M_a516 g16M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_500 g16M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g4M.ekfac",
+    2
+   ],
+   [
+    "D.gap2gn.rescore.PD1M_a516 g16M.ekfac",
+    2
+   ]
+  ],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "edge",
+  "firstPaintMs": 796,
+  "title": "Edge & co-adaptation",
+  "panels": 51,
+  "plotted": 153,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 47476,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    470
+   ],
+   [
+    332,
+    470
+   ],
+   [
+    332,
+    470
+   ],
+   [
+    332,
+    470
+   ],
+   [
+    332,
+    470
+   ],
+   [
+    332,
+    470
+   ],
+   [
+    332,
+    758
+   ],
+   [
+    332,
+    758
+   ],
+   [
+    332,
+    480
+   ],
+   [
+    332,
+    480
+   ],
+   [
+    332,
+    480
+   ],
+   [
+    332,
+    480
+   ],
+   [
+    332,
+    480
+   ],
+   [
+    332,
+    480
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    1520
+   ],
+   [
+    332,
+    512
+   ],
+   [
+    332,
+    512
+   ],
+   [
+    332,
+    512
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "steprule",
+  "firstPaintMs": 831,
+  "title": "Step rule & floors",
+  "panels": 19,
+  "plotted": 57,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 19744,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [
+   [
+    "D.steprule.decomp.oscillating @500.GN-PD, exact per-matrix blocks",
+    2
+   ]
+  ],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "batch",
+  "firstPaintMs": 793,
+  "title": "Batch size",
+  "panels": 5,
+  "plotted": 15,
+  "tables": 1,
+  "empties": [],
+  "overflowX": 0,
+  "height": 5521,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ }
+]

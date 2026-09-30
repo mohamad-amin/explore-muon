@@ -1,0 +1,68 @@
+{
+  "stage": "exploratory carried-LR batch sentinels; not tuned or replicated",
+  "rows": [
+    {
+      "batch": 2048,
+      "threshold": 2.4,
+      "muon_steps": 117.02890646836336,
+      "spd_steps": 112.84939285567545,
+      "step_ratio": 1.0370362082322688
+    },
+    {
+      "batch": 2048,
+      "threshold": 2.2,
+      "muon_steps": 142.05703272631226,
+      "spd_steps": 125.32031645275491,
+      "step_ratio": 1.1335515002459078
+    },
+    {
+      "batch": 2048,
+      "threshold": 2.0,
+      "muon_steps": 231.7973353926748,
+      "spd_steps": 201.3772204079075,
+      "step_ratio": 1.1510603578853094
+    },
+    {
+      "batch": 8192,
+      "threshold": 2.4,
+      "muon_steps": 41.716296839252806,
+      "spd_steps": 39.97045319051203,
+      "step_ratio": 1.043678355119456
+    },
+    {
+      "batch": 8192,
+      "threshold": 2.2,
+      "muon_steps": 60.34895271095709,
+      "spd_steps": 56.367423450190074,
+      "step_ratio": 1.0706352892692594
+    },
+    {
+      "batch": 8192,
+      "threshold": 2.0,
+      "muon_steps": 97.76190723490578,
+      "spd_steps": 80.32620959758593,
+      "step_ratio": 1.2170611276776073
+    },
+    {
+      "batch": 32768,
+      "threshold": 2.4,
+      "muon_steps": 27.916277543290484,
+      "spd_steps": 27.958800420086355,
+      "step_ratio": 0.9984790879380747
+    },
+    {
+      "batch": 32768,
+      "threshold": 2.2,
+      "muon_steps": 39.80689895455578,
+      "spd_steps": 38.29381199754658,
+      "step_ratio": 1.0395125707805257
+    },
+    {
+      "batch": 32768,
+      "threshold": 2.0,
+      "muon_steps": 57.7719567571611,
+      "spd_steps": 51.264610999886344,
+      "step_ratio": 1.1269364115001124
+    }
+  ]
+}

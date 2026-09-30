@@ -1,0 +1,19 @@
+{
+  "candidate": "reference_directed_D",
+  "candidate_plan_sha256": "c2536a3572f816aef1111a3936bc33b925538fdbd8dc8ba83104ab1ddb52e6a7",
+  "goal_fulfilled": false,
+  "initial30_forecast_gpu_hours": 12.412704144528579,
+  "maximum40_forecast_gpu_hours": 16.55027219270477,
+  "metadata_correction": "Original field candidate_plan_sha256 held the qualification-plan hash; both distinct identities are now labeled correctly. Original JSON retained; numerical result and decision unchanged.",
+  "no_gpu_jobs_live": true,
+  "numerical_qualification_passed": true,
+  "qualification_plan_sha256": "06a165b5ef6ca7ccd46ce9996a7a10c57fd42078335c65d10a90af4a6c815efa",
+  "rule": "Retain forecast failure and close the package; no width/vocabulary/corpus/power/LR searches.",
+  "scientific_screen_launched": false,
+  "screen_cap_gpu_hours": 8.0,
+  "smoke_result_sha256": "4bee4f5a1ee29b7ef9e6dfaa07586c044b0f487bac2f6e36dc8f58018bd2c33e",
+  "status": "closed_at_resource_gate",
+  "surrogate_qualified": false,
+  "test_scored": false,
+  "training_only40_projection_gpu_hours": 14.474872058074942
+}

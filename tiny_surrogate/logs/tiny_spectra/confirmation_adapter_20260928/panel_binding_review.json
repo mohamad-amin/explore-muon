@@ -1,0 +1,103 @@
+{
+  "contract_coverage": [
+    "same-family and conflicting concurrent binding",
+    "failed first inference preserves binding and failed attempt; identical copied-lock retry succeeds",
+    "new lock rejected before inference",
+    "copied lock cannot rescore a completed run",
+    "malformed saved/requested identities fail closed",
+    "collection rechecks binding without creation",
+    "invalid family/run/device/output leaves panel unclaimed",
+    "synthetic panel manifests unchanged",
+    "float schema1.0 and malformed requested identity rejection",
+    "canonical real-panel path guard tested with synthetic role, pin, mapping and mocked loader only"
+  ],
+  "errors": 0,
+  "failures": 0,
+  "gpu_used": false,
+  "limitations": [
+    "Synthetic fixtures only; no scientific confirmation or real-panel inference."
+  ],
+  "original_failure": {
+    "case": "Existing synthetic receipt with JSON schema_version=true",
+    "correction": "Requested and saved receipts now require exact integer schema1, exact field shape, and three lowercase64hex SHA256 strings.",
+    "failed_tests": 1,
+    "observed": "No ValueError: Python bool/integer equality admitted malformed schema_version.",
+    "original_source_sha256_recorded": false,
+    "test": "PanelBindingContracts.test_malformed_receipts_fail_closed_without_overwrite",
+    "tests_run": 13
+  },
+  "previous_validation_attempts": [
+    {
+      "cause": "BPE synthetic fixture used non-SHA placeholder synthetic-panel-sha256; strict production binding validation rejected it.",
+      "correction": "Fixture now writes a synthetic manifest and uses its actual SHA256. Production guard unchanged.",
+      "error_tests": [
+        "StoriesConfirmationContracts.test_bpe_scoring_names_weights_and_whole_family_release",
+        "StoriesConfirmationContracts.test_failed_bpe_attempt_preserves_identical_retry_gate"
+      ],
+      "errors": 2,
+      "failures": 0,
+      "source_hashes_after": {
+        "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+        "research/tiny_spectra/confirm.py": "a7d30996ddf8de61e7d260329a3d0ee69b326948a6d893039bef59bc8a86ab2a",
+        "research/tiny_spectra/heldout.py": "a5e1409c17c78b0ac61663d89733ab1970f5e8ac5fb89b119bb24dec0a64fe3d",
+        "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+        "research/tiny_spectra/stories.py": "769187cd92ad33de22a5645c5288b26dab6dabf4ca2a95eb4e362a7e6930ca14",
+        "research/tiny_spectra/test_confirm.py": "40ba6079e5671a2fa6a61d07625e039810a050c9a5c88453ca40463caff8e3c9",
+        "research/tiny_spectra/test_confirm_binding.py": "a891d680c67fdd62413b7d8ebcb846c72039d001fce4ca9cc6331c50bf1c4400",
+        "research/tiny_spectra/test_confirm_stories.py": "b7a90da835799ed0d06e44c418d0c0bbdc756f6124548bf56edd61d9917f23c3",
+        "research/tiny_spectra/train.py": "81781968bad2c20f9246062a49435593248799ed31bdaab50fb30b7182d857ad"
+      },
+      "source_hashes_before": {
+        "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+        "research/tiny_spectra/confirm.py": "a7d30996ddf8de61e7d260329a3d0ee69b326948a6d893039bef59bc8a86ab2a",
+        "research/tiny_spectra/heldout.py": "a5e1409c17c78b0ac61663d89733ab1970f5e8ac5fb89b119bb24dec0a64fe3d",
+        "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+        "research/tiny_spectra/stories.py": "769187cd92ad33de22a5645c5288b26dab6dabf4ca2a95eb4e362a7e6930ca14",
+        "research/tiny_spectra/test_confirm.py": "40ba6079e5671a2fa6a61d07625e039810a050c9a5c88453ca40463caff8e3c9",
+        "research/tiny_spectra/test_confirm_binding.py": "a891d680c67fdd62413b7d8ebcb846c72039d001fce4ca9cc6331c50bf1c4400",
+        "research/tiny_spectra/test_confirm_stories.py": "b7a90da835799ed0d06e44c418d0c0bbdc756f6124548bf56edd61d9917f23c3",
+        "research/tiny_spectra/train.py": "81781968bad2c20f9246062a49435593248799ed31bdaab50fb30b7182d857ad"
+      },
+      "sources_unchanged": true,
+      "successful": false,
+      "tests_run": 37,
+      "timestamp_utc": "2026-09-28T21:29:16.041049+00:00"
+    }
+  ],
+  "real_panel_loaded": false,
+  "real_panel_scored": false,
+  "role": "synthetic_only_panel_family_binding_review",
+  "schema_version": 1,
+  "skipped": 0,
+  "source_hashes_after": {
+    "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+    "research/tiny_spectra/confirm.py": "a7d30996ddf8de61e7d260329a3d0ee69b326948a6d893039bef59bc8a86ab2a",
+    "research/tiny_spectra/heldout.py": "a5e1409c17c78b0ac61663d89733ab1970f5e8ac5fb89b119bb24dec0a64fe3d",
+    "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+    "research/tiny_spectra/stories.py": "769187cd92ad33de22a5645c5288b26dab6dabf4ca2a95eb4e362a7e6930ca14",
+    "research/tiny_spectra/test_confirm.py": "40ba6079e5671a2fa6a61d07625e039810a050c9a5c88453ca40463caff8e3c9",
+    "research/tiny_spectra/test_confirm_binding.py": "93c4f749effc5d083278126a53c0c615356ddd86d30cf291b402648cb365440d",
+    "research/tiny_spectra/test_confirm_stories.py": "7050da0d8009f2bb960f3be234724b0bfb4344aa5efdb1845bb84a7deefb2323",
+    "research/tiny_spectra/train.py": "81781968bad2c20f9246062a49435593248799ed31bdaab50fb30b7182d857ad"
+  },
+  "source_hashes_before": {
+    "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+    "research/tiny_spectra/confirm.py": "a7d30996ddf8de61e7d260329a3d0ee69b326948a6d893039bef59bc8a86ab2a",
+    "research/tiny_spectra/heldout.py": "a5e1409c17c78b0ac61663d89733ab1970f5e8ac5fb89b119bb24dec0a64fe3d",
+    "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+    "research/tiny_spectra/stories.py": "769187cd92ad33de22a5645c5288b26dab6dabf4ca2a95eb4e362a7e6930ca14",
+    "research/tiny_spectra/test_confirm.py": "40ba6079e5671a2fa6a61d07625e039810a050c9a5c88453ca40463caff8e3c9",
+    "research/tiny_spectra/test_confirm_binding.py": "93c4f749effc5d083278126a53c0c615356ddd86d30cf291b402648cb365440d",
+    "research/tiny_spectra/test_confirm_stories.py": "7050da0d8009f2bb960f3be234724b0bfb4344aa5efdb1845bb84a7deefb2323",
+    "research/tiny_spectra/train.py": "81781968bad2c20f9246062a49435593248799ed31bdaab50fb30b7182d857ad"
+  },
+  "sources_unchanged": true,
+  "successful": true,
+  "test_modules": [
+    "research.tiny_spectra.test_confirm",
+    "research.tiny_spectra.test_confirm_stories",
+    "research.tiny_spectra.test_confirm_binding"
+  ],
+  "tests_run": 38,
+  "timestamp_utc": "2026-09-28T21:30:43.824727+00:00"
+}

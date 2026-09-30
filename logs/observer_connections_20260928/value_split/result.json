@@ -1,0 +1,814 @@
+{
+  "status": "complete",
+  "step": 500,
+  "next_step": 501,
+  "offsets": [
+    2500098304,
+    2600098304
+  ],
+  "sequences_per_bank": 4,
+  "methods": {
+    "Muon": {
+      "qualification": {
+        "jvp_additivity_relative_error": 4.4103982240663365e-07,
+        "direct_weight_diagonal_relative_error": {
+          "0.5": 2.414482288054085e-07,
+          "1.0": 2.4251364737113544e-07
+        },
+        "central_difference_relative_error": {
+          "constant": 0.0008931892314797206,
+          "centered": 0.0010158218891555737
+        },
+        "reverse_slopes": [
+          -0.00027092505479231477,
+          -0.00024349987506866455
+        ],
+        "jvp_slopes": [
+          -0.0002710586623576389,
+          -0.00024364741662909553
+        ],
+        "slope_absolute_errors": [
+          1.336075653241486e-07,
+          1.4754156043097783e-07
+        ],
+        "seconds": 11.006834268569946
+      },
+      "provenance": {
+        "means": {
+          "block01.v": "5e4b8dd66fe2ee1e8e67b8aeaa0bb1c56dbb226af32fd0407e84d1569558807e",
+          "block02.v": "fffdfbf58788f8a9131aff6bf09aca83e4ff26a0dae48f3ddf8b6e3eb34a7140",
+          "block03.v": "20235a6a7ac581f645a97aad3085631b5874ebc89747a4313e48314c2a7177c3",
+          "block04.v": "308c190cacc7c0b63448e5f87aac163f779e16e8ed5cbff829f9957aec6f4e0f",
+          "block05.v": "b79620c5c8f96d1d2d7a9e52545b9d6156b06d071b3b3794cd021bbe5054bfb2",
+          "block06.v": "8486c70d336cf5d0ecc6c00555a16d873ae675c8bc7c4cfcfa9df1c36b150b7f",
+          "block07.v": "04c4168d2e1c640bfc6f79e47dabbc08cb3d52cf93b5f2d8e87ff5711a310d33",
+          "block08.v": "b59fdfbaeff525b950042f4c47fc03be50ffb44a8b008b59576e3f0830796790"
+        },
+        "base_V": {
+          "blocks.0.attn.v.weight": "2b52fd9ac4fdf58bc42e9e8f24c3b975899bb98e134567f258a0c4f811f13718",
+          "blocks.1.attn.v.weight": "6da39d4cd63e7e2882725cada07f5fcc431ade3eee3d86ac25954a0307a8f466",
+          "blocks.2.attn.v.weight": "51b7a1b6a3255278fd7ce2d4418de910c824f25d0d6a846bbe728149830740fc",
+          "blocks.3.attn.v.weight": "780ff749a84c65032cd90655e440c3173553b8ab69ec15158723064310945a37",
+          "blocks.4.attn.v.weight": "dc970e61090014a18eda47c1f274ae50efa914f5ba311934cf4e3b4feb6b21e4",
+          "blocks.5.attn.v.weight": "5191c2a2d59fb045a626913206384bd7664caad84e0390dc590e7a854a31e6ed",
+          "blocks.6.attn.v.weight": "08d99149fe069dba682c37a399d03c5ed58e02c7398e224dd39d9f49c5e7f431",
+          "blocks.7.attn.v.weight": "32be442c36f55f9fc31ff25e14b238b92e012ba0be345c2579e3147c88cc420d"
+        },
+        "next_V": {
+          "blocks.0.attn.v.weight": "8a80d8965729b72805b3230accf526dd534907efdebdda16f5ae96ecc51c7152",
+          "blocks.1.attn.v.weight": "2f75a6cc93ff08b28b1614857e2b4a58fe51113aaba672290f51e7432b7a0c5e",
+          "blocks.2.attn.v.weight": "0e7e9e7f529bd0d31a083fe0b9fbc29964b1a882bc32a811a1ae406fc6b2cc7c",
+          "blocks.3.attn.v.weight": "3ed485b3ada625057229d8bbbea590be093134195b1c80cc62bb08c826ba27b8",
+          "blocks.4.attn.v.weight": "c05f03fa0f04c96bcdcf2f9c1ad6350e9464dff0b3494546ecd1794108675cbc",
+          "blocks.5.attn.v.weight": "ced235a53eef12da7240e3ea6359b91b1c0fa183877b41dd56b19b756d907010",
+          "blocks.6.attn.v.weight": "0844d0905c22465546377c153f5ee001b549e364105647e9782e36b974baf125",
+          "blocks.7.attn.v.weight": "6c9a3f87944596e37f29b7d35b4f56dd23d04781e3dd7561065ea799cf767e29"
+        },
+        "marginal": {
+          "path": "logs/muon_spectra/second_order_audit_20260926/marginals/M_lr0.007_s260925_l40s_step000500.pt",
+          "sha256": "7ff323a6f2ae4c7a985c333257de78e1228d3110d063ac365dd74e34a9c4d720",
+          "sequences": 2048
+        },
+        "checkpoints": {
+          "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000500.pt": {
+            "bytes": 822883705,
+            "mtime_ns": 1790484308066206007
+          },
+          "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000501_weights.pt": {
+            "bytes": 307828101,
+            "mtime_ns": 1790484310767300044
+          }
+        }
+      },
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.007,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 1048576,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 1539870720,
+        "warmup_steps": 50,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.95,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": false,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.0,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 10,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "keep_checkpoints": [
+          10,
+          50,
+          100,
+          200,
+          500,
+          900,
+          1300
+        ]
+      },
+      "banks": [
+        [
+          {
+            "slopes": [
+              -0.0002710586623576389,
+              -0.00024364741662909553
+            ],
+            "gn": [
+              [
+                0.0008460747752385755,
+                0.0004303802186191957
+              ],
+              [
+                0.0004303802186191957,
+                0.0008214249834417415
+              ]
+            ],
+            "logit_rms": [
+              0.042749086053775726,
+              0.03765799365250167
+            ],
+            "losses": {
+              "base": 3.558758020401001,
+              "constant": 3.5589194297790527,
+              "centered": 3.5589404106140137,
+              "combined": 3.559518337249756,
+              "half_combined": 3.558820962905884
+            }
+          },
+          {
+            "slopes": [
+              -0.000908011752799038,
+              -0.0027310220125210415
+            ],
+            "gn": [
+              [
+                0.0010286872306102673,
+                0.0006223242219271371
+              ],
+              [
+                0.0006223242219271371,
+                0.0011425616348361301
+              ]
+            ],
+            "logit_rms": [
+              0.044198268081378805,
+              0.04175824185497662
+            ],
+            "losses": {
+              "base": 3.729597330093384,
+              "constant": 3.729245901107788,
+              "centered": 3.727490186691284,
+              "combined": 3.727806568145752,
+              "half_combined": 3.7282419204711914
+            }
+          },
+          {
+            "slopes": [
+              -0.003491368088843755,
+              -0.005402428683635529
+            ],
+            "gn": [
+              [
+                0.0011810782722637121,
+                0.0008003909617763096
+              ],
+              [
+                0.0008003909617763096,
+                0.0011729972397495215
+              ]
+            ],
+            "logit_rms": [
+              0.04642578514876244,
+              0.040511791090514275
+            ],
+            "losses": {
+              "base": 3.640594005584717,
+              "constant": 3.6377601623535156,
+              "centered": 3.635897636413574,
+              "combined": 3.6339664459228516,
+              "half_combined": 3.636713743209839
+            }
+          },
+          {
+            "slopes": [
+              0.0003507042952448305,
+              0.0003085983315349423
+            ],
+            "gn": [
+              [
+                0.001174312471536934,
+                0.0007332430012844732
+              ],
+              [
+                0.0007332430012844732,
+                0.0011273181387952843
+              ]
+            ],
+            "logit_rms": [
+              0.04682047451873617,
+              0.04067262898807132
+            ],
+            "losses": {
+              "base": 3.781813383102417,
+              "constant": 3.7828240394592285,
+              "centered": 3.7827508449554443,
+              "combined": 3.784578800201416,
+              "half_combined": 3.7826712131500244
+            }
+          }
+        ],
+        [
+          {
+            "slopes": [
+              -0.002883777494748047,
+              -0.002589454912957384
+            ],
+            "gn": [
+              [
+                0.0009523854513473137,
+                0.0004564352517830852
+              ],
+              [
+                0.0004564352517830852,
+                0.0011670980454372782
+              ]
+            ],
+            "logit_rms": [
+              0.04125964289287547,
+              0.03890122377015172
+            ],
+            "losses": {
+              "base": 5.371281147003174,
+              "constant": 5.368852138519287,
+              "centered": 5.369233131408691,
+              "combined": 5.367277145385742,
+              "half_combined": 5.368912220001221
+            }
+          },
+          {
+            "slopes": [
+              -0.0006194598911604334,
+              -0.0033758635962468186
+            ],
+            "gn": [
+              [
+                0.0010407833584003255,
+                0.0005825284209646707
+              ],
+              [
+                0.0005825284209646707,
+                0.0011666293988895054
+              ]
+            ],
+            "logit_rms": [
+              0.04202038138994443,
+              0.039207187945254345
+            ],
+            "losses": {
+              "base": 5.009054183959961,
+              "constant": 5.008968353271484,
+              "centered": 5.006229400634766,
+              "combined": 5.006752014160156,
+              "half_combined": 5.007481098175049
+            }
+          },
+          {
+            "slopes": [
+              -0.001906846236240307,
+              -0.004026375800675015
+            ],
+            "gn": [
+              [
+                0.0009735820412626743,
+                0.0006542387614970721
+              ],
+              [
+                0.0006542387614970721,
+                0.001289518487520635
+              ]
+            ],
+            "logit_rms": [
+              0.04307232266093746,
+              0.04204669492111905
+            ],
+            "losses": {
+              "base": 4.3562211990356445,
+              "constant": 4.3548736572265625,
+              "centered": 4.352951526641846,
+              "combined": 4.35233211517334,
+              "half_combined": 4.353764057159424
+            }
+          },
+          {
+            "slopes": [
+              -0.0005890813465256635,
+              -0.0024495256255516965
+            ],
+            "gn": [
+              [
+                0.0008035406140275777,
+                0.0004632391106855259
+              ],
+              [
+                0.0004632391106855259,
+                0.000990006302650108
+              ]
+            ],
+            "logit_rms": [
+              0.04022860763849246,
+              0.03842179536161528
+            ],
+            "losses": {
+              "base": 4.16221809387207,
+              "constant": 4.162023544311523,
+              "centered": 4.160149097442627,
+              "combined": 4.160380840301514,
+              "half_combined": 4.160999774932861
+            }
+          }
+        ]
+      ]
+    },
+    "PD": {
+      "qualification": {
+        "jvp_additivity_relative_error": 5.586226676181511e-07,
+        "direct_weight_diagonal_relative_error": {
+          "0.5": 3.3243798428740566e-07,
+          "1.0": 3.326513268078741e-07
+        },
+        "central_difference_relative_error": {
+          "constant": 0.0026146530429093746,
+          "centered": 0.0016425230371225658
+        },
+        "reverse_slopes": [
+          -0.0011341592762619257,
+          -0.0034555834718048573
+        ],
+        "jvp_slopes": [
+          -0.0011341227176704608,
+          -0.0034555871418866357
+        ],
+        "slope_absolute_errors": [
+          3.655859146488305e-08,
+          3.6700817784146578e-09
+        ],
+        "seconds": 9.513997793197632
+      },
+      "provenance": {
+        "means": {
+          "block01.v": "dc136577aea09e27eee1a3f129e14472d8f2538afce4c09fe870331960814fce",
+          "block02.v": "7030cb7a2ad67523fa9b9057c197b08e20199060c884d17a21cfffecc604ea9a",
+          "block03.v": "8dd8d8e5e72bb65c7b0f6187cb5a2781cc20a58ec312e98a3bd41ebd2b798ae2",
+          "block04.v": "87d5171821742e9b9c8e0aaaf61e613cfc1a4fee4a9aa58cbe7047f8f632708c",
+          "block05.v": "ec9ca393d1f674bb723ee8fc9e169265a0239421a41163ade0c3133a8320d241",
+          "block06.v": "b384d51fbe4ffbff71b3792fbcb0965a86c675186d11c658f952b1a6937e5961",
+          "block07.v": "dbfaa3da3cd2589a6e9f09680edbd02e73bb5b3673cf6d8d2c88aed4626b2635",
+          "block08.v": "0b4e4fd86296a0750c4831626fe6d25a320df1cb44ba61a47e0ab8fa6c32f103"
+        },
+        "base_V": {
+          "blocks.0.attn.v.weight": "84edec7cdef6b73efb76f2ab958d2ce7c104fcdce35837bc4aa262357f9ff5e6",
+          "blocks.1.attn.v.weight": "1b696d1ad18b148d8d0868aa0fa84b6f2a6acbab5a3e84cd5c5ccc359bb54b69",
+          "blocks.2.attn.v.weight": "f38a01ed48c8479b25d2151857ecba0d007dc33a7197bf849311a22b91432682",
+          "blocks.3.attn.v.weight": "0c6b174730ecb68021e286016f7d2b6257b9eeb0bd337a64a4255f8fa4f634dd",
+          "blocks.4.attn.v.weight": "12fc430b6ce6b22b5d8ff8da637a35e5ffe2eb6f00852a9d4613e338cb59e23d",
+          "blocks.5.attn.v.weight": "45d95a83cffa5416311ea20a168e901f2e935f460df5982b1e3837540fca16ab",
+          "blocks.6.attn.v.weight": "44c42300e74422eb1d93b953306c07afa9f17708283569bfa7904d737858f09c",
+          "blocks.7.attn.v.weight": "f5a3a120aa8f5dc83264269f464f71e17a955beff28e74146fffb6257d308620"
+        },
+        "next_V": {
+          "blocks.0.attn.v.weight": "233aab494e3530766074f3fa564f85d7112be230e85f51d78a3d5d9c770a5da9",
+          "blocks.1.attn.v.weight": "8a2e2eff742765a051b035393b582b9606a4cbb0cced77fc0cb94bf159d3f12c",
+          "blocks.2.attn.v.weight": "98204427f6980d4836aed0946b1d918de0aa88b0c3d3866c09e05f24c48e70ea",
+          "blocks.3.attn.v.weight": "307fa6c47094d09993d3a7958f9a5243ad938e577b215b5cef543f5dacbaf27c",
+          "blocks.4.attn.v.weight": "22f5835c352564babdcbaa27842d9ceae9977901126a4049f1136ad7651aef57",
+          "blocks.5.attn.v.weight": "ad7f5f32c8efae85a53e2c73d8850512a012a95a4d547ab7c9301b6c11353172",
+          "blocks.6.attn.v.weight": "f779024764f7fbc912e54ca9d6d5bf68e5a184da958dc44296fd6daef334616f",
+          "blocks.7.attn.v.weight": "c063a7fba572442346b0a9f9901c9a47f3575c1d3488f0d6d59dcd16040771ad"
+        },
+        "marginal": {
+          "path": "logs/muon_spectra/second_order_audit_20260926/marginals/PD_a0.25_lr0.01_s260925_ada_step000500.pt",
+          "sha256": "85a099a3cefb7d243c1ab201513b50bb2ddb37da6db531b72953a628ed3f0fba",
+          "sequences": 2048
+        },
+        "checkpoints": {
+          "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000500.pt": {
+            "bytes": 822884153,
+            "mtime_ns": 1790484524716748576
+          },
+          "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000501_weights.pt": {
+            "bytes": 307828101,
+            "mtime_ns": 1790484528672886307
+          }
+        }
+      },
+      "config": {
+        "model": {
+          "vocab_size": 50304,
+          "n_layer": 8,
+          "n_embd": 512,
+          "n_head": 8,
+          "seq_len": 512,
+          "bias": false,
+          "norm": "rmsnorm",
+          "qk_norm": true,
+          "track_input_stats": true,
+          "track_input_cov": true
+        },
+        "seed": 260925,
+        "learning_rate": 0.01,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "epsilon": 1e-08,
+        "weight_decay": 0.01,
+        "batch_tokens": 1048576,
+        "microbatch_sequences": 16,
+        "tokens_per_parameter": 20,
+        "total_tokens": 1539870720,
+        "warmup_steps": 50,
+        "cooldown_fraction": 0.1,
+        "grad_clip": 1.0,
+        "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+        "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+        "validation_tokens": 1048576,
+        "validation_every": 50,
+        "spectra_every": 25,
+        "svd_device": "cuda",
+        "checkpoint_every": 100,
+        "cpu_threads": 2,
+        "precision": "bf16",
+        "compile": true,
+        "optimizer_impl": "auto",
+        "optimizer": "muon",
+        "aux_learning_rate": 0.002,
+        "muon_momentum": 0.95,
+        "ns_polynomial": "paper5",
+        "ns_steps": 5,
+        "deflation": false,
+        "deflation_window": 0.025,
+        "deflation_oversample": 0.025,
+        "deflation_subspace_iters": 1,
+        "deflation_threshold": 0.1,
+        "deflation_pad": 1.01,
+        "deflation_mode": "paper",
+        "deflation_head_weight": 1.0,
+        "deflation_power_iters": 1,
+        "muon_nesterov": false,
+        "mean_whitening": false,
+        "mean_whitening_beta": -1.0,
+        "mean_whitening_power": 0.5,
+        "mean_bias_adam": false,
+        "soap_precondition": false,
+        "soap_beta2": 0.9,
+        "soap_denom_power": 0.5,
+        "soap_basis": "both",
+        "soap_second_moment": "update",
+        "soap_norm": "entry",
+        "data_norm_alpha": 0.25,
+        "data_norm_damping": 0.001,
+        "data_norm_refresh": 10,
+        "data_norm_post": true,
+        "data_norm_rows": false,
+        "data_norm_center": false,
+        "data_norm_pre": true,
+        "data_norm_mode": "sandwich",
+        "soap_layers": "all",
+        "data_norm_alpha_by_kind": {},
+        "data_norm_decay": "decoupled",
+        "data_norm_decay_power": 2,
+        "newton_muon": false,
+        "newton_muon_damping": 0.2,
+        "newton_muon_refresh": 64,
+        "newton_muon_ema": 0.05,
+        "newton_muon_down_blocks": 4,
+        "pmuon": false,
+        "pmuon_gamma": 0.3,
+        "pmuon_beta": 0.95,
+        "keep_checkpoints": [
+          10,
+          50,
+          100,
+          200,
+          500,
+          900,
+          1300
+        ]
+      },
+      "banks": [
+        [
+          {
+            "slopes": [
+              -0.0011341227176704608,
+              -0.0034555871418866357
+            ],
+            "gn": [
+              [
+                0.00018278654043290816,
+                0.0001666017152951784
+              ],
+              [
+                0.0001666017152951784,
+                0.000556600453639702
+              ]
+            ],
+            "logit_rms": [
+              0.01875877402677886,
+              0.029925785981106984
+            ],
+            "losses": {
+              "base": 3.530463695526123,
+              "constant": 3.529420852661133,
+              "centered": 3.5272939205169678,
+              "combined": 3.52642560005188,
+              "half_combined": 3.528306484222412
+            }
+          },
+          {
+            "slopes": [
+              -0.0003705931393166821,
+              -0.0011300113463934016
+            ],
+            "gn": [
+              [
+                0.0002360361137478576,
+                0.00026602301486612157
+              ],
+              [
+                0.00026602301486612157,
+                0.0007142436856366003
+              ]
+            ],
+            "logit_rms": [
+              0.01985866539576866,
+              0.03253905099615969
+            ],
+            "losses": {
+              "base": 3.654702663421631,
+              "constant": 3.654465913772583,
+              "centered": 3.653933525085449,
+              "combined": 3.653987169265747,
+              "half_combined": 3.6541481018066406
+            }
+          },
+          {
+            "slopes": [
+              0.00043651540467470385,
+              0.0008126460810911579
+            ],
+            "gn": [
+              [
+                0.00022394968161930053,
+                0.0002192919376154163
+              ],
+              [
+                0.0002192919376154163,
+                0.0006879340006575136
+              ]
+            ],
+            "logit_rms": [
+              0.019230071390537107,
+              0.031188310884299443
+            ],
+            "losses": {
+              "base": 3.6309075355529785,
+              "constant": 3.631469964981079,
+              "centered": 3.6321167945861816,
+              "combined": 3.6329305171966553,
+              "half_combined": 3.6317250728607178
+            }
+          },
+          {
+            "slopes": [
+              0.0012170889785573591,
+              0.00046910094800341765
+            ],
+            "gn": [
+              [
+                0.0002486967752984995,
+                0.000257872556847607
+              ],
+              [
+                0.000257872556847607,
+                0.0007466555793015138
+              ]
+            ],
+            "logit_rms": [
+              0.020239253682733136,
+              0.03253174937679629
+            ],
+            "losses": {
+              "base": 3.743129253387451,
+              "constant": 3.7444796562194824,
+              "centered": 3.7439985275268555,
+              "combined": 3.7456259727478027,
+              "half_combined": 3.744174003601074
+            }
+          }
+        ],
+        [
+          {
+            "slopes": [
+              -0.0024935056650365267,
+              -0.0010549645811110417
+            ],
+            "gn": [
+              [
+                0.000305266411089941,
+                0.0002550545064017717
+              ],
+              [
+                0.0002550545064017717,
+                0.0007819251434303933
+              ]
+            ],
+            "logit_rms": [
+              0.020200355853666863,
+              0.031140755319548137
+            ],
+            "losses": {
+              "base": 5.35283088684082,
+              "constant": 5.350485801696777,
+              "centered": 5.352120399475098,
+              "combined": 5.350014686584473,
+              "half_combined": 5.351239204406738
+            }
+          },
+          {
+            "slopes": [
+              -0.0014428697209301973,
+              -0.0041417436673306055
+            ],
+            "gn": [
+              [
+                0.0002990377246666406,
+                0.0002621750539693287
+              ],
+              [
+                0.0002621750539693287,
+                0.0007563939125635779
+              ]
+            ],
+            "logit_rms": [
+              0.020450364069788517,
+              0.0326189327792189
+            ],
+            "losses": {
+              "base": 4.973699569702148,
+              "constant": 4.972402572631836,
+              "centered": 4.969890594482422,
+              "combined": 4.968814849853516,
+              "half_combined": 4.9710822105407715
+            }
+          },
+          {
+            "slopes": [
+              0.0006643195972598549,
+              -0.0012652161260055196
+            ],
+            "gn": [
+              [
+                0.00024673488852595385,
+                0.00022286290220237555
+              ],
+              [
+                0.00022286290220237555,
+                0.0007593397928078844
+              ]
+            ],
+            "logit_rms": [
+              0.019412978113219376,
+              0.032571035706506206
+            ],
+            "losses": {
+              "base": 4.306260108947754,
+              "constant": 4.3070549964904785,
+              "centered": 4.305445194244385,
+              "combined": 4.306485652923584,
+              "half_combined": 4.3061652183532715
+            }
+          },
+          {
+            "slopes": [
+              -0.0003350241041752515,
+              -0.0017164520741344378
+            ],
+            "gn": [
+              [
+                0.00024702236770241014,
+                0.0002593955056096734
+              ],
+              [
+                0.0002593955056096734,
+                0.0007234724625336361
+              ]
+            ],
+            "logit_rms": [
+              0.020297855243776506,
+              0.033221614742548304
+            ],
+            "losses": {
+              "base": 4.155866622924805,
+              "constant": 4.155639171600342,
+              "centered": 4.154490947723389,
+              "combined": 4.154507637023926,
+              "half_combined": 4.155013561248779
+            }
+          }
+        ]
+      ]
+    }
+  },
+  "tokens_sha256": {
+    "bank0_x": "d674d9e5c1a838b9aa459830bb975eb03d7fe0ba32604f9fa4a9af2bf1bd5e4b",
+    "bank0_y": "1ec1055cbb4f523b50bc25d6e406ee1d448baa626e385f98e3999406e721d54d",
+    "bank1_x": "a547454708f66a16fc1d9faf196678a97d879197b7f5aa6249aa8435855abfcf",
+    "bank1_y": "99b2f82b3e77b5b12b5a1093a9c42b68b46a9f3fe0759168223c7efbb28ff8ad"
+  },
+  "source_manifest": {
+    "__init__.py": {
+      "sha256": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "origin": "logs/observer_connections_20260928/body_aux/source/adamw_spectra/__init__.py"
+    },
+    "model.py": {
+      "sha256": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+      "origin": "logs/observer_connections_20260928/body_aux/source/adamw_spectra/model.py"
+    },
+    "gn_probe.py": {
+      "sha256": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "origin": "logs/observer_connections_20260928/body_aux/source/adamw_spectra/gn_probe.py"
+    },
+    "data.py": {
+      "sha256": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "origin": "logs/observer_connections_20260928/body_aux/source/adamw_spectra/data.py"
+    }
+  },
+  "probe_sha256": "23b1181f8fa17e139bb776353679dedf96537bc3708b72af24c67f74b8f8a294",
+  "seconds": 98.79987096786499
+}

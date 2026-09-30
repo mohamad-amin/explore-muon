@@ -1,0 +1,383 @@
+{
+  "passed": true,
+  "host": "g20.ttic.edu",
+  "metadata": {
+    "schema_version": 1,
+    "config": {
+      "model": {
+        "vocab_size": 50304,
+        "n_layer": 8,
+        "n_embd": 512,
+        "n_head": 8,
+        "seq_len": 512
+      },
+      "seed": 260924,
+      "learning_rate": 0.0006,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "epsilon": 1e-08,
+      "weight_decay": 0.01,
+      "batch_tokens": 1048576,
+      "microbatch_sequences": 16,
+      "tokens_per_parameter": 20,
+      "total_tokens": null,
+      "warmup_steps": 50,
+      "cooldown_fraction": 0.1,
+      "grad_clip": 1.0,
+      "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+      "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+      "validation_tokens": 1048576,
+      "validation_every": 50,
+      "spectra_every": 25,
+      "svd_device": "cpu",
+      "checkpoint_every": 100,
+      "cpu_threads": 4,
+      "precision": "bf16",
+      "compile": true,
+      "optimizer_impl": "auto"
+    },
+    "parameter_count": 76993536,
+    "budget_tokens": 1539870720,
+    "total_steps": 1469,
+    "initial_model_sha256": "ebfb59e20e387def581ee795a9bf69e243be4723c38602070c03612fd827f510",
+    "source_sha256": {
+      "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+      "analyze.py": "89dfb9a2724f7f1526da6b57110730b636c4943eaec61add64bb2ebd517e1eb6",
+      "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "measure.py": "b95ec7bec0d2cdec76f608aa28e4cf84bfbef9e38ef0871d8cb18141746980d2",
+      "model.py": "fe39a6cd11675bb9403a83dcf122a6c6a191539fd73bfaa4836e865c6b30d281",
+      "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+      "test_study.py": "7ce2cacf51494fdd8c24575d2d101a984afd07a9ed686cfa57eced15dd863937",
+      "train.py": "9f422bb97672056a6839a812bb1b21cf79eb0ca52c5e9d7e39b96802c966fe90"
+    },
+    "train_manifest": [
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000001.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181691636593929
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000002.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181693842670783
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000003.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181696856775787
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000004.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181699420865114
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000005.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181702509972732
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000006.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181706520112435
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000007.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181709802226777
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000008.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181713595358920
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000009.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181715680431559
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000010.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181719179553461
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000011.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181723542705463
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000012.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181727947858928
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000013.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181730386943900
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000014.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181733484051796
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000015.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181735906136176
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000016.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181740341290686
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000017.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181744440433491
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000018.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181748098560931
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000019.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181750383640538
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000020.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181754099769999
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000021.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787488800500564819
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000022.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787528145904025423
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000023.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787528291307095336
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000024.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787531953033712333
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000025.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787531958272894897
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000026.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787531965464145484
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000027.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787531971766365091
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000028.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787531978315593306
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000029.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787537545689567473
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000030.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787539812935592137
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000031.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787542278265464368
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_train_000032.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787542281914591356
+      }
+    ],
+    "validation_manifest": [
+      {
+        "path": "/share/data/dl-theory/amin/projects/last_layer/data/fineweb10B/fineweb_val_000000.bin",
+        "tokens": 100000000,
+        "size": 200001024,
+        "mtime_ns": 1787181688651489935
+      }
+    ],
+    "measured_parameters": {
+      "block02.q": [
+        512,
+        512
+      ],
+      "block02.k": [
+        512,
+        512
+      ],
+      "block02.v": [
+        512,
+        512
+      ],
+      "block02.o": [
+        512,
+        512
+      ],
+      "block02.up": [
+        2048,
+        512
+      ],
+      "block02.down": [
+        512,
+        2048
+      ],
+      "block04.q": [
+        512,
+        512
+      ],
+      "block04.k": [
+        512,
+        512
+      ],
+      "block04.v": [
+        512,
+        512
+      ],
+      "block04.o": [
+        512,
+        512
+      ],
+      "block04.up": [
+        2048,
+        512
+      ],
+      "block04.down": [
+        512,
+        2048
+      ],
+      "block06.q": [
+        512,
+        512
+      ],
+      "block06.k": [
+        512,
+        512
+      ],
+      "block06.v": [
+        512,
+        512
+      ],
+      "block06.o": [
+        512,
+        512
+      ],
+      "block06.up": [
+        2048,
+        512
+      ],
+      "block06.down": [
+        512,
+        2048
+      ],
+      "block08.q": [
+        512,
+        512
+      ],
+      "block08.k": [
+        512,
+        512
+      ],
+      "block08.v": [
+        512,
+        512
+      ],
+      "block08.o": [
+        512,
+        512
+      ],
+      "block08.up": [
+        2048,
+        512
+      ],
+      "block08.down": [
+        512,
+        2048
+      ]
+    },
+    "torch_version": "2.11.0+cu130",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX 6000 Ada Generation",
+    "effective_precision": "bf16",
+    "effective_optimizer_impl": "fused",
+    "effective_compile": true,
+    "compilers": {
+      "CC": "/usr/bin/x86_64-linux-gnu-gcc",
+      "CXX": "/usr/bin/x86_64-linux-gnu-g++"
+    },
+    "measurement": "bias-corrected adaptive AdamW direction, excluding LR and weight decay"
+  },
+  "status": {
+    "status": "stopped_at_requested_step",
+    "step": 5,
+    "tokens": 5242880,
+    "budget_tokens": 1539870720,
+    "setup_seconds": 5.462970376946032,
+    "invocation_seconds": 31.136328025721014,
+    "peak_cuda_allocated_bytes": 3481242624,
+    "peak_cuda_reserved_bytes": 3581935616
+  },
+  "mean_training_seconds_steps_2_to_5": 3.939389048377052,
+  "measurement_seconds": 1.168302875943482,
+  "validation_seconds": 1.2499978155829012,
+  "rough_pilot_seconds_excluding_startup_io": 1190.566699222196,
+  "rough_main_seconds_excluding_startup_io": 5895.810616905568,
+  "forecast_limit": "Short qualification; excludes compilation, checkpoint I/O and parallel CPU contention"
+}

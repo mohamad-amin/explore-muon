@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-09-29T00:28:32.998716+00:00",
+  "status": "read_only_implementation_review_passed_for_single_bounded_benchmark",
+  "review_passed": true,
+  "open_material_findings": [],
+  "reviewed_sources": {
+    "research/tiny_spectra/execution_graph.py": "72557f92ddf0198d16af1790f876ae20fb597312561df7254b1fdcde5466c8d4",
+    "research/tiny_spectra/execution_benchmark.py": "56d6992ea3a7b39139814d1a613213aed6dc025e513bd880731cffaa443a7008",
+    "research/tiny_spectra/train.py": "bfa88ca113229574154770e9ceb2a261981191a5952050d2348c4d26121c13bd",
+    "research/tiny_spectra/model.py": "d184cdbf8b0c017944a7e3f4b8e362440274be2a328acba15d19fe600bfd626d",
+    "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+    "research/tiny_spectra/test_execution_benchmark.py": "484f5c5dc462e61dfd4e032ba299524aef62db79324254ba81baed78cb5bba38"
+  },
+  "plan_sha256": "c903bdd6d141abf03d45d4f4d6a1bb41bd8dc82a64d83a3a366bf365d518535a",
+  "scope": "CUDAgraph helper, existingtrainer integration and pairedexecution benchmark; no GPU/capture/model-forward run performed by reviewer",
+  "checked_contracts": [
+    "Captures only four-sequence forward/loss/backward with unchanged precision and statistic kernels. GN sampling/hooks, clipping, optimizer, evaluation and statistic begin/finish stay eager/outside capture.",
+    "Valid copiedintegerexampleinputs precede warmup. Persistent densegradientbuffers exist beforecapture so backprop accumulates; construction restoresoriginalNone/value state, firstbackward attachesretainedzero buffers, laterzeroing is in-place and storageguards rejectreplacement.",
+    "Allnonpersistent modelbuffers,counters/modes/collectionflags andTorchCPU/CUDA/Python/NumPyRNG restored afterwarmup/capture. New checked_capture independentlyrequires exact before/after equality, includingparameters andgradNone/value/storage identity.",
+    "Side-stream warmup/capture is ordered/synchronized; staticinput/target/weight/output lifetime retained. AMP weightcache disabled toavoidstalecasts. Graphreplay isguardedagainstmode/hook/shape/backend/statistic changes.",
+    "Paired21fullupdates share frozenDconfigs, initialweights andtraining/developmentpopulations. Rawpreclipgradients, clippingdecisions, actualparameterdeltas, fullparameters/optimizer/external/statisticsstate andlosses compared eachupdate.",
+    "Absolute statisticsclock checks nowbind everygeometry state:48modules,128forwardsperfullstep,total128*step; step22partial has18forwards,total2706.",
+    "Step22uses69sequences as17four-sequence graphreplays plusone realeager single-sequence fallback, weights4/69and1/69; LR holdsstep21value. No developmentscoreafterpartialtest.",
+    "Both21-step implementations compared againstone another; new eager21-state andper-windowloss also comparedto preservedoriginalsmoke. Finaloriginal-root-refresh/cache states included.",
+    "Reference report hash andeveryreference artifact listedin its artifact_sha256 arechecked beforecapture, along withreferenceconfigs,frozen sourcesandbenchmarkplan preflight.",
+    "Timings include optimizer/GN/data movement, graphsetup once andconservativepartialfallback. DiagnosticCPUtransfers/setup-invarianceaudit excluded from productiontimers; oldnontrainingoverhead remainsfloor, includingevaluation/init/IOburden.",
+    "GPU restricted tooneA4000<48GB; firstattemptreceipt preventsreruns; failureclosesattempt. Scientificscreen/testscoring are not launched by benchmark."
+  ],
+  "resolved_findings": [
+    {
+      "id": "reference_artifact_pin_gap",
+      "issue": "Earlierbenchmark boundreference configs/frozen sources butnotreference report orweights/lossfiles usedforfidelity andcostfloor.",
+      "fix": "PREFLIGHT binds reference_report_sha256; benchmarkverifies allbaseline artifact_sha256 entries beforecapture.",
+      "status": "verified_in_final_source"
+    }
+  ],
+  "predeclared_tolerances": {
+    "floating_tensor_atol": 1e-07,
+    "floating_tensor_rtol": 1e-05,
+    "loss_absolute_tolerance": 1e-05,
+    "integer_counters_and_structure": "exact"
+  },
+  "anticipated_counts": {
+    "full_updates": 21,
+    "full_microforwards": 2688,
+    "partial_sequences": 69,
+    "partial_microforwards": 18,
+    "total_graph_replays": 2705,
+    "eager_partial_fallbacks": 1,
+    "total_collected_forwards": 2706
+  },
+  "qualification_limits": [
+    "Source inspection is not CUDA-runtime or performance qualification. First actualcapture/pairedGPUbenchmark must stillpasswithin20minutes andallunchangednumerical/resource gates.",
+    "The8GPU-hour40-armforecast remainsbinding; unsupportedexecution,fidelityfailure,timeoutorover-budget outcome closethisattempt without alternativecompiler/precision/hardware/recipe search.",
+    "Futurefreeze mustincludeandexecute bothnewexecution modules andtheir importedlocaldependencies, andbindthecompletedPREFLIGHT reference report/artifact identities.",
+    "No scientificmethodordering,optimizerimprovement,orindependentconfirmationclaim follows from an executionbenchmarkpass."
+  ],
+  "tests": {
+    "reviewer_run_gpu_or_capture_tests": false,
+    "root_reported_cpu_comparison_tests_passed": 14,
+    "root_reported_eager_regressions_passed": 12
+  },
+  "actions": {
+    "code_edits": false,
+    "jobs_launched": false,
+    "cuda_initialization_or_operations": false,
+    "model_forward_backward": false,
+    "sealed_test_token_or_text_read": false
+  }
+}

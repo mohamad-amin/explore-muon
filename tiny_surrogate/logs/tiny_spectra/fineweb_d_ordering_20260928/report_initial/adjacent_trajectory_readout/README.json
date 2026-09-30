@@ -1,0 +1,157 @@
+{
+  "scope": "Descriptive initial-grid trajectories at the endpoint-selected joint rates; all recorded points retained",
+  "source_sha256": "de47c39723348535717d72d420b8abac27bebd655eb7dfbac015ce9e8e8bf3c3",
+  "steps": [
+    0,
+    1,
+    8,
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80,
+    88,
+    96,
+    104,
+    112,
+    120,
+    128,
+    136,
+    144,
+    152,
+    160,
+    168,
+    176,
+    184,
+    192,
+    200,
+    208,
+    216,
+    224,
+    232,
+    240,
+    248,
+    256,
+    264,
+    272,
+    280,
+    288,
+    296,
+    304,
+    312,
+    320,
+    328,
+    336,
+    344,
+    352,
+    360,
+    368
+  ],
+  "cooldown_starts_after_step331": true,
+  "summary": [
+    {
+      "earlier": "adamw",
+      "later": "muon",
+      "label": "last_scheduled_observation_before_cooldown",
+      "step": 328,
+      "tokens": 85983232,
+      "differences": [
+        -0.5571923101235976,
+        -0.5277185220869018
+      ],
+      "mean_difference": -0.5424554161052497
+    },
+    {
+      "earlier": "adamw",
+      "later": "muon",
+      "label": "fixed_primary_endpoint",
+      "step": 368,
+      "tokens": 96242176,
+      "differences": [
+        -0.5771849823294763,
+        -0.5554036933738766
+      ],
+      "mean_difference": -0.5662943378516765
+    },
+    {
+      "earlier": "muon",
+      "later": "pd",
+      "label": "last_scheduled_observation_before_cooldown",
+      "step": 328,
+      "tokens": 85983232,
+      "differences": [
+        -0.03245221377009422,
+        -0.06274619151616889
+      ],
+      "mean_difference": -0.047599202643131555
+    },
+    {
+      "earlier": "muon",
+      "later": "pd",
+      "label": "fixed_primary_endpoint",
+      "step": 368,
+      "tokens": 96242176,
+      "differences": [
+        -0.03498454445320043,
+        -0.060478390561333306
+      ],
+      "mean_difference": -0.04773146750726687
+    },
+    {
+      "earlier": "pd",
+      "later": "ts",
+      "label": "last_scheduled_observation_before_cooldown",
+      "step": 328,
+      "tokens": 85983232,
+      "differences": [
+        -0.03723649289672526,
+        -0.0013309718304617135
+      ],
+      "mean_difference": -0.019283732363593487
+    },
+    {
+      "earlier": "pd",
+      "later": "ts",
+      "label": "fixed_primary_endpoint",
+      "step": 368,
+      "tokens": 96242176,
+      "differences": [
+        -0.03710978549987054,
+        -0.004665907976652228
+      ],
+      "mean_difference": -0.020887846738261384
+    },
+    {
+      "earlier": "ts",
+      "later": "spd",
+      "label": "last_scheduled_observation_before_cooldown",
+      "step": 328,
+      "tokens": 85983232,
+      "differences": [
+        -0.010615439952690764,
+        -0.015347098342355814
+      ],
+      "mean_difference": -0.012981269147523289
+    },
+    {
+      "earlier": "ts",
+      "later": "spd",
+      "label": "fixed_primary_endpoint",
+      "step": 368,
+      "tokens": 96242176,
+      "differences": [
+        -0.0037421185170831706,
+        -0.002101562665989931
+      ],
+      "mean_difference": -0.002921840591536551
+    }
+  ],
+  "primary_endpoint_unchanged": true,
+  "new_model_inference": false,
+  "independent_test_scoring": false,
+  "initial_rate_brackets_still_open": true
+}

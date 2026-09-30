@@ -1,0 +1,420 @@
+{
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:9:46": {
+  "efficiency": 0.6992418741538691,
+  "displacement": 72.92298471453643,
+  "path": 104.28864089808447,
+  "steps": 37,
+  "loss": [
+   7.1979575387667865,
+   5.727540428051725
+  ],
+  "loss_drop_per_displacement": 0.020163973217376403,
+  "by_kind": {
+   "attn.q": 0.6603321033891281,
+   "attn.k": 0.6371911580584827,
+   "attn.v": 0.6774057808983809,
+   "attn.o": 0.7400277270510232,
+   "mlp.up": 0.7077718831669515,
+   "mlp.down": 0.7226234065094272
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s:46:83": {
+  "efficiency": 0.6505026938339572,
+  "displacement": 81.16973703779576,
+  "path": 124.78001675810827,
+  "steps": 37,
+  "loss": [
+   5.727540428051725,
+   5.005717356689274
+  ],
+  "loss_drop_per_displacement": 0.008892760993254692,
+  "by_kind": {
+   "attn.q": 0.6327182783790387,
+   "attn.k": 0.6082595081125334,
+   "attn.v": 0.6001692710303035,
+   "attn.o": 0.6450524521884765,
+   "mlp.up": 0.6617018236133912,
+   "mlp.down": 0.678286379316962
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:9:46": {
+  "efficiency": 0.5769362888752986,
+  "displacement": 114.6081670716956,
+  "path": 198.64960703913616,
+  "steps": 37,
+  "loss": [
+   7.178405891172588,
+   5.544747754232958
+  ],
+  "loss_drop_per_displacement": 0.014254290760253236,
+  "by_kind": {
+   "attn.q": 0.5655365081785612,
+   "attn.k": 0.5589562986234367,
+   "attn.v": 0.5749656809344335,
+   "attn.o": 0.5613041253279407,
+   "mlp.up": 0.5876601771452571,
+   "mlp.down": 0.5800315009015984
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:46:83": {
+  "efficiency": 0.5873735654817073,
+  "displacement": 114.16228886213779,
+  "path": 194.36061745222202,
+  "steps": 37,
+  "loss": [
+   5.544747754232958,
+   4.785372390644625
+  ],
+  "loss_drop_per_displacement": 0.006651718103736985,
+  "by_kind": {
+   "attn.q": 0.5895920612307134,
+   "attn.k": 0.5832862743171063,
+   "attn.v": 0.5844782638429591,
+   "attn.o": 0.5700083107092652,
+   "mlp.up": 0.5796847280727079,
+   "mlp.down": 0.6376432186569378
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s:9:46": {
+  "efficiency": 0.5473436987335055,
+  "displacement": 108.77025066678272,
+  "path": 198.72385654290966,
+  "steps": 37,
+  "loss": [
+   7.143546679057181,
+   5.516947922529653
+  ],
+  "loss_drop_per_displacement": 0.014954445232553595,
+  "by_kind": {
+   "attn.q": 0.5270107662048172,
+   "attn.k": 0.5276632745644716,
+   "attn.v": 0.5552553005883415,
+   "attn.o": 0.5503825913470588,
+   "mlp.up": 0.5454494016267916,
+   "mlp.down": 0.5820999968736523
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s:46:83": {
+  "efficiency": 0.5767536141261023,
+  "displacement": 112.18323929115456,
+  "path": 194.50808203626906,
+  "steps": 37,
+  "loss": [
+   5.516947922529653,
+   4.761105691664852
+  ],
+  "loss_drop_per_displacement": 0.006737568246742517,
+  "by_kind": {
+   "attn.q": 0.5847804476443014,
+   "attn.k": 0.5780221626240285,
+   "attn.v": 0.5738937513998227,
+   "attn.o": 0.5598787471778296,
+   "mlp.up": 0.5725934996273722,
+   "mlp.down": 0.6028785740182454
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada:9:46": {
+  "efficiency": 0.5167809215999629,
+  "displacement": 102.7165132702073,
+  "path": 198.76220072559013,
+  "steps": 37,
+  "loss": [
+   7.007103458046913,
+   5.4527728136163205
+  ],
+  "loss_drop_per_displacement": 0.015132237212353107,
+  "by_kind": {
+   "attn.q": 0.5026456559049587,
+   "attn.k": 0.5053276755601345,
+   "attn.v": 0.4721059008532033,
+   "attn.o": 0.44839210358042714,
+   "mlp.up": 0.5405031230241963,
+   "mlp.down": 0.5505684435186307
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada:46:83": {
+  "efficiency": 0.5386307407543919,
+  "displacement": 104.73654510831253,
+  "path": 194.4496241741073,
+  "steps": 37,
+  "loss": [
+   5.4527728136163205,
+   4.688289724173956
+  ],
+  "loss_drop_per_displacement": 0.007299105471273473,
+  "by_kind": {
+   "attn.q": 0.5420763492569681,
+   "attn.k": 0.5409207125032249,
+   "attn.v": 0.5094303052723586,
+   "attn.o": 0.5034071178275615,
+   "mlp.up": 0.5428313630017735,
+   "mlp.down": 0.5771761190338575
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_mom0.9_s260925_l40s:37:183": {
+  "efficiency": 0.3898256538172734,
+  "displacement": 137.48156398288705,
+  "path": 352.6744908566999,
+  "steps": 146,
+  "loss": [
+   6.1105931783095,
+   4.355047703720629
+  ],
+  "loss_drop_per_displacement": 0.01276931556297535,
+  "by_kind": {
+   "attn.q": 0.36098962129738005,
+   "attn.k": 0.34899939761794485,
+   "attn.v": 0.3625248854405381,
+   "attn.o": 0.3645321276362449,
+   "mlp.up": 0.40037968482080166,
+   "mlp.down": 0.42816544217424424
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_mom0.9_s260925_l40s:183:330": {
+  "efficiency": 0.3259694201783489,
+  "displacement": 126.25887605794988,
+  "path": 387.3334989179947,
+  "steps": 147,
+  "loss": [
+   4.355047703720629,
+   4.007561205420643
+  ],
+  "loss_drop_per_displacement": 0.002752174810589142,
+  "by_kind": {
+   "attn.q": 0.31720619247351356,
+   "attn.k": 0.30719075801804563,
+   "attn.v": 0.32797924757640945,
+   "attn.o": 0.30938148473719956,
+   "mlp.up": 0.3265214772206426,
+   "mlp.down": 0.35787334380515384
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m4_20260927/PD_a0.5_b4M_lr0.02_mom0.9_s260925_ada:37:183": {
+  "efficiency": 0.2866740903379746,
+  "displacement": 160.55581830511773,
+  "path": 560.0639322368838,
+  "steps": 146,
+  "loss": [
+   6.068276636302471,
+   4.211618283297867
+  ],
+  "loss_drop_per_displacement": 0.011563943135814863,
+  "by_kind": {
+   "attn.q": 0.28988040257439707,
+   "attn.k": 0.29132278935953076,
+   "attn.v": 0.26161003301514557,
+   "attn.o": 0.2388770685598716,
+   "mlp.up": 0.2906451495127991,
+   "mlp.down": 0.32768666604999835
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m4_20260927/PD_a0.5_b4M_lr0.02_mom0.9_s260925_ada:183:330": {
+  "efficiency": 0.2475211175458126,
+  "displacement": 139.62032201677647,
+  "path": 564.0743844449344,
+  "steps": 147,
+  "loss": [
+   4.211618283297867,
+   3.924144616816193
+  ],
+  "loss_drop_per_displacement": 0.0020589672214559964,
+  "by_kind": {
+   "attn.q": 0.2710516210815393,
+   "attn.k": 0.26285520539650115,
+   "attn.v": 0.24511583225226677,
+   "attn.o": 0.21144096593712644,
+   "mlp.up": 0.23989672047248087,
+   "mlp.down": 0.2717705298373725
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s:100:500": {
+  "efficiency": 0.29693181967787435,
+  "displacement": 153.3608846845665,
+  "path": 516.4851811804461,
+  "steps": 400,
+  "loss": [
+   5.530665624886751,
+   4.077930074185133
+  ],
+  "loss_drop_per_displacement": 0.009472660213780145,
+  "by_kind": {
+   "attn.q": 0.29547513459742425,
+   "attn.k": 0.2913135522400502,
+   "attn.v": 0.2897517270875583,
+   "attn.o": 0.2624347368692035,
+   "mlp.up": 0.30222485087494366,
+   "mlp.down": 0.31310329644341556
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s:500:900": {
+  "efficiency": 0.2319146562480298,
+  "displacement": 122.97868494327957,
+  "path": 530.2756062633464,
+  "steps": 400,
+  "loss": [
+   4.077930074185133,
+   3.9152464885264635
+  ],
+  "loss_drop_per_displacement": 0.0013228600202848375,
+  "by_kind": {
+   "attn.q": 0.2352229564648986,
+   "attn.k": 0.232421464153862,
+   "attn.v": 0.22489663609726362,
+   "attn.o": 0.19789211753002625,
+   "mlp.up": 0.23488989177662456,
+   "mlp.down": 0.2517331957059747
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s:900:1300": {
+  "efficiency": 0.201198739450512,
+  "displacement": 106.71373493703913,
+  "path": 530.3896795202688,
+  "steps": 400,
+  "loss": [
+   3.9152464885264635,
+   3.8326079230755568
+  ],
+  "loss_drop_per_displacement": 0.0007743948377372728,
+  "by_kind": {
+   "attn.q": 0.21060716853730976,
+   "attn.k": 0.20866982055297784,
+   "attn.v": 0.19330288657192982,
+   "attn.o": 0.1690303567520938,
+   "mlp.up": 0.20174464516416038,
+   "mlp.down": 0.21728203796611295
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada:100:500": {
+  "efficiency": 0.24422790404213565,
+  "displacement": 187.37367505603316,
+  "path": 767.2082999316341,
+  "steps": 400,
+  "loss": [
+   5.392941486090422,
+   4.043914616107941
+  ],
+  "loss_drop_per_displacement": 0.007199660622438351,
+  "by_kind": {
+   "attn.q": 0.23888886602953074,
+   "attn.k": 0.23382423403479638,
+   "attn.v": 0.23044743399149778,
+   "attn.o": 0.2080965087291533,
+   "mlp.up": 0.2510955111892928,
+   "mlp.down": 0.2766084837513278
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada:500:900": {
+  "efficiency": 0.20508386985636903,
+  "displacement": 157.33537201988386,
+  "path": 767.1757517062364,
+  "steps": 400,
+  "loss": [
+   4.043914616107941,
+   3.896897805854678
+  ],
+  "loss_drop_per_displacement": 0.0009344167707861821,
+  "by_kind": {
+   "attn.q": 0.21691691216026351,
+   "attn.k": 0.20988134532495697,
+   "attn.v": 0.19461084534391423,
+   "attn.o": 0.17051505912287837,
+   "mlp.up": 0.20588746794624468,
+   "mlp.down": 0.2257007100753154
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada:900:1300": {
+  "efficiency": 0.18496255150998486,
+  "displacement": 141.90297255840218,
+  "path": 767.1983944855011,
+  "steps": 400,
+  "loss": [
+   3.896897805854678,
+   3.819365408271551
+  ],
+  "loss_drop_per_displacement": 0.0005463761342364937,
+  "by_kind": {
+   "attn.q": 0.20109942441600345,
+   "attn.k": 0.19534795176770073,
+   "attn.v": 0.17306633774506136,
+   "attn.o": 0.15328536236466683,
+   "mlp.up": 0.1835563394993705,
+   "mlp.down": 0.20271048726879323
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/SPD_a0.25_lr0.01_s260925_ada:100:500": {
+  "efficiency": 0.2173729740296006,
+  "displacement": 166.8205314295003,
+  "path": 767.4391546337479,
+  "steps": 400,
+  "loss": [
+   5.365522276610136,
+   4.017370235174894
+  ],
+  "loss_drop_per_displacement": 0.008081451544859642,
+  "by_kind": {
+   "attn.q": 0.21397242094279095,
+   "attn.k": 0.20854595952454902,
+   "attn.v": 0.20213221296475345,
+   "attn.o": 0.17774544783352772,
+   "mlp.up": 0.22891528959132218,
+   "mlp.down": 0.23226154708678715
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/SPD_a0.25_lr0.01_s260925_ada:500:900": {
+  "efficiency": 0.18874761088073472,
+  "displacement": 144.83910340527567,
+  "path": 767.3692012811551,
+  "steps": 400,
+  "loss": [
+   4.017370235174894,
+   3.8798784483224154
+  ],
+  "loss_drop_per_displacement": 0.000949272562588032,
+  "by_kind": {
+   "attn.q": 0.19748077477017803,
+   "attn.k": 0.19093136834905558,
+   "attn.v": 0.17202744060959657,
+   "attn.o": 0.15234193476031024,
+   "mlp.up": 0.19552439623334694,
+   "mlp.down": 0.19867201608312302
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/SPD_a0.25_lr0.01_s260925_ada:900:1300": {
+  "efficiency": 0.17346881103802925,
+  "displacement": 133.11321172682472,
+  "path": 767.3610658324197,
+  "steps": 400,
+  "loss": [
+   3.8798784483224154,
+   3.8065659757703543
+  ],
+  "loss_drop_per_displacement": 0.0005507527885550018,
+  "by_kind": {
+   "attn.q": 0.18502234144221277,
+   "attn.k": 0.17975279211157774,
+   "attn.v": 0.15642104506321258,
+   "attn.o": 0.14002549512290374,
+   "mlp.up": 0.17805664801649884,
+   "mlp.down": 0.18275263689582522
+  }
+ },
+ "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_traj_20260926/S_lr0.007_s260925_l40s:500:900": {
+  "efficiency": 0.21290703577857234,
+  "displacement": 114.09593871876729,
+  "path": 535.8955766846024,
+  "steps": 400,
+  "loss": [
+   4.03989384137094,
+   3.886850006878376
+  ],
+  "loss_drop_per_displacement": 0.0013413609302062783,
+  "by_kind": {
+   "attn.q": 0.2134129862949587,
+   "attn.k": 0.20799768056529452,
+   "attn.v": 0.2003312254633588,
+   "attn.o": 0.17854679629852785,
+   "mlp.up": 0.21852020764238306,
+   "mlp.down": 0.2365872328182936
+  }
+ }
+}

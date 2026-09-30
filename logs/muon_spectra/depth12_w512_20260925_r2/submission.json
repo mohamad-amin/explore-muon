@@ -1,0 +1,11 @@
+{
+  "job_id": "2620620",
+  "submitted_unix": 1790300882.2737951,
+  "command": [
+    "sbatch",
+    "--parsable",
+    "/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth12_w512_20260925_r2/job.sbatch"
+  ],
+  "world_size": 4,
+  "gpu_constraint": "48g"
+}

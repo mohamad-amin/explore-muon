@@ -1,0 +1,3664 @@
+{
+  "scope": "Fixed finite-logit path and fresh-input consistency at selected own states; no seed significance, training mediation or realizable additive-parameter update claim.",
+  "states": {
+    "q09_9": {
+      "groups": {
+        "old": {
+          "interaction": {
+            "mean": 0.08714955285721938,
+            "sd_across_sequences": 0.015050011237213978,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.06368803411821779,
+            "max": 0.10624574775675673
+          },
+          "overlap": {
+            "mean": 0.04940058247946871,
+            "sd_across_sequences": 0.01637025092949797,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.021905552349723918,
+            "max": 0.06995335471648086
+          },
+          "mixed_loss": {
+            "mean": 0.037748970377750685,
+            "sd_across_sequences": 0.01761259966134501,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.019032404235581557,
+            "max": 0.07731886023985488
+          },
+          "J_direct": {
+            "mean": 0.01563254536445649,
+            "sd_across_sequences": 0.018567809461662727,
+            "negative_sequences": 1,
+            "positive_sequences": 7,
+            "n": 8,
+            "min": -0.01974761969606808,
+            "max": 0.04186288156267136
+          },
+          "KL_add": {
+            "mean": 0.4429575077445843,
+            "sd_across_sequences": 0.044990776254499903,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.3734321141842217,
+            "max": 0.5110928878470804
+          },
+          "base_entropy": {
+            "mean": 6.816074293767381,
+            "sd_across_sequences": 0.10013717294693425,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 6.660501125357541,
+            "max": 6.9522483343864145
+          },
+          "KL_full": {
+            "mean": 0.46507393275787845,
+            "sd_across_sequences": 0.04256695018933587,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.40888809286140515,
+            "max": 0.5198695437710033
+          },
+          "mixed_KL_correction": {
+            "mean": 0.02211642501329418,
+            "sd_across_sequences": 0.01132699046954029,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.006018311002587096,
+            "max": 0.0387800239316497
+          },
+          "base_nll": {
+            "mean": 7.0551347671725715,
+            "sd_across_sequences": 0.4320303919464132,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 6.393579069852228,
+            "max": 7.798555366774347
+          },
+          "delta_nll_body": {
+            "mean": 0.04523470531643892,
+            "sd_across_sequences": 0.07883287237681814,
+            "negative_sequences": 2,
+            "positive_sequences": 6,
+            "n": 8,
+            "min": -0.11054726063502773,
+            "max": 0.10677149025666477
+          },
+          "delta_nll_aux": {
+            "mean": -0.09183680401450411,
+            "sd_across_sequences": 0.02227398592489989,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.12508128574050748,
+            "max": -0.059060433706992654
+          },
+          "delta_nll_full": {
+            "mean": 0.04054745415915395,
+            "sd_across_sequences": 0.09363379445798872,
+            "negative_sequences": 2,
+            "positive_sequences": 6,
+            "n": 8,
+            "min": -0.1452947947203631,
+            "max": 0.12823482946427944
+          }
+        },
+        "old_bank0": {
+          "interaction": {
+            "mean": 0.08695277289709819,
+            "sd_across_sequences": 0.014172560676328936,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.074317175569182,
+            "max": 0.10624574775675673
+          },
+          "overlap": {
+            "mean": 0.053160131437174934,
+            "sd_across_sequences": 0.015021111846403368,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.03348537646198346,
+            "max": 0.06995335471648086
+          },
+          "mixed_loss": {
+            "mean": 0.033792641459923285,
+            "sd_across_sequences": 0.007747560642611099,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.02274703377437512,
+            "max": 0.040831799107198564
+          },
+          "J_direct": {
+            "mean": 0.016442571806903,
+            "sd_across_sequences": 0.011539193406597505,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0026577208822350486,
+            "max": 0.030274082037688707
+          },
+          "KL_add": {
+            "mean": 0.4487041880448126,
+            "sd_across_sequences": 0.042795185846249695,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.41569812288053176,
+            "max": 0.5110928878470804
+          },
+          "base_entropy": {
+            "mean": 6.808928431844008,
+            "sd_across_sequences": 0.1006725947330428,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.660501125357541,
+            "max": 6.882580658446665
+          },
+          "KL_full": {
+            "mean": 0.4660542576978328,
+            "sd_across_sequences": 0.03446892092961933,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.4431210846737306,
+            "max": 0.5171111988496675
+          },
+          "mixed_KL_correction": {
+            "mean": 0.017350069653020245,
+            "sd_across_sequences": 0.008936197531421827,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.006018311002587096,
+            "max": 0.027422961793198863
+          },
+          "base_nll": {
+            "mean": 7.066432889063579,
+            "sd_across_sequences": 0.2703609767347112,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.761704019938289,
+            "max": 7.411452863688734
+          },
+          "delta_nll_body": {
+            "mean": 0.055700934938567315,
+            "sd_across_sequences": 0.06942087403586668,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.04422329872630648,
+            "max": 0.10677149025666477
+          },
+          "delta_nll_aux": {
+            "mean": -0.08249856672198597,
+            "sd_across_sequences": 0.029518767617723828,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.12508128574050748,
+            "max": -0.059060433706992654
+          },
+          "delta_nll_full": {
+            "mean": 0.06015514111367981,
+            "sd_across_sequences": 0.08448922464578333,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.06305883671005574,
+            "max": 0.12823482946427944
+          }
+        },
+        "old_bank1": {
+          "interaction": {
+            "mean": 0.08734633281734058,
+            "sd_across_sequences": 0.01809811832288604,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06368803411821779,
+            "max": 0.10354262986621707
+          },
+          "overlap": {
+            "mean": 0.04564103352176249,
+            "sd_across_sequences": 0.019025603260111587,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.021905552349723918,
+            "max": 0.0683941555267039
+          },
+          "mixed_loss": {
+            "mean": 0.04170529929557809,
+            "sd_across_sequences": 0.024940805066093096,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.019032404235581557,
+            "max": 0.07731886023985488
+          },
+          "J_direct": {
+            "mean": 0.014822518922009979,
+            "sd_across_sequences": 0.02587557884253022,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.01974761969606808,
+            "max": 0.04186288156267136
+          },
+          "KL_add": {
+            "mean": 0.437210827444356,
+            "sd_across_sequences": 0.052948752472706744,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.3734321141842217,
+            "max": 0.48108951983935355
+          },
+          "base_entropy": {
+            "mean": 6.823220155690753,
+            "sd_across_sequences": 0.11456985221362537,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.720172960095074,
+            "max": 6.9522483343864145
+          },
+          "KL_full": {
+            "mean": 0.4640936078179241,
+            "sd_across_sequences": 0.05511082444459705,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.40888809286140515,
+            "max": 0.5198695437710033
+          },
+          "mixed_KL_correction": {
+            "mean": 0.026882780373568116,
+            "sd_across_sequences": 0.012606783430020665,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.011537308132150537,
+            "max": 0.0387800239316497
+          },
+          "base_nll": {
+            "mean": 7.043836645281564,
+            "sd_across_sequences": 0.6017323500440612,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.393579069852228,
+            "max": 7.798555366774347
+          },
+          "delta_nll_body": {
+            "mean": 0.03476847569431052,
+            "sd_across_sequences": 0.0968989910757966,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.11054726063502773,
+            "max": 0.08516648426342943
+          },
+          "delta_nll_aux": {
+            "mean": -0.10117504130702226,
+            "sd_across_sequences": 0.007330730114159001,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.11035006864758135,
+            "max": -0.09301637392122775
+          },
+          "delta_nll_full": {
+            "mean": 0.02093976720462809,
+            "sd_across_sequences": 0.11087535630429901,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.1452947947203631,
+            "max": 0.08100990732478763
+          }
+        },
+        "fresh": {
+          "interaction": {
+            "mean": 0.09100831463516276,
+            "sd_across_sequences": 0.011600195631078782,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.0748735511817444,
+            "max": 0.10874534289966226
+          },
+          "overlap": {
+            "mean": 0.05844889429493354,
+            "sd_across_sequences": 0.020105543496073786,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.03520554470822958,
+            "max": 0.08322090955461511
+          },
+          "mixed_loss": {
+            "mean": 0.032559420340229225,
+            "sd_across_sequences": 0.013909114342140776,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.009748648290087727,
+            "max": 0.04797593200979758
+          },
+          "J_direct": {
+            "mean": 0.007524093724420453,
+            "sd_across_sequences": 0.015038802627443905,
+            "negative_sequences": 2,
+            "positive_sequences": 6,
+            "n": 8,
+            "min": -0.01524031634306903,
+            "max": 0.023824096472708556
+          },
+          "KL_add": {
+            "mean": 0.5024252779723608,
+            "sd_across_sequences": 0.09487115116700456,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.4056248747534575,
+            "max": 0.6148949555230314
+          },
+          "base_entropy": {
+            "mean": 6.912960170616656,
+            "sd_across_sequences": 0.3108132647385312,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 6.641117860112904,
+            "max": 7.460331190795369
+          },
+          "KL_full": {
+            "mean": 0.5274606045881696,
+            "sd_across_sequences": 0.09524646598680145,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.4297565683477679,
+            "max": 0.6345187338459453
+          },
+          "mixed_KL_correction": {
+            "mean": 0.025035326615808748,
+            "sd_across_sequences": 0.003457535204969254,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.019623778322913843,
+            "max": 0.029388524506469338
+          },
+          "base_nll": {
+            "mean": 7.466605606056763,
+            "sd_across_sequences": 0.6098611808166324,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 6.760585857042043,
+            "max": 8.131333101954088
+          },
+          "delta_nll_body": {
+            "mean": 0.006628759752288493,
+            "sd_across_sequences": 0.057150206246645734,
+            "negative_sequences": 5,
+            "positive_sequences": 3,
+            "n": 8,
+            "min": -0.06036744077768397,
+            "max": 0.09349783413087742
+          },
+          "delta_nll_aux": {
+            "mean": -0.10399906733797648,
+            "sd_across_sequences": 0.010874847457149055,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.11980617916237701,
+            "max": -0.08917258621868918
+          },
+          "delta_nll_full": {
+            "mean": -0.006361992950525197,
+            "sd_across_sequences": 0.06810276987956629,
+            "negative_sequences": 5,
+            "positive_sequences": 3,
+            "n": 8,
+            "min": -0.084875383322907,
+            "max": 0.09595800321170245
+          }
+        },
+        "fresh_bank0": {
+          "interaction": {
+            "mean": 0.0840846519496955,
+            "sd_across_sequences": 0.007340523262228668,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0748735511817444,
+            "max": 0.09265318234486061
+          },
+          "overlap": {
+            "mean": 0.04028503061880539,
+            "sd_across_sequences": 0.004631781430226273,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.03520554470822958,
+            "max": 0.04467725033506299
+          },
+          "mixed_loss": {
+            "mean": 0.04379962133089009,
+            "sd_across_sequences": 0.0037043321359955224,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.03966800647351482,
+            "max": 0.04797593200979758
+          },
+          "J_direct": {
+            "mean": 0.019401615206418314,
+            "sd_across_sequences": 0.005087887639477771,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.012065157444995128,
+            "max": 0.023824096472708556
+          },
+          "KL_add": {
+            "mean": 0.41461915622395856,
+            "sd_across_sequences": 0.008971998575712434,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.4056248747534575,
+            "max": 0.4243825973067733
+          },
+          "base_entropy": {
+            "mean": 6.695838071386833,
+            "sd_across_sequences": 0.04074469944604446,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.641117860112904,
+            "max": 6.735711388269969
+          },
+          "KL_full": {
+            "mean": 0.43901716234843036,
+            "sd_across_sequences": 0.00902944650489614,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.4297565683477679,
+            "max": 0.44899827026900846
+          },
+          "mixed_KL_correction": {
+            "mean": 0.024398006124471794,
+            "sd_across_sequences": 0.002612031602280508,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.021221666970043296,
+            "max": 0.027602849028519727
+          },
+          "base_nll": {
+            "mean": 6.90181622410921,
+            "sd_across_sequences": 0.09557796128665105,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.760585857042043,
+            "max": 6.9638750897395685
+          },
+          "delta_nll_body": {
+            "mean": -0.01648298212514998,
+            "sd_across_sequences": 0.027922163013706463,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.03681460758389399,
+            "max": 0.024599256416125925
+          },
+          "delta_nll_aux": {
+            "mean": -0.10298859791483839,
+            "sd_across_sequences": 0.013690998643142546,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.11980617916237701,
+            "max": -0.08917258621868918
+          },
+          "delta_nll_full": {
+            "mean": -0.035386928090292535,
+            "sd_across_sequences": 0.03856240008668955,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.0639676044014097,
+            "max": 0.021093421843624505
+          }
+        },
+        "fresh_bank1": {
+          "interaction": {
+            "mean": 0.09793197732063001,
+            "sd_across_sequences": 0.011500798314437139,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.08409472581053785,
+            "max": 0.10874534289966226
+          },
+          "overlap": {
+            "mean": 0.07661275797106168,
+            "sd_across_sequences": 0.00647720124991492,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06772299045602401,
+            "max": 0.08322090955461511
+          },
+          "mixed_loss": {
+            "mean": 0.021319219349568354,
+            "sd_across_sequences": 0.010038941781454319,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.009748648290087727,
+            "max": 0.031522761258133886
+          },
+          "J_direct": {
+            "mean": -0.004353427757577408,
+            "sd_across_sequences": 0.011208555615125416,
+            "negative_sequences": 2,
+            "positive_sequences": 2,
+            "n": 4,
+            "min": -0.01524031634306903,
+            "max": 0.008009954172624137
+          },
+          "KL_add": {
+            "mean": 0.590231399720763,
+            "sd_across_sequences": 0.018999446123320027,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.5689599920125935,
+            "max": 0.6148949555230314
+          },
+          "base_entropy": {
+            "mean": 7.130082269846479,
+            "sd_across_sequences": 0.3131122053255047,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.787342288551542,
+            "max": 7.460331190795369
+          },
+          "KL_full": {
+            "mean": 0.6159040468279087,
+            "sd_across_sequences": 0.015063116837245408,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.5976493129786364,
+            "max": 0.6345187338459453
+          },
+          "mixed_KL_correction": {
+            "mean": 0.025672647107145702,
+            "sd_across_sequences": 0.0044708053454924805,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.019623778322913843,
+            "max": 0.029388524506469338
+          },
+          "base_nll": {
+            "mean": 8.031394988004317,
+            "sd_across_sequences": 0.08983839441400945,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 7.952862536551255,
+            "max": 8.131333101954088
+          },
+          "delta_nll_body": {
+            "mean": 0.029740501629726968,
+            "sd_across_sequences": 0.07359995483529475,
+            "negative_sequences": 2,
+            "positive_sequences": 2,
+            "n": 4,
+            "min": -0.06036744077768397,
+            "max": 0.09349783413087742
+          },
+          "delta_nll_aux": {
+            "mean": -0.10500953676111457,
+            "sd_across_sequences": 0.009261703071132213,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.11637531818496427,
+            "max": -0.09623367947378281
+          },
+          "delta_nll_full": {
+            "mean": 0.02266294218924214,
+            "sd_across_sequences": 0.0841925568297752,
+            "negative_sequences": 2,
+            "positive_sequences": 2,
+            "n": 4,
+            "min": -0.084875383322907,
+            "max": 0.09595800321170245
+          }
+        }
+      },
+      "per_sequence": {
+        "interaction": [
+          0.08855089302766003,
+          0.078697275234794,
+          0.074317175569182,
+          0.10624574775675673,
+          0.09922441258957879,
+          0.06368803411821779,
+          0.10354262986621707,
+          0.08293025469534868,
+          0.09265318234486061,
+          0.0748735511817444,
+          0.08314512262598964,
+          0.08566675164618734,
+          0.09296955784470282,
+          0.10591828272761714,
+          0.10874534289966226,
+          0.08409472581053785
+        ],
+        "overlap": [
+          0.0532515531098165,
+          0.055950241460418895,
+          0.03348537646198346,
+          0.06995335471648086,
+          0.021905552349723918,
+          0.0446556298826363,
+          0.0683941555267039,
+          0.04760879632798588,
+          0.04467725033506299,
+          0.03520554470822958,
+          0.037543922309491315,
+          0.043713405122437675,
+          0.08322090955461511,
+          0.07828455023207911,
+          0.07722258164152848,
+          0.06772299045602401
+        ],
+        "mixed_loss": [
+          0.035299339917843536,
+          0.02274703377437512,
+          0.040831799107198564,
+          0.03629239304027592,
+          0.07731886023985488,
+          0.019032404235581557,
+          0.035148474339513146,
+          0.03532145836736279,
+          0.04797593200979758,
+          0.03966800647351482,
+          0.04560120031649832,
+          0.04195334652374964,
+          0.009748648290087727,
+          0.02763373249553798,
+          0.031522761258133886,
+          0.016371735354513826
+        ],
+        "J_direct": [
+          0.019429646993688567,
+          0.0026577208822350486,
+          0.013408837313999673,
+          0.030274082037688707,
+          0.04186288156267136,
+          -0.01974761969606808,
+          0.0133906635862244,
+          0.023784150235212236,
+          0.023824096472708556,
+          0.012065157444995128,
+          0.02098552735426321,
+          0.02073167955370636,
+          -0.01524031634306903,
+          0.008009954172624137,
+          0.0021342367516643964,
+          -0.012317585611529135
+        ],
+        "KL_add": [
+          0.4403714863402507,
+          0.42765425511138744,
+          0.41569812288053176,
+          0.5110928878470804,
+          0.3734321141842217,
+          0.48108951983935355,
+          0.4804748127119558,
+          0.41384686304189294,
+          0.4199342514578789,
+          0.4056248747534575,
+          0.4243825973067733,
+          0.4085349013777246,
+          0.5914006139605958,
+          0.6148949555230314,
+          0.5856700373868311,
+          0.5689599920125935
+        ],
+        "base_entropy": [
+          6.882580658446665,
+          6.837542662527754,
+          6.660501125357541,
+          6.855089281044073,
+          6.9522483343864145,
+          6.733502055193,
+          6.886957273088525,
+          6.720172960095074,
+          6.735711388269969,
+          6.641117860112904,
+          6.7152196442964325,
+          6.691303392868026,
+          6.787342288551542,
+          7.460331190795369,
+          7.3200459285631485,
+          6.952609671475857
+        ],
+        "KL_full": [
+          0.4562411792644056,
+          0.44774356800352755,
+          0.4431210846737306,
+          0.5171111988496675,
+          0.40888809286140515,
+          0.5198695437710033,
+          0.5022326234652446,
+          0.4253841711740435,
+          0.4440860869949679,
+          0.4332277237819772,
+          0.44899827026900846,
+          0.4297565683477679,
+          0.6163895785937525,
+          0.6345187338459453,
+          0.6150585618933004,
+          0.5976493129786364
+        ],
+        "mixed_KL_correction": [
+          0.01586969292415491,
+          0.02008931289214011,
+          0.027422961793198863,
+          0.006018311002587096,
+          0.035455978677183475,
+          0.0387800239316497,
+          0.021757810753288753,
+          0.011537308132150537,
+          0.024151835537088995,
+          0.027602849028519727,
+          0.024615672962235158,
+          0.021221666970043296,
+          0.024988964633156696,
+          0.019623778322913843,
+          0.029388524506469338,
+          0.02868932096604293
+        ],
+        "base_nll": [
+          6.988950524129326,
+          7.103624148497968,
+          6.761704019938289,
+          7.411452863688734,
+          6.393579069852228,
+          7.798555366774347,
+          7.201789485933295,
+          6.781422658566384,
+          6.956797710373619,
+          6.9638750897395685,
+          6.926006239281606,
+          6.760585857042043,
+          7.958127240116784,
+          8.131333101954088,
+          7.952862536551255,
+          8.083257073395144
+        ],
+        "delta_nll_body": [
+          0.10677149025666477,
+          0.0618059535461013,
+          0.09844959467780967,
+          -0.04422329872630648,
+          0.08408924723454092,
+          -0.11054726063502773,
+          0.08036543191429946,
+          0.08516648426342943,
+          -0.03681460758389399,
+          -0.02350252697310573,
+          -0.03021405035972613,
+          0.024599256416125925,
+          -0.00020752817627744946,
+          0.09349783413087742,
+          0.08603914134199186,
+          -0.06036744077768397
+        ],
+        "delta_nll_aux": [
+          -0.06708755382004572,
+          -0.059060433706992654,
+          -0.07876499362039802,
+          -0.12508128574050748,
+          -0.11035006864758135,
+          -0.09843556820355204,
+          -0.10289815445572792,
+          -0.09301637392122775,
+          -0.11980617916237701,
+          -0.09500273783318214,
+          -0.10797288844510522,
+          -0.08917258621868918,
+          -0.09623367947378281,
+          -0.11637531818496427,
+          -0.09882648102995084,
+          -0.10860266835576038
+        ],
+        "delta_nll_full": [
+          0.12823482946427944,
+          0.08144279507390362,
+          0.09400177662659193,
+          -0.06305883671005574,
+          0.0729635911765385,
+          -0.1452947947203631,
+          0.08100990732478763,
+          0.07508036503754933,
+          -0.0639676044014097,
+          -0.04363171362454388,
+          -0.055041816178841074,
+          0.021093421843624505,
+          -0.00347164980535819,
+          0.08304079867353131,
+          0.09595800321170245,
+          -0.084875383322907
+        ]
+      }
+    },
+    "h09_9": {
+      "groups": {
+        "old": {
+          "interaction": {
+            "mean": -0.04674064251324362,
+            "sd_across_sequences": 0.010151082684151639,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.05866493219304333,
+            "max": -0.027268670947396066
+          },
+          "overlap": {
+            "mean": -0.06148380208830295,
+            "sd_across_sequences": 0.005549156310372133,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.0668135594415806,
+            "max": -0.05005381455440522
+          },
+          "mixed_loss": {
+            "mean": 0.01474315957505932,
+            "sd_across_sequences": 0.01185046029766811,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.0003895868070006351,
+            "max": 0.037082517257611206
+          },
+          "J_direct": {
+            "mean": -0.03274872388620235,
+            "sd_across_sequences": 0.01188251198859948,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.05654637620619701,
+            "max": -0.015393640655692153
+          },
+          "KL_add": {
+            "mean": 0.25726326888539897,
+            "sd_across_sequences": 0.02627302270768554,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.22919849404524967,
+            "max": 0.31200526389554506
+          },
+          "base_entropy": {
+            "mean": 6.15504221640747,
+            "sd_across_sequences": 0.16986359278637503,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 5.966231673709023,
+            "max": 6.415255364255988
+          },
+          "KL_full": {
+            "mean": 0.3047551523466606,
+            "sd_across_sequences": 0.0328456841200351,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.26872165686011684,
+            "max": 0.3742342907147908
+          },
+          "mixed_KL_correction": {
+            "mean": 0.047491883461261666,
+            "sd_across_sequences": 0.008293173769198822,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.0353026276882879,
+            "max": 0.06222902681924575
+          },
+          "base_nll": {
+            "mean": 7.092147897254656,
+            "sd_across_sequences": 0.452916402299154,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 6.3836262134479425,
+            "max": 7.85110110725484
+          },
+          "delta_nll_body": {
+            "mean": -0.06839147914124954,
+            "sd_across_sequences": 0.08986839161770983,
+            "negative_sequences": 7,
+            "positive_sequences": 1,
+            "n": 8,
+            "min": -0.18198986698530906,
+            "max": 0.09298125249504885
+          },
+          "delta_nll_aux": {
+            "mean": -0.015816097669307805,
+            "sd_across_sequences": 0.012008964043451984,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.03782139951792107,
+            "max": -2.5403013201419355e-05
+          },
+          "delta_nll_full": {
+            "mean": -0.13094821932380107,
+            "sd_across_sequences": 0.08837549908166366,
+            "negative_sequences": 7,
+            "positive_sequences": 1,
+            "n": 8,
+            "min": -0.2454331953749671,
+            "max": 0.027891182029731176
+          }
+        },
+        "old_bank0": {
+          "interaction": {
+            "mean": -0.0492434128660827,
+            "sd_across_sequences": 0.007367635647175931,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.058197240119076954,
+            "max": -0.04100723080115567
+          },
+          "overlap": {
+            "mean": -0.06237449336373172,
+            "sd_across_sequences": 0.004499930918831754,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.0668135594415806,
+            "max": -0.058409820516067995
+          },
+          "mixed_loss": {
+            "mean": 0.013131080497649014,
+            "sd_across_sequences": 0.010404679869143453,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0003895868070006351,
+            "max": 0.025806328640424946
+          },
+          "J_direct": {
+            "mean": -0.03273701224554117,
+            "sd_across_sequences": 0.00573565808703941,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.039133576007866544,
+            "max": -0.02594165016463463
+          },
+          "KL_add": {
+            "mean": 0.246579627147627,
+            "sd_across_sequences": 0.017672644547079754,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.22919849404524967,
+            "max": 0.2633749937957102
+          },
+          "base_entropy": {
+            "mean": 6.1901181172991935,
+            "sd_across_sequences": 0.13963104176251792,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.008066356952941,
+            "max": 6.301282301980072
+          },
+          "KL_full": {
+            "mean": 0.2924477198908172,
+            "sd_across_sequences": 0.02224968141762466,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.26872165686011684,
+            "max": 0.3118984296437514
+          },
+          "mixed_KL_correction": {
+            "mean": 0.04586809274319019,
+            "sd_across_sequences": 0.005138437610946281,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.039523162814867174,
+            "max": 0.0517479788050596
+          },
+          "base_nll": {
+            "mean": 7.100821753060192,
+            "sd_across_sequences": 0.27954178227640136,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.782981013809515,
+            "max": 7.448489550864784
+          },
+          "delta_nll_body": {
+            "mean": -0.0806905889542977,
+            "sd_across_sequences": 0.07257804708195541,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.18198986698530906,
+            "max": -0.009368604036839479
+          },
+          "delta_nll_aux": {
+            "mean": -0.01470586493324011,
+            "sd_across_sequences": 0.009267887023471973,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.026708486425429,
+            "max": -0.005246088270582483
+          },
+          "delta_nll_full": {
+            "mean": -0.1446398667536204,
+            "sd_across_sequences": 0.07162048953271373,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.2454331953749671,
+            "max": -0.07708432126342402
+          }
+        },
+        "old_bank1": {
+          "interaction": {
+            "mean": -0.04423787216040454,
+            "sd_across_sequences": 0.013017351459012543,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.05866493219304333,
+            "max": -0.027268670947396066
+          },
+          "overlap": {
+            "mean": -0.060593110812874176,
+            "sd_across_sequences": 0.00703460891807608,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.06435118820500728,
+            "max": -0.05005381455440522
+          },
+          "mixed_loss": {
+            "mean": 0.016355238652469628,
+            "sd_across_sequences": 0.014577052556599449,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.005682650613048741,
+            "max": 0.037082517257611206
+          },
+          "J_direct": {
+            "mean": -0.03276043552686353,
+            "sd_across_sequences": 0.017220764788862652,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.05654637620619701,
+            "max": -0.015393640655692153
+          },
+          "KL_add": {
+            "mean": 0.2679469106231709,
+            "sd_across_sequences": 0.03152677884634548,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.2371023697977993,
+            "max": 0.31200526389554506
+          },
+          "base_entropy": {
+            "mean": 6.119966315515744,
+            "sd_across_sequences": 0.21106274503259387,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.966231673709023,
+            "max": 6.415255364255988
+          },
+          "KL_full": {
+            "mean": 0.31706258480250404,
+            "sd_across_sequences": 0.04022828457024284,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.2835572540942949,
+            "max": 0.3742342907147908
+          },
+          "mixed_KL_correction": {
+            "mean": 0.049115674179333144,
+            "sd_across_sequences": 0.011271393355886531,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0353026276882879,
+            "max": 0.06222902681924575
+          },
+          "base_nll": {
+            "mean": 7.08347404144912,
+            "sd_across_sequences": 0.6326927010774875,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.3836262134479425,
+            "max": 7.85110110725484
+          },
+          "delta_nll_body": {
+            "mean": -0.056092369328201386,
+            "sd_across_sequences": 0.11477722060792302,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.17539143345409602,
+            "max": 0.09298125249504885
+          },
+          "delta_nll_aux": {
+            "mean": -0.0169263304053755,
+            "sd_across_sequences": 0.015726457519236455,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.03782139951792107,
+            "max": -2.5403013201419355e-05
+          },
+          "delta_nll_full": {
+            "mean": -0.11725657189398175,
+            "sd_across_sequences": 0.11222511398683667,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.23408176866034136,
+            "max": 0.027891182029731176
+          }
+        },
+        "fresh": {
+          "interaction": {
+            "mean": -0.047695956620778995,
+            "sd_across_sequences": 0.010252359778000982,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.06699877488120003,
+            "max": -0.03518070144034017
+          },
+          "overlap": {
+            "mean": -0.053006435559910706,
+            "sd_across_sequences": 0.01437804948420222,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.07152148579930717,
+            "max": -0.032505331643229836
+          },
+          "mixed_loss": {
+            "mean": 0.0053104789391317155,
+            "sd_across_sequences": 0.015412442021516093,
+            "negative_sequences": 3,
+            "positive_sequences": 5,
+            "n": 8,
+            "min": -0.01868510675493907,
+            "max": 0.024131316566237092
+          },
+          "J_direct": {
+            "mean": -0.03847488012998719,
+            "sd_across_sequences": 0.013141064599090046,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.06278902341060048,
+            "max": -0.022516657139885245
+          },
+          "KL_add": {
+            "mean": 0.26872652237666017,
+            "sd_across_sequences": 0.018340048976137523,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.24191410828659218,
+            "max": 0.3038228384665086
+          },
+          "base_entropy": {
+            "mean": 6.168173928330159,
+            "sd_across_sequences": 0.1119118933998168,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 6.017918474523486,
+            "max": 6.336590773307995
+          },
+          "KL_full": {
+            "mean": 0.31251188144577907,
+            "sd_across_sequences": 0.019948410725759775,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.28732465102857774,
+            "max": 0.35016427322445254
+          },
+          "mixed_KL_correction": {
+            "mean": 0.0437853590691189,
+            "sd_across_sequences": 0.007726855954923063,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.030889559960731894,
+            "max": 0.05338557195549515
+          },
+          "base_nll": {
+            "mean": 7.543697225724978,
+            "sd_across_sequences": 0.6657718361558452,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 6.786537126019722,
+            "max": 8.262983168629063
+          },
+          "delta_nll_body": {
+            "mean": -0.1491987673409485,
+            "sd_across_sequences": 0.10889746443174841,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.2913416780700633,
+            "max": -0.02555280921714509
+          },
+          "delta_nll_aux": {
+            "mean": -0.02177974143072392,
+            "sd_across_sequences": 0.011690001450628516,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.035191396022815624,
+            "max": -0.00015518344246245874
+          },
+          "delta_nll_full": {
+            "mean": -0.2186744653924514,
+            "sd_across_sequences": 0.11221706154984105,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.3697848708772833,
+            "max": -0.08647562276669518
+          }
+        },
+        "fresh_bank0": {
+          "interaction": {
+            "mean": -0.046953454952128125,
+            "sd_across_sequences": 0.0059562482302055585,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.05223309640092069,
+            "max": -0.03852630122387004
+          },
+          "overlap": {
+            "mean": -0.06526344130687461,
+            "sd_across_sequences": 0.004276254882898676,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.07152148579930717,
+            "max": -0.06202642978043857
+          },
+          "mixed_loss": {
+            "mean": 0.01830998635474652,
+            "sd_across_sequences": 0.0063892303852362865,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.012091834929990468,
+            "max": 0.024131316566237092
+          },
+          "J_direct": {
+            "mean": -0.03049658844539299,
+            "sd_across_sequences": 0.0061684387203430995,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.036896733440433774,
+            "max": -0.022516657139885245
+          },
+          "KL_add": {
+            "mean": 0.2602589157668049,
+            "sd_across_sequences": 0.015729455010609957,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.24191410828659218,
+            "max": 0.28033579365037903
+          },
+          "base_entropy": {
+            "mean": 6.150427616223568,
+            "sd_across_sequences": 0.030765701652136712,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.120955058217291,
+            "max": 6.193616166766209
+          },
+          "KL_full": {
+            "mean": 0.30906549056694443,
+            "sd_across_sequences": 0.019052579724162626,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.28732465102857774,
+            "max": 0.3337213656058742
+          },
+          "mixed_KL_correction": {
+            "mean": 0.048806574800139536,
+            "sd_across_sequences": 0.0037799936207892275,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.045410542741985555,
+            "max": 0.05338557195549515
+          },
+          "base_nll": {
+            "mean": 6.9264588773571845,
+            "sd_across_sequences": 0.09751070383812398,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.786537126019722,
+            "max": 7.007393988010647
+          },
+          "delta_nll_body": {
+            "mean": -0.05117889923147567,
+            "sd_across_sequences": 0.01995459318651187,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.07416775859611491,
+            "max": -0.02555280921714509
+          },
+          "delta_nll_aux": {
+            "mean": -0.020050240339493985,
+            "sd_across_sequences": 0.007286095935379474,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.026794509650221343,
+            "max": -0.009719105423944718
+          },
+          "delta_nll_full": {
+            "mean": -0.11818259452309787,
+            "sd_across_sequences": 0.02493449555152856,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.14512284550489607,
+            "max": -0.08647562276669518
+          }
+        },
+        "fresh_bank1": {
+          "interaction": {
+            "mean": -0.048438458289429866,
+            "sd_across_sequences": 0.014433006366888492,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.06699877488120003,
+            "max": -0.03518070144034017
+          },
+          "overlap": {
+            "mean": -0.04074942981294679,
+            "sd_across_sequences": 0.007965876437902227,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.048313668126260936,
+            "max": -0.032505331643229836
+          },
+          "mixed_loss": {
+            "mean": -0.007689028476483093,
+            "sd_across_sequences": 0.007925470424109234,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.01868510675493907,
+            "max": 0.00020990397784129383
+          },
+          "J_direct": {
+            "mean": -0.04645317181458138,
+            "sd_across_sequences": 0.013969479078889574,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.06278902341060048,
+            "max": -0.03067965598289058
+          },
+          "KL_add": {
+            "mean": 0.2771941289865155,
+            "sd_across_sequences": 0.01860691284391667,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.26128386589384456,
+            "max": 0.3038228384665086
+          },
+          "base_entropy": {
+            "mean": 6.185920240436748,
+            "sd_across_sequences": 0.16564104286961687,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.017918474523486,
+            "max": 6.336590773307995
+          },
+          "KL_full": {
+            "mean": 0.3159582723246137,
+            "sd_across_sequences": 0.023105196891830902,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.2996435219033594,
+            "max": 0.35016427322445254
+          },
+          "mixed_KL_correction": {
+            "mean": 0.03876414333809827,
+            "sd_across_sequences": 0.007601846398029356,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.030889559960731894,
+            "max": 0.046341434757943945
+          },
+          "base_nll": {
+            "mean": 8.160935574092772,
+            "sd_across_sequences": 0.0937630401114925,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 8.06806628386238,
+            "max": 8.262983168629063
+          },
+          "delta_nll_body": {
+            "mean": -0.24721863545042133,
+            "sd_across_sequences": 0.040632050552661926,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.2913416780700633,
+            "max": -0.21241145151789276
+          },
+          "delta_nll_aux": {
+            "mean": -0.023509242521953855,
+            "sd_across_sequences": 0.01605617184838584,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.035191396022815624,
+            "max": -0.00015518344246245874
+          },
+          "delta_nll_full": {
+            "mean": -0.3191663362618049,
+            "sd_across_sequences": 0.042796285774801955,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.3697848708772833,
+            "max": -0.2803579101714728
+          }
+        }
+      },
+      "per_sequence": {
+        "interaction": [
+          -0.05158486250809735,
+          -0.04618431803600083,
+          -0.04100723080115567,
+          -0.058197240119076954,
+          -0.027268670947396066,
+          -0.05866493219304333,
+          -0.04338418098288804,
+          -0.047633704518290715,
+          -0.04739016923307007,
+          -0.05223309640092069,
+          -0.049664252950651674,
+          -0.03852630122387004,
+          -0.06699877488120003,
+          -0.039055797438258676,
+          -0.03518070144034017,
+          -0.0525185593979206
+        ],
+        "overlap": [
+          -0.0656877665712007,
+          -0.058409820516067995,
+          -0.0668135594415806,
+          -0.05858682692607759,
+          -0.06435118820500728,
+          -0.06434758280609215,
+          -0.05005381455440522,
+          -0.06361985768599203,
+          -0.07152148579930717,
+          -0.06432493133091118,
+          -0.06318091831684158,
+          -0.06202642978043857,
+          -0.048313668126260936,
+          -0.032505331643229836,
+          -0.03539060541818148,
+          -0.0467881140641149
+        ],
+        "mixed_loss": [
+          0.014102904063103352,
+          0.01222550248006712,
+          0.025806328640424946,
+          0.0003895868070006351,
+          0.037082517257611206,
+          0.005682650613048741,
+          0.00666963357151721,
+          0.01598615316770136,
+          0.024131316566237092,
+          0.012091834929990468,
+          0.013516665366189947,
+          0.023500128556568578,
+          -0.01868510675493907,
+          -0.0065504657950288675,
+          0.00020990397784129383,
+          -0.005730445333805729
+        ],
+        "J_direct": [
+          -0.03053632523463977,
+          -0.03533649757502372,
+          -0.02594165016463463,
+          -0.039133576007866544,
+          -0.015393640655692153,
+          -0.05654637620619701,
+          -0.02863299411677066,
+          -0.0304687311287943,
+          -0.02925425538925796,
+          -0.03331870781199499,
+          -0.036896733440433774,
+          -0.022516657139885245,
+          -0.06278902341060048,
+          -0.04027212777308478,
+          -0.03067965598289058,
+          -0.052071880091749685
+        ],
+        "KL_add": [
+          0.2335945699108562,
+          0.2633749937957102,
+          0.2601504508386918,
+          0.22919849404524967,
+          0.2623366843346321,
+          0.31200526389554506,
+          0.26034332446470726,
+          0.2371023697977993,
+          0.28033579365037903,
+          0.24191410828659218,
+          0.25863980559764377,
+          0.2601459555326046,
+          0.26128386589384456,
+          0.27491584964308124,
+          0.2687539619426275,
+          0.3038228384665086
+        ],
+        "base_entropy": [
+          6.2979415979962035,
+          6.301282301980072,
+          6.153182212267558,
+          6.008066356952941,
+          6.415255364255988,
+          6.129169295730852,
+          5.966231673709023,
+          5.969208928367112,
+          6.193616166766209,
+          6.120955058217291,
+          6.141157318625905,
+          6.145981921284869,
+          6.017918474523486,
+          6.319554806308675,
+          6.336590773307995,
+          6.069616907606839
+        ],
+        "KL_full": [
+          0.2782337992085993,
+          0.3109369938508011,
+          0.3118984296437514,
+          0.26872165686011684,
+          0.31481284224793543,
+          0.3742342907147908,
+          0.29564595215299516,
+          0.2835572540942949,
+          0.3337213656058742,
+          0.28732465102857774,
+          0.3090532044042674,
+          0.3061627412290584,
+          0.30538778254950594,
+          0.3086375116211371,
+          0.2996435219033594,
+          0.35016427322445254
+        ],
+        "mixed_KL_correction": [
+          0.04463922929774311,
+          0.04756200005509087,
+          0.0517479788050596,
+          0.039523162814867174,
+          0.052476157913303345,
+          0.06222902681924575,
+          0.0353026276882879,
+          0.04645488429649558,
+          0.05338557195549515,
+          0.045410542741985555,
+          0.050413398806623655,
+          0.04601678569645379,
+          0.04410391665566138,
+          0.03372166197805587,
+          0.030889559960731894,
+          0.046341434757943945
+        ],
+        "base_nll": [
+          7.008157454506976,
+          7.1636589930594905,
+          6.782981013809515,
+          7.448489550864784,
+          6.3836262134479425,
+          7.85110110725484,
+          7.294088875406132,
+          6.805079969687567,
+          6.9740727877226405,
+          7.007393988010647,
+          6.9378316076757285,
+          6.786537126019722,
+          8.095956084056422,
+          8.262983168629063,
+          8.06806628386238,
+          8.21673675982322
+        ],
+        "delta_nll_body": [
+          -0.06728788711808775,
+          -0.06411599767695453,
+          -0.009368604036839479,
+          -0.18198986698530906,
+          0.09298125249504885,
+          -0.17539143345409602,
+          -0.10719399301139987,
+          -0.0347653033423585,
+          -0.05421444942083831,
+          -0.050780579691804384,
+          -0.07416775859611491,
+          -0.02555280921714509,
+          -0.27215052734217693,
+          -0.21297088487155236,
+          -0.21241145151789276,
+          -0.2913416780700633
+        ],
+        "delta_nll_aux": [
+          -0.016666923186155813,
+          -0.01020196185079314,
+          -0.026708486425429,
+          -0.005246088270582483,
+          -0.03782139951792107,
+          -2.5403013201419355e-05,
+          -0.01735233139082748,
+          -0.01250618769955203,
+          -0.026794509650221343,
+          -0.009719105423944718,
+          -0.021290833958130584,
+          -0.022396512325679296,
+          -0.00015518344246245874,
+          -0.035191396022815624,
+          -0.03276575721323738,
+          -0.025924633409299958
+        ],
+        "delta_nll_full": [
+          -0.13553967281234147,
+          -0.12050227756374898,
+          -0.07708432126342402,
+          -0.2454331953749671,
+          0.027891182029731176,
+          -0.23408176866034136,
+          -0.16793050538511523,
+          -0.0949051955602016,
+          -0.12839912830412992,
+          -0.11273278151667032,
+          -0.14512284550489607,
+          -0.08647562276669518,
+          -0.3393044856658367,
+          -0.2872180783326268,
+          -0.2803579101714728,
+          -0.3697848708772833
+        ]
+      }
+    },
+    "q09_46": {
+      "groups": {
+        "old": {
+          "interaction": {
+            "mean": 0.022469385676226045,
+            "sd_across_sequences": 0.004259718642309264,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.015732833207006226,
+            "max": 0.02735266936109984
+          },
+          "overlap": {
+            "mean": 0.02227451646919858,
+            "sd_across_sequences": 0.004410770712238024,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.016188576317917217,
+            "max": 0.028690494318206444
+          },
+          "mixed_loss": {
+            "mean": 0.00019486920702746166,
+            "sd_across_sequences": 0.0008361440034651107,
+            "negative_sequences": 2,
+            "positive_sequences": 6,
+            "n": 8,
+            "min": -0.0013378249571066273,
+            "max": 0.0012887096608969074
+          },
+          "J_direct": {
+            "mean": 0.0004937440923084944,
+            "sd_across_sequences": 0.0020806051241917425,
+            "negative_sequences": 3,
+            "positive_sequences": 5,
+            "n": 8,
+            "min": -0.0020276548965060233,
+            "max": 0.0038035304791636366
+          },
+          "KL_add": {
+            "mean": 0.08903593898646184,
+            "sd_across_sequences": 0.01492973468708799,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.06539099175970042,
+            "max": 0.1058224013303406
+          },
+          "base_entropy": {
+            "mean": 5.898457713576486,
+            "sd_across_sequences": 0.21495825298740975,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 5.688984945753129,
+            "max": 6.212163733668556
+          },
+          "KL_full": {
+            "mean": 0.08873706410118082,
+            "sd_across_sequences": 0.016060995973695587,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.06357845876303586,
+            "max": 0.10818400079084574
+          },
+          "mixed_KL_correction": {
+            "mean": -0.0002988748852810266,
+            "sd_across_sequences": 0.0017011608481099514,
+            "negative_sequences": 5,
+            "positive_sequences": 3,
+            "n": 8,
+            "min": -0.002698543485410168,
+            "max": 0.00236159946050514
+          },
+          "base_nll": {
+            "mean": 5.418790116218127,
+            "sd_across_sequences": 0.28992749942496593,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 4.8827024029236235,
+            "max": 5.863706400421318
+          },
+          "delta_nll_body": {
+            "mean": -0.033043093926985234,
+            "sd_across_sequences": 0.018416700390130887,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.05163635971113312,
+            "max": -0.0018451447632301665
+          },
+          "delta_nll_aux": {
+            "mean": -0.027241646904302308,
+            "sd_across_sequences": 0.013448620599217469,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.0411134898755936,
+            "max": -0.007982804386614362
+          },
+          "delta_nll_full": {
+            "mean": -0.037815355155061514,
+            "sd_across_sequences": 0.02930939226011518,
+            "negative_sequences": 6,
+            "positive_sequences": 2,
+            "n": 8,
+            "min": -0.07421132038714529,
+            "max": 0.005962267802077648
+          }
+        },
+        "old_bank0": {
+          "interaction": {
+            "mean": 0.023592304821874743,
+            "sd_across_sequences": 0.005364853068478434,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.015732833207006226,
+            "max": 0.02735266936109984
+          },
+          "overlap": {
+            "mean": 0.02390336270171651,
+            "sd_across_sequences": 0.005432008354873031,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.016188576317917217,
+            "max": 0.028690494318206444
+          },
+          "mixed_loss": {
+            "mean": -0.0003110578798417548,
+            "sd_across_sequences": 0.0007677590896954996,
+            "negative_sequences": 2,
+            "positive_sequences": 2,
+            "n": 4,
+            "min": -0.0013378249571066273,
+            "max": 0.0003339445639991194
+          },
+          "J_direct": {
+            "mean": -0.000929298656710182,
+            "sd_across_sequences": 0.0015462322589164564,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.0020276548965060233,
+            "max": 0.001356789885753609
+          },
+          "KL_add": {
+            "mean": 0.09289741502376293,
+            "sd_across_sequences": 0.018807841723474206,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06539099175970042,
+            "max": 0.1058224013303406
+          },
+          "base_entropy": {
+            "mean": 5.876571200534325,
+            "sd_across_sequences": 0.18302415202718297,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.731022692320051,
+            "max": 6.142262146105716
+          },
+          "KL_full": {
+            "mean": 0.09351565580063136,
+            "sd_across_sequences": 0.020411074039771535,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06357845876303586,
+            "max": 0.10818400079084574
+          },
+          "mixed_KL_correction": {
+            "mean": 0.0006182407768684159,
+            "sd_across_sequences": 0.001827263341315895,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.001812532996664562,
+            "max": 0.00236159946050514
+          },
+          "base_nll": {
+            "mean": 5.53669610068872,
+            "sd_across_sequences": 0.26793128848614867,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.269866182521586,
+            "max": 5.863706400421318
+          },
+          "delta_nll_body": {
+            "mean": -0.03536345949604369,
+            "sd_across_sequences": 0.019090106431111295,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.05163635971113312,
+            "max": -0.010688825259682844
+          },
+          "delta_nll_aux": {
+            "mean": -0.025326857940369818,
+            "sd_across_sequences": 0.015128093187589862,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.04077886184269186,
+            "max": -0.007982804386614362
+          },
+          "delta_nll_full": {
+            "mean": -0.0370980126145386,
+            "sd_across_sequences": 0.03298229839193447,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.07421132038714529,
+            "max": 0.005962267802077648
+          }
+        },
+        "old_bank1": {
+          "interaction": {
+            "mean": 0.021346466530577347,
+            "sd_across_sequences": 0.0031929033695085375,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.016634654619655395,
+            "max": 0.02364406326179035
+          },
+          "overlap": {
+            "mean": 0.020645670236680652,
+            "sd_across_sequences": 0.002968671040259322,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.016234014627003905,
+            "max": 0.022539076268036872
+          },
+          "mixed_loss": {
+            "mean": 0.0007007962938966781,
+            "sd_across_sequences": 0.0005994157612377466,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 8.848528284839479e-06,
+            "max": 0.0012887096608969074
+          },
+          "J_direct": {
+            "mean": 0.0019167868413271704,
+            "sd_across_sequences": 0.0015198153242934754,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.00013142497116595494,
+            "max": 0.0038035304791636366
+          },
+          "KL_add": {
+            "mean": 0.08517446294916076,
+            "sd_across_sequences": 0.011251461185240086,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06993607230011863,
+            "max": 0.09383683430332865
+          },
+          "base_entropy": {
+            "mean": 5.9203442266186475,
+            "sd_across_sequences": 0.2702614027140075,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.688984945753129,
+            "max": 6.212163733668556
+          },
+          "KL_full": {
+            "mean": 0.0839584724017303,
+            "sd_across_sequences": 0.011153083314460539,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06876815470769788,
+            "max": 0.09338563170343053
+          },
+          "mixed_KL_correction": {
+            "mean": -0.0012159905474304691,
+            "sd_across_sequences": 0.0010819973136697878,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.002698543485410168,
+            "max": -0.00012257644288110603
+          },
+          "base_nll": {
+            "mean": 5.3008841317475355,
+            "sd_across_sequences": 0.2954260138728003,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 4.8827024029236235,
+            "max": 5.510603407159418
+          },
+          "delta_nll_body": {
+            "mean": -0.030722728357926776,
+            "sd_across_sequences": 0.02031300659817812,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.045906029652531544,
+            "max": -0.0018451447632301665
+          },
+          "delta_nll_aux": {
+            "mean": -0.029156435868234798,
+            "sd_across_sequences": 0.013541895823252681,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.0411134898755936,
+            "max": -0.01497375241168264
+          },
+          "delta_nll_full": {
+            "mean": -0.03853269769558443,
+            "sd_across_sequences": 0.030252661912597244,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.06134962712910674,
+            "max": 0.005426816513747212
+          }
+        },
+        "fresh": {
+          "interaction": {
+            "mean": 0.01787483027059502,
+            "sd_across_sequences": 0.0047577628378341515,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.01086811897391295,
+            "max": 0.023757591402904704
+          },
+          "overlap": {
+            "mean": 0.016257398466921667,
+            "sd_across_sequences": 0.0050870649941116,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.008853576723277313,
+            "max": 0.02148888160106413
+          },
+          "mixed_loss": {
+            "mean": 0.0016174318036733678,
+            "sd_across_sequences": 0.0009032818126752097,
+            "negative_sequences": 1,
+            "positive_sequences": 7,
+            "n": 8,
+            "min": -0.00016752851604250483,
+            "max": 0.002557818086824159
+          },
+          "J_direct": {
+            "mean": 0.002507321051995093,
+            "sd_across_sequences": 0.0010230201704638621,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.001416054853336926,
+            "max": 0.004213887918424085
+          },
+          "KL_add": {
+            "mean": 0.07203879875892569,
+            "sd_across_sequences": 0.007857650669730355,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.05793233641515341,
+            "max": 0.078966865505988
+          },
+          "base_entropy": {
+            "mean": 6.0897361981717175,
+            "sd_across_sequences": 0.2919078456906175,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 5.758832178839371,
+            "max": 6.4171235624409455
+          },
+          "KL_full": {
+            "mean": 0.07114890951060397,
+            "sd_across_sequences": 0.007243740562744314,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.05789287303668231,
+            "max": 0.07731079567438812
+          },
+          "mixed_KL_correction": {
+            "mean": -0.0008898892483217222,
+            "sd_across_sequences": 0.0007453240281860024,
+            "negative_sequences": 7,
+            "positive_sequences": 1,
+            "n": 8,
+            "min": -0.0016560698315998823,
+            "max": 0.0003023469314913513
+          },
+          "base_nll": {
+            "mean": 5.526901493760541,
+            "sd_across_sequences": 0.2941466326052915,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 5.209243815432544,
+            "max": 5.975569057085285
+          },
+          "delta_nll_body": {
+            "mean": -0.03263026621306697,
+            "sd_across_sequences": 0.01740239788612173,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.06366007197690937,
+            "max": -0.015660968377797957
+          },
+          "delta_nll_aux": {
+            "mean": -0.027991081488554004,
+            "sd_across_sequences": 0.005561948256841978,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.035420591523172895,
+            "max": -0.0209049519260045
+          },
+          "delta_nll_full": {
+            "mean": -0.04274651743102631,
+            "sd_across_sequences": 0.018844412636660087,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.07739109812742928,
+            "max": -0.02273092561843182
+          }
+        },
+        "fresh_bank0": {
+          "interaction": {
+            "mean": 0.02145051875493274,
+            "sd_across_sequences": 0.0019354651415884297,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.019033565159150674,
+            "max": 0.023757591402904704
+          },
+          "overlap": {
+            "mean": 0.020290474214750335,
+            "sd_across_sequences": 0.0015197214544586315,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.018131080049219435,
+            "max": 0.02148888160106413
+          },
+          "mixed_loss": {
+            "mean": 0.0011600445401824236,
+            "sd_across_sequences": 0.0011280752545453918,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.00016752851604250483,
+            "max": 0.002557818086824159
+          },
+          "J_direct": {
+            "mean": 0.0024962613815785162,
+            "sd_across_sequences": 0.0013362686019334708,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.001416054853336926,
+            "max": 0.004213887918424085
+          },
+          "KL_add": {
+            "mean": 0.0769776560044889,
+            "sd_across_sequences": 0.0017733217907974206,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.07499262628949786,
+            "max": 0.078966865505988
+          },
+          "base_entropy": {
+            "mean": 5.8221859558157645,
+            "sd_across_sequences": 0.05991371432868138,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.758832178839371,
+            "max": 5.892413655689857
+          },
+          "KL_full": {
+            "mean": 0.07564143916309282,
+            "sd_across_sequences": 0.001629710107000923,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.07344254709964013,
+            "max": 0.07731079567438812
+          },
+          "mixed_KL_correction": {
+            "mean": -0.0013362168413960825,
+            "sd_across_sequences": 0.0005502341467686059,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.0016560698315998823,
+            "max": -0.0005135697434056619
+          },
+          "base_nll": {
+            "mean": 5.2719603787508635,
+            "sd_across_sequences": 0.0874907153482301,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.209243815432544,
+            "max": 5.398293791225751
+          },
+          "delta_nll_body": {
+            "mean": -0.04211534665527705,
+            "sd_across_sequences": 0.021087931348005826,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.06366007197690937,
+            "max": -0.015660968377797957
+          },
+          "delta_nll_aux": {
+            "mean": -0.031652816130383066,
+            "sd_across_sequences": 0.0035751221821658306,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.035420591523172895,
+            "max": -0.028391310325654118
+          },
+          "delta_nll_full": {
+            "mean": -0.05231764403072803,
+            "sd_across_sequences": 0.023666928915284765,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.07739109812742928,
+            "max": -0.02273092561843182
+          }
+        },
+        "fresh_bank1": {
+          "interaction": {
+            "mean": 0.014299141786257304,
+            "sd_across_sequences": 0.0038700426142535393,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.01086811897391295,
+            "max": 0.017779308468817336
+          },
+          "overlap": {
+            "mean": 0.012224322719093003,
+            "sd_across_sequences": 0.003833768901963792,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.008853576723277313,
+            "max": 0.01595280756397739
+          },
+          "mixed_loss": {
+            "mean": 0.0020748190671643113,
+            "sd_across_sequences": 0.00027088744377561666,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0018265009048399705,
+            "max": 0.002409956457503614
+          },
+          "J_direct": {
+            "mean": 0.0025183807224116693,
+            "sd_across_sequences": 0.0008099736671056827,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.001583473627401987,
+            "max": 0.003481827300684782
+          },
+          "KL_add": {
+            "mean": 0.06709994151336249,
+            "sd_across_sequences": 0.008710649051114175,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.05793233641515341,
+            "max": 0.07686409457234644
+          },
+          "base_entropy": {
+            "mean": 6.357286440527671,
+            "sd_across_sequences": 0.0659224687501696,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.269368916642571,
+            "max": 6.4171235624409455
+          },
+          "KL_full": {
+            "mean": 0.06665637985811512,
+            "sd_across_sequences": 0.00812141192272862,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.05789287303668231,
+            "max": 0.07589883524151796
+          },
+          "mixed_KL_correction": {
+            "mean": -0.0004435616552473619,
+            "sd_across_sequences": 0.0006798568323338184,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.001071870843181208,
+            "max": 0.0003023469314913513
+          },
+          "base_nll": {
+            "mean": 5.781842608770219,
+            "sd_across_sequences": 0.14460525291953596,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.63121130872145,
+            "max": 5.975569057085285
+          },
+          "delta_nll_body": {
+            "mean": -0.02314518577085689,
+            "sd_across_sequences": 0.004692817623136751,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.02819645566494522,
+            "max": -0.01763160590776547
+          },
+          "delta_nll_aux": {
+            "mean": -0.024329346846724942,
+            "sd_across_sequences": 0.004862645998935902,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.03139997700043917,
+            "max": -0.0209049519260045
+          },
+          "delta_nll_full": {
+            "mean": -0.03317539083132459,
+            "sd_across_sequences": 0.00491802553204135,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.03923819826035224,
+            "max": -0.027505982763073256
+          }
+        }
+      },
+      "per_sequence": {
+        "interaction": [
+          0.024633897448374263,
+          0.026649819271018643,
+          0.02735266936109984,
+          0.015732833207006226,
+          0.022861434552203845,
+          0.016634654619655395,
+          0.02364406326179035,
+          0.022245713688659796,
+          0.021689565372653943,
+          0.019033565159150674,
+          0.023757591402904704,
+          0.021321353085021626,
+          0.017518564631601254,
+          0.011030575070697669,
+          0.01086811897391295,
+          0.017779308468817336
+        ],
+        "overlap": [
+          0.024418505463722852,
+          0.026315874707019526,
+          0.028690494318206444,
+          0.016188576317917217,
+          0.021572724891306877,
+          0.016234014627003905,
+          0.022539076268036872,
+          0.022236865160374958,
+          0.020342161892637257,
+          0.018131080049219435,
+          0.021199773316080518,
+          0.02148888160106413,
+          0.015108608174097676,
+          0.008853576723277313,
+          0.008982298415019633,
+          0.01595280756397739
+        ],
+        "mixed_loss": [
+          0.00021539198465143114,
+          0.0003339445639991194,
+          -0.0013378249571066273,
+          -0.00045574311091094253,
+          0.0012887096608969074,
+          0.00040063999265149035,
+          0.001104986993753475,
+          8.848528284839479e-06,
+          0.0013474034800167582,
+          0.000902485109931282,
+          0.002557818086824159,
+          -0.00016752851604250483,
+          0.002409956457503614,
+          0.0021769983474203202,
+          0.0018858205588933416,
+          0.0018265009048399705
+        ],
+        "J_direct": [
+          -0.0013917088636016801,
+          -0.0020276548965060233,
+          -0.0016546207524866336,
+          0.001356789885753609,
+          0.0021636343299068113,
+          0.0015685575850722796,
+          0.0038035304791636366,
+          0.00013142497116595494,
+          0.0028974826698744726,
+          0.001416054853336926,
+          0.004213887918424085,
+          0.0014576200846785816,
+          0.003481827300684782,
+          0.0022164617258914714,
+          0.001583473627401987,
+          0.002791760235668436
+        ],
+        "KL_add": [
+          0.09623610951432918,
+          0.1058224013303406,
+          0.10414015749068153,
+          0.06539099175970042,
+          0.08341673704688411,
+          0.06993607230011863,
+          0.09383683430332865,
+          0.09350820814631164,
+          0.07499262628949786,
+          0.07609900910350759,
+          0.078966865505988,
+          0.07785212311896214,
+          0.07170394341996374,
+          0.05793233641515341,
+          0.06189939164598633,
+          0.07686409457234644
+        ],
+        "base_entropy": [
+          5.731022692320051,
+          6.142262146105716,
+          5.78911046518667,
+          5.843889498524861,
+          5.688984945753129,
+          6.212163733668556,
+          6.088369272826577,
+          5.691858954226332,
+          5.892413655689857,
+          5.848746520924903,
+          5.788751467808926,
+          5.758832178839371,
+          6.269368916642571,
+          6.345509118336965,
+          6.4171235624409455,
+          6.397144164690201
+        ],
+        "KL_full": [
+          0.09784321036258227,
+          0.10818400079084574,
+          0.10445695328606153,
+          0.06357845876303586,
+          0.08254181237787425,
+          0.06876815470769788,
+          0.09113829081791848,
+          0.09338563170343053,
+          0.07344254709964013,
+          0.07558543936010192,
+          0.07731079567438812,
+          0.07622697451824109,
+          0.07063207257678253,
+          0.05789287303668231,
+          0.06220173857747768,
+          0.07589883524151796
+        ],
+        "mixed_KL_correction": [
+          0.001607100848253093,
+          0.00236159946050514,
+          0.0003167957953799927,
+          -0.001812532996664562,
+          -0.0008749246690098605,
+          -0.0011679175924207419,
+          -0.002698543485410168,
+          -0.00012257644288110603,
+          -0.0015500791898577365,
+          -0.0005135697434056619,
+          -0.0016560698315998823,
+          -0.0016251486007210492,
+          -0.001071870843181208,
+          -3.946337847110515e-05,
+          0.0003023469314913513,
+          -0.0009652593308284857
+        ],
+        "base_nll": [
+          5.639678719913475,
+          5.863706400421318,
+          5.373533099898499,
+          5.269866182521586,
+          4.8827024029236235,
+          5.508176405837113,
+          5.510603407159418,
+          5.302054311069988,
+          5.398293791225751,
+          5.209243815432544,
+          5.263030171390269,
+          5.217273736954892,
+          5.732155060555975,
+          5.788435008718169,
+          5.63121130872145,
+          5.975569057085285
+        ],
+        "delta_nll_body": [
+          -0.010688825259682844,
+          -0.05163635971113312,
+          -0.029963361261899912,
+          -0.049165291751458895,
+          -0.045906029652531544,
+          -0.03125953850064267,
+          -0.043880200515302725,
+          -0.0018451447632301665,
+          -0.06366007197690937,
+          -0.035680828941735854,
+          -0.05345951732466503,
+          -0.015660968377797957,
+          -0.02819645566494522,
+          -0.01763160590776547,
+          -0.02113515178198533,
+          -0.025617529728731547
+        ],
+        "delta_nll_aux": [
+          -0.007982804386614362,
+          -0.017752112077277005,
+          -0.034793653454896045,
+          -0.04077886184269186,
+          -0.02018082991174186,
+          -0.04035767127392109,
+          -0.0411134898755936,
+          -0.01497375241168264,
+          -0.035420591523172895,
+          -0.02881290826169458,
+          -0.03398645441101067,
+          -0.028391310325654118,
+          -0.023639404261295738,
+          -0.0209049519260045,
+          -0.021373054199160357,
+          -0.03139997700043917
+        ],
+        "delta_nll_full": [
+          0.005962267802077648,
+          -0.042738652517391174,
+          -0.03740434535569559,
+          -0.07421132038714529,
+          -0.04322542501206961,
+          -0.054982555154908574,
+          -0.06134962712910674,
+          0.005426816513747212,
+          -0.07739109812742928,
+          -0.045460172044279545,
+          -0.06368838033277147,
+          -0.02273092561843182,
+          -0.034317295294639116,
+          -0.027505982763073256,
+          -0.03164008700723375,
+          -0.03923819826035224
+        ]
+      }
+    },
+    "h09_46": {
+      "groups": {
+        "old": {
+          "interaction": {
+            "mean": 0.029589596737922524,
+            "sd_across_sequences": 0.0021583638140899477,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.026459608951866283,
+            "max": 0.03238981237170069
+          },
+          "overlap": {
+            "mean": 0.02912437998227562,
+            "sd_across_sequences": 0.003775083956274004,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.023732808564334032,
+            "max": 0.034712247133644146
+          },
+          "mixed_loss": {
+            "mean": 0.00046521675564689994,
+            "sd_across_sequences": 0.0024695186782948977,
+            "negative_sequences": 4,
+            "positive_sequences": 4,
+            "n": 8,
+            "min": -0.002322434761943485,
+            "max": 0.0036529871686522626
+          },
+          "J_direct": {
+            "mean": 0.006919672745907166,
+            "sd_across_sequences": 0.0023211460014696925,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.0033915219132659245,
+            "max": 0.010895200536438669
+          },
+          "KL_add": {
+            "mean": 0.08243938220693472,
+            "sd_across_sequences": 0.005694783210663523,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.07145693139646085,
+            "max": 0.08901832092405922
+          },
+          "base_entropy": {
+            "mean": 5.6740408950232055,
+            "sd_across_sequences": 0.2598930506463867,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 5.336356638702117,
+            "max": 5.9760032018157165
+          },
+          "KL_full": {
+            "mean": 0.07598492621667445,
+            "sd_across_sequences": 0.005509835583321789,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.06566873326240999,
+            "max": 0.08070501338509697
+          },
+          "mixed_KL_correction": {
+            "mean": -0.0064544559902602675,
+            "sd_across_sequences": 0.001294722997301355,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.008953113916706487,
+            "max": -0.004499921643449284
+          },
+          "base_nll": {
+            "mean": 5.417636294931223,
+            "sd_across_sequences": 0.2878490302685921,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 4.841290686070147,
+            "max": 5.814779142270351
+          },
+          "delta_nll_body": {
+            "mean": -0.04340993974731622,
+            "sd_across_sequences": 0.02134640745238305,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.0864996336906163,
+            "max": -0.018208812956417297
+          },
+          "delta_nll_aux": {
+            "mean": -0.03958193003656407,
+            "sd_across_sequences": 0.014247885574020028,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.06352391335837115,
+            "max": -0.02098625986464331
+          },
+          "delta_nll_full": {
+            "mean": -0.053402273045958126,
+            "sd_across_sequences": 0.034862565404968786,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.11924591447055022,
+            "max": -0.018690287268060324
+          }
+        },
+        "old_bank0": {
+          "interaction": {
+            "mean": 0.02985446830396192,
+            "sd_across_sequences": 0.0024667075279290337,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.026592892048997334,
+            "max": 0.03238981237170069
+          },
+          "overlap": {
+            "mean": 0.03098188109434933,
+            "sd_across_sequences": 0.00415721332230063,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.02503609903093127,
+            "max": 0.034712247133644146
+          },
+          "mixed_loss": {
+            "mean": -0.0011274127903874221,
+            "sd_across_sequences": 0.0018358403927110417,
+            "negative_sequences": 3,
+            "positive_sequences": 1,
+            "n": 4,
+            "min": -0.002322434761943485,
+            "max": 0.0015567930180660956
+          },
+          "J_direct": {
+            "mean": 0.005750141603697599,
+            "sd_across_sequences": 0.002021178854440101,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0033915219132659245,
+            "max": 0.008042356079124959
+          },
+          "KL_add": {
+            "mean": 0.08628439204888544,
+            "sd_across_sequences": 0.002434831185743106,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.08320806535880676,
+            "max": 0.08901832092405922
+          },
+          "base_entropy": {
+            "mean": 5.697702305105948,
+            "sd_across_sequences": 0.19847527517114305,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.531868286231923,
+            "max": 5.9760032018157165
+          },
+          "KL_full": {
+            "mean": 0.07940683765480042,
+            "sd_across_sequences": 0.0018123691146727432,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.07672250229774788,
+            "max": 0.08070501338509697
+          },
+          "mixed_KL_correction": {
+            "mean": -0.006877554394085019,
+            "sd_across_sequences": 0.0014275455347360108,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.008953113916706487,
+            "max": -0.0056930945782235065
+          },
+          "base_nll": {
+            "mean": 5.533224612237194,
+            "sd_across_sequences": 0.24134684854476574,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.294810807706628,
+            "max": 5.814779142270351
+          },
+          "delta_nll_body": {
+            "mean": -0.04214427405626919,
+            "sd_across_sequences": 0.012664997734573668,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.052776080020668914,
+            "max": -0.027241765391361028
+          },
+          "delta_nll_aux": {
+            "mean": -0.03822002896017773,
+            "sd_across_sequences": 0.014867884908994643,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.05612546119890194,
+            "max": -0.02098625986464331
+          },
+          "delta_nll_full": {
+            "mean": -0.05050983471248549,
+            "sd_across_sequences": 0.027843236386664878,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.08230864917057357,
+            "max": -0.018690287268060324
+          }
+        },
+        "old_bank1": {
+          "interaction": {
+            "mean": 0.02932472517188312,
+            "sd_across_sequences": 0.002144337257430662,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.026459608951866283,
+            "max": 0.03114383206472539
+          },
+          "overlap": {
+            "mean": 0.027266878870201915,
+            "sd_across_sequences": 0.0026018622347746597,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.023732808564334032,
+            "max": 0.02982668624288305
+          },
+          "mixed_loss": {
+            "mean": 0.002057846301681222,
+            "sd_across_sequences": 0.0020237734316034014,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.0009088591503803607,
+            "max": 0.0036529871686522626
+          },
+          "J_direct": {
+            "mean": 0.008089203888116733,
+            "sd_across_sequences": 0.0021997056390404965,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.00568623805007513,
+            "max": 0.010895200536438669
+          },
+          "KL_add": {
+            "mean": 0.07859437236498401,
+            "sd_across_sequences": 0.00550623514839924,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.07145693139646085,
+            "max": 0.0843162089728875
+          },
+          "base_entropy": {
+            "mean": 5.650379484940462,
+            "sd_across_sequences": 0.34164044512732217,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.336356638702117,
+            "max": 5.96986293109242
+          },
+          "KL_full": {
+            "mean": 0.07256301477854848,
+            "sd_across_sequences": 0.006027109548813464,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06566873326240999,
+            "max": 0.07981628732943821
+          },
+          "mixed_KL_correction": {
+            "mean": -0.006031357586435516,
+            "sd_across_sequences": 0.0011815803883500613,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.007242213367786424,
+            "max": -0.004499921643449284
+          },
+          "base_nll": {
+            "mean": 5.3020479776252545,
+            "sd_across_sequences": 0.3153671262182684,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 4.841290686070147,
+            "max": 5.508925103754493
+          },
+          "delta_nll_body": {
+            "mean": -0.04467560543836324,
+            "sd_across_sequences": 0.029975890300261116,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.0864996336906163,
+            "max": -0.018208812956417297
+          },
+          "delta_nll_aux": {
+            "mean": -0.04094383111295041,
+            "sd_across_sequences": 0.01573759301774307,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.06352391335837115,
+            "max": -0.028684145350048595
+          },
+          "delta_nll_full": {
+            "mean": -0.05629471137943076,
+            "sd_across_sequences": 0.045148356311001524,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.11924591447055022,
+            "max": -0.01900152389030474
+          }
+        },
+        "fresh": {
+          "interaction": {
+            "mean": 0.026796869131312594,
+            "sd_across_sequences": 0.0040638010191928345,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.01928492250900024,
+            "max": 0.031422449781097296
+          },
+          "overlap": {
+            "mean": 0.024265177603348332,
+            "sd_across_sequences": 0.003962413036117273,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.017841713589534895,
+            "max": 0.029334494595109083
+          },
+          "mixed_loss": {
+            "mean": 0.002531691527964267,
+            "sd_across_sequences": 0.0010574027230462093,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.0014432089194653106,
+            "max": 0.004725751116670418
+          },
+          "J_direct": {
+            "mean": 0.008208267404771727,
+            "sd_across_sequences": 0.0028506948798446737,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.0036382975622158793,
+            "max": 0.011643846732042443
+          },
+          "KL_add": {
+            "mean": 0.07076362813804053,
+            "sd_across_sequences": 0.006761152393965583,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.06124542128970481,
+            "max": 0.07963684563767644
+          },
+          "base_entropy": {
+            "mean": 5.977941093101486,
+            "sd_across_sequences": 0.46708178836757636,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 5.463760980699313,
+            "max": 6.5336493521611665
+          },
+          "KL_full": {
+            "mean": 0.06508705226123306,
+            "sd_across_sequences": 0.006061692372972388,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 0.058916094085018224,
+            "max": 0.07535142742786438
+          },
+          "mixed_KL_correction": {
+            "mean": -0.005676575876807468,
+            "sd_across_sequences": 0.002647854215175766,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.009235258453920925,
+            "max": -0.0021950886427506006
+          },
+          "base_nll": {
+            "mean": 5.526307399503759,
+            "sd_across_sequences": 0.2978467690280936,
+            "negative_sequences": 0,
+            "positive_sequences": 8,
+            "n": 8,
+            "min": 5.191048655145432,
+            "max": 5.9748243024276135
+          },
+          "delta_nll_body": {
+            "mean": -0.021345507953425713,
+            "sd_across_sequences": 0.023282872690076395,
+            "negative_sequences": 6,
+            "positive_sequences": 2,
+            "n": 8,
+            "min": -0.0633052587603391,
+            "max": 0.004389519183645163
+          },
+          "delta_nll_aux": {
+            "mean": -0.033357925613059836,
+            "sd_across_sequences": 0.015888791906992366,
+            "negative_sequences": 8,
+            "positive_sequences": 0,
+            "n": 8,
+            "min": -0.05738272715601678,
+            "max": -0.013232687415603905
+          },
+          "delta_nll_full": {
+            "mean": -0.027906564435173142,
+            "sd_across_sequences": 0.03584156433636879,
+            "negative_sequences": 5,
+            "positive_sequences": 3,
+            "n": 8,
+            "min": -0.089265536135259,
+            "max": 0.010441754277042747
+          }
+        },
+        "fresh_bank0": {
+          "interaction": {
+            "mean": 0.029012990051144386,
+            "sd_across_sequences": 0.0018495539941787162,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.02691969655405348,
+            "max": 0.031422449781097296
+          },
+          "overlap": {
+            "mean": 0.026393448129141565,
+            "sd_across_sequences": 0.002186767464220025,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.02424139559156032,
+            "max": 0.029334494595109083
+          },
+          "mixed_loss": {
+            "mean": 0.0026195419220028243,
+            "sd_across_sequences": 0.001430110191104237,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.001534551416571642,
+            "max": 0.004725751116670418
+          },
+          "J_direct": {
+            "mean": 0.010621001540718142,
+            "sd_across_sequences": 0.0011250100301552777,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.009173678052850982,
+            "max": 0.011643846732042443
+          },
+          "KL_add": {
+            "mean": 0.07186615481560107,
+            "sd_across_sequences": 0.003545558381517354,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06762806314070971,
+            "max": 0.07531019458019655
+          },
+          "base_entropy": {
+            "mean": 5.548147084355287,
+            "sd_across_sequences": 0.08530819486438226,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.463760980699313,
+            "max": 5.652882876438523
+          },
+          "KL_full": {
+            "mean": 0.06386469519688576,
+            "sd_across_sequences": 0.0028673946612354094,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.059988936504430414,
+            "max": 0.06607493612627563
+          },
+          "mixed_KL_correction": {
+            "mean": -0.008001459618715316,
+            "sd_across_sequences": 0.000978455099612344,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.009235258453920925,
+            "max": -0.006918095615372044
+          },
+          "base_nll": {
+            "mean": 5.269874602017749,
+            "sd_across_sequences": 0.11090618233721988,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.191048655145432,
+            "max": 5.434230208582395
+          },
+          "delta_nll_body": {
+            "mean": -0.03941502434688515,
+            "sd_across_sequences": 0.01809091105165925,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.0633052587603391,
+            "max": -0.019332927281006995
+          },
+          "delta_nll_aux": {
+            "mean": -0.04670947279160331,
+            "sd_across_sequences": 0.008202578361323877,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.05738272715601678,
+            "max": -0.037380776017084116
+          },
+          "delta_nll_full": {
+            "mean": -0.057111507087344915,
+            "sd_across_sequences": 0.02444152947678738,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.089265536135259,
+            "max": -0.029794006744037205
+          }
+        },
+        "fresh_bank1": {
+          "interaction": {
+            "mean": 0.024580748211480794,
+            "sd_across_sequences": 0.004692166013064498,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.01928492250900024,
+            "max": 0.028825987574550255
+          },
+          "overlap": {
+            "mean": 0.0221369070775551,
+            "sd_across_sequences": 0.004446829589949421,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.017841713589534895,
+            "max": 0.026259982136568313
+          },
+          "mixed_loss": {
+            "mean": 0.002443841133925709,
+            "sd_across_sequences": 0.0007369569460459998,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0014432089194653106,
+            "max": 0.0032201765133089595
+          },
+          "J_direct": {
+            "mean": 0.005795533268825315,
+            "sd_across_sequences": 0.001473996641320218,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.0036382975622158793,
+            "max": 0.006851423647794
+          },
+          "KL_add": {
+            "mean": 0.06966110146047998,
+            "sd_across_sequences": 0.009531610541646507,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.06124542128970481,
+            "max": 0.07963684563767644
+          },
+          "base_entropy": {
+            "mean": 6.407735101847686,
+            "sd_across_sequences": 0.09581613504779517,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 6.302412880278146,
+            "max": 6.5336493521611665
+          },
+          "KL_full": {
+            "mean": 0.06630940932558035,
+            "sd_across_sequences": 0.008574957535365007,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 0.058916094085018224,
+            "max": 0.07535142742786438
+          },
+          "mixed_KL_correction": {
+            "mean": -0.003351692134899621,
+            "sd_across_sequences": 0.0009941705354711244,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.004285418209812056,
+            "max": -0.0021950886427506006
+          },
+          "base_nll": {
+            "mean": 5.782740196989769,
+            "sd_across_sequences": 0.1390756435535059,
+            "negative_sequences": 0,
+            "positive_sequences": 4,
+            "n": 4,
+            "min": 5.644463754056728,
+            "max": 5.9748243024276135
+          },
+          "delta_nll_body": {
+            "mean": -0.0032759915599662737,
+            "sd_across_sequences": 0.008180109113595829,
+            "negative_sequences": 2,
+            "positive_sequences": 2,
+            "n": 4,
+            "min": -0.014492711605400999,
+            "max": 0.004389519183645163
+          },
+          "delta_nll_aux": {
+            "mean": -0.02000637843451636,
+            "sd_across_sequences": 0.006812209285246309,
+            "negative_sequences": 4,
+            "positive_sequences": 0,
+            "n": 4,
+            "min": -0.029380043920362198,
+            "max": -0.013232687415603905
+          },
+          "delta_nll_full": {
+            "mean": 0.0012983782169986302,
+            "sd_across_sequences": 0.01120609427230424,
+            "negative_sequences": 1,
+            "positive_sequences": 3,
+            "n": 4,
+            "min": -0.015046767951212736,
+            "max": 0.010441754277042747
+          }
+        }
+      },
+      "per_sequence": {
+        "interaction": [
+          0.030897430807206045,
+          0.029537737987943603,
+          0.03238981237170069,
+          0.026592892048997334,
+          0.028917827092502683,
+          0.03077763257843814,
+          0.03114383206472539,
+          0.026459608951866283,
+          0.031422449781097296,
+          0.02896714670823068,
+          0.028742667161196087,
+          0.02691969655405348,
+          0.0282228965858266,
+          0.02198918617654609,
+          0.01928492250900024,
+          0.028825987574550255
+        ],
+        "overlap": [
+          0.032339867559920736,
+          0.03183931065290116,
+          0.034712247133644146,
+          0.02503609903093127,
+          0.02982668624288305,
+          0.027124645409785878,
+          0.028383375263804706,
+          0.023732808564334032,
+          0.029334494595109083,
+          0.02424139559156032,
+          0.026612757192415064,
+          0.025385145137481798,
+          0.02567692292088004,
+          0.018769009663237135,
+          0.017841713589534895,
+          0.026259982136568313
+        ],
+        "mixed_loss": [
+          -0.0014424367527147472,
+          -0.002301572664957552,
+          -0.002322434761943485,
+          0.0015567930180660956,
+          -0.0009088591503803607,
+          0.0036529871686522626,
+          0.0027604568009206906,
+          0.002726800387532296,
+          0.002087955185988216,
+          0.004725751116670418,
+          0.0021299099687810204,
+          0.001534551416571642,
+          0.002545973664946586,
+          0.0032201765133089595,
+          0.0014432089194653106,
+          0.0025660054379819802
+        ],
+        "J_direct": [
+          0.004936009267636475,
+          0.0033915219132659245,
+          0.006630679154763036,
+          0.008042356079124959,
+          0.00568623805007513,
+          0.010895200536438669,
+          0.007260378444369998,
+          0.008514998521583135,
+          0.010301312955277194,
+          0.011643846732042443,
+          0.011365168422701943,
+          0.009173678052850982,
+          0.006613551349889425,
+          0.006078860515401951,
+          0.0036382975622158793,
+          0.006851423647794
+        ],
+        "KL_add": [
+          0.08708345940544818,
+          0.0858277225072276,
+          0.08901832092405922,
+          0.08320806535880676,
+          0.08107296969561496,
+          0.07753137939497272,
+          0.0843162089728875,
+          0.07145693139646085,
+          0.07420931315926002,
+          0.07031704838223797,
+          0.07531019458019655,
+          0.06762806314070971,
+          0.07598736082742745,
+          0.06177477808711122,
+          0.06124542128970481,
+          0.07963684563767644
+        ],
+        "base_entropy": [
+          5.582729635973717,
+          5.9760032018157165,
+          5.531868286231923,
+          5.700208096402438,
+          5.374281619387521,
+          5.96986293109242,
+          5.92101675057979,
+          5.336356638702117,
+          5.652882876438523,
+          5.49593173116534,
+          5.580012749117971,
+          5.463760980699313,
+          6.302412880278146,
+          6.5336493521611665,
+          6.411277631370343,
+          6.383600543581085
+        ],
+        "KL_full": [
+          0.08070501338509697,
+          0.0801346279290041,
+          0.08006520700735273,
+          0.07672250229774788,
+          0.07447787249515947,
+          0.0702891660271863,
+          0.07981628732943821,
+          0.06566873326240999,
+          0.06599595538997102,
+          0.06339895276686593,
+          0.06607493612627563,
+          0.059988936504430414,
+          0.07191978314248462,
+          0.058916094085018224,
+          0.05905033264695421,
+          0.07535142742786438
+        ],
+        "mixed_KL_correction": [
+          -0.006378446020351203,
+          -0.0056930945782235065,
+          -0.008953113916706487,
+          -0.00648556306105888,
+          -0.006595097200455494,
+          -0.007242213367786424,
+          -0.004499921643449284,
+          -0.005788198134050862,
+          -0.008213357769288998,
+          -0.006918095615372044,
+          -0.009235258453920925,
+          -0.007639126636279296,
+          -0.0040675776849428275,
+          -0.0028586840020929996,
+          -0.0021950886427506006,
+          -0.004285418209812056
+        ],
+        "base_nll": [
+          5.648950001852994,
+          5.814779142270351,
+          5.3743584971188,
+          5.294810807706628,
+          4.841290686070147,
+          5.508925103754493,
+          5.503305880080441,
+          5.3546702405959365,
+          5.434230208582395,
+          5.191048655145432,
+          5.224229912039821,
+          5.229989632303349,
+          5.7390763928066235,
+          5.772596338668108,
+          5.644463754056728,
+          5.9748243024276135
+        ],
+        "delta_nll_body": [
+          -0.036004149906593064,
+          -0.027241765391361028,
+          -0.05255510090645377,
+          -0.052776080020668914,
+          -0.02899701226887874,
+          -0.0864996336906163,
+          -0.018208812956417297,
+          -0.04499696283754062,
+          -0.0633052587603391,
+          -0.03803930693646684,
+          -0.03698260440972767,
+          -0.019332927281006995,
+          -0.0037209890841687354,
+          0.0007202152660594763,
+          0.004389519183645163,
+          -0.014492711605400999
+        ],
+        "delta_nll_aux": [
+          -0.03312346538506539,
+          -0.02098625986464331,
+          -0.042644929392100295,
+          -0.05612546119890194,
+          -0.028684145350048595,
+          -0.06352391335837115,
+          -0.03193654299861226,
+          -0.03963072274476964,
+          -0.05738272715601678,
+          -0.046034407752850726,
+          -0.04603998024046163,
+          -0.037380776017084116,
+          -0.019728682197635905,
+          -0.017684100204463427,
+          -0.013232687415603905,
+          -0.029380043920362198
+        ],
+        "delta_nll_full": [
+          -0.038230184484453034,
+          -0.018690287268060324,
+          -0.06281021792685504,
+          -0.08230864917057357,
+          -0.028763330526424546,
+          -0.11924591447055022,
+          -0.01900152389030474,
+          -0.058168076630443544,
+          -0.089265536135259,
+          -0.05510656798108826,
+          -0.05427991748899519,
+          -0.029794006744037205,
+          0.0047732253040218,
+          0.00502530123814271,
+          0.010441754277042747,
+          -0.015046767951212736
+        ]
+      }
+    }
+  },
+  "contrasts": {
+    "early_half_minus_quarter": {
+      "old": {
+        "mean": -0.023005810802691366,
+        "sd_across_sequences": 0.01084110394615503,
+        "negative_sequences": 8,
+        "positive_sequences": 0,
+        "n": 8,
+        "min": -0.04023634298224367,
+        "max": -0.010521531294307999
+      },
+      "old_bank0": {
+        "mean": -0.02066156096227427,
+        "sd_across_sequences": 0.011062961723729472,
+        "negative_sequences": 4,
+        "positive_sequences": 0,
+        "n": 4,
+        "min": -0.03590280623327528,
+        "max": -0.010521531294307999
+      },
+      "old_bank1": {
+        "mean": -0.025350060643108466,
+        "sd_across_sequences": 0.011712889176499715,
+        "negative_sequences": 4,
+        "positive_sequences": 0,
+        "n": 4,
+        "min": -0.04023634298224367,
+        "max": -0.013349753622532816
+      },
+      "fresh": {
+        "mean": -0.027248941401097508,
+        "sd_across_sequences": 0.005410972451443075,
+        "negative_sequences": 8,
+        "positive_sequences": 0,
+        "n": 8,
+        "min": -0.03418419829056685,
+        "max": -0.018453217967181065
+      },
+      "fresh_bank0": {
+        "mean": -0.02548963497614357,
+        "sd_across_sequences": 0.005775338203743361,
+        "negative_sequences": 4,
+        "positive_sequences": 0,
+        "n": 4,
+        "min": -0.03208453495030837,
+        "max": -0.018453217967181065
+      },
+      "fresh_bank1": {
+        "mean": -0.029008247826051447,
+        "sd_across_sequences": 0.005168026483871919,
+        "negative_sequences": 4,
+        "positive_sequences": 0,
+        "n": 4,
+        "min": -0.03418419829056685,
+        "max": -0.022102180688319557
+      }
+    },
+    "half_late_minus_early": {
+      "old": {
+        "mean": -0.014277942819412422,
+        "sd_across_sequences": 0.01337888709466943,
+        "negative_sequences": 7,
+        "positive_sequences": 1,
+        "n": 8,
+        "min": -0.037991376407991564,
+        "max": 0.0011672062110654605
+      },
+      "old_bank0": {
+        "mean": -0.014258493288036436,
+        "sd_across_sequences": 0.012000898728217328,
+        "negative_sequences": 3,
+        "positive_sequences": 1,
+        "n": 4,
+        "min": -0.02812876340236843,
+        "max": 0.0011672062110654605
+      },
+      "old_bank1": {
+        "mean": -0.014297392350788406,
+        "sd_across_sequences": 0.016541811691533213,
+        "negative_sequences": 4,
+        "positive_sequences": 0,
+        "n": 4,
+        "min": -0.037991376407991564,
+        "max": -0.0020296634443964785
+      },
+      "fresh": {
+        "mean": -0.0027787874111674486,
+        "sd_across_sequences": 0.015616460349112606,
+        "negative_sequences": 4,
+        "positive_sequences": 4,
+        "n": 8,
+        "min": -0.022043361380248875,
+        "max": 0.021231080419885657
+      },
+      "fresh_bank0": {
+        "mean": -0.0156904444327437,
+        "sd_across_sequences": 0.007473365223035066,
+        "negative_sequences": 4,
+        "positive_sequences": 0,
+        "n": 4,
+        "min": -0.022043361380248875,
+        "max": -0.007366083813320049
+      },
+      "fresh_bank1": {
+        "mean": 0.010132869610408803,
+        "sd_across_sequences": 0.008284044447705469,
+        "negative_sequences": 0,
+        "positive_sequences": 4,
+        "n": 4,
+        "min": 0.0012333049416240168,
+        "max": 0.021231080419885657
+      }
+    }
+  },
+  "predictions": {
+    "P1_early_half_material_help": false,
+    "P2_half_more_helpful_than_quarter": true,
+    "P3_half_less_helpful_later": false
+  },
+  "qualification": {
+    "max_split_error": 4.884981308350689e-15,
+    "max_mixed_identity_error": 5.134781488891349e-15,
+    "max_J_identity_error": 1.887379141862766e-15,
+    "max_old_token_nll_error": 0.0,
+    "max_old_mean_nll_error": 0.0,
+    "max_old_token_kl_error": 0.0,
+    "max_old_mean_kl_error": 0.0,
+    "projected_seconds": 315.91039460897446,
+    "first_sequence_seconds": 3.6535654067993164,
+    "first_load_seconds": 0.9492685794830322
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "privg14": {
+    "launcher_pid": 3607194,
+    "allocation_id": "2567578",
+    "started_unix": 1790325405.1742709,
+    "command": [
+      "srun",
+      "--jobid=2567578",
+      "--overlap",
+      "--exact",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=16",
+      "--gres=gpu:4",
+      "--chdir=/share/data/dl-theory/amin/projects/explore_muon",
+      "/share/data/dl-theory/amin/projects/explore_muon/.venv/bin/python",
+      "-u",
+      "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/improve_w2_20260925/node_queue.py",
+      "privg14",
+      "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/improve_w1_20260925/S2_baseline_s260925",
+      "E_auto_lr0.01",
+      "M_lr0.02",
+      "E_auto_lr0.02",
+      "M_lr0.014",
+      "E_auto_lr0.014"
+    ]
+  },
+  "g20": {
+    "launcher_pid": 3607195,
+    "allocation_id": "2618555",
+    "started_unix": 1790325405.1758554,
+    "command": [
+      "srun",
+      "--jobid=2618555",
+      "--overlap",
+      "--exact",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=16",
+      "--gres=gpu:4",
+      "--chdir=/share/data/dl-theory/amin/projects/explore_muon",
+      "/share/data/dl-theory/amin/projects/explore_muon/.venv/bin/python",
+      "-u",
+      "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/improve_w2_20260925/node_queue.py",
+      "g20",
+      "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/improve_w1_20260925/C_track1_drop",
+      "M_lr0.01_g20",
+      "E_auto_lr0.01_g20",
+      "E_zero_lr0.01_g20",
+      "B_track1_restore_g20",
+      "N_nesterov_lr0.01_g20"
+    ]
+  },
+  "privg14_followup": {
+    "launcher_pid": 3609429,
+    "allocation_id": "2567578",
+    "started_unix": 1790325643.0350208,
+    "command": [
+      "srun",
+      "--jobid=2567578",
+      "--overlap",
+      "--exact",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=16",
+      "--gres=gpu:4",
+      "--chdir=/share/data/dl-theory/amin/projects/explore_muon",
+      "/share/data/dl-theory/amin/projects/explore_muon/.venv/bin/python",
+      "-u",
+      "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/improve_w2_20260925/node_queue.py",
+      "privg14_followup",
+      "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/improve_w2_20260925/E_auto_lr0.014",
+      "E_auto_lr0.01_r2"
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "evaluation_steps": [
+    200,
+    250,
+    300
+  ],
+  "validation_tokens": 1048576,
+  "criterion": "minimum mean validation NLL; exact tie chooses lower rate",
+  "candidates": [
+    {
+      "learning_rate": 0.0003,
+      "valid": true,
+      "pilot_seed": 260923,
+      "worker": {
+        "name": "pilot_lr_0.0003",
+        "gpu": 0,
+        "pid": 2699714,
+        "command": [
+          "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+          "-u",
+          "-m",
+          "adamw_spectra.train",
+          "--config",
+          "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0003_config.json",
+          "--out",
+          "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0003",
+          "--stop-after",
+          "300"
+        ],
+        "started_unix": 1790285564.516181,
+        "timeout_seconds": 7200,
+        "state": "succeeded",
+        "exit_code": 0,
+        "ended_unix": 1790286878.5862985,
+        "worker_seconds": 1314.0701174736023
+      },
+      "score": 5.802657370766004,
+      "evaluation_nll": [
+        5.9720928855240345,
+        5.797322444617748,
+        5.638556782156229
+      ],
+      "clipping_fraction": 0.17333333333333334
+    },
+    {
+      "learning_rate": 0.0006,
+      "valid": true,
+      "pilot_seed": 260923,
+      "worker": {
+        "name": "pilot_lr_0.0006",
+        "gpu": 1,
+        "pid": 2699715,
+        "command": [
+          "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+          "-u",
+          "-m",
+          "adamw_spectra.train",
+          "--config",
+          "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0006_config.json",
+          "--out",
+          "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0006",
+          "--stop-after",
+          "300"
+        ],
+        "started_unix": 1790285564.5203152,
+        "timeout_seconds": 7200,
+        "state": "succeeded",
+        "exit_code": 0,
+        "ended_unix": 1790286923.591515,
+        "worker_seconds": 1359.0711998939514
+      },
+      "score": 5.557397430141767,
+      "evaluation_nll": [
+        5.751806810498238,
+        5.556158911436796,
+        5.364226568490267
+      ],
+      "clipping_fraction": 0.13
+    },
+    {
+      "learning_rate": 0.0012,
+      "valid": true,
+      "pilot_seed": 260923,
+      "worker": {
+        "name": "pilot_lr_0.0012",
+        "gpu": 2,
+        "pid": 2699716,
+        "command": [
+          "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+          "-u",
+          "-m",
+          "adamw_spectra.train",
+          "--config",
+          "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0012_config.json",
+          "--out",
+          "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246_r2/pilot_lr_0.0012",
+          "--stop-after",
+          "300"
+        ],
+        "started_unix": 1790285564.524571,
+        "timeout_seconds": 7200,
+        "state": "succeeded",
+        "exit_code": 0,
+        "ended_unix": 1790286872.5835128,
+        "worker_seconds": 1308.0589418411255
+      },
+      "score": 5.360826884706815,
+      "evaluation_nll": [
+        5.61670633405447,
+        5.344559773802757,
+        5.121214546263218
+      ],
+      "clipping_fraction": 0.1
+    }
+  ],
+  "selected_learning_rate": 0.0012,
+  "boundary_winner": true,
+  "paired_initial_sha256": "45fcdacd82382f8f553babb2499fbe02aa62b3b50aa6fd9c61a3ffc4cc933bbc",
+  "parallel_pilots": true
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "original": "research/adamw_spectra/muon.py",
+    "snapshot": "source/muon.py",
+    "sha256": "3452e24453ef2fd1e74263cdb9abafb6583764a04924b3b521f178fb6bad1ef5"
+  },
+  {
+    "original": "logs/muon_spectra/second_order_audit_20260926/step_profile_probe.py",
+    "snapshot": "source/step_profile_probe.py",
+    "sha256": "629499800c68ffbf9324485bcb27a2929d828c9c63f10104c95102ba10d01577"
+  }
+]

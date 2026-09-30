@@ -1,0 +1,24 @@
+{
+  "srun_pid": 3253712,
+  "command": [
+    "srun",
+    "--jobid=2618555",
+    "--overlap",
+    "--exact",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=24",
+    "--gres=gpu:4",
+    "--nodelist=g20",
+    "--job-name=adamw-spectra",
+    "--chdir=/share/data/dl-theory/amin/projects/last_layer",
+    "/share/data/dl-theory/amin/projects/last_layer/.venv/bin/python",
+    "-u",
+    "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246/supervise.py"
+  ],
+  "started_unix": 1790285182.4529014,
+  "allocation": "2618555",
+  "node": "g20",
+  "detached": true,
+  "stdout": "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246/supervisor.log"
+}

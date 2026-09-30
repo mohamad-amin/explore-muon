@@ -1,0 +1,25 @@
+{
+  "launcher_pid": 3517120,
+  "allocation_id": "2567578",
+  "node": "priv-g14",
+  "started_unix": 1790315254.6410635,
+  "command": [
+    "srun",
+    "--jobid=2567578",
+    "--overlap",
+    "--exact",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=16",
+    "--gres=gpu:4",
+    "--chdir=/share/data/dl-theory/amin/projects/explore_muon",
+    "/share/data/dl-theory/amin/projects/explore_muon/.venv/bin/python",
+    "-u",
+    "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/depth8_w512_nobias_rms_qk_20260925/run_variant.py",
+    "--root",
+    "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/depth8_w512_nobias_rms_qk_20260925",
+    "--world-size",
+    "4"
+  ],
+  "authorization": "user, 2026-09-25: adopt no biases, RMSNorm gains, Q/K norms; four GPUs"
+}

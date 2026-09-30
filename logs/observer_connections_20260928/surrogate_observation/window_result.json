@@ -1,0 +1,136 @@
+{
+  "snapshot": "2026-09-28 14:25 CDT",
+  "contrast": "TS minus PD; LR=.016, momentum=.9, seed20260928, batch8192",
+  "means": {
+    "pd": {
+      "full": 1.532624804740932,
+      "bank": 1.5211147726513445,
+      "complement": 1.5374159725700938,
+      "stored_full": 1.5326248407363892,
+      "stored_bank": 1.521111249923706,
+      "bank_reconstruction_error": 3.5227276384830475e-06
+    },
+    "ts": {
+      "full": 1.5357612483673884,
+      "bank": 1.5195046802982688,
+      "complement": 1.5425282100351845,
+      "stored_full": 1.5357614755630493,
+      "stored_bank": 1.5195001363754272,
+      "bank_reconstruction_error": 4.54392284154892e-06
+    }
+  },
+  "full": {
+    "n": 871,
+    "mean": 0.0031364436264563647,
+    "median": -0.00022721290588378906,
+    "sd": 0.05819583386583252,
+    "negative": 437,
+    "positive": 434
+  },
+  "bank": {
+    "n": 256,
+    "mean": -0.0016100923530757427,
+    "median": -0.0024605393409729004,
+    "sd": 0.05902327656200298,
+    "negative": 132,
+    "positive": 124
+  },
+  "complement": {
+    "n": 615,
+    "mean": 0.005112237465090868,
+    "median": 0.0010151863098144531,
+    "sd": 0.05778136086517582,
+    "negative": 305,
+    "positive": 310
+  },
+  "ordered_10_blocks": [
+    {
+      "n": 87,
+      "mean": -0.0017975746900185771,
+      "median": -0.0048980712890625,
+      "sd": 0.0443784071996285,
+      "negative": 48,
+      "positive": 39
+    },
+    {
+      "n": 87,
+      "mean": -0.0010410149892171223,
+      "median": -0.0030570030212402344,
+      "sd": 0.05075515873797043,
+      "negative": 46,
+      "positive": 41
+    },
+    {
+      "n": 87,
+      "mean": 0.0025017809593814544,
+      "median": 0.0003483295440673828,
+      "sd": 0.046108546206159076,
+      "negative": 43,
+      "positive": 44
+    },
+    {
+      "n": 87,
+      "mean": -0.009026217734676668,
+      "median": -0.0087662935256958,
+      "sd": 0.05684295027531699,
+      "negative": 53,
+      "positive": 34
+    },
+    {
+      "n": 87,
+      "mean": -0.010515008849659186,
+      "median": -0.008347272872924805,
+      "sd": 0.05468625593472108,
+      "negative": 47,
+      "positive": 40
+    },
+    {
+      "n": 87,
+      "mean": -0.005917454588002172,
+      "median": -0.009515643119812012,
+      "sd": 0.0467922595779784,
+      "negative": 46,
+      "positive": 41
+    },
+    {
+      "n": 87,
+      "mean": 0.00246660599763366,
+      "median": -0.0022128820419311523,
+      "sd": 0.05182392244513738,
+      "negative": 44,
+      "positive": 43
+    },
+    {
+      "n": 87,
+      "mean": 0.026637547317592578,
+      "median": 0.020856380462646484,
+      "sd": 0.07235102191702714,
+      "negative": 35,
+      "positive": 52
+    },
+    {
+      "n": 87,
+      "mean": 0.021503525218744386,
+      "median": 0.025983691215515137,
+      "sd": 0.0783722252699112,
+      "negative": 30,
+      "positive": 57
+    },
+    {
+      "n": 88,
+      "mean": 0.006513431668281555,
+      "median": -0.0007395148277282715,
+      "sd": 0.06080386497264907,
+      "negative": 45,
+      "positive": 43
+    }
+  ],
+  "sources": {
+    "tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928/final_validation.pt": "b1c46577ba6dc5d56e911eb4afc1bdf59780ca1ac40449dc0e2aab0fd1e12a14",
+    "tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928/windows.pt": "db69e3e50901a1c7a90d9813028e2a11d232d528ce7679346be0968665b12475",
+    "tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928/summary.json": "645a8eab3beba2ac9c34b5b6cb60fc0b963748d5c178d93a54c7b61d162cde83",
+    "tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928/final_validation.pt": "0673ce9f524778d6739cd17c35af9430d871f6b19abcc485f00ea13b7d07f350",
+    "tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928/windows.pt": "db69e3e50901a1c7a90d9813028e2a11d232d528ce7679346be0968665b12475",
+    "tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928/summary.json": "7d98c75157e417e18581c34137a34768a7b2a094cedda84f28828439606ec329"
+  }
+}

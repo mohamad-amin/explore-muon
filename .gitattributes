@@ -1,0 +1,6 @@
+# Plots and PDFs are already compressed; skip delta search when packing.
+*.png binary -delta
+*.pdf binary -delta
+*.jpg binary -delta
+*.jpeg binary -delta
+*.gif binary -delta

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "scope": "exact finite algebra checks only; no trained model",
+  "seed": 260928,
+  "errors": {
+    "half_factor_max_abs": 2.7755575615628914e-17,
+    "categorical_expected_B_max_abs": 2.220446049250313e-16,
+    "rademacher_expected_B_max_abs": 4.440892098500626e-16,
+    "categorical_variance_max_abs": 2.220446049250313e-16,
+    "rademacher_variance_max_abs": 2.220446049250313e-16
+  },
+  "scalar_quadratic_variance": {
+    "categorical": 0.6397925329076609,
+    "gaussian": 1.3553613190602307,
+    "rademacher": 1.0471321432390168
+  },
+  "binary_counterexamples": [
+    {
+      "p": 0.01,
+      "categorical_squared_score_variance": 0.00950796,
+      "gaussian_squared_score_variance": 0.00019602000000000004
+    },
+    {
+      "p": 0.1,
+      "categorical_squared_score_variance": 0.05760000000000002,
+      "gaussian_squared_score_variance": 0.016200000000000003
+    },
+    {
+      "p": 0.25,
+      "categorical_squared_score_variance": 0.046875,
+      "gaussian_squared_score_variance": 0.0703125
+    },
+    {
+      "p": 0.5,
+      "categorical_squared_score_variance": 0.0,
+      "gaussian_squared_score_variance": 0.125
+    },
+    {
+      "p": 0.9,
+      "categorical_squared_score_variance": 0.0576,
+      "gaussian_squared_score_variance": 0.016199999999999992
+    },
+    {
+      "p": 0.99,
+      "categorical_squared_score_variance": 0.009507960000000008,
+      "gaussian_squared_score_variance": 0.00019602000000000036
+    }
+  ]
+}

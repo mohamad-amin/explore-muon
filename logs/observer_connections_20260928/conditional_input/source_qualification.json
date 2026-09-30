@@ -1,0 +1,119 @@
+{
+  "scope": "Source/metadata qualification only; no real gradient/predictor arithmetic or checkpoint tensors loaded.",
+  "arms": {
+    "M_lr0.007_s260925_l40s": {
+      "config": {
+        "optimizer": "muon",
+        "muon_momentum": 0.95,
+        "muon_nesterov": false,
+        "grad_clip": 1.0,
+        "data_norm_alpha": 0.0,
+        "soap_precondition": false,
+        "newton_muon": false,
+        "pmuon": false
+      },
+      "kept_sidecar": {
+        "step": 500,
+        "tokens": 524288000,
+        "world_size": 4
+      },
+      "checked_source_sha256": {
+        "muon.py": "7f00a1214dd6d2fa16a5772de945a4d66528c58e629bb383a5f2df16763fe4e0",
+        "train.py": "482a107ca762dcc490fefbbde9f44a38e5fb0678af37c02b98efd0ee242b3d2c",
+        "distributed.py": "db0e1de57dbb17a2fc35febb5ef67df1bb80748b0fd9992e0a9c60c6ba5617a7",
+        "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124"
+      },
+      "checkpoint_tensors_loaded": false
+    },
+    "PD_a0.25_lr0.01_s260925_ada": {
+      "config": {
+        "optimizer": "muon",
+        "muon_momentum": 0.95,
+        "muon_nesterov": false,
+        "grad_clip": 1.0,
+        "data_norm_alpha": 0.25,
+        "soap_precondition": false,
+        "newton_muon": false,
+        "pmuon": false
+      },
+      "kept_sidecar": {
+        "step": 500,
+        "tokens": 524288000,
+        "world_size": 4
+      },
+      "checked_source_sha256": {
+        "muon.py": "7f00a1214dd6d2fa16a5772de945a4d66528c58e629bb383a5f2df16763fe4e0",
+        "train.py": "482a107ca762dcc490fefbbde9f44a38e5fb0678af37c02b98efd0ee242b3d2c",
+        "distributed.py": "db0e1de57dbb17a2fc35febb5ef67df1bb80748b0fd9992e0a9c60c6ba5617a7",
+        "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+        "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124"
+      },
+      "checkpoint_tensors_loaded": false
+    }
+  },
+  "files": {
+    "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/metadata.json": {
+      "sha256": "a70d3d73d2e2174d3973ce99ab2c29b551f4233491c747bb8af21384bac38223",
+      "bytes": 17307
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/source/muon.py": {
+      "sha256": "7f00a1214dd6d2fa16a5772de945a4d66528c58e629bb383a5f2df16763fe4e0",
+      "bytes": 44066
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/source/train.py": {
+      "sha256": "482a107ca762dcc490fefbbde9f44a38e5fb0678af37c02b98efd0ee242b3d2c",
+      "bytes": 27304
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/source/distributed.py": {
+      "sha256": "db0e1de57dbb17a2fc35febb5ef67df1bb80748b0fd9992e0a9c60c6ba5617a7",
+      "bytes": 28745
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/source/model.py": {
+      "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+      "bytes": 8832
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/source/data.py": {
+      "sha256": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "bytes": 3228
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/metadata.json": {
+      "sha256": "eeb12d587315d0881a32c4aef2ba1ef6bb44842b80108c800349b75c57d5adc6",
+      "bytes": 17761
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/source/muon.py": {
+      "sha256": "7f00a1214dd6d2fa16a5772de945a4d66528c58e629bb383a5f2df16763fe4e0",
+      "bytes": 44066
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/source/train.py": {
+      "sha256": "482a107ca762dcc490fefbbde9f44a38e5fb0678af37c02b98efd0ee242b3d2c",
+      "bytes": 27304
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/source/distributed.py": {
+      "sha256": "db0e1de57dbb17a2fc35febb5ef67df1bb80748b0fd9992e0a9c60c6ba5617a7",
+      "bytes": 28745
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/source/model.py": {
+      "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+      "bytes": 8832
+    },
+    "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/source/data.py": {
+      "sha256": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+      "bytes": 3228
+    },
+    "logs/muon_spectra/second_order_audit_20260926/one_step_gn.py": {
+      "sha256": "620d043a5dddacb235cfcbcfcfee44d66c3b30acdd2dad59ad9c57aaeeab729b",
+      "bytes": 36901,
+      "historical_execution_hash": false
+    },
+    "research/adamw_spectra/gn_probe.py": {
+      "sha256": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+      "bytes": 23956,
+      "historical_execution_hash": false
+    }
+  },
+  "training_recurrence": "M_next = beta*M + clipped_parameter_grad, beta=.95; no (1-beta) EMA multiplier",
+  "diagnostic_current_source": "gd=-b; fresh gradients are mean-token raw body gradients; historical calls not certified",
+  "historical_membership_gate": "unresolved; see PROVENANCE_REVIEW.md",
+  "numerical_experiment_launched": false
+}

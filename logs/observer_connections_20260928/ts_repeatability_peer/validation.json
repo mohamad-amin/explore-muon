@@ -1,0 +1,85 @@
+{
+  "scope": "Saved JSON and one 512x512 tensor per pair; no model or GPU.",
+  "aggregation_checks": {
+    "A0__B0": "all 48 and all six kinds agree",
+    "A0__C0": "all 48 and all six kinds agree",
+    "A0__D0": "all 48 and all six kinds agree",
+    "B0__C0": "all 48 and all six kinds agree",
+    "B0__D0": "all 48 and all six kinds agree",
+    "C0__D0": "all 48 and all six kinds agree",
+    "A0__A1": "all 48 and all six kinds agree",
+    "B0__B1": "all 48 and all six kinds agree",
+    "AB__CD": "all 48 and all six kinds agree",
+    "AB__ABCD": "all 48 and all six kinds agree",
+    "CD__ABCD": "all 48 and all six kinds agree",
+    "ABCD__ABCD_bf16": "all 48 and all six kinds agree",
+    "anchor_A__refresh_A": "all 48 and all six kinds agree",
+    "anchor_B__refresh_B": "all 48 and all six kinds agree",
+    "anchor_C__refresh_C": "all 48 and all six kinds agree",
+    "anchor_D__refresh_D": "all 48 and all six kinds agree"
+  },
+  "stored_tensor_checks": {
+    "A0__B0": {
+      "matrix": "block01.q",
+      "cosine": 0.8643937055422993,
+      "distance2": 138.86118918001586,
+      "noise_to_added_geometry": 0.3305730332909709,
+      "matches_report": true
+    },
+    "AB__CD": {
+      "matrix": "block01.q",
+      "cosine": 0.9178102196146348,
+      "distance2": 84.16253189889468,
+      "noise_to_added_geometry": 0.22210467024756816,
+      "matches_report": true
+    },
+    "ABCD__ABCD_bf16": {
+      "matrix": "block01.q",
+      "cosine": 0.9998512129636737,
+      "distance2": 0.15235815602533614,
+      "noise_to_added_geometry": 0.0004297756197362308,
+      "matches_report": true
+    }
+  },
+  "damping_fraction_max_all_factor_sets": 0.0,
+  "negative_eigenvalue_fraction_max_all_factor_sets": 0.0,
+  "per_kind_mean_cosines": {
+    "q": {
+      "independent8": 0.8339608707318587,
+      "same_sequences_new_labels": 0.940014115011564,
+      "independent16": 0.8955302707751067,
+      "ema_refresh_proxy": 0.9919084393411767
+    },
+    "k": {
+      "independent8": 0.7899830508111891,
+      "same_sequences_new_labels": 0.8327385620217299,
+      "independent16": 0.8626038230425327,
+      "ema_refresh_proxy": 0.9882375042762163
+    },
+    "v": {
+      "independent8": 0.6998275497395092,
+      "same_sequences_new_labels": 0.7076800083598003,
+      "independent16": 0.7662605110482332,
+      "ema_refresh_proxy": 0.972775092352062
+    },
+    "o": {
+      "independent8": 0.91447984529798,
+      "same_sequences_new_labels": 0.9347021808961556,
+      "independent16": 0.9555847087808563,
+      "ema_refresh_proxy": 0.9974230794222063
+    },
+    "up": {
+      "independent8": 0.5291490169518513,
+      "same_sequences_new_labels": 0.5730887508118123,
+      "independent16": 0.7378641234771409,
+      "ema_refresh_proxy": 0.9805370220059458
+    },
+    "down": {
+      "independent8": 0.9374565960252663,
+      "same_sequences_new_labels": 0.9508453279157647,
+      "independent16": 0.9676145674241181,
+      "ema_refresh_proxy": 0.9980936117874549
+    }
+  },
+  "strict_flag": "material_sample_sensitivity"
+}

@@ -1,0 +1,82 @@
+{
+  "status": "complete",
+  "step_pair": [
+    183,
+    184
+  ],
+  "training_input_offset": 767557632,
+  "training_input_count": 4194304,
+  "groups": {
+    "active": {
+      "row_count": 47370,
+      "row_fraction": 0.9416746183206107,
+      "actual_delta_norm": 2.1526175381252135,
+      "delta_energy_fraction": 0.9611096946929815
+    },
+    "inactive": {
+      "row_count": 2934,
+      "row_fraction": 0.05832538167938931,
+      "actual_delta_norm": 0.43301313617002024,
+      "delta_energy_fraction": 0.03889030530701866
+    },
+    "inactive_nonzero_second_moment": {
+      "row_count": 2665,
+      "row_fraction": 0.052977894402035625,
+      "actual_delta_norm": 0.43301311105584195,
+      "delta_energy_fraction": 0.038890300795843435
+    },
+    "inactive_zero_second_moment": {
+      "row_count": 269,
+      "row_fraction": 0.005347487277353689,
+      "actual_delta_norm": 0.00014747732237808186,
+      "delta_energy_fraction": 4.51117523203844e-09
+    }
+  },
+  "probe_input_support": {
+    "bank0_x": {
+      "input_tokens": 4096,
+      "tokens_on_inactive_rows": 4,
+      "unique_inactive_rows": 3
+    },
+    "bank1_x": {
+      "input_tokens": 4096,
+      "tokens_on_inactive_rows": 5,
+      "unique_inactive_rows": 5
+    },
+    "bank2_x": {
+      "input_tokens": 2048,
+      "tokens_on_inactive_rows": 0,
+      "unique_inactive_rows": 0
+    },
+    "bank3_x": {
+      "input_tokens": 2048,
+      "tokens_on_inactive_rows": 1,
+      "unique_inactive_rows": 1
+    }
+  },
+  "inactive_prediction": {
+    "max_absolute_error": 1.4667244763703772e-08,
+    "rms_error": 1.1642340804449605e-09,
+    "relative_frobenius_error": 3.2953706685745197e-06,
+    "max_fraction_of_fp32_bound": 0.07333622381851886
+  },
+  "optimizer": {
+    "lr": 0.002,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "fused": true
+  },
+  "tensor_sha256": {
+    "old_weight": "b8b451acff415d4b9d0e6346f09989d142e03d79275bf4611f2399c5d404eed2",
+    "next_weight": "487c213c9be3e426f77506989a3849f81455a0b287eb61c0bcb0e19bc1343abb",
+    "exp_avg": "2cfdbfc51723fdb65d35d26f009c8d011a31cb0b02f5d78a98f048076f420736",
+    "exp_avg_sq": "29119f4a0df55ee6c209eb95b39601708f20b96977fb060b3d66f5a75d7cdf31"
+  },
+  "input_counts_sha256": "bd1f4f9199fcbe753fdc4d4b988048b0c0ea96844f7080d37e4b309d6265ce66",
+  "seconds": 0.6288497447967529,
+  "scope": "Actual displacements and known zero-gradient row recurrence; movement without current exposure need not be useless or harmful. No model or optimizer call."
+}

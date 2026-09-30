@@ -1,0 +1,7 @@
+{
+  "recorded_unix": 1790638432.5840786,
+  "stage": "producer running; scientific scores not inspected",
+  "original_protocol_sha256": "96fb3fce7854f428955635c69703aa7c7e70e394448e6cd518febb930371e84e",
+  "annotated_copy_sha256": "189e041453c5305818bd5e799589da6c8ef4a8137c457b4e964eb75c3cbefd02",
+  "purpose": "Clarify use of existing1e-10 numerical tolerance for primary KL ratio resolution; preserve executed protocol and all scientific scoring. No epsilon or candidate/sample change."
+}

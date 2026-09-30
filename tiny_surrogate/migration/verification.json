@@ -1,0 +1,15 @@
+{
+  "verified_unix": 1790628617.2992868,
+  "cpu_tests_passed": 80,
+  "frozen_source_files_verified": 163,
+  "regenerated_reports": [
+    "stories_c_screen_20260928",
+    "stories_c_edges_20260928"
+  ],
+  "imports_resolve_inside_study": true,
+  "temporary_directory_inside_study": true,
+  "frozen_artifacts_edited": false,
+  "test_panels_scored": false,
+  "dry_cohort_packaging_passed": true,
+  "merged_c_report_complete_runs": 19
+}

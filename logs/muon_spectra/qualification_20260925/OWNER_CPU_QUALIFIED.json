@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "world_size": 4,
+  "parameter_max_absolute_difference_vs_single": 2.0341112758615054e-06,
+  "strict_replicas": true,
+  "source_sha256": {
+    "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+    "analyze.py": "77bae65aa744f181fd8d9906484760f6a62c8ceef4a11de1c69e2cd5e5c319cc",
+    "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+    "distributed.py": "f973373b801064c8ddf9e7dbac83d5377deaacd7d1d3e37ab605f7548e155299",
+    "measure.py": "7d0d890a6499db365d23597ae4ccd9f697370d062492c079a918cf691c7f555c",
+    "model.py": "fe39a6cd11675bb9403a83dcf122a6c6a191539fd73bfaa4836e865c6b30d281",
+    "muon.py": "1ce6df1d2dbaab5e32338a8b2f74b0f936b40277981b08d14a0cec03d1e942b3",
+    "run_muon.py": "51938bd0019e124444f5853177bb6fe86d2a6a6e4aef8f50d33e7cd944fcf3a9",
+    "sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+    "test_muon.py": "ba4fca516ebf6766e47476b152ff05ed9d97eb1d022bf27c7276e69a2b765753",
+    "test_study.py": "7ce2cacf51494fdd8c24575d2d101a984afd07a9ed686cfa57eced15dd863937",
+    "train.py": "f1867846b3176022486cb7cdd2f991190d1973266b3dd34144790a6f17d2987d"
+  },
+  "scope": "single-owner NS distributed execution; mixed-state resume separately qualified"
+}

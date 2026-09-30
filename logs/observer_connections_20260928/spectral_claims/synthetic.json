@@ -1,0 +1,35 @@
+{
+  "eigenvalues": [
+    1e-05,
+    1.0
+  ],
+  "step": [
+    1.0,
+    0.1
+  ],
+  "gradient": [
+    0.0,
+    -1.0
+  ],
+  "cutoff": 0.02,
+  "one_node_ritz_value": 0.009910891089108913,
+  "exact_flat_band": {
+    "energy": 1.0,
+    "slope": 0.0,
+    "curvature": 1e-05,
+    "energy_share": 0.9900990099009901,
+    "slope_share": -0.0,
+    "curvature_share": 0.000999000999000999,
+    "cstar": -0.0
+  },
+  "one_node_reported_flat_band": {
+    "energy": 1.01,
+    "slope": -0.1,
+    "curvature": 0.010010000000000002,
+    "energy_share": 1.0,
+    "slope_share": 1.0,
+    "curvature_share": 1.0,
+    "cstar": 9.99000999000999
+  },
+  "interpretation": "A counterexample to the logical implication exact totals => exact spectral bands; not a model of the 48-step GN error."
+}

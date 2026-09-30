@@ -1,0 +1,35 @@
+{
+  "model": {
+    "vocab_size": 50304,
+    "n_layer": 12,
+    "n_embd": 512,
+    "n_head": 8,
+    "seq_len": 512
+  },
+  "seed": 260924,
+  "learning_rate": 0.0012,
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "epsilon": 1e-08,
+  "weight_decay": 0.01,
+  "batch_tokens": 1048576,
+  "microbatch_sequences": 16,
+  "tokens_per_parameter": 20,
+  "total_tokens": 1539870720,
+  "warmup_steps": 50,
+  "cooldown_fraction": 0.1,
+  "grad_clip": 1.0,
+  "train_pattern": "data/fineweb10B/fineweb_train_*.bin",
+  "validation_pattern": "data/fineweb10B/fineweb_val_*.bin",
+  "validation_tokens": 1048576,
+  "validation_every": 50,
+  "spectra_every": 25,
+  "svd_device": "cpu",
+  "checkpoint_every": 100,
+  "cpu_threads": 2,
+  "precision": "bf16",
+  "compile": true,
+  "optimizer_impl": "auto"
+}

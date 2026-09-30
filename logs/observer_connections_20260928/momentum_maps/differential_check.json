@@ -1,0 +1,62 @@
+{
+  "status": "qualified",
+  "epsilon": 0.02,
+  "root_diagonal": [
+    1.0,
+    0.2,
+    0.2
+  ],
+  "beta": 0.8,
+  "eta": 0.01,
+  "hessian_lambda": 3.0,
+  "results": {
+    "polar": {
+      "momentum_norm": 1.0,
+      "output_norm": 1.7320508075688772,
+      "output_stiff_projection": 0.0,
+      "differential_gain_along_E": 50.0,
+      "analytic_radial_derivative_norm": 0.0,
+      "central_difference_errors": [
+        {
+          "h": 0.0001,
+          "relative_error": 6.24994140671088e-06
+        },
+        {
+          "h": 1e-05,
+          "relative_error": 6.249999413211532e-08
+        },
+        {
+          "h": 1e-06,
+          "relative_error": 6.249998971073496e-10
+        }
+      ],
+      "joint_jacobian_relative_error": 8.767737603298628e-10,
+      "joint_jacobian_max_abs_error": 2.1093750079970164e-09
+    },
+    "matched_pd": {
+      "momentum_norm": 1.0,
+      "output_norm": 1.732050807568877,
+      "output_stiff_projection": 0.0,
+      "differential_gain_along_E": 16.666666666666664,
+      "analytic_radial_derivative_norm": 0.0,
+      "central_difference_errors": [
+        {
+          "h": 0.0001,
+          "relative_error": 6.249941406761122e-06
+        },
+        {
+          "h": 1e-05,
+          "relative_error": 6.249999388090053e-08
+        },
+        {
+          "h": 1e-06,
+          "relative_error": 6.249998468643909e-10
+        }
+      ],
+      "joint_jacobian_relative_error": 2.936704826586586e-10,
+      "joint_jacobian_max_abs_error": 7.031250304212477e-10
+    }
+  },
+  "scope": "One analytic counterexample checked numerically. No training simulation, empirical network evidence, rate or stability claim.",
+  "script_sha256": "5d5b7cd6dfb3954f34cc16057f536fffd0548ef7a2fa0561f81169b50e8b6638"
+}

@@ -1,0 +1,984 @@
+{
+  "scope": "Frozen completed representative PD/SPD/TS cohorts; not a training experiment",
+  "formula_caveats": [
+    "Steady-state ages ignore finite-run warm start except explicit output startup rows.",
+    "Cache ages assume uniformly sampled refresh phase.",
+    "An EMA observation's mean age does not equal the nonlinear inverse root's lag.",
+    "ESS is weight ESS under iid observations; tokens and gradients are correlated.",
+    "Final incomplete batch has fewer forwards and is excluded from full-step clocks."
+  ],
+  "runs": [
+    {
+      "batch_label": "1M",
+      "algorithm": "PD",
+      "run": "soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada",
+      "metadata_path": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/metadata.json",
+      "metadata_sha256": "eeb12d587315d0881a32c4aef2ba1ef6bb44842b80108c800349b75c57d5adc6",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "sha256": "7f00a1214dd6d2fa16a5772de945a4d66528c58e629bb383a5f2df16763fe4e0"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/distributed.py",
+          "sha256": "db0e1de57dbb17a2fc35febb5ef67df1bb80748b0fd9992e0a9c60c6ba5617a7"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 574,
+          "end": 772
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        }
+      },
+      "total_steps": 1469,
+      "batch_tokens": 1048576,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.25,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 32,
+        "effective_step_decay": 0.9379448889735361,
+        "mean_age_model_states_at_refresh": 15.114708095092155,
+        "root_refresh_steps": 10,
+        "mean_cache_age_steps": 4.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 10485760,
+        "mean_age_model_states_with_cache": 19.614708095092155,
+        "mean_age_global_tokens_with_cache": 20567512.15551935
+      },
+      "momentum": {
+        "decay": 0.95,
+        "mean_age_updates": 18.999999999999982,
+        "half_life_updates": 13.513407333964874,
+        "iid_weight_ess_updates": 38.999999999999964,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 19922943.99999998
+      },
+      "SOAP": null,
+      "output_B": null
+    },
+    {
+      "batch_label": "1M",
+      "algorithm": "SPD",
+      "run": "soaudit_traj_20260926/SPD_a0.25_lr0.01_s260925_ada",
+      "metadata_path": "logs/muon_spectra/soaudit_traj_20260926/SPD_a0.25_lr0.01_s260925_ada/scientific/metadata.json",
+      "metadata_sha256": "77ac6bb40ad2c36c9fee1ca064884984f40cc3b6b6e5411ef4e255af8d2c7920",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "sha256": "7f00a1214dd6d2fa16a5772de945a4d66528c58e629bb383a5f2df16763fe4e0"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/distributed.py",
+          "sha256": "db0e1de57dbb17a2fc35febb5ef67df1bb80748b0fd9992e0a9c60c6ba5617a7"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 574,
+          "end": 772
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        }
+      },
+      "total_steps": 1469,
+      "batch_tokens": 1048576,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.25,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 32,
+        "effective_step_decay": 0.9379448889735361,
+        "mean_age_model_states_at_refresh": 15.114708095092155,
+        "root_refresh_steps": 10,
+        "mean_cache_age_steps": 4.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 10485760,
+        "mean_age_model_states_with_cache": 19.614708095092155,
+        "mean_age_global_tokens_with_cache": 20567512.15551935
+      },
+      "momentum": {
+        "decay": 0.95,
+        "mean_age_updates": 18.999999999999982,
+        "half_life_updates": 13.513407333964874,
+        "iid_weight_ess_updates": 38.999999999999964,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 19922943.99999998
+      },
+      "SOAP": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "gram_clock": "one globally reduced and clipped gradient per step",
+        "denominator_clock": "one projected momentum/gradient per step, after first ready step",
+        "tracked": "update",
+        "basis": "both",
+        "basis_refresh": "eigh after first step; sorted one QR iteration after each later step",
+        "gram_age_when_used_steps": 10.000000000000002,
+        "denominator_age_steps": 9.000000000000002,
+        "mean_age_global_tokens": 9437184.000000002
+      },
+      "output_B": null
+    },
+    {
+      "batch_label": "1M",
+      "algorithm": "TS",
+      "run": "soaudit_twosided_20260927/TS_a0.25_b0.25gn_lr0.01_s260925_a4000",
+      "metadata_path": "logs/muon_spectra/soaudit_twosided_20260927/TS_a0.25_b0.25gn_lr0.01_s260925_a4000/scientific/metadata.json",
+      "metadata_sha256": "3612a6cc2e82fa095335b618e882c94b3441c320b9d4d402dd1851b3705e7170",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/muon.py",
+          "sha256": "c34962d9bc2ba87d6befd4a55d022dd90889ac059d8ada704507517384fe09b2"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/distributed.py",
+          "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/muon.py",
+          "start": 600,
+          "end": 806
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        },
+        "output_second_moments": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/muon.py",
+          "start": 809,
+          "end": 844
+        },
+        "update_output_statistics": {
+          "path": "logs/muon_spectra/soaudit_twosided_20260927/frozen/adamw_spectra/muon.py",
+          "start": 461,
+          "end": 469
+        }
+      },
+      "total_steps": 1469,
+      "batch_tokens": 1048576,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.25,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 32,
+        "effective_step_decay": 0.9379448889735361,
+        "mean_age_model_states_at_refresh": 15.114708095092155,
+        "root_refresh_steps": 10,
+        "mean_cache_age_steps": 4.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 10485760,
+        "mean_age_model_states_with_cache": 19.614708095092155,
+        "mean_age_global_tokens_with_cache": 20567512.15551935
+      },
+      "momentum": {
+        "decay": 0.95,
+        "mean_age_updates": 18.999999999999982,
+        "half_life_updates": 13.513407333964874,
+        "iid_weight_ess_updates": 38.999999999999964,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 19922943.99999998
+      },
+      "SOAP": null,
+      "output_B": {
+        "decay": 0.8,
+        "mean_age_updates": 4.000000000000001,
+        "half_life_updates": 3.1062837195053903,
+        "iid_weight_ess_updates": 9.000000000000002,
+        "clock": "one extra owner-local statistics pass each refresh",
+        "source": "gn",
+        "rank_reduction": "none",
+        "sequences_per_refresh_per_factor": 8,
+        "token_rows_per_refresh_per_factor": 4096,
+        "refresh_steps": 10,
+        "refresh_global_tokens": 10485760,
+        "mean_age_steps_at_refresh": 40.00000000000001,
+        "mean_age_steps_with_cache": 44.50000000000001,
+        "iid_weight_ess_sequences": 72.00000000000001,
+        "iid_weight_ess_token_rows": 36864.00000000001,
+        "total_refreshes": 147,
+        "startup": [
+          {
+            "step": 1,
+            "refresh_count": 1,
+            "first_sample_weight": 1.0,
+            "mean_age_steps": 0.0,
+            "iid_weight_ess_refreshes": 1.0,
+            "iid_weight_ess_sequences": 8.0
+          },
+          {
+            "step": 143,
+            "refresh_count": 15,
+            "first_sample_weight": 0.043980465111040035,
+            "mean_age_steps": 40.240781395558415,
+            "iid_weight_ess_refreshes": 8.862853977486623,
+            "iid_weight_ess_sequences": 70.90283181989298
+          },
+          {
+            "step": 200,
+            "refresh_count": 20,
+            "first_sample_weight": 0.014411518807585602,
+            "mean_age_steps": 48.42353924769659,
+            "iid_weight_ess_refreshes": 8.985070990119775,
+            "iid_weight_ess_sequences": 71.8805679209582
+          },
+          {
+            "step": 500,
+            "refresh_count": 50,
+            "first_sample_weight": 1.7840596158824548e-05,
+            "mean_age_steps": 48.99928637615366,
+            "iid_weight_ess_refreshes": 8.999999977083348,
+            "iid_weight_ess_sequences": 71.99999981666679
+          },
+          {
+            "step": 900,
+            "refresh_count": 90,
+            "first_sample_weight": 2.3714219875802474e-09,
+            "mean_age_steps": 48.999999905143135,
+            "iid_weight_ess_refreshes": 9.000000000000004,
+            "iid_weight_ess_sequences": 72.00000000000003
+          }
+        ],
+        "mean_age_global_tokens_with_cache": 46661632.00000001
+      }
+    },
+    {
+      "batch_label": "4M",
+      "algorithm": "PD",
+      "run": "soaudit_mom4m4_20260927/PD_a0.5_b4M_lr0.02_mom0.9_s260925_ada",
+      "metadata_path": "logs/muon_spectra/soaudit_mom4m4_20260927/PD_a0.5_b4M_lr0.02_mom0.9_s260925_ada/scientific/metadata.json",
+      "metadata_sha256": "4e31c44bb7a1560ce42ae1277151b53c71aff47280811d5dcd86d5b6414f9c27",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/muon.py",
+          "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/distributed.py",
+          "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/muon.py",
+          "start": 612,
+          "end": 818
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_mom4m4_20260927/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        }
+      },
+      "total_steps": 368,
+      "batch_tokens": 4194304,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.5,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 128,
+        "effective_step_decay": 0.773943549243486,
+        "mean_age_model_states_at_refresh": 3.4236738064913816,
+        "root_refresh_steps": 10,
+        "mean_cache_age_steps": 4.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 41943040,
+        "mean_age_model_states_with_cache": 7.923673806491381,
+        "mean_age_global_tokens_with_cache": 33234296.741262026
+      },
+      "momentum": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 37748736.00000001
+      },
+      "SOAP": null,
+      "output_B": null
+    },
+    {
+      "batch_label": "4M",
+      "algorithm": "SPD",
+      "run": "soaudit_strength4m_20260927/SPD_a0.5_b4M_lr0.02_mom0.9_s260925_l40s",
+      "metadata_path": "logs/muon_spectra/soaudit_strength4m_20260927/SPD_a0.5_b4M_lr0.02_mom0.9_s260925_l40s/scientific/metadata.json",
+      "metadata_sha256": "0f811dd31770657bb54640754cd1cc8eebab98be4ab9769721948b199e5df457",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/distributed.py",
+          "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 615,
+          "end": 829
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        }
+      },
+      "total_steps": 368,
+      "batch_tokens": 4194304,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.5,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 128,
+        "effective_step_decay": 0.773943549243486,
+        "mean_age_model_states_at_refresh": 3.4236738064913816,
+        "root_refresh_steps": 10,
+        "mean_cache_age_steps": 4.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 41943040,
+        "mean_age_model_states_with_cache": 7.923673806491381,
+        "mean_age_global_tokens_with_cache": 33234296.741262026
+      },
+      "momentum": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 37748736.00000001
+      },
+      "SOAP": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "gram_clock": "one globally reduced and clipped gradient per step",
+        "denominator_clock": "one projected momentum/gradient per step, after first ready step",
+        "tracked": "update",
+        "basis": "both",
+        "basis_refresh": "eigh after first step; sorted one QR iteration after each later step",
+        "gram_age_when_used_steps": 10.000000000000002,
+        "denominator_age_steps": 9.000000000000002,
+        "mean_age_global_tokens": 37748736.00000001
+      },
+      "output_B": null
+    },
+    {
+      "batch_label": "4M",
+      "algorithm": "TS",
+      "run": "soaudit_strength4m_20260927/TS_a0.5_b0.5gn_b4M_lr0.02_mom0.9_s260925_ada",
+      "metadata_path": "logs/muon_spectra/soaudit_strength4m_20260927/TS_a0.5_b0.5gn_b4M_lr0.02_mom0.9_s260925_ada/scientific/metadata.json",
+      "metadata_sha256": "a43e921803d40dc1086c256a321b7391470f750ff13b099d3f09e248061102a3",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/distributed.py",
+          "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 615,
+          "end": 829
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        },
+        "output_second_moments": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 832,
+          "end": 867
+        },
+        "update_output_statistics": {
+          "path": "logs/muon_spectra/soaudit_strength4m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 472,
+          "end": 480
+        }
+      },
+      "total_steps": 368,
+      "batch_tokens": 4194304,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.5,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 128,
+        "effective_step_decay": 0.773943549243486,
+        "mean_age_model_states_at_refresh": 3.4236738064913816,
+        "root_refresh_steps": 10,
+        "mean_cache_age_steps": 4.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 41943040,
+        "mean_age_model_states_with_cache": 7.923673806491381,
+        "mean_age_global_tokens_with_cache": 33234296.741262026
+      },
+      "momentum": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 37748736.00000001
+      },
+      "SOAP": null,
+      "output_B": {
+        "decay": 0.8,
+        "mean_age_updates": 4.000000000000001,
+        "half_life_updates": 3.1062837195053903,
+        "iid_weight_ess_updates": 9.000000000000002,
+        "clock": "one extra owner-local statistics pass each refresh",
+        "source": "gn",
+        "rank_reduction": "none",
+        "sequences_per_refresh_per_factor": 8,
+        "token_rows_per_refresh_per_factor": 4096,
+        "refresh_steps": 10,
+        "refresh_global_tokens": 41943040,
+        "mean_age_steps_at_refresh": 40.00000000000001,
+        "mean_age_steps_with_cache": 44.50000000000001,
+        "iid_weight_ess_sequences": 72.00000000000001,
+        "iid_weight_ess_token_rows": 36864.00000000001,
+        "total_refreshes": 37,
+        "startup": [
+          {
+            "step": 1,
+            "refresh_count": 1,
+            "first_sample_weight": 1.0,
+            "mean_age_steps": 0.0,
+            "iid_weight_ess_refreshes": 1.0,
+            "iid_weight_ess_sequences": 8.0
+          },
+          {
+            "step": 36,
+            "refresh_count": 4,
+            "first_sample_weight": 0.5120000000000001,
+            "mean_age_steps": 24.520000000000003,
+            "iid_weight_ess_refreshes": 2.9058954807513473,
+            "iid_weight_ess_sequences": 23.24716384601078
+          },
+          {
+            "step": 183,
+            "refresh_count": 19,
+            "first_sample_weight": 0.018014398509482003,
+            "mean_age_steps": 41.27942405962074,
+            "iid_weight_ess_refreshes": 8.976695166942333,
+            "iid_weight_ess_sequences": 71.81356133553867
+          }
+        ],
+        "mean_age_global_tokens_with_cache": 186646528.00000003
+      }
+    },
+    {
+      "batch_label": "16M",
+      "algorithm": "PD",
+      "run": "soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s",
+      "metadata_path": "logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/metadata.json",
+      "metadata_sha256": "f712ccd94fa88d317456edd60466565ba6bb86328a1248c913b73dbe0be35b3d",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/distributed.py",
+          "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 615,
+          "end": 829
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        }
+      },
+      "total_steps": 92,
+      "batch_tokens": 16777216,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.5,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 512,
+        "effective_step_decay": 0.35878736379345716,
+        "mean_age_model_states_at_refresh": 0.5595450612390725,
+        "root_refresh_steps": 2,
+        "mean_cache_age_steps": 0.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 33554432,
+        "mean_age_model_states_with_cache": 1.0595450612390724,
+        "mean_age_global_tokens_with_cache": 17776216.354141146
+      },
+      "momentum": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 150994944.00000003
+      },
+      "SOAP": null,
+      "output_B": null
+    },
+    {
+      "batch_label": "16M",
+      "algorithm": "SPD",
+      "run": "soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada",
+      "metadata_path": "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/metadata.json",
+      "metadata_sha256": "6fb98a76355927894ddf5cba0129bb0fd0dd15c9219710d364b3e249e77af526",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/distributed.py",
+          "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 615,
+          "end": 829
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        }
+      },
+      "total_steps": 92,
+      "batch_tokens": 16777216,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.5,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 512,
+        "effective_step_decay": 0.35878736379345716,
+        "mean_age_model_states_at_refresh": 0.5595450612390725,
+        "root_refresh_steps": 2,
+        "mean_cache_age_steps": 0.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 33554432,
+        "mean_age_model_states_with_cache": 1.0595450612390724,
+        "mean_age_global_tokens_with_cache": 17776216.354141146
+      },
+      "momentum": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 150994944.00000003
+      },
+      "SOAP": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "gram_clock": "one globally reduced and clipped gradient per step",
+        "denominator_clock": "one projected momentum/gradient per step, after first ready step",
+        "tracked": "update",
+        "basis": "both",
+        "basis_refresh": "eigh after first step; sorted one QR iteration after each later step",
+        "gram_age_when_used_steps": 10.000000000000002,
+        "denominator_age_steps": 9.000000000000002,
+        "mean_age_global_tokens": 150994944.00000003
+      },
+      "output_B": null
+    },
+    {
+      "batch_label": "16M",
+      "algorithm": "TS",
+      "run": "soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s",
+      "metadata_path": "logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s/scientific/metadata.json",
+      "metadata_sha256": "8b55d4a6dc929d7f2f17683544431012f361e1b608979abe98d64969effb6a1d",
+      "sources": {
+        "model.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/model.py",
+          "sha256": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a"
+        },
+        "muon.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007"
+        },
+        "distributed.py": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/distributed.py",
+          "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c"
+        }
+      },
+      "source_spans": {
+        "StatLinear_forward": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/model.py",
+          "start": 87,
+          "end": 100
+        },
+        "Muon_step": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 615,
+          "end": 829
+        },
+        "data_norm_root": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 243,
+          "end": 261
+        },
+        "soap_precondition": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 162,
+          "end": 183
+        },
+        "soap_update_statistics": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 186,
+          "end": 210
+        },
+        "output_second_moments": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 832,
+          "end": 867
+        },
+        "update_output_statistics": {
+          "path": "logs/muon_spectra/soaudit_batch16m_20260927/frozen/adamw_spectra/muon.py",
+          "start": 472,
+          "end": 480
+        }
+      },
+      "total_steps": 92,
+      "batch_tokens": 16777216,
+      "world_size": 4,
+      "microbatch_sequences": 16,
+      "seq_len": 512,
+      "alpha": 0.5,
+      "input_C": {
+        "decay": 0.998,
+        "mean_age_updates": 498.99999999999955,
+        "half_life_updates": 346.2269010494912,
+        "iid_weight_ess_updates": 998.9999999999991,
+        "clock": "one local training microbatch forward",
+        "rows_per_forward": 256,
+        "rank_reduction": "none; owner rank's local statistic",
+        "forward_updates_per_full_step": 512,
+        "effective_step_decay": 0.35878736379345716,
+        "mean_age_model_states_at_refresh": 0.5595450612390725,
+        "root_refresh_steps": 2,
+        "mean_cache_age_steps": 0.5,
+        "iid_weight_ess_token_rows": 255743.99999999977,
+        "global_token_age_microbatch_clock": 16351231.999999985,
+        "root_refresh_global_tokens": 33554432,
+        "mean_age_model_states_with_cache": 1.0595450612390724,
+        "mean_age_global_tokens_with_cache": 17776216.354141146
+      },
+      "momentum": {
+        "decay": 0.9,
+        "mean_age_updates": 9.000000000000002,
+        "half_life_updates": 6.578813478960585,
+        "iid_weight_ess_updates": 19.000000000000004,
+        "clock": "one optimizer step",
+        "mean_age_global_tokens": 150994944.00000003
+      },
+      "SOAP": null,
+      "output_B": {
+        "decay": 0.8,
+        "mean_age_updates": 4.000000000000001,
+        "half_life_updates": 3.1062837195053903,
+        "iid_weight_ess_updates": 9.000000000000002,
+        "clock": "one extra owner-local statistics pass each refresh",
+        "source": "gn",
+        "rank_reduction": "none",
+        "sequences_per_refresh_per_factor": 8,
+        "token_rows_per_refresh_per_factor": 4096,
+        "refresh_steps": 2,
+        "refresh_global_tokens": 33554432,
+        "mean_age_steps_at_refresh": 8.000000000000002,
+        "mean_age_steps_with_cache": 8.500000000000002,
+        "iid_weight_ess_sequences": 72.00000000000001,
+        "iid_weight_ess_token_rows": 36864.00000000001,
+        "total_refreshes": 46,
+        "startup": [
+          {
+            "step": 1,
+            "refresh_count": 1,
+            "first_sample_weight": 1.0,
+            "mean_age_steps": 0.0,
+            "iid_weight_ess_refreshes": 1.0,
+            "iid_weight_ess_sequences": 8.0
+          },
+          {
+            "step": 9,
+            "refresh_count": 5,
+            "first_sample_weight": 0.4096000000000001,
+            "mean_age_steps": 4.7232,
+            "iid_weight_ess_refreshes": 3.842578474674641,
+            "iid_weight_ess_sequences": 30.740627797397128
+          },
+          {
+            "step": 46,
+            "refresh_count": 23,
+            "first_sample_weight": 0.00737869762948383,
+            "mean_age_steps": 8.940970418964131,
+            "iid_weight_ess_refreshes": 8.99608165381354,
+            "iid_weight_ess_sequences": 71.96865323050832
+          },
+          {
+            "step": 83,
+            "refresh_count": 42,
+            "first_sample_weight": 0.00010633823966279351,
+            "mean_age_steps": 7.9991492940827005,
+            "iid_weight_ess_refreshes": 8.999999185836948,
+            "iid_weight_ess_sequences": 71.99999348669559
+          }
+        ],
+        "mean_age_global_tokens_with_cache": 142606336.00000003
+      }
+    }
+  ]
+}

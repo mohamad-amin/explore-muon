@@ -1,0 +1,20 @@
+# Complete-atlas reductions and figures
+
+All 18 panels, six joint states, five directions, four contexts, two banks, and 15 signed scales passed structural and numerical consistency checks. The analyzer reads saved NPZ/JSON observations only; it does not load tensors.pt or construct a model.
+
+- `curves.csv`: context/bank/all-four loss, exact AD linear term, signed remainder, true-H/GN quadratics, absolute and normalized departures, parameter and sequence activation radii.
+- `curvature.csv`: the corresponding H, GN, H−GN, qualified H/GN, parameter direction norm and activation RMS; also pooled-token H/GN 10/50/90% quantiles, fraction H<0, mean|H−GN|, and mean|H−GN|/mean(GN). Blank ratios have mean GN ≤ 1e−12; negative H remains valid. These distribution columns also accompany the corresponding `curves.csv` rows.
+- `joint.csv`: selected-up joint remainder minus the three separate remainders and ½s² times the full off-diagonal H/GN sums.
+- `radius_symmetry.csv`: every direction/context/bank/all-four row at all seven paired |s| values; R_plus, R_minus, R_even, R_odd, the true-H quadratic, signed even-quadratic departure, and signed odd fraction with explicit denominators.
+- `projected_curvature.csv`: signed coefficient-space entries in the finite five-direction or three-write span, not the full parameter Hessian.
+- `figures/`: training summaries (PNG/PDF), every context and sign of every radius panel (36-page PDF plus PNG pages), signed departure profiles (18-page PDF), and joint profiles (six-page PDF plus mean summaries).
+
+All loss summaries are nats/token. Sequence activation RMS is √mean_position ||D x||²; the sequence Euclidean norm is √512 times this. At signed multiplier s, both radii scale by |s|. For blocks 1 and 4, this radius summarizes all injected positions and is not a token-local loss-response coordinate. Joint plots use actual-write multiplier only: the saved joint archive contains no current-input joint activation-radius trajectory.
+
+Token-distribution columns pool the 512, 1024, or 2048 token values belonging to each context, bank, or all-four row, with equal token weights. Quantiles use linear interpolation on that pool, rather than averaging per-context quantiles. The H<0 fraction uses the signed stored values without thresholding. The absolute difference is formed token by token before averaging; its ratio divides by the matching aggregate mean GN, using the same positive-GN numerical floor as H/GN. Agreement H≈GN in the mean can reflect cancellation of the signed model-curvature term H−GN, so it does not imply small |H−GN| at individual tokens. These are descriptive distributions, not additional independent replicates; for earlier blocks the per-token loss derivative includes effects from kicks at other positions.
+
+Retrospective addition after an early-panel reading: the exact paired-radius decomposition is R_even=(R_plus+R_minus)/2 and R_odd=(R_plus−R_minus)/2. The even-quadratic departure is (R_even−½s²H)/max(|R_even|,|½s²H|,1e−10); the signed odd fraction is (R_plus−R_minus)/max(|R_plus|+|R_minus|,1e−10). A remainder depending only on the kick norm is even in s; this decomposition describes the measured asymmetry without fitting a radial model or defining a success threshold. The table retains all seven magnitudes for every panel and aggregate; the two compact PNG/PDF overviews show actual directions and four-context means only. Producer observations, the signed-radius grid, and existing readouts are unchanged.
+
+Ratios are formed after token/context aggregation, never averaged from token ratios. Signed relative quadratic departure is (R−Q)/max(|R|,|Q|,1e−10). Zero is retained in the tables; log-radius figures display the nonzero positive and negative sides separately. Signed-symlog y axes retain zero and negative curvature/remainders. The numerical floors are denominator conventions, not usefulness gates. No fitted exponent, p-value, confidence interval, optimizer ranking or population-isotropy claim is produced.
+
+Figures and numeric tables are complete.

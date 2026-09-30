@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+STUDY_ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+export TMPDIR="$STUDY_ROOT/scratch/tmp"
+export XDG_CACHE_HOME="$STUDY_ROOT/scratch/cache"
+export MPLCONFIGDIR="$STUDY_ROOT/scratch/cache/matplotlib"
+export CUDA_CACHE_PATH="$STUDY_ROOT/scratch/cache/cuda"
+export TORCHINDUCTOR_CACHE_DIR="$STUDY_ROOT/scratch/cache/inductor"
+export TRITON_CACHE_DIR="$STUDY_ROOT/scratch/cache/triton"
+export TORCH_HOME="$STUDY_ROOT/scratch/cache/torch"
+export TORCH_EXTENSIONS_DIR="$STUDY_ROOT/scratch/cache/torch_extensions"
+export PIP_CACHE_DIR="$STUDY_ROOT/scratch/cache/pip"
+export PYTHONPYCACHEPREFIX="$STUDY_ROOT/scratch/pycache"
+export PYTHONPATH="$STUDY_ROOT${PYTHONPATH:+:$PYTHONPATH}"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-2}"
+export OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-2}"
+mkdir -p "$TMPDIR" "$MPLCONFIGDIR" "$CUDA_CACHE_PATH" "$TORCHINDUCTOR_CACHE_DIR" \
+    "$TRITON_CACHE_DIR" "$TORCH_HOME" "$PIP_CACHE_DIR" "$PYTHONPYCACHEPREFIX"
+cd "$STUDY_ROOT"
+exec "$STUDY_ROOT/.venv/bin/python" "$@"

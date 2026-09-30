@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "methods": [
+    {
+      "arm": "adamw_b8192_lr0.002_m0.9_s20260928",
+      "seconds": 0.7563514672219753,
+      "peak_bytes": 181686784,
+      "initial_hash": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+      "window_hash": "0c3efc403e8b00bc190b1baad2bdec871ae7e98376671e315a0eb2be125df94d"
+    },
+    {
+      "arm": "muon_b8192_lr0.016_m0.9_s20260928",
+      "seconds": 0.6157410750165582,
+      "peak_bytes": 178868736,
+      "initial_hash": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+      "window_hash": "0c3efc403e8b00bc190b1baad2bdec871ae7e98376671e315a0eb2be125df94d"
+    },
+    {
+      "arm": "pd_b8192_lr0.016_m0.9_s20260928",
+      "seconds": 1.7897922666743398,
+      "peak_bytes": 213407232,
+      "initial_hash": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+      "window_hash": "0c3efc403e8b00bc190b1baad2bdec871ae7e98376671e315a0eb2be125df94d"
+    },
+    {
+      "arm": "spd_b8192_lr0.016_m0.9_s20260928",
+      "seconds": 3.2132518710568547,
+      "peak_bytes": 238573056,
+      "initial_hash": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+      "window_hash": "0c3efc403e8b00bc190b1baad2bdec871ae7e98376671e315a0eb2be125df94d"
+    },
+    {
+      "arm": "ts_b8192_lr0.016_m0.9_s20260928",
+      "seconds": 2.467729177325964,
+      "peak_bytes": 229922304,
+      "initial_hash": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+      "window_hash": "0c3efc403e8b00bc190b1baad2bdec871ae7e98376671e315a0eb2be125df94d"
+    }
+  ],
+  "screen_projected_training_gpu_seconds": 1131.8868297338486,
+  "screen_projected_training_gpu_hours": 0.3144130082594024,
+  "gpu_job_id": "2626581_0",
+  "checks": [
+    "all five complete",
+    "all snapshot tensors finite",
+    "paired init",
+    "paired training windows",
+    "input EMA clock correct",
+    "physical GPU <48GB"
+  ]
+}

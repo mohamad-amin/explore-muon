@@ -1,0 +1,1164 @@
+{
+  "scope": "Selected retained directions/transport tensor metadata only. No claim of exhaustive project tensor coverage.",
+  "source_hashes": {
+    "logs/muon_spectra/second_order_audit_20260926/one_step_gn.py": "620d043a5dddacb235cfcbcfcfee44d66c3b30acdd2dad59ad9c57aaeeab729b",
+    "logs/muon_spectra/second_order_audit_20260926/transport_test.py": "4dd04c8e4dac02a0d863efe66a1fc31645d82c52ba1db38fc6324c028900bab2",
+    "logs/muon_spectra/second_order_audit_20260926/step_profile_probe.py": "a2786ce23d23fee1ef1dee07d94fbdfbc398a3f663c78af9f038c45108c632a2"
+  },
+  "files": [
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn/M_b4M_lr0.014_s260925_l40s_step000183_directions.pt",
+      "bytes": 780681141,
+      "mtime_ns": 1790498119933464189,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.01"
+        ],
+        "g4M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.003"
+        ],
+        "momentum": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k16_d0.1"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 768,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn/M_lr0.007_s260925_l40s_step000500_directions.pt",
+      "bytes": 780678045,
+      "mtime_ns": 1790498106736004309,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.003"
+        ],
+        "g4M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.001"
+        ],
+        "momentum": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k16_d0.1"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 768,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn/PD_a0.25_lr0.01_s260925_ada_step000500_directions.pt",
+      "bytes": 780681915,
+      "mtime_ns": 1790498098136704658,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.001"
+        ],
+        "g4M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.0001"
+        ],
+        "momentum": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k16_d0.1"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 768,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn/PD_b4M_lr0.02_s260925_ada_step000183_directions.pt",
+      "bytes": 780680367,
+      "mtime_ns": 1790498104370921896,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.01"
+        ],
+        "g4M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k96_d0.001"
+        ],
+        "momentum": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gn_k48_d0.1"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 768,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/M_b4M_lr0.014_s260925_l40s_step000183_directions.pt",
+      "bytes": 1082762317,
+      "mtime_ns": 1790500746025562824,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.01"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.003"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k16_d0.3"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/M_lr0.007_s260925_l40s_step000500_directions.pt",
+      "bytes": 1082758069,
+      "mtime_ns": 1790500731229044685,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.003"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k16_d0.3"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/M_lr0.007_s260925_l40s_step001300_directions.pt",
+      "bytes": 1082758005,
+      "mtime_ns": 1790500928546954292,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.1",
+          "gn_k48_d0.003"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.1",
+          "gn_k48_d0.001"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.1",
+          "gn_k48_d0.3"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/PD_a0.25_lr0.01_s260925_ada_step000500_directions.pt",
+      "bytes": 1082763379,
+      "mtime_ns": 1790500730688025740,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.0003"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k16_d0.1"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/PD_b4M_lr0.02_s260925_ada_step000183_directions.pt",
+      "bytes": 1082761255,
+      "mtime_ns": 1790500734625163609,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.01"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.3"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/SPD_a0.25_lr0.01_s260925_ada_step000500_directions.pt",
+      "bytes": 1082764441,
+      "mtime_ns": 1790500961632112856,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.0003"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.01"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/SPD_b4M_lr0.01_s260925_a6000_step000183_directions.pt",
+      "bytes": 1082764441,
+      "mtime_ns": 1790500887302510009,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.0003"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn2/S_lr0.007_s260925_l40s_step000500_directions.pt",
+      "bytes": 1082758069,
+      "mtime_ns": 1790500893383722958,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.0003"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.3"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1056,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gn3/PD_a0.25_lr0.01_s260925_ada_step000500_directions.pt",
+      "bytes": 780681851,
+      "mtime_ns": 1790502760240927351,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.0003"
+        ],
+        "momentum": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k16_d0.1"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 768,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gnmix/M_lr0.007_s260925_l40s_step000500_directions.pt",
+      "bytes": 1384838517,
+      "mtime_ns": 1790505077514770155,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.003"
+        ],
+        "mix0.25": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.01"
+        ],
+        "mix0.5": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k16_d0.1"
+        ],
+        "mix0.75": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k16_d0.3"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1344,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gnmix/PD_a0.25_lr0.01_s260925_ada_step000500_directions.pt",
+      "bytes": 1384845267,
+      "mtime_ns": 1790504933738759855,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "mix0.25": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "mix0.5": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.003"
+        ],
+        "mix0.75": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.03"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 1344,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gnwarm/M_lr0.007_s260925_l40s_step000500_directions.pt",
+      "bytes": 780677917,
+      "mtime_ns": 1790506507026615846,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.003"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 768,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gnwarm/PD_a0.25_lr0.01_s260925_ada_step000500_directions.pt",
+      "bytes": 780681851,
+      "mtime_ns": 1790506755251281038,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.001"
+        ],
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k48_d0.0003"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 768,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gnp/SPD_a0.25_lr0.01_s260925_ada_step000500_directions.pt",
+      "bytes": 579294913,
+      "mtime_ns": 1790498186148771532,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gnp_k96_d0.1"
+        ],
+        "momentum": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gnp_k96_d0.01"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 576,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/gnp/S_lr0.007_s260925_l40s_step000500_directions.pt",
+      "bytes": 579291421,
+      "mtime_ns": 1790498318358378516,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g1M": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gnp_k4_d0.1"
+        ],
+        "momentum": [
+          "muon",
+          "pd_a0.25",
+          "kfac_0.001",
+          "gnp_k96_d0.003"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 576,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/valley/gn_floor/M_lr0.007_s260925_l40s_a500_step000516_directions.pt",
+      "bytes": 478600507,
+      "mtime_ns": 1790534422041392084,
+      "keys": [
+        "meta",
+        "directions",
+        "frames"
+      ],
+      "directions_by_input": {
+        "g4M": [
+          "gd",
+          "muon",
+          "pd_a0.25",
+          "pd_a0.5",
+          "kfac_0.001",
+          "gn_k96_d0.001"
+        ]
+      },
+      "frames": {
+        "matrices": 48,
+        "fields": [
+          "U",
+          "V",
+          "lam_B",
+          "lam_C"
+        ],
+        "dtypes": {
+          "U": "torch.float16",
+          "V": "torch.float16",
+          "lam_B": "torch.float32",
+          "lam_C": "torch.float32"
+        }
+      },
+      "tensor_count": 480,
+      "tensor_dtypes": [
+        "torch.bfloat16",
+        "torch.float16",
+        "torch.float32"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/transport/M_lr0.007_track_s260925_a6000_step000500_tensors.pt",
+      "bytes": 201388917,
+      "mtime_ns": 1790523094385760812,
+      "keys": [
+        "names",
+        "beta",
+        "Mstar",
+        "replay_mean",
+        "X_G",
+        "X_H"
+      ],
+      "transport_groups": {
+        "Mstar": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        },
+        "replay_mean": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        },
+        "X_G": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        },
+        "X_H": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        }
+      },
+      "tensor_count": 192,
+      "tensor_dtypes": [
+        "torch.bfloat16"
+      ]
+    },
+    {
+      "path": "logs/muon_spectra/second_order_audit_20260926/transport/PD_a0.25_lr0.01_track_s260925_a6000_step000500_tensors.pt",
+      "bytes": 201390169,
+      "mtime_ns": 1790523992367070815,
+      "keys": [
+        "names",
+        "beta",
+        "Mstar",
+        "replay_mean",
+        "X_G",
+        "X_H"
+      ],
+      "transport_groups": {
+        "Mstar": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        },
+        "replay_mean": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        },
+        "X_G": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        },
+        "X_H": {
+          "matrices": 48,
+          "dtypes": [
+            "torch.bfloat16"
+          ]
+        }
+      },
+      "tensor_count": 192,
+      "tensor_dtypes": [
+        "torch.bfloat16"
+      ]
+    }
+  ]
+}

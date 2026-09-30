@@ -1,0 +1,9 @@
+{
+  "previous_attempt": "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246",
+  "previous_worker_exit_code": 0,
+  "previous_supervisor_exit_code": 1,
+  "reason": "FP32 normalization failed 2e-4 squared-energy tolerance on first-step Adam directions",
+  "change": "FP64 scalar norm accumulation, no training-update change",
+  "original_results_preserved": true,
+  "test_log": "/share/data/dl-theory/amin/projects/last_layer/logs/adamw_spectra/g20_20260924_212246/norm_fix_tests.txt"
+}

@@ -1,0 +1,54 @@
+{
+  "additional_check": {
+    "documents": 3,
+    "initial_harness_failure": "First ad-hoc invocation accidentally retained the fixture loader mock and correctly failed panel identity verification. Removing that mock with patch.stopall corrected the harness; production source was unchanged.",
+    "kind": "synthetic_real_loader_adapter_training_identity_integration",
+    "lengths": [
+      [
+        4,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ]
+    ],
+    "method": "Removed fixture loader mock; wrote an entirely synthetic on-disk v2 panel; patched only real-data pin constants to synthetic hashes; ran actual stories.load_test_panel through confirm.load_panel and verify_stories_training_data.",
+    "result": "passed",
+    "target_tokens": 9,
+    "windows": 4
+  },
+  "code_or_test_sources_edited": false,
+  "findings": [],
+  "focused_tests": {
+    "bpe_tests": 12,
+    "character_tests": 11,
+    "command": "./run -m unittest research.tiny_spectra.test_confirm research.tiny_spectra.test_confirm_stories -v",
+    "elapsed_seconds": 2.401,
+    "exit_code": 0,
+    "test_count": 23
+  },
+  "limitations": [
+    "Source and synthetic CPU verification only; no real panel content loaded or scored, no GPU job launched.",
+    "The lock enforces the declared family, not scientific adequacy of criteria or prohibition of deliberate new locks after viewing tests; protocol discipline remains necessary.",
+    "Pre-existing hard-kill stale active-guard recovery limitation remains unchanged."
+  ],
+  "result": "no_blocking_correctness_or_overfit_regression_found",
+  "reviewed_utc": "2026-09-28T21:22:11.024382+00:00",
+  "reviewer": "/root/heldout_data_audit/stories_data_review",
+  "schema_version": 1,
+  "source_sha256": {
+    "research/tiny_spectra/confirm.py": "0798eed5c8084e5044f620468a744f105364ae4b98486cd837d0b60014d01d8a",
+    "research/tiny_spectra/stories.py": "769187cd92ad33de22a5645c5288b26dab6dabf4ca2a95eb4e362a7e6930ca14",
+    "research/tiny_spectra/test_confirm.py": "40ba6079e5671a2fa6a61d07625e039810a050c9a5c88453ca40463caff8e3c9",
+    "research/tiny_spectra/test_confirm_stories.py": "b7a90da835799ed0d06e44c418d0c0bbdc756f6124548bf56edd61d9917f23c3"
+  },
+  "verified": [
+    "Pinned BPE v2 panel and training manifests, tokenizer/vocabulary/membership identity, and frozen stories source.",
+    "Short stories, tails, and real EOS targets enter masked token-weighted NLL; pooled batches preserve original document boundaries.",
+    "Full checkpoint/run family verified before inference; all runs required before release; failed retry requires identical lock and family weights.",
+    "Existing character weighting, confirmation gates, and retry behavior remain covered."
+  ]
+}

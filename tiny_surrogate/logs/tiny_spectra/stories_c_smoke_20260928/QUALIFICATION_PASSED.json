@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "run_id": "adamw_b16384_lr0.002_m0.8_s20260928",
+      "train_hash": "72f320b6ad53d01928548023dcb845f629298526978d850ebada5f283be667fc",
+      "init_hash": "a40fb116ac3b9bf60b523d3493d0178bd86378ad340c1e885cfc09164a784dc2",
+      "bank_hash": "fa7c10e3498be5b8e546730c45199945681ae60ffb7a7221e77378644b635dc4",
+      "lengths_hash": "24644be3787bb75e8aab69839c15a875835195a69e0be13d26910453460fa7fc",
+      "seconds": 1.4898737983312458,
+      "peak_bytes": 437005824
+    },
+    {
+      "run_id": "muon_b16384_lr0.032_m0.8_s20260928",
+      "train_hash": "72f320b6ad53d01928548023dcb845f629298526978d850ebada5f283be667fc",
+      "init_hash": "a40fb116ac3b9bf60b523d3493d0178bd86378ad340c1e885cfc09164a784dc2",
+      "bank_hash": "fa7c10e3498be5b8e546730c45199945681ae60ffb7a7221e77378644b635dc4",
+      "lengths_hash": "24644be3787bb75e8aab69839c15a875835195a69e0be13d26910453460fa7fc",
+      "seconds": 1.1117972566280514,
+      "peak_bytes": 434187776
+    },
+    {
+      "run_id": "pd_b16384_lr0.032_m0.8_s20260928",
+      "train_hash": "72f320b6ad53d01928548023dcb845f629298526978d850ebada5f283be667fc",
+      "init_hash": "a40fb116ac3b9bf60b523d3493d0178bd86378ad340c1e885cfc09164a784dc2",
+      "bank_hash": "fa7c10e3498be5b8e546730c45199945681ae60ffb7a7221e77378644b635dc4",
+      "lengths_hash": "24644be3787bb75e8aab69839c15a875835195a69e0be13d26910453460fa7fc",
+      "seconds": 2.409297085599974,
+      "peak_bytes": 456355840
+    },
+    {
+      "run_id": "spd_b16384_lr0.032_m0.8_s20260928",
+      "train_hash": "72f320b6ad53d01928548023dcb845f629298526978d850ebada5f283be667fc",
+      "init_hash": "a40fb116ac3b9bf60b523d3493d0178bd86378ad340c1e885cfc09164a784dc2",
+      "bank_hash": "fa7c10e3498be5b8e546730c45199945681ae60ffb7a7221e77378644b635dc4",
+      "lengths_hash": "24644be3787bb75e8aab69839c15a875835195a69e0be13d26910453460fa7fc",
+      "seconds": 3.143598747206852,
+      "peak_bytes": 481521664
+    },
+    {
+      "run_id": "ts_b16384_lr0.032_m0.8_s20260928",
+      "train_hash": "72f320b6ad53d01928548023dcb845f629298526978d850ebada5f283be667fc",
+      "init_hash": "a40fb116ac3b9bf60b523d3493d0178bd86378ad340c1e885cfc09164a784dc2",
+      "bank_hash": "fa7c10e3498be5b8e546730c45199945681ae60ffb7a7221e77378644b635dc4",
+      "lengths_hash": "24644be3787bb75e8aab69839c15a875835195a69e0be13d26910453460fa7fc",
+      "seconds": 3.103745467029512,
+      "peak_bytes": 472870912
+    }
+  ],
+  "expected_screen_training_gpu_hours": 0.4002955503927337,
+  "checks": [
+    "paired initialization and stream",
+    "no recycled training blocks",
+    "all saved tensors finite",
+    "all development targets counted exactly",
+    "weighted full loss reconstructed",
+    "GPU physical VRAM below48GB"
+  ],
+  "sealed_test_scored": false
+}

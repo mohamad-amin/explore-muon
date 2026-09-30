@@ -1,0 +1,854 @@
+<title>Gauss-Newton Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #f3f5f6;
+  --panel: #ffffff;
+  --ink: #1b2630;
+  --muted: #5a6a77;
+  --line: #d8dfe4;
+  --grid: #e8edf0;
+  --accent: #1e6c72;
+  --accent-soft: #dcecec;
+  --muon: #2f6cb3;
+  --pd: #c0433a;
+  --soap: #3a894c;
+  --spd: #7a4fb0;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f151b; --panel: #151e27; --ink: #e1e8ee; --muted: #93a3b0; --line: #283440; --grid: #1f2a35;
+    --accent: #5fb4b9; --accent-soft: #1d3436; --muon: #6ea2e4; --pd: #e8776d; --soap: #72c184; --spd: #b18be0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f151b; --panel: #151e27; --ink: #e1e8ee; --muted: #93a3b0; --line: #283440; --grid: #1f2a35;
+  --accent: #5fb4b9; --accent-soft: #1d3436; --muon: #6ea2e4; --pd: #e8776d; --soap: #72c184; --spd: #b18be0;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.5; }
+.wrap { max-width: 1280px; margin: 0 auto; padding-inline: 20px; padding-block: 20px 40px; display: grid; gap: 16px; }
+header h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+header p { margin: 4px 0 0; color: var(--muted); max-width: 72ch; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  display: grid; gap: 10px; padding-block: 10px; border-bottom: 1px solid var(--line); }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs button, .chip { font: 500 13px var(--sans); border: 1px solid var(--line); background: var(--panel);
+  color: var(--ink); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; }
+.chip i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; background: var(--c); }
+.chip[aria-pressed="false"] { opacity: 0.45; }
+label.field { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.05em; }
+select { font: 400 13px var(--mono); background: var(--panel); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 6px; padding: 4px 6px; }
+button:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.how { margin: 0; color: var(--muted); max-width: 90ch; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 12px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 8px 4px; min-width: 0; }
+.card h3 { margin: 2px 6px 0; font: 500 13px var(--sans); }
+.card .sub { margin: 0 6px; font: 400 11px var(--mono); color: var(--muted); }
+.plot { width: 100%; height: 300px; }
+.empty { color: var(--muted); font-style: italic; padding: 12px; }
+footer { color: var(--muted); font-size: 12px; font-family: var(--mono); }
+table.finals { border-collapse: collapse; font: 400 12px var(--mono); font-variant-numeric: tabular-nums; }
+table.finals th, table.finals td { padding: 3px 10px; border-bottom: 1px solid var(--line); text-align: right; }
+table.finals th:first-child, table.finals td:first-child { text-align: left; }
+.tablewrap { overflow-x: auto; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Gauss-Newton Atlas</h1>
+    <p>Measured Gauss-Newton structure of a 77M-parameter GPT (width 512, 8 layers, frontier norms) along the
+      training trajectories of four optimizers at 1M- and 4M-token batches: curvature marginals, the exact one-step
+      Gauss-Newton direction against the optimizers' directions, gradient persistence and coupling.
+      Each view is small multiples; hover for values, drag to zoom, double-click to reset.</p>
+  </header>
+
+  <nav class="controls" aria-label="Atlas controls">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="filters">
+      <div class="chips" id="chips" aria-label="Optimizers"></div>
+      <label class="field" for="kind">Matrix <select id="kind"></select></label>
+      <label class="field" for="depth">Layer <select id="depth"></select></label>
+      <label class="field" for="step">Step <select id="step"></select></label>
+      <label class="field" for="gnstate">State <select id="gnstate"></select></label>
+    </div>
+  </nav>
+
+  <section>
+    <p class="how" id="how"></p>
+    <div class="grid" id="charts"></div>
+  </section>
+
+  <footer>Source: logs/muon_spectra/second_order_audit_20260926 (marginals, gap map, one_step_gn.py, dense-lag persistence, one-step split) and the soaudit trajectory and batch-size cohorts.</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<script id="atlas-data" type="application/json">__ATLAS_DATA__</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById("atlas-data").textContent);
+  const RUNVAR = { M: "--muon", PD: "--pd", S: "--soap", SPD: "--spd" };
+  const STEP_RAMP = ["#1b9e9e", "#2f8fc2", "#5b7fd6", "#8a6fd6", "#b35fbf", "#d4539c", "#e8586f", "#f0743f"];
+  const KIND_RAMP = { q: "#2f8fc2", k: "#e0843a", v: "#3a9d5a", o: "#c9443c", up: "#8a6fd6", down: "#8a5a44" };
+  const VIEWS = [
+    { id: "principles", label: "Principles", controls: [],
+      how: "What the second-order audit has established so far (2026-09-28). Each principle points to the view that shows its evidence." },
+    { id: "curv", label: "Curvature vs K-FAC", controls: ["kind", "depth"],
+      how: "Exact Gauss-Newton input curvature along each eigenvector of the activation second moment C, divided by what K-FAC predicts (tr B × eigenvalue). 1 = K-FAC is exact. One panel per optimizer; color = training step (teal early, orange late)." },
+    { id: "train", label: "Over training", controls: ["kind", "depth"],
+      how: "Summaries along training for one matrix kind: the mean input direction's exact/K-FAC curvature and share of C, the fit of the exact input factor to within-sequence (a) and sequence-mean (b) parts of C, and the gradient noise scale (sequences). Lines = optimizers." },
+    { id: "gap", label: "Gap map", controls: ["kind", "step"],
+      how: "Every frame direction binned by its exact curvature. Where the Newton decrement lives, the critical batch b* (dotted line = our 2048-sequence batch), each optimizer's effective step relative to the noise-aware Newton step (shape only), the overshoot along the actual update, and momentum-gradient alignment (negative = oscillation). Caveat (2026-09-27): these sums treat frame pairs as independent. Along the actual updates the exact curvature is 20 to 37 times the diagonal sum (see Coupling), so the effective-step and overshoot panels overstate how under-stepped the flat directions are." },
+    { id: "spec", label: "Spectra", controls: ["kind", "depth"],
+      how: "Eigenvalue spectra of the input factor C and the output factor B (model-sampled labels), each divided by its mean. Color = training step." },
+    { id: "gn", label: "Exact Gauss-Newton", controls: ["gnstate"],
+      how: "One step from a saved state. Each direction's loss decrease at its own best scale, on held-out sequences, as a share of the exact Gauss-Newton direction's (Lanczos/CG on the exact GN matrix of all 48 hidden matrices, best damping). Inputs: a fresh 1M- or 4M-token gradient, or the optimizer's next momentum. The swaps separate a direction's within-matrix shape from its per-matrix step allocation; the second chart asks which matrix kind carries the within-matrix gap." },
+    { id: "lags", label: "Persistence", controls: ["kind"],
+      how: "Correlation of the true (held-out) gradient at step 501 with the gradient 1 to 31 steps later, by K-FAC curvature class within each matrix. Filled markers are odd lags and open markers even lags, so a period-2 oscillation shows as a zig-zag. One trajectory per optimizer: each point is one realization, not an average over time." },
+    { id: "coupling", label: "Coupling", controls: [],
+      how: "Why the frame-diagonal picture failed. Each optimizer's actual update is split into its stiff (top 1% of Kronecker pairs), middle (next 9%) and flat parts; the exact GN curvature of each part is compared with the frame-diagonal sum, and the one-step quadratic model is scored at the step taken, at the best single scale and at separate scales per part." },
+    { id: "blocks", label: "Blocks & stability", controls: [],
+      how: "Left: one-step decrease (cross-fitted on two halves of the held-out sequences) of the exact Gauss-Newton direction restricted to block-diagonal pieces (per matrix, per layer, per kind) against the full GN and the optimizers, as a share of full GN. Tables: the edge of each optimizer's linearized dynamics, LR μ_max(J G) against heavy ball's bound, with J the Jacobian of the run's own update map; and the raw number LR × s × λ_max(R G R) (Muon: R = I; PD: R = C^-α, s its norm-matching factor)." },
+    { id: "momentum", label: "Momentum & noise", controls: [],
+      how: "Exact replay: the run's last 100 training batches re-evaluated at the current weights give the stale-free momentum M*, so the staleness β(M − M*) of the next momentum is known exactly. Table: how well curvature transport (−G Q exact GN, −H Q true Hessian, per-matrix GN blocks, K-FAC) predicts it (cos and best multiplier s*; Q is the tracked displacement sum). Curves: Kronecker-frame pairs binned by their exact GN diagonal h, pooled per kind: the signal-to-noise of one 1M-token batch, the momentum's gain on the current gradient (1 = a fresh average; M solid, M* dotted), the stale fraction and the transport cosine. Bars: projections on the top exact GN eigenvectors, and each input's one-step decrease under each map." },
+    { id: "gap2gn", label: "Gap to GN", controls: [],
+      how: "Is the gap to Gauss-Newton oscillation or bulk? Left: held-out loss during 16-step LR anneals from kept states (the run's own optimizer, LR taken to ~0): the loss the LR maintains. Middle: one-step decreases as a share of damped exact GN, at the oscillating states and after the anneal (valley floor), for fresh 4M- and 16M-token gradients (cross-fitted). Right: validation loss of GN-trainer runs (the GN paper's recipe: inner Muon on a frozen linearization, line search) and the no-linearization control, against the baselines." },
+    { id: "edge", label: "Edge & co-adaptation", controls: [],
+      how: "Each optimizer's own step at its own state, from the kept checkpoints and the weights one step later (exact GN on 128 held-out sequences, top Ritz pairs from Lanczos 48). Lines: optimizer; solid 16M, dashed 4M, dotted 1M. The last chart is the 16M pre-flight for the exact-GN rate test: at PD's own states, each direction's best one-step decrease under the GN model (a²/2q, held-out)." },
+    { id: "steprule", label: "Step rule & floors", controls: [],
+      how: "What the Newton-trainer results measured, and where the preconditioners gain. Top: validation after switching the step rule at step 500 (1M): the greedy held-out line search gives the same trajectory whether the direction is Muon's or Newton's, while GN's direction at Muon's own step norms (normalized GN) sharpens the network. Middle: 16-step LR anneals at kept steps split the loss into the floor under the oscillation and the excess the LR maintains; step-equivalent speedup = Muon's step t over the steps an arm needs to reach Muon's loss at t. Bottom: one step along each direction at c times the trainer's step (held-out, hidden matrices only), GN's direction rescaled per matrix to the trainer's norms, by curvature set." },
+    { id: "batch", label: "Batch size", controls: [],
+      how: "Validation loss against tokens for the 1M-token-batch trajectories (solid) and the 4M-token batch-size study (dashed, one line per learning rate). Same 1.54B tokens." },
+  ];
+  const DEFAULT = { view: "curv", kind: "v", depth: "median", step: "500", runs: ["M", "PD", "S", "SPD"], gnstate: "" };
+  const INPUTS = { g1M: "fresh gradient, 1M tokens", g4M: "fresh gradient, 4M tokens", momentum: "next momentum M' = 0.95 M + g" };
+  const RUNNAME = { M: "Muon", PD: "PD α¼", S: "SOAP-Muon", SPD: "S∘PD" };
+  const shortKey = (k) => { const [arm, step] = k.split(":"); return `${RUNNAME[arm.split("_")[0]] || arm} @${step}`; };
+  let state = { ...DEFAULT };
+  try { const saved = JSON.parse(localStorage.getItem("gn-atlas") || "null"); if (saved) state = { ...DEFAULT, ...saved }; } catch (e) {}
+  const save = () => { try { localStorage.setItem("gn-atlas", JSON.stringify(state)); } catch (e) {} };
+
+  const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  const runColor = (r) => css(RUNVAR[r]);
+  const label = (r) => D.labels[r] || r;
+  const stepsOf = (run) => Object.keys((D.marg[run] || {})).map(Number).sort((a, b) => a - b);
+  const gapSteps = () => [...new Set(Object.values(D.gap).flatMap((s) => Object.keys(s).map(Number)))].sort((a, b) => a - b);
+
+  function layout(xTitle, yTitle, logx, logy, extra) {
+    const ink = css("--ink"), muted = css("--muted"), grid = css("--grid"), line = css("--line");
+    const axis = (title, log) => ({ title: { text: title, font: { size: 11, color: muted } }, type: log ? "log" : "linear",
+      gridcolor: grid, zerolinecolor: line, linecolor: line, tickfont: { size: 10, color: muted, family: "IBM Plex Mono, monospace" },
+      exponentformat: "power" });
+    return Object.assign({ paper_bgcolor: css("--panel"), plot_bgcolor: css("--panel"),
+      font: { family: "IBM Plex Sans, system-ui, sans-serif", color: ink, size: 11 },
+      margin: { l: 56, r: 10, t: 8, b: 42 }, xaxis: axis(xTitle, logx), yaxis: axis(yTitle, logy),
+      legend: { font: { size: 10 }, bgcolor: "rgba(0,0,0,0)", orientation: "h", y: -0.28 }, hovermode: "closest",
+      showlegend: true }, extra || {});
+  }
+  const config = { displayModeBar: false, responsive: true };
+
+  function card(title, sub) {
+    const el = document.createElement("div");
+    el.className = "card";
+    el.innerHTML = `<h3></h3><p class="sub"></p><div class="plot"></div>`;
+    el.querySelector("h3").textContent = title;
+    el.querySelector(".sub").textContent = sub || "";
+    document.getElementById("charts").appendChild(el);
+    return el.querySelector(".plot");
+  }
+  function empty(text) {
+    const el = document.createElement("p");
+    el.className = "empty"; el.textContent = text;
+    document.getElementById("charts").appendChild(el);
+  }
+  const names = (kind) => [1, 2, 3, 4, 5, 6, 7, 8].map((d) => `block${String(d).padStart(2, "0")}.${kind}`);
+  function median(arrays) {
+    return arrays[0].map((_, i) => { const v = arrays.map((a) => a[i]).filter((x) => x !== null && isFinite(x)).sort((a, b) => a - b);
+      return v.length ? v[Math.floor((v.length - 1) / 2)] : null; });
+  }
+  function pick(entry, kind, field) {
+    if (state.depth === "median") return median(names(kind).map((n) => entry[n][field]));
+    return entry[`block${String(state.depth).padStart(2, "0")}.${kind}`][field];
+  }
+  function scalar(entry, kind, field) {
+    if (state.depth === "median") { const v = names(kind).map((n) => entry[n][field]).filter((x) => x !== null).sort((a, b) => a - b);
+      return v[Math.floor((v.length - 1) / 2)]; }
+    return entry[`block${String(state.depth).padStart(2, "0")}.${kind}`][field];
+  }
+
+  const render = {
+    curv() {
+      const depthText = state.depth === "median" ? "median over 8 layers" : `layer ${state.depth}`;
+      state.runs.forEach((run) => {
+        if (!D.marg[run]) return;
+        const div = card(`${label(run)}: ${state.kind}`, depthText);
+        const steps = stepsOf(run);
+        const traces = steps.map((s, i) => { const e = D.marg[run][s];
+          const first = e[names(state.kind)[0]];
+          return { x: first.ri, y: pick(e, state.kind, "r"), name: `step ${s}`, mode: "lines",
+            line: { color: STEP_RAMP[Math.min(i, STEP_RAMP.length - 1)], width: 1.6 } }; });
+        traces.push({ x: [1, 2048], y: [1, 1], mode: "lines", line: { color: css("--muted"), dash: "dot", width: 1 }, showlegend: false, hoverinfo: "skip" });
+        Plotly.newPlot(div, traces, layout("eigenvector of C (rank)", "exact / K-FAC", true, true, { yaxis: { ...layout("", "", 0, 1).yaxis, title: { text: "exact / K-FAC", font: { size: 11, color: css("--muted") } }, type: "log", range: [-1.4, 1.4] } }), config);
+      });
+    },
+    train() {
+      const panels = [["md", "mean direction: exact / K-FAC", true], ["sc", "mean direction share of tr C", false],
+        ["a", "weight on C within sequence (a)", true], ["b", "weight on C sequence mean (b)", true], ["ns", "gradient noise scale (sequences)", true]];
+      panels.forEach(([field, title, logy]) => {
+        const div = card(`${title}`, `${state.kind}, ${state.depth === "median" ? "median over layers" : "layer " + state.depth}`);
+        const traces = state.runs.filter((r) => D.marg[r]).map((run) => { const steps = stepsOf(run);
+          return { x: steps, y: steps.map((s) => scalar(D.marg[run][s], state.kind, field)), name: label(run), mode: "lines+markers",
+            line: { color: runColor(run), width: 2 }, marker: { size: 5 } }; });
+        Plotly.newPlot(div, traces, layout("training step", title, true, logy), config);
+      });
+    },
+    gap() {
+      const step = state.step;
+      const panels = [["dec", "share of Newton decrement", true, true], ["bstar", "critical batch b* (sequences)", true, true],
+        ["eff", "effective step / ideal (shape)", true, true], ["over", "overshoot h·D² / (2·(−g·D))", true, true], ["cos", "cos(momentum, gradient)", true, false]];
+      const available = state.runs.filter((r) => D.gap[r] && D.gap[r][step] && D.gap[r][step][state.kind]);
+      if (!available.length) { empty(`No gap-map data at step ${step}.`); return; }
+      panels.forEach(([field, title, logx, logy]) => {
+        const div = card(title, `${state.kind}, step ${step}, all layers pooled`);
+        const traces = available.map((run) => { const g = D.gap[run][step][state.kind];
+          return { x: g.x, y: g[field], name: label(run), mode: "lines", line: { color: runColor(run), width: 2 }, connectgaps: false }; });
+        if (field === "bstar") traces.push({ x: [1e-12, 1e6], y: [2048, 2048], mode: "lines", line: { color: css("--muted"), dash: "dot", width: 1 }, name: "batch", hoverinfo: "skip" });
+        Plotly.newPlot(div, traces, layout("exact curvature of the direction", title, logx, logy), config);
+      });
+      const div = card("share of decrement reachable in one step, vs batch", `${state.kind}, step ${step}`);
+      const B = ["512", "2048", "8192", "32768", "131072"];
+      const traces = available.map((run) => ({ x: B.map((b) => Number(b) * 512 / 1e6), y: B.map((b) => D.gap[run][step][state.kind].reach[b]),
+        name: label(run), mode: "lines+markers", line: { color: runColor(run), width: 2 } }));
+      Plotly.newPlot(div, traces, layout("batch (M tokens)", "reachable share", true, false), config);
+    },
+    spec() {
+      state.runs.forEach((run) => {
+        if (!D.marg[run]) return;
+        [["ri", "lc", "C (input) eigenvalues / mean"], ["rb", "lb", "B (output) eigenvalues / mean"]].forEach(([xf, yf, title]) => {
+          const div = card(`${label(run)}: ${title}`, `${state.kind}, ${state.depth === "median" ? "median over layers" : "layer " + state.depth}`);
+          const steps = stepsOf(run);
+          const traces = steps.map((s, i) => { const e = D.marg[run][s];
+            return { x: e[names(state.kind)[0]][xf], y: pick(e, state.kind, yf), name: `step ${s}`, mode: "lines",
+              line: { color: STEP_RAMP[Math.min(i, STEP_RAMP.length - 1)], width: 1.6 } }; });
+          Plotly.newPlot(div, traces, layout("rank", "eigenvalue / mean", true, true), config);
+        });
+      });
+    },
+    gn() {
+      const st = D.gn[state.gnstate];
+      if (!st) { empty("No exact-GN data."); return; }
+      Object.entries(st).forEach(([source, e]) => {
+        const sc = e.scores, best = e.best, g = best.gnall || best.gn, ref = sc[g];
+        const rows = [["gd", "gradient"], ["gd@muon_norms", "gradient, Muon's per-matrix norms"], ["muon", "Muon"],
+          ["muon_p0.25", "Muon, spectrum ^ 1/4"], ["muon_p0.5", "Muon, spectrum ^ 1/2"], ["pd_a0.25", "PD α 1/4"], ["pd_a0.5", "PD α 1/2"],
+          ["pd_a0.75", "PD α 3/4"], ["pd_a1", "PD α 1"], ["pd_a0.5_p0.25", "PD α 1/2, spectrum ^ 1/4"], ["pd_a0.5_p0.5", "PD α 1/2, spectrum ^ 1/2"],
+          ["two_sided", "two-sided α 1/4 β 1/4"], [best.kfac, "K-FAC"], [best.ekfac, "EKFAC, exact diagonal"],
+          [`muon@${g}_norms`, "Muon's shape, GN's per-matrix norms"], [`${g}@muon_norms`, "GN's shape, Muon's per-matrix norms"],
+          [best.gnpow, "GN, fractional power"], [g, "exact GN"]].filter(([k]) => k && sc[k] !== undefined);
+        const div = card(INPUTS[source] || source, `exact GN: ${ref.toFixed(2)}e-3 (${g})`);
+        div.style.height = `${Math.max(300, 24 * rows.length + 60)}px`;
+        const color = (k) => k.startsWith("gd") ? css("--muted") : (k.startsWith("gn") || k.includes("@gn")) ? css("--pd") : css("--muon");
+        Plotly.newPlot(div, [{ type: "bar", orientation: "h", y: rows.map((r) => r[1]), x: rows.map(([k]) => sc[k] / ref),
+          marker: { color: rows.map(([k]) => color(k)) }, hovertemplate: "%{y}: %{x:.2f} of exact GN<extra></extra>" }],
+          layout("share of the exact-GN one-step decrease", "", false, false, { margin: { l: 210, r: 12, t: 8, b: 42 }, showlegend: false,
+            shapes: [{ type: "line", x0: 1, x1: 1, yref: "paper", y0: 0, y1: 1, line: { color: css("--muted"), dash: "dot", width: 1 } }] }), config);
+        const kinds = D.kinds.filter((k) => sc[`pd_a0.5+gn[${k}]`] !== undefined);
+        if (!kinds.length) return;
+        const div2 = card(`${INPUTS[source] || source}: which kind carries the within-matrix gap?`,
+          "PD α½ with one kind given GN's shape (at PD's norms), and GN with one kind given PD α½'s shape");
+        Plotly.newPlot(div2, [
+          { type: "bar", name: "PD α½, this kind from GN (÷ PD α½)", x: kinds, y: kinds.map((k) => sc[`pd_a0.5+gn[${k}]`] / sc["pd_a0.5"]), marker: { color: css("--pd") } },
+          { type: "bar", name: "GN, this kind from PD α½ (÷ GN)", x: kinds, y: kinds.map((k) => sc[`gn+pd_a0.5[${k}]`] / ref), marker: { color: css("--muon") } }],
+          layout("matrix kind", "ratio", false, false, { barmode: "group",
+            shapes: [{ type: "line", xref: "paper", x0: 0, x1: 1, y0: 1, y1: 1, line: { color: css("--muted"), dash: "dot", width: 1 } }] }), config);
+      });
+    },
+    lags() {
+      const classes = ["top 0.1%", "0.1-1%", "1-10%", "10-50%", "50-100%"];
+      const colors = ["#d4453b", "#e8883a", "#b5a632", "#3aa6b5", "#2f6cb3"];
+      const runs = ["M", "PD"].filter((r) => state.runs.includes(r) && D.lags[`${r}:${state.kind}`]);
+      if (!runs.length) { empty("Dense-lag data exist for Muon and PD only."); return; }
+      runs.forEach((run) => {
+        const e = D.lags[`${run}:${state.kind}`];
+        const div = card(`${label(run)}: ${state.kind}`, "gradient at step 501 vs the gradient lag steps later, by K-FAC curvature rank");
+        const traces = classes.map((c, i) => ({ x: e.lags, y: e[c], name: c, mode: "lines+markers", line: { color: colors[i], width: 1.5 },
+          marker: { size: 7, color: colors[i], symbol: e.lags.map((l) => (l % 2 ? "circle" : "circle-open")) } }));
+        traces.push({ x: [1, 31], y: [0, 0], mode: "lines", line: { color: css("--muted"), dash: "dot", width: 1 }, showlegend: false, hoverinfo: "skip" });
+        Plotly.newPlot(div, traces, layout("lag (steps)", "correlation", true, false,
+          { yaxis: { ...layout("", "", 0, 0).yaxis, title: { text: "correlation", font: { size: 11, color: css("--muted") } }, range: [-1, 1] } }), config);
+      });
+    },
+    coupling() {
+      const S = D.split, keys = Object.keys(S);
+      if (!keys.length) { empty("No coupling data."); return; }
+      const div = card("exact ÷ frame-diagonal GN curvature of the update's parts", "log scale; 1 = the pairs act independently");
+      const parts = ["stiff", "middle", "flat"];
+      const traces = parts.map((p, i) => ({ type: "bar", name: p, x: keys.map(shortKey), y: keys.map((k) => S[k].ratio_parts[i]) }));
+      traces.push({ type: "bar", name: "whole update", x: keys.map(shortKey), y: keys.map((k) => S[k].ratio_whole), marker: { color: css("--muted") } });
+      Plotly.newPlot(div, traces, layout("optimizer and step", "exact / diagonal", false, true, { barmode: "group" }), config);
+      const wrap = document.createElement("div"); wrap.className = "card tablewrap";
+      const f = (x, d) => (x === null || x === undefined ? "–" : x.toFixed(d));
+      wrap.innerHTML = `<h3>One step along the actual update (quadratic GN model, held-out sequences, loss change ×1e-3)</h3>
+        <table class="finals"><thead><tr><th>state</th><th>taken</th><th>best single scale</th><th>separate scales</th><th>scale the diagonal model predicts</th><th>corr s–m / s–f / m–f</th></tr></thead><tbody>${
+        keys.map((k) => { const e = S[k], c = e.corr;
+          return `<tr><td>${shortKey(k)}</td><td>${f(e.taken * 1e3, 2)}</td><td>${f(e.best_single * 1e3, 2)} at ${f(e.best_single_scale, 2)}</td><td>${
+            e.best_separate === null || e.best_separate === undefined ? "–" : `${f(e.best_separate * 1e3, 2)} at ${e.best_separate_scales.map((x) => f(x, 2)).join(" / ")}`}</td><td>${f(e.diag_best_scale, 1)}</td><td>${
+            [c[0][1], c[0][2], c[1][2]].map((x) => f(x, 2)).join(" / ")}</td></tr>`; }).join("")}</tbody></table>`;
+      document.getElementById("charts").appendChild(wrap);
+    },
+    blocks() {
+      const B = (D.blockgn || {}).blocks || {}, states = Object.keys(B);
+      if (!states.length) { empty("No block-GN data yet."); return; }
+      const fams = [["muon", "Muon"], ["pd_a0.5", "PD α½"], ["matrix", "GN per matrix"], ["gs_forward_layer", "GN Gauss-Seidel within layers"],
+        ["gs_reverse_all", "GN Gauss-Seidel, reverse order"], ["gs", "GN Gauss-Seidel"], ["layer", "GN per layer"],
+        ["kind", "GN per kind"], ["full", "full GN"]];
+      const div = card("share of the full-GN one-step decrease (cross-fitted)", "fresh 4M-token gradient");
+      const traces = states.map((st) => ({ type: "bar", name: st, x: fams.filter(([k]) => B[st][k] !== undefined).map((f) => f[1]),
+        y: fams.filter(([k]) => B[st][k] !== undefined).map(([k]) => B[st][k] / B[st].full) }));
+      Plotly.newPlot(div, traces, layout("direction", "share of full GN", false, false, { barmode: "group" }), config);
+      const S = (D.blockgn || {}).staged || {}, sstates = Object.keys(S);
+      if (sstates.length) {
+        const sf = [["muon", "Muon"], ["gsmuon", "staged Muon"], ["pd_a0.5", "PD α½"], ["gspd", "staged PD α½"]];
+        const div2 = card("staged (Gauss-Seidel) Muon and PD: one-step decrease (×1e-3, cross-fitted)",
+          "each matrix sees the gradient after the earlier matrices stepped; fresh gradient vs the optimizer's momentum");
+        const tr = sstates.map((st) => ({ type: "bar", name: st, x: sf.filter(([k]) => S[st][k] !== undefined).map((f) => f[1]),
+          y: sf.filter(([k]) => S[st][k] !== undefined).map(([k]) => S[st][k]) }));
+        Plotly.newPlot(div2, tr, layout("direction", "decrease ×1e-3", false, false, { barmode: "group" }), config);
+      }
+      const EL = D.eoslin || {}, lrows = Object.entries(EL);
+      if (lrows.length) {
+        const wrap2 = document.createElement("div"); wrap2.className = "card tablewrap";
+        wrap2.innerHTML = `<h3>Edge of each optimizer's linearized dynamics</h3><p class="sub">A weight perturbation follows heavy ball with preconditioner J = df/dM (the run's own map at the next momentum); stable iff LR μ(J G) < 2(1 + β) (Nesterov: 2(1 + β)/(1 + 2β)). Ratio 1 = at the edge.</p><table class="finals"><thead><tr><th>state</th><th>map</th><th>β</th><th>LR</th><th>top μ (J G)</th><th>LR μ_max</th><th>bound</th><th>ratio</th></tr></thead><tbody>${
+          lrows.map(([k, e]) => `<tr><td>${k}</td><td>${e.map}${e.nesterov ? ", Nesterov" : ""}</td><td>${e.beta}</td><td>${e.lr.toFixed(4)}</td><td>${e.mu_top.slice(0, 3).map((m) => m[0].toFixed(0)).join(", ")}</td><td>${e.invariant.toFixed(2)}</td><td>${e.threshold.toFixed(2)}</td><td>${e.ratio.toFixed(2)}</td></tr>`).join("")}</tbody></table>`;
+        document.getElementById("charts").appendChild(wrap2);
+      }
+      const E = D.eos || {}, rows = Object.entries(E);
+      if (!rows.length) return;
+      const wrap = document.createElement("div"); wrap.className = "card tablewrap";
+      wrap.innerHTML = `<h3>Edge of stability in each optimizer's coordinates</h3><table class="finals"><thead><tr><th>state</th><th>α</th><th>β</th><th>LR</th><th>s</th><th>λ_max</th><th>LR·s·λ_max</th></tr></thead><tbody>${
+        rows.map(([k, e]) => `<tr><td>${k}</td><td>${e.alpha}</td><td>${e.beta || 0}</td><td>${e.lr.toFixed(4)}</td><td>${e.s.toFixed(3)}</td><td>${e.top_ritz[0].toFixed(2)}</td><td>${e.invariant.toFixed(3)}</td></tr>`).join("")}</tbody></table>`;
+      document.getElementById("charts").appendChild(wrap);
+    },
+    momentum() {
+      const MP = D.midpoint || {}, mkeys = Object.keys(MP);
+      if (mkeys.length) {
+        const div = card("loss along each actual step, W_t + c (W_{t+1} − W_t), relative to c = 0",
+          "held-out loss, all parameters interpolated; a minimum near c = ½ means the step crosses the valley and lands on the far side (overshoot ≈ 2×)");
+        const ramp = { M: css("--muon"), PD: css("--pd"), S: css("--soap"), SPD: css("--spd"), TS: KIND_RAMP.v };
+        const traces = mkeys.filter((k) => !k.endsWith(":50")).map((k) => {
+          const e = MP[k], cs = ["-0.5", "0.0", "0.25", "0.5", "0.75", "1.0", "1.5"];
+          const run = k.split("_")[0], is4 = k.includes("_b4M_");
+          return { x: cs.map(Number), y: cs.map((c) => e.losses[c] - e.losses["0.0"]), name: k, mode: "lines+markers",
+            line: { color: ramp[run] || css("--muted"), width: is4 ? 1.2 : 1.8, dash: is4 ? "dash" : "solid" }, marker: { size: 4 } };
+        });
+        Plotly.newPlot(div, traces, layout("c (fraction of the step)", "loss − loss(W_t)", false, false,
+          { legend: { font: { size: 8 }, orientation: "v", x: 1.02, y: 1 }, margin: { l: 56, r: 260, t: 8, b: 42 } }), config);
+      }
+      const T = D.transport || {}, states = Object.keys(T);
+      if (!states.length) { empty("No transport results yet."); return; }
+      const f = (x, d) => (x === null || x === undefined ? "–" : x.toFixed(d));
+      states.forEach((st) => {
+        const e = T[st], cols = [...D.kinds, "total"];
+        const wrap = document.createElement("div"); wrap.className = "card tablewrap";
+        wrap.innerHTML = `<h3>${st}: staleness and its curvature prediction</h3><p class="sub">|M − M*| / |M| = ${f(e.norm_ratio, 3)}; cos(M, M*) = ${f(e.cos_M_Mstar, 3)}; replay check: loss ${f(e.check[0], 5)} vs logged ${f(e.check[1], 5)}</p>
+          <table class="finals"><thead><tr><th>prediction of β(M − M*): cos / s*</th>${cols.map((k) => `<th>${k}</th>`).join("")}</tr></thead><tbody>${
+          Object.entries(e.totals).map(([name, g]) => `<tr><td>−${name} Q</td>${cols.map((k) => `<td>${f(g[k].cos, 2)} / ${f(g[k].s_star, 2)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+        document.getElementById("charts").appendChild(wrap);
+        const panels = [["snr", "signal-to-noise of one 1M-token batch", true, null], ["gain_M", "gain on the current gradient: M solid, M* dotted", false, "gain_Mstar"],
+          ["stale", "stale fraction |β(M − M*)|² / |βM|²", false, null], ["cos_G", "cos(β(M − M*), −G Q) solid, −H Q dotted", false, "cos_H"]];
+        panels.forEach(([field, title, logy, second]) => {
+          const div = card(`${st}: ${title}`, "Kronecker-frame pairs binned by exact GN diagonal h; one line per matrix kind, heavy line = all");
+          const traces = [];
+          [...D.kinds, "all"].forEach((k) => {
+            const color = k === "all" ? css("--ink") : KIND_RAMP[k], width = k === "all" ? 2.6 : 1.4;
+            traces.push({ x: e.centers, y: e.kinds[k][field], name: k, mode: "lines", line: { color, width } });
+            if (second) traces.push({ x: e.centers, y: e.kinds[k][second], name: `${k}, ${second}`, mode: "lines", showlegend: false,
+              line: { color, width: width * 0.8, dash: "dot" } });
+          });
+          Plotly.newPlot(div, traces, layout("exact per-pair GN diagonal h", title.split(":")[0], true, logy), config);
+        });
+        if (e.ritz && e.ritz.values) {
+          const div = card(`${st}: projections on the top exact GN eigenvectors`,
+            "grey: expected fresh momentum ḡ Σβ^k from the replay mean (error bar ±1 sd of one batch's projection); green: stale-free M*; red: saved momentum M");
+          const x = e.ritz.values.map((v, i) => `${i + 1} (λ ${v.toFixed(1)})`);
+          const traces = [
+            { type: "bar", name: "ḡ Σβ^k", x, y: e.ritz.gbar, marker: { color: css("--muted") }, error_y: { type: "data", array: e.ritz.noise_sd, visible: true } },
+            { type: "bar", name: "M*", x, y: e.ritz.Mstar, marker: { color: KIND_RAMP.v } },
+            { type: "bar", name: "M", x, y: e.ritz.M, marker: { color: KIND_RAMP.o } }];
+          Plotly.newPlot(div, traces, layout("eigenvector (by eigenvalue)", "projection", false, false, { barmode: "group" }), config);
+        }
+        const O = e.one_step || {}, inputs = Object.keys(O);
+        if (inputs.length) {
+          const fams = [["gd", "GD"], ["muon", "Muon"], ["pd_a0.25", "PD α¼"], ["pd_a0.5", "PD α½"], ["gn", "damped GN (Krylov 48)"]];
+          const div = card(`${st}: one step from each input (held-out, cross-fitted, ×1e-3)`,
+            "g1M: fresh 1M gradient; M': next momentum; M*': stale-free next momentum; M' + X Q: transported; replay_mean: current gradient over the replayed batches");
+          const traces = fams.map(([k, name]) => ({ type: "bar", name, x: inputs, y: inputs.map((i) => O[i][k]) }));
+          Plotly.newPlot(div, traces, layout("input", "decrease ×1e-3", false, false, { barmode: "group" }), config);
+        }
+      });
+    },
+    gap2gn() {
+      const G = D.gap2gn || {};
+      const A = G.anneal || {}, anames = Object.keys(A);
+      if (anames.length) {
+        const div = card("held-out loss during a 16-step LR anneal from a kept state", "k = 0 is the branch point; the drop is the loss the LR maintains (plus ~16 steps of normal progress)");
+        const traces = anames.map((n) => ({ x: A[n].loss.map((_, i) => i), y: A[n].loss.map((v) => v - A[n].loss[0]), name: n, mode: "lines+markers", marker: { size: 4 } }));
+        Plotly.newPlot(div, traces, layout("anneal step k", "held-out loss − loss at k = 0", false, false, { legend: { font: { size: 9 }, orientation: "v", x: 1.02, y: 1 }, margin: { l: 56, r: 220, t: 8, b: 42 } }), config);
+      }
+      const R = G.rescore || {}, rnames = Object.keys(R);
+      if (rnames.length) {
+        const maps = [["muon", "Muon"], ["pd_a0.25", "PD α¼"], ["pd_a0.5", "PD α½"], ["two_sided", "two-sided"], ["kfac", "K-FAC"], ["ekfac", "EKFAC"], ["gd", "GD"]];
+        const div = card("one-step decrease as a share of damped exact GN", "state and fresh-gradient size; 'a…' = after the anneal (valley floor); cross-fitted on held-out sequences");
+        const traces = maps.filter(([k]) => rnames.some((n) => R[n][k] !== undefined)).map(([k, name]) => ({ type: "bar", name,
+          x: rnames, y: rnames.map((n) => (R[n][k] !== undefined ? R[n][k] / R[n].gn : null)) }));
+        Plotly.newPlot(div, traces, layout("state · gradient", "share of GN", false, false, { barmode: "group" }), config);
+        const wrap = document.createElement("div"); wrap.className = "card tablewrap";
+        wrap.innerHTML = `<h3>GN's one-step decrease and the stiff part (×1e-3)</h3><table class="finals"><thead><tr><th>state · gradient</th><th>GN</th><th>PD α½</th><th>Muon</th><th>Newton decrement in the top-16 GN modes</th></tr></thead><tbody>${
+          rnames.map((n) => `<tr><td>${n}</td><td>${R[n].gn.toFixed(2)}</td><td>${(R[n]["pd_a0.5"] || 0).toFixed(2)}</td><td>${(R[n].muon || 0).toFixed(2)}</td><td>${R[n].stiff16.toFixed(2)}</td></tr>`).join("")}</tbody></table>`;
+        document.getElementById("charts").appendChild(wrap);
+      }
+      const TR = G.trainer || {}, tnames = Object.keys(TR), B = G.baseline || {};
+      if (tnames.length) {
+        const div = card("validation loss: GN trainer and control vs the baselines", "GN runs start from Muon's 1M state at step 100 (same data order); dashed = baselines");
+        const traces = tnames.map((n) => ({ x: TR[n].map((r) => r[0]), y: TR[n].map((r) => r[1]), name: n, mode: "lines+markers", marker: { size: 4 } }));
+        Object.entries(B).forEach(([n, rows]) => traces.push({ x: rows.map((r) => r[0]), y: rows.map((r) => r[1]), name: n, mode: "lines",
+          line: { dash: "dash", width: 1.4, color: n.startsWith("Muon") ? css("--muon") : css("--pd") } }));
+        const steps = tnames.flatMap((n) => TR[n].map((r) => r[0]));
+        const lo = Math.min(...steps) - 5, hi = Math.max(...steps) + 20;
+        Plotly.newPlot(div, traces, layout("step", "validation loss", false, false, { xaxis: { ...layout("", "", 0, 0).xaxis, title: { text: "step", font: { size: 11, color: css("--muted") } }, range: [lo, hi] },
+          legend: { font: { size: 9 }, orientation: "v", x: 1.02, y: 1 }, margin: { l: 56, r: 220, t: 8, b: 42 } }), config);
+      }
+      if (!anames.length && !rnames.length && !tnames.length) empty("No gap-to-GN data yet.");
+    },
+    principles() {
+      const items = [
+        ["The realized gains come from the geometry of a normalized update, not from Newton-type step sizes.",
+         "The winners keep the polar (unit-singular-value) step and improve the coordinates it acts in: input whitening from forward statistics (PD), plus normalization of the gradient's own signal magnitudes in its output-side eigenbasis (SOAP). Greedy/line-searched Newton steps lose because of the step rule (greedy Muon ≈ greedy Newton). GN's direction at a fixed step norm also lost; corrected 2026-09-28: not because it sharpens the network (the winning whitening maps sharpen it 30–400× and train better), but because the per-step GN direction is dominated by its curvature sample. (Step rule & floors; Edge & co-adaptation)"],
+        ["The gain grows with batch size and through training.",
+         "Step-equivalent speedup over Muon at matched loss: ~1.2× at 1M, 1.27–1.36× at 4M, 1.34–1.37× at 16M (loss 4.6–4.4); two seeds and two LRs at 16M agree. Loss gaps mislead in both directions (flat curves shrink them, steep curves inflate them). (Step rule & floors: matched-loss chart)"],
+        ["On the output side at large batch, gradient statistics beat GN curvature.",
+         "SOAP's output-side normalization carries 68–79% of its gain on PD; the GN output factor adds nothing at 16M; the two are substitutes, and SOAP's second-moment source does not matter at ≥ 4M. Per-entry SNR is high for 95–100% of the signal energy in every frame, so the mechanism is sign-like equalization of uneven signal magnitudes, not SNR weighting. (Step rule & floors: SNR chart, 16M table)"],
+        ["A state is co-adapted to its optimizer.",
+         "Each optimizer's own step is neutral at c = 1 and best at c ≈ ½; another direction at the same norm meets curvature the dynamics never regulated. One-step scores at a state measure what that state's optimizer left unexploited, not a rate; better geometries harvest it once. (Step rule & floors: one-step curves, floor steps)"],
+        ["Exact GN geometry is the largest one-step prize at valley floors, but not a per-step rate at large batch.",
+         "PD in the exact GN geometry is ~2× PD and 1.2–1.4× damped GN at valley floors (true loss), and in training it gave a front-loaded one-time gain. At 16M, at PD's own states, the per-step exact-GN direction depends on its curvature sample (cosine 0.15–0.40 between disjoint samples) and reaches only 0.5–0.8× the Kronecker map's best one-step decrease. The estimable curvature is the Kronecker bulk; what remains after Kronecker whitening is a stiff band that the optimizers must keep regulating. (Edge & co-adaptation: pre-flight)"],
+        ["Every optimizer runs at the edge of its own geometry, and carves its own landscape.",
+         "Across 1M, 4M and 16M, each optimizer's own step sits at 0.45–0.94 of its GN-optimal length (converging to 0.55–0.65). The network sharpens where the optimizer does not step: λ_max at own states is ~5–25 for Muon, ~100–600 for PD, ~500–2250 for S∘PD and TS, mirroring the step's stiff energy (1e-3, 1e-5, 1e-6). At large batch the gradient is mostly a period-2 oscillation of those stiff directions; one-step measures at own states do not rank the optimizers, and the speedups accumulate along the trajectory. (Edge & co-adaptation)"],
+        ["At large batch the momentum's time constant is a first-order lever for the whitening methods, and the edge oscillation is feedback, not noise.",
+         "At 16M, β 0.9 → 0.7–0.8 gains PD −0.124 and S∘PD −0.10 at 1× (two seeds; 4.469 the best 16M result) but Muon nothing once clipping is controlled (+0.003 with every gradient normalized). It is a phase effect: at 2× horizon the lead peaks at ~0.09 mid-run and β 0.9 catches up late (−0.010 at the end), so the optimal window is short early and long late. Spatial (whitening) and temporal (momentum) filtering of the edge oscillation substitute: the β 0.8 gain grows with whitening strength (Muon −0.02, PD α¼ −0.086, PD α½ −0.124). A momentum warmup β 0.8 → 0.9 keeps part of the early lead: −0.021, −0.024 and −0.027 at 2× horizon (S∘PD two seeds, PD), each against its own constant β 0.9. A two-tap filter that delays the stiff directions' restoring force costs Muon +0.60, PD +0.19, S∘PD +0.09, in the order of how much each steps in those directions. Withdrawn after review: the per-band claim that the flattest curvature band is under-stepped 1.3–29× (with 48 Lanczos nodes that band is a single node). (Edge & co-adaptation) Update 2026-09-28 21:52 CDT: the warmup replicates at 4M (PD −0.013, S∘PD −0.009 vs β 0.9; five of five pairs), and the 4M ladder is steep (β 0.95 → 0.9 alone −0.033/−0.035). But every pair is against β 0.9, not the best constant, and the LR warmup is fixed in tokens (3 steps at 16M); constant-β and schedule controls are running. Candidate law (review): 1 − β* ∝ (q/r)^⅓, the momentum-error bound for normalized updates (drift q against noise r at the run's batch). Anchored at 1M it gives 0.90 at 4M, 0.79 at 16M and the warmup's shape within the 4M run, and it predicts β ≈ 0.45 early at 16M (being tested). Withdrawn: reading the buffer's white-noise estimate as a signal/noise split, and tail statistics as overshoot (closed loop, basis leakage)."],
+        ["PD's tail amplification is limited by the gradient's signal-to-noise; a measured SNR gate switches it on and off.",
+         "At the same α ½, hardware and seed, PD − PD-top is −0.056 at 16M, −0.007 at 4M and +0.010 … +0.012 at 1M (three GPU types): amplifying the weak input directions pays only while their gradient carries signal at the run's batch. An SNR gate (tail factor min(1, f) + max(0, f − 1)·w, w = SNR/(1+SNR) per log-eigenvalue bin, noise from the spread of the data-parallel ranks' gradients) beats both PD (−0.018) and PD-top (−0.005) at 1M on one GPU type, and reproduces PD at 16M (+0.0006; w ≥ 0.95). Its tail SNR falls from ~80 to ~0.4 over the first 300 steps at 1M, exactly when PD-top overtakes PD. Not calibrated: at α ¼ it cuts useful amplification (+0.004 vs PD α ¼), and the best 1M configuration is still PD α ¼. (Interventions)"],
+        ["The edge of stability is collective: each layer's step undershoots, all of them together overshoot.",
+         "Advancing only one matrix to its next weights keeps its gradient direction (autocorrelation ≥ 0.96) and removes 7–38% of its energy; one layer's six matrices remove 35–70% and still keep the direction; the flip along the high-variance inputs (−0.2 … −0.44 at 4M/16M, Muon and PD) appears only when all layers move. Every layer's step reduces the same function-space error, so their sum overshoots about 2× — the dynamic face of the per-matrix methods' 8–17× coherence. Late at 1M the joint step decorrelates the top (+0.12) without flipping it: noise-limited there, not edge-limited."],
+        ["Structure of the actual step across directions and matrices (revised after review, 2026-09-29 03:46).",
+         "Descriptive: the collective secant multiplier c* = −⟨μ_N, D⟩/⟨μ_N+1 − μ_N, D⟩ departs from ½ early in the weak input directions (more for Muon at large batch) and approaches ½ with training for every optimizer; every per-matrix method's 48 pieces move the output in positively correlated ways (mean pairwise ρ̄ 0.15–0.46, one leading mode), while exact GN's pieces from the same input are near zero or negative. Withdrawn after review: c* ≈ ½ is what any stationary process gives (E[a + q/2] = 0), not the edge of stability or evidence of correct step sizes; '~90% interactions' is 1 + 47ρ̄ arithmetic; GN's low coherence is partly algebraic and was measured in-sample, and coherence does not track one-step quality — so 'GN orthogonalizes across matrices, that is the gap' is withdrawn. Staging the optimizers' maps across matrices: its sign is set by the momentum's stale share (1M: pays with fresh input, loses on the momentum); the 16M PD-state numbers used an unclipped gradient (bug) and are withdrawn; true-loss and clipped-momentum checks are pending. (Edge & co-adaptation: secant and coupling charts)"],
+        ["A step closer to second order gains, then loses: coordination lets sharpness run away.",
+         "Coordinating each layer's step with the earlier layers' output change (layer-staged PD: 8 GN products per step on 32 curvature sequences per rank, in the run's own harness at 16M) removes the collective overshoot: each step leaves a third of the gradient behind and the lead grows to 4–4.5 steps over steps 46–60. The same steps stop the network from flattening: plain PD's oscillating dynamics take the top GN eigenvalue from 615 to ~230, the coordinated branch stays at 1100–1500, jumps to ~6000 between steps 70 and 80 at full LR, and its progress stalls (lead 2.6 steps at 75, −0.1 at 80; final +0.07 … +0.12 in two runs). An abrupt switch to plain PD at the scheduled LR catapults (gradient norm 9.7 / 18.4 against ~3) and the loss is never recovered (+0.047 switched at 30, +0.059 at 50). In step units this is the only lead in the study that fades: the momentum warmup, β 0.8, S∘PD and PD leads hold or grow through the constant phase and survive their cooldowns; their loss gaps shrink only because the curves flatten. Withdrawn after review (07:37): 'a sharp state only the coordinated step can hold' and 'not portable progress' (only the abrupt exit was tested); the jump is not at the cooldown. Running: a gentle exit, and coordination restricted to the above-mean input band or to the bulk. (Edge & co-adaptation: staged charts)"],
+        ["Per-layer optimizers double-count a collective mode in the dominant input directions; removing it there pays at large batch, and composes with a fresh momentum.",
+         "PD's eight layer steps add up in output space: the step's GN curvature is 3.5–5.6× the sum of the layers' own (16M @46). Coordinating each layer's step with the earlier layers' output change (layer-staged PD) with normalized per-layer steps cannot shrink a satisfied layer's step, so it rotates later layers into undoing earlier ones: with the whole correction the layers nearly cancel (in-sample coherence 0.02–0.06) and the held-out first-order gain falls to a third; its lead fades at full LR with or without a runaway, and neither 8× curvature data (+0.130) nor half strength (+0.017) rescues it (+0.115 at 32 sequences). Keeping the correction only on each matrix's above-mean input directions (10–15% of the directions, ~85% of the input variance, where every layer reads the same dominant residual directions) removes most of the overshoot (coherence 0.4) while the direction stays close to plain PD's (cosine 0.9): a lead that grows to 12 steps and a final −0.152 at 16M (4.5295; real-trainer S∘PD at the same β: 4.5742), −0.076 over the 2× horizon, −0.008 at 4M; the 8 largest input directions give −0.116 at a third of the sharpening, the input mean alone −0.054. The review's decisive test (13:17: was it only compensating the badly mistuned β 0.9?) came out positive: at β 0.8 the band reaches 4.3728, −0.195 against its harness control and −0.175 against the real PD β 0.8 run — coordination and a fresh momentum compound; and with S∘PD at β 0.8 it reaches 4.3233 (−0.177 against its harness control, −0.149 against the real run; the previous best at 16M was 4.4691) — SOAP's output equalization and cross-layer coordination compound too. At the 16M dose, 4M gains −0.022 (−0.008 at double dose): in steps ~6% of the run against ~13–16% at 16M. Harness controls drift up to ±0.04 from the real runs. The second review's decisive controls (16:23) settled what the gain needs: keeping only each matrix's per-matrix reversal of its own band momentum ends +0.110 against the S∘PD control, and computing the corrections from the earlier blocks' plain steps (Jacobi) ends +0.027 — so the off-axis, cross-layer direction and the sequential Gauss-Seidel structure are both necessary. Why the dominant band: from block 1 on, every residual-reading matrix takes its high-variance inputs from nearly the same few residual-stream directions (top-8 input subspace overlap 0.79–0.96 between adjacent blocks, 0.93–0.99 between a block's attention and MLP inputs), so per-matrix steps along them add up across layers. Over the 2× horizon with S∘PD at β 0.8 the gain holds: 3.8873 against its harness control's 3.9824 (−0.095) and the real run's 3.9740 (the previous best at 2× was 3.9628), with a step lead of ~32 steps at step 140 and no runaway. The batch ladder is complete: 1M 0.000, 4M −0.022, 16M −0.15 … −0.19 (dose-matched) — the collective overshoot is similar at every batch, but only at large batch does one step's push outweigh the later layers' own long-averaged gradient in the shared directions. Toward the full sweep: finer stages in computation order (q/k/v, o, up, down) reach 4.2827 at 16M (−0.218) and 3.8679 at 2× (−0.114), and they rescue even the whole correction (sublayer −0.172 vs layer −0.011); a per-matrix sweep saturates at the sublayer level; the reversed sweep keeps 68%; 4× fewer curvature sequences keep 42%. From initialization over the whole 16M schedule, S∘PD β 0.8 with the sublayer band sweep reaches 4.2770 against its own harness control's 4.4845 (−0.208; that control is within 0.012 of the real run), a 1.24× step-equivalent speedup; over the 2× horizon from initialization it reaches 3.8535 against 3.9772 (−0.124; control within 0.003 of the real run), 1.37× at step 120. Made cheap: with 8 curvature sequences per rank and an EMA of the input covariance (hence PD's root and the band), the run from initialization reaches 4.2667 (−0.218), at 12% instead of 34% overhead in the harness step; without the EMA, 8 sequences keep only −0.079 — the slow statistics need time-averaging, the cross-layer products do not need a large sample. Against a matched control that uses the same time-averaged root (4.4440), the cheap version's coordination effect is −0.177 (the averaged root itself is worth ~−0.04); over the 2× horizon the cheap version reaches 3.8672. (Edge & co-adaptation: coordination charts and ledger)"],
+        ["Measurement hygiene that changed conclusions.",
+         "Fixed held-out sets and greedy line searches throttle any direction; smoothed step rules lag after large steps; the stored oscillation excess must be separated from the floor; Krylov-approximated matrix functions understate geometries; model decreases need true-loss checks."],
+      ];
+      const wrap = document.createElement("div"); wrap.className = "card tablewrap";
+      wrap.innerHTML = `<h3>Principles so far</h3><ol style="line-height:1.5;padding-left:1.2em">${items.map(([h, b]) => `<li style="margin-bottom:0.8em"><b>${h}</b><br><span style="color:var(--muted)">${b}</span></li>`).join("")}</ol>`;
+      document.getElementById("charts").appendChild(wrap);
+    },
+    edge() {
+      const E = D.edge || {};
+      const rows = E.profile || [];
+      if (!rows.length) { empty("No step profiles yet."); return; }
+      const OPTCOL = { "Muon": css("--muon"), "PD": css("--pd"), "SOAP∘Muon": css("--soap"), "S∘PD": css("--spd"),
+                       "TS": "#3a9d5a", "S_left∘PD": "#e0843a", "S_right∘PD": "#8a6fd6" };
+      const DASH = { "16M": "solid", "4M": "dash", "1M": "dot" }, SYM = { "16M": "circle", "4M": "square", "1M": "triangle-up" };
+      const groups = {};
+      rows.forEach((r) => { const k = `${r.opt} ${r.batch}`; (groups[k] = groups[k] || []).push(r); });
+      const wideLegend = { legend: { font: { size: 9 }, orientation: "v", x: 1.02, y: 1 }, margin: { l: 56, r: 150, t: 8, b: 42 } };
+      const chart = (title, sub, field, ytitle, logy, extraTraces) => {
+        const div = card(title, sub);
+        const traces = Object.entries(groups).map(([k, rs]) => { rs = [...rs].sort((a, b) => a.frac - b.frac);
+          const [opt, batch] = [rs[0].opt, rs[0].batch];
+          return { x: rs.map((r) => r.frac), y: rs.map((r) => r[field]), name: k, mode: "lines+markers",
+            line: { color: OPTCOL[opt] || css("--ink"), dash: DASH[batch], width: 1.6 }, marker: { symbol: SYM[batch], size: 7 },
+            text: rs.map((r) => `${k} @${r.step}`), hovertemplate: "%{text}: %{y:.3g}<extra></extra>" }; });
+        Plotly.newPlot(div, traces.concat(extraTraces || []), layout("fraction of training", ytitle, false, logy, wideLegend), config);
+      };
+      chart("the network sharpens where the optimizer does not step", "top GN eigenvalue at each optimizer's own state: Muon, then PD / SOAP∘Muon, then S∘PD / TS, at every batch size", "lmax", "λ_max of G", true);
+      chart("every optimizer runs at the edge of its own geometry", "c* = −a/q of the optimizer's own step (1 = the GN model's optimal length; ½ = twice it)", "cstar", "c*", false,
+        [{ x: [0, 1], y: [1, 1], mode: "lines", line: { color: css("--muted"), width: 1 }, showlegend: false, hoverinfo: "skip" }]);
+      chart("how much of the step lives in the stiffest directions", "share of the own step's energy in the top 16 GN eigenvectors: mirrors the sharpness bands", "energy16", "energy share", true);
+      chart("large batch: the gradient oscillates along the stiff directions", "median ratio of the gradient's projection on the top 4 GN eigenvectors after / before the step (−1 = a clean period-2 flip)", "flip", "after / before", false,
+        [{ x: [0, 1], y: [0, 0], mode: "lines", line: { color: css("--muted"), width: 1 }, showlegend: false, hoverinfo: "skip" }]);
+      const B = E.bands || [];
+      if (B.length) {
+        const centers = [3e-5, 3e-4, 3e-3, 3e-2, 3e-1];
+        ["16M", "4M", "1M"].forEach((batch) => {
+          const rowsB = B.filter((r) => r.batch === batch);
+          if (!rowsB.length) return;
+          const steps = [...new Set(rowsB.map((r) => r.step))].sort((a, b) => a - b);
+          const mid = steps[Math.floor(steps.length / 2)];
+          const div = card(`${batch} @${mid}: c* of the own step in each curvature band`,
+            "caution (review, 13:50): with 48 Lanczos nodes the lowest band is a single node, the residual after the stiff Krylov directions; its c* > 1 is not a band property");
+          const traces = rowsB.filter((r) => r.step === mid).map((r) => ({ x: centers, y: r.cstar, name: r.opt, mode: "lines+markers",
+            line: { color: OPTCOL[r.opt.replace(" β0.8", "")] || css("--ink"), dash: r.opt.includes("β0.8") ? "dash" : "solid" } }));
+          traces.push({ x: [1e-5, 1], y: [1, 1], mode: "lines", line: { color: css("--muted"), width: 1 }, showlegend: false, hoverinfo: "skip" });
+          Plotly.newPlot(div, traces, layout("band curvature / λ_max", "c* in the band", true, true, wideLegend), config);
+        });
+        const div = card("share of the own step's slope from the lowest Lanczos node (< 1e-4·λ_max)", "the residual after the stiff Krylov directions; its ordering (Muon lowest) survives the review, the band reading does not");
+        const groupsB = {};
+        B.forEach((r) => { const k = `${r.opt} ${r.batch}`; (groupsB[k] = groupsB[k] || []).push(r); });
+        const TOTAL = { "16M": 92, "4M": 368, "1M": 1468 };
+        const traces = Object.entries(groupsB).map(([k, rs]) => { rs = [...rs].sort((a, b) => a.step - b.step);
+          return { x: rs.map((r) => r.step / TOTAL[r.batch]), y: rs.map((r) => r.share[0]), name: k, mode: "lines+markers",
+            line: { color: OPTCOL[rs[0].opt.replace(" β0.8", "")] || css("--ink"), dash: DASH[rs[0].batch] }, marker: { symbol: SYM[rs[0].batch], size: 7 } }; });
+        Plotly.newPlot(div, traces, layout("fraction of training", "slope share", false, false, wideLegend), config);
+      }
+      const PH = E.phase || {};
+      if (Object.keys(PH).length) {
+        const div = card("the fresher momentum is a phase effect: β 0.8 minus β 0.9 along training",
+          "smoothed training loss on unseen data; the whitening methods lead by ~0.07–0.1 over the first ~100–150 steps at 4M and 16M, Muon does not; later a longer average catches up (2× horizon, 4M)");
+        const traces = Object.entries(PH).map(([label, rows]) => ({ x: rows.map((r) => r[0]), y: rows.map((r) => r[1]), name: label, mode: "lines",
+          line: { color: label.startsWith("Muon") ? css("--muon") : label.startsWith("PD") ? css("--pd") : css("--spd"),
+                  dash: label.includes("4M") ? "longdash" : label.includes("2×") ? (label.includes("warmup") ? "dashdot" : "dash") : (label.includes("clip") || label.includes("260926") || label.includes("α¼") ? "dot" : "solid"),
+                  width: label.includes("warmup") ? 2.5 : 1.6 } }));
+        traces.push({ x: [0, 368], y: [0, 0], mode: "lines", line: { color: css("--muted"), width: 1 }, showlegend: false, hoverinfo: "skip" });
+        Plotly.newPlot(div, traces, layout("step (16M tokens each)", "loss difference, β 0.8 − β 0.9", false, false, wideLegend), config);
+      }
+      const SE = E.secant || {};
+      if (SE.states && Object.keys(SE.states).length) {
+        const ref = (y, color) => ({ x: [1e-3, 100], y: [y, y], mode: "lines", line: { color, width: 1, dash: "dot" }, showlegend: false, hoverinfo: "skip" });
+        const div = card("the collective step multiplier per input direction",
+          "c* = −⟨μ_N, D⟩ / ⟨μ_N+1 − μ_N, D⟩ for the actual step D, per input-eigenvalue bin (collective: all matrices stepped). ½ = the step's first-order gain and curvature cost balance, which any stationary process gives (review 03:46); 1 = secant-optimal length. Early states depart from ½ in the weak inputs, most for Muon at large batch");
+        const order = ["PD16M_9", "PD16M_46", "PD16M_83", "PD4M_37", "PD4M_183", "PD4M_330", "PD1M_50", "PD1M_200", "PD1M_900", "M16M_46", "M1M_900"];
+        const traces = order.filter((t) => SE.states[t]).map((t, i) => ({ x: SE.states[t].u, y: SE.states[t].c, name: `${t} (${SE.states[t].all.toFixed(2)})`, mode: "lines+markers",
+          line: { color: t.startsWith("M") ? css("--muon") : css("--pd"), dash: t.includes("16M") ? "solid" : t.includes("4M") ? "dash" : "dot", width: 1.4 }, marker: { size: 5 } }));
+        Plotly.newPlot(div, traces.concat([ref(0.5, "#c0392b"), ref(1, "#888")]), layout("input eigenvalue / mean (u)", "c*", true, true, wideLegend), config);
+        const TL = SE.timelapse || {};
+        [["M", "Muon"], ["S", "SOAP∘Muon"], ["PD", "PD α ¼"], ["SPD", "S∘PD α ¼"]].forEach(([tag, label]) => {
+          const steps = [10, 50, 100, 200, 500, 900, 1300].filter((st) => TL[`${tag}1M_${st}`]);
+          if (!steps.length) return;
+          const d2 = card(`${label}, 1M: the multiplier over training`, "c* per input direction at steps 10 … 1300: early states depart from ½ in the weak directions, all approach ½ with training (a stationary balance, not a sizing verdict)");
+          const tr = steps.map((st, k) => { const r = TL[`${tag}1M_${st}`]; return { x: r.u, y: r.c, name: `@${st} (${r.all.toFixed(2)})`, mode: "lines+markers",
+            line: { color: `hsl(${260 - 220 * k / Math.max(1, steps.length - 1)}, 70%, 45%)`, width: 1.4 }, marker: { size: 4 } }; });
+          Plotly.newPlot(d2, tr.concat([ref(0.5, "#c0392b"), ref(1, "#888")]), layout("u", "c*", true, true, wideLegend), config);
+        });
+        const TS2 = SE.twosided || {};
+        ["M16M_46", "PD16M_46", "SPD16M_46", "TS16M_46", "M1M_900", "PD1M_900"].filter((t) => TS2[t]).forEach((t) => {
+          const g = TS2[t];
+          const z = g.c.map((row, i) => row.map((c, j) => (g.energy[i][j] >= 0.002 && c > 0) ? Math.log2(c / 0.5) : null));
+          const text = g.c.map((row, i) => row.map((c, j) => (g.energy[i][j] >= 0.002 && c !== null) ? `c* ${c.toFixed(2)}<br>${(100 * g.energy[i][j]).toFixed(0)}% of step<br>${(100 * g.gain[i][j]).toFixed(0)}% of gain` : ""));
+          const d3 = card(`${t}: two-sided secant map (c* ${g.all.toFixed(2)})`, "rows: output directions (GN output factor B, decade bins); columns: input directions (C). Colour log2(c*/½): white = ½ (stationary balance), red = c* > ½. Hover: share of the step and of the first-order gain");
+          Plotly.newPlot(d3, [{ type: "heatmap", z, text, hoverinfo: "text", x: g.labels, y: g.labels, colorscale: "RdBu", reversescale: true, zmin: -2, zmax: 2, showscale: false }],
+            layout("input bin (C eig / mean)", "output bin (B eig / mean)", false, false, { margin: { l: 70, r: 20, t: 8, b: 70 } }), config);
+        });
+      }
+      const CP = E.coupling || {};
+      if (Object.keys(CP).length) {
+        const tags = ["M16M_46", "PD16M_46", "SPD16M_46", "TS16M_46", "M16M_83", "PD16M_83", "SPD16M_83", "TS16M_83", "M4M_183", "PD4M_183", "SPD4M_183", "M1M_100", "PD1M_100", "M1M_200", "PD1M_200", "M1M_900", "PD1M_900", "SPD1M_900", "S1M_900"].filter((t) => CP[t]);
+        const div = card("how a step's GN curvature splits over pairs of matrices",
+          "exact GN curvature of the actual step split into pairs of the 48 hidden matrices; line: coherence Σ Q / trace Q, which is ≈ 1 + 47 × the mean pairwise correlation of the pieces' output changes (review 03:46); exact GN's own pieces measured in-sample give 0.8–2");
+        const parts = [["diagonal", "own", "#444"], ["same_layer_offdiag", "same layer", "#e0843a"], ["same_kind_other_layers", "same kind, other layers", "#3a9d5a"], ["other_kind_other_layers", "other kinds, other layers", "#6a8fd6"]];
+        const traces = parts.map(([k, name, color]) => ({ type: "bar", x: tags, y: tags.map((t) => CP[t].parts[k]), name, marker: { color } }));
+        traces.push({ x: tags, y: tags.map((t) => CP[t].coherence), name: "coherence (right axis)", mode: "lines+markers", yaxis: "y2", line: { color: "#c0392b" } });
+        const lay = layout("", "share of the step's GN curvature", false, false, { barmode: "stack", ...wideLegend });
+        lay.yaxis2 = { title: "coherence", overlaying: "y", side: "right", rangemode: "tozero" };
+        Plotly.newPlot(div, traces, lay, config);
+        ["M16M_46", "PD16M_46", "SPD16M_46", "M1M_900", "PD1M_900", "SPD1M_900"].filter((t) => CP[t]).forEach((t) => {
+          const r = CP[t];
+          const d = card(`${t}: correlation of the 48 matrices' output changes (coherence ${r.coherence.toFixed(1)}, top mode ${(100 * r.top_mode).toFixed(0)}%)`,
+            "Cov_p(J_l D_l, J_m D_m) normalized; ordered layer by layer (q, k, v, o, up, down). All pairs positively correlated for every per-matrix optimizer");
+          Plotly.newPlot(d, [{ type: "heatmap", z: r.corr, x: r.labels, y: r.labels, colorscale: "RdBu", reversescale: true, zmin: -1, zmax: 1, showscale: false }],
+            layout("", "", false, false, { margin: { l: 80, r: 10, t: 8, b: 80 }, xaxis: { tickfont: { size: 6 } }, yaxis: { tickfont: { size: 6 }, autorange: "reversed" } }), config);
+        });
+      }
+      const ST = E.staged || {};
+      if (ST.control_9_sharp && ST.staged_9_sharp) {
+        const c = Object.fromEntries(ST.control_9_sharp.map((r) => [r.step, r]));
+        const pairs = [["staged_9_sharp", "coordinated from step 9", css("--pd")], ["switch_50", "coordinated to step 50, then plain", "#e0843a"], ["switch_30", "coordinated to step 30, then plain", "#3a9d5a"]];
+        const div = card("a step closer to second order: layer-staged PD vs its control, 16M, steps 9–92",
+          "each layer's step recomputed after the earlier layers' output change (8 GN products per step), in the run's own harness; the control is the same code without the correction and reproduces the run. Train loss difference, validation as markers. Switch-off branches: coordinated to step 30 or 50, then plain PD from the same weights and momentum; the first plain step catapults and the lead is not kept");
+        const traces = [];
+        pairs.forEach(([name, label, color]) => {
+          const rows = (ST[name] || []).filter((r) => c[r.step]);
+          if (!rows.length) return;
+          traces.push({ x: rows.map((r) => r.step), y: rows.map((r) => r.train - c[r.step].train), name: label, mode: "lines", line: { color, width: 1.6 } });
+          const v = rows.filter((r) => r.val !== null && c[r.step].val !== null);
+          traces.push({ x: v.map((r) => r.step), y: v.map((r) => r.val - c[r.step].val), name: `${label} (validation)`, mode: "markers", marker: { color, size: 7 } });
+        });
+        traces.push({ x: [9, 92], y: [0, 0], mode: "lines", line: { color: css("--muted"), width: 1 }, showlegend: false, hoverinfo: "skip" });
+        Plotly.newPlot(div, traces, layout("step (16M tokens each)", "staged − control", false, false, wideLegend), config);
+        const div2 = card("the sharpness each optimizer leaves: plain PD's oscillation flattens the network, coordinated steps do not",
+          "top GN eigenvalue on each step's curvature sequences (log scale); the coordinated branch stays 3–6× sharper and jumps to ~28× between steps 70 and 80 at full LR, where its progress stalls; after a switch to plain PD the sharpness relaxes toward the control's over 20–40 steps, after a catapult");
+        const t2 = [["control_9_sharp", "control (plain PD)", css("--ink")], ...pairs].map(([name, label, color]) => {
+          const rows = (ST[name] || []).filter((r) => r.sharp !== null);
+          return { x: rows.map((r) => r.step), y: rows.map((r) => r.sharp), name: label, mode: "lines+markers", line: { color, width: 1.6 } };
+        }).filter((t) => t.x.length);
+        Plotly.newPlot(div2, t2, layout("step", "top GN eigenvalue", false, true, wideLegend), config);
+      }
+      const CO = E.coordination || {};
+      if (CO["16M"]) {
+        const bars = [];
+        Object.entries(CO).forEach(([group, entry]) => Object.entries(entry.arms).forEach(([label, a]) => {
+          if (a.done && a.final_gap !== null) bars.push({ label: `${group}: ${label}`, v: a.final_gap });
+        }));
+        if (bars.length) {
+          const divL = card("ledger: every coordination variant against its own harness control",
+            "final validation minus the same-harness control (negative: better); one run each unless the label says otherwise. Pays: the sequential (Gauss-Seidel) correction kept on the dominant input band, composed with β 0.8 and with S∘PD. Fails: the whole correction, the per-matrix reversal without the cross-layer part, and Jacobi corrections from plain steps");
+          Plotly.newPlot(divL, [{ type: "bar", orientation: "h", y: bars.map((b) => b.label), x: bars.map((b) => b.v),
+            marker: { color: bars.map((b) => (b.v < 0 ? css("--pd") : css("--muon"))) }, text: bars.map((b) => (b.v > 0 ? "+" : "") + b.v.toFixed(3)), textposition: "outside" }],
+            layout("final validation − control", "", false, false, { margin: { l: 330, r: 30, t: 8, b: 42 }, yaxis: { autorange: "reversed", tickfont: { size: 9 } }, height: 60 + 22 * bars.length }), config);
+        }
+        const PAL = ["#c0392b", "#e0843a", "#8e44ad", "#16a085", "#2e86c1", "#27ae60", "#b8860b", "#7f8c8d"];
+        Object.entries(CO).forEach(([group, entry]) => {
+          const arms = Object.entries(entry.arms);
+          if (!arms.length) return;
+          const div = card(`where cross-layer coordination pays: step lead over the same-harness control (${group})`,
+            "layer-staged PD with the cross-layer correction kept on a chosen part of each matrix's input space (above-mean eigenvectors of C, the rest, the input mean, the 8 largest), at full or half strength, from 32 or 256 curvature sequences per rank, or with each corrected step scaled by the dual norm of its residual; legend: final validation minus the control's (a lead is undefined once the control never reaches the arm's loss)");
+          const traces = arms.map(([label, a], i) => ({ x: a.lead.map((p) => p[0]), y: a.lead.map((p) => p[1]), mode: "lines",
+            name: `${label}${a.final_gap !== null ? ` (${a.final_gap > 0 ? "+" : ""}${a.final_gap.toFixed(3)} at ${a.last_step})` : ` (to step ${a.last_step})`}`,
+            line: { color: PAL[i % PAL.length], width: 1.8 }, connectgaps: false }));
+          traces.push({ x: [traces[0].x[0], Math.max(...arms.map(([, a]) => a.last_step))], y: [0, 0], mode: "lines", line: { color: css("--muted"), width: 1 }, showlegend: false, hoverinfo: "skip" });
+          Plotly.newPlot(div, traces, layout("step", "lead over the control (steps)", false, false, wideLegend), config);
+          const div2 = card(`sharpness under each coordination variant (${group})`,
+            "top GN eigenvalue on the step's curvature sequences (log scale): single-band corrections settle on a sharper plateau; the full correction at 32 sequences and at half strength run away between steps 70 and 80; the accurate full correction is stable but never leads");
+          const t2 = arms.map(([label, a], i) => ({ x: a.sharp.map((p) => p[0]), y: a.sharp.map((p) => p[1]), mode: "lines+markers", name: label,
+            line: { color: PAL[i % PAL.length], width: 1.6 } }));
+          t2.push({ x: entry.control.sharp.map((p) => p[0]), y: entry.control.sharp.map((p) => p[1]), mode: "lines+markers", name: "control (plain PD)", line: { color: css("--ink"), width: 1.6 } });
+          Plotly.newPlot(div2, t2, layout("step", "top GN eigenvalue", false, true, wideLegend), config);
+        });
+      }
+      const MO = E.momentum || [];
+      if (MO.length) {
+        const div = card("white-noise estimate of the momentum buffer's noise energy, relative to |M|²",
+          "r/(1−β²) (clip-corrected) over |M|², pooled (solid) and tail mean (open markers). Not a signal/noise split: the gradient at W_N partly responds to the optimizer's own past noise (closed loop), and a signal-free noisy quadratic gives similar values (review 21:48). Shown as a measurement, not a decomposition");
+        const groupsM = {};
+        MO.forEach((r) => { const k = `${r.opt} ${r.batch} β${r.beta}`; (groupsM[k] = groupsM[k] || []).push(r); });
+        const traces = [];
+        Object.entries(groupsM).forEach(([k, rs]) => { rs = [...rs].sort((a, b) => a.frac - b.frac);
+          const col = rs[0].opt === "Muon" ? css("--muon") : css("--pd");
+          traces.push({ x: rs.map((r) => r.frac), y: rs.map((r) => r.noise_all), name: `${k} (all)`, mode: "lines+markers",
+            line: { color: col, dash: DASH[rs[0].batch], width: 1.8 }, marker: { symbol: SYM[rs[0].batch], size: 7 },
+            text: rs.map((r) => `${k} @${r.step}, clip factor ${r.clip_factor}`), hovertemplate: "%{text}: %{y:.2f}<extra></extra>" });
+          traces.push({ x: rs.map((r) => r.frac), y: rs.map((r) => r.noise_tail_mean), name: `${k} (tail)`, mode: "markers",
+            marker: { symbol: SYM[rs[0].batch] + "-open", size: 8, color: col }, hovertemplate: `${k} tail: %{y:.2f}<extra></extra>` }); });
+        Plotly.newPlot(div, traces, layout("fraction of training", "noise share of the momentum buffer", false, false, wideLegend), config);
+        const div2 = card("one-step autocorrelation of the mean gradient per input direction",
+          "same 64 micro-batches at W_N and W_N+1, projected on W_N's input basis. Negative along the high-variance inputs in every state. Caveats (review 21:48): the tail (u < 1) may be leakage from a rotated input basis, and a signal-free noisy heavy-ball quadratic produces the same signatures, so this does not separate edge-of-stability oscillation from noise-driven fluctuation");
+        const pick = ["PD16M_46", "M16M_46", "PD16M_83", "PD4M_37", "PD4M_183", "PD4M_330", "PD1M_50", "PD1M_200", "PD1M_900", "M1M_900"];
+        const traces2 = MO.filter((r) => pick.includes(r.tag)).map((r) => ({ x: r.u, y: r.autocorr, name: `${r.tag} (β${r.beta})`, mode: "lines+markers",
+          line: { color: r.opt === "Muon" ? css("--muon") : css("--pd"), dash: DASH[r.batch], width: 1.5 }, marker: { symbol: SYM[r.batch], size: 6 } }));
+        traces2.push({ x: [1e-3, 100], y: [0, 0], mode: "lines", line: { color: css("--muted"), width: 1 }, showlegend: false, hoverinfo: "skip" });
+        Plotly.newPlot(div2, traces2, layout("input eigenvalue / mean (u)", "one-step autocorrelation", true, false, wideLegend), config);
+      }
+      const IV = E.interventions || [];
+      if (IV.length) {
+        const div = card("interventions: final validation minus the same-hardware reference (16M unless labeled)",
+          "two-tap filter removes the period-2 feedback (hurts in proportion to stiff stepping); a fresher momentum helps; the whitened head's dominant input direction is its mean");
+        const trace = { type: "bar", orientation: "h", y: IV.map((r) => r.label), x: IV.map((r) => r.change),
+          marker: { color: IV.map((r) => r.change < 0 ? css("--spd") : css("--muon")) },
+          text: IV.map((r) => `${r.final.toFixed(4)} vs ${r.reference.toFixed(4)}`), hovertemplate: "%{y}: %{x:+.3f} (%{text})<extra></extra>" };
+        Plotly.newPlot(div, [trace], layout("change in final validation loss", "", false, false,
+          { margin: { l: 230, r: 20, t: 8, b: 42 }, showlegend: false, yaxis: { automargin: true, tickfont: { size: 9 } } }), config);
+      }
+      const PF = E.preflight || {};
+      const tags = Object.keys(PF);
+      if (tags.length) {
+        const div = card("16M pre-flight: exact-GN PD is not a better direction than its Kronecker control",
+          `a²/2q at PD's own states @9 and @46 (held-out). Disjoint curvature samples give GN-PD directions with cosine ${tags.map((t) => PF[t].cos_AB.toFixed(2)).join(" / ")}; GN-PD vs kron ${tags.map((t) => PF[t].cos_kron.toFixed(2)).join(" / ")}`);
+        const NAMES = { muon: "Muon", pd: "PD α½", kron: "kron (TS ½/½)", "gnpd_A_bf16_k64_p0.5_d1e-3": "GN-PD harness", "gnpd_B_bf16_k64_p0.5_d1e-3": "GN-PD set B",
+          "gnpd_A_fp32_k128_p0.5_d1e-3": "GN-PD FP32 k128", "gnpd_A_bf16_k64_p0.25_d1e-3": "GN-PD p¼", "gnpd_A_bf16_k64_p0.5_d1e-4": "GN-PD μ 1e-4ρ", nested: "nested" };
+        const keys = Object.keys(PF[tags[0]].rows);
+        const traces = tags.map((t, i) => ({ type: "bar", x: keys.map((k) => NAMES[k] || k), y: keys.map((k) => PF[t].rows[k].quality),
+          name: `PD state ${t.replace("pd", "@")}`, marker: { color: i ? css("--spd") : css("--pd") } }));
+        Plotly.newPlot(div, traces, layout("", "a²/2q (GN model's best one-step decrease)", false, true, { barmode: "group", ...wideLegend }), config);
+      }
+    },
+    steprule() {
+      const S = D.steprule || {};
+      const wideLegend = { legend: { font: { size: 9 }, orientation: "v", x: 1.02, y: 1 }, margin: { l: 56, r: 230, t: 8, b: 42 } };
+      Object.entries(S.greedy || {}).forEach(([state, arms]) => {
+        const div = card(`${state}, 1M: validation after changing the step rule at step 500`,
+          "dashed: the run's own baseline; greedy = joint held-out line search on a fixed 64-sequence set (any direction); normalized GN = Muon's LR and per-matrix norms with GN's direction");
+        const traces = Object.entries(arms).map(([name, rows]) => ({ x: rows.map((r) => r[0]), y: rows.map((r) => r[1]), name,
+          mode: name === "baseline" ? "lines" : "lines+markers", marker: { size: 5 },
+          line: name === "baseline" ? { dash: "dash", color: css("--muted"), width: 1.6 } : {} }));
+        Plotly.newPlot(div, traces, layout("step", "validation loss", false, false, wideLegend), config);
+      });
+      const N = (S.normgn || {}).rows || [];
+      if (N.length) {
+        const div = card("normalized GN from Muon's 1M state: falling behind as the network sharpens",
+          "left axis: training loss minus the baseline's on the same batch; right axis: top GN Ritz value on the step's curvature sequences (sharpness)");
+        const traces = [
+          { x: N.map((r) => r[0]), y: N.map((r) => r[1]), name: "training loss − baseline", mode: "lines+markers", marker: { size: 3 }, line: { color: css("--pd") } },
+          { x: N.map((r) => r[0]), y: N.map((r) => r[2]), name: "top GN Ritz value", mode: "lines", yaxis: "y2", line: { color: css("--muon"), dash: "dot" } }];
+        const lay = layout("step", "loss gap to baseline", false, false, wideLegend);
+        lay.yaxis2 = { ...lay.yaxis, overlaying: "y", side: "right", title: { text: "top Ritz value", font: { size: 11, color: css("--muted") } }, showgrid: false };
+        lay.margin = { l: 56, r: 230, t: 8, b: 42 };
+        Plotly.newPlot(div, traces, lay, config);
+      }
+      const F = S.floors || {};
+      ["1M", "4M"].forEach((batch) => {
+        const names = Object.keys(F).filter((n) => n.includes(` ${batch} `));
+        if (!names.length) return;
+        const div = card(`${batch}: raw loss and the floor under it (held-out EVAL sequences)`, "dashed: raw loss at the kept step; solid: after a 16-step LR anneal");
+        const traces = [];
+        names.forEach((n) => { const col = n.startsWith("Muon") ? css("--muon") : css("--pd");
+          traces.push({ x: F[n].map((r) => r[0]), y: F[n].map((r) => r[1]), name: `${n}: raw`, mode: "lines+markers", line: { dash: "dash", color: col } });
+          traces.push({ x: F[n].map((r) => r[0]), y: F[n].map((r) => r[2]), name: `${n}: floor`, mode: "lines+markers", line: { color: col } }); });
+        Plotly.newPlot(div, traces, layout("step", "held-out loss", false, false, wideLegend), config);
+      });
+      const fn = Object.keys(F);
+      if (fn.length) {
+        const div = card("loss stored in the oscillation (raw − floor)", "1M: Muon and PD store the same excess; 4M: PD stores more early and less later");
+        const traces = fn.map((n) => ({ x: F[n].map((r) => r[0]), y: F[n].map((r) => r[1] - r[2]), name: n, mode: "lines+markers",
+          line: { color: n.startsWith("Muon") ? css("--muon") : css("--pd"), dash: n.includes(" 4M ") ? "solid" : "dot" } }));
+        Plotly.newPlot(div, traces, layout("step", "stored excess", false, true, wideLegend), config);
+      }
+      const SP = S.speedup || {}, sn = Object.keys(SP);
+      if (sn.length) {
+        const div = card("step-equivalent speedup over Muon (from validation curves)", "t / the steps an arm needs to reach Muon's validation loss at Muon's step t; 4M arms at β 0.9 vs Muon @0.014, 1M PD vs Muon @0.007");
+        const traces = sn.map((n) => ({ x: SP[n].map((r) => r[0]), y: SP[n].map((r) => r[1]), name: n, mode: "lines+markers", marker: { size: 4 },
+          line: { dash: n.includes("(1M)") ? "dot" : "solid" } }));
+        Plotly.newPlot(div, traces, layout("Muon's step t", "speedup", true, false, wideLegend), config);
+      }
+      Object.entries(S.probe || {}).forEach(([state, P]) => {
+        const div = card(`${state}: one step along each direction at c × the trainer's step`,
+          "held-out loss change, hidden matrices only; GN normalized: Krylov 64, damping 1e-3 ρ, rescaled per matrix to the trainer's norms; 64 in-batch or 64/256/1024 fresh curvature sequences");
+        const traces = Object.entries(P.curves).map(([name, ys]) => ({ x: P.scales, y: ys, name, mode: "lines+markers",
+          line: name.startsWith("the run") ? { color: css("--ink"), width: 2.6 } : name.startsWith("GN") ? {} : { dash: "dash" } }));
+        const lay = layout("c (multiple of the trainer's step)", "held-out loss change", true, false, wideLegend);
+        lay.yaxis.type = "linear"; lay.yaxis.range = [-0.008, 0.03];
+        Plotly.newPlot(div, traces, lay, config);
+      });
+      const MT = S.matched || {}, mn = Object.keys(MT);
+      if (mn.length) {
+        const div = card("speedup at matched loss, by batch size", "step-equivalent speedup over the best Muon at the same batch (and β), against Muon's smoothed training loss at step t; dotted 1M, dash-dot 4M β 0.95, dashed 4M β 0.9, solid 16M");
+        const dash = (n) => n.startsWith("16M") ? "solid" : n.startsWith("4M β0.95") ? "dashdot" : n.startsWith("4M") ? "dash" : "dot";
+        const traces = mn.map((n) => ({ x: MT[n].map((r) => r[0]), y: MT[n].map((r) => r[1]), name: n, mode: "lines", line: { dash: dash(n), width: n.includes("S∘PD") ? 2.4 : 1.4 } }));
+        const lay = layout("Muon's training loss at step t (training proceeds to the right)", "speedup", false, false, wideLegend);
+        lay.xaxis.autorange = "reversed";
+        Plotly.newPlot(div, traces, lay, config);
+      }
+      const MP = S.maps || {}, states = Object.keys(MP);
+      if (states.length) {
+        const names = [["muon", "Muon"], ["pd_a0.25", "PD α¼"], ["pd_a0.5", "PD α½"], ["pdw_a0.5", "PD α½, token-weighted C"], ["gn", "damped GN"], ["gnpd_p0.25", "PD in GN geometry, p ¼"], ["gnpd_p0.5", "PD in GN geometry, p ½"]];
+        const div = card("one step on the next momentum M': the oscillating state vs the valley floor (Muon 1M)", "cross-fitted held-out decrease ×1e-3; PD in the exact GN geometry: −(G+μ)^-p polar((G+μ)^-p M') per matrix at Muon's norms");
+        const traces = names.filter(([k]) => states.some((st) => MP[st][k] !== undefined)).map(([k, name]) => ({ type: "bar", name, x: states, y: states.map((st) => MP[st][k] ?? null) }));
+        Plotly.newPlot(div, traces, layout("state", "decrease ×1e-3", false, false, { barmode: "group", ...wideLegend }), config);
+      }
+      const DC = S.decomp || {}, dstates = Object.keys(DC);
+      if (dstates.length) {
+        const keys = ["PD α½", "GN-PD, Kronecker B⊗C", "GN-PD, exact per-matrix blocks", "GN-PD, exact per-layer blocks", "damped GN", "GN-PD, full GN"];
+        const div = card("where PD-in-GN-geometry's gain comes from (next momentum M', Muon 1M)", "cross-fitted held-out decrease ×1e-3; GN-PD = −(G+μ)^-p polar((G+μ)^-p M') per matrix at Muon's norms, with G the Kronecker factors, the exact GN restricted to each matrix or layer, or the full exact GN");
+        const traces = keys.filter((k) => dstates.some((st) => DC[st][k] !== undefined)).map((k) => ({ type: "bar", name: k, x: dstates, y: dstates.map((st) => DC[st][k] ?? null) }));
+        Plotly.newPlot(div, traces, layout("state", "decrease ×1e-3", false, false, { barmode: "group", ...wideLegend }), config);
+      }
+      const CO = S.cooldown || {}, cn = Object.keys(CO);
+      if (cn.length) {
+        const div = card("the cooldown test: PD in GN geometry from Muon's 1M state at step 1300 to the end of the schedule", "validation; cooldown from step ~1322 (LR linearly to 0 at 1469); A must reproduce the baseline (dashed)");
+        const traces = cn.map((n) => ({ x: CO[n].map((r) => r[0]), y: CO[n].map((r) => r[1]), name: n, mode: n === "Muon baseline" ? "lines" : "lines+markers",
+          line: n === "Muon baseline" ? { dash: "dash", color: css("--muted") } : {} }));
+        Plotly.newPlot(div, traces, layout("step", "validation loss", false, false, wideLegend), config);
+      }
+      const FS = S.floorsteps || {}, fsn = Object.keys(FS);
+      if (fsn.length) {
+        const div = card("floor steps under one step rule: a rate or a one-time release? (from the 1M floor at step 516)", "held-out loss; every direction at Muon's norms with scale κ(−slope/curvature) measured on fresh sequences each step; solid: instantaneous slope/curvature rule; dotted: smoothed (EMA 0.7) rule; κ 2 arms hidden (click the legend); transported = momentum carried to the current weights, M + G·D");
+        const traces = fsn.map((n) => ({ x: FS[n].map((r) => r[0]), y: FS[n].map((r) => r[1]), name: n, mode: "lines+markers",
+          visible: n.includes("κ 2") ? "legendonly" : true,
+          line: { dash: n.includes("smoothed") ? "dot" : "solid", width: n.includes("GN geometry") ? 2.6 : 1.4 } }));
+        Plotly.newPlot(div, traces, layout("step k from the floor", "held-out loss", false, false, wideLegend), config);
+      }
+      const SN = S.framesnr || {}, snn = Object.keys(SN);
+      if (snn.length) {
+        const div = card("per-entry signal-to-noise of the PD-whitened gradient, by frame and batch size", "fraction of gradient entries whose signal beats the noise at a batch of 1M / 4M / 16M tokens (64 micro-batch gradients); in every frame 95–100% of the signal energy is in such entries");
+        const cols = { soap: css("--pd"), gn_out: css("--muon"), raw: css("--muted") };
+        const names = { soap: "SOAP frame", gn_out: "GN output frame", raw: "raw basis" };
+        const traces = [];
+        snn.forEach((st, i) => ["soap", "gn_out", "raw"].forEach((f) => traces.push({ x: ["1M", "4M", "16M"], y: SN[st][f], name: `${st}: ${names[f]}`, mode: "lines+markers",
+          line: { color: cols[f], dash: ["solid", "dash", "dot"][i] } })));
+        Plotly.newPlot(div, traces, layout("batch (tokens)", "fraction of entries with SNR > 1", false, false, wideLegend), config);
+      }
+      const F16 = S.finals16m || {}, fn16 = Object.keys(F16);
+      if (fn16.length) {
+        const wrap = document.createElement("div"); wrap.className = "card tablewrap";
+        const rows = fn16.map((n) => [n, F16[n]]).sort((a, b) => a[1] - b[1]);
+        wrap.innerHTML = `<h3>16M-token batch: final validation (92 steps = 1.54B tokens unless T2x = 184 steps; STS = SOAP on the two-sided map; Sleft/Sright = SOAP on one side only; SPDgrad = SOAP with the gradient second moment)</h3><table class="finals"><thead><tr><th>run</th><th>val loss</th></tr></thead><tbody>${
+          rows.map((r) => `<tr><td>${r[0]}</td><td>${r[1].toFixed(4)}</td></tr>`).join("")}</tbody></table>`;
+        document.getElementById("charts").appendChild(wrap);
+      }
+      if (!Object.keys(S).length) empty("No step-rule data yet.");
+    },
+    batch() {
+      const entries = Object.entries(D.batch);
+      if (!entries.length) { empty("No batch-size runs yet."); return; }
+      const div = card("validation loss vs tokens", "solid: 1M-token batch; dashed: 4M-token batch");
+      const traces = entries.map(([name, c]) => { const run = name.split("_")[0]; const is4 = name.includes("_b4M_");
+        return { x: c.tokens.map((t) => t / 1e9), y: c.val, name, mode: "lines",
+          line: { color: runColor(run) || css("--muted"), width: is4 ? 1.4 : 2.2, dash: is4 ? "dash" : "solid" } }; });
+      Plotly.newPlot(div, traces, layout("tokens (billions)", "validation loss", false, false,
+        { yaxis: { ...layout("", "", 0, 0).yaxis, title: { text: "validation loss", font: { size: 11, color: css("--muted") } }, range: [3.6, 4.6] },
+          legend: { font: { size: 9 }, orientation: "v", x: 1.02, y: 1 }, margin: { l: 56, r: 180, t: 8, b: 42 } }), config);
+      const wrap = document.createElement("div"); wrap.className = "card tablewrap";
+      const rows = entries.map(([name, c]) => [name, c.tokens[c.tokens.length - 1], c.val[c.val.length - 1]])
+        .sort((a, b) => a[2] - b[2]);
+      wrap.innerHTML = `<h3>Finals so far</h3><table class="finals"><thead><tr><th>run</th><th>tokens</th><th>val loss</th></tr></thead><tbody>${
+        rows.map((r) => `<tr><td>${r[0]}</td><td>${(r[1] / 1e9).toFixed(3)}B</td><td>${r[2].toFixed(5)}</td></tr>`).join("")}</tbody></table>`;
+      document.getElementById("charts").appendChild(wrap);
+    },
+  };
+
+  function drawControls() {
+    const tabs = document.getElementById("tabs");
+    tabs.innerHTML = "";
+    VIEWS.forEach((v) => { const b = document.createElement("button"); b.type = "button"; b.role = "tab"; b.id = `tab-${v.id}`;
+      b.textContent = v.label; b.setAttribute("aria-selected", String(state.view === v.id));
+      b.addEventListener("click", () => { state.view = v.id; save(); update(); }); tabs.appendChild(b); });
+    const chips = document.getElementById("chips");
+    chips.innerHTML = "";
+    D.runs.forEach((r) => { const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.id = `chip-${r}`;
+      b.style.setProperty("--c", `var(${RUNVAR[r]})`); b.innerHTML = `<i></i><span></span>`; b.querySelector("span").textContent = label(r);
+      b.setAttribute("aria-pressed", String(state.runs.includes(r)));
+      b.addEventListener("click", () => { state.runs = state.runs.includes(r) ? state.runs.filter((x) => x !== r) : D.runs.filter((x) => x === r || state.runs.includes(x));
+        save(); update(); }); chips.appendChild(b); });
+    const fill = (id, options, value) => { const s = document.getElementById(id); s.innerHTML = options.map(([v, t]) => `<option value="${v}">${t}</option>`).join("");
+      s.value = String(value); s.onchange = () => { state[id] = s.value; save(); update(); }; };
+    fill("kind", D.kinds.map((k) => [k, k]), state.kind);
+    fill("depth", [["median", "median"], ...[1, 2, 3, 4, 5, 6, 7, 8].map((d) => [d, d])], state.depth);
+    const gs = gapSteps();
+    if (!gs.includes(Number(state.step)) && gs.length) state.step = String(gs[Math.floor(gs.length / 2)]);
+    fill("step", gs.map((s) => [s, s]), state.step);
+    const gnKeys = Object.keys(D.gn || {});
+    if (!gnKeys.includes(state.gnstate) && gnKeys.length) state.gnstate = gnKeys[0];
+    fill("gnstate", gnKeys.map((k) => [k, k]), state.gnstate);
+    const view = VIEWS.find((v) => v.id === state.view) || VIEWS[0];
+    ["kind", "depth", "step", "gnstate"].forEach((c) => { document.getElementById(c).closest("label").hidden = !view.controls.includes(c); });
+    document.getElementById("how").textContent = view.how;
+  }
+
+  function update() {
+    drawControls();
+    document.querySelectorAll("#charts .plot").forEach((el) => { try { Plotly.purge(el); } catch (e) {} });
+    document.getElementById("charts").innerHTML = "";
+    if (typeof Plotly === "undefined") { empty("The plotting library did not load."); return; }
+    if (!state.runs.length) { empty("Select at least one optimizer."); return; }
+    (render[state.view] || render.curv)();
+  }
+
+  update();
+  const rerender = () => update();
+  try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", rerender); } catch (e) {}
+  new MutationObserver(rerender).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>

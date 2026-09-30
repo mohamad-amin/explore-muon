@@ -1,0 +1,42 @@
+{
+  "reason": "Same selected/raw a=1 vector reduction replaces different axis-0 accumulation; no tolerance, criterion, model score, candidate, selection or scientific classification changed.",
+  "synthetic_regression": "seed19 nonexact decimal sequences; raw_nll equals calibrated_nll exactly in both all-one folds",
+  "original_outputs_preserved": "initial_reduction/",
+  "checks": {
+    "old_archive_hashes_unchanged": true,
+    "scientific_input_hashes_unchanged": true,
+    "selected_scales_unchanged": true,
+    "scientific_classifications_unchanged": true,
+    "all12_scale_one_corrections_exactly_zero": true
+  },
+  "hashes": {
+    "analyze.py": {
+      "original_sha256": "893151a37f6765e522a38cb727e8813a6dd6178999b2d72a7998ba06c7340aa0",
+      "repaired_sha256": "8043217f83a92a274297636c8de08a627315bedd7f4676c16a896328b9147235"
+    },
+    "analysis.json": {
+      "original_sha256": "59660ea8bdf2d768241589b2b4bbec1f6e7f6c621403e75732abd30101f16973",
+      "repaired_sha256": "d8b2f022d84004ee2350205761aebd641f0d6f1cfcbd27b1aab05449485e0270"
+    },
+    "model_scores.csv": {
+      "original_sha256": "574877b4710bcfebe2370c10628a51fdaac11685956523caa3781424c47b7764",
+      "repaired_sha256": "e128e75896560a08416fd9e350672fff8e567de852e082c3a96650ef9e585b8c"
+    },
+    "contrasts.csv": {
+      "original_sha256": "2bb37be68586cacbee4e6029021745b5b584e504d544c5255f01b763b19b141a",
+      "repaired_sha256": "eb6b35dfb4158c2673ffae881c2f827f9b0c3aea65bba0d15ec6ae059bc1f038"
+    },
+    "grid_curves.csv": {
+      "original_sha256": "cf8aa9e43f9c263d38b01ea85d46485b1c4615c6ac7708036294309aac8ed860",
+      "repaired_sha256": "cf8aa9e43f9c263d38b01ea85d46485b1c4615c6ac7708036294309aac8ed860"
+    },
+    "confidence_gaps.png": {
+      "original_sha256": "c4f1690e6497b19006e56dee688119a19266a668e5a03a006948d2ddd920dcab",
+      "repaired_sha256": "c4f1690e6497b19006e56dee688119a19266a668e5a03a006948d2ddd920dcab"
+    },
+    "confidence_gaps.pdf": {
+      "original_sha256": "c53a1a1ed425f6dfadb96a6455a1cc52fd6c94044134dc03fe6d300f5bbaee71",
+      "repaired_sha256": "7b6d0c3fd5c18ef6c8e0b138ef3be38d8adb6af82bbfa4cc9ce5d36d73267d89"
+    }
+  }
+}

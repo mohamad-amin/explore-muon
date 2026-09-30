@@ -1,0 +1,207 @@
+{
+  "compatibility_links": [
+    {
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/research/tiny_spectra",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/research/tiny_spectra"
+    },
+    {
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra"
+    },
+    {
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/data/tiny_shakespeare"
+    },
+    {
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare_holdout_audit",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/data/tiny_shakespeare_holdout_audit"
+    },
+    {
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare_confirmation_20260928",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/data/tiny_shakespeare_confirmation_20260928"
+    },
+    {
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_stories_20260928",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/data/tiny_stories_20260928"
+    }
+  ],
+  "earlier_fixtures": [
+    {
+      "path": "/tmp/tiny-provenance-r39d_6x1",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/scratch/earlier_fixtures/tiny-provenance-r39d_6x1"
+    },
+    {
+      "path": "/tmp/tiny-dynamics-report-yz9ns7f2",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/scratch/earlier_fixtures/tiny-dynamics-report-yz9ns7f2"
+    },
+    {
+      "path": "/tmp/tiny-metric-policy-0oznqso8",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/scratch/earlier_fixtures/tiny-metric-policy-0oznqso8"
+    },
+    {
+      "path": "/tmp/tiny-dynamics-bounds-uk0eufwq",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/scratch/earlier_fixtures/tiny-dynamics-bounds-uk0eufwq"
+    },
+    {
+      "path": "/tmp/tiny-selection-policy-baseline.json",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/scratch/earlier_fixtures/tiny-selection-policy-baseline.json"
+    },
+    {
+      "path": "/tmp/tiny-analyzer-contract-hwoak_fq",
+      "target": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/scratch/earlier_fixtures/tiny-analyzer-contract-hwoak_fq"
+    }
+  ],
+  "finished_unix": 1790628252.080788,
+  "live_scheduler_snapshot": "2567578|RUNNING\n2618555|RUNNING\n",
+  "moved": [
+    {
+      "entries": 41,
+      "inode_inventory_unchanged": true,
+      "relative": "research/tiny_spectra"
+    },
+    {
+      "entries": 1785,
+      "inode_inventory_unchanged": true,
+      "relative": "logs/tiny_spectra"
+    },
+    {
+      "entries": 3,
+      "inode_inventory_unchanged": true,
+      "relative": "data/tiny_shakespeare"
+    },
+    {
+      "entries": 10,
+      "inode_inventory_unchanged": true,
+      "relative": "data/tiny_shakespeare_holdout_audit"
+    },
+    {
+      "entries": 117,
+      "inode_inventory_unchanged": true,
+      "relative": "data/tiny_shakespeare_confirmation_20260928"
+    },
+    {
+      "entries": 108,
+      "inode_inventory_unchanged": true,
+      "relative": "data/tiny_stories_20260928"
+    }
+  ],
+  "new_root": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate",
+  "notes": {
+    "entries": [
+      {
+        "end_line": 4067,
+        "heading": "### Tiny surrogate qualification: optimizer geometry, batch and momentum (2026-09-28 13:55 CDT)",
+        "sha256": "6c33d7945ecf2eba07ef9e9ee50b8a7d15f3e1f37475bc1e2f792086ebd77773",
+        "start_line": 4044
+      },
+      {
+        "end_line": 4073,
+        "heading": "**Tiny qualification and screen launch (2026-09-28 13:56 CDT).** Nineteen CPU contracts and a five-method paired end-to-end CPU check passed. The frozen 12-step-per-method GPU qualification completed under Slurm 2626581_0 on g18, one NVIDIA RTX A4000 with 16,750,149,632 bytes VRAM. All five methods had identical initial parameter and training-window hashes; snapshots are finite and covariance EMA weights equal 1\u22120.9^12. The model has 820,864 parameters. Peak allocated memory was 179\u2013239 MB. Conservative projected training cost for the 15-run screen is 0.314 GPU-hours, below the declared limit. Evidence: `logs/tiny_spectra/shakespeare_smoke_20260928/QUALIFICATION_PASSED.json`. The frozen screen is submitted as array 2626585 (15 arms, at most four concurrent A4000s), `logs/tiny_spectra/shakespeare_screen_20260928`. These smoke losses are qualification outputs, not scientific evidence for the target ordering.",
+        "sha256": "ba1bf0c54f77c33efd0f99ad0d1cb42c991552eec0c35a41c400b278c3c1d26f",
+        "start_line": 4072
+      },
+      {
+        "end_line": 4075,
+        "heading": "**Tiny Shakespeare first screen complete (2026-09-28, Slurm 2626585).** All 15 arms completed with paired hashes and no reported numerical failures or late overfit flags. Best fixed-bank / full-validation NLL: AdamW 1.73803 / 1.74849; Muon 1.55394 / 1.57121; PD 1.52111 / 1.53262; TS 1.51950 / 1.53576; S\u2218PD 1.51476 / 1.52934. The selected rates are 0.002 for AdamW and 0.016 for all Muon-family arms, all upper boundaries. The requested full chain appears on the selection bank, but the TS\u2013PD gap is tiny and reverses on full validation. Therefore the surrogate is **not qualified**. All methods continue improving through the horizon, so retain the candidate. Per the predeclared boundary rule, run exactly one outward factor-two LR arm per method (AdamW 0.004; others 0.032), same seed and recipe, before dynamics probes. Cost: five A4000 runs, approximately 0.1 GPU-hours. Evidence: `logs/tiny_spectra/shakespeare_screen_20260928/report/README.md`. Fresh-seed scientific confirmation will use full-split held-out NLL as its primary endpoint, with the frozen-bank curve retained, to avoid qualifying a chain confined to the selection subsample.",
+        "sha256": "8a229c9db8f541a309ef6b82fd0843b9cfb3bfd06a5da54f13eb81306dc3bee8",
+        "start_line": 4074
+      },
+      {
+        "end_line": 4079,
+        "heading": "**Tiny surrogate next decision: baseline bracket closure and batch sentinels (2026-09-28 14:12 CDT).** The five predeclared outward LR arms are complete (`shakespeare_edges_20260928`, Slurm 2626631). PD, TS and S\u2218PD are now bracketed at LR 0.016; their doubled rate loses. AdamW improves to fixed-bank/full NLL 1.68603/1.69777 at 0.004 and Muon to 1.55106/1.56398 at 0.032, still boundaries. The full-split TS\u2013PD reversal persists. This is a viable but unqualified candidate.",
+        "sha256": "ff5d5425fa895612d8c551662c3abb561a97fa89b5eb3b4f60eb2899fb8b9c93",
+        "start_line": 4076
+      },
+      {
+        "end_line": 4099,
+        "heading": "**Tiny batch sentinels complete; endpoint gaps grow, common-loss speedups do not yet (2026-09-28 14:18 CDT).** All six arms completed (Slurm2626637). AdamW0.008 loses to0.004; Muon0.064 loses to0.032 at batch8192, so all five LR choices are bracketed. At batches2048/8192/32768, fixed-bank S\u2218PD\u2212Muon is \u22120.02373/\u22120.03630/\u22120.08203; full validation differences are \u22120.02343/\u22120.03464/\u22120.08553. This reproduces the growing endpoint loss gap with carried-over rates. It does **not** yet reproduce the stronger rate interpretation: at the predeclared loss2.0 threshold, Muon/S\u2218PD step ratios are1.151/1.217/1.127. At2.4 and2.2 they are also not monotone. A further exploratory scan over common losses1.7\u20132.4 likewise does not establish a monotone batch speedup. Preserve that negative result; larger endpoint gaps alone are insufficient. Evidence: `shakespeare_discovery_20260928/DISCOVERY_SPEEDUP.json`.",
+        "sha256": "a3f0a44a29adf4ab80dfca23b8fa005040e2dbcdf8a6ecf6c457c1471c2a6eb8",
+        "start_line": 4094
+      },
+      {
+        "end_line": 4103,
+        "heading": "**Independent tiny-surrogate review before confirmation (2026-09-28, approximately14:25 CDT).** The reviewer found no invalidating bug in the standalone training/statistic/kernel paths, but identified two gates beyond finishing array2626669. First, tune momentum fairly: SOAP-PD beta0.8 cannot be compared with PD/TS fixed at0.9 to establish a strict chain. Give PD and TS the chosen lower large-batch momentum at the two adjacent rates before freezing a comparison; also close the visible large-batch Adam lower-LR and PD upper-LR boundaries. At common beta0.9, SOAP-PD's full-validation lead over TS is only0.00091, with the opposite bank ordering. Second, crossing precision is inadequate at small batch: evaluation is every128 updates at2048 but every8 at32768. Some early crossings interpolate across step1\u2192128. Preserve the original nonmonotone ratios as coarse evidence; neither treat them as a precise rejection nor replace them with favorable thresholds. Confirmation will use evaluation every8 updates at every batch and report observed crossing intervals alongside interpolation. Full-split endpoint remains primary for ordering.",
+        "sha256": "1bd77e878f2a77e53e70a59ff5eb0211a2e4d418442ff8a2894480096ef3e4d3",
+        "start_line": 4100
+      },
+      {
+        "end_line": 4109,
+        "heading": "**Large-batch sweep reading and bounded fairness/closure check (2026-09-28, approximately14:29 CDT).** The large-batch part of array2626669 is complete; the small-batch part remains live. Best bank scores are Muon beta0.7/LR0.064 (full1.64573) and SOAP-PD beta0.7/LR0.032 (full1.57998). The0.7\u20130.8 range is a broad plateau, not a unique established optimum. At beta0.7 SOAP-PD LR0.016 has slightly better full validation but slightly worse bank validation, so retain the original bank-based selection rule. The endpoint-tuned common-loss2.0 ratio at32768 is now1.291, versus1.217 at8192; the2048 comparison is still provisional and coarsely sampled.",
+        "sha256": "2a7c78e06c0523660f5b2676d7148291ac73940b196072d3f7f28b8d2106c1e2",
+        "start_line": 4104
+      },
+      {
+        "end_line": 4111,
+        "heading": "**Execution qualification on another eligible GPU (2026-09-28, approximately14:33 CDT).** A4000 capacity is constrained while11GB2080Ti nodes are available. A read-only peer inspected installed PyTorch2.11+cu130: sm75 is compiled, BF16 allocation/emulation may be accepted, but NS GEMM support is not established and attention falls back from flash to its mathematical backend. Run exactly one unchanged-code12-step/all-five-method smoke on one2080Ti, at most10 minutes. It exercises actual forward/backward, NS and repeated statistic refreshes. Unsupported or nonfinite execution ends this hardware attempt; no FP16, FP32-NS, package changes or precision-repair branch. If successful, document hardware/backend differences and keep future paired comparisons on one GPU type. Existing scientific runs remain unchanged on A4000. Temporarily cap the existing scientific array at two workers, the fairness array at one and this qualification at one (total\u22644); restore the former3+1 cap after this smoke ends. This is instrument/execution qualification, not a new scientific arm or a surrogate result.",
+        "sha256": "3a57088bfc98885b559806f26995e091c3523050fb47a756fa72ea1d8a023bcf",
+        "start_line": 4110
+      },
+      {
+        "end_line": 4143,
+        "heading": "**User correction: prevent evaluation-selection overfitting (2026-09-28).** The user explicitly warned that TS beats PD on selected validation windows but loses on remaining windows, with numerical error much too small to account for the reversal. Treat **every original Tiny Shakespeare evaluation score and every original validation character as development evidence** from now on. Fresh training seeds alone do not make those texts an independent test. Preserve existing artifacts and selected/remaining/full-window reversals. This evaluation issue does not establish a common cause with separate gradient-sign findings.",
+        "sha256": "49033005375c3f25862c59e572cde919fc55971eeb94cf4e68ff94eaa831dc81",
+        "start_line": 4136
+      },
+      {
+        "end_line": 4145,
+        "heading": "**RTX2080Ti execution qualification passed (2026-09-28).** Slurm2626757_0 completed all five12-step methods with unchanged BF16 forward/NS and FP32 parameters/state. Every snapshot tensor is finite, initial weights and training windows match A4000 qualification, and physical VRAM is11,347,623,936 bytes. Peak allocated memory is at most284,509,696 bytes. This qualifies execution on another permitted device, not numerical identity or long-run method comparisons; attention/backend execution differs by GPU architecture. Keep future paired comparisons on the same hardware. Evidence: `logs/tiny_spectra/shakespeare_smoke2080_20260928/QUALIFICATION_PASSED.json`. The scientific array throttle was restored to3, plus fairness1, after this smoke finished.",
+        "sha256": "cf1505628883617666d12c151b9c2959c3539cf5c0f145850c764391a3f6ec53",
+        "start_line": 4144
+      },
+      {
+        "end_line": 4153,
+        "heading": "**Character candidate verdict after the complete declared discovery program (2026-09-28, approximately14:55 CDT).** All75 scientific discovery arms are complete (qualification smokes separate). The setup is useful and cheap, but **not a qualified reproduction**. At shared beta0.7, TS LR0.032 scores bank/full1.564149/1.576896, versus SOAP-PD's bank-selected LR0.0321.565955/1.579976. Thus the last required inequality reverses on both development summaries. Small-batch SOAP-PD beta0.8 and0.7 differ only about0.0013 full NLL; the large-batch low-momentum range is likewise close, with another lower-bound winner at beta0.6/LR0.032. This does not establish a robust shifted optimum. The growing endpoint gap and all coarse common-loss results remain recorded. No independent-panel score was obtained. `logs/tiny_spectra/CHARACTER_CANDIDATE_VERDICT.json` inventories all75 runs. Stop adding batches, horizons, or optimizer powers to this character candidate simply to recover the missing inequalities.",
+        "sha256": "fdea13b7a899a2ec74287c4814a213d24408ff045349f3073614ebc1359dd351",
+        "start_line": 4146
+      },
+      {
+        "end_line": 4196,
+        "heading": "**Fresh-text subword candidate C: numerical plan before any model score (2026-09-28).** The independently reviewed replacement keeps four layers, width128, four heads and context128, with4096 train-only byte-BPE tokens (approximately1,852,800 parameters). Data preparation produced32,939,904 fresh target positions after deduplication, so both the8,388,608-target base horizon and16,777,216-target extended control fit without recycling. The existing character candidate and its negative results remain frozen; no score is taken on its28-play confirmation panel.",
+        "sha256": "9247ef7c7fb2dbd2e06b6a97c55b7e30ec02a655d760cdc4d71ec72a2e9e8d2a",
+        "start_line": 4185
+      },
+      {
+        "end_line": 4198,
+        "heading": "**Candidate C qualified and screen submitted (2026-09-28, approximately15:22 CDT).** All five12-step smoke arms completed under2626880 on11GB2080Ti. They share initial weights, nonrecycled training windows, validation starts and target-length hashes. Every saved tensor is finite. Full development NLL reconstructs exactly from per-window losses weighted by1,018,977 real targets; masks exclude only right padding and count real EOT tokens. Peak allocated memory is481,521,664 bytes. Conservative projected training cost for the15-arm screen is0.4003 GPU-hours. Evidence: `logs/tiny_spectra/stories_c_smoke_20260928/QUALIFICATION_PASSED.json`. The frozen screen is submitted as2626881 (`stories_c_screen_20260928`), four2080Ti workers maximum. Test documents are not read. These smoke losses are qualification, not ordering evidence.",
+        "sha256": "0da94b34e140c2a81be466abf9d425699bfae3eb9dbc302f53138c6b2325637d",
+        "start_line": 4197
+      },
+      {
+        "end_line": 4204,
+        "heading": "**Prospective reference-premise clarification before candidate C dynamics (2026-09-28, approximately15:28 CDT).** The independent main-study result at15:02 changed the reference interpretation: at16M and twice the horizon, the extra gain from SOAP-PD beta0.8 shrinks from about0.10 at1\u00d7 to0.010 at2\u00d7, while its mid-run lead remains. The reference now supports a phase-dependent useful momentum window, not a universal batch-only law. A fresh independent peer agreed that the tiny protocol's13:55 wording (a gain caused only by too few steps does not establish transfer), and any reading that attenuation at2\u00d7 is automatically failure, were stronger than the observed reference. Preserve that original wording and its history; this dated clarification precedes C batch/momentum results and does not follow a convenient toy outcome.",
+        "sha256": "3615b7a3a25dd7a0907fb70e7b8f49143f37f5ab57f58b8e96c21fbfb4fb174f",
+        "start_line": 4201
+      },
+      {
+        "end_line": 4206,
+        "heading": "**Candidate C endpoint-rate rule fixed before dynamics.** If the viability gate passes with bracketed midpoint learning rates eta_star, the two rates for each method at batch4096 are{eta_star/2,eta_star}; at batch65536 they are{eta_star,2*eta_star}. Both momenta0.8 and0.9 receive the identical pair within that method/batch. This uses the same deterministic rule for Muon and SOAP-PD, based only on the midpoint development screen. A remaining boundary is reported as unresolved; the contrast is the prespecified shorter-versus-longer window, not a claim of a global momentum optimum. No endpoint-batch results or sealed-test scores have been observed when fixing this rule.",
+        "sha256": "3737453ed6a41f224ecada9eb6817cd65de5d73910f17e68ce1282f32c2092b3",
+        "start_line": 4205
+      },
+      {
+        "end_line": 4212,
+        "heading": "**Candidate C initial screen complete; dynamics gate closed (2026-09-28, approximately15:33 CDT).** All15 arms completed. Full-development LR-selected losses: AdamW0.0022.837876, Muon0.0082.571820, PD0.0162.543016, TS0.0082.531676, SOAP-PD0.0082.532339. The first four-method chain holds in all four fixed document groups. SOAP-PD\u2212TS is+0.000663 overall, with group differences\u22120.001608,+0.002156,+0.001913,+0.000228: a small heterogeneous reversal, not the required final inequality. SOAP-PD's selected-window bank favors0.016 but full development favors0.008; retain the full-development rule. A fresh read-only peer verified these results and found no invalidating data/masking/source issue.",
+        "sha256": "78be619d8ce8fa69115e66b23f27004a602a5ebbfd5d51ccafa6c594dee8c2b5",
+        "start_line": 4209
+      }
+    ],
+    "parent_protocol_after_sha256": "667466df3823bf28835af4069c83595f84d89e5267c2f1ada9eb36e62ec55d82",
+    "parent_protocol_before_sha256": "ec90db9a3b4766b318e414c2cbc54b668b28996f45a7f26deeeb31df06fd7015",
+    "parent_state_after_sha256": "37da8e9678d5a6ffde16b064ceda972897bee19d9e04a24e4f405c9ddd2ef38f",
+    "parent_state_before_sha256": "d8310b7b83a22743edb0917c72cc08ded7649e5ec67862a2a4996a7e9c45889d"
+  },
+  "old_root": "/share/data/dl-theory/amin/projects/explore_muon",
+  "owned_job_ids": [
+    "2626581",
+    "2626585",
+    "2626631",
+    "2626637",
+    "2626669",
+    "2626744",
+    "2626757",
+    "2626880",
+    "2626881",
+    "2626920"
+  ],
+  "started_unix": 1790628250.9672155
+}

@@ -1,0 +1,213 @@
+{
+ "base_loss": 3.722344398498535,
+ "matrices": {
+  "block04.q": {
+   "eps": 0.03597251053493786,
+   "mean_share_of_second_moment": 0.35566121339797974,
+   "mean_input_curvature": 0.006817110326257191,
+   "mean_input_second_moment": 161.81304931640625,
+   "random_input_curvature": [
+    0.00018424622503397813,
+    0.00036849245006795626,
+    0.00018424622503397813,
+    0.00036849245006795626
+   ],
+   "random_input_second_moment": [
+    0.6540476083755493,
+    0.4973970949649811,
+    0.5014243721961975,
+    0.6524986624717712
+   ],
+   "curvature_ratio_mean_vs_random": 24.666666666666664,
+   "second_moment_ratio": 280.75876425023466,
+   "momentum_pair_curvature": {
+    "top": 0.0294793960054365,
+    "rank8": 0.001473969800271825,
+    "median": 0.00036849245006795626
+   },
+   "top_pair_v_cos_mean_input": 0.9862266182899475
+  },
+  "block04.v": {
+   "eps": 0.03920800271219548,
+   "mean_share_of_second_moment": 0.35566121339797974,
+   "mean_input_curvature": 0.10701379042729402,
+   "mean_input_second_moment": 161.81304931640625,
+   "random_input_curvature": [
+    0.000310184899789258,
+    0.00046527734968388704,
+    0.000620369799578516,
+    0.000155092449894629
+   ],
+   "random_input_second_moment": [
+    0.44744256138801575,
+    0.5381322503089905,
+    0.5468806028366089,
+    0.45832738280296326
+   ],
+   "curvature_ratio_mean_vs_random": 276.0,
+   "second_moment_ratio": 325.1244676875692,
+   "momentum_pair_curvature": {
+    "top": 0.45193939899294894,
+    "rank8": 0.0034120338976818382,
+    "median": 0.000155092449894629
+   },
+   "top_pair_v_cos_mean_input": 0.8794618844985962
+  },
+  "block04.up": {
+   "eps": 0.0831115284972757,
+   "mean_share_of_second_moment": 0.35263556241989136,
+   "mean_input_curvature": 0.008490879226907388,
+   "mean_input_second_moment": 164.2225799560547,
+   "random_input_curvature": [
+    6.903153843014137e-05,
+    0.00010354730764521206,
+    0.00010354730764521206,
+    6.903153843014137e-05
+   ],
+   "random_input_second_moment": [
+    0.5275682210922241,
+    0.55228191614151,
+    0.6390343904495239,
+    0.46726301312446594
+   ],
+   "curvature_ratio_mean_vs_random": 98.39999999999999,
+   "second_moment_ratio": 300.47849358855035,
+   "momentum_pair_curvature": {
+    "top": 0.0231945969125275,
+    "rank8": 0.0007248311535164844,
+    "median": 6.903153843014137e-05
+   },
+   "top_pair_v_cos_mean_input": 0.9956537485122681
+  },
+  "block04.o": {
+   "eps": 0.03432035070156293,
+   "mean_share_of_second_moment": 0.057808782905340195,
+   "mean_input_curvature": 0.0034410072108961524,
+   "mean_input_second_moment": 9.663805961608887,
+   "random_input_curvature": [
+    0.0004048243777524885,
+    0.0004048243777524885,
+    0.00020241218887624425,
+    0.00020241218887624425
+   ],
+   "random_input_second_moment": [
+    0.2708387076854706,
+    0.2588282525539398,
+    0.22691430151462555,
+    0.28080064058303833
+   ],
+   "curvature_ratio_mean_vs_random": 11.333333333333336,
+   "second_moment_ratio": 37.26228861266117,
+   "momentum_pair_curvature": {
+    "top": 0.007489250988421037,
+    "rank8": 0.001619297511009954,
+    "median": 0.0004048243777524885
+   },
+   "top_pair_v_cos_mean_input": 0.9118844270706177
+  },
+  "block08.q": {
+   "eps": 0.035399916938060376,
+   "mean_share_of_second_moment": 0.20729157328605652,
+   "mean_input_curvature": 0.002283057530861361,
+   "mean_input_second_moment": 95.18553924560547,
+   "random_input_curvature": [
+    0.00038050958847689353,
+    0.00019025479423844676,
+    0.00038050958847689353,
+    0.00038050958847689353
+   ],
+   "random_input_second_moment": [
+    0.6613269448280334,
+    0.6317129135131836,
+    0.62886643409729,
+    0.6486101150512695
+   ],
+   "curvature_ratio_mean_vs_random": 6.857142857142857,
+   "second_moment_ratio": 148.1189366747647,
+   "momentum_pair_curvature": {
+    "top": 0.01769369586417555,
+    "rank8": 0.0007610191769537871,
+    "median": 0.00038050958847689353
+   },
+   "top_pair_v_cos_mean_input": 0.930127739906311
+  },
+  "block08.o": {
+   "eps": 0.03860806086825625,
+   "mean_share_of_second_moment": 0.44060221314430237,
+   "mean_input_curvature": 0.011356446664715587,
+   "mean_input_second_moment": 196.62286376953125,
+   "random_input_curvature": [
+    0.0001599499530241632,
+    0.0003198999060483264,
+    0.0001599499530241632,
+    0.0001599499530241632
+   ],
+   "random_input_second_moment": [
+    0.3594653606414795,
+    0.42657315731048584,
+    0.5790537595748901,
+    0.4784087836742401
+   ],
+   "curvature_ratio_mean_vs_random": 56.800000000000004,
+   "second_moment_ratio": 426.6292391313854,
+   "momentum_pair_curvature": {
+    "top": 0.04958448543749059,
+    "rank8": 0.0011196496711691423,
+    "median": 0.0001599499530241632
+   },
+   "top_pair_v_cos_mean_input": 0.988437831401825
+  },
+  "block08.down": {
+   "eps": 0.026746634516734716,
+   "mean_share_of_second_moment": 0.24558597803115845,
+   "mean_input_curvature": 0.03632689735746257,
+   "mean_input_second_moment": 620.0853271484375,
+   "random_input_curvature": [
+    0.0006665485753662857,
+    0.00033327428768314287,
+    0.00033327428768314287,
+    0.0006665485753662857
+   ],
+   "random_input_second_moment": [
+    0.9433839917182922,
+    0.8406351804733276,
+    1.0176031589508057,
+    0.8446767330169678
+   ],
+   "curvature_ratio_mean_vs_random": 72.66666666666666,
+   "second_moment_ratio": 680.2352919906641,
+   "momentum_pair_curvature": {
+    "top": 1.2844391047308326,
+    "rank8": 0.0066654857536628575,
+    "median": 0.0006665485753662857
+   },
+   "top_pair_v_cos_mean_input": 0.9315338134765625
+  },
+  "block04.down": {
+   "eps": 0.02332852004487939,
+   "mean_share_of_second_moment": 0.048047278076410294,
+   "mean_input_curvature": 0.007885663199653186,
+   "mean_input_second_moment": 31.52439308166504,
+   "random_input_curvature": [
+    0.000876184799961465,
+    0.0004380923999807325,
+    0.0004380923999807325,
+    0.0
+   ],
+   "random_input_second_moment": [
+    0.27197790145874023,
+    0.2671464681625366,
+    0.29165053367614746,
+    0.28701460361480713
+   ],
+   "curvature_ratio_mean_vs_random": 18.0,
+   "second_moment_ratio": 112.80976565524452,
+   "momentum_pair_curvature": {
+    "top": 0.01927606559915223,
+    "rank8": 0.0021904619999036624,
+    "median": 0.000876184799961465
+   },
+   "top_pair_v_cos_mean_input": 0.9463408589363098
+  }
+ }
+}

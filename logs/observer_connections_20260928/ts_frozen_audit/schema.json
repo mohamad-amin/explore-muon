@@ -1,0 +1,1674 @@
+{
+  "checkpoint": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000046.pt",
+  "rank0_stats": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000046_input_stats_rank0.pt",
+  "step": 46,
+  "tokens": 771751936,
+  "world_size": 4,
+  "source_sha256_verified": {
+    "muon.py": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+    "model.py": "7bb63819666a4917ac7919a6ac16540293a9ef074a6015e1729e21ea4f6fb25a",
+    "distributed.py": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+    "train.py": "b637265f9fe47ebfecdc5615d29c94b0f8c8242068ef1d1cba6afdb7c3acab5f"
+  },
+  "checkpoint_keys": [
+    "model",
+    "optimizer",
+    "step",
+    "tokens",
+    "config",
+    "metadata",
+    "rank_rng"
+  ],
+  "optimizer_keys": [
+    "state",
+    "param_groups"
+  ],
+  "optimizer_state_key_counts": {
+    "momentum_buffer,step": 48,
+    "step,exp_avg,exp_avg_sq": 36
+  },
+  "owners": {
+    "blocks.0.attn.q.weight": 0,
+    "blocks.0.attn.k.weight": 1,
+    "blocks.0.attn.v.weight": 2,
+    "blocks.0.attn.o.weight": 3,
+    "blocks.1.attn.q.weight": 0,
+    "blocks.1.attn.k.weight": 1,
+    "blocks.1.attn.v.weight": 2,
+    "blocks.1.attn.o.weight": 3,
+    "blocks.2.attn.q.weight": 0,
+    "blocks.2.attn.k.weight": 1,
+    "blocks.2.attn.v.weight": 2,
+    "blocks.2.attn.o.weight": 3,
+    "blocks.3.attn.q.weight": 0,
+    "blocks.3.attn.k.weight": 1,
+    "blocks.3.attn.v.weight": 2,
+    "blocks.3.attn.o.weight": 3,
+    "blocks.4.attn.q.weight": 0,
+    "blocks.4.attn.k.weight": 1,
+    "blocks.4.attn.v.weight": 2,
+    "blocks.4.attn.o.weight": 3,
+    "blocks.5.attn.q.weight": 0,
+    "blocks.5.attn.k.weight": 1,
+    "blocks.5.attn.v.weight": 2,
+    "blocks.5.attn.o.weight": 3,
+    "blocks.6.attn.q.weight": 0,
+    "blocks.6.attn.k.weight": 1,
+    "blocks.6.attn.v.weight": 2,
+    "blocks.6.attn.o.weight": 3,
+    "blocks.7.attn.q.weight": 0,
+    "blocks.7.attn.k.weight": 1,
+    "blocks.7.attn.v.weight": 2,
+    "blocks.7.attn.o.weight": 3,
+    "blocks.0.mlp.up.weight": 0,
+    "blocks.1.mlp.up.weight": 1,
+    "blocks.2.mlp.up.weight": 2,
+    "blocks.3.mlp.up.weight": 3,
+    "blocks.4.mlp.up.weight": 0,
+    "blocks.5.mlp.up.weight": 1,
+    "blocks.6.mlp.up.weight": 2,
+    "blocks.7.mlp.up.weight": 3,
+    "blocks.0.mlp.down.weight": 0,
+    "blocks.1.mlp.down.weight": 1,
+    "blocks.2.mlp.down.weight": 2,
+    "blocks.3.mlp.down.weight": 3,
+    "blocks.4.mlp.down.weight": 0,
+    "blocks.5.mlp.down.weight": 1,
+    "blocks.6.mlp.down.weight": 2,
+    "blocks.7.mlp.down.weight": 3
+  },
+  "rank0_stats_count": 48,
+  "stats_schema": {
+    "blocks.0.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.0.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.0.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.0.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.0.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.0.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.1.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.1.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.1.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.1.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.1.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.1.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.2.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.2.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.2.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.2.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.2.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.2.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.3.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.3.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.3.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.3.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.3.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.3.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.4.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.4.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.4.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.4.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.4.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.4.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.5.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.5.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.5.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.5.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.5.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.5.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.6.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.6.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.6.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.6.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.6.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.6.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.7.attn.q": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.7.attn.k": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.7.attn.v": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.7.attn.o": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.7.mlp.up": {
+      "input_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    },
+    "blocks.7.mlp.down": {
+      "input_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_sq": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      "input_cov": {
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_mean": {
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.float32"
+      },
+      "input_cov_weight": {
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    }
+  },
+  "model_nonparameter_stat_keys": [],
+  "limits": [
+    "B/L/R absent",
+    "rank0 input moments do not replace other owners' moments",
+    "C saved after46 is not cached R last refreshed45",
+    "no model or GPU computation; checkpoint payload hashes not computed"
+  ]
+}

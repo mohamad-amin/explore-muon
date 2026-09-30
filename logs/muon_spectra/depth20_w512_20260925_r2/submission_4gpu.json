@@ -1,0 +1,13 @@
+{
+  "job_id": "2620623",
+  "submitted_unix": 1790301279.5760229,
+  "command": [
+    "sbatch",
+    "--parsable",
+    "/share/data/dl-theory/amin/projects/last_layer/logs/muon_spectra/depth20_w512_20260925_r2/job_4gpu.sbatch"
+  ],
+  "world_size": 4,
+  "gpu_constraint": "96g",
+  "replaces_job_id": "2620619",
+  "config_sha256": "3914fb81d3cbcfdbd16aef470fee3dbc31b8776d03b06ebea0670c99eb9bd5be"
+}

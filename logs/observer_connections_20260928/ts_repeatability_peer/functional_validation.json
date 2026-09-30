@@ -1,0 +1,177 @@
+{
+  "scope": "Independent aggregation of eight saved GN Grams; no model calls. Functional-norm matching is post-hoc interpretation only and does not replace the preregistered metric.",
+  "aggregate_checks": {
+    "A0__B0": {
+      "pooled": {
+        "gn_cosine": 0.9884320072737899,
+        "q_difference": 0.0010456810099925828,
+        "noise_to_added_TS_geometry": 0.005827542973616301
+      },
+      "per_sequence": [
+        {
+          "gn_cosine": 0.9886462965435101,
+          "q_difference": 0.001180453775446802,
+          "noise_to_added_TS_geometry": 0.005742955306973314
+        },
+        {
+          "gn_cosine": 0.9924370658057838,
+          "q_difference": 0.0010274885894571567,
+          "noise_to_added_TS_geometry": 0.0055335385201036435
+        },
+        {
+          "gn_cosine": 0.9925585819070403,
+          "q_difference": 0.0009812400650678205,
+          "noise_to_added_TS_geometry": 0.005609271734158979
+        },
+        {
+          "gn_cosine": 0.9909647295793826,
+          "q_difference": 0.0010545901366463134,
+          "noise_to_added_TS_geometry": 0.0060978198481233085
+        },
+        {
+          "gn_cosine": 0.9853939645016444,
+          "q_difference": 0.0015705194198887135,
+          "noise_to_added_TS_geometry": 0.007814903841736833
+        },
+        {
+          "gn_cosine": 0.9894748553758562,
+          "q_difference": 0.0008439959729757418,
+          "noise_to_added_TS_geometry": 0.005097808905067522
+        },
+        {
+          "gn_cosine": 0.9894983478900041,
+          "q_difference": 0.0009839772331674268,
+          "noise_to_added_TS_geometry": 0.005534717552968858
+        },
+        {
+          "gn_cosine": 0.9910706569621056,
+          "q_difference": 0.0007231828872906743,
+          "noise_to_added_TS_geometry": 0.004755135432801668
+        }
+      ],
+      "posthoc_unit_function_norm_geometry_ratio": 0.2859791344473602
+    },
+    "A0__A1": {
+      "pooled": {
+        "gn_cosine": 0.9931330643279098,
+        "q_difference": 0.0006015031589611947,
+        "noise_to_added_TS_geometry": 0.0033125599106855136
+      },
+      "per_sequence": [
+        {
+          "gn_cosine": 0.9916106728543151,
+          "q_difference": 0.0007290850708283753,
+          "noise_to_added_TS_geometry": 0.00341849826923275
+        },
+        {
+          "gn_cosine": 0.993829044824415,
+          "q_difference": 0.0005374015880007382,
+          "noise_to_added_TS_geometry": 0.002713284108700124
+        },
+        {
+          "gn_cosine": 0.9942155102409582,
+          "q_difference": 0.0005143253357615118,
+          "noise_to_added_TS_geometry": 0.0027894333398944043
+        },
+        {
+          "gn_cosine": 0.993069764428254,
+          "q_difference": 0.0005808256441457854,
+          "noise_to_added_TS_geometry": 0.003176322059678707
+        },
+        {
+          "gn_cosine": 0.9940608672598811,
+          "q_difference": 0.0006158967040321706,
+          "noise_to_added_TS_geometry": 0.0032274013907772304
+        },
+        {
+          "gn_cosine": 0.9922670775959763,
+          "q_difference": 0.0006100371240339436,
+          "noise_to_added_TS_geometry": 0.003753239897414638
+        },
+        {
+          "gn_cosine": 0.9932833000212823,
+          "q_difference": 0.0006484886447300775,
+          "noise_to_added_TS_geometry": 0.003732034805785234
+        },
+        {
+          "gn_cosine": 0.9926867952593318,
+          "q_difference": 0.000575965160156941,
+          "noise_to_added_TS_geometry": 0.00391962346934595
+        }
+      ],
+      "posthoc_unit_function_norm_geometry_ratio": 0.16519836528877213
+    },
+    "AB__CD": {
+      "pooled": {
+        "gn_cosine": 0.9933874903514073,
+        "q_difference": 0.0006388869228501626,
+        "noise_to_added_TS_geometry": 0.0037592249686565753
+      },
+      "per_sequence": [
+        {
+          "gn_cosine": 0.9931459910524879,
+          "q_difference": 0.0006810684630803865,
+          "noise_to_added_TS_geometry": 0.00348989896805702
+        },
+        {
+          "gn_cosine": 0.9939548346626114,
+          "q_difference": 0.0006067298009448524,
+          "noise_to_added_TS_geometry": 0.0033948934752780786
+        },
+        {
+          "gn_cosine": 0.9950447986147305,
+          "q_difference": 0.0005021506351197969,
+          "noise_to_added_TS_geometry": 0.002958464100209496
+        },
+        {
+          "gn_cosine": 0.9937417097801793,
+          "q_difference": 0.0006003848398732914,
+          "noise_to_added_TS_geometry": 0.003624549384895572
+        },
+        {
+          "gn_cosine": 0.9921628787127307,
+          "q_difference": 0.0009411097237714133,
+          "noise_to_added_TS_geometry": 0.005090911293297514
+        },
+        {
+          "gn_cosine": 0.9927261861467144,
+          "q_difference": 0.0006641884903268724,
+          "noise_to_added_TS_geometry": 0.0043471551326564484
+        },
+        {
+          "gn_cosine": 0.9935390133913983,
+          "q_difference": 0.0006492032895733107,
+          "noise_to_added_TS_geometry": 0.0038681337180085647
+        },
+        {
+          "gn_cosine": 0.9942509003826343,
+          "q_difference": 0.00046626014011139083,
+          "noise_to_added_TS_geometry": 0.0032181929096667143
+        }
+      ],
+      "posthoc_unit_function_norm_geometry_ratio": 0.1704677608797745
+    }
+  },
+  "PD_functional_cosines": {
+    "A0": 0.9792315371758896,
+    "B0": 0.980317984684981,
+    "AB": 0.9809313010188503,
+    "CD": 0.9802783164802831,
+    "ABCD": 0.9812460234224852,
+    "PD": 1.0,
+    "ABCD_bf16": 0.981237385781758,
+    "A1": 0.979200644280104
+  },
+  "PD_to_TS_functional_norm_ratios": {
+    "A0": 2.4094989685089434,
+    "B0": 2.3629297043389292,
+    "AB": 2.307459380572833,
+    "CD": 2.28603570822815,
+    "ABCD": 2.269902799263022,
+    "PD": 1.0,
+    "ABCD_bf16": 2.2700373090991146,
+    "A1": 2.401100988112224
+  },
+  "selected_Gram_top_trace_share": 0.9888091136720901,
+  "selected_correlation_Gram_top_trace_share": 0.9919007416981283
+}

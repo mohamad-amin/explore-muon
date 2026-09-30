@@ -1,0 +1,635 @@
+{
+ "a": {
+  "262K": {
+   "c_star": 0.586494505405426,
+   "E1": true,
+   "E2": true,
+   "E3": false,
+   "present": true,
+   "stiff_cos_cross": -0.6876841187477112,
+   "rest_cos_cross": 0.07641199231147766,
+   "body_loss_increase": 0.0,
+   "pd": {
+    "c_star": 0.5926982164382935,
+    "stiff_cos_cross": -0.6930668950080872,
+    "rest_cos_cross": 0.05628032982349396,
+    "body_loss_increase": 0.02
+   },
+   "pd_over_muon_stiff_energy": 0.202132558295852
+  },
+  "1M": {
+   "c_star": 0.6400241255760193,
+   "E1": true,
+   "E2": true,
+   "E3": false,
+   "present": true,
+   "stiff_cos_cross": -0.7638193964958191,
+   "rest_cos_cross": 0.004384899046272039,
+   "body_loss_increase": 0.06666666666666667,
+   "pd": {
+    "c_star": 0.6448988914489746,
+    "stiff_cos_cross": -0.6990312337875366,
+    "rest_cos_cross": -0.1178281307220459,
+    "body_loss_increase": 0.016666666666666666
+   },
+   "pd_over_muon_stiff_energy": 0.09427562107728021
+  }
+ },
+ "b": {
+  "muon_b262144_lr0.01_s20261001": {
+   "states": [
+    {
+     "step": 120,
+     "condition": true,
+     "gate": false,
+     "top_cos_momentum": -0.8830816152945219,
+     "top_cos_stale_free": 0.9990774214207531,
+     "rest_cos_momentum": -0.26670890270432096,
+     "top_staleness_over_signal": 1.088231558611434,
+     "top_noise_over_signal": 0.017841156987819053,
+     "all_staleness_over_signal": 1.0864714711282437,
+     "all_noise_over_signal": 0.04528507085793384,
+     "momentum_stiff_share_over_chance": 34092.33595885435
+    },
+    {
+     "step": 183,
+     "condition": true,
+     "gate": false,
+     "top_cos_momentum": -0.9398571392022301,
+     "top_cos_stale_free": 0.9979769156682604,
+     "rest_cos_momentum": -0.4294299403930701,
+     "top_staleness_over_signal": 1.101808746524367,
+     "top_noise_over_signal": 0.019929875498733204,
+     "all_staleness_over_signal": 1.090117355845588,
+     "all_noise_over_signal": 0.05842045598932497,
+     "momentum_stiff_share_over_chance": 27325.198151211673
+    },
+    {
+     "step": 280,
+     "condition": true,
+     "gate": true,
+     "top_cos_momentum": -0.8987662994516024,
+     "top_cos_stale_free": 0.9962846005216517,
+     "rest_cos_momentum": -0.35506125073460304,
+     "top_staleness_over_signal": 1.121272107340125,
+     "top_noise_over_signal": 0.025256189503881168,
+     "all_staleness_over_signal": 1.1047172722129788,
+     "all_noise_over_signal": 0.0788917837416976,
+     "momentum_stiff_share_over_chance": 17100.69514955467
+    }
+   ],
+   "passing_states": 1,
+   "present": false,
+   "top_cos_median": -0.8987662994516024,
+   "rest_cos_median": -0.35506125073460304,
+   "top_below_rest_by_0p2": true
+  },
+  "pd_b262144_lr0.01_s20261001": {
+   "states": [
+    {
+     "step": 120,
+     "condition": true,
+     "gate": true,
+     "top_cos_momentum": -0.9115922457315216,
+     "top_cos_stale_free": 0.9985081649369265,
+     "rest_cos_momentum": -0.37913198175062696,
+     "top_staleness_over_signal": 1.0919213788398476,
+     "top_noise_over_signal": 0.016177992317200223,
+     "all_staleness_over_signal": 1.0903897356791235,
+     "all_noise_over_signal": 0.04019319895671402,
+     "momentum_stiff_share_over_chance": 42095.393534257266
+    },
+    {
+     "step": 183,
+     "condition": true,
+     "gate": false,
+     "top_cos_momentum": -0.934797968458277,
+     "top_cos_stale_free": 0.9986925145541627,
+     "rest_cos_momentum": -0.42293792807131475,
+     "top_staleness_over_signal": 1.1424208912604223,
+     "top_noise_over_signal": 0.021486163987370594,
+     "all_staleness_over_signal": 1.1202266826245608,
+     "all_noise_over_signal": 0.058682491115694055,
+     "momentum_stiff_share_over_chance": 25538.26739847489
+    },
+    {
+     "step": 280,
+     "condition": true,
+     "gate": false,
+     "top_cos_momentum": -0.9375724150689024,
+     "top_cos_stale_free": 0.9987177897407938,
+     "rest_cos_momentum": -0.3949022525708965,
+     "top_staleness_over_signal": 1.1491980301810292,
+     "top_noise_over_signal": 0.025282758199609505,
+     "all_staleness_over_signal": 1.129575732535724,
+     "all_noise_over_signal": 0.0679725402583584,
+     "momentum_stiff_share_over_chance": 32997.977121134514
+    }
+   ],
+   "passing_states": 1,
+   "present": false,
+   "top_cos_median": -0.934797968458277,
+   "rest_cos_median": -0.3949022525708965,
+   "top_below_rest_by_0p2": true
+  },
+  "muon_b1048576_lr0.01_s20261001": {
+   "states": [
+    {
+     "step": 46,
+     "condition": true,
+     "gate": false,
+     "top_cos_momentum": -0.8279036754341547,
+     "top_cos_stale_free": 0.9996972697407553,
+     "rest_cos_momentum": -0.29907495952672514,
+     "top_staleness_over_signal": 1.0682100407867383,
+     "top_noise_over_signal": 0.012178543302608275,
+     "all_staleness_over_signal": 1.0674279414301775,
+     "all_noise_over_signal": 0.019676161636551004,
+     "momentum_stiff_share_over_chance": 32703.924861566848
+    },
+    {
+     "step": 65,
+     "condition": true,
+     "gate": false,
+     "top_cos_momentum": -0.9397208662018931,
+     "top_cos_stale_free": 0.9997354096713844,
+     "rest_cos_momentum": -0.2948584014667422,
+     "top_staleness_over_signal": 1.0725840007892902,
+     "top_noise_over_signal": 0.009854971880107748,
+     "all_staleness_over_signal": 1.067834817768965,
+     "all_noise_over_signal": 0.02143112483825254,
+     "momentum_stiff_share_over_chance": 55951.296456277996
+    },
+    {
+     "step": 83,
+     "condition": true,
+     "gate": false,
+     "top_cos_momentum": -0.9149280139151315,
+     "top_cos_stale_free": 0.9995984506075443,
+     "rest_cos_momentum": -0.39314700719009626,
+     "top_staleness_over_signal": 1.0595555304775266,
+     "top_noise_over_signal": 0.011747862975839551,
+     "all_staleness_over_signal": 1.0600450685954563,
+     "all_noise_over_signal": 0.028368226386433423,
+     "momentum_stiff_share_over_chance": 34615.91762068596
+    }
+   ],
+   "passing_states": 0,
+   "present": false,
+   "top_cos_median": -0.9149280139151315,
+   "rest_cos_median": -0.29907495952672514,
+   "top_below_rest_by_0p2": true
+  },
+  "pd_b1048576_lr0.02_s20261001": {
+   "states": [
+    {
+     "step": 46,
+     "condition": true,
+     "gate": true,
+     "top_cos_momentum": -0.9462183191092298,
+     "top_cos_stale_free": 0.9997831102753889,
+     "rest_cos_momentum": -0.3916023751438451,
+     "top_staleness_over_signal": 1.0744713443009433,
+     "top_noise_over_signal": 0.008329167032262934,
+     "all_staleness_over_signal": 1.0778152349857661,
+     "all_noise_over_signal": 0.01576084157894933,
+     "momentum_stiff_share_over_chance": 50155.21880752766
+    },
+    {
+     "step": 65,
+     "condition": true,
+     "gate": true,
+     "top_cos_momentum": -0.8421199193293691,
+     "top_cos_stale_free": 0.9994168351581842,
+     "rest_cos_momentum": -0.3708051461922388,
+     "top_staleness_over_signal": 1.0427762251890875,
+     "top_noise_over_signal": 0.011685755572101648,
+     "all_staleness_over_signal": 1.0489482055279185,
+     "all_noise_over_signal": 0.024456199005213702,
+     "momentum_stiff_share_over_chance": 30120.564137849404
+    },
+    {
+     "step": 83,
+     "condition": true,
+     "gate": true,
+     "top_cos_momentum": -0.8947467023799681,
+     "top_cos_stale_free": 0.9994881090203542,
+     "rest_cos_momentum": -0.40177691790777437,
+     "top_staleness_over_signal": 1.063327928290553,
+     "top_noise_over_signal": 0.009794072581322298,
+     "all_staleness_over_signal": 1.0652884808455294,
+     "all_noise_over_signal": 0.0243426139040046,
+     "momentum_stiff_share_over_chance": 32612.11784394079
+    }
+   ],
+   "passing_states": 3,
+   "present": true,
+   "top_cos_median": -0.8947467023799681,
+   "rest_cos_median": -0.3916023751438451,
+   "top_below_rest_by_0p2": true
+  },
+  "muon_1M_no_weaker_than_262K": true,
+  "pd_1M_no_weaker_than_262K": true
+ },
+ "c": {
+  "muon_b262144_lr0.01_s20261001": {
+   "muon_ns_data_cos_median": 0.9996824520165402,
+   "muon_ns_cos_median": 0.9993293517410944,
+   "muon_svd_data_cos_median": 0.999938323943397,
+   "pd025_data_cos_median": 0.9997171168551198,
+   "algebra_min": 0.9999999999339491,
+   "algebra_ok": true,
+   "gain_max_over_median": 1.0547481775283813,
+   "outcome": "deprioritize"
+  },
+  "pd_b262144_lr0.01_s20261001": {
+   "muon_ns_data_cos_median": 0.9996982650611885,
+   "muon_ns_cos_median": 0.9992430985173603,
+   "muon_svd_data_cos_median": 0.9999296010978252,
+   "pd025_data_cos_median": 0.9997458445397736,
+   "algebra_min": 0.99999999994461,
+   "algebra_ok": true,
+   "gain_max_over_median": 1.0622502565383911,
+   "outcome": "deprioritize"
+  }
+ },
+ "checks": {
+  "muon_b262144_lr0.01_s20261001": [
+   {
+    "step": 40,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.9965927004814148,
+     "min_cos": 0.9881200133356944
+    },
+    "final": null,
+    "norm_check": 4.132845603315323e-05,
+    "spread_ratio": 1.1878456381744118,
+    "replay_gap": 0.05042622994310545,
+    "replay_gap_expected": 0.03400909837477066,
+    "kappa_mean": 0.9003052716096984,
+    "clipped_fraction": 0.425
+   },
+   {
+    "step": 120,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.998212993144989,
+     "min_cos": 0.9969436496284345
+    },
+    "final": null,
+    "norm_check": 9.488127804378701e-05,
+    "spread_ratio": 1.0379738330634787,
+    "replay_gap": 0.0781982748615764,
+    "replay_gap_expected": 0.046489098290519164,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   },
+   {
+    "step": 183,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.9988983273506165,
+     "min_cos": 0.9978876515216597
+    },
+    "final": null,
+    "norm_check": 8.432831398454802e-05,
+    "spread_ratio": 1.0403124804441293,
+    "replay_gap": 0.10441833693285689,
+    "replay_gap_expected": 0.059980849111674145,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   },
+   {
+    "step": 280,
+    "gate": true,
+    "ns": {
+     "median_cos": 0.9990291595458984,
+     "min_cos": 0.9983376027204152
+    },
+    "final": null,
+    "norm_check": 0.00012342890974411847,
+    "spread_ratio": 1.0177186100563527,
+    "replay_gap": 0.15355223584690095,
+    "replay_gap_expected": 0.08053335021151119,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   },
+   {
+    "step": 368,
+    "gate": true,
+    "ns": {
+     "median_cos": 0.9992750287055969,
+     "min_cos": 0.9987597645090738
+    },
+    "final": {
+     "relative_error": 0.013053789734840393,
+     "cos": 0.9999148658884673,
+     "expected_truncation": 0.014780882941434608
+    },
+    "norm_check": 0.000210321855130441,
+    "spread_ratio": 0.971793778019055,
+    "replay_gap": 0.5874194230362021,
+    "replay_gap_expected": 0.3664452808315899,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   }
+  ],
+  "pd_b262144_lr0.01_s20261001": [
+   {
+    "step": 40,
+    "gate": true,
+    "ns": null,
+    "final": null,
+    "norm_check": 6.886246398904576e-05,
+    "spread_ratio": 1.1832560141807236,
+    "replay_gap": 0.03245678767193596,
+    "replay_gap_expected": 0.020843111253507633,
+    "kappa_mean": 0.8435956315136819,
+    "clipped_fraction": 0.6
+   },
+   {
+    "step": 120,
+    "gate": true,
+    "ns": null,
+    "final": null,
+    "norm_check": 0.00018236261664076703,
+    "spread_ratio": 1.0913381185984268,
+    "replay_gap": 0.07781973581230753,
+    "replay_gap_expected": 0.04189877792267674,
+    "kappa_mean": 0.9947044703517882,
+    "clipped_fraction": 0.1
+   },
+   {
+    "step": 183,
+    "gate": false,
+    "ns": null,
+    "final": null,
+    "norm_check": 0.0002007814243519002,
+    "spread_ratio": 1.0866102727066878,
+    "replay_gap": 0.1327205934388765,
+    "replay_gap_expected": 0.0606390587397878,
+    "kappa_mean": 0.9858205210331719,
+    "clipped_fraction": 0.225
+   },
+   {
+    "step": 280,
+    "gate": false,
+    "ns": null,
+    "final": null,
+    "norm_check": 0.0001861579218006548,
+    "spread_ratio": 1.0256579672157615,
+    "replay_gap": 0.15544942599551662,
+    "replay_gap_expected": 0.06971291125466673,
+    "kappa_mean": 0.9934704786383595,
+    "clipped_fraction": 0.125
+   },
+   {
+    "step": 368,
+    "gate": true,
+    "ns": null,
+    "final": {
+     "relative_error": 0.013863496482372284,
+     "cos": 0.9999044253411167,
+     "expected_truncation": 0.014780882941434608
+    },
+    "norm_check": 0.0005548039214361848,
+    "spread_ratio": 0.9916382720281349,
+    "replay_gap": 0.6589146344767456,
+    "replay_gap_expected": 0.3439711364113059,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   }
+  ],
+  "muon_b1048576_lr0.01_s20261001": [
+   {
+    "step": 20,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.9979480504989624,
+     "min_cos": 0.9960404809808134
+    },
+    "final": null,
+    "norm_check": 1.6611941913292477e-05,
+    "spread_ratio": 1.0897930569118797,
+    "replay_gap": 0.03676870717191424,
+    "replay_gap_expected": 0.032107513253239024,
+    "kappa_mean": 0.8551987485326494,
+    "clipped_fraction": 0.55
+   },
+   {
+    "step": 46,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.9196820259094238,
+     "min_cos": 0.8695582999242895
+    },
+    "final": null,
+    "norm_check": 1.6540950708534817e-05,
+    "spread_ratio": 1.0488417004252635,
+    "replay_gap": 0.026876445332090156,
+    "replay_gap_expected": 0.024967785412239856,
+    "kappa_mean": 0.9578672888492765,
+    "clipped_fraction": 0.175
+   },
+   {
+    "step": 65,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.9851802587509155,
+     "min_cos": 0.9364865196311607
+    },
+    "final": null,
+    "norm_check": 2.1984833165007937e-05,
+    "spread_ratio": 1.0460901999616439,
+    "replay_gap": 0.03232134388311165,
+    "replay_gap_expected": 0.027384278653217277,
+    "kappa_mean": 0.9940841211864747,
+    "clipped_fraction": 0.05
+   },
+   {
+    "step": 83,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.9963299632072449,
+     "min_cos": 0.9888707628507164
+    },
+    "final": null,
+    "norm_check": 2.5919437899463994e-05,
+    "spread_ratio": 1.0141755576357654,
+    "replay_gap": 0.04296461106973664,
+    "replay_gap_expected": 0.03609687683236139,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   },
+   {
+    "step": 92,
+    "gate": false,
+    "ns": {
+     "median_cos": 0.9976621270179749,
+     "min_cos": 0.995769412000259
+    },
+    "final": {
+     "relative_error": 0.015616469085216522,
+     "cos": 0.9998787031579202,
+     "expected_truncation": 0.014780882941434608
+    },
+    "norm_check": 6.715844527977533e-05,
+    "spread_ratio": 1.0234922885907132,
+    "replay_gap": 0.15985305524805318,
+    "replay_gap_expected": 0.1402463218036823,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   }
+  ],
+  "pd_b1048576_lr0.02_s20261001": [
+   {
+    "step": 20,
+    "gate": true,
+    "ns": null,
+    "final": null,
+    "norm_check": 1.4246047369402599e-05,
+    "spread_ratio": 1.1683068401105756,
+    "replay_gap": 0.014481544567883585,
+    "replay_gap_expected": 0.011965169857276643,
+    "kappa_mean": 0.6133594265868527,
+    "clipped_fraction": 1.0
+   },
+   {
+    "step": 46,
+    "gate": true,
+    "ns": null,
+    "final": null,
+    "norm_check": 3.948464669680381e-05,
+    "spread_ratio": 1.0611780897655236,
+    "replay_gap": 0.02151277883621406,
+    "replay_gap_expected": 0.018946984229097043,
+    "kappa_mean": 0.7641638432638086,
+    "clipped_fraction": 0.675
+   },
+   {
+    "step": 65,
+    "gate": true,
+    "ns": null,
+    "final": null,
+    "norm_check": 4.682465357692735e-05,
+    "spread_ratio": 1.0633020885408642,
+    "replay_gap": 0.03822890669884081,
+    "replay_gap_expected": 0.031122941579627056,
+    "kappa_mean": 0.942414029502342,
+    "clipped_fraction": 0.225
+   },
+   {
+    "step": 83,
+    "gate": true,
+    "ns": null,
+    "final": null,
+    "norm_check": 4.3309970136528445e-05,
+    "spread_ratio": 1.0575880033548044,
+    "replay_gap": 0.03929859620536088,
+    "replay_gap_expected": 0.031169069219362376,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   },
+   {
+    "step": 92,
+    "gate": true,
+    "ns": null,
+    "final": {
+     "relative_error": 0.0169351939111948,
+     "cos": 0.9998581096530188,
+     "expected_truncation": 0.014780882941434608
+    },
+    "norm_check": 5.173370284393971e-05,
+    "spread_ratio": 1.0604097018804928,
+    "replay_gap": 0.14792878064589834,
+    "replay_gap_expected": 0.12392703851672067,
+    "kappa_mean": 1.0,
+    "clipped_fraction": 0.0
+   }
+  ]
+ },
+ "b_exact": {
+  "muon_b1048576_lr0.01_s20261001": {
+   "states": [
+    {
+     "step": 46,
+     "condition": true,
+     "gate": true,
+     "ns": {
+      "median_cos": 0.999453067779541,
+      "min_cos": 0.9985610576566613
+     },
+     "top_cos_momentum": -0.8319266244991549,
+     "rest_cos_momentum": -0.298406172147703,
+     "top_staleness_over_signal": 1.071183383333619,
+     "top_noise_over_signal": 0.012114557486493153
+    },
+    {
+     "step": 65,
+     "condition": true,
+     "gate": true,
+     "ns": {
+      "median_cos": 0.9996071457862854,
+      "min_cos": 0.9987676440371314
+     },
+     "top_cos_momentum": -0.9382116957022355,
+     "rest_cos_momentum": -0.2925471754380987,
+     "top_staleness_over_signal": 1.0716894088431699,
+     "top_noise_over_signal": 0.00972844884574008
+    },
+    {
+     "step": 83,
+     "condition": true,
+     "gate": true,
+     "ns": {
+      "median_cos": 0.9997115135192871,
+      "min_cos": 0.9990946759250053
+     },
+     "top_cos_momentum": -0.9143390112625784,
+     "rest_cos_momentum": -0.3933211656876584,
+     "top_staleness_over_signal": 1.0585114405966682,
+     "top_noise_over_signal": 0.011576771718912497
+    }
+   ],
+   "passing_states": 3,
+   "present": true
+  },
+  "pd_b1048576_lr0.02_s20261001": {
+   "states": [
+    {
+     "step": 46,
+     "condition": true,
+     "gate": true,
+     "ns": null,
+     "top_cos_momentum": -0.9487274444288691,
+     "rest_cos_momentum": -0.38774408974066094,
+     "top_staleness_over_signal": 1.074893126826929,
+     "top_noise_over_signal": 0.008289671839812877
+    },
+    {
+     "step": 65,
+     "condition": true,
+     "gate": true,
+     "ns": null,
+     "top_cos_momentum": -0.8418508134541512,
+     "rest_cos_momentum": -0.3677703989966163,
+     "top_staleness_over_signal": 1.0421626273860398,
+     "top_noise_over_signal": 0.0115840006006064
+    },
+    {
+     "step": 83,
+     "condition": true,
+     "gate": true,
+     "ns": null,
+     "top_cos_momentum": -0.8927088036020953,
+     "rest_cos_momentum": -0.4021366288246235,
+     "top_staleness_over_signal": 1.0624558426922366,
+     "top_noise_over_signal": 0.009668485649021539
+    }
+   ],
+   "passing_states": 3,
+   "present": true
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "completed_primary_momentum_component_passes_both_methods",
+  "new_gpu_runs": 44,
+  "reused_runs": 12,
+  "gpu_hours": 31.662777777777777,
+  "summary": {
+    "muon": {
+      "primary_passed": true,
+      "mean_small_gain": 0.0009500935358688345,
+      "mean_large_gain": 0.04143634985114719,
+      "mean_interaction": 0.04048625631527836,
+      "matched_interactions_by_seed": [
+        -0.0045933080576325835,
+        0.016460093068446646
+      ],
+      "control_lr_base_high_gain": 0.03136478028779388,
+      "extended_high_gain": 0.04219650347996495
+    },
+    "spd": {
+      "primary_passed": true,
+      "mean_small_gain": 0.009200231310330098,
+      "mean_large_gain": 0.03914606239707097,
+      "mean_interaction": 0.02994583108674087,
+      "matched_interactions_by_seed": [
+        0.024550993522958642,
+        -0.007111953219840039
+      ],
+      "control_lr_base_high_gain": 0.04938867759393384,
+      "extended_high_gain": 0.02154160442594799
+    }
+  },
+  "all_execution_checks_passed": true,
+  "independent_confirmation": false,
+  "batch_common_loss_growth_still_unresolved": true,
+  "robust_five_method_ordering_still_failed": true,
+  "full_goal_qualified": false,
+  "sealed_test_scored": false,
+  "base_report_sha256": "ce773f98d36a04c2c8e049eed050874a4130e5403a3574132f5de53be283f7eb",
+  "final_report_sha256": "b5ef18b281bd1e53555a2a45449419611215ade859bae585944a384f27a3c866"
+}

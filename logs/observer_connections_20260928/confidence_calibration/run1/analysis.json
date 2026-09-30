@@ -1,0 +1,4587 @@
+{
+  "status": "complete",
+  "scope": "Six fixed SOAP-PD schedule endpoints, one seed, two fixed contiguous 16-sequence banks. Select logit scale on one bank and score the other. The finite-grid materiality readings are neither significance nor equivalence tests, and identify no causal training mechanism or phase clock.",
+  "labels": [
+    "h1_b08",
+    "h1_b09",
+    "h1_warm",
+    "h2_b08",
+    "h2_b09",
+    "h2_warm"
+  ],
+  "scales": [
+    0.8,
+    0.9,
+    1.0,
+    1.1,
+    1.2
+  ],
+  "materiality_threshold": 0.005,
+  "input_manifest": {
+    "run1/result.json": {
+      "bytes": 154609,
+      "sha256": "84f16eab362e97db8804400311ade873bef2c27bdc0846a94ba1f3d4b271975f"
+    },
+    "run1/per_token.npz": {
+      "bytes": 6292464,
+      "sha256": "1689a0c0980ee607bbca666cace68a2d4269cd9af19204b339bac8fd6dab7002"
+    },
+    "PROTOCOL.md": {
+      "bytes": 7516,
+      "sha256": "18d468f87c86f2718efc969e300427f7b432b27da06ea45d435d968cff247837"
+    },
+    "analyze.py": {
+      "bytes": 20982,
+      "sha256": "8043217f83a92a274297636c8de08a627315bedd7f4676c16a896328b9147235"
+    }
+  },
+  "synthetic_qualification": {
+    "status": "passed",
+    "exact_tie_rules": true,
+    "opposite_bank_mapping": true,
+    "exact_scale_one_reduction": true,
+    "correction_signs": true,
+    "original_loser_gate": true,
+    "boundary_and_all_one_gates": true,
+    "original_raw_order_and_fold_disagreement_gates": true,
+    "secondary_original_order": true,
+    "scientific_outputs_read": false
+  },
+  "producer_qualification": {
+    "derivative_finite_difference_error": 1.413474892686395e-11,
+    "common_shift_error": 5.995204332975845e-15,
+    "repeat_logits_error": 0.0,
+    "repeat_forward_seconds": 0.40126705169677734,
+    "first_sequence_seconds": 1.4330343939363956,
+    "forecast_seconds": 405.6664364086464,
+    "max_scale_derivative_identity_error": 5.445643935786393e-14,
+    "max_fp64_fp32_scale_one_nll_error": 3.49881697161436e-05
+  },
+  "numerical_checks": {
+    "max_scale_derivative_identity_error": 5.445643935786393e-14,
+    "minimum_scale_curvature": 0.012183985118080078,
+    "scientific_sequences": 192,
+    "prediction_token_positions": 98304,
+    "grid_token_nlls": 491520,
+    "scientific_shape": [
+      6,
+      32,
+      5,
+      512
+    ]
+  },
+  "models": [
+    {
+      "label": "h1_b08",
+      "bank_grid_means": [
+        [
+          5.075026262434613,
+          4.9015702050147265,
+          4.838503962975743,
+          4.860517950279401,
+          4.9458359975833215
+        ],
+        [
+          4.5640379475892,
+          4.387096920937067,
+          4.317127455153109,
+          4.326440098440355,
+          4.393295470670484
+        ]
+      ],
+      "folds": [
+        {
+          "label": "h1_b08",
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "fit_bank_index": 0,
+          "score_bank_index": 1,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.838503962975743,
+          "fit_raw_nll": 4.838503962975743,
+          "raw_nll": 4.317127455153109,
+          "calibrated_nll": 4.317127455153109,
+          "correction": 0.0
+        },
+        {
+          "label": "h1_b08",
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "fit_bank_index": 1,
+          "score_bank_index": 0,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.317127455153109,
+          "fit_raw_nll": 4.317127455153109,
+          "raw_nll": 4.838503962975743,
+          "calibrated_nll": 4.838503962975743,
+          "correction": 0.0
+        }
+      ],
+      "pooled_raw_nll": 4.577815709064426,
+      "pooled_calibrated_nll": 4.577815709064426,
+      "pooled_correction": 0.0,
+      "all_selections_one": true,
+      "per_sequence_calibrated_nll": [
+        4.815860534062736,
+        4.51516239720907,
+        4.337771389825205,
+        5.107794215881571,
+        4.987915984140136,
+        4.641872094579833,
+        5.174632275030823,
+        4.8015266786042945,
+        4.96541698823176,
+        4.883217966788296,
+        4.639280999308231,
+        5.062365110977777,
+        4.892615382560203,
+        4.865179312791988,
+        4.838278000829144,
+        4.887174076790821,
+        4.60132256086506,
+        4.9216852576344845,
+        3.807711673367172,
+        4.73326511667964,
+        4.459529590297532,
+        3.9604858416193025,
+        4.112327968109824,
+        4.0498254970901595,
+        4.055723694502465,
+        4.122972577201607,
+        4.154498679577935,
+        4.434028710535485,
+        4.385855416877904,
+        4.525929116247599,
+        4.33872416352161,
+        4.4101534183219755
+      ]
+    },
+    {
+      "label": "h1_b09",
+      "bank_grid_means": [
+        [
+          5.2060119092775174,
+          5.033869474840191,
+          4.9705936621639095,
+          4.992477836327017,
+          5.078448477228122
+        ],
+        [
+          4.653320611020191,
+          4.480811170471874,
+          4.414110382322594,
+          4.426535426816787,
+          4.496775256553226
+        ]
+      ],
+      "folds": [
+        {
+          "label": "h1_b09",
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "fit_bank_index": 0,
+          "score_bank_index": 1,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.9705936621639095,
+          "fit_raw_nll": 4.9705936621639095,
+          "raw_nll": 4.414110382322594,
+          "calibrated_nll": 4.414110382322594,
+          "correction": 0.0
+        },
+        {
+          "label": "h1_b09",
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "fit_bank_index": 1,
+          "score_bank_index": 0,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.414110382322594,
+          "fit_raw_nll": 4.414110382322594,
+          "raw_nll": 4.9705936621639095,
+          "calibrated_nll": 4.9705936621639095,
+          "correction": 0.0
+        }
+      ],
+      "pooled_raw_nll": 4.692352022243252,
+      "pooled_calibrated_nll": 4.692352022243252,
+      "pooled_correction": 0.0,
+      "all_selections_one": true,
+      "per_sequence_calibrated_nll": [
+        4.96269657111378,
+        4.560830643876188,
+        4.4322575870935665,
+        5.212015501239538,
+        5.118077291080534,
+        4.979372487678032,
+        5.315449710908268,
+        4.9364751976207035,
+        5.126264679208821,
+        5.029868045515037,
+        4.7013225847658475,
+        5.178892861135985,
+        4.945796066749716,
+        4.957587277269189,
+        4.943480535062134,
+        5.129111554305208,
+        4.685063599313438,
+        4.995283631950935,
+        3.880252076099805,
+        4.8258131710019,
+        4.533916330134611,
+        4.02978410291091,
+        4.212648827901481,
+        4.230317142942109,
+        4.233585926200291,
+        4.228103021643793,
+        4.238778809825322,
+        4.562377589669781,
+        4.458082387456309,
+        4.585897315978609,
+        4.3975437950405745,
+        4.528318389091639
+      ]
+    },
+    {
+      "label": "h1_warm",
+      "bank_grid_means": [
+        [
+          5.120263440923649,
+          4.950876251138159,
+          4.891404642023814,
+          4.916917083108361,
+          5.005792425174306
+        ],
+        [
+          4.595719022831988,
+          4.419709368751052,
+          4.350118582585378,
+          4.359816598300247,
+          4.427279870155859
+        ]
+      ],
+      "folds": [
+        {
+          "label": "h1_warm",
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "fit_bank_index": 0,
+          "score_bank_index": 1,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.891404642023814,
+          "fit_raw_nll": 4.891404642023814,
+          "raw_nll": 4.350118582585379,
+          "calibrated_nll": 4.350118582585379,
+          "correction": 0.0
+        },
+        {
+          "label": "h1_warm",
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "fit_bank_index": 1,
+          "score_bank_index": 0,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.350118582585378,
+          "fit_raw_nll": 4.350118582585378,
+          "raw_nll": 4.891404642023814,
+          "calibrated_nll": 4.891404642023814,
+          "correction": 0.0
+        }
+      ],
+      "pooled_raw_nll": 4.620761612304596,
+      "pooled_calibrated_nll": 4.620761612304596,
+      "pooled_correction": 0.0,
+      "all_selections_one": true,
+      "per_sequence_calibrated_nll": [
+        4.847478837196624,
+        4.492610964024529,
+        4.395338266001113,
+        5.122170590605515,
+        5.02713334826971,
+        4.724736816705711,
+        5.268093768928398,
+        4.811947451806477,
+        5.066605945212416,
+        4.958585448286636,
+        4.670115010143363,
+        5.155308832626501,
+        4.903724468621014,
+        4.895155640940411,
+        4.896542073127899,
+        5.026926809884715,
+        4.6564734245162445,
+        4.928338126959365,
+        3.8627414996756206,
+        4.781702173576468,
+        4.5013548786024105,
+        3.975714797701311,
+        4.165217191378087,
+        4.082641556804411,
+        4.114112194019439,
+        4.184471144920719,
+        4.21262243151817,
+        4.480414450760733,
+        4.377990302538381,
+        4.4953383851430875,
+        4.361977863306057,
+        4.420786899945557
+      ]
+    },
+    {
+      "label": "h2_b08",
+      "bank_grid_means": [
+        [
+          4.541406345948015,
+          4.389123041734683,
+          4.341475133969965,
+          4.37116712489569,
+          4.45705000498571
+        ],
+        [
+          4.031194014826077,
+          3.8766637517750264,
+          3.82197192570827,
+          3.8388049670827735,
+          3.906574834054376
+        ]
+      ],
+      "folds": [
+        {
+          "label": "h2_b08",
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "fit_bank_index": 0,
+          "score_bank_index": 1,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.341475133969965,
+          "fit_raw_nll": 4.341475133969965,
+          "raw_nll": 3.8219719257082696,
+          "calibrated_nll": 3.8219719257082696,
+          "correction": 0.0
+        },
+        {
+          "label": "h2_b08",
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "fit_bank_index": 1,
+          "score_bank_index": 0,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 3.82197192570827,
+          "fit_raw_nll": 3.82197192570827,
+          "raw_nll": 4.341475133969966,
+          "calibrated_nll": 4.341475133969966,
+          "correction": 0.0
+        }
+      ],
+      "pooled_raw_nll": 4.081723529839118,
+      "pooled_calibrated_nll": 4.081723529839118,
+      "pooled_correction": 0.0,
+      "all_selections_one": true,
+      "per_sequence_calibrated_nll": [
+        4.28599394515936,
+        4.053754350306604,
+        3.832278609215244,
+        4.64401655084315,
+        4.422608364846102,
+        4.134601858390351,
+        4.7154430824216576,
+        4.276401298570395,
+        4.404996252830075,
+        4.342706608919997,
+        4.283498761349218,
+        4.570913162361725,
+        4.510663983327657,
+        4.307322553682926,
+        4.3432496534591305,
+        4.335153107835856,
+        4.088568466848882,
+        4.454273676607982,
+        3.4045785206122785,
+        4.218444185896437,
+        4.011058021834988,
+        3.4288875788339874,
+        3.5277572192789464,
+        3.482522877942525,
+        3.4481440884323833,
+        3.548123324746042,
+        3.709292785338852,
+        3.9909778899101864,
+        3.7097956477805507,
+        4.138560281864044,
+        4.008468564633004,
+        3.9820976807712234
+      ]
+    },
+    {
+      "label": "h2_b09",
+      "bank_grid_means": [
+        [
+          4.548560778109576,
+          4.3946134755905675,
+          4.34474322759635,
+          4.372126807653946,
+          4.455836062267607
+        ],
+        [
+          4.034519332667072,
+          3.881465074914499,
+          3.827828638384243,
+          3.8454660558695863,
+          3.9138701300514898
+        ]
+      ],
+      "folds": [
+        {
+          "label": "h2_b09",
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "fit_bank_index": 0,
+          "score_bank_index": 1,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.34474322759635,
+          "fit_raw_nll": 4.34474322759635,
+          "raw_nll": 3.827828638384243,
+          "calibrated_nll": 3.827828638384243,
+          "correction": 0.0
+        },
+        {
+          "label": "h2_b09",
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "fit_bank_index": 1,
+          "score_bank_index": 0,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 3.827828638384243,
+          "fit_raw_nll": 3.827828638384243,
+          "raw_nll": 4.34474322759635,
+          "calibrated_nll": 4.34474322759635,
+          "correction": 0.0
+        }
+      ],
+      "pooled_raw_nll": 4.086285932990297,
+      "pooled_calibrated_nll": 4.086285932990297,
+      "pooled_correction": 0.0,
+      "all_selections_one": true,
+      "per_sequence_calibrated_nll": [
+        4.309674452783122,
+        4.042063023896054,
+        3.8486498042649786,
+        4.619074958579988,
+        4.438193078786149,
+        4.1332468347490305,
+        4.710094870033938,
+        4.25787120888819,
+        4.481367718918283,
+        4.3422306102691905,
+        4.272658301980208,
+        4.543314978048475,
+        4.44728184379384,
+        4.338833272178588,
+        4.3755273981695275,
+        4.355809286202039,
+        4.098190751921784,
+        4.459273271007488,
+        3.3967208189786318,
+        4.2475853962933385,
+        3.9997397422485825,
+        3.4653083888184826,
+        3.5199227455077313,
+        3.5216779327440975,
+        3.4612307620852993,
+        3.593834422459322,
+        3.688261173016623,
+        3.9577498609971027,
+        3.741539532377175,
+        4.10574795312223,
+        3.9877722863542253,
+        4.000703176215772
+      ]
+    },
+    {
+      "label": "h2_warm",
+      "bank_grid_means": [
+        [
+          4.527324462424562,
+          4.376652379628391,
+          4.3296922928360315,
+          4.359425686409052,
+          4.444890518354908
+        ],
+        [
+          4.013817813892831,
+          3.8615442554158723,
+          3.809023095273024,
+          3.827790231105035,
+          3.89718907023772
+        ]
+      ],
+      "folds": [
+        {
+          "label": "h2_warm",
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "fit_bank_index": 0,
+          "score_bank_index": 1,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 4.3296922928360315,
+          "fit_raw_nll": 4.3296922928360315,
+          "raw_nll": 3.809023095273024,
+          "calibrated_nll": 3.809023095273024,
+          "correction": 0.0
+        },
+        {
+          "label": "h2_warm",
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "fit_bank_index": 1,
+          "score_bank_index": 0,
+          "fit_sequences": 16,
+          "score_sequences": 16,
+          "score_tokens": 8192,
+          "selected_index": 2,
+          "selected_scale": 1.0,
+          "boundary": false,
+          "selected_fit_nll": 3.809023095273024,
+          "fit_raw_nll": 3.809023095273024,
+          "raw_nll": 4.329692292836031,
+          "calibrated_nll": 4.329692292836031,
+          "correction": 0.0
+        }
+      ],
+      "pooled_raw_nll": 4.069357694054528,
+      "pooled_calibrated_nll": 4.069357694054528,
+      "pooled_correction": 0.0,
+      "all_selections_one": true,
+      "per_sequence_calibrated_nll": [
+        4.283573884888229,
+        4.035258993871406,
+        3.844517598975525,
+        4.626223397687515,
+        4.44280107303757,
+        4.109059259674648,
+        4.717241536984764,
+        4.259212312265884,
+        4.430849833132578,
+        4.348276146143206,
+        4.246491736216714,
+        4.500966703277715,
+        4.458367096898018,
+        4.327458390459022,
+        4.309930771045701,
+        4.334847950818,
+        4.055880019915325,
+        4.437543449309007,
+        3.374644113148622,
+        4.2137718550897985,
+        4.022427599974474,
+        3.4268735470433667,
+        3.524141346060561,
+        3.508496342422145,
+        3.441412150761149,
+        3.531553387230136,
+        3.6839010691733898,
+        3.975179229225392,
+        3.702051892808262,
+        4.106634000219301,
+        3.978114359117635,
+        3.961745162869825
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "horizon": 1,
+      "primary": true,
+      "warm_label": "h1_warm",
+      "constant_label": "h1_b08",
+      "expected_raw_gap_sign": 1,
+      "materiality_threshold": 0.005,
+      "folds": [
+        {
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": 0.03299112743227006,
+          "calibrated_gap": 0.03299112743227006,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        },
+        {
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": 0.052900679048071275,
+          "calibrated_gap": 0.052900679048071275,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        }
+      ],
+      "pooled": {
+        "raw_gap": 0.04294590324017067,
+        "calibrated_gap": 0.04294590324017067,
+        "gap_change": 0.0,
+        "warm_correction": 0.0,
+        "constant_correction": 0.0
+      },
+      "gates": {
+        "raw_order_reproduced_both_banks": true,
+        "all_compared_selections_interior": true,
+        "differential_signs_agree": true,
+        "correction_toward_original_zero_both_folds": false,
+        "absolute_gap_shrinks_both_folds": false,
+        "original_loser_improves_both_folds": false,
+        "calibrated_original_order_both_folds": true,
+        "pooled_material_correction": false,
+        "pooled_differential_below_material": true,
+        "all_compared_selections_one": true
+      },
+      "classification": "coarse_grid_resolves_no_finite_correction",
+      "reasons": [
+        "both_models_choose_one_in_both_folds; finer_scales_not_resolved"
+      ]
+    },
+    {
+      "horizon": 1,
+      "primary": false,
+      "warm_label": "h1_warm",
+      "constant_label": "h1_b09",
+      "expected_raw_gap_sign": -1,
+      "materiality_threshold": 0.005,
+      "folds": [
+        {
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": -0.0639917997372148,
+          "calibrated_gap": -0.0639917997372148,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        },
+        {
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": -0.07918902014009532,
+          "calibrated_gap": -0.07918902014009532,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        }
+      ],
+      "pooled": {
+        "raw_gap": -0.07159040993865506,
+        "calibrated_gap": -0.07159040993865506,
+        "gap_change": 0.0,
+        "warm_correction": 0.0,
+        "constant_correction": 0.0
+      },
+      "gates": {
+        "raw_order_reproduced_both_banks": true,
+        "all_compared_selections_interior": true,
+        "differential_signs_agree": true,
+        "correction_toward_original_zero_both_folds": false,
+        "absolute_gap_shrinks_both_folds": false,
+        "original_loser_improves_both_folds": false,
+        "calibrated_original_order_both_folds": true,
+        "pooled_material_correction": false,
+        "pooled_differential_below_material": true,
+        "all_compared_selections_one": true
+      },
+      "classification": "secondary_descriptive_only",
+      "reasons": [
+        "both_models_choose_one_in_both_folds; finer_scales_not_resolved"
+      ]
+    },
+    {
+      "horizon": 2,
+      "primary": true,
+      "warm_label": "h2_warm",
+      "constant_label": "h2_b08",
+      "expected_raw_gap_sign": -1,
+      "materiality_threshold": 0.005,
+      "folds": [
+        {
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": -0.01294883043524564,
+          "calibrated_gap": -0.01294883043524564,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        },
+        {
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": -0.011782841133935129,
+          "calibrated_gap": -0.011782841133935129,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        }
+      ],
+      "pooled": {
+        "raw_gap": -0.012365835784590384,
+        "calibrated_gap": -0.012365835784590384,
+        "gap_change": 0.0,
+        "warm_correction": 0.0,
+        "constant_correction": 0.0
+      },
+      "gates": {
+        "raw_order_reproduced_both_banks": true,
+        "all_compared_selections_interior": true,
+        "differential_signs_agree": true,
+        "correction_toward_original_zero_both_folds": false,
+        "absolute_gap_shrinks_both_folds": false,
+        "original_loser_improves_both_folds": false,
+        "calibrated_original_order_both_folds": true,
+        "pooled_material_correction": false,
+        "pooled_differential_below_material": true,
+        "all_compared_selections_one": true
+      },
+      "classification": "coarse_grid_resolves_no_finite_correction",
+      "reasons": [
+        "both_models_choose_one_in_both_folds; finer_scales_not_resolved"
+      ]
+    },
+    {
+      "horizon": 2,
+      "primary": false,
+      "warm_label": "h2_warm",
+      "constant_label": "h2_b09",
+      "expected_raw_gap_sign": -1,
+      "materiality_threshold": 0.005,
+      "folds": [
+        {
+          "fold": "fit_A_score_B",
+          "fit_bank": "A",
+          "score_bank": "B",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": -0.01880554311121907,
+          "calibrated_gap": -0.01880554311121907,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        },
+        {
+          "fold": "fit_B_score_A",
+          "fit_bank": "B",
+          "score_bank": "A",
+          "warm_scale": 1.0,
+          "constant_scale": 1.0,
+          "warm_boundary": false,
+          "constant_boundary": false,
+          "raw_gap": -0.015050934760319379,
+          "calibrated_gap": -0.015050934760319379,
+          "gap_change": 0.0,
+          "warm_correction": 0.0,
+          "constant_correction": 0.0,
+          "original_loser_correction": 0.0,
+          "absolute_gap_shrinks": false,
+          "reversal": false
+        }
+      ],
+      "pooled": {
+        "raw_gap": -0.016928238935769224,
+        "calibrated_gap": -0.016928238935769224,
+        "gap_change": 0.0,
+        "warm_correction": 0.0,
+        "constant_correction": 0.0
+      },
+      "gates": {
+        "raw_order_reproduced_both_banks": true,
+        "all_compared_selections_interior": true,
+        "differential_signs_agree": true,
+        "correction_toward_original_zero_both_folds": false,
+        "absolute_gap_shrinks_both_folds": false,
+        "original_loser_improves_both_folds": false,
+        "calibrated_original_order_both_folds": true,
+        "pooled_material_correction": false,
+        "pooled_differential_below_material": true,
+        "all_compared_selections_one": true
+      },
+      "classification": "secondary_descriptive_only",
+      "reasons": [
+        "both_models_choose_one_in_both_folds; finer_scales_not_resolved"
+      ]
+    }
+  ],
+  "per_sequence_scores": [
+    {
+      "label": "h1_b08",
+      "sequence": 0,
+      "bank": "A",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.080454893690999,
+        4.891075461876753,
+        4.815860534062736,
+        4.8295998513850105,
+        4.909995243194917
+      ],
+      "raw_nll": 4.815860534062736,
+      "cross_fitted_nll": 4.815860534062736,
+      "entropy": 5.082452458429357,
+      "derivative": -0.2665919243666214,
+      "curvature": 8.865903870953726
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 1,
+      "bank": "A",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.764285844377847,
+        4.5841803056262265,
+        4.51516239720907,
+        4.530450318196083,
+        4.607331848631425
+      ],
+      "raw_nll": 4.51516239720907,
+      "cross_fitted_nll": 4.51516239720907,
+      "entropy": 4.741469249966189,
+      "derivative": -0.22630685275711743,
+      "curvature": 8.391997877578051
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 2,
+      "bank": "A",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.591528250072961,
+        4.410539638841256,
+        4.337771389825205,
+        4.344837937854556,
+        4.409227111665132
+      ],
+      "raw_nll": 4.337771389825205,
+      "cross_fitted_nll": 4.337771389825205,
+      "entropy": 4.623176672410438,
+      "derivative": -0.28540528258523246,
+      "curvature": 7.929597494842488
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 3,
+      "bank": "A",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.332821327921964,
+        5.16499418398487,
+        5.107794215881571,
+        5.137919491225782,
+        5.233887497353933
+      ],
+      "raw_nll": 5.107794215881571,
+      "cross_fitted_nll": 5.107794215881571,
+      "entropy": 5.20454515694423,
+      "derivative": -0.09675094106265905,
+      "curvature": 8.713752340999276
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 4,
+      "bank": "A",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.2153961337160935,
+        5.047156055820769,
+        4.987915984140136,
+        5.012192520756029,
+        5.099008445650359
+      ],
+      "raw_nll": 4.987915984140136,
+      "cross_fitted_nll": 4.987915984140136,
+      "entropy": 5.12340379969382,
+      "derivative": -0.13548781555368541,
+      "curvature": 8.30956510947927
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 5,
+      "bank": "A",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.87280102658965,
+        4.699688409634568,
+        4.641872094579833,
+        4.6700454320572575,
+        4.760429885313161
+      ],
+      "raw_nll": 4.641872094579833,
+      "cross_fitted_nll": 4.641872094579833,
+      "entropy": 4.745021904266512,
+      "derivative": -0.10314980968667853,
+      "curvature": 8.547545280023051
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 6,
+      "bank": "A",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.388324674699815,
+        5.226770977420875,
+        5.174632275030823,
+        5.209070623680679,
+        5.309400038034837
+      ],
+      "raw_nll": 5.174632275030823,
+      "cross_fitted_nll": 5.174632275030823,
+      "entropy": 5.22586148863322,
+      "derivative": -0.05122921360239772,
+      "curvature": 8.636330576034199
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 7,
+      "bank": "A",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.079348197823451,
+        4.885335204106253,
+        4.8015266786042945,
+        4.804278260950337,
+        4.872534244866966
+      ],
+      "raw_nll": 4.8015266786042945,
+      "cross_fitted_nll": 4.8015266786042945,
+      "entropy": 5.168576647302441,
+      "derivative": -0.3670499686981466,
+      "curvature": 8.630441810696041
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 8,
+      "bank": "A",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.169688808705199,
+        5.010724929394495,
+        4.96541698823176,
+        5.006907979934172,
+        5.112261742072311
+      ],
+      "raw_nll": 4.96541698823176,
+      "cross_fitted_nll": 4.96541698823176,
+      "entropy": 4.941814090486341,
+      "derivative": 0.02360289774541867,
+      "curvature": 8.641419907159396
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 9,
+      "bank": "A",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.144227855318501,
+        4.957381272274172,
+        4.883217966788296,
+        4.897750133365731,
+        4.978943821258396
+      ],
+      "raw_nll": 4.883217966788296,
+      "cross_fitted_nll": 4.883217966788296,
+      "entropy": 5.141557618027024,
+      "derivative": -0.2583396512387289,
+      "curvature": 8.847982267754924
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 10,
+      "bank": "A",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.882182632449416,
+        4.705958237676023,
+        4.639280999308231,
+        4.655452372156703,
+        4.732185460147729
+      ],
+      "raw_nll": 4.639280999308231,
+      "cross_fitted_nll": 4.639280999308231,
+      "entropy": 4.850003485417529,
+      "derivative": -0.21072248610929753,
+      "curvature": 8.243089252349154
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 11,
+      "bank": "A",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.265066217122163,
+        5.108234910231049,
+        5.062365110977777,
+        5.102969218926589,
+        5.208187240733826
+      ],
+      "raw_nll": 5.062365110977777,
+      "cross_fitted_nll": 5.062365110977777,
+      "entropy": 5.048841669688515,
+      "derivative": 0.013523441289262143,
+      "curvature": 8.621294438244071
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 12,
+      "bank": "A",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.090777031080064,
+        4.937503168339939,
+        4.892615382560203,
+        4.930713404818863,
+        5.030532164141139
+      ],
+      "raw_nll": 4.892615382560203,
+      "cross_fitted_nll": 4.892615382560203,
+      "entropy": 4.887020218543306,
+      "derivative": 0.005595164016897414,
+      "curvature": 8.260863844806163
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 13,
+      "bank": "A",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.075469708439318,
+        4.917457776916841,
+        4.865179312791988,
+        4.893492803655873,
+        4.981819572565368
+      ],
+      "raw_nll": 4.865179312791988,
+      "cross_fitted_nll": 4.865179312791988,
+      "entropy": 4.946278558969087,
+      "derivative": -0.0810992461770978,
+      "curvature": 8.016702734100512
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 14,
+      "bank": "A",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.092829010865734,
+        4.911882043487568,
+        4.838278000829144,
+        4.847809682802273,
+        4.919601187803265
+      ],
+      "raw_nll": 4.838278000829144,
+      "cross_fitted_nll": 4.838278000829144,
+      "entropy": 5.1201216832374365,
+      "derivative": -0.281843682408292,
+      "curvature": 8.281618063948311
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 15,
+      "bank": "A",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.155218586080653,
+        4.96624070460397,
+        4.887174076790821,
+        4.8947971727044735,
+        4.968030457900362
+      ],
+      "raw_nll": 4.887174076790821,
+      "cross_fitted_nll": 4.887174076790821,
+      "entropy": 5.206240002264757,
+      "derivative": -0.319065925473936,
+      "curvature": 8.646904498318833
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 16,
+      "bank": "B",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.850193210670649,
+        4.670060210254257,
+        4.60132256086506,
+        4.61708688844395,
+        4.694988131334447
+      ],
+      "raw_nll": 4.60132256086506,
+      "cross_fitted_nll": 4.60132256086506,
+      "entropy": 4.824311971285995,
+      "derivative": -0.22298941042093617,
+      "curvature": 8.407673940183347
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 17,
+      "bank": "B",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.135901366210322,
+        4.975763621345978,
+        4.9216852576344845,
+        4.950453478423723,
+        5.041505046897692
+      ],
+      "raw_nll": 4.9216852576344845,
+      "cross_fitted_nll": 4.9216852576344845,
+      "entropy": 5.010737573213175,
+      "derivative": -0.08905231557869175,
+      "curvature": 8.259023719174001
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 18,
+      "bank": "B",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.092555285195102,
+        3.8965635002990497,
+        3.807711673367172,
+        3.795923144447671,
+        3.8387232667779068
+      ],
+      "raw_nll": 3.807711673367172,
+      "cross_fitted_nll": 3.807711673367172,
+      "entropy": 4.266994828904716,
+      "derivative": -0.45928315553754473,
+      "curvature": 7.6387489334173715
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 19,
+      "bank": "B",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.966158145273675,
+        4.794860471535141,
+        4.73326511667964,
+        4.755671115876154,
+        4.840312260952436
+      ],
+      "raw_nll": 4.73326511667964,
+      "cross_fitted_nll": 4.73326511667964,
+      "entropy": 4.888891614456717,
+      "derivative": -0.15562649777707677,
+      "curvature": 8.363813479460227
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 20,
+      "bank": "B",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.723228558831998,
+        4.537615392528039,
+        4.459529590297532,
+        4.462985987850235,
+        4.526641490904378
+      ],
+      "raw_nll": 4.459529590297532,
+      "cross_fitted_nll": 4.459529590297532,
+      "entropy": 4.792670226995239,
+      "derivative": -0.3331406366977071,
+      "curvature": 8.11247397128636
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 21,
+      "bank": "B",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.215520009069442,
+        4.037388011035369,
+        3.9604858416193025,
+        3.9567799815902887,
+        4.005635426821592
+      ],
+      "raw_nll": 3.9604858416193025,
+      "cross_fitted_nll": 3.9604858416193025,
+      "entropy": 4.3231876643362055,
+      "derivative": -0.36270182271690327,
+      "curvature": 7.25537062162992
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 22,
+      "bank": "B",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.381732515545571,
+        4.194408780754452,
+        4.112327968109824,
+        4.107048292138187,
+        4.157119139338273
+      ],
+      "raw_nll": 4.112327968109824,
+      "cross_fitted_nll": 4.112327968109824,
+      "entropy": 4.507509274665508,
+      "derivative": -0.3951813065556829,
+      "curvature": 7.618337120304943
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 23,
+      "bank": "B",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.3091612839202575,
+        4.12508894523341,
+        4.0498254970901595,
+        4.05302055504999,
+        4.112012806254
+      ],
+      "raw_nll": 4.0498254970901595,
+      "cross_fitted_nll": 4.0498254970901595,
+      "entropy": 4.3659024101510475,
+      "derivative": -0.3160769130608877,
+      "curvature": 7.777301687026692
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 24,
+      "bank": "B",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.348687402580083,
+        4.1491714496872145,
+        4.055723694502465,
+        4.040315482897078,
+        4.081323069314054
+      ],
+      "raw_nll": 4.055723694502465,
+      "cross_fitted_nll": 4.055723694502465,
+      "entropy": 4.558258915648515,
+      "derivative": -0.5025352211460499,
+      "curvature": 7.746065888986349
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 25,
+      "bank": "B",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.404692674195081,
+        4.2112946344767455,
+        4.122972577201607,
+        4.112067539130594,
+        4.157101208102255
+      ],
+      "raw_nll": 4.122972577201607,
+      "cross_fitted_nll": 4.122972577201607,
+      "entropy": 4.577772580683422,
+      "derivative": -0.4548000034818144,
+      "curvature": 7.685997446371163
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 26,
+      "bank": "B",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.4284840775744225,
+        4.2401485127580365,
+        4.154498679577935,
+        4.144612854075758,
+        4.189804281543083
+      ],
+      "raw_nll": 4.154498679577935,
+      "cross_fitted_nll": 4.154498679577935,
+      "entropy": 4.592270488275888,
+      "derivative": -0.43777180869795274,
+      "curvature": 7.520694870185561
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 27,
+      "bank": "B",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.6556021728809345,
+        4.491020623491884,
+        4.434028710535485,
+        4.4563862540100825,
+        4.536298463184649
+      ],
+      "raw_nll": 4.434028710535485,
+      "cross_fitted_nll": 4.434028710535485,
+      "entropy": 4.565333943444141,
+      "derivative": -0.1313052329086566,
+      "curvature": 7.877731951826368
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 28,
+      "bank": "B",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.576989303532574,
+        4.425676133568631,
+        4.385855416877904,
+        4.426408101674944,
+        4.523866539712215
+      ],
+      "raw_nll": 4.385855416877904,
+      "cross_fitted_nll": 4.385855416877904,
+      "entropy": 4.336610048879476,
+      "derivative": 0.04924536799842848,
+      "curvature": 7.969916481749293
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 29,
+      "bank": "B",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.71544047096765,
+        4.567055939483813,
+        4.525929116247599,
+        4.5643928527111655,
+        4.660473975802709
+      ],
+      "raw_nll": 4.525929116247599,
+      "cross_fitted_nll": 4.525929116247599,
+      "entropy": 4.497419656294049,
+      "derivative": 0.028509459953549816,
+      "curvature": 7.907665072257759
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 30,
+      "bank": "B",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.553849031248733,
+        4.392745335637434,
+        4.33872416352161,
+        4.363810683810575,
+        4.445903806194507
+      ],
+      "raw_nll": 4.33872416352161,
+      "cross_fitted_nll": 4.33872416352161,
+      "entropy": 4.441216720195115,
+      "derivative": -0.10249255667350704,
+      "curvature": 7.858171787780235
+    },
+    {
+      "label": "h1_b08",
+      "sequence": 31,
+      "bank": "B",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.666411653730707,
+        4.484689172903618,
+        4.4101534183219755,
+        4.416078362915284,
+        4.481018617593548
+      ],
+      "raw_nll": 4.4101534183219755,
+      "cross_fitted_nll": 4.4101534183219755,
+      "entropy": 4.712535500773415,
+      "derivative": -0.30238208245143994,
+      "curvature": 7.9977926037824965
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 0,
+      "bank": "A",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.2053595269811135,
+        5.027827147091704,
+        4.96269657111378,
+        4.985781403894851,
+        5.075409312373085
+      ],
+      "raw_nll": 4.96269657111378,
+      "cross_fitted_nll": 4.96269657111378,
+      "entropy": 5.133531690867117,
+      "derivative": -0.17083511975333737,
+      "curvature": 8.795661938883084
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 1,
+      "bank": "A",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.810195004094938,
+        4.630954786176604,
+        4.560830643876188,
+        4.574175868505868,
+        4.649052117937282
+      ],
+      "raw_nll": 4.560830643876188,
+      "cross_fitted_nll": 4.560830643876188,
+      "entropy": 4.804050115552328,
+      "derivative": -0.243219471676139,
+      "curvature": 8.311977131294789
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 2,
+      "bank": "A",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.675981107977268,
+        4.499740409282407,
+        4.4322575870935665,
+        4.445929761075989,
+        4.518270733178397
+      ],
+      "raw_nll": 4.4322575870935665,
+      "cross_fitted_nll": 4.4322575870935665,
+      "entropy": 4.658748629332592,
+      "derivative": -0.22649104223902614,
+      "curvature": 8.068340390257088
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 3,
+      "bank": "A",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.437760486181634,
+        5.2709574112845665,
+        5.212015501239538,
+        5.239940005957887,
+        5.334640469340945
+      ],
+      "raw_nll": 5.212015501239538,
+      "cross_fitted_nll": 5.212015501239538,
+      "entropy": 5.331660067406374,
+      "derivative": -0.11964456616683589,
+      "curvature": 8.676443150398564
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 4,
+      "bank": "A",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.358215064421316,
+        5.184532739463568,
+        5.118077291080534,
+        5.135106916933271,
+        5.215276633310596
+      ],
+      "raw_nll": 5.118077291080534,
+      "cross_fitted_nll": 5.118077291080534,
+      "entropy": 5.327573005833645,
+      "derivative": -0.2094957147531097,
+      "curvature": 8.315490880157638
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 5,
+      "bank": "A",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.233056424098568,
+        5.049614243696567,
+        4.979372487678032,
+        4.99833689426081,
+        5.084050914367442
+      ],
+      "raw_nll": 4.979372487678032,
+      "cross_fitted_nll": 4.979372487678032,
+      "entropy": 5.195345264525119,
+      "derivative": -0.21597277684708677,
+      "curvature": 8.902535783468391
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 6,
+      "bank": "A",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.5302033232506425,
+        5.368365061954407,
+        5.315449710908268,
+        5.34990115431569,
+        5.451420548018718
+      ],
+      "raw_nll": 5.315449710908268,
+      "cross_fitted_nll": 5.315449710908268,
+      "entropy": 5.371569694654617,
+      "derivative": -0.056119983746347996,
+      "curvature": 8.721996362196867
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 7,
+      "bank": "A",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.239000568896555,
+        5.0341226913158215,
+        4.9364751976207035,
+        4.925390436069002,
+        4.981025057217642
+      ],
+      "raw_nll": 4.9364751976207035,
+      "cross_fitted_nll": 4.9364751976207035,
+      "entropy": 5.44504961799322,
+      "derivative": -0.5085744203725153,
+      "curvature": 8.645670306080868
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 8,
+      "bank": "A",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.318557253396708,
+        5.166671157528118,
+        5.126264679208821,
+        5.172531602105799,
+        5.283502422890335
+      ],
+      "raw_nll": 5.126264679208821,
+      "cross_fitted_nll": 5.126264679208821,
+      "entropy": 5.056708069368054,
+      "derivative": 0.0695566098407664,
+      "curvature": 8.638599011740428
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 9,
+      "bank": "A",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.271015326571875,
+        5.094915576059533,
+        5.029868045515037,
+        5.052854525082222,
+        5.1424494770809765
+      ],
+      "raw_nll": 5.029868045515037,
+      "cross_fitted_nll": 5.029868045515037,
+      "entropy": 5.201705795614557,
+      "derivative": -0.17183775009952013,
+      "curvature": 8.78555526073531
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 10,
+      "bank": "A",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.935639581903345,
+        4.764154235427473,
+        4.7013225847658475,
+        4.720715430365848,
+        4.800271118409986
+      ],
+      "raw_nll": 4.7013225847658475,
+      "cross_fitted_nll": 4.7013225847658475,
+      "entropy": 4.87720021038295,
+      "derivative": -0.17587762561710268,
+      "curvature": 8.181533644009763
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 11,
+      "bank": "A",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.400432345149548,
+        5.234882512915101,
+        5.178892861135985,
+        5.210210145861077,
+        5.307963233731526
+      ],
+      "raw_nll": 5.178892861135985,
+      "cross_fitted_nll": 5.178892861135985,
+      "entropy": 5.264968756772541,
+      "derivative": -0.0860758956365576,
+      "curvature": 8.715465146194735
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 12,
+      "bank": "A",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.162196792795965,
+        4.99953424581309,
+        4.945796066749716,
+        4.975861646600929,
+        5.068428062633767
+      ],
+      "raw_nll": 4.945796066749716,
+      "cross_fitted_nll": 4.945796066749716,
+      "entropy": 5.024486919348449,
+      "derivative": -0.07869085259873301,
+      "curvature": 8.343311808213457
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 13,
+      "bank": "A",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.169423804313288,
+        5.010770993145047,
+        4.957587277269189,
+        4.9857371884516475,
+        5.074953800632302
+      ],
+      "raw_nll": 4.957587277269189,
+      "cross_fitted_nll": 4.957587277269189,
+      "entropy": 5.044987397167544,
+      "derivative": -0.0874001198983543,
+      "curvature": 8.096523052946994
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 14,
+      "bank": "A",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.17746511716499,
+        5.007668155219743,
+        4.943480535062134,
+        4.961188335762424,
+        5.0404528796773045
+      ],
+      "raw_nll": 4.943480535062134,
+      "cross_fitted_nll": 4.943480535062134,
+      "entropy": 5.138259333463617,
+      "derivative": -0.19477879840148382,
+      "curvature": 8.156986852250231
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 15,
+      "bank": "A",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.371688821242531,
+        5.197200231069319,
+        5.129111554305208,
+        5.145984065988943,
+        5.228008854849653
+      ],
+      "raw_nll": 5.129111554305208,
+      "cross_fitted_nll": 5.129111554305208,
+      "entropy": 5.3497069211182655,
+      "derivative": -0.22059536681305825,
+      "curvature": 8.479165406930779
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 16,
+      "bank": "B",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.917131612523185,
+        4.745234579969637,
+        4.685063599313438,
+        4.709963720211698,
+        4.797404880702332
+      ],
+      "raw_nll": 4.685063599313438,
+      "cross_fitted_nll": 4.685063599313438,
+      "entropy": 4.8194035770046835,
+      "derivative": -0.13433997769124453,
+      "curvature": 8.467557877943163
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 17,
+      "bank": "B",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.1941164086046605,
+        5.042412837601401,
+        4.995283631950935,
+        5.029494401683806,
+        5.124779512308198
+      ],
+      "raw_nll": 4.995283631950935,
+      "cross_fitted_nll": 4.995283631950935,
+      "entropy": 5.022685762504051,
+      "derivative": -0.02740213055311541,
+      "curvature": 8.105385805961735
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 18,
+      "bank": "B",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.161759946626448,
+        3.968548675393066,
+        3.880252076099805,
+        3.868437989959668,
+        3.9114539686054837
+      ],
+      "raw_nll": 3.880252076099805,
+      "cross_fitted_nll": 3.880252076099805,
+      "entropy": 4.338956166039111,
+      "derivative": -0.4587040899393071,
+      "curvature": 7.588651064270644
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 19,
+      "bank": "B",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.060365424612731,
+        4.888658139041884,
+        4.8258131710019,
+        4.846884970733313,
+        4.930423639191387
+      ],
+      "raw_nll": 4.8258131710019,
+      "cross_fitted_nll": 4.8258131710019,
+      "entropy": 4.995138001031357,
+      "derivative": -0.16932483002945772,
+      "curvature": 8.358718700644602
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 20,
+      "bank": "B",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.781892261999228,
+        4.604995435525907,
+        4.533916330134611,
+        4.542984654255444,
+        4.611449057603922
+      ],
+      "raw_nll": 4.533916330134611,
+      "cross_fitted_nll": 4.533916330134611,
+      "entropy": 4.804880344873069,
+      "derivative": -0.27096401473845755,
+      "curvature": 7.970711843962749
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 21,
+      "bank": "B",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.276370474393945,
+        4.102819817718264,
+        4.02978410291091,
+        4.029641103277466,
+        4.081929668368677
+      ],
+      "raw_nll": 4.02978410291091,
+      "cross_fitted_nll": 4.02978410291091,
+      "entropy": 4.355733986843809,
+      "derivative": -0.32594988393289903,
+      "curvature": 7.226728908302114
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 22,
+      "bank": "B",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.474582484575003,
+        4.291518161995823,
+        4.212648827901481,
+        4.210825539452213,
+        4.264919046848849
+      ],
+      "raw_nll": 4.212648827901481,
+      "cross_fitted_nll": 4.212648827901481,
+      "entropy": 4.575542446583578,
+      "derivative": -0.36289361868209613,
+      "curvature": 7.650430942256498
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 23,
+      "bank": "B",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.488892600256561,
+        4.306434628689235,
+        4.230317142942109,
+        4.232981652789443,
+        4.292923338316903
+      ],
+      "raw_nll": 4.230317142942109,
+      "cross_fitted_nll": 4.230317142942109,
+      "entropy": 4.556357683282687,
+      "derivative": -0.3260405403405783,
+      "curvature": 7.823594175510717
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 24,
+      "bank": "B",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.5164133050603406,
+        4.3235132916685,
+        4.233585926200291,
+        4.221151830570315,
+        4.265943085540969
+      ],
+      "raw_nll": 4.233585926200291,
+      "cross_fitted_nll": 4.233585926200291,
+      "entropy": 4.706914075712378,
+      "derivative": -0.47332814951208685,
+      "curvature": 7.702383756171171
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 25,
+      "bank": "B",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.495944585953195,
+        4.310525503845104,
+        4.228103021643793,
+        4.222605486579797,
+        4.273430950605101
+      ],
+      "raw_nll": 4.228103021643793,
+      "cross_fitted_nll": 4.228103021643793,
+      "entropy": 4.62846142532282,
+      "derivative": -0.400358403679027,
+      "curvature": 7.643700007747177
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 26,
+      "bank": "B",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.505433967282887,
+        4.321679943969755,
+        4.238778809825322,
+        4.230886480139372,
+        4.277951166050074
+      ],
+      "raw_nll": 4.238778809825322,
+      "cross_fitted_nll": 4.238778809825322,
+      "entropy": 4.654290862189013,
+      "derivative": -0.4155120523636906,
+      "curvature": 7.449371075688918
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 27,
+      "bank": "B",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.769378044321746,
+        4.6120925262589125,
+        4.562377589669781,
+        4.592420633369307,
+        4.680452457005495
+      ],
+      "raw_nll": 4.562377589669781,
+      "cross_fitted_nll": 4.562377589669781,
+      "entropy": 4.619050324010059,
+      "derivative": -0.056672734340277975,
+      "curvature": 7.921362166638447
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 28,
+      "bank": "B",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.658982274883529,
+        4.502514040607229,
+        4.458082387456309,
+        4.495944698048108,
+        4.592682402253011
+      ],
+      "raw_nll": 4.458082387456309,
+      "cross_fitted_nll": 4.458082387456309,
+      "entropy": 4.4462103358310445,
+      "derivative": 0.011872051625264245,
+      "curvature": 8.173003650726303
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 29,
+      "bank": "B",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.769634477172376,
+        4.623794398406034,
+        4.585897315978609,
+        4.628178519615925,
+        4.72830131153662
+      ],
+      "raw_nll": 4.585897315978609,
+      "cross_fitted_nll": 4.585897315978609,
+      "entropy": 4.521566541572024,
+      "derivative": 0.06433077440658459,
+      "curvature": 7.96835656104992
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 30,
+      "bank": "B",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.607571393572655,
+        4.449449022221671,
+        4.3975437950405745,
+        4.424408961911142,
+        4.5081459977208205
+      ],
+      "raw_nll": 4.3975437950405745,
+      "cross_fitted_nll": 4.3975437950405745,
+      "entropy": 4.481068222177287,
+      "derivative": -0.08352442713671313,
+      "curvature": 7.826938293274211
+    },
+    {
+      "label": "h1_b09",
+      "sequence": 31,
+      "bank": "B",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.774660514484548,
+        4.598787724637559,
+        4.528318389091639,
+        4.537756186471583,
+        4.606213622193785
+      ],
+      "raw_nll": 4.528318389091639,
+      "cross_fitted_nll": 4.528318389091639,
+      "entropy": 4.794205908811872,
+      "derivative": -0.2658875197202333,
+      "curvature": 7.948409893536892
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 0,
+      "bank": "A",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.102196571833952,
+        4.917912366484967,
+        4.847478837196624,
+        4.866183128189772,
+        4.9517410700330595
+      ],
+      "raw_nll": 4.847478837196624,
+      "cross_fitted_nll": 4.847478837196624,
+      "entropy": 5.0656953616725655,
+      "derivative": -0.21821652447594228,
+      "curvature": 8.888824670903535
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 1,
+      "bank": "A",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.747812515681819,
+        4.565647039838613,
+        4.492610964024529,
+        4.502457269962613,
+        4.572951316901765
+      ],
+      "raw_nll": 4.492610964024529,
+      "cross_fitted_nll": 4.492610964024529,
+      "entropy": 4.767038333761748,
+      "derivative": -0.2744273697372196,
+      "curvature": 8.249934919315276
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 2,
+      "bank": "A",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.639685886380918,
+        4.464149357961446,
+        4.395338266001113,
+        4.405708749902407,
+        4.473255313219318
+      ],
+      "raw_nll": 4.395338266001113,
+      "cross_fitted_nll": 4.395338266001113,
+      "entropy": 4.645637070831754,
+      "derivative": -0.2502988048306399,
+      "curvature": 7.867894697244222
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 3,
+      "bank": "A",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.34606821546379,
+        5.17894147019685,
+        5.122170590605515,
+        5.1527543346131255,
+        5.249372416980251
+      ],
+      "raw_nll": 5.122170590605515,
+      "cross_fitted_nll": 5.122170590605515,
+      "entropy": 5.214862516465332,
+      "derivative": -0.09269192585981616,
+      "curvature": 8.717947160970315
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 4,
+      "bank": "A",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.261169470154969,
+        5.089676544427047,
+        5.02713334826971,
+        5.048992949442757,
+        5.134566818456925
+      ],
+      "raw_nll": 5.02713334826971,
+      "cross_fitted_nll": 5.02713334826971,
+      "entropy": 5.19212569217429,
+      "derivative": -0.16499234390458128,
+      "curvature": 8.403654887298554
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 5,
+      "bank": "A",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.9553099343298115,
+        4.782256597997733,
+        4.724736816705711,
+        4.754502820141022,
+        4.847844802394881
+      ],
+      "raw_nll": 4.724736816705711,
+      "cross_fitted_nll": 4.724736816705711,
+      "entropy": 4.819083891557751,
+      "derivative": -0.09434707485203929,
+      "curvature": 8.684838682748243
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 6,
+      "bank": "A",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.4750327425121235,
+        5.316239821945133,
+        5.268093768928398,
+        5.30788671495808,
+        5.414512421781893
+      ],
+      "raw_nll": 5.268093768928398,
+      "cross_fitted_nll": 5.268093768928398,
+      "entropy": 5.272010220718892,
+      "derivative": -0.003916451790494081,
+      "curvature": 8.77615302982498
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 7,
+      "bank": "A",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.115456765761946,
+        4.908412485854577,
+        4.811947451806477,
+        4.803363013887534,
+        4.8614933597402015
+      ],
+      "raw_nll": 4.811947451806477,
+      "cross_fitted_nll": 4.811947451806477,
+      "entropy": 5.299317750010189,
+      "derivative": -0.4873702982037122,
+      "curvature": 8.771120841111253
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 8,
+      "bank": "A",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.246167506178881,
+        5.099583226049372,
+        5.066605945212416,
+        5.120918921639074,
+        5.239773708410091
+      ],
+      "raw_nll": 5.066605945212416,
+      "cross_fitted_nll": 5.066605945212416,
+      "entropy": 4.91775952075835,
+      "derivative": 0.14884642445406646,
+      "curvature": 8.693315771084592
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 9,
+      "bank": "A",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.183603853306662,
+        5.015328905465759,
+        4.958585448286636,
+        4.9890230860671645,
+        5.084834861116777
+      ],
+      "raw_nll": 4.958585448286636,
+      "cross_fitted_nll": 4.958585448286636,
+      "entropy": 5.050427657538818,
+      "derivative": -0.09184220925218142,
+      "curvature": 8.692252748909885
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 10,
+      "bank": "A",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.907956196017361,
+        4.734239453670914,
+        4.670115010143363,
+        4.6890156105713885,
+        4.768655694012531
+      ],
+      "raw_nll": 4.670115010143363,
+      "cross_fitted_nll": 4.670115010143363,
+      "entropy": 4.8545356942879305,
+      "derivative": -0.1844206841445683,
+      "curvature": 8.261873350662732
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 11,
+      "bank": "A",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.344340322095713,
+        5.195114538286784,
+        5.155308832626501,
+        5.2012133358657255,
+        5.311480155213089
+      ],
+      "raw_nll": 5.155308832626501,
+      "cross_fitted_nll": 5.155308832626501,
+      "entropy": 5.086068191399644,
+      "derivative": 0.06924064122685668,
+      "curvature": 8.547772548052551
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 12,
+      "bank": "A",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.105989173890584,
+        4.949999790790124,
+        4.903724468621014,
+        4.940961004668033,
+        5.039994099795537
+      ],
+      "raw_nll": 4.903724468621014,
+      "cross_fitted_nll": 4.903724468621014,
+      "entropy": 4.908210121303473,
+      "derivative": -0.0044856526824589155,
+      "curvature": 8.308953532374122
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 13,
+      "bank": "A",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.098025325491717,
+        4.944168492544967,
+        4.895155640940411,
+        4.926136041536352,
+        5.016766900549895
+      ],
+      "raw_nll": 4.895155640940411,
+      "cross_fitted_nll": 4.895155640940411,
+      "entropy": 4.947030219575977,
+      "derivative": -0.05187457863556641,
+      "curvature": 7.957333654314293
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 14,
+      "bank": "A",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.123856559752287,
+        4.956967498725888,
+        4.896542073127899,
+        4.918128296627063,
+        5.000973943251073
+      ],
+      "raw_nll": 4.896542073127899,
+      "cross_fitted_nll": 4.896542073127899,
+      "entropy": 5.05215472336959,
+      "derivative": -0.15561265024169138,
+      "curvature": 8.165703781562089
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 15,
+      "bank": "A",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.271544015925862,
+        5.095382427970358,
+        5.026926809884715,
+        5.043428051661683,
+        5.124461920931601
+      ],
+      "raw_nll": 5.026926809884715,
+      "cross_fitted_nll": 5.026926809884715,
+      "entropy": 5.249635277097306,
+      "derivative": -0.22270846721259058,
+      "curvature": 8.47247492748759
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 16,
+      "bank": "B",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.8813950673910025,
+        4.712891442732678,
+        4.6564734245162445,
+        4.684785333027678,
+        4.775053914961367
+      ],
+      "raw_nll": 4.6564734245162445,
+      "cross_fitted_nll": 4.6564734245162445,
+      "entropy": 4.7543005560833675,
+      "derivative": -0.09782713156712286,
+      "curvature": 8.429818193843165
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 17,
+      "bank": "B",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.128228974423913,
+        4.975162441890524,
+        4.928338126959365,
+        4.964039713613666,
+        5.0613515804027305
+      ],
+      "raw_nll": 4.928338126959365,
+      "cross_fitted_nll": 4.928338126959365,
+      "entropy": 4.945701010968003,
+      "derivative": -0.01736288400863842,
+      "curvature": 8.225545740808265
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 18,
+      "bank": "B",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.143722509001504,
+        3.950595275885025,
+        3.8627414996756206,
+        3.8515328097386385,
+        3.8951794159926303
+      ],
+      "raw_nll": 3.8627414996756206,
+      "cross_fitted_nll": 3.8627414996756206,
+      "entropy": 4.3158947468551645,
+      "derivative": -0.4531532471795436,
+      "curvature": 7.60425814659735
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 19,
+      "bank": "B",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        5.020792916993932,
+        4.8465922867668425,
+        4.781702173576468,
+        4.801445207503068,
+        4.884372544426354
+      ],
+      "raw_nll": 4.781702173576468,
+      "cross_fitted_nll": 4.781702173576468,
+      "entropy": 4.968113755145964,
+      "derivative": -0.18641158156949628,
+      "curvature": 8.433095389064707
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 20,
+      "bank": "B",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.757431076393988,
+        4.576473676132386,
+        4.5013548786024105,
+        4.506583847607859,
+        4.571498765043852
+      ],
+      "raw_nll": 4.5013548786024105,
+      "cross_fitted_nll": 4.5013548786024105,
+      "entropy": 4.811995223812935,
+      "derivative": -0.3106403452105243,
+      "curvature": 7.99197252497836
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 21,
+      "bank": "B",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.22926796698847,
+        4.051792942064236,
+        3.975714797701311,
+        3.97305433502153,
+        4.0231165932274955
+      ],
+      "raw_nll": 3.975714797701311,
+      "cross_fitted_nll": 3.975714797701311,
+      "entropy": 4.328990603566037,
+      "derivative": -0.3532758058647278,
+      "curvature": 7.2782299469722584
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 22,
+      "bank": "B",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.426385662856443,
+        4.243119355405646,
+        4.165217191378087,
+        4.164548125400898,
+        4.219655159230129
+      ],
+      "raw_nll": 4.165217191378087,
+      "cross_fitted_nll": 4.165217191378087,
+      "entropy": 4.516594082275833,
+      "derivative": -0.3513768908977449,
+      "curvature": 7.663885049596692
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 23,
+      "bank": "B",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.355111449028541,
+        4.1645180231705385,
+        4.082641556804411,
+        4.0801021167517355,
+        4.134282679518055
+      ],
+      "raw_nll": 4.082641556804411,
+      "cross_fitted_nll": 4.082641556804411,
+      "entropy": 4.461024127511434,
+      "derivative": -0.37838257070702375,
+      "curvature": 7.872579542563658
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 24,
+      "bank": "B",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.402044457346519,
+        4.205378823907584,
+        4.114112194019439,
+        4.101217177098867,
+        4.145395469158176
+      ],
+      "raw_nll": 4.114112194019439,
+      "cross_fitted_nll": 4.114112194019439,
+      "entropy": 4.594266284415449,
+      "derivative": -0.48015409039600915,
+      "curvature": 7.785673288614954
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 25,
+      "bank": "B",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.45222076359512,
+        4.266571050771736,
+        4.184471144920719,
+        4.178893332760927,
+        4.228992149288429
+      ],
+      "raw_nll": 4.184471144920719,
+      "cross_fitted_nll": 4.184471144920719,
+      "entropy": 4.58275079609432,
+      "derivative": -0.39827965117360187,
+      "curvature": 7.597204431326446
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 26,
+      "bank": "B",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.468605310033645,
+        4.289001466821521,
+        4.21262243151817,
+        4.212319647507472,
+        4.267174046521374
+      ],
+      "raw_nll": 4.21262243151817,
+      "cross_fitted_nll": 4.21262243151817,
+      "entropy": 4.555744284010794,
+      "derivative": -0.3431218524926245,
+      "curvature": 7.552192389843934
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 27,
+      "bank": "B",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.700544822284107,
+        4.5375427285438334,
+        4.480414450760733,
+        4.501811697466705,
+        4.580605657251533
+      ],
+      "raw_nll": 4.480414450760733,
+      "cross_fitted_nll": 4.480414450760733,
+      "entropy": 4.618523211327181,
+      "derivative": -0.13810876056644764,
+      "curvature": 7.797305239416613
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 28,
+      "bank": "B",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.587790076479079,
+        4.427264846289809,
+        4.377990302538381,
+        4.410156850291875,
+        4.500621928321685
+      ],
+      "raw_nll": 4.377990302538381,
+      "cross_fitted_nll": 4.377990302538381,
+      "entropy": 4.41916766491417,
+      "derivative": -0.041177362375789776,
+      "curvature": 8.085335775832956
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 29,
+      "bank": "B",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.70414211627909,
+        4.546597593016287,
+        4.4953383851430875,
+        4.523468605543137,
+        4.609385046008848
+      ],
+      "raw_nll": 4.4953383851430875,
+      "cross_fitted_nll": 4.4953383851430875,
+      "entropy": 4.570107491948043,
+      "derivative": -0.07476910680495567,
+      "curvature": 7.891454277839657
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 30,
+      "bank": "B",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.59593837712687,
+        4.426239120769903,
+        4.361977863306057,
+        4.376390687384786,
+        4.447863790335672
+      ],
+      "raw_nll": 4.361977863306057,
+      "cross_fitted_nll": 4.361977863306057,
+      "entropy": 4.5703166240575115,
+      "derivative": -0.20833876075145363,
+      "curvature": 7.8208620147192685
+    },
+    {
+      "label": "h1_warm",
+      "sequence": 31,
+      "bank": "B",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.6778828190895805,
+        4.495608825848275,
+        4.420786899945557,
+        4.426716086085107,
+        4.4919291828054195
+      ],
+      "raw_nll": 4.420786899945557,
+      "cross_fitted_nll": 4.420786899945557,
+      "entropy": 4.724562165206052,
+      "derivative": -0.3037752652604958,
+      "curvature": 8.02718053935713
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 0,
+      "bank": "A",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.5069441987386885,
+        4.340144322452232,
+        4.28599394515936,
+        4.315383026225815,
+        4.405179405821971
+      ],
+      "raw_nll": 4.28599394515936,
+      "cross_fitted_nll": 4.28599394515936,
+      "entropy": 4.365753588384983,
+      "derivative": -0.0797596432256239,
+      "curvature": 8.299812945772864
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 1,
+      "bank": "A",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.275030060303247,
+        4.111620022858506,
+        4.053754350306604,
+        4.07316455042905,
+        4.147997410124898
+      ],
+      "raw_nll": 4.053754350306604,
+      "cross_fitted_nll": 4.053754350306604,
+      "entropy": 4.203979128903095,
+      "derivative": -0.15022477859649097,
+      "curvature": 7.67028662455253
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 2,
+      "bank": "A",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.053783562687158,
+        3.891853448155202,
+        3.832278609215244,
+        3.8455259387664036,
+        3.9100596386870916
+      ],
+      "raw_nll": 3.832278609215244,
+      "cross_fitted_nll": 3.832278609215244,
+      "entropy": 4.021525545367077,
+      "derivative": -0.18924693615183302,
+      "curvature": 7.212437860939659
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 3,
+      "bank": "A",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.813929580710828,
+        4.6759366401095495,
+        4.64401655084315,
+        4.691399343375898,
+        4.796775102009469
+      ],
+      "raw_nll": 4.64401655084315,
+      "cross_fitted_nll": 4.64401655084315,
+      "entropy": 4.5262549922257325,
+      "derivative": 0.11776155861741681,
+      "curvature": 7.881400418458386
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 4,
+      "bank": "A",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.624445356317408,
+        4.472315960069602,
+        4.422608364846102,
+        4.448529609451727,
+        4.529738969971094
+      ],
+      "raw_nll": 4.422608364846102,
+      "cross_fitted_nll": 4.422608364846102,
+      "entropy": 4.502260627228176,
+      "derivative": -0.07965226238207399,
+      "curvature": 7.50615272094076
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 5,
+      "bank": "A",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.317899296651003,
+        4.17394225865802,
+        4.134601858390351,
+        4.170590811495137,
+        4.2603737659834
+      ],
+      "raw_nll": 4.134601858390351,
+      "cross_fitted_nll": 4.134601858390351,
+      "entropy": 4.10919301367802,
+      "derivative": 0.02540884471233048,
+      "curvature": 7.465327849267831
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 6,
+      "bank": "A",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.9271654800854545,
+        4.768956867281127,
+        4.7154430824216576,
+        4.742162361814859,
+        4.828832545698739
+      ],
+      "raw_nll": 4.7154430824216576,
+      "cross_fitted_nll": 4.7154430824216576,
+      "entropy": 4.811578940003913,
+      "derivative": -0.09613585758225461,
+      "curvature": 7.98535976951517
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 7,
+      "bank": "A",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.513120386705388,
+        4.342841103591116,
+        4.276401298570395,
+        4.287711112701048,
+        4.356264737371157
+      ],
+      "raw_nll": 4.276401298570395,
+      "cross_fitted_nll": 4.276401298570395,
+      "entropy": 4.513034611987076,
+      "derivative": -0.23663331341668187,
+      "curvature": 7.725718857968282
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 8,
+      "bank": "A",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.548071904505017,
+        4.423898493858324,
+        4.404996252830075,
+        4.462743371128487,
+        4.575461695238384
+      ],
+      "raw_nll": 4.404996252830075,
+      "cross_fitted_nll": 4.404996252830075,
+      "entropy": 4.168833713430516,
+      "derivative": 0.23616253939955917,
+      "curvature": 7.604036783348228
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 9,
+      "bank": "A",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.531144462214975,
+        4.383727728195042,
+        4.342706608919997,
+        4.380045116207821,
+        4.474058595792939
+      ],
+      "raw_nll": 4.342706608919997,
+      "cross_fitted_nll": 4.342706608919997,
+      "entropy": 4.319523655938275,
+      "derivative": 0.02318295298172087,
+      "curvature": 7.779940604286338
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 10,
+      "bank": "A",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.4880312677240894,
+        4.334052121155889,
+        4.283498761349218,
+        4.309372453769739,
+        4.390585810396526
+      ],
+      "raw_nll": 4.283498761349218,
+      "cross_fitted_nll": 4.283498761349218,
+      "entropy": 4.366544928886579,
+      "derivative": -0.08304616753736227,
+      "curvature": 7.590328942015281
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 11,
+      "bank": "A",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.7476618025917166,
+        4.606514874804747,
+        4.570913162361725,
+        4.614403432512113,
+        4.715841119378231
+      ],
+      "raw_nll": 4.570913162361725,
+      "cross_fitted_nll": 4.570913162361725,
+      "entropy": 4.4914205541223655,
+      "derivative": 0.07949260823935886,
+      "curvature": 7.861619788389088
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 12,
+      "bank": "A",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.66055284291031,
+        4.53457517848638,
+        4.510663983327657,
+        4.561385620014495,
+        4.666061266044709
+      ],
+      "raw_nll": 4.510663983327657,
+      "cross_fitted_nll": 4.510663983327657,
+      "entropy": 4.33646358119385,
+      "derivative": 0.17420040213380686,
+      "curvature": 7.403595484987217
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 13,
+      "bank": "A",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.534406328509604,
+        4.370282927048125,
+        4.307322553682926,
+        4.319874877068537,
+        4.387926281470479
+      ],
+      "raw_nll": 4.307322553682926,
+      "cross_fitted_nll": 4.307322553682926,
+      "entropy": 4.521131466986532,
+      "derivative": -0.2138089133036048,
+      "curvature": 7.501434299015292
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 14,
+      "bank": "A",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.563029284577707,
+        4.402282701661713,
+        4.3432496534591305,
+        4.360025980450787,
+        4.432446948832002
+      ],
+      "raw_nll": 4.3432496534591305,
+      "cross_fitted_nll": 4.3432496534591305,
+      "entropy": 4.515949780164229,
+      "derivative": -0.17270012670509816,
+      "curvature": 7.530064180035776
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 15,
+      "bank": "A",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.557285719935656,
+        4.393024019369365,
+        4.335153107835856,
+        4.356356392919113,
+        4.435196786950279
+      ],
+      "raw_nll": 4.335153107835856,
+      "cross_fitted_nll": 4.335153107835856,
+      "entropy": 4.477557467211195,
+      "derivative": -0.1424043593753401,
+      "curvature": 7.854840846932636
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 16,
+      "bank": "B",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.289944200150836,
+        4.137536059281116,
+        4.088568466848882,
+        4.114520629868652,
+        4.194227909782332
+      ],
+      "raw_nll": 4.088568466848882,
+      "cross_fitted_nll": 4.088568466848882,
+      "entropy": 4.162487688483422,
+      "derivative": -0.0739192216345396,
+      "curvature": 7.4286277815546455
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 17,
+      "bank": "B",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.6713347533916405,
+        4.5126147639917304,
+        4.454273676607982,
+        4.47245840667297,
+        4.547498618972499
+      ],
+      "raw_nll": 4.454273676607982,
+      "cross_fitted_nll": 4.454273676607982,
+      "entropy": 4.618319343098518,
+      "derivative": -0.1640456664905373,
+      "curvature": 7.6153582622821645
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 18,
+      "bank": "B",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.645950055258723,
+        3.476067854050947,
+        3.4045785206122785,
+        3.402252203539547,
+        3.4483509367133793
+      ],
+      "raw_nll": 3.4045785206122785,
+      "cross_fitted_nll": 3.4045785206122785,
+      "entropy": 3.732520004964808,
+      "derivative": -0.32794148435253007,
+      "curvature": 6.843789273677208
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 19,
+      "bank": "B",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.417212376424082,
+        4.266221595160777,
+        4.218444185896437,
+        4.246368926292838,
+        4.328855440471374
+      ],
+      "raw_nll": 4.218444185896437,
+      "cross_fitted_nll": 4.218444185896437,
+      "entropy": 4.277063426620353,
+      "derivative": -0.05861924072391611,
+      "curvature": 7.514489436317708
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 20,
+      "bank": "B",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.224691764296503,
+        4.067342925161148,
+        4.011058021834988,
+        4.0278081402460995,
+        4.0971183726567935
+      ],
+      "raw_nll": 4.011058021834988,
+      "cross_fitted_nll": 4.011058021834988,
+      "entropy": 4.168634911670311,
+      "derivative": -0.1575768898353226,
+      "curvature": 7.238265375308906
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 21,
+      "bank": "B",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.663118113647559,
+        3.497687145504765,
+        3.4288875788339874,
+        3.42822377826289,
+        3.475581911993565
+      ],
+      "raw_nll": 3.4288875788339874,
+      "cross_fitted_nll": 3.4288875788339874,
+      "entropy": 3.736336702427828,
+      "derivative": -0.30744912359384013,
+      "curvature": 6.742645226416016
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 22,
+      "bank": "B",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.7879667114880595,
+        3.608207496990433,
+        3.5277572192789464,
+        3.518441449899777,
+        3.559838356002662
+      ],
+      "raw_nll": 3.5277572192789464,
+      "cross_fitted_nll": 3.5277572192789464,
+      "entropy": 3.9364756372104956,
+      "derivative": -0.4087184179315497,
+      "curvature": 7.046977648863873
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 23,
+      "bank": "B",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.6956181296001986,
+        3.5390606068949877,
+        3.482522877942525,
+        3.4951628256738143,
+        3.555833117812141
+      ],
+      "raw_nll": 3.482522877942525,
+      "cross_fitted_nll": 3.482522877942525,
+      "entropy": 3.659529069985048,
+      "derivative": -0.17700619204252316,
+      "curvature": 6.835478686354817
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 24,
+      "bank": "B",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.6765245116361194,
+        3.511785589850409,
+        3.4481440884323833,
+        3.4547516132260143,
+        3.510329214266319
+      ],
+      "raw_nll": 3.4481440884323833,
+      "cross_fitted_nll": 3.4481440884323833,
+      "entropy": 3.6906297130907944,
+      "derivative": -0.24248562465841167,
+      "curvature": 6.943237176432877
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 25,
+      "bank": "B",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.7965838529035625,
+        3.6224604291106175,
+        3.548123324746042,
+        3.5445968136762915,
+        3.591219572063068
+      ],
+      "raw_nll": 3.548123324746042,
+      "cross_fitted_nll": 3.548123324746042,
+      "entropy": 3.8965834864467928,
+      "derivative": -0.34846016170075084,
+      "curvature": 7.009990235103702
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 26,
+      "bank": "B",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.944191211250203,
+        3.7780013065260425,
+        3.709292785338852,
+        3.710058050693152,
+        3.760400266924893
+      ],
+      "raw_nll": 3.709292785338852,
+      "cross_fitted_nll": 3.709292785338852,
+      "entropy": 4.0096199029847135,
+      "derivative": -0.3003271176458606,
+      "curvature": 6.877955240435183
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 27,
+      "bank": "B",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.1732402442686745,
+        4.03283605019929,
+        3.9909778899101864,
+        4.020248489945981,
+        4.100417883824243
+      ],
+      "raw_nll": 3.9909778899101864,
+      "cross_fitted_nll": 3.9909778899101864,
+      "entropy": 4.014431275901258,
+      "derivative": -0.023453385991072058,
+      "curvature": 7.051016684918897
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 28,
+      "bank": "B",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.891972925219391,
+        3.750896277261961,
+        3.7097956477805507,
+        3.739413457846357,
+        3.8187722427735666
+      ],
+      "raw_nll": 3.7097956477805507,
+      "cross_fitted_nll": 3.7097956477805507,
+      "entropy": 3.725828689208111,
+      "derivative": -0.016033041427560256,
+      "curvature": 7.001627644828545
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 29,
+      "bank": "B",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.267730857324905,
+        4.153631995829838,
+        4.138560281864044,
+        4.19437339640102,
+        4.3005318191313044
+      ],
+      "raw_nll": 4.138560281864044,
+      "cross_fitted_nll": 4.138560281864044,
+      "entropy": 3.894613200273068,
+      "derivative": 0.24394708159097653,
+      "curvature": 7.023250166005436
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 30,
+      "bank": "B",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.1726127422238,
+        4.041624207284177,
+        4.008468564633004,
+        4.0453602932318775,
+        4.132127176116145
+      ],
+      "raw_nll": 4.008468564633004,
+      "cross_fitted_nll": 4.008468564633004,
+      "entropy": 3.95015622935993,
+      "derivative": 0.05831233527307411,
+      "curvature": 6.939302861094363
+    },
+    {
+      "label": "h2_b08",
+      "sequence": 31,
+      "bank": "B",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.180411788132982,
+        4.030645725302181,
+        3.9820976807712234,
+        4.006840997847089,
+        4.084094505365732
+      ],
+      "raw_nll": 3.9820976807712234,
+      "cross_fitted_nll": 3.9820976807712234,
+      "entropy": 4.060737487398331,
+      "derivative": -0.07863980662710829,
+      "curvature": 7.267620731268089
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 0,
+      "bank": "A",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.533695398351094,
+        4.365951914733276,
+        4.309674452783122,
+        4.336705633265625,
+        4.4243410733758015
+      ],
+      "raw_nll": 4.309674452783122,
+      "cross_fitted_nll": 4.309674452783122,
+      "entropy": 4.412960771700442,
+      "derivative": -0.10328631891731818,
+      "curvature": 8.281325074080728
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 1,
+      "bank": "A",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.266045798434108,
+        4.10131974889183,
+        4.042063023896054,
+        4.060334140062059,
+        4.134259425156369
+      ],
+      "raw_nll": 4.042063023896054,
+      "cross_fitted_nll": 4.042063023896054,
+      "entropy": 4.205095612566933,
+      "derivative": -0.16303258867088102,
+      "curvature": 7.698516858944808
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 2,
+      "bank": "A",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.060990144634772,
+        3.9040909955087786,
+        3.8486498042649786,
+        3.865146706759403,
+        3.932350609069928
+      ],
+      "raw_nll": 3.8486498042649786,
+      "cross_fitted_nll": 3.8486498042649786,
+      "entropy": 4.001349502278753,
+      "derivative": -0.15269969801377448,
+      "curvature": 7.121491237204312
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 3,
+      "bank": "A",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.801803127963792,
+        4.657700748672858,
+        4.619074958579988,
+        4.659660308002918,
+        4.758403619950043
+      ],
+      "raw_nll": 4.619074958579988,
+      "cross_fitted_nll": 4.619074958579988,
+      "entropy": 4.569449418750438,
+      "derivative": 0.04962553982955091,
+      "curvature": 7.874511687374357
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 4,
+      "bank": "A",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.643971651612098,
+        4.4908083310085996,
+        4.438193078786149,
+        4.460468496910075,
+        4.53795685684082
+      ],
+      "raw_nll": 4.438193078786149,
+      "cross_fitted_nll": 4.438193078786149,
+      "entropy": 4.552122427811797,
+      "derivative": -0.11392934902564858,
+      "curvature": 7.436758678471476
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 5,
+      "bank": "A",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.318024802058386,
+        4.173491018287509,
+        4.1332468347490305,
+        4.168467553243824,
+        4.2577517838120045
+      ],
+      "raw_nll": 4.1332468347490305,
+      "cross_fitted_nll": 4.1332468347490305,
+      "entropy": 4.116662718577741,
+      "derivative": 0.016584116171288882,
+      "curvature": 7.481832794647989
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 6,
+      "bank": "A",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.9117165144948505,
+        4.758772455075795,
+        4.710094870033938,
+        4.7412759559458895,
+        4.832079539504074
+      ],
+      "raw_nll": 4.710094870033938,
+      "cross_fitted_nll": 4.710094870033938,
+      "entropy": 4.759833348279262,
+      "derivative": -0.049738478245324284,
+      "curvature": 7.947999239940027
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 7,
+      "bank": "A",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.499129579441721,
+        4.326998758704869,
+        4.25787120888819,
+        4.266438311607663,
+        4.332770441644687
+      ],
+      "raw_nll": 4.25787120888819,
+      "cross_fitted_nll": 4.25787120888819,
+      "entropy": 4.522868281688625,
+      "derivative": -0.26499707280043633,
+      "curvature": 7.7223021095082345
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 8,
+      "bank": "A",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.636680371529735,
+        4.506150087365178,
+        4.481367718918283,
+        4.534017400273897,
+        4.642412080646402
+      ],
+      "raw_nll": 4.481367718918283,
+      "cross_fitted_nll": 4.481367718918283,
+      "entropy": 4.300131637454294,
+      "derivative": 0.18123608146398845,
+      "curvature": 7.683970179028094
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 9,
+      "bank": "A",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.542645532354195,
+        4.388617455907719,
+        4.3422306102691905,
+        4.375346176143358,
+        4.46596236058266
+      ],
+      "raw_nll": 4.3422306102691905,
+      "cross_fitted_nll": 4.3422306102691905,
+      "entropy": 4.366479799072027,
+      "derivative": -0.024249188802836375,
+      "curvature": 7.895212811469979
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 10,
+      "bank": "A",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.476676609152594,
+        4.323723857500349,
+        4.272658301980208,
+        4.296615137165844,
+        4.374950499463466
+      ],
+      "raw_nll": 4.272658301980208,
+      "cross_fitted_nll": 4.272658301980208,
+      "entropy": 4.368457106387466,
+      "derivative": -0.09579880440725824,
+      "curvature": 7.44727198857689
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 11,
+      "bank": "A",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.738103333732802,
+        4.5884040970089774,
+        4.543314978048475,
+        4.57739948572714,
+        4.669748732762508
+      ],
+      "raw_nll": 4.543314978048475,
+      "cross_fitted_nll": 4.543314978048475,
+      "entropy": 4.559137167954569,
+      "derivative": -0.01582218990609513,
+      "curvature": 7.876439586453866
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 12,
+      "bank": "A",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.609910716769025,
+        4.478153674856527,
+        4.44728184379384,
+        4.490504822208834,
+        4.5876450589028845
+      ],
+      "raw_nll": 4.44728184379384,
+      "cross_fitted_nll": 4.44728184379384,
+      "entropy": 4.3464312151540705,
+      "derivative": 0.10085062863977079,
+      "curvature": 7.351537272671269
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 13,
+      "bank": "A",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.552488081520463,
+        4.395200083233873,
+        4.338833272178588,
+        4.3575596066204705,
+        4.431294646780735
+      ],
+      "raw_nll": 4.338833272178588,
+      "cross_fitted_nll": 4.338833272178588,
+      "entropy": 4.488557667230339,
+      "derivative": -0.14972439505175117,
+      "curvature": 7.458146232636566
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 14,
+      "bank": "A",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.5988229676167425,
+        4.436541090156031,
+        4.3755273981695275,
+        4.390671801104096,
+        4.46206732816926
+      ],
+      "raw_nll": 4.3755273981695275,
+      "cross_fitted_nll": 4.3755273981695275,
+      "entropy": 4.567093128900138,
+      "derivative": -0.19156573073061114,
+      "curvature": 7.569573280955028
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 15,
+      "bank": "A",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.5862678200868405,
+        4.417891292536913,
+        4.355809286202039,
+        4.373417387422042,
+        4.4493829396200635
+      ],
+      "raw_nll": 4.355809286202039,
+      "cross_fitted_nll": 4.355809286202039,
+      "entropy": 4.537798135477504,
+      "derivative": -0.1819888492754662,
+      "curvature": 7.92160482464328
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 16,
+      "bank": "B",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.3000600783029235,
+        4.147085732761989,
+        4.098190751921784,
+        4.124628325813244,
+        4.204865667677327
+      ],
+      "raw_nll": 4.098190751921784,
+      "cross_fitted_nll": 4.098190751921784,
+      "entropy": 4.168659602088907,
+      "derivative": -0.07046885016712189,
+      "curvature": 7.470506399195546
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 17,
+      "bank": "B",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.66840177670424,
+        4.514132984486404,
+        4.459273271007488,
+        4.480111704260455,
+        4.557196100941802
+      ],
+      "raw_nll": 4.459273271007488,
+      "cross_fitted_nll": 4.459273271007488,
+      "entropy": 4.593009595275003,
+      "derivative": -0.13373632426751592,
+      "curvature": 7.532247006568834
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 18,
+      "bank": "B",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.6378676692278433,
+        3.4685467739982343,
+        3.3967208189786318,
+        3.3937044585479184,
+        3.438989837283568
+      ],
+      "raw_nll": 3.3967208189786318,
+      "cross_fitted_nll": 3.3967208189786318,
+      "entropy": 3.730404929285722,
+      "derivative": -0.3336841103070904,
+      "curvature": 6.811218256855857
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 19,
+      "bank": "B",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.4373914148889595,
+        4.291322140052508,
+        4.2475853962933385,
+        4.279297827087975,
+        4.365524344560095
+      ],
+      "raw_nll": 4.2475853962933385,
+      "cross_fitted_nll": 4.2475853962933385,
+      "entropy": 4.267720518220357,
+      "derivative": -0.02013512192701844,
+      "curvature": 7.4932230216399685
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 20,
+      "bank": "B",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.223146567862307,
+        4.061172761971529,
+        3.9997397422485825,
+        4.011407462496418,
+        4.075964063897131
+      ],
+      "raw_nll": 3.9997397422485825,
+      "cross_fitted_nll": 3.9997397422485825,
+      "entropy": 4.209140048417826,
+      "derivative": -0.20940030616924282,
+      "curvature": 7.2475079433477365
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 21,
+      "bank": "B",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.686125638580839,
+        3.5281043890607258,
+        3.4653083888184826,
+        3.469473166640788,
+        3.520825050872056
+      ],
+      "raw_nll": 3.4653083888184826,
+      "cross_fitted_nll": 3.4653083888184826,
+      "entropy": 3.7191478574214996,
+      "derivative": -0.2538394686030161,
+      "curvature": 6.624392390238317
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 22,
+      "bank": "B",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.783152720462029,
+        3.601778102088114,
+        3.5199227455077313,
+        3.509235744429132,
+        3.5491920962687766
+      ],
+      "raw_nll": 3.5199227455077313,
+      "cross_fitted_nll": 3.5199227455077313,
+      "entropy": 3.942278950629843,
+      "derivative": -0.42235620512211236,
+      "curvature": 7.049548182151501
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 23,
+      "bank": "B",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.729661188005924,
+        3.5753594638561337,
+        3.5216779327440975,
+        3.537649323475367,
+        3.6018673738716807
+      ],
+      "raw_nll": 3.5216779327440975,
+      "cross_fitted_nll": 3.5216779327440975,
+      "entropy": 3.667291633668574,
+      "derivative": -0.14561370092447606,
+      "curvature": 6.883660609429359
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 24,
+      "bank": "B",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.6887523624962997,
+        3.525256784550825,
+        3.4612307620852993,
+        3.466870108625706,
+        3.5214476437879485
+      ],
+      "raw_nll": 3.4612307620852993,
+      "cross_fitted_nll": 3.4612307620852993,
+      "entropy": 3.7118391847715584,
+      "derivative": -0.25060842268625894,
+      "curvature": 6.889895138734939
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 25,
+      "bank": "B",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.8286627651538723,
+        3.661553701501708,
+        3.593834422459322,
+        3.5963979805421684,
+        3.6486156546252757
+      ],
+      "raw_nll": 3.593834422459322,
+      "cross_fitted_nll": 3.593834422459322,
+      "entropy": 3.878706207654389,
+      "derivative": -0.2848717851950672,
+      "curvature": 6.955721642238286
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 26,
+      "bank": "B",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.9179837427400077,
+        3.7542413459977295,
+        3.688261173016623,
+        3.6919330635852976,
+        3.745168645595059
+      ],
+      "raw_nll": 3.688261173016623,
+      "cross_fitted_nll": 3.688261173016623,
+      "entropy": 3.9601153611734494,
+      "derivative": -0.27185418815682527,
+      "curvature": 6.896435198221587
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 27,
+      "bank": "B",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.143930724616259,
+        4.001621061744286,
+        3.9577498609971027,
+        3.9848134574784604,
+        4.062680779752808
+      ],
+      "raw_nll": 3.9577498609971027,
+      "cross_fitted_nll": 3.9577498609971027,
+      "entropy": 4.002428916665873,
+      "derivative": -0.04467905566877058,
+      "curvature": 7.030395718542009
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 28,
+      "bank": "B",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.9011183290713323,
+        3.771888548966451,
+        3.741539532377175,
+        3.7801952136541823,
+        3.8669888318617183
+      ],
+      "raw_nll": 3.741539532377175,
+      "cross_fitted_nll": 3.741539532377175,
+      "entropy": 3.658352841721997,
+      "derivative": 0.08318669065517866,
+      "curvature": 6.823854009112393
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 29,
+      "bank": "B",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.2373364877044235,
+        4.122020981084303,
+        4.10574795312223,
+        4.160332697506099,
+        4.265138034679268
+      ],
+      "raw_nll": 4.10574795312223,
+      "cross_fitted_nll": 4.10574795312223,
+      "entropy": 3.873740955139805,
+      "derivative": 0.2320069979824246,
+      "curvature": 7.020614866559535
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 30,
+      "bank": "B",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.161125558724461,
+        4.025191674136803,
+        3.9877722863542253,
+        4.020984480201954,
+        4.104418361483346
+      ],
+      "raw_nll": 3.9877722863542253,
+      "cross_fitted_nll": 3.9877722863542253,
+      "entropy": 3.9687987593457135,
+      "derivative": 0.01897352700851181,
+      "curvature": 6.998602094441232
+    },
+    {
+      "label": "h2_b09",
+      "sequence": 31,
+      "bank": "B",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.207592298131437,
+        4.054164752374235,
+        4.000703176215772,
+        4.02042187956822,
+        4.093039593665974
+      ],
+      "raw_nll": 4.000703176215772,
+      "cross_fitted_nll": 4.000703176215772,
+      "entropy": 4.130341783721701,
+      "derivative": -0.12963860750592796,
+      "curvature": 7.262393068258153
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 0,
+      "bank": "A",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.499205045323476,
+        4.3359599212728455,
+        4.283573884888229,
+        4.313852061717562,
+        4.404345749247209
+      ],
+      "raw_nll": 4.283573884888229,
+      "cross_fitted_nll": 4.283573884888229,
+      "entropy": 4.351519363285988,
+      "derivative": -0.06794547839775891,
+      "curvature": 8.214993508350627
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 1,
+      "bank": "A",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.251776373482485,
+        4.0905841352342165,
+        4.035258993871406,
+        4.057216201206822,
+        4.134289540807346
+      ],
+      "raw_nll": 4.035258993871406,
+      "cross_fitted_nll": 4.035258993871406,
+      "entropy": 4.159424826871968,
+      "derivative": -0.12416583300056172,
+      "curvature": 7.670896568314191
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 2,
+      "bank": "A",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.06115118265615,
+        3.901879613221237,
+        3.844517598975525,
+        3.8597924676324524,
+        3.9263466942167273
+      ],
+      "raw_nll": 3.844517598975525,
+      "cross_fitted_nll": 3.844517598975525,
+      "entropy": 4.012934696513225,
+      "derivative": -0.16841709753769915,
+      "curvature": 7.1945830750267925
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 3,
+      "bank": "A",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.790420140925997,
+        4.655618207242011,
+        4.626223397687515,
+        4.675508014348694,
+        4.782247700643692
+      ],
+      "raw_nll": 4.626223397687515,
+      "cross_fitted_nll": 4.626223397687515,
+      "entropy": 4.486466019702725,
+      "derivative": 0.13975737798479104,
+      "curvature": 7.818894152620702
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 4,
+      "bank": "A",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.643815786855386,
+        4.492859012403681,
+        4.44280107303757,
+        4.467233940164379,
+        4.546091479639927
+      ],
+      "raw_nll": 4.44280107303757,
+      "cross_fitted_nll": 4.44280107303757,
+      "entropy": 4.532132054368335,
+      "derivative": -0.08933098133076417,
+      "curvature": 7.393016466739898
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 5,
+      "bank": "A",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.2955335876639476,
+        4.1509929837489805,
+        4.109059259674648,
+        4.14092485149288,
+        4.225329235687584
+      ],
+      "raw_nll": 4.109059259674648,
+      "cross_fitted_nll": 4.109059259674648,
+      "entropy": 4.1177947054815105,
+      "derivative": -0.008735445806861503,
+      "curvature": 7.31404823708452
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 6,
+      "bank": "A",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.921979684904537,
+        4.767612199735116,
+        4.717241536984764,
+        4.746693790727937,
+        4.835792821516704
+      ],
+      "raw_nll": 4.717241536984764,
+      "cross_fitted_nll": 4.717241536984764,
+      "entropy": 4.784286418700322,
+      "derivative": -0.06704488171555847,
+      "curvature": 7.945922919308071
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 7,
+      "bank": "A",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.497395633594145,
+        4.326567688572384,
+        4.259212312265884,
+        4.2698368224940735,
+        4.338153902925761
+      ],
+      "raw_nll": 4.259212312265884,
+      "cross_fitted_nll": 4.259212312265884,
+      "entropy": 4.5044932186229705,
+      "derivative": -0.2452809063570867,
+      "curvature": 7.752104684260287
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 8,
+      "bank": "A",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.575360678348597,
+        4.4498873569682065,
+        4.430849833132578,
+        4.489225520321375,
+        4.602919841586573
+      ],
+      "raw_nll": 4.430849833132578,
+      "cross_fitted_nll": 4.430849833132578,
+      "entropy": 4.1913898579712905,
+      "derivative": 0.23945997516128753,
+      "curvature": 7.679823264452381
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 9,
+      "bank": "A",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.528017834296715,
+        4.385667492994421,
+        4.348276146143206,
+        4.388137316836843,
+        4.483791658111556
+      ],
+      "raw_nll": 4.348276146143206,
+      "cross_fitted_nll": 4.348276146143206,
+      "entropy": 4.294752629085226,
+      "derivative": 0.0535235170579804,
+      "curvature": 7.67003184171403
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 10,
+      "bank": "A",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.450572977297294,
+        4.29790485629246,
+        4.246491736216714,
+        4.26983358659758,
+        4.347493881250896
+      ],
+      "raw_nll": 4.246491736216714,
+      "cross_fitted_nll": 4.246491736216714,
+      "entropy": 4.347648147711366,
+      "derivative": -0.10115641149465172,
+      "curvature": 7.422452144201218
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 11,
+      "bank": "A",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.700139406809917,
+        4.548939397337425,
+        4.500966703277715,
+        4.530896159627545,
+        4.618217726146289
+      ],
+      "raw_nll": 4.500966703277715,
+      "cross_fitted_nll": 4.500966703277715,
+      "entropy": 4.552587938379371,
+      "derivative": -0.05162123510165493,
+      "curvature": 7.7474970507274605
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 12,
+      "bank": "A",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.599520175501938,
+        4.478199274523579,
+        4.458367096898018,
+        4.512365912448145,
+        4.619572894229007
+      ],
+      "raw_nll": 4.458367096898018,
+      "cross_fitted_nll": 4.458367096898018,
+      "entropy": 4.247395738793864,
+      "derivative": 0.21097135810415213,
+      "curvature": 7.321647519085259
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 13,
+      "bank": "A",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.539253385459348,
+        4.382887230847036,
+        4.327458390459022,
+        4.346963491971776,
+        4.4212646841994125
+      ],
+      "raw_nll": 4.327458390459022,
+      "cross_fitted_nll": 4.327458390459022,
+      "entropy": 4.468431421407136,
+      "derivative": -0.14097303094811509,
+      "curvature": 7.441315492878255
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 14,
+      "bank": "A",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.52564733703902,
+        4.3673219447557425,
+        4.309930771045701,
+        4.327520345048866,
+        4.4000051847638755
+      ],
+      "raw_nll": 4.309930771045701,
+      "cross_fitted_nll": 4.309930771045701,
+      "entropy": 4.470437953376471,
+      "derivative": -0.1605071823307703,
+      "curvature": 7.446411662143243
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 15,
+      "bank": "A",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.557402168634045,
+        4.393556758904904,
+        4.334847950818,
+        4.3548104999079165,
+        4.432385298705967
+      ],
+      "raw_nll": 4.334847950818,
+      "cross_fitted_nll": 4.334847950818,
+      "entropy": 4.488630948752803,
+      "derivative": -0.15378299793480282,
+      "curvature": 7.8189233817000225
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 16,
+      "bank": "B",
+      "sequence_in_bank": 0,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.262033668995844,
+        4.1068371886971144,
+        4.055880019915325,
+        4.079967882919128,
+        4.157526742471186
+      ],
+      "raw_nll": 4.055880019915325,
+      "cross_fitted_nll": 4.055880019915325,
+      "entropy": 4.148103563283479,
+      "derivative": -0.0922235433681547,
+      "curvature": 7.438340426424634
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 17,
+      "bank": "B",
+      "sequence_in_bank": 1,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.642956353481507,
+        4.489657419402586,
+        4.437543449309007,
+        4.461887080544684,
+        4.542563117643914
+      ],
+      "raw_nll": 4.437543449309007,
+      "cross_fitted_nll": 4.437543449309007,
+      "entropy": 4.538560494309631,
+      "derivative": -0.10101704500062408,
+      "curvature": 7.604638620724033
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 18,
+      "bank": "B",
+      "sequence_in_bank": 2,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.616890619694044,
+        3.446653563646154,
+        3.374644113148622,
+        3.371566219671797,
+        3.4166929316186883
+      ],
+      "raw_nll": 3.374644113148622,
+      "cross_fitted_nll": 3.374644113148622,
+      "entropy": 3.7089018429859095,
+      "derivative": -0.33425772983728774,
+      "curvature": 6.819849775582782
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 19,
+      "bank": "B",
+      "sequence_in_bank": 3,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.4133309659612925,
+        4.262021087086894,
+        4.2137718550897985,
+        4.241474006966617,
+        4.324174282863749
+      ],
+      "raw_nll": 4.2137718550897985,
+      "cross_fitted_nll": 4.2137718550897985,
+      "entropy": 4.276426607519961,
+      "derivative": -0.06265475243016273,
+      "curvature": 7.541747882107796
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 20,
+      "bank": "B",
+      "sequence_in_bank": 4,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.2410181184311435,
+        4.0812319531883645,
+        4.022427599974474,
+        4.03718172504788,
+        4.105276421839479
+      ],
+      "raw_nll": 4.022427599974474,
+      "cross_fitted_nll": 4.022427599974474,
+      "entropy": 4.203280892157201,
+      "derivative": -0.1808532921827269,
+      "curvature": 7.293630704999254
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 21,
+      "bank": "B",
+      "sequence_in_bank": 5,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.6512459111376625,
+        3.4913455093237475,
+        3.4268735470433667,
+        3.4295341085120956,
+        3.4795199179147684
+      ],
+      "raw_nll": 3.4268735470433667,
+      "cross_fitted_nll": 3.4268735470433667,
+      "entropy": 3.6965506327608213,
+      "derivative": -0.2696770857174541,
+      "curvature": 6.641598189897094
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 22,
+      "bank": "B",
+      "sequence_in_bank": 6,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.772516947158607,
+        3.5983875008880566,
+        3.524141346060561,
+        3.5208557310053705,
+        3.5677767456039238
+      ],
+      "raw_nll": 3.524141346060561,
+      "cross_fitted_nll": 3.524141346060561,
+      "entropy": 3.8708367284916188,
+      "derivative": -0.3466953824310572,
+      "curvature": 7.025912240352357
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 23,
+      "bank": "B",
+      "sequence_in_bank": 7,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.711977653290918,
+        3.559471249417804,
+        3.508496342422145,
+        3.527266602773532,
+        3.593862996747184
+      ],
+      "raw_nll": 3.508496342422145,
+      "cross_fitted_nll": 3.508496342422145,
+      "entropy": 3.6253395343620287,
+      "derivative": -0.11684319193988396,
+      "curvature": 6.889046993220197
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 24,
+      "bank": "B",
+      "sequence_in_bank": 8,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.671748313571948,
+        3.5061574953361303,
+        3.441412150761149,
+        3.446731234981358,
+        3.500819753414019
+      ],
+      "raw_nll": 3.441412150761149,
+      "cross_fitted_nll": 3.441412150761149,
+      "entropy": 3.695885368845329,
+      "derivative": -0.2544732180841808,
+      "curvature": 6.925602127261274
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 25,
+      "bank": "B",
+      "sequence_in_bank": 9,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.778793835242798,
+        3.605436073195852,
+        3.531553387230136,
+        3.528003649749731,
+        3.5741011949121946
+      ],
+      "raw_nll": 3.531553387230136,
+      "cross_fitted_nll": 3.531553387230136,
+      "entropy": 3.8776979184241718,
+      "derivative": -0.3461445311940349,
+      "curvature": 6.960839849208518
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 26,
+      "bank": "B",
+      "sequence_in_bank": 10,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.9102164986497177,
+        3.748104994084875,
+        3.6839010691733898,
+        3.689257263633933,
+        3.7439372417081884
+      ],
+      "raw_nll": 3.6839010691733898,
+      "cross_fitted_nll": 3.6839010691733898,
+      "entropy": 3.938121406149113,
+      "derivative": -0.2542203369757235,
+      "curvature": 6.88654486571585
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 27,
+      "bank": "B",
+      "sequence_in_bank": 11,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.157398081504671,
+        4.0172891013163765,
+        3.975179229225392,
+        4.003984415541051,
+        4.083738641101022
+      ],
+      "raw_nll": 3.975179229225392,
+      "cross_fitted_nll": 3.975179229225392,
+      "entropy": 4.002779363998501,
+      "derivative": -0.027600134773108312,
+      "curvature": 7.030617135370964
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 28,
+      "bank": "B",
+      "sequence_in_bank": 12,
+      "tokens": 512,
+      "nll_by_scale": [
+        3.875024242557515,
+        3.7388956999567817,
+        3.702051892808262,
+        3.735471001983933,
+        3.818326112818035
+      ],
+      "raw_nll": 3.702051892808262,
+      "cross_fitted_nll": 3.702051892808262,
+      "entropy": 3.6780958077979475,
+      "derivative": 0.023956085010314182,
+      "curvature": 6.9566346721572
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 29,
+      "bank": "B",
+      "sequence_in_bank": 13,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.227320792072296,
+        4.1177685141967935,
+        4.106634000219301,
+        4.165505661797482,
+        4.273785695231085
+      ],
+      "raw_nll": 4.106634000219301,
+      "cross_fitted_nll": 4.106634000219301,
+      "entropy": 3.8274040812035244,
+      "derivative": 0.27922991901577654,
+      "curvature": 6.933198514980063
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 30,
+      "bank": "B",
+      "sequence_in_bank": 14,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.139162627386896,
+        4.009725743431042,
+        3.978114359117635,
+        4.016112287918785,
+        4.103363000773619
+      ],
+      "raw_nll": 3.978114359117635,
+      "cross_fitted_nll": 3.978114359117635,
+      "entropy": 3.906037354914098,
+      "derivative": 0.07207700420353635,
+      "curvature": 6.893298011346047
+    },
+    {
+      "label": "h2_warm",
+      "sequence": 31,
+      "bank": "B",
+      "sequence_in_bank": 15,
+      "tokens": 512,
+      "nll_by_scale": [
+        4.149450393148448,
+        4.005724993485376,
+        3.961745162869825,
+        3.989844824633173,
+        4.069560327142468
+      ],
+      "raw_nll": 3.961745162869825,
+      "cross_fitted_nll": 3.961745162869825,
+      "entropy": 4.001295123260439,
+      "derivative": -0.03954996039061334,
+      "curvature": 7.146235677850569
+    }
+  ],
+  "all_six_models_select_one": true,
+  "seconds": 0.5793798081576824,
+  "interpretation_limits": [
+    "No confidence intervals or equivalence claim from one seed and two contiguous banks.",
+    "Selected endpoints do not establish a training-rate mechanism or universal phase clock.",
+    "Boundary winners and disagreeing folds are unresolved; do not expand this fixed panel.",
+    "All scale-one selections resolve no finite correction in this coarse family.",
+    "Secondary comparisons cannot replace a failed primary.",
+    "Positive logit scaling preserves token ranking and is an output-only intervention."
+  ]
+}

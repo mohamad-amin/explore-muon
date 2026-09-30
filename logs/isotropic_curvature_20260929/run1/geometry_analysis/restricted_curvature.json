@@ -1,0 +1,542 @@
+[
+  {
+    "method": "Muon",
+    "step": 10,
+    "block": 1,
+    "span_dimension": 5,
+    "parameter_gram_condition": 11.929434377420426,
+    "parameter_gram_eigenvalues": [
+      0.001242901224328429,
+      0.004896073509426433,
+      0.004903089736191054,
+      0.004906929311258322,
+      0.014827108593241496
+    ],
+    "gram_rank_cutoff": 1.4827108593241496e-14,
+    "true_hessian_restricted_eigenvalues": [
+      0.0007031206369442428,
+      0.000730785948786433,
+      0.0012101089359008482,
+      0.0029254244402966384,
+      0.014447015016504881
+    ],
+    "GN_restricted_eigenvalues": [
+      0.00012187265620613232,
+      0.00012566918714520273,
+      0.00017682323609553955,
+      0.00042873952213550446,
+      0.0014162817413721036
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 10,
+    "block": 4,
+    "span_dimension": 5,
+    "parameter_gram_condition": 49.84194752750189,
+    "parameter_gram_eigenvalues": [
+      0.0016900999560108898,
+      0.0022546119294878757,
+      0.00225655684473405,
+      0.0022623618659275094,
+      0.08423787332372802
+    ],
+    "gram_rank_cutoff": 8.423787332372802e-14,
+    "true_hessian_restricted_eigenvalues": [
+      0.0001006150800788104,
+      0.0006833642143748603,
+      0.0007898019355050126,
+      0.0017092602758960052,
+      0.006970250917431608
+    ],
+    "GN_restricted_eigenvalues": [
+      1.2333074380640189e-05,
+      0.00010239572397310728,
+      0.00010771899323550963,
+      0.00022571685128827473,
+      0.0007649975821828327
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 10,
+    "block": 8,
+    "span_dimension": 5,
+    "parameter_gram_condition": 153.53499287834455,
+    "parameter_gram_eigenvalues": [
+      0.001244004464269252,
+      0.0014638570634885998,
+      0.0014653992486030254,
+      0.0014701433796504501,
+      0.19099821656220842
+    ],
+    "gram_rank_cutoff": 1.909982165622084e-13,
+    "true_hessian_restricted_eigenvalues": [
+      3.767226147998794e-05,
+      0.0006825236160512398,
+      0.0007324793692526188,
+      0.0007923994805257461,
+      0.004567820628801001
+    ],
+    "GN_restricted_eigenvalues": [
+      4.800158048964512e-06,
+      9.186724334897917e-05,
+      0.00010537885794764367,
+      0.00011684231014558997,
+      0.0005992352377565734
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 500,
+    "block": 1,
+    "span_dimension": 5,
+    "parameter_gram_condition": 12.579417427438928,
+    "parameter_gram_eigenvalues": [
+      0.06525447091504616,
+      0.10066015592581233,
+      0.10069996526203642,
+      0.10078220766802119,
+      0.8208632286470383
+    ],
+    "gram_rank_cutoff": 8.208632286470383e-13,
+    "true_hessian_restricted_eigenvalues": [
+      0.00017244510634972036,
+      0.00031761636347136304,
+      0.00037366700521447116,
+      0.0009596560353933541,
+      0.003213930685908235
+    ],
+    "GN_restricted_eigenvalues": [
+      0.00018897291891462203,
+      0.0003542399539148525,
+      0.0003698738780306117,
+      0.000942185853623204,
+      0.003251891070991844
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 500,
+    "block": 4,
+    "span_dimension": 5,
+    "parameter_gram_condition": 10.75086987682313,
+    "parameter_gram_eigenvalues": [
+      0.056549492512138234,
+      0.10024609460399507,
+      0.10040410234959897,
+      0.10055921994790049,
+      0.6079562355983821
+    ],
+    "gram_rank_cutoff": 6.079562355983821e-13,
+    "true_hessian_restricted_eigenvalues": [
+      2.9065455924965676e-05,
+      5.8033468277726774e-05,
+      7.523370557172799e-05,
+      0.00011497224892922182,
+      0.00043160754501181625
+    ],
+    "GN_restricted_eigenvalues": [
+      2.8857415294401405e-05,
+      7.025448916250105e-05,
+      7.063150683439773e-05,
+      0.00012511564596981634,
+      0.0004464818832036698
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 500,
+    "block": 8,
+    "span_dimension": 5,
+    "parameter_gram_condition": 9.949601970672992,
+    "parameter_gram_eigenvalues": [
+      0.05025365717361122,
+      0.10006348026289531,
+      0.10016306076702047,
+      0.10026104540512343,
+      0.5000038864480871
+    ],
+    "gram_rank_cutoff": 5.000038864480871e-13,
+    "true_hessian_restricted_eigenvalues": [
+      4.93733031264994e-05,
+      5.174673768718209e-05,
+      5.839254193065582e-05,
+      9.120283555291951e-05,
+      0.00026760212637027175
+    ],
+    "GN_restricted_eigenvalues": [
+      4.749174676841946e-05,
+      4.8649456718321936e-05,
+      5.4863903024072334e-05,
+      9.536225449735082e-05,
+      0.0002760146471650234
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 1300,
+    "block": 1,
+    "span_dimension": 5,
+    "parameter_gram_condition": 16.081908793999936,
+    "parameter_gram_eigenvalues": [
+      0.0789008197412417,
+      0.10120840542796293,
+      0.10127968714436611,
+      0.10130630961787626,
+      1.2688757868504787
+    ],
+    "gram_rank_cutoff": 1.2688757868504788e-12,
+    "true_hessian_restricted_eigenvalues": [
+      9.235207363313801e-05,
+      0.0003005509533386828,
+      0.0003231391956215913,
+      0.0007041515407683318,
+      0.001555116488502707
+    ],
+    "GN_restricted_eigenvalues": [
+      0.00010543426708365052,
+      0.0003092037224675765,
+      0.00032533070438370965,
+      0.0007477197374887433,
+      0.0017270458069016895
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 1300,
+    "block": 4,
+    "span_dimension": 5,
+    "parameter_gram_condition": 10.282124773541561,
+    "parameter_gram_eigenvalues": [
+      0.06072796326187361,
+      0.10028730935444459,
+      0.10043421114193361,
+      0.10069654559978097,
+      0.6244124955016325
+    ],
+    "gram_rank_cutoff": 6.244124955016325e-13,
+    "true_hessian_restricted_eigenvalues": [
+      2.8821159602800293e-05,
+      5.7380427641831305e-05,
+      6.373623813070001e-05,
+      0.00010198524120092625,
+      0.0003979798730426607
+    ],
+    "GN_restricted_eigenvalues": [
+      2.8926351816966612e-05,
+      6.931562708527165e-05,
+      7.299064316057649e-05,
+      0.00012141995344064433,
+      0.00041665343566255205
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "Muon",
+    "step": 1300,
+    "block": 8,
+    "span_dimension": 5,
+    "parameter_gram_condition": 9.519095312201111,
+    "parameter_gram_eigenvalues": [
+      0.0529072246472962,
+      0.10006337843924548,
+      0.10012557609625863,
+      0.10023525280846309,
+      0.5036289141216483
+    ],
+    "gram_rank_cutoff": 5.036289141216483e-13,
+    "true_hessian_restricted_eigenvalues": [
+      4.5400600143373805e-05,
+      4.8193476048928675e-05,
+      5.931078214521776e-05,
+      0.00010954751340907606,
+      0.00031114937977847135
+    ],
+    "GN_restricted_eigenvalues": [
+      4.928520583785991e-05,
+      5.031588408770418e-05,
+      5.654874770899851e-05,
+      0.00011037514193372985,
+      0.0003159254506840687
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 10,
+    "block": 1,
+    "span_dimension": 5,
+    "parameter_gram_condition": 12.598261271465503,
+    "parameter_gram_eigenvalues": [
+      0.0019725395873956123,
+      0.009908542978719822,
+      0.009918642390996818,
+      0.009925204381590103,
+      0.024850569090318686
+    ],
+    "gram_rank_cutoff": 2.4850569090318687e-14,
+    "true_hessian_restricted_eigenvalues": [
+      0.00045409678734713657,
+      0.0004914479639674015,
+      0.0008762793672707679,
+      0.0026064564637670374,
+      0.007808705296600924
+    ],
+    "GN_restricted_eigenvalues": [
+      7.633074124234566e-05,
+      7.681946612102647e-05,
+      0.00012403772009055765,
+      0.0003637437699942185,
+      0.0007326396226622514
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 10,
+    "block": 4,
+    "span_dimension": 5,
+    "parameter_gram_condition": 10.013402470686461,
+    "parameter_gram_eigenvalues": [
+      0.0057862421557713485,
+      0.00989704470426135,
+      0.009915442717308213,
+      0.009932626844923235,
+      0.057939971498590974
+    ],
+    "gram_rank_cutoff": 5.793997149859097e-14,
+    "true_hessian_restricted_eigenvalues": [
+      7.370538416203072e-05,
+      8.69501106334217e-05,
+      9.55729119387276e-05,
+      0.0007043353453436817,
+      0.0013202452190586677
+    ],
+    "GN_restricted_eigenvalues": [
+      9.244003929753438e-06,
+      1.199720205170842e-05,
+      1.2261123851651204e-05,
+      7.914879779367896e-05,
+      0.00017327717901176461
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 10,
+    "block": 8,
+    "span_dimension": 5,
+    "parameter_gram_condition": 14.382077487806132,
+    "parameter_gram_eigenvalues": [
+      0.0064905782800117745,
+      0.009906235561891307,
+      0.00991179110916308,
+      0.00992903497313846,
+      0.09334799976380079
+    ],
+    "gram_rank_cutoff": 9.334799976380079e-14,
+    "true_hessian_restricted_eigenvalues": [
+      2.2334143987501006e-05,
+      4.094069392117558e-05,
+      4.1640951462318615e-05,
+      0.0001715322700737097,
+      0.0008399295801865729
+    ],
+    "GN_restricted_eigenvalues": [
+      3.1330463013469757e-06,
+      5.458667302936374e-06,
+      5.707367028263246e-06,
+      2.8025107515172506e-05,
+      0.00011698828437874698
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 500,
+    "block": 1,
+    "span_dimension": 5,
+    "parameter_gram_condition": 6.496200287227506,
+    "parameter_gram_eigenvalues": [
+      0.10532148506776785,
+      0.20415987829592133,
+      0.20442661006645235,
+      0.20472795917040396,
+      0.6841894615484609
+    ],
+    "gram_rank_cutoff": 6.841894615484609e-13,
+    "true_hessian_restricted_eigenvalues": [
+      5.6368376049258505e-05,
+      7.221794553272859e-05,
+      8.842659658671022e-05,
+      0.00056295579963279,
+      0.0016538006721609712
+    ],
+    "GN_restricted_eigenvalues": [
+      7.983407226892108e-05,
+      8.291722792687802e-05,
+      0.00010603415318778189,
+      0.00066185031345024,
+      0.0018636806289856456
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 500,
+    "block": 4,
+    "span_dimension": 5,
+    "parameter_gram_condition": 6.482019451778244,
+    "parameter_gram_eigenvalues": [
+      0.11105994631971233,
+      0.20393153625628704,
+      0.20405370472730427,
+      0.20475258056654552,
+      0.719892732357823
+    ],
+    "gram_rank_cutoff": 7.19892732357823e-13,
+    "true_hessian_restricted_eigenvalues": [
+      4.077797623944445e-05,
+      4.666550455453595e-05,
+      5.142421590095658e-05,
+      0.00040975117667327397,
+      0.0006992364404965307
+    ],
+    "GN_restricted_eigenvalues": [
+      4.539066716526994e-05,
+      4.9987304520147204e-05,
+      5.162676753289867e-05,
+      0.00041147894232131067,
+      0.0007413793316885631
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 500,
+    "block": 8,
+    "span_dimension": 5,
+    "parameter_gram_condition": 7.169388986209595,
+    "parameter_gram_eigenvalues": [
+      0.09801524417693964,
+      0.20403688114833915,
+      0.2043655286678532,
+      0.2045959873905494,
+      0.7027094120827952
+    ],
+    "gram_rank_cutoff": 7.027094120827952e-13,
+    "true_hessian_restricted_eigenvalues": [
+      5.895814304119807e-05,
+      6.49188275510591e-05,
+      8.017145219898608e-05,
+      0.0002958106327477597,
+      0.00037598900753090545
+    ],
+    "GN_restricted_eigenvalues": [
+      5.809801959912681e-05,
+      5.953370047113732e-05,
+      8.286394867910275e-05,
+      0.00030371665740209033,
+      0.000359289020282732
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 1300,
+    "block": 1,
+    "span_dimension": 5,
+    "parameter_gram_condition": 6.471634311698736,
+    "parameter_gram_eigenvalues": [
+      0.11205067327074225,
+      0.20409631064140107,
+      0.20448221769205427,
+      0.20477066344849906,
+      0.72515098178788
+    ],
+    "gram_rank_cutoff": 7.251509817878799e-13,
+    "true_hessian_restricted_eigenvalues": [
+      3.903726131211337e-05,
+      4.344703179124514e-05,
+      5.025237118802488e-05,
+      0.0003129247778943794,
+      0.0017528965550776777
+    ],
+    "GN_restricted_eigenvalues": [
+      4.62367487920704e-05,
+      4.8104904215675146e-05,
+      5.302476757954692e-05,
+      0.00034052859433692987,
+      0.0019045210262892509
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 1300,
+    "block": 4,
+    "span_dimension": 5,
+    "parameter_gram_condition": 6.528276681386142,
+    "parameter_gram_eigenvalues": [
+      0.10632152266081304,
+      0.20397556194720343,
+      0.20426311723222063,
+      0.20455376107595685,
+      0.6940963171160541
+    ],
+    "gram_rank_cutoff": 6.940963171160541e-13,
+    "true_hessian_restricted_eigenvalues": [
+      2.8043338886858075e-05,
+      3.02014510720621e-05,
+      3.252064347291538e-05,
+      0.0002777510212139251,
+      0.0008003718408597233
+    ],
+    "GN_restricted_eigenvalues": [
+      3.16254385336142e-05,
+      3.4103249921165105e-05,
+      3.513920731235515e-05,
+      0.00030032194131428437,
+      0.0009130757392795804
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  },
+  {
+    "method": "PD",
+    "step": 1300,
+    "block": 8,
+    "span_dimension": 5,
+    "parameter_gram_condition": 7.449039175117508,
+    "parameter_gram_eigenvalues": [
+      0.09542241404567683,
+      0.20412919397282903,
+      0.2042802266046595,
+      0.20491969354602824,
+      0.7108053004105299
+    ],
+    "gram_rank_cutoff": 7.108053004105299e-13,
+    "true_hessian_restricted_eigenvalues": [
+      4.185609101058658e-05,
+      4.5490168085267655e-05,
+      8.61182462412175e-05,
+      0.0002295437701505868,
+      0.00040370967429431643
+    ],
+    "GN_restricted_eigenvalues": [
+      4.2046316835211947e-05,
+      4.3785585826124226e-05,
+      8.59399780531873e-05,
+      0.00022789611699856744,
+      0.0003937044502593472
+    ],
+    "scope": "Operator restricted to the five-direction span after Euclidean orthonormalization; not full parameter eigenvalues."
+  }
+]

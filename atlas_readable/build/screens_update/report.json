@@ -1,0 +1,160 @@
+[
+ {
+  "width": 1600,
+  "view": "edge",
+  "firstPaintMs": 872,
+  "title": "Edge & co-adaptation",
+  "panels": 12,
+  "plotted": 36,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 5962,
+  "plotSizes": [
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    540
+   ],
+   [
+    602,
+    1056
+   ],
+   [
+    602,
+    540
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 1600,
+  "view": "principles",
+  "firstPaintMs": 598,
+  "title": "Principles",
+  "panels": 0,
+  "plotted": 0,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 2637,
+  "plotSizes": [],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "edge",
+  "firstPaintMs": 721,
+  "title": "Edge & co-adaptation",
+  "panels": 12,
+  "plotted": 36,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 10420,
+  "plotSizes": [
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ],
+   [
+    332,
+    420
+   ]
+  ],
+  "missing": [],
+  "errors": []
+ },
+ {
+  "width": 390,
+  "view": "principles",
+  "firstPaintMs": 636,
+  "title": "Principles",
+  "panels": 0,
+  "plotted": 0,
+  "tables": 0,
+  "empties": [],
+  "overflowX": 0,
+  "height": 5222,
+  "plotSizes": [],
+  "missing": [],
+  "errors": []
+ }
+]

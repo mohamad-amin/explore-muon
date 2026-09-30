@@ -1,0 +1,210 @@
+{
+  "status": "complete",
+  "states": [
+    [
+      "q09",
+      9
+    ],
+    [
+      "h09",
+      9
+    ],
+    [
+      "q09",
+      46
+    ],
+    [
+      "h09",
+      46
+    ]
+  ],
+  "parts": [
+    "interaction",
+    "overlap",
+    "mixed_loss",
+    "J_direct",
+    "KL_add",
+    "base_entropy"
+  ],
+  "old_offsets": [
+    3180000000,
+    3190000000
+  ],
+  "fresh_offsets": [
+    3170131072,
+    3195131072
+  ],
+  "roles": [
+    "old_reproduction",
+    "old_reproduction",
+    "old_reproduction",
+    "old_reproduction",
+    "old_reproduction",
+    "old_reproduction",
+    "old_reproduction",
+    "old_reproduction",
+    "fresh_bank0",
+    "fresh_bank0",
+    "fresh_bank0",
+    "fresh_bank0",
+    "fresh_bank1",
+    "fresh_bank1",
+    "fresh_bank1",
+    "fresh_bank1"
+  ],
+  "token_hashes": {
+    "inputs": "d4af3bf71d06707e13bcb79fa07972f570e1a5307ed96e4824916132e616b820",
+    "targets": "951a76e163c824d1fb9cd40a18cda7142c1c8657ccf6a109937785cab0f9371d"
+  },
+  "source_hashes": {
+    "__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+    "data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+    "gn_probe.py": "60ddcf53466b59cbb9cd23988de6ce6da0125f4fb295af39c7dad973a9fdd391",
+    "model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f"
+  },
+  "probe_sha256": "0add6d2b2e45564fedf195bcdcb81c794be08c5e65aeebfef330219bc8bb8b53",
+  "checkpoint_provenance": {
+    "q09_9": [
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_dose16m_20260928/PD_a0.25_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000009.pt",
+        "bytes": 822884793,
+        "mtime_ns": 1790629050982176249,
+        "model_tensor_sha256": "531d6f66b1c838c57d2e25e72846bce8bc6bdae5df45a5931f19cffefce69ac1"
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_dose16m_20260928/PD_a0.25_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000010_weights.pt",
+        "bytes": 307828101,
+        "mtime_ns": 1790629068054769983,
+        "model_tensor_sha256": "fa47eeeee47851e9901d30e6cbbe0ad306b745ed874725a97594fcb5992fd3d7"
+      }
+    ],
+    "h09_9": [
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000009.pt",
+        "bytes": 822884601,
+        "mtime_ns": 1790554638896833334,
+        "model_tensor_sha256": "4ba40234f9189cef228bfd7f119e93b90b6a6e8a145624acb8ea5c1b04f20341"
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000010_weights.pt",
+        "bytes": 307828101,
+        "mtime_ns": 1790554655987428784,
+        "model_tensor_sha256": "61e97da53b6f0fc06b4165c7803457ee64608187783d411a3d30821ef867d837"
+      }
+    ],
+    "q09_46": [
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_dose16m_20260928/PD_a0.25_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000046.pt",
+        "bytes": 822884793,
+        "mtime_ns": 1790629609651611747,
+        "model_tensor_sha256": "24efd1ff65bc3b886cf1fe22ad92c98a25cc86e4159421f858451a3fb145f6ce"
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_dose16m_20260928/PD_a0.25_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000047_weights.pt",
+        "bytes": 307828101,
+        "mtime_ns": 1790629626976215515,
+        "model_tensor_sha256": "3bdca943c13b378951ae658be1e37356d03cc47255996f574a9f7bba7b6d413c"
+      }
+    ],
+    "h09_46": [
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000046.pt",
+        "bytes": 822884601,
+        "mtime_ns": 1790555197969311613,
+        "model_tensor_sha256": "5b43a98e2673a22bbf8345706a9766bfd1ff4f98586cb248aaec39d595f924fd"
+      },
+      {
+        "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/kept/step000047_weights.pt",
+        "bytes": 307828101,
+        "mtime_ns": 1790555215177911154,
+        "model_tensor_sha256": "c48f1affb912c323660b59b5ad860106c0aa784054419fd754fb4b8d217e9563"
+      }
+    ]
+  },
+  "qualification": {
+    "max_split_error": 4.884981308350689e-15,
+    "max_mixed_identity_error": 5.134781488891349e-15,
+    "max_J_identity_error": 1.887379141862766e-15,
+    "max_old_token_nll_error": 0.0,
+    "max_old_mean_nll_error": 0.0,
+    "max_old_token_kl_error": 0.0,
+    "max_old_mean_kl_error": 0.0,
+    "projected_seconds": 315.91039460897446,
+    "first_sequence_seconds": 3.6535654067993164,
+    "first_load_seconds": 0.9492685794830322
+  },
+  "seconds": 207.46807265281677,
+  "load_seconds": [
+    0.9492685794830322,
+    0.47069215774536133,
+    0.4626648426055908,
+    0.5748739242553711
+  ],
+  "sequence_seconds": [
+    3.6535654067993164,
+    3.6523549556732178,
+    3.660048723220825,
+    3.5904603004455566,
+    3.375343084335327,
+    3.208829402923584,
+    3.3356144428253174,
+    3.2803149223327637,
+    3.5009164810180664,
+    3.2356514930725098,
+    3.263970375061035,
+    3.05078387260437,
+    3.279287815093994,
+    3.1948657035827637,
+    3.1551308631896973,
+    3.1569881439208984,
+    2.953479766845703,
+    2.999483823776245,
+    3.0569255352020264,
+    2.9845054149627686,
+    3.069350242614746,
+    2.933699369430542,
+    3.3161628246307373,
+    3.3575258255004883,
+    3.1892237663269043,
+    3.1663029193878174,
+    3.1563642024993896,
+    3.2024059295654297,
+    3.3827779293060303,
+    3.2855417728424072,
+    3.076011896133423,
+    2.9177286624908447,
+    3.027507781982422,
+    3.0035839080810547,
+    3.034773588180542,
+    3.042484760284424,
+    2.9274590015411377,
+    3.4201910495758057,
+    3.1922543048858643,
+    3.2327358722686768,
+    2.929157018661499,
+    3.0277352333068848,
+    3.018475294113159,
+    2.988513469696045,
+    2.966341018676758,
+    3.151688575744629,
+    3.0159568786621094,
+    3.0133135318756104,
+    2.914910316467285,
+    2.960397243499756,
+    2.923147439956665,
+    3.0610406398773193,
+    2.932807445526123,
+    3.027510643005371,
+    2.9773306846618652,
+    3.036850929260254,
+    3.27142333984375,
+    3.041826009750366,
+    3.1338958740234375,
+    3.107581853866577,
+    2.8671321868896484,
+    2.9396979808807373,
+    3.0213992595672607,
+    3.076774835586548
+  ],
+  "score_forwards": 256
+}

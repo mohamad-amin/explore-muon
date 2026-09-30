@@ -1,0 +1,20 @@
+{
+  "reviewer": "/root/surrogate_design_decision",
+  "recommendation": "One bounded execution-only CUDA graph benchmark is defensible; keep D scientificscreen closed.",
+  "mechanism": "Many small forward/backward/statistic kernels may be dispatch limited; native AdamW/Muon\u22482.25s perupdate versus geometry\u22484.28\u20134.45s even without refresh.",
+  "competitor": "GPU compute/memory costs dominate; graph replay cannot meet cap.",
+  "required_acceleration": "2.07x overall; approximately2.44x training with evaluation unchanged; stats-only savings insufficient.",
+  "preserve": [
+    "scientific recipe",
+    "4-sequence microbatch and statistic ordering",
+    "FP32 Grams",
+    "gradient accumulation",
+    "RNG",
+    "optimizer/GN/refresh/schedule semantics",
+    "all development targets",
+    "partial-microbatch semantics",
+    "all previous failures"
+  ],
+  "source": "https://docs.pytorch.org/docs/2.11/notes/cuda.html#cuda-graphs",
+  "no_experiment_performed_by_reviewer": true
+}

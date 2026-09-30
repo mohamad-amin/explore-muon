@@ -1,0 +1,19 @@
+{
+  "adamw_spectra/SCALE_UP_CASE.md": "e310e787dce7577ba5d829310c3006b6555cd31a54acdd6085ff13efe57cdd3f",
+  "adamw_spectra/model.py": "fe39a6cd11675bb9403a83dcf122a6c6a191539fd73bfaa4836e865c6b30d281",
+  "adamw_spectra/test_study.py": "7ce2cacf51494fdd8c24575d2d101a984afd07a9ed686cfa57eced15dd863937",
+  "adamw_spectra/README.md": "0ce21bfe2fb185a8c642ae571e9198342988f0e25120043ae57baf744a161fd6",
+  "adamw_spectra/analyze.py": "89dfb9a2724f7f1526da6b57110730b636c4943eaec61add64bb2ebd517e1eb6",
+  "adamw_spectra/QUALIFICATION.md": "9d890c6f64e7db4d8aea6da011060b00df8532c2325632b44a1051b25c5d74c6",
+  "adamw_spectra/PROTOCOL.md": "623330723aca64edaf6c7329dac87cd03efea34672b2c76c08cb3049d93101c8",
+  "adamw_spectra/data.py": "99134dc89336636a65ce9eb6774c14e73843a6f9e4be4cf523bccfc0fd612124",
+  "adamw_spectra/measure.py": "b95ec7bec0d2cdec76f608aa28e4cf84bfbef9e38ef0871d8cb18141746980d2",
+  "adamw_spectra/distributed.py": "09029c32df042fdad69ea9a492486f4e5c03e68e397889baea257f66ba6b39a3",
+  "adamw_spectra/EFFICIENCY.md": "41644300b606b30bf64a9ece07e306833191ad0283355b3902e0a73348b9be6c",
+  "adamw_spectra/__init__.py": "1cbbc373942e9885beeed7f8b2099af70d21b28a64b98e3d9d66d66d13860830",
+  "adamw_spectra/train.py": "9f422bb97672056a6839a812bb1b21cf79eb0ca52c5e9d7e39b96802c966fe90",
+  "adamw_spectra/sweep.py": "466c8b21a58ab3a23d7592767e3391858c3b7c3a505bfcaa4e0f9937dddd68c5",
+  "adamw_spectra/configs/depth12_width512.json": "940ca6f6c42364f054dc3a90a1a0b98dd7b4eb626bb1a3501da50b3196243448",
+  "adamw_spectra/configs/77m.json": "0e5af58b2166528a7c597e531a2c4992a006838d647374d238a60e9e44b32f5c",
+  "adamw_spectra/configs/depth20_width512.json": "19d71b3fd0da28035c9e1e94d4479693ccc0db7ecebe8cc911431e40cb87cf89"
+}

@@ -1,0 +1,16 @@
+{
+  "token_arrays_sha256": {
+    "bank0_inputs": "b239e2a8b10ca5f051f5f8da4f07ee4646773296267f678db4fb70552fe27f59",
+    "bank0_targets": "eb31207d3e5988900b6a6539791e22bae8a3ea2064d8cbb5cd01e9f761e2a180",
+    "bank1_inputs": "5bd158383d5b2061054762403a2e0daf74a38b66f551c217e14e60822311b320",
+    "bank1_targets": "17978d5cc9c81af62ab4479d6f1c1afb2d7dd17e532ad2e0bff8be423828b5ba"
+  },
+  "source_sha256": "583b37bc1754227ff6ed106e7b2178a04653171bcf3496a0081d6f7530d2e2e8",
+  "banks": 2,
+  "sequences_per_bank": 8,
+  "tokens_per_sequence": 512,
+  "offsets": [
+    2500065536,
+    2600065536
+  ]
+}

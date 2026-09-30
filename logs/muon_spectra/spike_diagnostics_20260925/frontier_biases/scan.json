@@ -1,0 +1,518 @@
+[
+ {
+  "repo": "deepseek-ai/DeepSeek-V4.1-Flash",
+  "source": "deepseek-ai/DeepSeek-V4.1-Flash",
+  "index": "model.safetensors.index.json",
+  "tensors": 96085,
+  "bias_patterns": {
+   "vision.patch_embed.proj.bias": 1,
+   "vision.blocks.#.attn.wqkv.bias": 32,
+   "vision.blocks.#.attn.wo.bias": 32,
+   "aligner.w1.bias": 1,
+   "aligner.w2.bias": 1,
+   "layers.#.attn.attn_sink": 40,
+   "layers.#.ffn.gate.bias": 40,
+   "layers.#.ffn.gate.bias_vl": 40,
+   "mtp.#.attn.attn_sink": 3,
+   "mtp.#.ffn.gate.bias": 3,
+   "mtp.#.ffn.gate.bias_vl": 3
+  },
+  "config_keys": {
+   "rms_norm_eps": "1e-20",
+   "attention_bias": "false",
+   "hc_sinkhorn_iters": "20"
+  },
+  "arch": [
+   "DeepseekV41ForCausalLM"
+  ]
+ },
+ {
+  "repo": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "source": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "index": "model.safetensors.index.json",
+  "tensors": 149782,
+  "bias_patterns": {
+   "layers.#.attn.attn_sink": 61,
+   "layers.#.ffn.gate.bias": 58,
+   "mtp.#.attn.attn_sink": 3,
+   "mtp.#.ffn.gate.bias": 3
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "hc_sinkhorn_iters": "20",
+   "rms_norm_eps": "1e-06"
+  },
+  "arch": [
+   "DeepseekV4ForCausalLM"
+  ]
+ },
+ {
+  "repo": "moonshotai/Kimi-K3",
+  "source": "moonshotai/Kimi-K3",
+  "index": "model.safetensors.index.json",
+  "tensors": 497220,
+  "bias_patterns": {
+   "language_model.model.layers.#.block_sparse_moe.gate.e_score_correction_bias": 92,
+   "language_model.model.layers.#.self_attn.dt_bias": 69
+  },
+  "config_keys": {
+   "rms_norm_eps": "1e-05",
+   "attn_bias": "false",
+   "linear_bias": "false",
+   "norm_type": "\"rmsnorm\"",
+   "patch_embed_proj_bias": "false"
+  },
+  "arch": [
+   "KimiK3ForConditionalGeneration"
+  ]
+ },
+ {
+  "repo": "zai-org/GLM-5.3",
+  "source": "zai-org/GLM-5.3",
+  "index": "model.safetensors.index.json",
+  "tensors": 118629,
+  "bias_patterns": {
+   "model.layers.#.self_attn.indexer.k_norm.bias": 22,
+   "model.layers.#.mlp.gate.e_score_correction_bias": 76
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "GlmMoeDsaForCausalLM"
+  ]
+ },
+ {
+  "repo": "Qwen/Qwen3.8-2.4T-A95B",
+  "source": "Qwen/Qwen3.8-2.4T-A95B",
+  "index": "model.safetensors.index.json",
+  "tensors": 1609,
+  "bias_patterns": {
+   "model.layers.#.linear_attn.dt_bias": 69
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-06"
+  },
+  "arch": [
+   "Qwen3_5MoeForCausalLM"
+  ]
+ },
+ {
+  "repo": "Qwen/Qwen3.8-27B",
+  "source": "Qwen/Qwen3.8-27B",
+  "index": "model.safetensors.index.json",
+  "tensors": 1199,
+  "bias_patterns": {
+   "model.language_model.layers.#.linear_attn.dt_bias": 48,
+   "model.visual.blocks.#.attn.proj.bias": 27,
+   "model.visual.blocks.#.attn.qkv.bias": 27,
+   "model.visual.blocks.#.mlp.linear_fc1.bias": 27,
+   "model.visual.blocks.#.mlp.linear_fc2.bias": 27,
+   "model.visual.blocks.#.norm1.bias": 27,
+   "model.visual.blocks.#.norm2.bias": 27,
+   "model.visual.merger.linear_fc1.bias": 1,
+   "model.visual.merger.linear_fc2.bias": 1,
+   "model.visual.merger.norm.bias": 1,
+   "model.visual.patch_embed.proj.bias": 1
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-06"
+  },
+  "arch": [
+   "Qwen3_5ForConditionalGeneration"
+  ]
+ },
+ {
+  "repo": "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+  "source": "unsloth/Llama-4-Maverick-17B-128E-Instruct",
+  "index": "model.safetensors.index.json",
+  "tensors": 1061,
+  "bias_patterns": {
+   "vision_model.layernorm_post.bias": 1,
+   "vision_model.layernorm_pre.bias": 1,
+   "vision_model.model.layers.#.input_layernorm.bias": 34,
+   "vision_model.model.layers.#.mlp.fc1.bias": 34,
+   "vision_model.model.layers.#.mlp.fc2.bias": 34,
+   "vision_model.model.layers.#.post_attention_layernorm.bias": 34,
+   "vision_model.model.layers.#.self_attn.k_proj.bias": 34,
+   "vision_model.model.layers.#.self_attn.o_proj.bias": 34,
+   "vision_model.model.layers.#.self_attn.q_proj.bias": 34,
+   "vision_model.model.layers.#.self_attn.v_proj.bias": 34
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-05",
+   "multi_modal_projector_bias": "false"
+  },
+  "arch": [
+   "Llama4ForConditionalGeneration"
+  ]
+ },
+ {
+  "repo": "google/gemma-4-31B-it",
+  "source": "google/gemma-4-31B-it",
+  "index": "model.safetensors.index.json",
+  "tensors": 1188,
+  "bias_patterns": {
+   "model.vision_tower.std_bias": 1
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-06"
+  },
+  "arch": [
+   "Gemma4ForConditionalGeneration"
+  ]
+ },
+ {
+  "repo": "google/gemma-4-26B-A4B-it",
+  "source": "google/gemma-4-26B-A4B-it",
+  "index": "model.safetensors.index.json",
+  "tensors": 1013,
+  "bias_patterns": {
+   "model.vision_tower.std_bias": 1
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-06"
+  },
+  "arch": [
+   "Gemma4ForConditionalGeneration"
+  ]
+ },
+ {
+  "repo": "mistralai/Mistral-Medium-3.5-128B",
+  "source": "mistralai/Mistral-Medium-3.5-128B",
+  "index": "model.safetensors.index.json",
+  "tensors": 2465,
+  "bias_patterns": {},
+  "config_keys": {
+   "multimodal_projector_bias": "false",
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "Mistral3ForConditionalGeneration"
+  ]
+ },
+ {
+  "repo": "mistralai/Mistral-Large-3-675B-Instruct-2512",
+  "source": "mistralai/Mistral-Large-3-675B-Instruct-2512",
+  "index": "consolidated.safetensors.index.json",
+  "tensors": 46141,
+  "bias_patterns": {},
+  "config_keys": {},
+  "arch": null
+ },
+ {
+  "repo": "openai/gpt-oss-120b",
+  "source": "openai/gpt-oss-120b",
+  "index": "model.safetensors.index.json",
+  "tensors": 687,
+  "bias_patterns": {
+   "model.layers.#.mlp.experts.down_proj_bias": 36,
+   "model.layers.#.self_attn.o_proj.bias": 36,
+   "model.layers.#.self_attn.q_proj.bias": 36,
+   "model.layers.#.self_attn.k_proj.bias": 36,
+   "model.layers.#.self_attn.v_proj.bias": 36,
+   "model.layers.#.self_attn.sinks": 36,
+   "model.layers.#.mlp.router.bias": 36,
+   "model.layers.#.mlp.experts.gate_up_proj_bias": 36
+  },
+  "config_keys": {
+   "attention_bias": "true",
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "GptOssForCausalLM"
+  ]
+ },
+ {
+  "repo": "MiniMaxAI/MiniMax-M2.7",
+  "source": "MiniMaxAI/MiniMax-M2.7",
+  "index": "model.safetensors.index.json",
+  "tensors": 96103,
+  "bias_patterns": {
+   "model.layers.#.block_sparse_moe.e_score_correction_bias": 62
+  },
+  "config_keys": {
+   "qk_norm_type": "\"per_layer\"",
+   "rms_norm_eps": "1e-06",
+   "use_routing_bias": "true"
+  },
+  "arch": [
+   "MiniMaxM2ForCausalLM"
+  ]
+ },
+ {
+  "repo": "xai-org/grok-2",
+  "source": "xai-org/grok-2",
+  "index": "pytorch_model-00000-TP-common.safetensors,pytorch_model-00001-TP-common.safetensors,pytorch_model-00002-TP-common.safetensors,pytorch_model-00003-TP-common.safetensors",
+  "tensors": 67,
+  "bias_patterns": {},
+  "config_keys": {
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "Grok1ForCausalLM"
+  ]
+ },
+ {
+  "repo": "CohereLabs/command-a-plus-05-2026-bf16",
+  "source": "CohereLabs/command-a-plus-05-2026-bf16",
+  "index": "model.safetensors.index.json",
+  "tensors": 13019,
+  "bias_patterns": {
+   "model.multi_modal_projector.linear_1.bias": 1,
+   "model.multi_modal_projector.linear_2.bias": 1,
+   "model.vision_tower.vision_model.embeddings.patch_embedding.bias": 1,
+   "model.vision_tower.vision_model.encoder.layers.#.layer_norm1.bias": 27,
+   "model.vision_tower.vision_model.encoder.layers.#.layer_norm2.bias": 27,
+   "model.vision_tower.vision_model.encoder.layers.#.mlp.fc1.bias": 27,
+   "model.vision_tower.vision_model.encoder.layers.#.mlp.fc2.bias": 27,
+   "model.vision_tower.vision_model.encoder.layers.#.self_attn.k_proj.bias": 27,
+   "model.vision_tower.vision_model.encoder.layers.#.self_attn.out_proj.bias": 27,
+   "model.vision_tower.vision_model.encoder.layers.#.self_attn.q_proj.bias": 27,
+   "model.vision_tower.vision_model.encoder.layers.#.self_attn.v_proj.bias": 27,
+   "model.vision_tower.vision_model.post_layernorm.bias": 1
+  },
+  "config_keys": {
+   "adapter_layer_norm_eps": "1e-06",
+   "attention_bias": "false",
+   "layer_norm_eps": "1e-06",
+   "rms_norm_eps": "null"
+  },
+  "arch": [
+   "Cohere2VisionForConditionalGeneration"
+  ]
+ },
+ {
+  "repo": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+  "source": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+  "index": "model.safetensors.index.json",
+  "tensors": 51023,
+  "bias_patterns": {
+   "backbone.layers.#.mixer.dt_bias": 48,
+   "backbone.layers.#.mixer.conv1d.bias": 48,
+   "backbone.layers.#.mixer.gate.e_score_correction_bias": 48,
+   "mtp.layers.#.mixer.gate.e_score_correction_bias": 1
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "layer_norm_epsilon": "1e-05",
+   "mamba_proj_bias": "false",
+   "mlp_bias": "false",
+   "use_bias": "false",
+   "use_conv_bias": "true"
+  },
+  "arch": [
+   "NemotronHForCausalLM"
+  ]
+ },
+ {
+  "repo": "ibm-granite/granite-4.2-30b",
+  "source": "ibm-granite/granite-4.2-30b",
+  "index": "model.safetensors.index.json",
+  "tensors": 579,
+  "bias_patterns": {},
+  "config_keys": {
+   "attention_bias": "false",
+   "mlp_bias": "false",
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "GraniteForCausalLM"
+  ]
+ },
+ {
+  "repo": "tencent/Hy4-preview",
+  "source": "tencent/Hy4-preview",
+  "index": "model.safetensors.index.json",
+  "tensors": 2006,
+  "bias_patterns": {
+   "model.layers.#.self_attn.indexer.k_norm.bias": 21,
+   "model.layers.#.self_attn.learnable_sink_param": 78,
+   "model.layers.#.mlp.gate.e_score_correction_bias": 77,
+   "model.mtp_layers.#.mlp.gate.e_score_correction_bias": 1,
+   "model.mtp_layers.#.self_attn.indexer.k_norm.bias": 1,
+   "model.mtp_layers.#.self_attn.learnable_sink_param": 1
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "learnable_sink": "true",
+   "learnable_sink_init": "0.0",
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "HYV4ForCausalLM"
+  ]
+ },
+ {
+  "repo": "meituan-longcat/LongCat-2.0",
+  "source": "meituan-longcat/LongCat-2.0",
+  "index": "model.safetensors.index.json",
+  "tensors": 88780,
+  "bias_patterns": {
+   "model.layers.#.mlp.router.e_score_correction_bias": 38
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-05",
+   "index_k_norm_type": "\"rms\""
+  },
+  "arch": [
+   "LongcatCausalLM"
+  ]
+ },
+ {
+  "repo": "stepfun-ai/Step-3.5-Flash",
+  "source": "stepfun-ai/Step-3.5-Flash",
+  "index": "model.safetensors.index.json",
+  "tensors": 804,
+  "bias_patterns": {
+   "model.layers.#.moe.router_bias": 42
+  },
+  "config_keys": {
+   "use_moe_router_bias": "true",
+   "sink": "false"
+  },
+  "arch": [
+   "Step3p5ForCausalLM"
+  ]
+ },
+ {
+  "repo": "inclusionAI/Ling-3.0-flash",
+  "source": "inclusionAI/Ling-3.0-flash",
+  "index": "model.safetensors.index.json",
+  "tensors": 63783,
+  "bias_patterns": {
+   "model.layers.#.attention.dt_bias": 35,
+   "model.layers.#.mlp.gate.expert_bias": 41
+  },
+  "config_keys": {
+   "moe_router_enable_expert_bias": "true",
+   "rms_norm_eps": "1e-06",
+   "use_bias": "false",
+   "use_qkv_bias": "false"
+  },
+  "arch": [
+   "BailingMoeV3ForCausalLM"
+  ]
+ },
+ {
+  "repo": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+  "source": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+  "index": "model.safetensors.index.json",
+  "tensors": 160040,
+  "bias_patterns": {
+   "audio_encoder.input_local_transformer.layers.#.self_attn.k_proj.bias": 6,
+   "audio_encoder.input_local_transformer.layers.#.self_attn.q_proj.bias": 6,
+   "audio_encoder.input_local_transformer.layers.#.self_attn.v_proj.bias": 6,
+   "model.layers.#.mlp.gate.e_score_correction_bias": 69,
+   "model.layers.#.self_attn.attention_sink_bias": 60,
+   "model.mtp.layers.#.self_attn.attention_sink_bias": 3,
+   "visual.blocks.#.attn.proj.bias": 28,
+   "visual.blocks.#.attn.qkv.bias": 28,
+   "visual.blocks.#.mlp.down_proj.bias": 28,
+   "visual.blocks.#.mlp.gate_proj.bias": 28,
+   "visual.blocks.#.mlp.up_proj.bias": 28,
+   "visual.blocks.#.attn.sinks": 24
+  },
+  "config_keys": {
+   "add_full_attention_sink_bias": "false",
+   "add_swa_attention_sink_bias": "true",
+   "attention_bias": "false",
+   "use_sink": "true"
+  },
+  "arch": [
+   "MiMoV2ForCausalLM"
+  ]
+ },
+ {
+  "repo": "upstage/Solar-Open2-250B",
+  "source": "upstage/Solar-Open2-250B",
+  "index": "model.safetensors.index.json",
+  "tensors": 47019,
+  "bias_patterns": {
+   "model.layers.#.mlp.gate.e_score_correction_bias": 48,
+   "model.layers.#.self_attn.dt_bias": 36
+  },
+  "config_keys": {
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "SolarOpen2ForCausalLM"
+  ]
+ },
+ {
+  "repo": "swiss-ai/Apertus-v1.5-70B",
+  "error": [
+   "swiss-ai/Apertus-v1.5-70B",
+   "swiss-ai/Apertus-v1.5-70B: HTTP 401",
+   "unsloth/Apertus-v1.5-70B: HTTP 401"
+  ]
+ },
+ {
+  "repo": "allenai/Olmo-3.1-32B-Instruct",
+  "source": "allenai/Olmo-3.1-32B-Instruct",
+  "index": "model.safetensors.index.json",
+  "tensors": 707,
+  "bias_patterns": {},
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-06"
+  },
+  "arch": [
+   "Olmo3ForCausalLM"
+  ]
+ },
+ {
+  "repo": "microsoft/Phi-4-reasoning-vision-15B",
+  "source": "microsoft/Phi-4-reasoning-vision-15B",
+  "index": "model.safetensors.index.json",
+  "tensors": 695,
+  "bias_patterns": {
+   "model.mm_projector.#.bias": 2,
+   "model.vision_tower.vision_tower.vision_model.embeddings.patch_embedding.bias": 1,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.layer_norm1.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.layer_norm2.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.mlp.fc1.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.mlp.fc2.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.self_attn.k_proj.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.self_attn.out_proj.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.self_attn.q_proj.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.encoder.layers.#.self_attn.v_proj.bias": 27,
+   "model.vision_tower.vision_tower.vision_model.head.attention.in_proj_bias": 1,
+   "model.vision_tower.vision_tower.vision_model.head.attention.out_proj.bias": 1,
+   "model.vision_tower.vision_tower.vision_model.head.layernorm.bias": 1,
+   "model.vision_tower.vision_tower.vision_model.head.mlp.fc1.bias": 1,
+   "model.vision_tower.vision_tower.vision_model.head.mlp.fc2.bias": 1,
+   "model.vision_tower.vision_tower.vision_model.post_layernorm.bias": 1
+  },
+  "config_keys": {
+   "attention_bias": "false",
+   "rms_norm_eps": "1e-05"
+  },
+  "arch": [
+   "Phi4ForCausalLMV"
+  ]
+ },
+ {
+  "repo": "baidu/ERNIE-4.5-300B-A47B-PT",
+  "source": "baidu/ERNIE-4.5-300B-A47B-PT",
+  "index": "model.safetensors.index.json",
+  "tensors": 10242,
+  "bias_patterns": {
+   "model.layers.#.mlp.moe_statics.e_score_correction_bias": 51
+  },
+  "config_keys": {
+   "rms_norm_eps": "1e-05",
+   "use_bias": "false"
+  },
+  "arch": [
+   "Ernie4_5_MoeForCausalLM"
+  ]
+ }
+]

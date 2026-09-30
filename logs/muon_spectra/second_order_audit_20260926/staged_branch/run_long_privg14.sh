@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /share/data/dl-theory/amin/projects/explore_muon
+.venv/bin/python -m torch.distributed.run --standalone --nproc_per_node=4 logs/muon_spectra/second_order_audit_20260926/newton_train.py logs/muon_spectra/second_order_audit_20260926/staged_branch/staged_9 /share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s:9 --normalize 0 --momentum 0.9 --clip 1.0 --staged-pd 0.5 --stop-after 83 --validation-every 10 --checkpoint-every 20 > logs/muon_spectra/second_order_audit_20260926/staged_branch/staged_9.log 2>&1

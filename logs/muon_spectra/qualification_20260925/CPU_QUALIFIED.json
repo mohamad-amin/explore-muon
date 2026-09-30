@@ -1,0 +1,27 @@
+{
+  "unit_tests": 16,
+  "world_size": 4,
+  "tokens": 288,
+  "uneven_final_batch": 32,
+  "comparisons": {
+    "resumed": {
+      "max_parameter_abs": 0.0,
+      "optimizer_max_abs": {
+        "momentum_buffer": 0,
+        "step": 0,
+        "exp_avg": 0,
+        "exp_avg_sq": 0
+      }
+    },
+    "single": {
+      "max_parameter_abs": 2.0341112758615054e-06,
+      "optimizer_max_abs": {
+        "momentum_buffer": 6.51925802230835e-09,
+        "step": 0,
+        "exp_avg": 4.190951585769653e-09,
+        "exp_avg_sq": 2.3283064365386963e-10
+      }
+    }
+  },
+  "passed": true
+}

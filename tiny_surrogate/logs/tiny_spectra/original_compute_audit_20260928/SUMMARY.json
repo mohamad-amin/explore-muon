@@ -1,0 +1,60 @@
+{
+  "scope": "Occupied time intervals of recorded original training jobs/steps; overlaps within the two four-GPU shared allocations counted once, plus four nonoverlapping cloud training pipelines. Includes qualification, failed/cancelled/timed-out attempts and overhead within those intervals.",
+  "scheduler_unique_handles": 224,
+  "scheduler_gpu_hours_after_overlap_union": 942.871111111111,
+  "cloud_gpu_hours": 3.6791900523503624,
+  "total_accounted_gpu_hours": 946.5503011634613,
+  "second_order_batch_momentum_training_gpu_hours_after_overlap_union": 351.4111111111112,
+  "raw_step_sum_before_union_gpu_hours": 1028.772523385684,
+  "overlap_double_count_removed_gpu_hours": 82.22222222222274,
+  "standard77m_1p54b_complete_pipeline_count": 233,
+  "standard77m_1p54b_median_pipeline_gpu_hours": 3.1518554446432328,
+  "examples": [
+    {
+      "arm": "M_b4M_lr0.014_mom0.9_s260926_l40s",
+      "pipeline_path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/M_b4M_lr0.014_mom0.9_s260926_l40s/pipeline.json",
+      "pipeline_sha256": "2c32b99c626d95d94d83adfc44f646480dd14182a70c253df3d78d9b2c2ba72f",
+      "gpu": "NVIDIA L40S",
+      "gpus": 4,
+      "wall_minutes": 23.630090383688607,
+      "gpu_hours": 1.5753393591774834
+    },
+    {
+      "arm": "PD_b4M_lr0.02_mom0.9_s260926_l40s",
+      "pipeline_path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/PD_b4M_lr0.02_mom0.9_s260926_l40s/pipeline.json",
+      "pipeline_sha256": "4ac726291806c7cd55b21a1be0c26e04d88158a3e50b601a5ff31711e0ce9787",
+      "gpu": "NVIDIA L40S",
+      "gpus": 4,
+      "wall_minutes": 25.548652843634287,
+      "gpu_hours": 1.703243523173862
+    },
+    {
+      "arm": "SPD_b4M_lr0.01_mom0.9_s260926_l40s",
+      "pipeline_path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/SPD_b4M_lr0.01_mom0.9_s260926_l40s/pipeline.json",
+      "pipeline_sha256": "57350b142c53c4fa4c8885a5601070a2a8c82c0d9d3bf750f36972c3c3a56ad9",
+      "gpu": "NVIDIA L40S",
+      "gpus": 4,
+      "wall_minutes": 48.369580483436586,
+      "gpu_hours": 3.22463870022032
+    },
+    {
+      "arm": "TS_a0.25_b0.25gn_b4M_lr0.01_mom0.9_s260926_l40s",
+      "pipeline_path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/TS_a0.25_b0.25gn_b4M_lr0.01_mom0.9_s260926_l40s/pipeline.json",
+      "pipeline_sha256": "eeaabdead30d9891463b9203d904ad97b8d590de5726c5a7c32bdaa074486fbe",
+      "gpu": "NVIDIA L40S",
+      "gpus": 4,
+      "wall_minutes": 25.790873885154724,
+      "gpu_hours": 1.719391592608558
+    }
+  ],
+  "covered_calendar_start": "2026-09-24T16:26:22",
+  "covered_calendar_end": "2026-09-28T19:41:39",
+  "limitations": [
+    "Scoped original training-job accounting, not a full cluster invoice.",
+    "Separate diagnostic/probe jobs and idle allocation time outside selected intervals are excluded.",
+    "Pipeline overhead and waiting within selected intervals are included.",
+    "The broader campaign includes roughly77M,90M and134M variants.",
+    "GPU-hours count devices times elapsed time; hardware performance is not normalized."
+  ],
+  "queried_unix": 1790642603.481141
+}

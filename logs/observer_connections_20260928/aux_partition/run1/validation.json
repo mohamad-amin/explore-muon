@@ -1,0 +1,78 @@
+{
+  "validation": {
+    "direct_subset_vs_fast_transform_max_abs_error": 0.0,
+    "plane_split_max_abs_error": 2.2967738821932926e-15,
+    "total_body_aux_identity_max_abs_error": 0.0
+  },
+  "posthoc_interpretation": {
+    "discovery": {
+      "pair_shares_of_total": {
+        "BH": 0.3494320636687671,
+        "BE": 0.6524370422665036,
+        "BN": 0.004665755221077921
+      },
+      "higher_order_share": -0.006534861156348567,
+      "overlap_share": 0.984216509971577,
+      "finite_logit_projections": {
+        "H": {
+          "coefficient_on_body_finite_response": 0.03992328186269742,
+          "original_label_linear_response": -0.005765334095613132,
+          "remaining_label_linear_response": -0.0020870445164831867,
+          "remaining_descent_fraction": 0.36199888538484315,
+          "remaining_metric_energy_fraction": 0.8509890221513363
+        },
+        "E": {
+          "coefficient_on_body_finite_response": 0.06925295477652581,
+          "original_label_linear_response": -0.007261603464113894,
+          "remaining_label_linear_response": -0.0008810553229435863,
+          "remaining_descent_fraction": 0.12133068506118133,
+          "remaining_metric_energy_fraction": 0.5777424975922294
+        },
+        "N": {
+          "coefficient_on_body_finite_response": 0.00040259308009800367,
+          "original_label_linear_response": -0.00015032507951027847,
+          "remaining_label_linear_response": -0.00011323258956300386,
+          "remaining_descent_fraction": 0.75325148625823,
+          "remaining_metric_energy_fraction": 0.9960494850146581
+        }
+      }
+    },
+    "fresh": {
+      "pair_shares_of_total": {
+        "BH": 0.337883359191429,
+        "BE": 0.6639440284553159,
+        "BN": 0.00465150175627031
+      },
+      "higher_order_share": -0.006478889403015184,
+      "overlap_share": 0.9623681215471006,
+      "finite_logit_projections": {
+        "H": {
+          "coefficient_on_body_finite_response": 0.03763775163825118,
+          "original_label_linear_response": -0.00565868872942279,
+          "remaining_label_linear_response": -0.0017195056803253322,
+          "remaining_descent_fraction": 0.30386998871039317,
+          "remaining_metric_energy_fraction": 0.8649854606598956
+        },
+        "E": {
+          "coefficient_on_body_finite_response": 0.06876987158278179,
+          "original_label_linear_response": -0.007782268618062568,
+          "remaining_label_linear_response": -0.000584784692051676,
+          "remaining_descent_fraction": 0.07514321604042253,
+          "remaining_metric_energy_fraction": 0.5552236149237805
+        },
+        "N": {
+          "coefficient_on_body_finite_response": 0.0004191645763220409,
+          "original_label_linear_response": -0.00023572172690715788,
+          "remaining_label_linear_response": -0.00019185178457638847,
+          "remaining_descent_fraction": 0.8138909683618253,
+          "remaining_metric_energy_fraction": 0.9959810844437477
+        }
+      }
+    }
+  },
+  "scope": "Projection is algebra in the finite-logit response span after seeing results, not an implemented parameter update, new endpoint or training recommendation. Nonlinear loss of a projected response was not measured.",
+  "input_sha256": {
+    "result.json": "d6b0e78f6b8beb6d8157469e668749069fde4b677bc97d4e6b33727d6a78bf9f",
+    "analysis.json": "ae42c903e17f420c0245082521c113e3087ab103376431e4a72f75ec12dd5474"
+  }
+}

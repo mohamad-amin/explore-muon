@@ -1,0 +1,172 @@
+{
+  "updated": "2026-09-28T18:26:47.970005-05:00",
+  "goal_status": "active; no qualified surrogate",
+  "prior_turn_classification": "progress: reviewedsource/data/EOT/rolefreezecontractsqualified; decoder80real-sourceexamplesroundtripped; standaloneperforwardmode30tests; boundedfrozenCPUprep2627148started",
+  "requirements": [
+    {
+      "requirement": "small standalone setup, no full-size pipeline",
+      "status": "demonstrated",
+      "evidence": "standalone 820864-parameter character and1852800-parameter subword trainers; frozen source manifests"
+    },
+    {
+      "requirement": "all new GPU experiments on devices strictly below48GB",
+      "status": "demonstrated to date",
+      "evidence": "16GB A4000 and11GB RTX2080Ti hardware metadata; runtime <45GiB guard"
+    },
+    {
+      "requirement": "five-method ordering on full held-out loss",
+      "status": "not demonstrated; both candidates frozen unqualified",
+      "evidence": "CHARACTER_CANDIDATE_VERDICT.json; CANDIDATE_C_VERDICT.json; no independent confirmation scores"
+    },
+    {
+      "requirement": "geometry advantage increases with batch",
+      "status": "endpoint gaps demonstrated on discovery seed; rate interpretation unresolved",
+      "evidence": "DISCOVERY_SPEEDUP.json has original nonmonotone common-loss ratios; early small-batch crossing estimates too coarse"
+    },
+    {
+      "requirement": "smaller useful momentum at larger batch after LR allowance",
+      "status": "not demonstrated; character sweep complete with weak/edge optima; C dynamics gate closed",
+      "evidence": "CHARACTER_CANDIDATE_VERDICT.json; no running momentum sweep"
+    },
+    {
+      "requirement": "locked recipes and at least three fresh paired seeds",
+      "status": "not yet run"
+    },
+    {
+      "requirement": "matched-step and extended-large-batch controls",
+      "status": "not yet run"
+    },
+    {
+      "requirement": "Independent untouched full-document confirmation after locking complete comparison family",
+      "status": "two populations prepared and unscored; char/BPE scorers synthetic-qualified; final family not locked",
+      "evidence": "28 unseen MIT plays and5018 TinyStories test documents; confirmation_adapter_20260928 independent review"
+    }
+  ],
+  "peer_corrections": [
+    "Use evaluation every8 optimizer steps in confirmation; retain crossing brackets, not just interpolated ratios.",
+    "Give PD and TS the same selected lower large-batch momentum before using tuned SOAP-PD to claim chain.",
+    "Close large-batch Adam lower-LR and PD upper-LR boundaries before final selection.",
+    "Differential clipping is a recipe feature; it prevents interpreting momentum gain as isolated lag causality."
+  ],
+  "next": "MonitorCPU2627148withoutrestart; inspectpreparationcompletion/failure andallcapacity/overlapgates. Only then considerboundedA4000numericalsmoke; scientificscreen remainsconditional.",
+  "user_steering": "All old validation is development. Prevent evaluation-sample overfit; no test-guided retuning.",
+  "character_candidate": "frozen unqualified after75developmentruns; independentMITpanelunscored",
+  "candidate_c": {
+    "stage": "frozen_unqualified_after_declared_19_development_arms",
+    "verdict": "logs/tiny_spectra/CANDIDATE_C_VERDICT.json",
+    "test_scored": false
+  },
+  "momentum_claim_scope": "Replicated fixed-token batch\u00d7momentum contrast; matched-step and extended-horizon controls classify batch vs phase/horizon dependence. Attenuation at2x matches updated original reference and is not automatically failure; geometry-rate gate remains separate.",
+  "canonical_root": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate",
+  "active_job_ids": [
+    "2627148"
+  ],
+  "isolation_user_instruction": "All new footprint stays in this directory; use ./run and private scratch/cache paths.",
+  "diagnostic": {
+    "cohort": "logs/tiny_spectra/c_clock_diagnostic_20260928",
+    "state": "complete_neutral",
+    "changes": "cov_ema only; control 0.9, diagnostic 0.998**128",
+    "gate": "SPD absolute NLL improvement >=0.005 AND SPD-minus-TS relative improvement >=0.005; then fresh development-seed replication required",
+    "test_scored": false,
+    "result": "logs/tiny_spectra/c_clock_diagnostic_20260928/report/results.json",
+    "absolute_nll_changes": {
+      "ts": -0.0005112257752584171,
+      "spd": -0.00040855881836332486
+    },
+    "difference_in_differences": 0.0001026669568950922,
+    "material_clock_gate_passed": false
+  },
+  "scale_diagnostic": {
+    "cohort": "logs/tiny_spectra/c_scale_diagnostic_20260928",
+    "state": "complete_gate_failed_closed",
+    "plan": "logs/tiny_spectra/c_scale_diagnostic_20260928/PLAN.json",
+    "test_scored": false,
+    "qualified": false,
+    "result": "logs/tiny_spectra/c_scale_diagnostic_20260928/report/results.json",
+    "gates": {
+      "absolute_progress_both": true,
+      "two_material_matched_lrs": false,
+      "both_minima_interior": false,
+      "material_endpoint": true,
+      "every_document_group_favors_spd": true,
+      "late_direction_consistent": true,
+      "late_median_material": true
+    },
+    "matched_lr_spd_minus_ts": {
+      "0.004": -0.0014584844705489708,
+      "0.008": -0.0010413330816123612,
+      "0.016": -0.01136329003166514
+    }
+  },
+  "confirmation_adapter": {
+    "status": "implemented_and_synthetic_qualified",
+    "focused_tests": 38,
+    "independent_review": "logs/tiny_spectra/confirmation_adapter_20260928/independent_stories_data_review.json",
+    "real_panel_scored": false,
+    "limitations": [
+      "GPU throughput unbenchmarked",
+      "Future training-data expansion needs an explicit compatibility audit",
+      "Hard-kill active-guard recovery requires audited identical-family handling"
+    ],
+    "panel_binding_review": "logs/tiny_spectra/confirmation_adapter_20260928/panel_binding_review.json",
+    "real_panels_bound": false
+  },
+  "fixed_seed_replication": {
+    "state": "complete_failed_closed",
+    "cohort": "logs/tiny_spectra/c_fixed_seed_replication_20260928",
+    "plan": "logs/tiny_spectra/c_fixed_seed_replication_20260928/PLAN.json",
+    "primary": "each of2freshpairedendpointdifferences<=-0.005",
+    "selection_seed_excluded": 20260928,
+    "test_scored": false,
+    "qualification": false,
+    "result": "logs/tiny_spectra/c_fixed_seed_replication_20260928/report/results.json",
+    "primary_result": {
+      "each_pair_threshold": -0.005,
+      "both_fresh_pairs_pass": false,
+      "fresh_pair_count": 2,
+      "mean_fresh_spd_minus_ts": -0.002476002707789693,
+      "observed_fresh_gap_range": [
+        -0.005171073613182919,
+        0.00021906819760353358
+      ],
+      "selection_seed_excluded": true
+    }
+  },
+  "state_audit": {
+    "status": "unidentifiable_from_saved_reference_states",
+    "record": "logs/tiny_spectra/state_availability_20260928/availability.json",
+    "new_training": false,
+    "model_inference": false
+  },
+  "next_direction_proposal": {
+    "status": "reviewed_package_supported_with_frozen_data_numerical_conditions",
+    "path": "logs/tiny_spectra/reference_miniature_proposal_20260928/PROPOSAL.md",
+    "feasibility": "logs/tiny_spectra/reference_miniature_proposal_20260928/FEASIBILITY.json",
+    "data_preparation_started": false,
+    "training_started": false
+  },
+  "reviewer_availability": {
+    "status": "review_complete",
+    "agent": "/root/surrogate_results_review",
+    "first_observed_failure_recorded": true,
+    "consecutive_revalidated_blocker_turns": 0,
+    "required_by": "AGENTS.md and RESEARCH_GUIDE.md independent high-level discussion before a substantial new scientific branch",
+    "reported_retry_after": "Oct3,2026,12:10PM; timezone not supplied",
+    "local_unaffected_work_completed": "candidate parameter arithmetic, read-only shard/header/dependency inventory, concreteproposalwithreviewpoints",
+    "resolution": "same reviewer confirmed availability on requested continuation"
+  },
+  "candidate_d": {
+    "stage": "cpu_data_preparation_running",
+    "plan": "logs/tiny_spectra/fineweb_d_preparation_20260928/PLAN.json",
+    "cpu_runtime_tests": 30,
+    "scientific_screen_launched": false,
+    "whole_corpus_preparation_started": true,
+    "new_panel_scored": false,
+    "cpu_job_id": "2627148",
+    "source_role_audit": "logs/tiny_spectra/fineweb_d_preparation_20260928/SOURCE_ROLE_AUDIT.json",
+    "code_data_review": "logs/tiny_spectra/fineweb_d_preparation_20260928/CODE_DATA_REVIEW.json",
+    "decoder_sample_qualification": "logs/tiny_spectra/fineweb_d_preparation_20260928/DECODER_SAMPLE_QUALIFICATION.json",
+    "source_manifest": "logs/tiny_spectra/fineweb_d_preparation_20260928/source_manifest.json"
+  },
+  "active_job_kind": "CPU_data_preparation_only"
+}

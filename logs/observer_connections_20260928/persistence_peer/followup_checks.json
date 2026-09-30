@@ -1,0 +1,466 @@
+{
+  "independent_sums": [
+    {
+      "source": "logs/muon_spectra/second_order_audit_20260926/persistence/M_lr0.007_s260925_l40s_t000500.pt",
+      "max_relative_error": {
+        "count": 0.0,
+        "mean_a2": 1.954906682389596e-13,
+        "mean_b2": 2.211765450759561e-13,
+        "cross": 2.9010273014413975e-13,
+        "noise_a": 0.0,
+        "noise_b": 0.0,
+        "update_energy": 2.790658553717699e-13,
+        "decay_subtracted_energy": 1.3409529334783664e-14
+      },
+      "status": "all_16_cells_all_kinds_both_lags_agree"
+    },
+    {
+      "source": "logs/muon_spectra/second_order_audit_20260926/persistence/PD_a0.25_lr0.01_s260925_ada_t000500.pt",
+      "max_relative_error": {
+        "count": 0.0,
+        "mean_a2": 1.7956683719309348e-13,
+        "mean_b2": 2.1182589371883363e-13,
+        "cross": 2.296787892668757e-14,
+        "noise_a": 0.0,
+        "noise_b": 0.0,
+        "update_energy": 2.8009555130209577e-13,
+        "decay_subtracted_energy": 6.93437622357091e-15
+      },
+      "status": "all_16_cells_all_kinds_both_lags_agree"
+    },
+    {
+      "source": "logs/muon_spectra/second_order_audit_20260926/persistence/M_lr0.007_s260925_l40s_t000200.pt",
+      "max_relative_error": {
+        "count": 0.0,
+        "mean_a2": 1.736598587516847e-13,
+        "mean_b2": 2.3252983381558516e-13,
+        "cross": 2.6462384263055048e-14,
+        "noise_a": 0.0,
+        "noise_b": 0.0,
+        "update_energy": 2.8332088581253904e-13,
+        "decay_subtracted_energy": 1.9029860047095225e-14
+      },
+      "status": "all_16_cells_all_kinds_both_lags_agree"
+    },
+    {
+      "source": "logs/muon_spectra/second_order_audit_20260926/persistence/M_lr0.007_s260925_l40s_t000900.pt",
+      "max_relative_error": {
+        "count": 0.0,
+        "mean_a2": 1.9823941763607788e-13,
+        "mean_b2": 2.1582280415904093e-13,
+        "cross": 3.6479830007658853e-14,
+        "noise_a": 0.0,
+        "noise_b": 0.0,
+        "update_energy": 2.8268461523621714e-13,
+        "decay_subtracted_energy": 1.558627711269945e-14
+      },
+      "status": "all_16_cells_all_kinds_both_lags_agree"
+    },
+    {
+      "source": "logs/muon_spectra/second_order_audit_20260926/persistence/PD_a0.25_lr0.01_s260925_ada_t000200.pt",
+      "max_relative_error": {
+        "count": 0.0,
+        "mean_a2": 1.8373531609867713e-13,
+        "mean_b2": 2.2102106032488777e-13,
+        "cross": 6.587943664841824e-14,
+        "noise_a": 0.0,
+        "noise_b": 0.0,
+        "update_energy": 2.87511909464382e-13,
+        "decay_subtracted_energy": 1.4945724200686996e-14
+      },
+      "status": "all_16_cells_all_kinds_both_lags_agree"
+    },
+    {
+      "source": "logs/muon_spectra/second_order_audit_20260926/persistence/PD_a0.25_lr0.01_s260925_ada_t000900.pt",
+      "max_relative_error": {
+        "count": 0.0,
+        "mean_a2": 1.8706635497325578e-13,
+        "mean_b2": 2.0878602404148504e-13,
+        "cross": 3.7152922099725443e-13,
+        "noise_a": 0.0,
+        "noise_b": 0.0,
+        "update_energy": 2.7058720576876664e-13,
+        "decay_subtracted_energy": 4.400851719099702e-14
+      },
+      "status": "all_16_cells_all_kinds_both_lags_agree"
+    }
+  ],
+  "dense_provenance": {
+    "M": {
+      "source_hash_checks": {
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/__init__.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/__init__.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/analyze.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/analyze.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/compare.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/compare.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/data.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/data.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/data_norm_muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/data_norm_muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/distributed.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/distributed.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/measure.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/measure.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/model.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/model.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/run_arm.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_arm.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/run_deflation.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_deflation.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/run_muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/run_variant.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_variant.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/spike_diagnostics.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/spike_diagnostics.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/sweep.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/sweep.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/test_arch.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_arch.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/test_baselines.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_baselines.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/test_deflation.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_deflation.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/test_muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/test_spike.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_spike.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/test_study.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_study.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/test_whitening.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_whitening.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/M/source/train.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/train.py": true
+      },
+      "all_source_hashes_match": true,
+      "probe_meta": {
+        "arm": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_denselag_20260927/M",
+        "t": 501,
+        "targets": "next,503,w504,507,w508,515,w516,531,w532",
+        "sequences": 4096,
+        "seconds": 675.8687453269958
+      },
+      "probe_keys": [
+        "lam_B",
+        "lam_C",
+        "t:signal",
+        "t:noise",
+        "t+1:signal",
+        "t+1:noise",
+        "t=503:signal",
+        "t=503:noise",
+        "t=504:signal",
+        "t=504:noise",
+        "t=507:signal",
+        "t=507:noise",
+        "t=508:signal",
+        "t=508:noise",
+        "t=515:signal",
+        "t=515:noise",
+        "t=516:signal",
+        "t=516:noise",
+        "t=531:signal",
+        "t=531:noise",
+        "t=532:signal",
+        "t=532:noise"
+      ],
+      "checkpoint_records": [
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000501.pt",
+          "step": 501,
+          "tokens": 525336576,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000502_weights.pt",
+          "step": 502,
+          "tokens": 526385152
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000503.pt",
+          "step": 503,
+          "tokens": 527433728,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000504_weights.pt",
+          "step": 504,
+          "tokens": 528482304
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000507.pt",
+          "step": 507,
+          "tokens": 531628032,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000508_weights.pt",
+          "step": 508,
+          "tokens": 532676608
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000515.pt",
+          "step": 515,
+          "tokens": 540016640,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000516_weights.pt",
+          "step": 516,
+          "tokens": 541065216
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000531.pt",
+          "step": 531,
+          "tokens": 556793856,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/M/kept/step000532_weights.pt",
+          "step": 532,
+          "tokens": 557842432
+        }
+      ],
+      "total_steps": 1469,
+      "all_lrs_501_532": [
+        0.007
+      ],
+      "clipped_steps_501_532": [],
+      "last_gradients": {
+        "501": 0.31184667348861694,
+        "502": 0.33051127195358276,
+        "503": 0.36869820952415466,
+        "504": 0.37017321586608887,
+        "505": 0.41600221395492554,
+        "506": 0.40480712056159973,
+        "507": 0.3598606586456299,
+        "508": 0.4047708511352539,
+        "509": 0.344036340713501,
+        "510": 0.3630610406398773,
+        "511": 0.333884060382843,
+        "512": 0.33103808760643005,
+        "513": 0.3420316278934479,
+        "514": 0.37887898087501526,
+        "515": 0.3751984238624573,
+        "516": 0.31329336762428284,
+        "517": 0.3304780423641205,
+        "518": 0.3417547643184662,
+        "519": 0.3411296308040619,
+        "520": 0.3597363233566284,
+        "521": 0.3830956816673279,
+        "522": 0.3320446312427521,
+        "523": 0.31800374388694763,
+        "524": 0.4007982611656189,
+        "525": 0.36379173398017883,
+        "526": 0.31750425696372986,
+        "527": 0.31556057929992676,
+        "528": 0.3401932418346405,
+        "529": 0.3333948850631714,
+        "530": 0.37106019258499146,
+        "531": 0.4148978590965271,
+        "532": 0.4723900258541107
+      },
+      "status": {
+        "status": "stopped_at_requested_step",
+        "step": 532,
+        "tokens": 557842432,
+        "budget_tokens": 1539870720,
+        "world_size": 4,
+        "setup_seconds": 43.76872707903385,
+        "invocation_seconds": 1495.5882689710706,
+        "peak_cuda_allocated_bytes_per_rank_max": 3803981824
+      }
+    },
+    "PD": {
+      "source_hash_checks": {
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/__init__.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/__init__.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/analyze.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/analyze.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/compare.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/compare.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/data.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/data.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/data_norm_muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/data_norm_muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/distributed.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/distributed.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/measure.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/measure.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/model.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/model.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/run_arm.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_arm.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/run_deflation.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_deflation.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/run_muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/run_variant.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/run_variant.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/spike_diagnostics.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/spike_diagnostics.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/sweep.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/sweep.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/test_arch.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_arch.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/test_baselines.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_baselines.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/test_deflation.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_deflation.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/test_muon.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_muon.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/test_spike.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_spike.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/test_study.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_study.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/test_whitening.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/test_whitening.py": true,
+        "logs/muon_spectra/soaudit_denselag_20260927/PD/source/train.py": true,
+        "logs/muon_spectra/soaudit_traj_20260926/frozen/adamw_spectra/train.py": true
+      },
+      "all_source_hashes_match": true,
+      "probe_meta": {
+        "arm": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_denselag_20260927/PD",
+        "t": 501,
+        "targets": "next,503,w504,507,w508,515,w516,531,w532",
+        "sequences": 4096,
+        "seconds": 677.6128070354462
+      },
+      "probe_keys": [
+        "lam_B",
+        "lam_C",
+        "t:signal",
+        "t:noise",
+        "t+1:signal",
+        "t+1:noise",
+        "t=503:signal",
+        "t=503:noise",
+        "t=504:signal",
+        "t=504:noise",
+        "t=507:signal",
+        "t=507:noise",
+        "t=508:signal",
+        "t=508:noise",
+        "t=515:signal",
+        "t=515:noise",
+        "t=516:signal",
+        "t=516:noise",
+        "t=531:signal",
+        "t=531:noise",
+        "t=532:signal",
+        "t=532:noise"
+      ],
+      "checkpoint_records": [
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000501.pt",
+          "step": 501,
+          "tokens": 525336576,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000502_weights.pt",
+          "step": 502,
+          "tokens": 526385152
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000503.pt",
+          "step": 503,
+          "tokens": 527433728,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000504_weights.pt",
+          "step": 504,
+          "tokens": 528482304
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000507.pt",
+          "step": 507,
+          "tokens": 531628032,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000508_weights.pt",
+          "step": 508,
+          "tokens": 532676608
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000515.pt",
+          "step": 515,
+          "tokens": 540016640,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000516_weights.pt",
+          "step": 516,
+          "tokens": 541065216
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000531.pt",
+          "step": 531,
+          "tokens": 556793856,
+          "config_matches": true
+        },
+        {
+          "path": "logs/muon_spectra/soaudit_denselag_20260927/PD/kept/step000532_weights.pt",
+          "step": 532,
+          "tokens": 557842432
+        }
+      ],
+      "total_steps": 1469,
+      "all_lrs_501_532": [
+        0.01
+      ],
+      "clipped_steps_501_532": [],
+      "last_gradients": {
+        "501": 0.7507932186126709,
+        "502": 0.8489090204238892,
+        "503": 0.5793636441230774,
+        "504": 0.8735949993133545,
+        "505": 0.7695055603981018,
+        "506": 0.8307479619979858,
+        "507": 0.5913236737251282,
+        "508": 0.7325442433357239,
+        "509": 0.6548038721084595,
+        "510": 0.7496749758720398,
+        "511": 0.6601351499557495,
+        "512": 0.5986253619194031,
+        "513": 0.666095495223999,
+        "514": 0.7830460071563721,
+        "515": 0.7332131266593933,
+        "516": 0.5830095410346985,
+        "517": 0.6752354502677917,
+        "518": 0.6931309700012207,
+        "519": 0.5247868299484253,
+        "520": 0.704632580280304,
+        "521": 0.7828549146652222,
+        "522": 0.7458839416503906,
+        "523": 0.673495888710022,
+        "524": 0.764227032661438,
+        "525": 0.8149013519287109,
+        "526": 0.7230271697044373,
+        "527": 0.6897770762443542,
+        "528": 0.7213629484176636,
+        "529": 0.8239135146141052,
+        "530": 0.7007721662521362,
+        "531": 0.6945798993110657,
+        "532": 0.750411868095398
+      },
+      "status": {
+        "status": "stopped_at_requested_step",
+        "step": 532,
+        "tokens": 557842432,
+        "budget_tokens": 1539870720,
+        "world_size": 4,
+        "setup_seconds": 43.57470132037997,
+        "invocation_seconds": 1669.8977324124426,
+        "peak_cuda_allocated_bytes_per_rank_max": 4067806720
+      }
+    }
+  }
+}

@@ -1,0 +1,3362 @@
+{
+  "banks": [
+    {
+      "role": "reproduction/discovery",
+      "offset": 2500065536,
+      "n": 8,
+      "summary": {
+        "n": 8,
+        "loss64": {
+          "base": 4.0865749608301645,
+          "B": 4.08737876936234,
+          "H": 4.08155955644517,
+          "BH": 4.088940235267314,
+          "E": 4.081671889627293,
+          "BE": 4.094506201798726,
+          "HE": 4.0770677383232705,
+          "BHE": 4.096374635587269,
+          "N": 4.08638484600379,
+          "BN": 4.087270909083889,
+          "HN": 4.0813741160294335,
+          "BHN": 4.088843909237095,
+          "EN": 4.0815063752190275,
+          "BEN": 4.0944121768996276,
+          "HEN": 4.076907056215381,
+          "BHEN": 4.096292229536765
+        },
+        "mobius": {
+          "base": 4.0865749608301645,
+          "B": 0.0008038085321756538,
+          "H": -0.00501540438499376,
+          "BH": 0.006576870289968284,
+          "E": -0.0049030712028717005,
+          "BE": 0.01203050363925795,
+          "HE": 0.00041125308097172963,
+          "BHE": -0.00010428519740379727,
+          "N": -0.0001901148263737107,
+          "BN": 8.225454792337716e-05,
+          "HN": 4.674410637173221e-06,
+          "BHN": 6.859837593520268e-06,
+          "EN": 2.460041810903313e-05,
+          "BEN": -1.076503875729884e-05,
+          "HEN": 1.5788973839470088e-07,
+          "BHEN": -7.328937451367423e-08
+        },
+        "planes": {
+          "B:H|base": {
+            "mean": {
+              "body_effect": 0.0008038085321756538,
+              "aux_effect": -0.00501540438499376,
+              "aux_given_body": 0.0015614659049745239,
+              "body_given_aux": 0.007380678822143938,
+              "interaction": 0.006576870289968284,
+              "overlap": 0.006613974454771531,
+              "mixed_logit_loss": -3.710416480329215e-05,
+              "mixed_logit_rms": 0.004201613946833941,
+              "additive_logit_change_rms": 0.43575161986788813
+            },
+            "sd": {
+              "body_effect": 0.026429569767013508,
+              "aux_effect": 0.0017625110381174062,
+              "aux_given_body": 0.0025348547547168277,
+              "body_given_aux": 0.028030330068476855,
+              "interaction": 0.0018002816629307662,
+              "overlap": 0.0018069455289769112,
+              "mixed_logit_loss": 0.00011365060101454558,
+              "mixed_logit_rms": 0.0005821310668090466,
+              "additive_logit_change_rms": 0.05008720017638955
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 4,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:H|E": {
+            "mean": {
+              "body_effect": 0.012834312171433604,
+              "aux_effect": -0.0046041513040220305,
+              "aux_given_body": 0.0018684337885424562,
+              "body_given_aux": 0.01930689726399809,
+              "interaction": 0.006472585092564487,
+              "overlap": 0.006517546884879307,
+              "mixed_logit_loss": -4.4961792314557325e-05,
+              "mixed_logit_rms": 0.0041646841270677115,
+              "additive_logit_change_rms": 0.4324367962551209
+            },
+            "sd": {
+              "body_effect": 0.02743252699009238,
+              "aux_effect": 0.0017622892159491145,
+              "aux_given_body": 0.002609299994755439,
+              "body_given_aux": 0.02904018581104332,
+              "interaction": 0.0018056176696413316,
+              "overlap": 0.0018252263494791263,
+              "mixed_logit_loss": 0.00011331272893879153,
+              "mixed_logit_rms": 0.0005900485323586779,
+              "additive_logit_change_rms": 0.05148281659620861
+            },
+            "positive_counts": {
+              "body_effect": 6,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 6,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:H|N": {
+            "mean": {
+              "body_effect": 0.000886063080099031,
+              "aux_effect": -0.005010729974356587,
+              "aux_given_body": 0.0015730001532052174,
+              "body_given_aux": 0.007469793207660835,
+              "interaction": 0.006583730127561804,
+              "overlap": 0.006621374699491157,
+              "mixed_logit_loss": -3.764457192945159e-05,
+              "mixed_logit_rms": 0.004204166425573966,
+              "additive_logit_change_rms": 0.4360408040631561
+            },
+            "sd": {
+              "body_effect": 0.0265035831058062,
+              "aux_effect": 0.0017623990900075114,
+              "aux_given_body": 0.0025358119170322806,
+              "body_given_aux": 0.028107100312235987,
+              "interaction": 0.00180288205206911,
+              "overlap": 0.0018096496736279138,
+              "mixed_logit_loss": 0.00011350490805019239,
+              "mixed_logit_rms": 0.0005824752715477825,
+              "additive_logit_change_rms": 0.05013888566050358
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 4,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:H|EN": {
+            "mean": {
+              "body_effect": 0.012905801680599682,
+              "aux_effect": -0.004599319003646463,
+              "aux_given_body": 0.0018800526371370307,
+              "body_given_aux": 0.019385173321383176,
+              "interaction": 0.006479371640783493,
+              "overlap": 0.006524841325833605,
+              "mixed_logit_loss": -4.546968505031446e-05,
+              "mixed_logit_rms": 0.004167216824430279,
+              "additive_logit_change_rms": 0.43272325520845745
+            },
+            "sd": {
+              "body_effect": 0.027506611416653448,
+              "aux_effect": 0.001762034137924334,
+              "aux_given_body": 0.002610340690342649,
+              "body_given_aux": 0.029117033330618866,
+              "interaction": 0.0018081417898475679,
+              "overlap": 0.0018278902135392876,
+              "mixed_logit_loss": 0.00011324251503591894,
+              "mixed_logit_rms": 0.0005903609937935141,
+              "additive_logit_change_rms": 0.05153175327792854
+            },
+            "positive_counts": {
+              "body_effect": 6,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 6,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|base": {
+            "mean": {
+              "body_effect": 0.0008038085321756538,
+              "aux_effect": -0.0049030712028717005,
+              "aux_given_body": 0.00712743243638625,
+              "body_given_aux": 0.012834312171433604,
+              "interaction": 0.01203050363925795,
+              "overlap": 0.011533439108404292,
+              "mixed_logit_loss": 0.0004970645308537969,
+              "mixed_logit_rms": 0.015971081395707725,
+              "additive_logit_change_rms": 0.4746084533753454
+            },
+            "sd": {
+              "body_effect": 0.026429569767013508,
+              "aux_effect": 0.002505797313800405,
+              "aux_given_body": 0.003372417538222423,
+              "body_given_aux": 0.02743252699009238,
+              "interaction": 0.0019777972613547906,
+              "overlap": 0.0023197865818570945,
+              "mixed_logit_loss": 0.0008432385860747411,
+              "mixed_logit_rms": 0.003334581812592198,
+              "additive_logit_change_rms": 0.05583161642347507
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 6,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 5,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|H": {
+            "mean": {
+              "body_effect": 0.007380678822143938,
+              "aux_effect": -0.004491818121899971,
+              "aux_given_body": 0.007434400319954182,
+              "body_given_aux": 0.01930689726399809,
+              "interaction": 0.011926218441854153,
+              "overlap": 0.011459933200624507,
+              "mixed_logit_loss": 0.0004662852412297691,
+              "mixed_logit_rms": 0.015996546623373013,
+              "additive_logit_change_rms": 0.47517344466831185
+            },
+            "sd": {
+              "body_effect": 0.028030330068476855,
+              "aux_effect": 0.0025796113910436513,
+              "aux_given_body": 0.0034721965051246547,
+              "body_given_aux": 0.02904018581104332,
+              "interaction": 0.001970970970726994,
+              "overlap": 0.002303891683973239,
+              "mixed_logit_loss": 0.0008181231462375195,
+              "mixed_logit_rms": 0.003340699862545862,
+              "additive_logit_change_rms": 0.0558771599273541
+            },
+            "positive_counts": {
+              "body_effect": 4,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 6,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 5,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|N": {
+            "mean": {
+              "body_effect": 0.000886063080099031,
+              "aux_effect": -0.004878470784762667,
+              "aux_given_body": 0.007141267815737984,
+              "body_given_aux": 0.012905801680599682,
+              "interaction": 0.012019738600500651,
+              "overlap": 0.011536152850056464,
+              "mixed_logit_loss": 0.0004835857504442709,
+              "mixed_logit_rms": 0.015976958641882647,
+              "additive_logit_change_rms": 0.47490058398538126
+            },
+            "sd": {
+              "body_effect": 0.0265035831058062,
+              "aux_effect": 0.0025118210976793074,
+              "aux_given_body": 0.0033774486431462055,
+              "body_given_aux": 0.027506611416653448,
+              "interaction": 0.0019800081313079607,
+              "overlap": 0.0023231038319622204,
+              "mixed_logit_loss": 0.0008458699784493014,
+              "mixed_logit_rms": 0.0033366218325903514,
+              "additive_logit_change_rms": 0.0558877259509463
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 6,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 5,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|HN": {
+            "mean": {
+              "body_effect": 0.007469793207660835,
+              "aux_effect": -0.004467059814052543,
+              "aux_given_body": 0.007448320299669797,
+              "body_given_aux": 0.019385173321383176,
+              "interaction": 0.01191538011372234,
+              "overlap": 0.011462631461085539,
+              "mixed_logit_loss": 0.0004527486526364477,
+              "mixed_logit_rms": 0.016002439793192394,
+              "additive_logit_change_rms": 0.47546597497933374
+            },
+            "sd": {
+              "body_effect": 0.028107100312235987,
+              "aux_effect": 0.0025857109236197035,
+              "aux_given_body": 0.003477311762430291,
+              "body_given_aux": 0.029117033330618866,
+              "interaction": 0.0019731985457773263,
+              "overlap": 0.002307193253808406,
+              "mixed_logit_loss": 0.0008207505444316704,
+              "mixed_logit_rms": 0.0033427474494501473,
+              "additive_logit_change_rms": 0.05593324712169368
+            },
+            "positive_counts": {
+              "body_effect": 4,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 6,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 5,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|base": {
+            "mean": {
+              "body_effect": 0.0008038085321756538,
+              "aux_effect": -0.0001901148263737107,
+              "aux_given_body": -0.00010786027845033352,
+              "body_given_aux": 0.000886063080099031,
+              "interaction": 8.225454792337716e-05,
+              "overlap": 3.3949163915527984e-06,
+              "mixed_logit_loss": 7.885963153186903e-05,
+              "mixed_logit_rms": 0.0005553717459435606,
+              "additive_logit_change_rms": 0.4327840212587001
+            },
+            "sd": {
+              "body_effect": 0.026429569767013508,
+              "aux_effect": 0.00023288349346635166,
+              "aux_given_body": 0.00028517705019581773,
+              "body_given_aux": 0.0265035831058062,
+              "interaction": 8.136711412746904e-05,
+              "overlap": 5.662275526756448e-05,
+              "mixed_logit_loss": 3.337685769152003e-05,
+              "mixed_logit_rms": 8.471970300607268e-05,
+              "additive_logit_change_rms": 0.04998984274811434
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 1,
+              "aux_given_body": 4,
+              "body_given_aux": 3,
+              "interaction": 7,
+              "overlap": 3,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|H": {
+            "mean": {
+              "body_effect": 0.007380678822143938,
+              "aux_effect": -0.00018544041573653747,
+              "aux_given_body": -9.632603021964004e-05,
+              "body_given_aux": 0.007469793207660835,
+              "interaction": 8.911438551689743e-05,
+              "overlap": 6.040860581871515e-06,
+              "mixed_logit_loss": 8.307352493547304e-05,
+              "mixed_logit_rms": 0.0005563247462212751,
+              "additive_logit_change_rms": 0.4333067209063748
+            },
+            "sd": {
+              "body_effect": 0.028030330068476855,
+              "aux_effect": 0.00023232182089227355,
+              "aux_given_body": 0.00028722920894476737,
+              "body_given_aux": 0.028107100312235987,
+              "interaction": 8.356273013497483e-05,
+              "overlap": 5.7301697485882844e-05,
+              "mixed_logit_loss": 3.4307207905588065e-05,
+              "mixed_logit_rms": 8.47963251823548e-05,
+              "additive_logit_change_rms": 0.05002430823093558
+            },
+            "positive_counts": {
+              "body_effect": 4,
+              "aux_effect": 1,
+              "aux_given_body": 4,
+              "body_given_aux": 4,
+              "interaction": 7,
+              "overlap": 3,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|E": {
+            "mean": {
+              "body_effect": 0.012834312171433604,
+              "aux_effect": -0.00016551440826467756,
+              "aux_given_body": -9.402489909859924e-05,
+              "body_given_aux": 0.012905801680599682,
+              "interaction": 7.148950916607832e-05,
+              "overlap": -1.2408748787568185e-05,
+              "mixed_logit_loss": 8.389825795368511e-05,
+              "mixed_logit_rms": 0.0005486583314947962,
+              "additive_logit_change_rms": 0.4294438768416442
+            },
+            "sd": {
+              "body_effect": 0.02743252699009238,
+              "aux_effect": 0.00023917203976510628,
+              "aux_given_body": 0.0002914951223145041,
+              "body_given_aux": 0.027506611416653448,
+              "interaction": 8.232216488789392e-05,
+              "overlap": 5.6412839298657606e-05,
+              "mixed_logit_loss": 3.338106199133866e-05,
+              "mixed_logit_rms": 8.224303023385451e-05,
+              "additive_logit_change_rms": 0.05138205556200355
+            },
+            "positive_counts": {
+              "body_effect": 6,
+              "aux_effect": 3,
+              "aux_given_body": 4,
+              "body_given_aux": 6,
+              "interaction": 6,
+              "overlap": 3,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|HE": {
+            "mean": {
+              "body_effect": 0.01930689726399809,
+              "aux_effect": -0.00016068210788910964,
+              "aux_given_body": -8.240605050402472e-05,
+              "body_given_aux": 0.019385173321383176,
+              "interaction": 7.827605738508492e-05,
+              "overlap": -9.767800837419318e-06,
+              "mixed_logit_loss": 8.804385822230865e-05,
+              "mixed_logit_rms": 0.0005496042893655303,
+              "additive_logit_change_rms": 0.4299656581179512
+            },
+            "sd": {
+              "body_effect": 0.02904018581104332,
+              "aux_effect": 0.00023882949780346574,
+              "aux_given_body": 0.00029363356822678205,
+              "body_given_aux": 0.029117033330618866,
+              "interaction": 8.446109149451642e-05,
+              "overlap": 5.71427490036765e-05,
+              "mixed_logit_loss": 3.432737112533869e-05,
+              "mixed_logit_rms": 8.23195888831231e-05,
+              "additive_logit_change_rms": 0.05141479822302751
+            },
+            "positive_counts": {
+              "body_effect": 6,
+              "aux_effect": 3,
+              "aux_given_body": 4,
+              "body_given_aux": 6,
+              "interaction": 6,
+              "overlap": 3,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:HEN|base": {
+            "mean": {
+              "body_effect": 0.0008038085321756538,
+              "aux_effect": -0.00966790461478284,
+              "aux_given_body": 0.008913460174424681,
+              "body_given_aux": 0.019385173321383176,
+              "interaction": 0.018581364789207522,
+              "overlap": 0.018081795798542393,
+              "mixed_logit_loss": 0.0004995689906651113,
+              "mixed_logit_rms": 0.016652317584925698,
+              "additive_logit_change_rms": 0.4780902336444487
+            },
+            "sd": {
+              "body_effect": 0.026429569767013508,
+              "aux_effect": 0.0031654545225031677,
+              "aux_given_body": 0.005586997829254181,
+              "body_given_aux": 0.029117033330618866,
+              "interaction": 0.0032865740867038225,
+              "overlap": 0.0038167710839146205,
+              "mixed_logit_loss": 0.0008466103000591946,
+              "mixed_logit_rms": 0.003487421339620469,
+              "additive_logit_change_rms": 0.05610177971178623
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 6,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 5,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          }
+        },
+        "finite_logit_gram": [
+          [
+            0.16632736299165274,
+            0.006780569480278012,
+            0.011146864662637486,
+            5.202286456738346e-05
+          ],
+          [
+            0.006780569480278013,
+            0.0017297319010503916,
+            0.0003891865289986242,
+            8.006419138321487e-06
+          ],
+          [
+            0.011146864662637486,
+            0.0003891865289986242,
+            0.0017747035058828312,
+            2.3343723125991815e-05
+          ],
+          [
+            5.202286456738346e-05,
+            8.006419138321489e-06,
+            2.3343723125991815e-05,
+            6.450306456536264e-06
+          ]
+        ],
+        "finite_response_cosines": [
+          [
+            1.0,
+            0.3997559365430213,
+            0.6487957160198478,
+            0.050225265012329885
+          ],
+          [
+            0.39975593654302133,
+            1.0,
+            0.22212912116496578,
+            0.07579817512963906
+          ],
+          [
+            0.6487957160198478,
+            0.22212912116496578,
+            1.0,
+            0.21818105910211505
+          ],
+          [
+            0.050225265012329885,
+            0.07579817512963907,
+            0.21818105910211505,
+            1.0
+          ]
+        ],
+        "predictive_kl": {
+          "B": 0.08464280343196277,
+          "H": 0.0008645054480458754,
+          "E": 0.0008868446043548662,
+          "N": 3.223895884393279e-06,
+          "HEN": 0.002164542064131371,
+          "BHEN": 0.10326384878204459
+        }
+      }
+    },
+    {
+      "role": "reproduction/discovery",
+      "offset": 2600065536,
+      "n": 8,
+      "summary": {
+        "n": 8,
+        "loss64": {
+          "base": 4.387704023112315,
+          "B": 4.366568486100643,
+          "H": 4.382919037811112,
+          "BH": 4.367849650705657,
+          "E": 4.379919674102667,
+          "BE": 4.370359866421627,
+          "HE": 4.375531487870504,
+          "BHE": 4.371912931953432,
+          "N": 4.3876001202087815,
+          "BN": 4.3665511432590165,
+          "HN": 4.382821292518864,
+          "BHN": 4.367844705355381,
+          "EN": 4.379834503163927,
+          "BEN": 4.370351776150457,
+          "HEN": 4.375452491150314,
+          "BHEN": 4.37191721522384
+        },
+        "mobius": {
+          "base": 4.387704023112315,
+          "B": -0.021135537011671812,
+          "H": -0.004784985301202749,
+          "BH": 0.006066149906216234,
+          "E": -0.007784349009648195,
+          "BE": 0.01157572933063189,
+          "HE": 0.000396799069039,
+          "BHE": -0.00012489814224841966,
+          "N": -0.00010390290353406995,
+          "BN": 8.656006190721488e-05,
+          "HN": 6.157611286139453e-06,
+          "BHN": 6.239880064984327e-06,
+          "EN": 1.873196479401651e-05,
+          "BEN": -9.479394337263969e-06,
+          "HEN": 1.6607265229673374e-08,
+          "BHEN": -4.055703739513916e-08
+        },
+        "planes": {
+          "B:H|base": {
+            "mean": {
+              "body_effect": -0.021135537011671812,
+              "aux_effect": -0.004784985301202749,
+              "aux_given_body": 0.001281164605013485,
+              "body_given_aux": -0.015069387105455578,
+              "interaction": 0.006066149906216234,
+              "overlap": 0.005983770864174809,
+              "mixed_logit_loss": 8.237904204111413e-05,
+              "mixed_logit_rms": 0.004038140474192377,
+              "additive_logit_change_rms": 0.42375945156898814
+            },
+            "sd": {
+              "body_effect": 0.02214971738094398,
+              "aux_effect": 0.0024734919124569186,
+              "aux_given_body": 0.002494557294395164,
+              "body_given_aux": 0.022364564312250333,
+              "interaction": 0.0010497872985219831,
+              "overlap": 0.0010523470092851117,
+              "mixed_logit_loss": 0.0001288662828857602,
+              "mixed_logit_rms": 0.00030529872664035646,
+              "additive_logit_change_rms": 0.01653086281628144
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 2,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 6,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:H|E": {
+            "mean": {
+              "body_effect": -0.009559807681039922,
+              "aux_effect": -0.004388186232163749,
+              "aux_given_body": 0.0015530655318040654,
+              "body_given_aux": -0.0036185559170721082,
+              "interaction": 0.005941251763967814,
+              "overlap": 0.005860983604735656,
+              "mixed_logit_loss": 8.02681592319554e-05,
+              "mixed_logit_rms": 0.003984837512827195,
+              "additive_logit_change_rms": 0.4185930342708399
+            },
+            "sd": {
+              "body_effect": 0.02217608337286908,
+              "aux_effect": 0.0024624764480389995,
+              "aux_given_body": 0.0025002684622021758,
+              "body_given_aux": 0.02242964712529663,
+              "interaction": 0.001028817362124862,
+              "overlap": 0.0010351151587528278,
+              "mixed_logit_loss": 0.0001248724843446472,
+              "mixed_logit_rms": 0.00030059800503747186,
+              "additive_logit_change_rms": 0.017548379479108166
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 6,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:H|N": {
+            "mean": {
+              "body_effect": -0.021048976949764597,
+              "aux_effect": -0.004778827689916609,
+              "aux_given_body": 0.0012935620963646088,
+              "body_given_aux": -0.01497658716348338,
+              "interaction": 0.006072389786281218,
+              "overlap": 0.005990416993902423,
+              "mixed_logit_loss": 8.197279237870392e-05,
+              "mixed_logit_rms": 0.004040724823244343,
+              "additive_logit_change_rms": 0.42403528654343237
+            },
+            "sd": {
+              "body_effect": 0.02218102166853374,
+              "aux_effect": 0.0024742114379637608,
+              "aux_given_body": 0.0024953593639783266,
+              "body_given_aux": 0.022394489985184115,
+              "interaction": 0.0010513676362484423,
+              "overlap": 0.0010540845376665333,
+              "mixed_logit_loss": 0.00012889170447341738,
+              "mixed_logit_rms": 0.00030543596336263284,
+              "additive_logit_change_rms": 0.016556725498536762
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 2,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 6,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:H|EN": {
+            "mean": {
+              "body_effect": -0.009482727013469971,
+              "aux_effect": -0.00438201201361238,
+              "aux_given_body": 0.0015654390733830237,
+              "body_given_aux": -0.003535275926474568,
+              "interaction": 0.005947451086995403,
+              "overlap": 0.0058675856659656436,
+              "mixed_logit_loss": 7.986542102955685e-05,
+              "mixed_logit_rms": 0.00398742719371894,
+              "additive_logit_change_rms": 0.41886777418465143
+            },
+            "sd": {
+              "body_effect": 0.02220478220538543,
+              "aux_effect": 0.0024631859690581646,
+              "aux_given_body": 0.0025011388124662427,
+              "body_given_aux": 0.022457177664199395,
+              "interaction": 0.0010304181991189008,
+              "overlap": 0.0010368099104449942,
+              "mixed_logit_loss": 0.00012491969214317722,
+              "mixed_logit_rms": 0.0003007324587386643,
+              "additive_logit_change_rms": 0.017572951813224984
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 5,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 6,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|base": {
+            "mean": {
+              "body_effect": -0.021135537011671812,
+              "aux_effect": -0.007784349009648195,
+              "aux_given_body": 0.003791380320983695,
+              "body_given_aux": -0.009559807681039922,
+              "interaction": 0.01157572933063189,
+              "overlap": 0.01156574134812528,
+              "mixed_logit_loss": 9.987982506398652e-06,
+              "mixed_logit_rms": 0.015519564552102181,
+              "additive_logit_change_rms": 0.463918962782913
+            },
+            "sd": {
+              "body_effect": 0.02214971738094398,
+              "aux_effect": 0.001912136048139621,
+              "aux_given_body": 0.0021072662423394567,
+              "body_given_aux": 0.02217608337286908,
+              "interaction": 0.0014846389372535208,
+              "overlap": 0.0017332411456426613,
+              "mixed_logit_loss": 0.001138675585775742,
+              "mixed_logit_rms": 0.002217464357728023,
+              "additive_logit_change_rms": 0.016485516783074684
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 6,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|H": {
+            "mean": {
+              "body_effect": -0.015069387105455578,
+              "aux_effect": -0.007387549940609195,
+              "aux_given_body": 0.004063281247774275,
+              "body_given_aux": -0.0036185559170721082,
+              "interaction": 0.01145083118838347,
+              "overlap": 0.011505025201266525,
+              "mixed_logit_loss": -5.41940128831464e-05,
+              "mixed_logit_rms": 0.01554555618693069,
+              "additive_logit_change_rms": 0.464454650944833
+            },
+            "sd": {
+              "body_effect": 0.022364564312250333,
+              "aux_effect": 0.001923889372226618,
+              "aux_given_body": 0.002131323676650077,
+              "body_given_aux": 0.02242964712529663,
+              "interaction": 0.001481049224856098,
+              "overlap": 0.0017185582504025871,
+              "mixed_logit_loss": 0.001144313167535632,
+              "mixed_logit_rms": 0.0022206030947763667,
+              "additive_logit_change_rms": 0.016520725287178163
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|N": {
+            "mean": {
+              "body_effect": -0.021048976949764597,
+              "aux_effect": -0.007765617044854178,
+              "aux_given_body": 0.0038006328914404475,
+              "body_given_aux": -0.009482727013469971,
+              "interaction": 0.011566249936294626,
+              "overlap": 0.011566354543028543,
+              "mixed_logit_loss": -1.0460673383061447e-07,
+              "mixed_logit_rms": 0.015524744792449271,
+              "additive_logit_change_rms": 0.46419521479760945
+            },
+            "sd": {
+              "body_effect": 0.02218102166853374,
+              "aux_effect": 0.0019146333045913354,
+              "aux_given_body": 0.0021099851516784723,
+              "body_given_aux": 0.02220478220538543,
+              "interaction": 0.0014876938677948924,
+              "overlap": 0.0017349495864833343,
+              "mixed_logit_loss": 0.0011379884597629217,
+              "mixed_logit_rms": 0.0022175365872237622,
+              "additive_logit_change_rms": 0.01651146780764539
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 5,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:E|HN": {
+            "mean": {
+              "body_effect": -0.01497658716348338,
+              "aux_effect": -0.007368801368549949,
+              "aux_given_body": 0.004072509868458862,
+              "body_given_aux": -0.003535275926474568,
+              "interaction": 0.011441311237008811,
+              "overlap": 0.011505653241248453,
+              "mixed_logit_loss": -6.434200423949266e-05,
+              "mixed_logit_rms": 0.015550746867873914,
+              "additive_logit_change_rms": 0.4647313651427827
+            },
+            "sd": {
+              "body_effect": 0.022394489985184115,
+              "aux_effect": 0.0019264285620853281,
+              "aux_given_body": 0.002134106747505944,
+              "body_given_aux": 0.022457177664199395,
+              "interaction": 0.0014840955860514645,
+              "overlap": 0.0017202707320182014,
+              "mixed_logit_loss": 0.0011435836239574305,
+              "mixed_logit_rms": 0.002220675183663578,
+              "additive_logit_change_rms": 0.01654663199918628
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|base": {
+            "mean": {
+              "body_effect": -0.021135537011671812,
+              "aux_effect": -0.00010390290353406995,
+              "aux_given_body": -1.7342841626855066e-05,
+              "body_given_aux": -0.021048976949764597,
+              "interaction": 8.656006190721488e-05,
+              "overlap": 4.204811243684395e-05,
+              "mixed_logit_loss": 4.451194947013848e-05,
+              "mixed_logit_rms": 0.0005505689457593564,
+              "additive_logit_change_rms": 0.42051447578955836
+            },
+            "sd": {
+              "body_effect": 0.02214971738094398,
+              "aux_effect": 0.0002492217161309179,
+              "aux_given_body": 0.0002197733456327945,
+              "body_given_aux": 0.02218102166853374,
+              "interaction": 5.9967439871850814e-05,
+              "overlap": 4.623925559235398e-05,
+              "mixed_logit_loss": 3.423709455409216e-05,
+              "mixed_logit_rms": 2.530104972968325e-05,
+              "additive_logit_change_rms": 0.01650562752184654
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 3,
+              "aux_given_body": 3,
+              "body_given_aux": 2,
+              "interaction": 8,
+              "overlap": 7,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|H": {
+            "mean": {
+              "body_effect": -0.015069387105455578,
+              "aux_effect": -9.774529224793049e-05,
+              "aux_given_body": -4.945350275731286e-06,
+              "body_given_aux": -0.01497658716348338,
+              "interaction": 9.279994197219921e-05,
+              "overlap": 4.472919748391667e-05,
+              "mixed_logit_loss": 4.80707444878159e-05,
+              "mixed_logit_rms": 0.0005515783682665517,
+              "additive_logit_change_rms": 0.42101274963415125
+            },
+            "sd": {
+              "body_effect": 0.022364564312250333,
+              "aux_effect": 0.00024848075254166004,
+              "aux_given_body": 0.00021903000596796296,
+              "body_given_aux": 0.022394489985184115,
+              "interaction": 5.926877121490286e-05,
+              "overlap": 4.544715992372653e-05,
+              "mixed_logit_loss": 3.4546272065335915e-05,
+              "mixed_logit_rms": 2.53262141029689e-05,
+              "additive_logit_change_rms": 0.016538506034834973
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 3,
+              "aux_given_body": 3,
+              "body_given_aux": 2,
+              "interaction": 8,
+              "overlap": 7,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|E": {
+            "mean": {
+              "body_effect": -0.009559807681039922,
+              "aux_effect": -8.517093874005344e-05,
+              "aux_given_body": -8.090271170102525e-06,
+              "body_given_aux": -0.009482727013469971,
+              "interaction": 7.708066756995091e-05,
+              "overlap": 2.658039001199883e-05,
+              "mixed_logit_loss": 5.050027755792996e-05,
+              "mixed_logit_rms": 0.0005438661208411793,
+              "additive_logit_change_rms": 0.4153272595283747
+            },
+            "sd": {
+              "body_effect": 0.02217608337286908,
+              "aux_effect": 0.0002473310766022955,
+              "aux_given_body": 0.00021886727189200333,
+              "body_given_aux": 0.02220478220538543,
+              "interaction": 5.689165331860629e-05,
+              "overlap": 4.388423823889233e-05,
+              "mixed_logit_loss": 3.3819020253493126e-05,
+              "mixed_logit_rms": 2.43210545933825e-05,
+              "additive_logit_change_rms": 0.017526664995533237
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 3,
+              "aux_given_body": 3,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 6,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:N|HE": {
+            "mean": {
+              "body_effect": -0.0036185559170721082,
+              "aux_effect": -7.899672018868431e-05,
+              "aux_given_body": 4.283270408855788e-06,
+              "body_given_aux": -0.003535275926474568,
+              "interaction": 8.32799905975401e-05,
+              "overlap": 2.9269553824190237e-05,
+              "mixed_logit_loss": 5.401043677277784e-05,
+              "mixed_logit_rms": 0.000544867533770192,
+              "additive_logit_change_rms": 0.4158234681381514
+            },
+            "sd": {
+              "body_effect": 0.02242964712529663,
+              "aux_effect": 0.0002465818634105341,
+              "aux_given_body": 0.00021807324357644582,
+              "body_given_aux": 0.022457177664199395,
+              "interaction": 5.622714271690205e-05,
+              "overlap": 4.3113724084218933e-05,
+              "mixed_logit_loss": 3.4091689927877384e-05,
+              "mixed_logit_rms": 2.4346086607610468e-05,
+              "additive_logit_change_rms": 0.01755800694030585
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 3,
+              "aux_given_body": 3,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 7,
+              "mixed_logit_loss": 8,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          },
+          "B:HEN|base": {
+            "mean": {
+              "body_effect": -0.021135537011671812,
+              "aux_effect": -0.012251531962000628,
+              "aux_given_body": 0.005348729123196616,
+              "body_given_aux": -0.003535275926474568,
+              "interaction": 0.017600261085197244,
+              "overlap": 0.017528757744661574,
+              "mixed_logit_loss": 7.150334053485086e-05,
+              "mixed_logit_rms": 0.01608752501633755,
+              "additive_logit_change_rms": 0.4678165768336189
+            },
+            "sd": {
+              "body_effect": 0.02214971738094398,
+              "aux_effect": 0.003547083767875734,
+              "aux_given_body": 0.003602194913396832,
+              "body_given_aux": 0.022457177664199395,
+              "interaction": 0.0022780822321314155,
+              "overlap": 0.002672504503754269,
+              "mixed_logit_loss": 0.001106862069215568,
+              "mixed_logit_rms": 0.0021781558150450395,
+              "additive_logit_change_rms": 0.01654194180575097
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 8,
+              "body_given_aux": 3,
+              "interaction": 8,
+              "overlap": 8,
+              "mixed_logit_loss": 6,
+              "mixed_logit_rms": 8,
+              "additive_logit_change_rms": 8
+            }
+          }
+        },
+        "finite_logit_gram": [
+          [
+            0.1570821193209651,
+            0.006130998439157687,
+            0.011250197590257856,
+            7.81795550497542e-05
+          ],
+          [
+            0.006130998439157687,
+            0.0017295579632206114,
+            0.0003637341287044085,
+            8.798439960373676e-06
+          ],
+          [
+            0.011250197590257858,
+            0.00036373412870440856,
+            0.0018985592081777155,
+            2.0529788166708737e-05
+          ],
+          [
+            7.81795550497542e-05,
+            8.798439960373676e-06,
+            2.0529788166708737e-05,
+            6.818493521281765e-06
+          ]
+        ],
+        "finite_response_cosines": [
+          [
+            1.0,
+            0.3719634514823623,
+            0.6514554194965859,
+            0.07554149965939162
+          ],
+          [
+            0.3719634514823623,
+            1.0,
+            0.200726364510671,
+            0.08102030954117696
+          ],
+          [
+            0.651455419496586,
+            0.20072636451067102,
+            1.0,
+            0.1804380725703404
+          ],
+          [
+            0.07554149965939162,
+            0.08102030954117696,
+            0.1804380725703404,
+            1.0
+          ]
+        ],
+        "predictive_kl": {
+          "B": 0.07929336428906605,
+          "H": 0.000865773056983936,
+          "E": 0.0009489421113542481,
+          "N": 3.408533229493232e-06,
+          "HEN": 0.002199909713071601,
+          "BHEN": 0.09677932936601794
+        }
+      }
+    },
+    {
+      "role": "fresh-input consistency",
+      "offset": 2550131072,
+      "n": 4,
+      "summary": {
+        "n": 4,
+        "loss64": {
+          "base": 3.9428427939744783,
+          "B": 3.928437048552361,
+          "H": 3.9382336638165847,
+          "BH": 3.930597125396956,
+          "E": 3.9353183362287316,
+          "BE": 3.93445389524038,
+          "HE": 3.9311764299950944,
+          "BHE": 3.9369571957650003,
+          "N": 3.942599265919508,
+          "BN": 3.928325408417285,
+          "HN": 3.937997016223688,
+          "BHN": 3.9304989627330618,
+          "EN": 3.935105405386578,
+          "BEN": 3.9343593842465423,
+          "HEN": 3.9309704794452776,
+          "BHEN": 3.936876060055204
+        },
+        "mobius": {
+          "base": 3.9428427939744783,
+          "B": -0.014405745422117477,
+          "H": -0.004609130157893659,
+          "BH": 0.006769207002488731,
+          "E": -0.0075244577457465045,
+          "BE": 0.013541304433765666,
+          "HE": 0.00046722392425635473,
+          "BHE": -0.0001240002442310928,
+          "N": -0.00024352805497040997,
+          "BN": 0.00013188791989482418,
+          "HN": 6.880462073755034e-06,
+          "BHN": 6.597009107656149e-06,
+          "EN": 3.059721281661876e-05,
+          "BEN": -1.3468071578648377e-05,
+          "HEN": 9.983026294513309e-08,
+          "BHEN": -2.0201740325020978e-07
+        },
+        "planes": {
+          "B:H|base": {
+            "mean": {
+              "body_effect": -0.014405745422117477,
+              "aux_effect": -0.004609130157893659,
+              "aux_given_body": 0.0021600768445950713,
+              "body_given_aux": -0.007636538419628747,
+              "interaction": 0.006769207002488731,
+              "overlap": 0.006721737969595361,
+              "mixed_logit_loss": 4.746903289376547e-05,
+              "mixed_logit_rms": 0.00402482833901558,
+              "additive_logit_change_rms": 0.4264625796275045
+            },
+            "sd": {
+              "body_effect": 0.008948252330432383,
+              "aux_effect": 0.002383712817020799,
+              "aux_given_body": 0.001602120012396143,
+              "body_given_aux": 0.008879573491126494,
+              "interaction": 0.0013428833823780142,
+              "overlap": 0.0013275098691810812,
+              "mixed_logit_loss": 0.00024504609462489116,
+              "mixed_logit_rms": 0.00032725181488637976,
+              "additive_logit_change_rms": 0.027676283213570293
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:H|E": {
+            "mean": {
+              "body_effect": -0.0008644409883518112,
+              "aux_effect": -0.004141906233637305,
+              "aux_given_body": 0.0025033005246203333,
+              "body_given_aux": 0.005780765769905827,
+              "interaction": 0.006645206758257638,
+              "overlap": 0.00660738083841831,
+              "mixed_logit_loss": 3.782591983902961e-05,
+              "mixed_logit_rms": 0.003992484261257769,
+              "additive_logit_change_rms": 0.4235227611967693
+            },
+            "sd": {
+              "body_effect": 0.009030789561513876,
+              "aux_effect": 0.002329053391270848,
+              "aux_given_body": 0.0015977448795613963,
+              "body_given_aux": 0.009100710098504177,
+              "interaction": 0.001334934316187563,
+              "overlap": 0.001317151875618276,
+              "mixed_logit_loss": 0.000234389712705358,
+              "mixed_logit_rms": 0.00032968440134607325,
+              "additive_logit_change_rms": 0.028379744060359938
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 3,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:H|N": {
+            "mean": {
+              "body_effect": -0.014273857502222653,
+              "aux_effect": -0.004602249695819904,
+              "aux_given_body": 0.0021735543157764825,
+              "body_given_aux": -0.007498053490626266,
+              "interaction": 0.006775804011596387,
+              "overlap": 0.006728670909983903,
+              "mixed_logit_loss": 4.713310161230666e-05,
+              "mixed_logit_rms": 0.004027439761328173,
+              "additive_logit_change_rms": 0.4267494536026619
+            },
+            "sd": {
+              "body_effect": 0.00891748799642981,
+              "aux_effect": 0.0023832241904860416,
+              "aux_given_body": 0.0016016048114304226,
+              "body_given_aux": 0.008849345880951853,
+              "interaction": 0.00134394686756912,
+              "overlap": 0.0013288043906222588,
+              "mixed_logit_loss": 0.0002450097569835426,
+              "mixed_logit_rms": 0.0003273373259313093,
+              "additive_logit_change_rms": 0.02768925975829744
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:H|EN": {
+            "mean": {
+              "body_effect": -0.0007460211400356354,
+              "aux_effect": -0.0041349259413006045,
+              "aux_given_body": 0.0025166758086614394,
+              "body_given_aux": 0.0059055806099264085,
+              "interaction": 0.006651601749962044,
+              "overlap": 0.006614166435267993,
+              "mixed_logit_loss": 3.743531469413419e-05,
+              "mixed_logit_rms": 0.003995084108828901,
+              "additive_logit_change_rms": 0.4238073996407342
+            },
+            "sd": {
+              "body_effect": 0.009001385398341243,
+              "aux_effect": 0.002328571170342201,
+              "aux_given_body": 0.0015973881985741258,
+              "body_given_aux": 0.009072288352153143,
+              "interaction": 0.0013360007757937007,
+              "overlap": 0.0013183358130261873,
+              "mixed_logit_loss": 0.00023430851971890812,
+              "mixed_logit_rms": 0.0003297598875124146,
+              "additive_logit_change_rms": 0.02839079587675147
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 3,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|base": {
+            "mean": {
+              "body_effect": -0.014405745422117477,
+              "aux_effect": -0.0075244577457465045,
+              "aux_given_body": 0.006016846688019162,
+              "body_given_aux": -0.0008644409883518112,
+              "interaction": 0.013541304433765666,
+              "overlap": 0.0128042825374173,
+              "mixed_logit_loss": 0.0007370218963488329,
+              "mixed_logit_rms": 0.015611157826735868,
+              "additive_logit_change_rms": 0.4680862286066494
+            },
+            "sd": {
+              "body_effect": 0.008948252330432383,
+              "aux_effect": 0.0007818064545543771,
+              "aux_given_body": 0.0013392838114062095,
+              "body_given_aux": 0.009030789561513876,
+              "interaction": 0.001043129776173425,
+              "overlap": 0.001351199594557521,
+              "mixed_logit_loss": 0.0010925936876426143,
+              "mixed_logit_rms": 0.0019611152815762886,
+              "additive_logit_change_rms": 0.03125811257975199
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 2,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|H": {
+            "mean": {
+              "body_effect": -0.007636538419628747,
+              "aux_effect": -0.00705723382149015,
+              "aux_given_body": 0.006360070368044424,
+              "body_given_aux": 0.005780765769905827,
+              "interaction": 0.013417304189534573,
+              "overlap": 0.012736056555938081,
+              "mixed_logit_loss": 0.000681247633596449,
+              "mixed_logit_rms": 0.015637821993278633,
+              "additive_logit_change_rms": 0.4686217540579408
+            },
+            "sd": {
+              "body_effect": 0.008879573491126494,
+              "aux_effect": 0.0008068586286072452,
+              "aux_given_body": 0.0014086770465688502,
+              "body_given_aux": 0.009100710098504177,
+              "interaction": 0.0010434385049828295,
+              "overlap": 0.0013460310951318502,
+              "mixed_logit_loss": 0.0010906443075046602,
+              "mixed_logit_rms": 0.001965368018952098,
+              "additive_logit_change_rms": 0.03126883515236271
+            },
+            "positive_counts": {
+              "body_effect": 1,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 3,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|N": {
+            "mean": {
+              "body_effect": -0.014273857502222653,
+              "aux_effect": -0.007493860532929886,
+              "aux_given_body": 0.006033975829257132,
+              "body_given_aux": -0.0007460211400356354,
+              "interaction": 0.013527836362187018,
+              "overlap": 0.012806668876310337,
+              "mixed_logit_loss": 0.0007211674858768058,
+              "mixed_logit_rms": 0.015617546824898215,
+              "additive_logit_change_rms": 0.4683779616514215
+            },
+            "sd": {
+              "body_effect": 0.00891748799642981,
+              "aux_effect": 0.0007817294213926686,
+              "aux_given_body": 0.0013416700605171647,
+              "body_given_aux": 0.009001385398341243,
+              "interaction": 0.0010411974959830372,
+              "overlap": 0.0013513996138809117,
+              "mixed_logit_loss": 0.0010927517730692086,
+              "mixed_logit_rms": 0.0019622953566958406,
+              "additive_logit_change_rms": 0.03127008286610511
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 2,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|HN": {
+            "mean": {
+              "body_effect": -0.007498053490626266,
+              "aux_effect": -0.007026536778410586,
+              "aux_given_body": 0.006377097322142089,
+              "body_given_aux": 0.0059055806099264085,
+              "interaction": 0.013403634100552675,
+              "overlap": 0.012738395789353268,
+              "mixed_logit_loss": 0.0006652383111993565,
+              "mixed_logit_rms": 0.015644228870567663,
+              "additive_logit_change_rms": 0.46891390081763645
+            },
+            "sd": {
+              "body_effect": 0.008849345880951853,
+              "aux_effect": 0.0008072706108449944,
+              "aux_given_body": 0.0014111111694912798,
+              "body_given_aux": 0.009072288352153143,
+              "interaction": 0.0010414910720866473,
+              "overlap": 0.0013461960545803568,
+              "mixed_logit_loss": 0.0010907885687493617,
+              "mixed_logit_rms": 0.00196654983678642,
+              "additive_logit_change_rms": 0.03128077006068657
+            },
+            "positive_counts": {
+              "body_effect": 1,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 3,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|base": {
+            "mean": {
+              "body_effect": -0.014405745422117477,
+              "aux_effect": -0.00024352805497040997,
+              "aux_given_body": -0.00011164013507558579,
+              "body_given_aux": -0.014273857502222653,
+              "interaction": 0.00013188791989482418,
+              "overlap": 6.708801463330659e-05,
+              "mixed_logit_loss": 6.479990526198076e-05,
+              "mixed_logit_rms": 0.0005365949275538788,
+              "additive_logit_change_rms": 0.4235221635873825
+            },
+            "sd": {
+              "body_effect": 0.008948252330432383,
+              "aux_effect": 9.84800762852493e-05,
+              "aux_given_body": 0.00012578184612062993,
+              "body_given_aux": 0.00891748799642981,
+              "interaction": 3.187334199679253e-05,
+              "overlap": 4.1017641417464996e-05,
+              "mixed_logit_loss": 1.0545088085170842e-05,
+              "mixed_logit_rms": 5.950239572637054e-05,
+              "additive_logit_change_rms": 0.027580868085701135
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 1,
+              "body_given_aux": 0,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|H": {
+            "mean": {
+              "body_effect": -0.007636538419628747,
+              "aux_effect": -0.00023664759289665493,
+              "aux_given_body": -9.81626638941746e-05,
+              "body_given_aux": -0.007498053490626266,
+              "interaction": 0.00013848492900248033,
+              "overlap": 6.9673462096481e-05,
+              "mixed_logit_loss": 6.881146690607132e-05,
+              "mixed_logit_rms": 0.0005375338052921486,
+              "additive_logit_change_rms": 0.424019544483206
+            },
+            "sd": {
+              "body_effect": 0.008879573491126494,
+              "aux_effect": 9.873278503909597e-05,
+              "aux_given_body": 0.00012664932572320196,
+              "body_given_aux": 0.008849345880951853,
+              "interaction": 3.2738710832755e-05,
+              "overlap": 4.140891746279109e-05,
+              "mixed_logit_loss": 1.0214704555220642e-05,
+              "mixed_logit_rms": 5.956516761935722e-05,
+              "additive_logit_change_rms": 0.027588966470035784
+            },
+            "positive_counts": {
+              "body_effect": 1,
+              "aux_effect": 0,
+              "aux_given_body": 1,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|E": {
+            "mean": {
+              "body_effect": -0.0008644409883518112,
+              "aux_effect": -0.0002129308421537912,
+              "aux_given_body": -9.451099383761541e-05,
+              "body_given_aux": -0.0007460211400356354,
+              "interaction": 0.0001184198483161758,
+              "overlap": 4.838274732315434e-05,
+              "mixed_logit_loss": 7.003710099329208e-05,
+              "mixed_logit_rms": 0.0005299936955014937,
+              "additive_logit_change_rms": 0.42057282928543255
+            },
+            "sd": {
+              "body_effect": 0.009030789561513876,
+              "aux_effect": 0.00010043568693225065,
+              "aux_given_body": 0.00012667931375646835,
+              "body_given_aux": 0.009001385398341243,
+              "interaction": 3.103515655447596e-05,
+              "overlap": 4.067823690198603e-05,
+              "mixed_logit_loss": 1.0428525202734665e-05,
+              "mixed_logit_rms": 5.759023286915952e-05,
+              "additive_logit_change_rms": 0.02828046819447349
+            },
+            "positive_counts": {
+              "body_effect": 2,
+              "aux_effect": 0,
+              "aux_given_body": 1,
+              "body_given_aux": 2,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|HE": {
+            "mean": {
+              "body_effect": 0.005780765769905827,
+              "aux_effect": -0.00020595054981709104,
+              "aux_given_body": -8.11357097965093e-05,
+              "body_given_aux": 0.0059055806099264085,
+              "interaction": 0.00012481484002058174,
+              "overlap": 5.092416301668776e-05,
+              "mixed_logit_loss": 7.389067700380725e-05,
+              "mixed_logit_rms": 0.0005309274969713965,
+              "additive_logit_change_rms": 0.42106863749442763
+            },
+            "sd": {
+              "body_effect": 0.009100710098504177,
+              "aux_effect": 0.00010073614944255855,
+              "aux_given_body": 0.0001275010767097519,
+              "body_given_aux": 0.009072288352153143,
+              "interaction": 3.1649969744154106e-05,
+              "overlap": 4.099523300819733e-05,
+              "mixed_logit_loss": 1.0165438664540935e-05,
+              "mixed_logit_rms": 5.765346584404633e-05,
+              "additive_logit_change_rms": 0.02828632867886742
+            },
+            "positive_counts": {
+              "body_effect": 3,
+              "aux_effect": 0,
+              "aux_given_body": 1,
+              "body_given_aux": 3,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:HEN|base": {
+            "mean": {
+              "body_effect": -0.014405745422117477,
+              "aux_effect": -0.0118723145292009,
+              "aux_given_body": 0.008439011502842986,
+              "body_given_aux": 0.0059055806099264085,
+              "interaction": 0.020311326032043886,
+              "overlap": 0.01952706443350457,
+              "mixed_logit_loss": 0.0007842615985398371,
+              "mixed_logit_rms": 0.016257748441732202,
+              "additive_logit_change_rms": 0.47193742213529516
+            },
+            "sd": {
+              "body_effect": 0.008948252330432383,
+              "aux_effect": 0.0018909135189467503,
+              "aux_given_body": 0.0017391812432028704,
+              "body_given_aux": 0.009072288352153143,
+              "interaction": 0.0023231206830666303,
+              "overlap": 0.00265980841085917,
+              "mixed_logit_loss": 0.0013105047502508565,
+              "mixed_logit_rms": 0.0020475859980821844,
+              "additive_logit_change_rms": 0.031786837776027886
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 3,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          }
+        },
+        "finite_logit_gram": [
+          [
+            0.16617331093987706,
+            0.006715566314342935,
+            0.01203811772084961,
+            0.00010679989243967422
+          ],
+          [
+            0.0067155663143429346,
+            0.0016239428781294647,
+            0.0004232122870650374,
+            9.034379961431512e-06
+          ],
+          [
+            0.01203811772084961,
+            0.0004232122870650374,
+            0.001818952000578217,
+            2.8720302801453995e-05
+          ],
+          [
+            0.00010679989243967422,
+            9.034379961431512e-06,
+            2.8720302801453995e-05,
+            6.469322734024418e-06
+          ]
+        ],
+        "finite_response_cosines": [
+          [
+            1.0,
+            0.4088054066963616,
+            0.6924163750424085,
+            0.10300558433066649
+          ],
+          [
+            0.40880540669636156,
+            1.0,
+            0.24624208178868517,
+            0.08814213558094054
+          ],
+          [
+            0.6924163750424085,
+            0.24624208178868517,
+            1.0,
+            0.2647579357619595
+          ],
+          [
+            0.10300558433066649,
+            0.08814213558094054,
+            0.2647579357619595,
+            1.0
+          ]
+        ],
+        "predictive_kl": {
+          "B": 0.08615701511810317,
+          "H": 0.0008127283074203767,
+          "E": 0.0009099807364530775,
+          "N": 3.2340192035208594e-06,
+          "HEN": 0.0021755267057916973,
+          "BHEN": 0.10572107736724703
+        }
+      }
+    },
+    {
+      "role": "fresh-input consistency",
+      "offset": 2650131072,
+      "n": 4,
+      "summary": {
+        "n": 4,
+        "loss64": {
+          "base": 4.2556455422890584,
+          "B": 4.230565269228373,
+          "H": 4.2506633733868515,
+          "BH": 4.231442473285732,
+          "E": 4.249353060073711,
+          "BE": 4.235546762839707,
+          "HE": 4.244749026326482,
+          "BHE": 4.2366965498782445,
+          "N": 4.255424809688412,
+          "BN": 4.230386501193534,
+          "HN": 4.250449671370729,
+          "BHN": 4.2312752857282,
+          "EN": 4.249150275871074,
+          "BEN": 4.235376029252944,
+          "HEN": 4.244553309544639,
+          "BHEN": 4.23653727103671
+        },
+        "mobius": {
+          "base": 4.2556455422890584,
+          "B": -0.02508027306068561,
+          "H": -0.004982168902207151,
+          "BH": 0.0058593729595664,
+          "E": -0.006292482215347173,
+          "BE": 0.011273975826682436,
+          "HE": 0.0003781351549780876,
+          "BHE": -0.0001055521738011489,
+          "N": -0.00022073260064647826,
+          "BN": 4.1964565806962284e-05,
+          "HN": 7.030584524558847e-06,
+          "BHN": 4.549892782979015e-06,
+          "EN": 1.794839800872694e-05,
+          "BEN": -9.913949933437749e-06,
+          "HEN": 3.683626959016806e-08,
+          "BHEN": -1.6256834767247597e-07
+        },
+        "planes": {
+          "B:H|base": {
+            "mean": {
+              "body_effect": -0.02508027306068561,
+              "aux_effect": -0.004982168902207151,
+              "aux_given_body": 0.0008772040573592488,
+              "body_given_aux": -0.01922090010111921,
+              "interaction": 0.0058593729595664,
+              "overlap": 0.005571357827765498,
+              "mixed_logit_loss": 0.0002880151318012114,
+              "mixed_logit_rms": 0.003932179858572704,
+              "additive_logit_change_rms": 0.42385433765517927
+            },
+            "sd": {
+              "body_effect": 0.014651944633275257,
+              "aux_effect": 0.002182257941498768,
+              "aux_given_body": 0.0009632049494352509,
+              "body_given_aux": 0.014525115302989854,
+              "interaction": 0.0012756345788612078,
+              "overlap": 0.0014910161759413517,
+              "mixed_logit_loss": 0.00028984361892794294,
+              "mixed_logit_rms": 9.49318870799483e-05,
+              "additive_logit_change_rms": 0.008774089341663913
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 3,
+              "body_given_aux": 0,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:H|E": {
+            "mean": {
+              "body_effect": -0.013806297234003173,
+              "aux_effect": -0.004604033747229064,
+              "aux_given_body": 0.0011497870385361875,
+              "body_given_aux": -0.008052476448237922,
+              "interaction": 0.005753820785765251,
+              "overlap": 0.005462441655492885,
+              "mixed_logit_loss": 0.000291379130272551,
+              "mixed_logit_rms": 0.0038901257205235028,
+              "additive_logit_change_rms": 0.41955322557634034
+            },
+            "sd": {
+              "body_effect": 0.014086381224249036,
+              "aux_effect": 0.0021238426888529737,
+              "aux_given_body": 0.0009213081909733502,
+              "body_given_aux": 0.014078391146727643,
+              "interaction": 0.0012712526827998094,
+              "overlap": 0.001494518057559762,
+              "mixed_logit_loss": 0.00029231135533201,
+              "mixed_logit_rms": 8.648144916257478e-05,
+              "additive_logit_change_rms": 0.007805477503965393
+            },
+            "positive_counts": {
+              "body_effect": 1,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:H|N": {
+            "mean": {
+              "body_effect": -0.025038308494878647,
+              "aux_effect": -0.0049751383176825925,
+              "aux_given_body": 0.0008887845346667866,
+              "body_given_aux": -0.019174385642529268,
+              "interaction": 0.005863922852349379,
+              "overlap": 0.005576025042996444,
+              "mixed_logit_loss": 0.00028789780935389864,
+              "mixed_logit_rms": 0.003934581766930874,
+              "additive_logit_change_rms": 0.42412399250349403
+            },
+            "sd": {
+              "body_effect": 0.014656105221273873,
+              "aux_effect": 0.0021860699834744314,
+              "aux_given_body": 0.0009651058484062001,
+              "body_given_aux": 0.014532801467808587,
+              "interaction": 0.0012774819333377485,
+              "overlap": 0.0014934441336498612,
+              "mixed_logit_loss": 0.00028998444495199335,
+              "mixed_logit_rms": 9.485981520358914e-05,
+              "additive_logit_change_rms": 0.008778366010884385
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 3,
+              "body_given_aux": 0,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:H|EN": {
+            "mean": {
+              "body_effect": -0.013774246618129649,
+              "aux_effect": -0.004596966326434915,
+              "aux_given_body": 0.001161241783765643,
+              "body_given_aux": -0.00801603850792909,
+              "interaction": 0.005758208110200558,
+              "overlap": 0.00546702901877992,
+              "mixed_logit_loss": 0.0002911790914206236,
+              "mixed_logit_rms": 0.003892526991278508,
+              "additive_logit_change_rms": 0.4198214911285816
+            },
+            "sd": {
+              "body_effect": 0.014096763042979675,
+              "aux_effect": 0.0021277130139408557,
+              "aux_given_body": 0.0009231673524858071,
+              "body_given_aux": 0.014092341644461662,
+              "interaction": 0.001273197938392634,
+              "overlap": 0.0014968746721395285,
+              "mixed_logit_loss": 0.00029241768081790173,
+              "mixed_logit_rms": 8.640010324726917e-05,
+              "additive_logit_change_rms": 0.007808742546767065
+            },
+            "positive_counts": {
+              "body_effect": 1,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|base": {
+            "mean": {
+              "body_effect": -0.02508027306068561,
+              "aux_effect": -0.006292482215347173,
+              "aux_given_body": 0.004981493611335264,
+              "body_given_aux": -0.013806297234003173,
+              "interaction": 0.011273975826682436,
+              "overlap": 0.010953970372635565,
+              "mixed_logit_loss": 0.0003200054540470898,
+              "mixed_logit_rms": 0.013760386018943234,
+              "additive_logit_change_rms": 0.4578113702161367
+            },
+            "sd": {
+              "body_effect": 0.014651944633275257,
+              "aux_effect": 0.0014668772197782274,
+              "aux_given_body": 0.0009980565904606595,
+              "body_given_aux": 0.014086381224249036,
+              "interaction": 0.0021918368176628384,
+              "overlap": 0.0017023473681501188,
+              "mixed_logit_loss": 0.0008258350101609074,
+              "mixed_logit_rms": 0.0009917469576988674,
+              "additive_logit_change_rms": 0.010936431888969145
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|H": {
+            "mean": {
+              "body_effect": -0.01922090010111921,
+              "aux_effect": -0.005914347060369085,
+              "aux_given_body": 0.005254076592512202,
+              "body_given_aux": -0.008052476448237922,
+              "interaction": 0.011168423652881287,
+              "overlap": 0.010899889898719654,
+              "mixed_logit_loss": 0.0002685337541612487,
+              "mixed_logit_rms": 0.013782968920980222,
+              "additive_logit_change_rms": 0.45834331193220645
+            },
+            "sd": {
+              "body_effect": 0.014525115302989854,
+              "aux_effect": 0.00141568804667061,
+              "aux_given_body": 0.0009736632551264754,
+              "body_given_aux": 0.014078391146727643,
+              "interaction": 0.0021761203324681365,
+              "overlap": 0.0016971949430910705,
+              "mixed_logit_loss": 0.0008266058137858283,
+              "mixed_logit_rms": 0.0009928757810840666,
+              "additive_logit_change_rms": 0.010946091454748109
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|N": {
+            "mean": {
+              "body_effect": -0.025038308494878647,
+              "aux_effect": -0.006274533817338446,
+              "aux_given_body": 0.004989528059410553,
+              "body_given_aux": -0.013774246618129649,
+              "interaction": 0.011264061876748999,
+              "overlap": 0.010954998903349354,
+              "mixed_logit_loss": 0.0003090629733999428,
+              "mixed_logit_rms": 0.013766007390244452,
+              "additive_logit_change_rms": 0.45808334934201816
+            },
+            "sd": {
+              "body_effect": 0.014656105221273873,
+              "aux_effect": 0.0014631709632339691,
+              "aux_given_body": 0.0009987965712293682,
+              "body_given_aux": 0.014096763042979675,
+              "interaction": 0.0021900941293007707,
+              "overlap": 0.001703307492432199,
+              "mixed_logit_loss": 0.0008242357679089394,
+              "mixed_logit_rms": 0.0009918182902675361,
+              "additive_logit_change_rms": 0.010938163336054846
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:E|HN": {
+            "mean": {
+              "body_effect": -0.019174385642529268,
+              "aux_effect": -0.005896361826090768,
+              "aux_given_body": 0.005261985308509409,
+              "body_given_aux": -0.00801603850792909,
+              "interaction": 0.011158347134600177,
+              "overlap": 0.010900889153381362,
+              "mixed_logit_loss": 0.0002574579812184563,
+              "mixed_logit_rms": 0.013788602240499822,
+              "additive_logit_change_rms": 0.45861573759600915
+            },
+            "sd": {
+              "body_effect": 0.014532801467808587,
+              "aux_effect": 0.0014120887357336677,
+              "aux_given_body": 0.0009743636958467616,
+              "body_given_aux": 0.014092341644461662,
+              "interaction": 0.002174365207609943,
+              "overlap": 0.0016981347855885348,
+              "mixed_logit_loss": 0.0008249057687085957,
+              "mixed_logit_rms": 0.0009929475981599945,
+              "additive_logit_change_rms": 0.010947867673276704
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 2,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|base": {
+            "mean": {
+              "body_effect": -0.02508027306068561,
+              "aux_effect": -0.00022073260064647826,
+              "aux_given_body": -0.00017876803483951598,
+              "body_given_aux": -0.025038308494878647,
+              "interaction": 4.1964565806962284e-05,
+              "overlap": -2.5459677747131232e-05,
+              "mixed_logit_loss": 6.742424355388188e-05,
+              "mixed_logit_rms": 0.0005213968209820981,
+              "additive_logit_change_rms": 0.421030011944446
+            },
+            "sd": {
+              "body_effect": 0.014651944633275257,
+              "aux_effect": 0.00021348561406328687,
+              "aux_given_body": 0.00022655724378596958,
+              "body_given_aux": 0.014656105221273873,
+              "interaction": 3.890372005614231e-05,
+              "overlap": 3.481728651056196e-05,
+              "mixed_logit_loss": 2.867109809239088e-05,
+              "mixed_logit_rms": 3.243917210769485e-05,
+              "additive_logit_change_rms": 0.008751067961469787
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 1,
+              "aux_given_body": 1,
+              "body_given_aux": 0,
+              "interaction": 3,
+              "overlap": 1,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|H": {
+            "mean": {
+              "body_effect": -0.01922090010111921,
+              "aux_effect": -0.00021370201612191941,
+              "aux_given_body": -0.00016718755753197811,
+              "body_given_aux": -0.019174385642529268,
+              "interaction": 4.65144585899413e-05,
+              "overlap": -2.4408252545480257e-05,
+              "mixed_logit_loss": 7.092271113529058e-05,
+              "mixed_logit_rms": 0.0005223353559031615,
+              "additive_logit_change_rms": 0.4215299039167427
+            },
+            "sd": {
+              "body_effect": 0.014525115302989854,
+              "aux_effect": 0.00021709589678634795,
+              "aux_given_body": 0.00022916570072784956,
+              "body_given_aux": 0.014532801467808587,
+              "interaction": 4.102699480509664e-05,
+              "overlap": 3.557341291705821e-05,
+              "mixed_logit_loss": 2.925044057893736e-05,
+              "mixed_logit_rms": 3.252102519133954e-05,
+              "additive_logit_change_rms": 0.008770302262619394
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 1,
+              "aux_given_body": 1,
+              "body_given_aux": 0,
+              "interaction": 3,
+              "overlap": 1,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|E": {
+            "mean": {
+              "body_effect": -0.013806297234003173,
+              "aux_effect": -0.00020278420263775132,
+              "aux_given_body": -0.00017073358676422679,
+              "body_given_aux": -0.013774246618129649,
+              "interaction": 3.2050615873524535e-05,
+              "overlap": -4.138220604228259e-05,
+              "mixed_logit_loss": 7.343282191540901e-05,
+              "mixed_logit_rms": 0.0005163340228618034,
+              "additive_logit_change_rms": 0.41671067475331425
+            },
+            "sd": {
+              "body_effect": 0.014086381224249036,
+              "aux_effect": 0.00021409515565969605,
+              "aux_given_body": 0.00022692591858374016,
+              "body_given_aux": 0.014096763042979675,
+              "interaction": 3.740449024056886e-05,
+              "overlap": 3.300818310149772e-05,
+              "mixed_logit_loss": 2.847396206867213e-05,
+              "mixed_logit_rms": 3.2281566794181906e-05,
+              "additive_logit_change_rms": 0.007778773547136915
+            },
+            "positive_counts": {
+              "body_effect": 1,
+              "aux_effect": 1,
+              "aux_given_body": 1,
+              "body_given_aux": 1,
+              "interaction": 3,
+              "overlap": 0,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:N|HE": {
+            "mean": {
+              "body_effect": -0.008052476448237922,
+              "aux_effect": -0.0001957167818436023,
+              "aux_given_body": -0.00015927884153477123,
+              "body_given_aux": -0.00801603850792909,
+              "interaction": 3.6437940308831074e-05,
+              "overlap": -4.034573595069254e-05,
+              "mixed_logit_loss": 7.67836762582963e-05,
+              "mixed_logit_rms": 0.0005172677778267819,
+              "additive_logit_change_rms": 0.41721049186638637
+            },
+            "sd": {
+              "body_effect": 0.014078391146727643,
+              "aux_effect": 0.00021760627374074507,
+              "aux_given_body": 0.00022936744870547272,
+              "body_given_aux": 0.014092341644461662,
+              "interaction": 3.950679696481638e-05,
+              "overlap": 3.3744495600220125e-05,
+              "mixed_logit_loss": 2.8927720363262804e-05,
+              "mixed_logit_rms": 3.236467133955248e-05,
+              "additive_logit_change_rms": 0.00779537356350203
+            },
+            "positive_counts": {
+              "body_effect": 1,
+              "aux_effect": 1,
+              "aux_given_body": 1,
+              "body_given_aux": 1,
+              "interaction": 3,
+              "overlap": 0,
+              "mixed_logit_loss": 4,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          },
+          "B:HEN|base": {
+            "mean": {
+              "body_effect": -0.02508027306068561,
+              "aux_effect": -0.011092232744419839,
+              "aux_given_body": 0.00597200180833668,
+              "body_given_aux": -0.00801603850792909,
+              "interaction": 0.01706423455275652,
+              "overlap": 0.01644198359825965,
+              "mixed_logit_loss": 0.0006222509544964172,
+              "mixed_logit_rms": 0.014363414195484902,
+              "additive_logit_change_rms": 0.46108791082846634
+            },
+            "sd": {
+              "body_effect": 0.014651944633275257,
+              "aux_effect": 0.0034796300328018247,
+              "aux_given_body": 0.0013150788802919241,
+              "body_given_aux": 0.014092341644461662,
+              "interaction": 0.0030326492524037135,
+              "overlap": 0.0029353702202241814,
+              "mixed_logit_loss": 0.0008053509694778843,
+              "mixed_logit_rms": 0.0009485713586171844,
+              "additive_logit_change_rms": 0.011206397602815606
+            },
+            "positive_counts": {
+              "body_effect": 0,
+              "aux_effect": 0,
+              "aux_given_body": 4,
+              "body_given_aux": 1,
+              "interaction": 4,
+              "overlap": 4,
+              "mixed_logit_loss": 3,
+              "mixed_logit_rms": 4,
+              "additive_logit_change_rms": 4
+            }
+          }
+        },
+        "finite_logit_gram": [
+          [
+            0.16250792158989152,
+            0.005655256283766778,
+            0.010565248431893014,
+            3.097163713867243e-05
+          ],
+          [
+            0.0056552562837667774,
+            0.0018246482942304056,
+            0.0003353572406712819,
+            1.0401644567516883e-05
+          ],
+          [
+            0.010565248431893014,
+            0.0003353572406712819,
+            0.0016759066291044949,
+            1.9426048841808107e-05
+          ],
+          [
+            3.097163713867243e-05,
+            1.0401644567516882e-05,
+            1.9426048841808107e-05,
+            7.899962715406079e-06
+          ]
+        ],
+        "finite_response_cosines": [
+          [
+            1.0,
+            0.3284168568427231,
+            0.6402027512417813,
+            0.027334703893952938
+          ],
+          [
+            0.32841685684272304,
+            1.0,
+            0.19177553167625494,
+            0.08663630189415689
+          ],
+          [
+            0.6402027512417813,
+            0.19177553167625494,
+            1.0,
+            0.1688289992305402
+          ],
+          [
+            0.027334703893952938,
+            0.08663630189415687,
+            0.1688289992305402,
+            1.0
+          ]
+        ],
+        "predictive_kl": {
+          "B": 0.0836778146239405,
+          "H": 0.000913350091323725,
+          "E": 0.0008376165385761609,
+          "N": 3.948778993684609e-06,
+          "HEN": 0.0021136343477497705,
+          "BHEN": 0.10018590936718379
+        }
+      }
+    }
+  ],
+  "discovery": {
+    "n": 16,
+    "loss64": {
+      "base": 4.23713949197124,
+      "B": 4.226973627731491,
+      "H": 4.2322392971281415,
+      "BH": 4.228394942986485,
+      "E": 4.23079578186498,
+      "BE": 4.232433034110176,
+      "HE": 4.226299613096886,
+      "BHE": 4.2341437837703495,
+      "N": 4.236992483106286,
+      "BN": 4.226911026171453,
+      "HN": 4.23209770427415,
+      "BHN": 4.228344307296238,
+      "EN": 4.230670439191478,
+      "BEN": 4.232381976525042,
+      "HEN": 4.226179773682848,
+      "BHEN": 4.2341047223803026
+    },
+    "mobius": {
+      "base": 4.23713949197124,
+      "B": -0.01016586423974808,
+      "H": -0.0049001948430982545,
+      "BH": 0.006321510098092259,
+      "E": -0.006343710106259948,
+      "BE": 0.01180311648494492,
+      "HE": 0.0004040260750053648,
+      "BHE": -0.00011459166982610847,
+      "N": -0.00014700886495389032,
+      "BN": 8.440730491529602e-05,
+      "HN": 5.416010961656337e-06,
+      "BHN": 6.5498588292522975e-06,
+      "EN": 2.166619145152482e-05,
+      "BEN": -1.0122216547281404e-05,
+      "HEN": 8.724850181218713e-08,
+      "BHEN": -5.69232059544067e-08
+    },
+    "planes": {
+      "B:H|base": {
+        "mean": {
+          "body_effect": -0.01016586423974808,
+          "aux_effect": -0.0049001948430982545,
+          "aux_given_body": 0.0014213152549940045,
+          "body_given_aux": -0.0038443541416558202,
+          "interaction": 0.006321510098092259,
+          "overlap": 0.00629887265947317,
+          "mixed_logit_loss": 2.2637438618910988e-05,
+          "mixed_logit_rms": 0.004119877210513158,
+          "additive_logit_change_rms": 0.42975553571843816
+        },
+        "sd": {
+          "body_effect": 0.02613970734144416,
+          "aux_effect": 0.0020782143556433044,
+          "aux_given_body": 0.002433822895949961,
+          "body_given_aux": 0.027101210089817064,
+          "interaction": 0.0014478677036175026,
+          "overlap": 0.0014650604281255383,
+          "mixed_logit_loss": 0.00013260613175908423,
+          "mixed_logit_rms": 0.0004569085645259309,
+          "additive_logit_change_rms": 0.03655974811251632
+        },
+        "positive_counts": {
+          "body_effect": 5,
+          "aux_effect": 0,
+          "aux_given_body": 10,
+          "body_given_aux": 6,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 9,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:H|E": {
+        "mean": {
+          "body_effect": 0.0016372522451968408,
+          "aux_effect": -0.00449616876809289,
+          "aux_given_body": 0.0017107496601732608,
+          "body_given_aux": 0.007844170673462991,
+          "interaction": 0.0062069184282661505,
+          "overlap": 0.006189265244807481,
+          "mixed_logit_loss": 1.765318345869904e-05,
+          "mixed_logit_rms": 0.004074760819947453,
+          "additive_logit_change_rms": 0.42551491526298035
+        },
+        "sd": {
+          "body_effect": 0.02672856386168912,
+          "aux_effect": 0.002071597425718169,
+          "aux_given_body": 0.002474083675079561,
+          "body_given_aux": 0.027721538977200276,
+          "interaction": 0.0014459207622140374,
+          "overlap": 0.0014729721358378663,
+          "mixed_logit_loss": 0.00013210110932138032,
+          "mixed_logit_rms": 0.0004618076249416036,
+          "additive_logit_change_rms": 0.0378378832852836
+        },
+        "positive_counts": {
+          "body_effect": 9,
+          "aux_effect": 0,
+          "aux_given_body": 10,
+          "body_given_aux": 9,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 10,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:H|N": {
+        "mean": {
+          "body_effect": -0.010081456934832783,
+          "aux_effect": -0.004894778832136598,
+          "aux_given_body": 0.001433281124784913,
+          "body_given_aux": -0.003753396977911272,
+          "interaction": 0.006328059956921511,
+          "overlap": 0.00630589584669679,
+          "mixed_logit_loss": 2.2164110224626166e-05,
+          "mixed_logit_rms": 0.004122445624409154,
+          "additive_logit_change_rms": 0.43003804530329426
+        },
+        "sd": {
+          "body_effect": 0.02618606168987776,
+          "aux_effect": 0.00207861370827745,
+          "aux_given_body": 0.0024346452930991015,
+          "body_given_aux": 0.027148991208606147,
+          "interaction": 0.0014499696314072402,
+          "overlap": 0.001467285784061446,
+          "mixed_logit_loss": 0.00013259168018417487,
+          "mixed_logit_rms": 0.00045715297346714305,
+          "additive_logit_change_rms": 0.03659941794185823
+        },
+        "positive_counts": {
+          "body_effect": 5,
+          "aux_effect": 0,
+          "aux_given_body": 10,
+          "body_given_aux": 6,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 9,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:H|EN": {
+        "mean": {
+          "body_effect": 0.0017115373335648554,
+          "aux_effect": -0.004490665508629421,
+          "aux_given_body": 0.0017227458552600272,
+          "body_given_aux": 0.007924948697454304,
+          "interaction": 0.006213411363889448,
+          "overlap": 0.006196213495899624,
+          "mixed_logit_loss": 1.7197867989621196e-05,
+          "mixed_logit_rms": 0.00407732200907461,
+          "additive_logit_change_rms": 0.4257955146965544
+        },
+        "sd": {
+          "body_effect": 0.026773926420117913,
+          "aux_effect": 0.0020719272069147122,
+          "aux_given_body": 0.0024749807262573055,
+          "body_given_aux": 0.02776841513328767,
+          "interaction": 0.0014479808167018684,
+          "overlap": 0.0014751506583342935,
+          "mixed_logit_loss": 0.00013212043297483193,
+          "mixed_logit_rms": 0.0004620288626170704,
+          "additive_logit_change_rms": 0.03787541774193809
+        },
+        "positive_counts": {
+          "body_effect": 9,
+          "aux_effect": 0,
+          "aux_given_body": 10,
+          "body_given_aux": 9,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 10,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:E|base": {
+        "mean": {
+          "body_effect": -0.01016586423974808,
+          "aux_effect": -0.006343710106259948,
+          "aux_given_body": 0.005459406378684972,
+          "body_given_aux": 0.0016372522451968408,
+          "interaction": 0.01180311648494492,
+          "overlap": 0.011549590228264784,
+          "mixed_logit_loss": 0.00025352625668009776,
+          "mixed_logit_rms": 0.015745322973904956,
+          "additive_logit_change_rms": 0.4692637080791292
+        },
+        "sd": {
+          "body_effect": 0.02613970734144416,
+          "aux_effect": 0.002617301897124867,
+          "aux_given_body": 0.003216762060874495,
+          "body_given_aux": 0.02672856386168912,
+          "interaction": 0.001705640097917644,
+          "overlap": 0.0019782638233049087,
+          "mixed_logit_loss": 0.0010000802659323388,
+          "mixed_logit_rms": 0.002745560758010305,
+          "additive_logit_change_rms": 0.04014943123627401
+        },
+        "positive_counts": {
+          "body_effect": 5,
+          "aux_effect": 0,
+          "aux_given_body": 16,
+          "body_given_aux": 9,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 11,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:E|H": {
+        "mean": {
+          "body_effect": -0.0038443541416558202,
+          "aux_effect": -0.005939684031254583,
+          "aux_given_body": 0.005748840783864229,
+          "body_given_aux": 0.007844170673462991,
+          "interaction": 0.011688524815118811,
+          "overlap": 0.011482479200945514,
+          "mixed_logit_loss": 0.00020604561417331135,
+          "mixed_logit_rms": 0.01577105140515185,
+          "additive_logit_change_rms": 0.46981404780657243
+        },
+        "sd": {
+          "body_effect": 0.027101210089817064,
+          "aux_effect": 0.0026587123171580756,
+          "aux_given_body": 0.003282769151079659,
+          "body_given_aux": 0.027721538977200276,
+          "interaction": 0.0017019911041741102,
+          "overlap": 0.0019636301181679226,
+          "mixed_logit_loss": 0.0009978323630243978,
+          "mixed_logit_rms": 0.002750188420551823,
+          "additive_logit_change_rms": 0.04018781715435377
+        },
+        "positive_counts": {
+          "body_effect": 6,
+          "aux_effect": 0,
+          "aux_given_body": 16,
+          "body_given_aux": 9,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 9,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:E|N": {
+        "mean": {
+          "body_effect": -0.010081456934832783,
+          "aux_effect": -0.006322043914808423,
+          "aux_given_body": 0.005470950353589216,
+          "body_given_aux": 0.0017115373335648554,
+          "interaction": 0.011792994268397639,
+          "overlap": 0.011551253696542503,
+          "mixed_logit_loss": 0.00024174057185522013,
+          "mixed_logit_rms": 0.015750851717165962,
+          "additive_logit_change_rms": 0.4695478993914954
+        },
+        "sd": {
+          "body_effect": 0.02618606168987776,
+          "aux_effect": 0.0026225676417488534,
+          "aux_given_body": 0.0032213221253754596,
+          "body_given_aux": 0.026773926420117913,
+          "interaction": 0.0017079864282149053,
+          "overlap": 0.001980768856463692,
+          "mixed_logit_loss": 0.00100031400841523,
+          "mixed_logit_rms": 0.0027467749070287217,
+          "additive_logit_change_rms": 0.040191943708246546
+        },
+        "positive_counts": {
+          "body_effect": 5,
+          "aux_effect": 0,
+          "aux_given_body": 16,
+          "body_given_aux": 9,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 10,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:E|HN": {
+        "mean": {
+          "body_effect": -0.003753396977911272,
+          "aux_effect": -0.005917930591301246,
+          "aux_given_body": 0.00576041508406433,
+          "body_given_aux": 0.007924948697454304,
+          "interaction": 0.011678345675365576,
+          "overlap": 0.011484142351166996,
+          "mixed_logit_loss": 0.00019420332419847752,
+          "mixed_logit_rms": 0.015776593330533155,
+          "additive_logit_change_rms": 0.4700986700610582
+        },
+        "sd": {
+          "body_effect": 0.027148991208606147,
+          "aux_effect": 0.002664077227281508,
+          "aux_given_body": 0.0032874219401642117,
+          "body_given_aux": 0.02776841513328767,
+          "interaction": 0.0017043342916740264,
+          "overlap": 0.0019661249232483633,
+          "mixed_logit_loss": 0.000997979148676398,
+          "mixed_logit_rms": 0.0027514071244867195,
+          "additive_logit_change_rms": 0.04023030494707736
+        },
+        "positive_counts": {
+          "body_effect": 6,
+          "aux_effect": 0,
+          "aux_given_body": 16,
+          "body_given_aux": 9,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 9,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:N|base": {
+        "mean": {
+          "body_effect": -0.01016586423974808,
+          "aux_effect": -0.00014700886495389032,
+          "aux_given_body": -6.26015600385943e-05,
+          "body_given_aux": -0.010081456934832783,
+          "interaction": 8.440730491529602e-05,
+          "overlap": 2.2721514414198373e-05,
+          "mixed_logit_loss": 6.168579050100376e-05,
+          "mixed_logit_rms": 0.0005529703458514585,
+          "additive_logit_change_rms": 0.4266492485241292
+        },
+        "sd": {
+          "body_effect": 0.02613970734144416,
+          "aux_effect": 0.00023722749697300513,
+          "aux_given_body": 0.0002503540878222293,
+          "body_given_aux": 0.02618606168987776,
+          "interaction": 6.908499960009476e-05,
+          "overlap": 5.378086057377762e-05,
+          "mixed_logit_loss": 3.7168450745325844e-05,
+          "mixed_logit_rms": 6.045122878401785e-05,
+          "additive_logit_change_rms": 0.03651676127403717
+        },
+        "positive_counts": {
+          "body_effect": 5,
+          "aux_effect": 4,
+          "aux_given_body": 7,
+          "body_given_aux": 5,
+          "interaction": 15,
+          "overlap": 10,
+          "mixed_logit_loss": 16,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:N|H": {
+        "mean": {
+          "body_effect": -0.0038443541416558202,
+          "aux_effect": -0.00014159285399223398,
+          "aux_given_body": -5.063569024768566e-05,
+          "body_given_aux": -0.003753396977911272,
+          "interaction": 9.095716374454832e-05,
+          "overlap": 2.5385029032894092e-05,
+          "mixed_logit_loss": 6.557213471164447e-05,
+          "mixed_logit_rms": 0.0005539515572439135,
+          "additive_logit_change_rms": 0.427159735270263
+        },
+        "sd": {
+          "body_effect": 0.027101210089817064,
+          "aux_effect": 0.0002367522655518953,
+          "aux_given_body": 0.00025122699543979256,
+          "body_given_aux": 0.027148991208606147,
+          "interaction": 7.001092917922971e-05,
+          "overlap": 5.380808601456318e-05,
+          "mixed_logit_loss": 3.785391617916939e-05,
+          "mixed_logit_rms": 6.0505068444058964e-05,
+          "additive_logit_change_rms": 0.03654790654242226
+        },
+        "positive_counts": {
+          "body_effect": 6,
+          "aux_effect": 4,
+          "aux_given_body": 7,
+          "body_given_aux": 6,
+          "interaction": 15,
+          "overlap": 10,
+          "mixed_logit_loss": 16,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:N|E": {
+        "mean": {
+          "body_effect": 0.0016372522451968408,
+          "aux_effect": -0.0001253426735023655,
+          "aux_given_body": -5.105758513435088e-05,
+          "body_given_aux": 0.0017115373335648554,
+          "interaction": 7.428508836801462e-05,
+          "overlap": 7.085820612215323e-06,
+          "mixed_logit_loss": 6.719926775580753e-05,
+          "mixed_logit_rms": 0.0005462622261679878,
+          "additive_logit_change_rms": 0.4223855681850095
+        },
+        "sd": {
+          "body_effect": 0.02672856386168912,
+          "aux_effect": 0.00023867017336226185,
+          "aux_given_body": 0.00025293544161557736,
+          "body_given_aux": 0.026773926420117913,
+          "interaction": 6.842038563336092e-05,
+          "overlap": 5.2813038416749454e-05,
+          "mixed_logit_loss": 3.675853677908611e-05,
+          "mixed_logit_rms": 5.8640071146990474e-05,
+          "additive_logit_change_rms": 0.03779613108505023
+        },
+        "positive_counts": {
+          "body_effect": 9,
+          "aux_effect": 6,
+          "aux_given_body": 7,
+          "body_given_aux": 9,
+          "interaction": 14,
+          "overlap": 9,
+          "mixed_logit_loss": 16,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:N|HE": {
+        "mean": {
+          "body_effect": 0.007844170673462991,
+          "aux_effect": -0.00011983941403889697,
+          "aux_given_body": -3.9061390047584466e-05,
+          "body_given_aux": 0.007924948697454304,
+          "interaction": 8.077802399131251e-05,
+          "overlap": 9.75087649338546e-06,
+          "mixed_logit_loss": 7.102714749754324e-05,
+          "mixed_logit_rms": 0.0005472359115678612,
+          "additive_logit_change_rms": 0.42289456312805124
+        },
+        "sd": {
+          "body_effect": 0.027721538977200276,
+          "aux_effect": 0.00023826945823913226,
+          "aux_given_body": 0.0002538367503096107,
+          "body_given_aux": 0.02776841513328767,
+          "interaction": 6.936201182791747e-05,
+          "overlap": 5.2892513025730765e-05,
+          "mixed_logit_loss": 3.743205152081341e-05,
+          "mixed_logit_rms": 5.8693823606475895e-05,
+          "additive_logit_change_rms": 0.037826235814059195
+        },
+        "positive_counts": {
+          "body_effect": 9,
+          "aux_effect": 6,
+          "aux_given_body": 7,
+          "body_given_aux": 9,
+          "interaction": 14,
+          "overlap": 10,
+          "mixed_logit_loss": 16,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      },
+      "B:HEN|base": {
+        "mean": {
+          "body_effect": -0.01016586423974808,
+          "aux_effect": -0.010959718288391734,
+          "aux_given_body": 0.007131094648810649,
+          "body_given_aux": 0.007924948697454304,
+          "interaction": 0.018090812937202383,
+          "overlap": 0.017805276771601982,
+          "mixed_logit_loss": 0.0002855361655999811,
+          "mixed_logit_rms": 0.016369921300631623,
+          "additive_logit_change_rms": 0.47295340523903373
+        },
+        "sd": {
+          "body_effect": 0.02613970734144416,
+          "aux_effect": 0.0035110668863818717,
+          "aux_given_body": 0.004900079594167893,
+          "body_given_aux": 0.02776841513328767,
+          "interaction": 0.0027783550660815132,
+          "overlap": 0.003195763415975559,
+          "mixed_logit_loss": 0.0009772822617281453,
+          "mixed_logit_rms": 0.0028239600453348343,
+          "additive_logit_change_rms": 0.040306749456147185
+        },
+        "positive_counts": {
+          "body_effect": 5,
+          "aux_effect": 0,
+          "aux_given_body": 16,
+          "body_given_aux": 9,
+          "interaction": 16,
+          "overlap": 16,
+          "mixed_logit_loss": 11,
+          "mixed_logit_rms": 16,
+          "additive_logit_change_rms": 16
+        }
+      }
+    },
+    "finite_logit_gram": [
+      [
+        0.16170474115630892,
+        0.006455783959717849,
+        0.011198531126447673,
+        6.510120980856883e-05
+      ],
+      [
+        0.00645578395971785,
+        0.0017296449321355016,
+        0.0003764603288515163,
+        8.402429549347582e-06
+      ],
+      [
+        0.011198531126447673,
+        0.0003764603288515163,
+        0.001836631357030273,
+        2.1936755646350273e-05
+      ],
+      [
+        6.510120980856883e-05,
+        8.40242954934758e-06,
+        2.1936755646350273e-05,
+        6.6343999889090145e-06
+      ]
+    ],
+    "finite_response_cosines": [
+      [
+        1.0,
+        0.3860194008708159,
+        0.6498134366168266,
+        0.06285312231975461
+      ],
+      [
+        0.38601940087081593,
+        1.0,
+        0.21121742343358668,
+        0.07843783077681486
+      ],
+      [
+        0.6498134366168266,
+        0.21121742343358668,
+        1.0,
+        0.19872869215756045
+      ],
+      [
+        0.06285312231975461,
+        0.07843783077681485,
+        0.19872869215756045,
+        1.0
+      ]
+    ],
+    "predictive_kl": {
+      "B": 0.0819680838605144,
+      "H": 0.0008651392525149057,
+      "E": 0.0009178933578545573,
+      "N": 3.3162145569432554e-06,
+      "HEN": 0.002182225888601486,
+      "BHEN": 0.10002158907403126
+    }
+  },
+  "fresh": {
+    "n": 8,
+    "loss64": {
+      "base": 4.099244168131769,
+      "B": 4.079501158890366,
+      "H": 4.094448518601718,
+      "BH": 4.081019799341344,
+      "E": 4.092335698151221,
+      "BE": 4.085000329040044,
+      "HE": 4.087962728160789,
+      "BHE": 4.086826872821622,
+      "N": 4.09901203780396,
+      "BN": 4.0793559548054095,
+      "HN": 4.094223343797209,
+      "BHN": 4.080887124230631,
+      "EN": 4.092127840628826,
+      "BEN": 4.084867706749743,
+      "HEN": 4.0877618944949585,
+      "BHEN": 4.0867066655459565
+    },
+    "mobius": {
+      "base": 4.099244168131769,
+      "B": -0.019743009241401543,
+      "H": -0.004795649530050405,
+      "BH": 0.0063142899810275654,
+      "E": -0.006908469980546839,
+      "BE": 0.012407640130224051,
+      "HE": 0.00042267953961722116,
+      "BHE": -0.00011477620901612084,
+      "N": -0.00023213032780844411,
+      "BN": 8.692624285089323e-05,
+      "HN": 6.9555232991569405e-06,
+      "BHN": 5.573450945317582e-06,
+      "EN": 2.427280541267285e-05,
+      "BEN": -1.1691010756043063e-05,
+      "HEN": 6.833326626765057e-08,
+      "BHEN": -1.8229287546134287e-07
+    },
+    "planes": {
+      "B:H|base": {
+        "mean": {
+          "body_effect": -0.019743009241401543,
+          "aux_effect": -0.004795649530050405,
+          "aux_given_body": 0.00151864045097716,
+          "body_given_aux": -0.013428719260373978,
+          "interaction": 0.0063142899810275654,
+          "overlap": 0.006146547898680429,
+          "mixed_logit_loss": 0.00016774208234748844,
+          "mixed_logit_rms": 0.003978504098794142,
+          "additive_logit_change_rms": 0.42515845864134183
+        },
+        "sd": {
+          "body_effect": 0.012604665715123487,
+          "aux_effect": 0.0021250655573520887,
+          "aux_given_body": 0.0014028125881686386,
+          "body_given_aux": 0.012749634566099578,
+          "interaction": 0.0013064310185540425,
+          "overlap": 0.001444347801926472,
+          "mixed_logit_loss": 0.00027976918730871565,
+          "mixed_logit_rms": 0.00022849974130954907,
+          "additive_logit_change_rms": 0.019058143146143056
+        },
+        "positive_counts": {
+          "body_effect": 0,
+          "aux_effect": 0,
+          "aux_given_body": 7,
+          "body_given_aux": 1,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 6,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:H|E": {
+        "mean": {
+          "body_effect": -0.007335369111177492,
+          "aux_effect": -0.004372969990433184,
+          "aux_given_body": 0.0018265437815782604,
+          "body_given_aux": -0.0011358553391660475,
+          "interaction": 0.006199513772011445,
+          "overlap": 0.006034911246955597,
+          "mixed_logit_loss": 0.00016460252505579032,
+          "mixed_logit_rms": 0.0039413049908906365,
+          "additive_logit_change_rms": 0.4215379933865548
+        },
+        "sd": {
+          "body_effect": 0.012955567884470597,
+          "aux_effect": 0.0020782106340651533,
+          "aux_given_body": 0.00140757085397813,
+          "body_given_aux": 0.013233017392996822,
+          "interaction": 0.0012974445730024738,
+          "overlap": 0.0014405946851732904,
+          "mixed_logit_loss": 0.000280237618224428,
+          "mixed_logit_rms": 0.0002297411830557626,
+          "additive_logit_change_rms": 0.019385268641320116
+        },
+        "positive_counts": {
+          "body_effect": 3,
+          "aux_effect": 0,
+          "aux_given_body": 8,
+          "body_given_aux": 4,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 6,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:H|N": {
+        "mean": {
+          "body_effect": -0.01965608299855065,
+          "aux_effect": -0.0047886940067512485,
+          "aux_given_body": 0.0015311694252216346,
+          "body_given_aux": -0.013336219566577767,
+          "interaction": 0.006319863431972883,
+          "overlap": 0.006152347976490174,
+          "mixed_logit_loss": 0.00016751545548310265,
+          "mixed_logit_rms": 0.003981010764129524,
+          "additive_logit_change_rms": 0.425436723053078
+        },
+        "sd": {
+          "body_effect": 0.012619236153118146,
+          "aux_effect": 0.0021265018354406293,
+          "aux_given_body": 0.0014036161763093062,
+          "body_given_aux": 0.012768338006365055,
+          "interaction": 0.0013080800715846836,
+          "overlap": 0.001446447592057228,
+          "mixed_logit_loss": 0.00027987179896249925,
+          "mixed_logit_rms": 0.0002285636962524063,
+          "additive_logit_change_rms": 0.019067738420532835
+        },
+        "positive_counts": {
+          "body_effect": 0,
+          "aux_effect": 0,
+          "aux_given_body": 7,
+          "body_given_aux": 1,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 6,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:H|EN": {
+        "mean": {
+          "body_effect": -0.007260133879082642,
+          "aux_effect": -0.00436594613386776,
+          "aux_given_body": 0.0018389587962135412,
+          "body_given_aux": -0.0010552289490013411,
+          "interaction": 0.006204904930081301,
+          "overlap": 0.006040597727023957,
+          "mixed_logit_loss": 0.0001643072030573789,
+          "mixed_logit_rms": 0.003943805550053705,
+          "additive_logit_change_rms": 0.4218144453846579
+        },
+        "sd": {
+          "body_effect": 0.012976353881218395,
+          "aux_effect": 0.002079669676041177,
+          "aux_given_body": 0.0014084471613705373,
+          "body_given_aux": 0.01325747489764497,
+          "interaction": 0.0012991259468734255,
+          "overlap": 0.0014426056685542794,
+          "mixed_logit_loss": 0.00028030533246500107,
+          "mixed_logit_rms": 0.00022979979127197642,
+          "additive_logit_change_rms": 0.019393725735644057
+        },
+        "positive_counts": {
+          "body_effect": 3,
+          "aux_effect": 0,
+          "aux_given_body": 8,
+          "body_given_aux": 4,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 6,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:E|base": {
+        "mean": {
+          "body_effect": -0.019743009241401543,
+          "aux_effect": -0.006908469980546839,
+          "aux_given_body": 0.005499170149677213,
+          "body_given_aux": -0.007335369111177492,
+          "interaction": 0.012407640130224051,
+          "overlap": 0.011879126455026433,
+          "mixed_logit_loss": 0.0005285136751979613,
+          "mixed_logit_rms": 0.014685771922839552,
+          "additive_logit_change_rms": 0.46294879941139305
+        },
+        "sd": {
+          "body_effect": 0.012604665715123487,
+          "aux_effect": 0.0012719151895506124,
+          "aux_given_body": 0.0012255206615130524,
+          "body_given_aux": 0.012955567884470597,
+          "interaction": 0.001998512415365914,
+          "overlap": 0.001732813192998957,
+          "mixed_logit_loss": 0.0009238969266220636,
+          "mixed_logit_rms": 0.001745987976404805,
+          "additive_logit_change_rms": 0.022364419648251584
+        },
+        "positive_counts": {
+          "body_effect": 0,
+          "aux_effect": 0,
+          "aux_given_body": 8,
+          "body_given_aux": 3,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 5,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:E|H": {
+        "mean": {
+          "body_effect": -0.013428719260373978,
+          "aux_effect": -0.006485790440929617,
+          "aux_given_body": 0.005807073480278313,
+          "body_given_aux": -0.0011358553391660475,
+          "interaction": 0.01229286392120793,
+          "overlap": 0.011817973227328868,
+          "mixed_logit_loss": 0.00047489069387884886,
+          "mixed_logit_rms": 0.014710395457129427,
+          "additive_logit_change_rms": 0.46348253299507364
+        },
+        "sd": {
+          "body_effect": 0.012749634566099578,
+          "aux_effect": 0.0012292832274845389,
+          "aux_given_body": 0.001267371742215942,
+          "body_given_aux": 0.013233017392996822,
+          "interaction": 0.001985221044959911,
+          "overlap": 0.0017246045980749418,
+          "mixed_logit_loss": 0.0009226523895183509,
+          "mixed_logit_rms": 0.0017495461100925037,
+          "additive_logit_change_rms": 0.022373337623252026
+        },
+        "positive_counts": {
+          "body_effect": 1,
+          "aux_effect": 0,
+          "aux_given_body": 8,
+          "body_given_aux": 4,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 5,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:E|N": {
+        "mean": {
+          "body_effect": -0.01965608299855065,
+          "aux_effect": -0.006884197175134166,
+          "aux_given_body": 0.0055117519443338425,
+          "body_given_aux": -0.007260133879082642,
+          "interaction": 0.012395949119468008,
+          "overlap": 0.011880833889829846,
+          "mixed_logit_loss": 0.0005151152296383743,
+          "mixed_logit_rms": 0.014691777107571333,
+          "additive_logit_change_rms": 0.4632306554967198
+        },
+        "sd": {
+          "body_effect": 0.012619236153118146,
+          "aux_effect": 0.0012665716237418142,
+          "aux_given_body": 0.0012290973292762464,
+          "body_given_aux": 0.012976353881218395,
+          "interaction": 0.001996109194134482,
+          "overlap": 0.0017336985801644706,
+          "mixed_logit_loss": 0.0009227345520127041,
+          "mixed_logit_rms": 0.001746805914462728,
+          "additive_logit_change_rms": 0.022374547350759715
+        },
+        "positive_counts": {
+          "body_effect": 0,
+          "aux_effect": 0,
+          "aux_given_body": 8,
+          "body_given_aux": 3,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 5,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:E|HN": {
+        "mean": {
+          "body_effect": -0.013336219566577767,
+          "aux_effect": -0.006461449302250677,
+          "aux_given_body": 0.005819541315325749,
+          "body_given_aux": -0.0010552289490013411,
+          "interaction": 0.012280990617576426,
+          "overlap": 0.011819642471367315,
+          "mixed_logit_loss": 0.0004613481462089064,
+          "mixed_logit_rms": 0.014716415555533742,
+          "additive_logit_change_rms": 0.4637648192068228
+        },
+        "sd": {
+          "body_effect": 0.012768338006365055,
+          "aux_effect": 0.0012242567515413517,
+          "aux_given_body": 0.001271040498356562,
+          "body_given_aux": 0.01325747489764497,
+          "interaction": 0.001982794933812039,
+          "overlap": 0.0017254638290145226,
+          "mixed_logit_loss": 0.0009214458577945907,
+          "mixed_logit_rms": 0.0017503668986898165,
+          "additive_logit_change_rms": 0.022383448853439906
+        },
+        "positive_counts": {
+          "body_effect": 1,
+          "aux_effect": 0,
+          "aux_given_body": 8,
+          "body_given_aux": 4,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 5,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:N|base": {
+        "mean": {
+          "body_effect": -0.019743009241401543,
+          "aux_effect": -0.00023213032780844411,
+          "aux_given_body": -0.00014520408495755088,
+          "body_given_aux": -0.01965608299855065,
+          "interaction": 8.692624285089323e-05,
+          "overlap": 2.081416844308768e-05,
+          "mixed_logit_loss": 6.611207440793132e-05,
+          "mixed_logit_rms": 0.0005289958742679885,
+          "additive_logit_change_rms": 0.42227608776591424
+        },
+        "sd": {
+          "body_effect": 0.012604665715123487,
+          "aux_effect": 0.00015439400616930443,
+          "aux_given_body": 0.00017339471174571605,
+          "body_given_aux": 0.012619236153118146,
+          "interaction": 5.826129236168426e-05,
+          "overlap": 6.072681423758042e-05,
+          "mixed_logit_loss": 2.0048037127228807e-05,
+          "mixed_logit_rms": 4.5103800662416695e-05,
+          "additive_logit_change_rms": 0.018989764401247142
+        },
+        "positive_counts": {
+          "body_effect": 0,
+          "aux_effect": 1,
+          "aux_given_body": 2,
+          "body_given_aux": 0,
+          "interaction": 7,
+          "overlap": 5,
+          "mixed_logit_loss": 8,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:N|H": {
+        "mean": {
+          "body_effect": -0.013428719260373978,
+          "aux_effect": -0.00022517480450928717,
+          "aux_given_body": -0.00013267511071307636,
+          "body_given_aux": -0.013336219566577767,
+          "interaction": 9.249969379621081e-05,
+          "overlap": 2.2632604775500373e-05,
+          "mixed_logit_loss": 6.986708902068095e-05,
+          "mixed_logit_rms": 0.0005299345805976552,
+          "additive_logit_change_rms": 0.42277472419997436
+        },
+        "sd": {
+          "body_effect": 0.012749634566099578,
+          "aux_effect": 0.00015661115300376715,
+          "aux_given_body": 0.00017533632260483372,
+          "body_given_aux": 0.012768338006365055,
+          "interaction": 5.997886213967618e-05,
+          "overlap": 6.16942188955985e-05,
+          "mixed_logit_loss": 2.0314316183519426e-05,
+          "mixed_logit_rms": 4.51645634583967e-05,
+          "additive_logit_change_rms": 0.018998512867694807
+        },
+        "positive_counts": {
+          "body_effect": 1,
+          "aux_effect": 1,
+          "aux_given_body": 2,
+          "body_given_aux": 1,
+          "interaction": 7,
+          "overlap": 5,
+          "mixed_logit_loss": 8,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:N|E": {
+        "mean": {
+          "body_effect": -0.007335369111177492,
+          "aux_effect": -0.00020785752239577127,
+          "aux_given_body": -0.0001326222903009211,
+          "body_given_aux": -0.007260133879082642,
+          "interaction": 7.523523209485017e-05,
+          "overlap": 3.5002706404358742e-06,
+          "mixed_logit_loss": 7.173496145435054e-05,
+          "mixed_logit_rms": 0.0005231638591816486,
+          "additive_logit_change_rms": 0.41864175201937337
+        },
+        "sd": {
+          "body_effect": 0.012955567884470597,
+          "aux_effect": 0.00015490923482867756,
+          "aux_given_body": 0.00017494849467427503,
+          "body_given_aux": 0.012976353881218395,
+          "interaction": 5.606898700073276e-05,
+          "overlap": 5.8977321346848993e-05,
+          "mixed_logit_loss": 1.9934262688498913e-05,
+          "mixed_logit_rms": 4.3833087214179e-05,
+          "additive_logit_change_rms": 0.019312154103601313
+        },
+        "positive_counts": {
+          "body_effect": 3,
+          "aux_effect": 1,
+          "aux_given_body": 2,
+          "body_given_aux": 3,
+          "interaction": 7,
+          "overlap": 4,
+          "mixed_logit_loss": 8,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:N|HE": {
+        "mean": {
+          "body_effect": -0.0011358553391660475,
+          "aux_effect": -0.00020083366583034667,
+          "aux_given_body": -0.00012020727566564027,
+          "body_given_aux": -0.0010552289490013411,
+          "interaction": 8.062639016470641e-05,
+          "overlap": 5.289213532997609e-06,
+          "mixed_logit_loss": 7.533717663105177e-05,
+          "mixed_logit_rms": 0.0005240976373990892,
+          "additive_logit_change_rms": 0.41913956468040703
+        },
+        "sd": {
+          "body_effect": 0.013233017392996822,
+          "aux_effect": 0.00015707607189848543,
+          "aux_given_body": 0.0001768011600394788,
+          "body_given_aux": 0.01325747489764497,
+          "interaction": 5.770426522858595e-05,
+          "overlap": 5.9902646320223635e-05,
+          "mixed_logit_loss": 2.0132370293158545e-05,
+          "mixed_logit_rms": 4.3894936379728845e-05,
+          "additive_logit_change_rms": 0.019318471149005628
+        },
+        "positive_counts": {
+          "body_effect": 4,
+          "aux_effect": 1,
+          "aux_given_body": 2,
+          "body_given_aux": 4,
+          "interaction": 7,
+          "overlap": 4,
+          "mixed_logit_loss": 8,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      },
+      "B:HEN|base": {
+        "mean": {
+          "body_effect": -0.019743009241401543,
+          "aux_effect": -0.01148227363681037,
+          "aux_given_body": 0.007205506655589833,
+          "body_given_aux": -0.0010552289490013411,
+          "interaction": 0.018687780292400202,
+          "overlap": 0.01798452401588211,
+          "mixed_logit_loss": 0.0007032562765181272,
+          "mixed_logit_rms": 0.015310581318608553,
+          "additive_logit_change_rms": 0.4665126664818807
+        },
+        "sd": {
+          "body_effect": 0.012604665715123487,
+          "aux_effect": 0.0026258928409707604,
+          "aux_given_body": 0.0019432970966108026,
+          "body_given_aux": 0.01325747489764497,
+          "interaction": 0.003044169127512736,
+          "overlap": 0.0030731181200105307,
+          "mixed_logit_loss": 0.0010106952028164865,
+          "mixed_logit_rms": 0.0017910169736295417,
+          "additive_logit_change_rms": 0.02281410278217567
+        },
+        "positive_counts": {
+          "body_effect": 0,
+          "aux_effect": 0,
+          "aux_given_body": 8,
+          "body_given_aux": 4,
+          "interaction": 8,
+          "overlap": 8,
+          "mixed_logit_loss": 6,
+          "mixed_logit_rms": 8,
+          "additive_logit_change_rms": 8
+        }
+      }
+    },
+    "finite_logit_gram": [
+      [
+        0.16434061626488428,
+        0.006185411299054856,
+        0.011301683076371312,
+        6.888576478917332e-05
+      ],
+      [
+        0.006185411299054856,
+        0.0017242955861799351,
+        0.00037928476386815967,
+        9.718012264474197e-06
+      ],
+      [
+        0.011301683076371312,
+        0.00037928476386815967,
+        0.0017474293148413559,
+        2.407317582163105e-05
+      ],
+      [
+        6.888576478917332e-05,
+        9.718012264474197e-06,
+        2.407317582163105e-05,
+        7.184642724715249e-06
+      ]
+    ],
+    "finite_response_cosines": [
+      [
+        1.0,
+        0.36744324642059273,
+        0.6669155756737277,
+        0.06339491743233348
+      ],
+      [
+        0.36744324642059273,
+        1.0,
+        0.2185041703631852,
+        0.08731100682095481
+      ],
+      [
+        0.6669155756737277,
+        0.2185041703631852,
+        1.0,
+        0.21484783955794848
+      ],
+      [
+        0.06339491743233348,
+        0.08731100682095481,
+        0.21484783955794848,
+        1.0
+      ]
+    ],
+    "predictive_kl": {
+      "B": 0.08491741487102183,
+      "H": 0.0008630391993720509,
+      "E": 0.0008737986375146192,
+      "N": 3.591399098602734e-06,
+      "HEN": 0.002144580526770734,
+      "BHEN": 0.10295349336721543
+    }
+  },
+  "scope": "Old16 are reproduction/discovery, fresh8 consistency at selected state. Finite-logit overlap is label independent; mixed-logit loss is not optimizer-state transport. No rate/causal/independent-seed claim.",
+  "max_old_loss32_difference": 0.0
+}

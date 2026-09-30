@@ -1,0 +1,413 @@
+{
+  "verified_at": "2026-09-28T19:19:11.560487+00:00",
+  "checks": [
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.014_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.014_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.028_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.028_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.02_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.04_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/M_b16M_lr0.04_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.04_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/PD_a0.5_b16M_lr0.04_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.04_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/SPD_a0.5_b16M_lr0.04_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.028_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.04_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "ba21ab70cf7a1411ff39d94147ff2f1bbd38ec86e8ea0e2d0672bc52c78cf007",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_batch16m_20260927/TS_a0.5_b0.5gn_b16M_lr0.04_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_seed16m_20260928/M_b16M_lr0.02_mom0.9_s260926_l40s/scientific/source/muon.py",
+      "sha256": "c6e29f41b035988bf80d1544c5e5369c3804ba7fc869afdb765b0ba97d3e321e",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_seed16m_20260928/M_b16M_lr0.02_mom0.9_s260926_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_seed16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.9_s260926_ada/scientific/source/muon.py",
+      "sha256": "c6e29f41b035988bf80d1544c5e5369c3804ba7fc869afdb765b0ba97d3e321e",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_seed16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.9_s260926_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/M_b16M_lr0.02_mom0.8_s260925_l40s/scientific/source/muon.py",
+      "sha256": "252fd0c099b81bcd2d10b7baf134fc40c2fe9e4bf9aabb4b254284b58d84ed75",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/M_b16M_lr0.02_mom0.8_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "80cb5da1c4af7dfa1f6cb68aab5bea3514275be3d7a5f0e3b5993e10f46d66ed",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/PD_a0.5_b16M_lr0.028_mom0.8_s260925_l40s/scientific/source/muon.py",
+      "sha256": "252fd0c099b81bcd2d10b7baf134fc40c2fe9e4bf9aabb4b254284b58d84ed75",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/PD_a0.5_b16M_lr0.028_mom0.8_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "80cb5da1c4af7dfa1f6cb68aab5bea3514275be3d7a5f0e3b5993e10f46d66ed",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.6_s260925_ada/scientific/source/muon.py",
+      "sha256": "252fd0c099b81bcd2d10b7baf134fc40c2fe9e4bf9aabb4b254284b58d84ed75",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.6_s260925_ada/scientific/source/distributed.py",
+      "sha256": "80cb5da1c4af7dfa1f6cb68aab5bea3514275be3d7a5f0e3b5993e10f46d66ed",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.7_s260925_ada/scientific/source/muon.py",
+      "sha256": "252fd0c099b81bcd2d10b7baf134fc40c2fe9e4bf9aabb4b254284b58d84ed75",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.7_s260925_ada/scientific/source/distributed.py",
+      "sha256": "80cb5da1c4af7dfa1f6cb68aab5bea3514275be3d7a5f0e3b5993e10f46d66ed",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16mseed_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260926_ada/scientific/source/muon.py",
+      "sha256": "1e18a6da86d971ff341b862171064a528ef5149e8ff09aaaffb3624bc349f0b7",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom16mseed_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260926_ada/scientific/source/distributed.py",
+      "sha256": "c22917213dbae9a4d3eaa978e12d241112db56107212bbbcf1e6514a1e87a0f2",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/M2tap_b16M_lr0.02_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "1bf6df6fbd35471450d8bb1e0de82027ed99532791f2911e167f349cd53e461d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/M2tap_b16M_lr0.02_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "077b64dcb53224de27020bd4ecbb1166fbca7525a54b6d30c5b91d21d06bb59a",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/PD2tap_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "1bf6df6fbd35471450d8bb1e0de82027ed99532791f2911e167f349cd53e461d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/PD2tap_a0.5_b16M_lr0.028_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "077b64dcb53224de27020bd4ecbb1166fbca7525a54b6d30c5b91d21d06bb59a",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD2tap_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/source/muon.py",
+      "sha256": "1bf6df6fbd35471450d8bb1e0de82027ed99532791f2911e167f349cd53e461d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD2tap_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/source/distributed.py",
+      "sha256": "077b64dcb53224de27020bd4ecbb1166fbca7525a54b6d30c5b91d21d06bb59a",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD2tap_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "1bf6df6fbd35471450d8bb1e0de82027ed99532791f2911e167f349cd53e461d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD2tap_a0.5_b16M_lr0.028_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "077b64dcb53224de27020bd4ecbb1166fbca7525a54b6d30c5b91d21d06bb59a",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/source/muon.py",
+      "sha256": "1bf6df6fbd35471450d8bb1e0de82027ed99532791f2911e167f349cd53e461d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_prefilter16m_20260928/SPD_a0.5_b16M_lr0.028_mom0.8_s260925_ada/scientific/source/distributed.py",
+      "sha256": "077b64dcb53224de27020bd4ecbb1166fbca7525a54b6d30c5b91d21d06bb59a",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_clip16m_20260928/Mclip0.1_b16M_lr0.02_mom0.8_s260925_l40s/scientific/source/muon.py",
+      "sha256": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_clip16m_20260928/Mclip0.1_b16M_lr0.02_mom0.8_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "ae840a2d33e875110cbd2371b52889c43d355bbd4e3177ae4d69d5397530d145",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_clip16m_20260928/Mclip0.1_b16M_lr0.02_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_clip16m_20260928/Mclip0.1_b16M_lr0.02_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "ae840a2d33e875110cbd2371b52889c43d355bbd4e3177ae4d69d5397530d145",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_b16mlong_20260928/M_b16M_T2x_lr0.02_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "c6e29f41b035988bf80d1544c5e5369c3804ba7fc869afdb765b0ba97d3e321e",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_b16mlong_20260928/M_b16M_T2x_lr0.02_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "c6e29f41b035988bf80d1544c5e5369c3804ba7fc869afdb765b0ba97d3e321e",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_b16mlong_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada/scientific/source/muon.py",
+      "sha256": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_horizon16m_20260928/SPD_a0.5_b16M_T2x_lr0.028_mom0.8_s260925_ada/scientific/source/distributed.py",
+      "sha256": "ae840a2d33e875110cbd2371b52889c43d355bbd4e3177ae4d69d5397530d145",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m2_20260927/PD_b4M_lr0.02_mom0.81_s260925_ada/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m2_20260927/PD_b4M_lr0.02_mom0.81_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m2_20260927/TS_a0.25_b0.25gn_b4M_lr0.02_mom0.81_s260925_ada/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m2_20260927/TS_a0.25_b0.25gn_b4M_lr0.02_mom0.81_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/M_b4M_lr0.02_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/M_b4M_lr0.02_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/PD_b4M_lr0.02_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/PD_b4M_lr0.02_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/SPD_b4M_lr0.01_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/SPD_b4M_lr0.01_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/TS_a0.25_b0.25gn_b4M_lr0.01_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m3_20260927/TS_a0.25_b0.25gn_b4M_lr0.01_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m4_20260927/PD_a0.5_b4M_lr0.02_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m4_20260927/PD_a0.5_b4M_lr0.02_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m4_20260927/TS_a0.25_b0.5gn_b4M_lr0.01_mom0.9_s260925_ada/scientific/source/muon.py",
+      "sha256": "fe731051090220c2f24888e26d6aa96680aeba9f899492d3df6cbd5f138bfb94",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m4_20260927/TS_a0.25_b0.5gn_b4M_lr0.01_mom0.9_s260925_ada/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_mom0.81_s260925_l40s/scientific/source/muon.py",
+      "sha256": "c34962d9bc2ba87d6befd4a55d022dd90889ac059d8ada704507517384fe09b2",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_mom0.81_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_mom0.9_s260925_l40s/scientific/source/muon.py",
+      "sha256": "c34962d9bc2ba87d6befd4a55d022dd90889ac059d8ada704507517384fe09b2",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_mom0.9_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_nesterov_s260925_l40s/scientific/source/muon.py",
+      "sha256": "c34962d9bc2ba87d6befd4a55d022dd90889ac059d8ada704507517384fe09b2",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_nesterov_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_noclip_s260925_l40s/scientific/source/muon.py",
+      "sha256": "c34962d9bc2ba87d6befd4a55d022dd90889ac059d8ada704507517384fe09b2",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/M_b4M_lr0.014_noclip_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/SPD_b4M_lr0.01_noclip_s260925_l40s/scientific/source/muon.py",
+      "sha256": "c34962d9bc2ba87d6befd4a55d022dd90889ac059d8ada704507517384fe09b2",
+      "matches_metadata": true
+    },
+    {
+      "path": "logs/muon_spectra/soaudit_mom4m_20260927/SPD_b4M_lr0.01_noclip_s260925_l40s/scientific/source/distributed.py",
+      "sha256": "8eb97eddc413c0ca578afb663b0a239d9d26b27abfd5c80c098ca39a7f27ca5c",
+      "matches_metadata": true
+    },
+    {
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/.venv/lib/python3.11/site-packages/torch/nn/utils/clip_grad.py",
+      "sha256": "d3df2a8ff98f579529b95a3863ad3e8f471ea82531c906a4a30b7dc2a30e8e67",
+      "epsilon_formula_verified": true
+    }
+  ],
+  "step_rows": 7329,
+  "code_sha256": "88ec9280cdf78276d656644a2852866bdad3817dac3ba5297ab7c318cbeb66a9",
+  "audit_sha256": "12ca72608001e2b335109715894890c35494f89b4ddca6cdc7b3f8ce0957120a"
+}

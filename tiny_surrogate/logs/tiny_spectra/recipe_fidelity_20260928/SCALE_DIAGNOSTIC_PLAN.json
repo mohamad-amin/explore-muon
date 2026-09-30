@@ -1,0 +1,47 @@
+{
+  "role": "exposure_and_batch_development_diagnostic",
+  "seed": 20260928,
+  "methods": [
+    "ts",
+    "spd"
+  ],
+  "learning_rates": [
+    0.004,
+    0.008,
+    0.016
+  ],
+  "total_tokens": 32939904,
+  "batch_tokens": 100992,
+  "steps": 327,
+  "late_steps": [
+    232,
+    240,
+    248,
+    256,
+    264,
+    272,
+    280,
+    288
+  ],
+  "evaluation": "full development at step0,1,every8,final; all1018977targets",
+  "gates": {
+    "absolute_improvement_each_best_vs_original_c": 0.005,
+    "matched_lrs_required_with_spd_minus_ts_at_most": {
+      "count": 2,
+      "difference": -0.005
+    },
+    "selected_lr_for_both": "interior0.008; boundary means unresolved, no expansion",
+    "endpoint_min_spd_minus_min_ts_at_most": -0.005,
+    "late_envelope": "negative at all declared late_steps; median<=-0.005",
+    "selected_endpoint_document_groups": "negative in all4fixedgroups"
+  },
+  "no_edge_expansion": true,
+  "sealed_test_scoring": false,
+  "fresh_double_horizon_available": false,
+  "qualification": false,
+  "gpu": "11GBRTX2080Ti",
+  "max_parallel": 2,
+  "walltime_minutes_per_arm": 20,
+  "maximum_gpu_hours": 2.0,
+  "projected_gpu_hours": 0.93
+}

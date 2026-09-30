@@ -1,0 +1,292 @@
+{
+  "role": "read_only_state_availability_gate",
+  "scientific_question": "Does SOAP add substantially less directional correction beyond PD in tiny than reference states?",
+  "state_requirements": [
+    "same stored momentum",
+    "same cached input roots",
+    "stored SOAP bases",
+    "stored SOAP second moments"
+  ],
+  "tiny": [
+    {
+      "seed": 20260928,
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra/c_scale_diagnostic_20260928/runs/spd_scale_b100992_lr0.016_m0.8_s20260928/final.pt",
+      "bytes": 66562223,
+      "sha256": "c92420b59bfe82dedbad07de727291cd20aaf1be5dd12977645c3d7056436de8",
+      "step": 327,
+      "optimizer_keys": [
+        "format_version",
+        "optimizer_class",
+        "config",
+        "param_groups",
+        "state",
+        "external",
+        "model_statistics",
+        "tensor_memory"
+      ],
+      "momentum_matrices": 24,
+      "soap_matrices": 24,
+      "cached_roots": 24,
+      "input_stat_modules": 24,
+      "soap_state_fields": [
+        "col_gg",
+        "exp_avg_sq",
+        "q_col",
+        "q_row",
+        "ready",
+        "row_gg",
+        "sides"
+      ]
+    },
+    {
+      "seed": 20260929,
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra/c_fixed_seed_replication_20260928/runs/spd_scale_seedcheck_b100992_lr0.016_m0.8_s20260929/final.pt",
+      "bytes": 66562223,
+      "sha256": "7c4cce8d13fa12f57d1097ffaebb2d7eb7dd3bccad57fa79ffb424570ab1a417",
+      "step": 327,
+      "optimizer_keys": [
+        "format_version",
+        "optimizer_class",
+        "config",
+        "param_groups",
+        "state",
+        "external",
+        "model_statistics",
+        "tensor_memory"
+      ],
+      "momentum_matrices": 24,
+      "soap_matrices": 24,
+      "cached_roots": 24,
+      "input_stat_modules": 24,
+      "soap_state_fields": [
+        "col_gg",
+        "exp_avg_sq",
+        "q_col",
+        "q_row",
+        "ready",
+        "row_gg",
+        "sides"
+      ]
+    },
+    {
+      "seed": 20260930,
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/tiny_surrogate/logs/tiny_spectra/c_fixed_seed_replication_20260928/runs/spd_scale_seedcheck_b100992_lr0.016_m0.8_s20260930/final.pt",
+      "bytes": 66562223,
+      "sha256": "9a921407ed03dc4d94884a95b66b010883a768b34309e3deddd35362fe889c04",
+      "step": 327,
+      "optimizer_keys": [
+        "format_version",
+        "optimizer_class",
+        "config",
+        "param_groups",
+        "state",
+        "external",
+        "model_statistics",
+        "tensor_memory"
+      ],
+      "momentum_matrices": 24,
+      "soap_matrices": 24,
+      "cached_roots": 24,
+      "input_stat_modules": 24,
+      "soap_state_fields": [
+        "col_gg",
+        "exp_avg_sq",
+        "q_col",
+        "q_row",
+        "ready",
+        "row_gg",
+        "sides"
+      ]
+    }
+  ],
+  "reference": [
+    {
+      "seed": 260925,
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m3_20260927/SPD_b4M_lr0.01_mom0.9_s260925_l40s/scientific/checkpoint.pt",
+      "bytes": 822884985,
+      "sha256": "7ad2fd808b8b399112f8b5844512827601d4e35eaeb2b80596ebbe2bdf21924f",
+      "step": 368,
+      "top_keys": [
+        "model",
+        "optimizer",
+        "step",
+        "tokens",
+        "config",
+        "metadata",
+        "rank_rng"
+      ],
+      "optimizer_keys": [
+        "state",
+        "param_groups"
+      ],
+      "body_state_fields": [
+        "momentum_buffer",
+        "step"
+      ],
+      "momentum_matrices": 48,
+      "model_statistic_keys": [],
+      "kept_files": [
+        "step000037.json",
+        "step000037.pt",
+        "step000037_input_stats_rank0.pt",
+        "step000038_weights.pt",
+        "step000183.json",
+        "step000183.pt",
+        "step000183_input_stats_rank0.pt",
+        "step000184_weights.pt",
+        "step000330.json",
+        "step000330.pt",
+        "step000330_input_stats_rank0.pt",
+        "step000331_weights.pt"
+      ],
+      "input_stat_sidecars": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m3_20260927/SPD_b4M_lr0.01_mom0.9_s260925_l40s/scientific/kept/step000037_input_stats_rank0.pt",
+          "bytes": 176538717,
+          "sha256": "a94d3466680c1820e4e360fc4ed056a79fe2d2ca8bc7e8e659299abb07300770",
+          "modules": 48,
+          "fields": [
+            "input_cov",
+            "input_cov_mean",
+            "input_cov_weight",
+            "input_mean",
+            "input_sq",
+            "input_weight"
+          ]
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m3_20260927/SPD_b4M_lr0.01_mom0.9_s260925_l40s/scientific/kept/step000183_input_stats_rank0.pt",
+          "bytes": 176538717,
+          "sha256": "c924ec84adc0d10af84ecb6699c0ee1a54b8e4f7a92d91ecb906095996b9909c",
+          "modules": 48,
+          "fields": [
+            "input_cov",
+            "input_cov_mean",
+            "input_cov_weight",
+            "input_mean",
+            "input_sq",
+            "input_weight"
+          ]
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_mom4m3_20260927/SPD_b4M_lr0.01_mom0.9_s260925_l40s/scientific/kept/step000330_input_stats_rank0.pt",
+          "bytes": 176538717,
+          "sha256": "0101245693ee618dd9c0a5b4d39181715f5c79230a1acb8fd39db46aba1aa540",
+          "modules": 48,
+          "fields": [
+            "input_cov",
+            "input_cov_mean",
+            "input_cov_weight",
+            "input_mean",
+            "input_sq",
+            "input_weight"
+          ]
+        }
+      ],
+      "soap_bases_and_second_moments_available": false,
+      "cached_roots_available": false
+    },
+    {
+      "seed": 260926,
+      "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/SPD_b4M_lr0.01_mom0.9_s260926_l40s/scientific/checkpoint.pt",
+      "bytes": 822885305,
+      "sha256": "da7b3985cad2e9bb2e070e25549ca3e6b297e143347ae30566655558a102b68c",
+      "step": 368,
+      "top_keys": [
+        "model",
+        "optimizer",
+        "step",
+        "tokens",
+        "config",
+        "metadata",
+        "rank_rng"
+      ],
+      "optimizer_keys": [
+        "state",
+        "param_groups"
+      ],
+      "body_state_fields": [
+        "momentum_buffer",
+        "step"
+      ],
+      "momentum_matrices": 48,
+      "model_statistic_keys": [],
+      "kept_files": [
+        "step000037.json",
+        "step000037.pt",
+        "step000037_input_stats_rank0.pt",
+        "step000038_weights.pt",
+        "step000183.json",
+        "step000183.pt",
+        "step000183_input_stats_rank0.pt",
+        "step000184_weights.pt",
+        "step000330.json",
+        "step000330.pt",
+        "step000330_input_stats_rank0.pt",
+        "step000331_weights.pt"
+      ],
+      "input_stat_sidecars": [
+        {
+          "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/SPD_b4M_lr0.01_mom0.9_s260926_l40s/scientific/kept/step000037_input_stats_rank0.pt",
+          "bytes": 176538717,
+          "sha256": "bba485419431bec2993846a32c663bc9eac00e7f4cd0c414f8b7a5918061094a",
+          "modules": 48,
+          "fields": [
+            "input_cov",
+            "input_cov_mean",
+            "input_cov_weight",
+            "input_mean",
+            "input_sq",
+            "input_weight"
+          ]
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/SPD_b4M_lr0.01_mom0.9_s260926_l40s/scientific/kept/step000183_input_stats_rank0.pt",
+          "bytes": 176538717,
+          "sha256": "c30a1f342deb83cfdd8715ddb16fef2815fccb08580c62c244ae851dd09bede8",
+          "modules": 48,
+          "fields": [
+            "input_cov",
+            "input_cov_mean",
+            "input_cov_weight",
+            "input_mean",
+            "input_sq",
+            "input_weight"
+          ]
+        },
+        {
+          "path": "/share/data/dl-theory/amin/projects/explore_muon/logs/muon_spectra/soaudit_seed4m_20260927/SPD_b4M_lr0.01_mom0.9_s260926_l40s/scientific/kept/step000330_input_stats_rank0.pt",
+          "bytes": 176538717,
+          "sha256": "89c2cfbbc65f68e60cf0f487cb6cdd35e1896842f25ef0c7ec836a356363cc0c",
+          "modules": 48,
+          "fields": [
+            "input_cov",
+            "input_cov_mean",
+            "input_cov_weight",
+            "input_mean",
+            "input_sq",
+            "input_weight"
+          ]
+        }
+      ],
+      "soap_bases_and_second_moments_available": false,
+      "cached_roots_available": false
+    }
+  ],
+  "verdict": "unidentifiable_from_these_saved_reference_states",
+  "directional_statistics_calculated": false,
+  "model_inference": false,
+  "new_training": false,
+  "test_access": false,
+  "decision": "Stop this stored-state operator comparison; do not reconstruct omitted state or substitute endpoint anisotropy plots.",
+  "loader_notes": [
+    "Default weights-only loader rejected TorchVersion metadata.",
+    "Allowing only TorchVersion for reference archives still rejected NumPy RNG-state reconstruction.",
+    "Final read-only memory-mapped loader used weights_only=True with only known TorchVersion/NumPy ndarray/dtype/uint32 metadata globals allowed."
+  ],
+  "limits": [
+    "Tiny states follow the next SOAP QR refresh; even complete stored-state maps would be counterfactual, not exact last applied updates.",
+    "Final states follow cooldown and are optimizer-adapted.",
+    "Stored EMAs do not identify gradient-noise scale."
+  ]
+}

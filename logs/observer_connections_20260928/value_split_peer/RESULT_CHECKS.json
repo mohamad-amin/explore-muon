@@ -1,0 +1,120 @@
+{
+  "inputs_sha256": {
+    "result.json": "86b3d1083786ab8080d0e3b24c85d79d798d1db167616ddceb838a8873c97602",
+    "analysis.json": "d6cec7526d1b46d021e98da06113e6734d0b4ab82fd26cd0871f25ed6c6cdf48"
+  },
+  "methods": {
+    "Muon": {
+      "n": 8,
+      "qualification": {
+        "jvp_additivity_relative_error": 4.4103982240663365e-07,
+        "direct_weight_diagonal_relative_error": {
+          "0.5": 2.414482288054085e-07,
+          "1.0": 2.4251364737113544e-07
+        },
+        "central_difference_relative_error": {
+          "constant": 0.0008931892314797206,
+          "centered": 0.0010158218891555737
+        },
+        "reverse_slopes": [
+          -0.00027092505479231477,
+          -0.00024349987506866455
+        ],
+        "jvp_slopes": [
+          -0.0002710586623576389,
+          -0.00024364741662909553
+        ],
+        "slope_absolute_errors": [
+          1.336075653241486e-07,
+          1.4754156043097783e-07
+        ],
+        "seconds": 11.006834268569946
+      },
+      "cross_gn_positive_count": 8,
+      "finite_interaction_positive_count": 8,
+      "finite_interaction_over_G12_range": [
+        0.9202427204446177,
+        1.1277647844439125
+      ],
+      "finite_interaction_over_G12_pooled": 1.0627034812697282,
+      "interaction_prediction_abs_error_max": 0.00010226177870220599,
+      "mean_actual_minus_gn_prediction": {
+        "constant": 3.106750577007264e-05,
+        "centered": 2.197679386243321e-05,
+        "combined": 9.02179013412011e-05,
+        "half_combined": 2.331145091194123e-05
+      },
+      "max_absolute_actual_minus_gn_prediction": {
+        "constant": 7.279582579822598e-05,
+        "centered": 0.00011956089261819063,
+        "combined": 0.0002888083928311233,
+        "half_combined": 7.227883191598082e-05
+      },
+      "constant_gain_lost_to_interaction_pooled": 0.8303220738413197,
+      "gn_cross_fraction": 0.3597981643310238,
+      "coupling_vs_block_diagonal": 1.5620073924890487,
+      "aggregation_effect_error": {
+        "constant": 0.0,
+        "centered": 0.0,
+        "combined": 0.0,
+        "half_combined": 0.0
+      }
+    },
+    "PD": {
+      "n": 8,
+      "qualification": {
+        "jvp_additivity_relative_error": 5.586226676181511e-07,
+        "direct_weight_diagonal_relative_error": {
+          "0.5": 3.3243798428740566e-07,
+          "1.0": 3.326513268078741e-07
+        },
+        "central_difference_relative_error": {
+          "constant": 0.0026146530429093746,
+          "centered": 0.0016425230371225658
+        },
+        "reverse_slopes": [
+          -0.0011341592762619257,
+          -0.0034555834718048573
+        ],
+        "jvp_slopes": [
+          -0.0011341227176704608,
+          -0.0034555871418866357
+        ],
+        "slope_absolute_errors": [
+          3.655859146488305e-08,
+          3.6700817784146578e-09
+        ],
+        "seconds": 9.513997793197632
+      },
+      "cross_gn_positive_count": 8,
+      "finite_interaction_positive_count": 8,
+      "finite_interaction_over_G12_range": [
+        0.8439111122758989,
+        1.1459298736908095
+      ],
+      "finite_interaction_over_G12_pooled": 1.017970708578995,
+      "interaction_prediction_abs_error_max": 4.09226125630787e-05,
+      "mean_actual_minus_gn_prediction": {
+        "constant": 2.752483136930592e-06,
+        "centered": 6.064091189723566e-06,
+        "combined": 1.310545733021213e-05,
+        "half_combined": 2.7373917484761515e-06
+      },
+      "max_absolute_actual_minus_gn_prediction": {
+        "constant": 1.5938404138844198e-05,
+        "centered": 7.063152623243679e-05,
+        "combined": 0.00010054026170644827,
+        "half_combined": 2.4148120167871083e-05
+      },
+      "constant_gain_lost_to_interaction_pooled": 0.79609375,
+      "gn_cross_fraction": 0.33105073949715946,
+      "coupling_vs_block_diagonal": 1.494881688408345,
+      "aggregation_effect_error": {
+        "constant": 0.0,
+        "centered": 0.0,
+        "combined": 0.0,
+        "half_combined": 0.0
+      }
+    }
+  }
+}

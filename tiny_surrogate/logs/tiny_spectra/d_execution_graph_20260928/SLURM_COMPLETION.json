@@ -1,0 +1,8 @@
+{
+  "elapsed": "00:00:15",
+  "exit_code": "1:0",
+  "job_id": "2627177",
+  "node": "g4",
+  "source": "sacct; batch failed, extern complete",
+  "state": "FAILED"
+}

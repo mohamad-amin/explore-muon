@@ -1,0 +1,1701 @@
+[
+  {
+    "checks": {
+      "corpus_splits": {
+        "mismatch": false,
+        "missing": [
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928"
+        ],
+        "values": {
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/adamw_b8192_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b2048_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b32768_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b8192_lr0.064_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b2048_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b32768_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.002_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.004_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.8_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.8_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.7_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.8_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.95_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.7_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.8_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.95_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.7_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.8_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.95_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.7_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.8_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.95_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/adamw_b8192_lr0.004_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/muon_b8192_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/pd_b8192_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/spd_b8192_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/ts_b8192_lr0.032_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.0005_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.001_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.002_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.004_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.004_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.004_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.004_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.008_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928": {
+            "train": {
+              "characters": 1003854,
+              "end": 1003854,
+              "start": 0,
+              "token_ids_sha256": "0f4025c3c124bb920bb39e98f886c47c440860813f0768beb379a7c64f29a0db",
+              "utf8_sha256": "a9e24e23a1ec77744dad26844bfd5a09b6e041954e1eef0000e7f24cba6db735"
+            },
+            "val": {
+              "characters": 111540,
+              "end": 1115394,
+              "start": 1003854,
+              "token_ids_sha256": "370f8961a8d4fb30a33bb76b78e231454b6a08a4eedc9935e7d5aa19a5a9c8ac",
+              "utf8_sha256": "c54f3753a4e6e3c3d1759212815a7caf826e68a33021b25312984400bed40a1f"
+            }
+          }
+        }
+      },
+      "execution_sources": {
+        "mismatch": false,
+        "missing": [],
+        "values": {
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/adamw_b8192_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b2048_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b32768_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b8192_lr0.064_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b2048_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b32768_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.002_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.004_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.7_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.8_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.95_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/adamw_b8192_lr0.004_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/muon_b8192_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/pd_b8192_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/spd_b8192_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/ts_b8192_lr0.032_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.0005_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.001_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.002_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.004_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.004_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.004_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.004_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.008_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          },
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928": {
+            "research/adamw_spectra/data_norm_muon.py": "0adb641b496d479e6f7df23b9a2b5b00b78a63ff80408aa93997b1d46e59cdc2",
+            "research/adamw_spectra/model.py": "034c0f37a986b994bb78078d4f9002e21b9c5737566f8fb05d9e56ce84168b4f",
+            "research/adamw_spectra/muon.py": "9178cd3b3d0b132067282952a9fc4faf151d8f382bd95c170248b2014f459f1d",
+            "research/tiny_spectra/data.py": "f2b6588bd54c36b1cf5c144ed2e23dcf65ddce28e4ad3d03c8c4bb54ecd6364b",
+            "research/tiny_spectra/model.py": "031cb0eab75a2de786cd7b9057238244287c8c3c152bdc7905013685cdfb2a83",
+            "research/tiny_spectra/optim.py": "d1c75da39a326e3d5c0cd062b713c540f0f64dd65961a3f4c1758600ed5d72e0",
+            "research/tiny_spectra/train.py": "2ce155955cceda02d9d7115019f672c1ec671669c4bc8f6f3b629c60bed818ec"
+          }
+        }
+      },
+      "initial_parameter_sha256": {
+        "mismatch": false,
+        "missing": [
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928"
+        ],
+        "values": {
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/adamw_b8192_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b2048_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b32768_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b8192_lr0.064_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b2048_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b32768_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.002_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.004_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.8_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.8_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.7_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.8_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.95_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.7_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.8_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.95_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.7_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.8_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.95_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.7_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.8_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.95_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/adamw_b8192_lr0.004_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/muon_b8192_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/pd_b8192_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/spd_b8192_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/ts_b8192_lr0.032_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.0005_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.001_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.002_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.004_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.004_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.004_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.004_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.008_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928": "23ad6f10a515a6ecd90b9bc59ed74ec28f2e23a7885e67da8dee7f9798a7325e"
+        }
+      },
+      "train_window_sha256": {
+        "mismatch": false,
+        "missing": [
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928"
+        ],
+        "values": {
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/adamw_b8192_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b2048_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b32768_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b8192_lr0.064_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b2048_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b32768_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.002_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.004_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.8_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.8_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.7_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.8_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.95_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.7_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.8_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.95_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.7_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.8_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.95_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.7_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.8_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.95_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/adamw_b8192_lr0.004_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/muon_b8192_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/pd_b8192_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/spd_b8192_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/ts_b8192_lr0.032_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.0005_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.001_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.002_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.004_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.004_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.004_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.004_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.008_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928": "e940b6fd6cab34ef12679019f69e9734142b328e416d2bb3d8f9cb59b0028538"
+        }
+      },
+      "validation_bank_sha256": {
+        "mismatch": false,
+        "missing": [
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928"
+        ],
+        "values": {
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/adamw_b8192_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b2048_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b32768_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/muon_b8192_lr0.064_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b2048_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_batchprobe_20260928/runs/spd_b32768_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.002_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.004_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/adamw_b32768_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.8_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.016_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.8_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b2048_lr0.032_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.7_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.8_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.032_m0.95_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.7_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.8_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.95_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/muon_b32768_lr0.064_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/pd_b32768_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.008_m0.9_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.7_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.8_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b2048_lr0.016_m0.95_s20260928": null,
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.7_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.8_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.016_m0.95_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.7_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.8_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.95_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/spd_b32768_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_dynamics_20260928/runs/ts_b32768_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/adamw_b8192_lr0.004_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/muon_b8192_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/pd_b8192_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/spd_b8192_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_edges_20260928/runs/ts_b8192_lr0.032_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.0005_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.001_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/adamw_b8192_lr0.002_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.004_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/muon_b8192_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.004_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/pd_b8192_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.004_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/spd_b8192_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.004_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.008_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646",
+          "/share/data/dl-theory/amin/projects/explore_muon/logs/tiny_spectra/shakespeare_screen_20260928/runs/ts_b8192_lr0.016_m0.9_s20260928": "dafcc6b6cefc8050250ec2870edbf65a176fe16b8e27c60457c30e59566a6646"
+        }
+      }
+    },
+    "family": "family_00",
+    "recipe": {
+      "alpha": 0.25,
+      "aux_lr": 0.002,
+      "cooldown_fraction": 0.1,
+      "cov_ema": 0.9,
+      "cov_stride": 4,
+      "cpu_threads": 2,
+      "data_path": "/share/data/dl-theory/amin/projects/explore_muon/data/tiny_shakespeare/input.txt",
+      "data_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+      "decay": 0.01,
+      "device": "cuda",
+      "grad_clip": 1.0,
+      "microbatch_sequences": 32,
+      "n_embd": 128,
+      "n_head": 4,
+      "n_layer": 4,
+      "out_beta": 0.25,
+      "out_ema": 0.8,
+      "out_sequences": 16,
+      "precision": "bf16",
+      "root_refresh": 5,
+      "seed": 20260928,
+      "seq_len": 128,
+      "soap_beta2": 0.9,
+      "total_tokens": 4194304,
+      "validation_tokens": 32768,
+      "warmup_fraction": 0.034
+    }
+  }
+]

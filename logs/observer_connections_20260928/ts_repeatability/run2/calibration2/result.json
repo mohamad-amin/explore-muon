@@ -1,0 +1,5037 @@
+{
+  "records": [
+    {
+      "matrix": "block01.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.3571217907369521,
+      "whitened_delta_relative_to_CD": 1.0427288645980497,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12369650282216256,
+      "whitened_delta_bottom_block_share": 0.6804919736441509,
+      "reference_min_eigenvalue_over_mean": 0.05247867700798093,
+      "reference_max_eigenvalue_over_mean": 21.672550438327566,
+      "reference_condition": 412.9782165627311,
+      "stages": {
+        "entry": {
+          "xx": 512.0025930042125,
+          "yy": 512.0026562701584,
+          "xy": 480.8301473564665,
+          "cosine": 0.9391165674144593,
+          "relative_distance": 0.3489511035864298
+        },
+        "polar": {
+          "xx": 512.0007452572443,
+          "yy": 512.0015343682153,
+          "xy": 499.5018032162035,
+          "cosine": 0.9755872875577,
+          "relative_distance": 0.22096484451330034
+        },
+        "final": {
+          "xx": 512.0013320091621,
+          "yy": 512.0001445525155,
+          "xy": 474.63258385988786,
+          "cosine": 0.927015428637654,
+          "relative_distance": 0.38205886124630034
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013320091621,
+        "yy": 512.0014716620013,
+        "xy": 499.30408123890714,
+        "cosine": 0.97520061360936,
+        "relative_distance": 0.22270783449521328
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013320091621,
+        "yy": 512.0009068079164,
+        "xy": 492.42470550373514,
+        "cosine": 0.9617649001873741,
+        "relative_distance": 0.27653239931760526
+      }
+    },
+    {
+      "matrix": "block01.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.8154727105408021,
+      "whitened_delta_relative_to_CD": 2.4323482606804294,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.11921825618299156,
+      "whitened_delta_bottom_block_share": 0.7204533995671121,
+      "reference_min_eigenvalue_over_mean": 0.05247867700798093,
+      "reference_max_eigenvalue_over_mean": 21.672550438327566,
+      "reference_condition": 412.9782165627311,
+      "stages": {
+        "entry": {
+          "xx": 512.0025930042125,
+          "yy": 512.0020978779897,
+          "xy": 445.3182137287135,
+          "cosine": 0.8697581518793909,
+          "relative_distance": 0.5103759107682686
+        },
+        "polar": {
+          "xx": 512.0007452572443,
+          "yy": 512.0013639506271,
+          "xy": 485.7490640973533,
+          "cosine": 0.9487266866534069,
+          "relative_distance": 0.3202291189935285
+        },
+        "final": {
+          "xx": 512.0013320091621,
+          "yy": 512.00120220484,
+          "xy": 442.5706725169931,
+          "cosine": 0.8643937055423452,
+          "relative_distance": 0.5207807163633785
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013320091621,
+        "yy": 512.0018115876783,
+        "xy": 486.10420625544725,
+        "cosine": 0.9494193632024325,
+        "relative_distance": 0.31805867536184046
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013320091621,
+        "yy": 512.0017277691866,
+        "xy": 476.9549752645636,
+        "cosine": 0.931549902532203,
+        "relative_distance": 0.37000033492604417
+      }
+    },
+    {
+      "matrix": "block01.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.8296073623072623,
+      "whitened_delta_relative_to_CD": 1.567539080005986,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1462355793834043,
+      "whitened_delta_bottom_block_share": 0.6705758300666237,
+      "reference_min_eigenvalue_over_mean": 0.07144321278464112,
+      "reference_max_eigenvalue_over_mean": 17.74969827430009,
+      "reference_condition": 248.44484986705308,
+      "stages": {
+        "entry": {
+          "xx": 512.0014639005032,
+          "yy": 512.0022150544528,
+          "xy": 448.49813805362,
+          "cosine": 0.8759697787637915,
+          "relative_distance": 0.4980568485994371
+        },
+        "polar": {
+          "xx": 512.0014442834881,
+          "yy": 512.0019668812487,
+          "xy": 487.6740012388407,
+          "cosine": 0.9524851107365101,
+          "relative_distance": 0.30826908217575033
+        },
+        "final": {
+          "xx": 512.0016361114231,
+          "yy": 512.0006799598589,
+          "xy": 442.8688943706385,
+          "cosine": 0.8649763529245825,
+          "relative_distance": 0.5196605064827984
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016361114231,
+        "yy": 512.0008987402067,
+        "xy": 488.0501796684217,
+        "cosine": 0.9532206475236178,
+        "relative_distance": 0.30587356470095967
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016361114231,
+        "yy": 512.0014440904804,
+        "xy": 474.26844777019693,
+        "cosine": 0.9263027757234742,
+        "relative_distance": 0.3839198105251915
+      }
+    },
+    {
+      "matrix": "block01.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.9693552997773609,
+      "whitened_delta_relative_to_CD": 1.9301759608051752,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.16428322956247168,
+      "whitened_delta_bottom_block_share": 0.6841119105154013,
+      "reference_min_eigenvalue_over_mean": 0.07144321278464112,
+      "reference_max_eigenvalue_over_mean": 17.74969827430009,
+      "reference_condition": 248.44484986705308,
+      "stages": {
+        "entry": {
+          "xx": 512.0014639005032,
+          "yy": 512.0021660482505,
+          "xy": 434.64856171253723,
+          "cosine": 0.848919962782537,
+          "relative_distance": 0.5496910783551291
+        },
+        "polar": {
+          "xx": 512.0014442834881,
+          "yy": 512.0010235984284,
+          "xy": 483.87277254625207,
+          "cosine": 0.9450617312420208,
+          "relative_distance": 0.331476231992867
+        },
+        "final": {
+          "xx": 512.0016361114231,
+          "yy": 512.0008674646788,
+          "xy": 433.6543711483039,
+          "cosine": 0.8469791228712513,
+          "relative_distance": 0.5532101992318121
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016361114231,
+        "yy": 512.0020634615367,
+        "xy": 484.0714890577568,
+        "cosine": 0.9454487112881942,
+        "relative_distance": 0.33030686180558855
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016361114231,
+        "yy": 512.001322609914,
+        "xy": 469.5745259605255,
+        "cosine": 0.9171350960682785,
+        "relative_distance": 0.4070991981383379
+      }
+    },
+    {
+      "matrix": "block01.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.4168137155182585,
+      "whitened_delta_relative_to_CD": 7.708445756948694,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.09662967971671131,
+      "whitened_delta_bottom_block_share": 0.7315737911521226,
+      "reference_min_eigenvalue_over_mean": 0.016864434323681197,
+      "reference_max_eigenvalue_over_mean": 23.177712598068958,
+      "reference_condition": 1374.354582739997,
+      "stages": {
+        "entry": {
+          "xx": 512.002548207314,
+          "yy": 512.0027711016767,
+          "xy": 380.70744828447425,
+          "cosine": 0.743565372377926,
+          "relative_distance": 0.7161489837177878
+        },
+        "polar": {
+          "xx": 512.0013448677747,
+          "yy": 512.0010133484277,
+          "xy": 455.7636565304191,
+          "cosine": 0.8901613416679565,
+          "relative_distance": 0.4686973922948329
+        },
+        "final": {
+          "xx": 512.0013238126063,
+          "yy": 512.0025602947572,
+          "xy": 390.7040940102941,
+          "cosine": 0.763091039153939,
+          "relative_distance": 0.6883447492556988
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013238126063,
+        "yy": 512.001693403753,
+        "xy": 457.3733425708775,
+        "cosine": 0.8933046775862574,
+        "relative_distance": 0.4619423360618111
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013238126063,
+        "yy": 512.0021329375251,
+        "xy": 467.5852170746549,
+        "cosine": 0.9132492942138516,
+        "relative_distance": 0.4165351709838807
+      }
+    },
+    {
+      "matrix": "block01.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.4503936519651615,
+      "whitened_delta_relative_to_CD": 7.491441378244181,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.09034373333482391,
+      "whitened_delta_bottom_block_share": 0.7282822091884087,
+      "reference_min_eigenvalue_over_mean": 0.016864434323681197,
+      "reference_max_eigenvalue_over_mean": 23.177712598068958,
+      "reference_condition": 1374.354582739997,
+      "stages": {
+        "entry": {
+          "xx": 512.002548207314,
+          "yy": 512.0019865578545,
+          "xy": 367.9717758299014,
+          "cosine": 0.7186916919549433,
+          "relative_distance": 0.7500775343287123
+        },
+        "polar": {
+          "xx": 512.0013448677747,
+          "yy": 512.0018340312449,
+          "xy": 455.00277523908414,
+          "cosine": 0.8886745365934169,
+          "relative_distance": 0.4718591242872685
+        },
+        "final": {
+          "xx": 512.0013238126063,
+          "yy": 512.001389006086,
+          "xy": 388.1954642042158,
+          "cosine": 0.7581922573928759,
+          "relative_distance": 0.6954247018935961
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013238126063,
+        "yy": 512.0012689485441,
+        "xy": 456.69146036451514,
+        "cosine": 0.8919732500541423,
+        "relative_distance": 0.4648155422487437
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013238126063,
+        "yy": 512.0015204313502,
+        "xy": 467.32842386656193,
+        "cosine": 0.9127482926311778,
+        "relative_distance": 0.4177360988041114
+      }
+    },
+    {
+      "matrix": "block01.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.2951543623115171,
+      "whitened_delta_relative_to_CD": 0.6889813383016014,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.06273943979300214,
+      "whitened_delta_bottom_block_share": 0.61459406434156,
+      "reference_min_eigenvalue_over_mean": 0.03753325093305995,
+      "reference_max_eigenvalue_over_mean": 15.186384832429763,
+      "reference_condition": 404.6114966037574,
+      "stages": {
+        "entry": {
+          "xx": 512.002526558939,
+          "yy": 512.000810274151,
+          "xy": 489.33788806941857,
+          "cosine": 0.9557349482541124,
+          "relative_distance": 0.2975398378595434
+        },
+        "polar": {
+          "xx": 512.0006296538851,
+          "yy": 512.0016698855118,
+          "xy": 501.7746094639464,
+          "cosine": 0.9800263333195772,
+          "relative_distance": 0.1998683915539262
+        },
+        "final": {
+          "xx": 512.0013693468304,
+          "yy": 512.0024624352252,
+          "xy": 483.22699029533845,
+          "cosine": 0.9437991837484875,
+          "relative_distance": 0.33526370589291815
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013693468304,
+        "yy": 512.0020050895971,
+        "xy": 502.0427982020674,
+        "cosine": 0.9805491089879843,
+        "relative_distance": 0.19723540801850487
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013693468304,
+        "yy": 512.0017913676234,
+        "xy": 497.6572738296129,
+        "cosine": 0.9719838627889321,
+        "relative_distance": 0.23671142244260765
+      }
+    },
+    {
+      "matrix": "block01.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.43204790120957864,
+      "whitened_delta_relative_to_CD": 0.8690329636372726,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.04524703328096145,
+      "whitened_delta_bottom_block_share": 0.5665809757778443,
+      "reference_min_eigenvalue_over_mean": 0.03753325093305995,
+      "reference_max_eigenvalue_over_mean": 15.186384832429763,
+      "reference_condition": 404.6114966037574,
+      "stages": {
+        "entry": {
+          "xx": 512.002526558939,
+          "yy": 512.0019243860238,
+          "xy": 481.3058874319981,
+          "cosine": 0.940046475360389,
+          "relative_distance": 0.3462758708998033
+        },
+        "polar": {
+          "xx": 512.0006296538851,
+          "yy": 512.0017964542772,
+          "xy": 497.5735355552205,
+          "cosine": 0.9718210091486371,
+          "relative_distance": 0.2373984960382189
+        },
+        "final": {
+          "xx": 512.0013693468304,
+          "yy": 512.0026813432872,
+          "xy": 475.311431886463,
+          "cosine": 0.9283389681252171,
+          "relative_distance": 0.3785792484823978
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013693468304,
+        "yy": 512.0010885062298,
+        "xy": 498.6238092047297,
+        "cosine": 0.9738722898188565,
+        "relative_distance": 0.22859441382262696
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013693468304,
+        "yy": 512.001467001843,
+        "xy": 494.5266582053664,
+        "cosine": 0.9658697039721521,
+        "relative_distance": 0.26126729333279036
+      }
+    },
+    {
+      "matrix": "block01.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.4029974149037159,
+      "whitened_delta_relative_to_CD": 1.9922280592353396,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.028028406075266306,
+      "whitened_delta_bottom_block_share": 0.6969335809406696,
+      "reference_min_eigenvalue_over_mean": 0.03008766317778278,
+      "reference_max_eigenvalue_over_mean": 49.188060425247464,
+      "reference_condition": 1634.8248826970628,
+      "stages": {
+        "entry": {
+          "xx": 2048.0557267874065,
+          "yy": 2048.0550927884433,
+          "xy": 1576.0490889378405,
+          "cosine": 0.7695343990234417,
+          "relative_distance": 0.6789190898847115
+        },
+        "polar": {
+          "xx": 2048.052427234362,
+          "yy": 2048.0390199588383,
+          "xy": 1722.2520608501645,
+          "cosine": 0.8409246146296583,
+          "relative_distance": 0.5640476304231409
+        },
+        "final": {
+          "xx": 2048.038793198992,
+          "yy": 2048.041979126647,
+          "xy": 1212.3521911521466,
+          "cosine": 0.5919571700555962,
+          "relative_distance": 0.9033749468743832
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.038793198992,
+        "yy": 2048.0613935346955,
+        "xy": 1744.1515756787705,
+        "cosine": 0.8516156813518473,
+        "relative_distance": 0.5447662569943911
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.038793198992,
+        "yy": 2048.05572456125,
+        "xy": 1754.460279669824,
+        "cosine": 0.856650290698935,
+        "relative_distance": 0.5354443049511325
+      }
+    },
+    {
+      "matrix": "block01.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.6071079003445367,
+      "whitened_delta_relative_to_CD": 2.3509057497577985,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.01686169514444107,
+      "whitened_delta_bottom_block_share": 0.6674334131734255,
+      "reference_min_eigenvalue_over_mean": 0.03008766317778278,
+      "reference_max_eigenvalue_over_mean": 49.188060425247464,
+      "reference_condition": 1634.8248826970628,
+      "stages": {
+        "entry": {
+          "xx": 2048.0557267874065,
+          "yy": 2048.052616840284,
+          "xy": 1502.0872951667911,
+          "cosine": 0.7334216622975899,
+          "relative_distance": 0.7301755067169511
+        },
+        "polar": {
+          "xx": 2048.052427234362,
+          "yy": 2048.044238960317,
+          "xy": 1669.2753986244547,
+          "cosine": 0.8150566427811217,
+          "relative_distance": 0.6081825178537962
+        },
+        "final": {
+          "xx": 2048.038793198992,
+          "yy": 2048.049933111792,
+          "xy": 1132.8009211872154,
+          "cosine": 0.5531134684241482,
+          "relative_distance": 0.9453970033319676
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.038793198992,
+        "yy": 2048.062655589,
+        "xy": 1696.705873851186,
+        "cosine": 0.8284491461421304,
+        "relative_distance": 0.5857505497570216
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.038793198992,
+        "yy": 2048.0559521959844,
+        "xy": 1731.9102381732248,
+        "cosine": 0.8456397353286403,
+        "relative_distance": 0.5556274134954562
+      }
+    },
+    {
+      "matrix": "block01.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.2471195099621011,
+      "whitened_delta_relative_to_CD": 0.8042521175501541,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.08854932283197285,
+      "whitened_delta_bottom_block_share": 0.6860133411121613,
+      "reference_min_eigenvalue_over_mean": 0.05572519658823737,
+      "reference_max_eigenvalue_over_mean": 26.165452205363362,
+      "reference_condition": 469.5443678504032,
+      "stages": {
+        "entry": {
+          "xx": 512.011765748101,
+          "yy": 512.0105799950727,
+          "xy": 485.95420380957745,
+          "cosine": 0.94910859285444,
+          "relative_distance": 0.31903400513812874
+        },
+        "polar": {
+          "xx": 512.0097970573216,
+          "yy": 512.0111107434859,
+          "xy": 506.25664245396365,
+          "cosine": 0.9887623164679705,
+          "relative_distance": 0.1499179638959501
+        },
+        "final": {
+          "xx": 512.0148849181371,
+          "yy": 512.0142158296031,
+          "xy": 485.9721098999511,
+          "cosine": 0.9491373039012285,
+          "relative_distance": 0.31894407931770846
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0148849181371,
+        "yy": 512.0142379055893,
+        "xy": 506.29296281245433,
+        "cosine": 0.9888253205464884,
+        "relative_distance": 0.14949697249919938
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0148849181371,
+        "yy": 512.0135334842992,
+        "xy": 493.7841357654304,
+        "cosine": 0.9643953759334178,
+        "relative_distance": 0.2668504340608926
+      }
+    },
+    {
+      "matrix": "block01.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.41393922904631353,
+      "whitened_delta_relative_to_CD": 1.044724321331918,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.05105539689976899,
+      "whitened_delta_bottom_block_share": 0.6294633939450931,
+      "reference_min_eigenvalue_over_mean": 0.05572519658823737,
+      "reference_max_eigenvalue_over_mean": 26.165452205363362,
+      "reference_condition": 469.5443678504032,
+      "stages": {
+        "entry": {
+          "xx": 512.011765748101,
+          "yy": 512.0115851035196,
+          "xy": 477.94435073447954,
+          "cosine": 0.9334637737254888,
+          "relative_distance": 0.3647909388597573
+        },
+        "polar": {
+          "xx": 512.0097970573216,
+          "yy": 512.0117436220584,
+          "xy": 503.5320909335213,
+          "cosine": 0.9834404276307824,
+          "relative_distance": 0.1819868338599293
+        },
+        "final": {
+          "xx": 512.0148849181371,
+          "yy": 512.014007388195,
+          "xy": 478.70149700780723,
+          "cosine": 0.9349374819490588,
+          "relative_distance": 0.36072832518876485
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0148849181371,
+        "yy": 512.0156909554099,
+        "xy": 504.2171126979548,
+        "cosine": 0.9847696437540251,
+        "relative_distance": 0.1745300446023102
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0148849181371,
+        "yy": 512.0153323419665,
+        "xy": 489.3198943109251,
+        "cosine": 0.9556747175297164,
+        "relative_distance": 0.29774251237330057
+      }
+    },
+    {
+      "matrix": "block02.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.32582012036272434,
+      "whitened_delta_relative_to_CD": 1.213173628053085,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12209349434687754,
+      "whitened_delta_bottom_block_share": 0.7098856771212287,
+      "reference_min_eigenvalue_over_mean": 0.05405660404630558,
+      "reference_max_eigenvalue_over_mean": 38.06502975866202,
+      "reference_condition": 704.1698314243904,
+      "stages": {
+        "entry": {
+          "xx": 512.0007537379861,
+          "yy": 512.0013147818249,
+          "xy": 483.26069822298575,
+          "cosine": 0.9438666445695931,
+          "relative_distance": 0.33506234102224297
+        },
+        "polar": {
+          "xx": 512.0020130353771,
+          "yy": 512.0018958619539,
+          "xy": 501.41534942609456,
+          "cosine": 0.9793231159948059,
+          "relative_distance": 0.20335624720776269
+        },
+        "final": {
+          "xx": 512.001787543516,
+          "yy": 512.0010604512559,
+          "xy": 479.7164723245071,
+          "cosine": 0.9369436291393541,
+          "relative_distance": 0.3551234323099417
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001787543516,
+        "yy": 512.0019863191919,
+        "xy": 501.86369907406214,
+        "cosine": 0.9801989248163814,
+        "relative_distance": 0.1990029096638865
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001787543516,
+        "yy": 512.0014225806756,
+        "xy": 492.23434033800726,
+        "cosine": 0.9613921821169684,
+        "relative_distance": 0.27787696602261236
+      }
+    },
+    {
+      "matrix": "block02.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.1400405335947297,
+      "whitened_delta_relative_to_CD": 3.0513159308233724,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.06008846988291057,
+      "whitened_delta_bottom_block_share": 0.6517893089178144,
+      "reference_min_eigenvalue_over_mean": 0.05405660404630558,
+      "reference_max_eigenvalue_over_mean": 38.06502975866202,
+      "reference_condition": 704.1698314243904,
+      "stages": {
+        "entry": {
+          "xx": 512.0007537379861,
+          "yy": 512.0014608490269,
+          "xy": 429.08994802293716,
+          "cosine": 0.8380644922649789,
+          "relative_distance": 0.5690968626827921
+        },
+        "polar": {
+          "xx": 512.0020130353771,
+          "yy": 512.0014037633371,
+          "xy": 480.84550191466303,
+          "cosine": 0.9391482372548894,
+          "relative_distance": 0.34886021997096
+        },
+        "final": {
+          "xx": 512.001787543516,
+          "yy": 512.0023588653692,
+          "xy": 431.39078882091883,
+          "cosine": 0.842556722712198,
+          "relative_distance": 0.5611476902388355
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001787543516,
+        "yy": 512.0029594075515,
+        "xy": 482.34441201433253,
+        "cosine": 0.9420745625463344,
+        "relative_distance": 0.34036892849916023
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001787543516,
+        "yy": 512.0013936495993,
+        "xy": 467.1286426922794,
+        "cosine": 0.9123577958967665,
+        "relative_distance": 0.4186697275676633
+      }
+    },
+    {
+      "matrix": "block02.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.8974400100939507,
+      "whitened_delta_relative_to_CD": 3.1042734648802695,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1798180900144921,
+      "whitened_delta_bottom_block_share": 0.7444320318740826,
+      "reference_min_eigenvalue_over_mean": 0.056717625650243936,
+      "reference_max_eigenvalue_over_mean": 18.195652254196187,
+      "reference_condition": 320.81124774866043,
+      "stages": {
+        "entry": {
+          "xx": 512.0022359676263,
+          "yy": 512.0011490768755,
+          "xy": 431.8536993523028,
+          "cosine": 0.8434614683110216,
+          "relative_distance": 0.5595326005472063
+        },
+        "polar": {
+          "xx": 512.0016514878132,
+          "yy": 512.0014071462188,
+          "xy": 478.830390100131,
+          "cosine": 0.9352128122329635,
+          "relative_distance": 0.35996436575841395
+        },
+        "final": {
+          "xx": 512.0016606464706,
+          "yy": 512.0019478583727,
+          "xy": 425.3183180847107,
+          "cosine": 0.8306969126910373,
+          "relative_distance": 0.5818988482460409
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016606464706,
+        "yy": 512.001018342744,
+        "xy": 481.65278300608475,
+        "cosine": 0.9407256306821684,
+        "relative_distance": 0.34430896630295516
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016606464706,
+        "yy": 512.0014609146046,
+        "xy": 460.15453694277056,
+        "cosine": 0.8987365902582047,
+        "relative_distance": 0.4500297545504798
+      }
+    },
+    {
+      "matrix": "block02.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.0821614550150984,
+      "whitened_delta_relative_to_CD": 3.492182340970311,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1608321149641199,
+      "whitened_delta_bottom_block_share": 0.7384600741313996,
+      "reference_min_eigenvalue_over_mean": 0.056717625650243936,
+      "reference_max_eigenvalue_over_mean": 18.195652254196187,
+      "reference_condition": 320.81124774866043,
+      "stages": {
+        "entry": {
+          "xx": 512.0022359676263,
+          "yy": 512.0013858805601,
+          "xy": 382.0466696068037,
+          "cosine": 0.7461822623583955,
+          "relative_distance": 0.7124851253642409
+        },
+        "polar": {
+          "xx": 512.0016514878132,
+          "yy": 512.0007093347284,
+          "xy": 470.70951758697186,
+          "cosine": 0.919352406978961,
+          "relative_distance": 0.4016155346102184
+        },
+        "final": {
+          "xx": 512.0016606464706,
+          "yy": 512.0012697030326,
+          "xy": 409.1965060753044,
+          "cosine": 0.7992096388545902,
+          "relative_distance": 0.6337038495824872
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016606464706,
+        "yy": 512.0010902282335,
+        "xy": 474.14495570132306,
+        "cosine": 0.9260618788306605,
+        "relative_distance": 0.38454669412817927
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016606464706,
+        "yy": 512.0019529124983,
+        "xy": 452.709707070652,
+        "cosine": 0.8841955264147131,
+        "relative_distance": 0.4812577410030315
+      }
+    },
+    {
+      "matrix": "block02.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6487269292811872,
+      "whitened_delta_relative_to_CD": 12.272384173919413,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1282053180757504,
+      "whitened_delta_bottom_block_share": 0.7888451988259384,
+      "reference_min_eigenvalue_over_mean": 0.017844209605765785,
+      "reference_max_eigenvalue_over_mean": 22.048869722963108,
+      "reference_condition": 1235.6316256136513,
+      "stages": {
+        "entry": {
+          "xx": 512.0014515131754,
+          "yy": 512.0012657620797,
+          "xy": 383.10358854393087,
+          "cosine": 0.7482472108342224,
+          "relative_distance": 0.7095812053578918
+        },
+        "polar": {
+          "xx": 512.0008949943207,
+          "yy": 512.001855401033,
+          "xy": 442.75463253138264,
+          "cosine": 0.8647528189951361,
+          "relative_distance": 0.520090968683311
+        },
+        "final": {
+          "xx": 512.0017594611522,
+          "yy": 512.0007564678104,
+          "xy": 364.744365904305,
+          "cosine": 0.7123895893431245,
+          "relative_distance": 0.7584327642552173
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0017594611522,
+        "yy": 512.0014574172715,
+        "xy": 445.95502551888046,
+        "cosine": 0.8710031729750836,
+        "relative_distance": 0.5079306822305011
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0017594611522,
+        "yy": 512.0012043605013,
+        "xy": 452.1109507401344,
+        "cosine": 0.8830266448700302,
+        "relative_distance": 0.4836802491733052
+      }
+    },
+    {
+      "matrix": "block02.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.5646668041114102,
+      "whitened_delta_relative_to_CD": 11.610824182607823,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12349400656879111,
+      "whitened_delta_bottom_block_share": 0.7885180063270613,
+      "reference_min_eigenvalue_over_mean": 0.017844209605765785,
+      "reference_max_eigenvalue_over_mean": 22.048869722963108,
+      "reference_condition": 1235.6316256136513,
+      "stages": {
+        "entry": {
+          "xx": 512.0014515131754,
+          "yy": 512.0019049049071,
+          "xy": 383.1692476937068,
+          "cosine": 0.748374983914219,
+          "relative_distance": 0.7094013356293887
+        },
+        "polar": {
+          "xx": 512.0008949943207,
+          "yy": 512.0016408891709,
+          "xy": 442.90405008210905,
+          "cosine": 0.8650448305776833,
+          "relative_distance": 0.5195291478357414
+        },
+        "final": {
+          "xx": 512.0017594611522,
+          "yy": 512.0006451600751,
+          "xy": 365.8558954551155,
+          "cosine": 0.7145606178349945,
+          "relative_distance": 0.7555647841922534
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0017594611522,
+        "yy": 512.0013029696315,
+        "xy": 446.280168496618,
+        "cosine": 0.8716383473254078,
+        "relative_distance": 0.5066785873750999
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0017594611522,
+        "yy": 512.0022461796216,
+        "xy": 452.1999343215506,
+        "cosine": 0.883199541858503,
+        "relative_distance": 0.4833229017084731
+      }
+    },
+    {
+      "matrix": "block02.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.23233961284795565,
+      "whitened_delta_relative_to_CD": 0.7092374897034579,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.06138776309221685,
+      "whitened_delta_bottom_block_share": 0.6313488172969784,
+      "reference_min_eigenvalue_over_mean": 0.04319321504456079,
+      "reference_max_eigenvalue_over_mean": 28.20129541967171,
+      "reference_condition": 652.9103098849555,
+      "stages": {
+        "entry": {
+          "xx": 512.0003147293456,
+          "yy": 512.00226565991,
+          "xy": 491.2510584836491,
+          "cosine": 0.959472305817434,
+          "relative_distance": 0.28470255143869383
+        },
+        "polar": {
+          "xx": 512.0014907275896,
+          "yy": 512.0022279258667,
+          "xy": 501.1897956318992,
+          "cosine": 0.9788827647834781,
+          "relative_distance": 0.20551034241349256
+        },
+        "final": {
+          "xx": 512.0015719720888,
+          "yy": 512.001841622261,
+          "xy": 479.97032857575186,
+          "cosine": 0.9374389229641859,
+          "relative_distance": 0.3537261469273082
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0015719720888,
+        "yy": 512.0012538194696,
+        "xy": 500.99571356803074,
+        "cosine": 0.9785045528185592,
+        "relative_distance": 0.207342424520216
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0015719720888,
+        "yy": 512.0017686040103,
+        "xy": 497.0828727749026,
+        "cosine": 0.9708618186640984,
+        "relative_distance": 0.24140499966286544
+      }
+    },
+    {
+      "matrix": "block02.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.3842735780475566,
+      "whitened_delta_relative_to_CD": 0.908959713516272,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.034719896910908675,
+      "whitened_delta_bottom_block_share": 0.5827214739467317,
+      "reference_min_eigenvalue_over_mean": 0.04319321504456079,
+      "reference_max_eigenvalue_over_mean": 28.20129541967171,
+      "reference_condition": 652.9103098849555,
+      "stages": {
+        "entry": {
+          "xx": 512.0003147293456,
+          "yy": 512.0016842482225,
+          "xy": 484.6913113534128,
+          "cosine": 0.9466608694861813,
+          "relative_distance": 0.3266166004705912
+        },
+        "polar": {
+          "xx": 512.0014907275896,
+          "yy": 512.0016754334358,
+          "xy": 496.10063851717734,
+          "cosine": 0.9689435636748278,
+          "relative_distance": 0.24922456510959126
+        },
+        "final": {
+          "xx": 512.0015719720888,
+          "yy": 512.0012339144961,
+          "xy": 469.59469231437834,
+          "cosine": 0.9171746202547315,
+          "relative_distance": 0.4070020943481696
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0015719720888,
+        "yy": 512.002439842506,
+        "xy": 496.61595496363555,
+        "cosine": 0.9699492369835183,
+        "relative_distance": 0.24515622972164614
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0015719720888,
+        "yy": 512.0014856753727,
+        "xy": 493.2270340531742,
+        "cosine": 0.9633311743937812,
+        "relative_distance": 0.27080924103877285
+      }
+    },
+    {
+      "matrix": "block02.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.39495160875249036,
+      "whitened_delta_relative_to_CD": 1.9550972957792097,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.02883389961198408,
+      "whitened_delta_bottom_block_share": 0.6991911431711857,
+      "reference_min_eigenvalue_over_mean": 0.029877397447419546,
+      "reference_max_eigenvalue_over_mean": 54.12639269523511,
+      "reference_condition": 1811.6167176371616,
+      "stages": {
+        "entry": {
+          "xx": 2048.051658725197,
+          "yy": 2048.052254254552,
+          "xy": 1587.6501102877055,
+          "cosine": 0.7752001140677954,
+          "relative_distance": 0.6705220631950861
+        },
+        "polar": {
+          "xx": 2048.0389385654544,
+          "yy": 2048.0418129800546,
+          "xy": 1718.9256323667398,
+          "cosine": 0.8393026098025964,
+          "relative_distance": 0.5669171067566898
+        },
+        "final": {
+          "xx": 2048.0553957705984,
+          "yy": 2048.06025137406,
+          "xy": 1200.0437125986055,
+          "cosine": 0.5859423004504188,
+          "relative_distance": 0.9100090003746588
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0553957705984,
+        "yy": 2048.0493117534193,
+        "xy": 1735.6003332775108,
+        "cosine": 0.8474394368343908,
+        "relative_distance": 0.5523772923753519
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0553957705984,
+        "yy": 2048.0535393629743,
+        "xy": 1755.283515606258,
+        "cosine": 0.8570492354589682,
+        "relative_distance": 0.5346974841049486
+      }
+    },
+    {
+      "matrix": "block02.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.6044945034795646,
+      "whitened_delta_relative_to_CD": 2.3099878281758546,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.016872148594268898,
+      "whitened_delta_bottom_block_share": 0.6706717070326504,
+      "reference_min_eigenvalue_over_mean": 0.029877397447419546,
+      "reference_max_eigenvalue_over_mean": 54.12639269523511,
+      "reference_condition": 1811.6167176371616,
+      "stages": {
+        "entry": {
+          "xx": 2048.051658725197,
+          "yy": 2048.0552199499975,
+          "xy": 1510.7355158134596,
+          "cosine": 0.7376445784064347,
+          "relative_distance": 0.7243695875591357
+        },
+        "polar": {
+          "xx": 2048.0389385654544,
+          "yy": 2048.0433170315964,
+          "xy": 1658.009790720852,
+          "cosine": 0.8095588356196842,
+          "relative_distance": 0.6171569783307533
+        },
+        "final": {
+          "xx": 2048.0553957705984,
+          "yy": 2048.053086084001,
+          "xy": 1107.2634642909147,
+          "cosine": 0.540641669621872,
+          "relative_distance": 0.9584968141401603
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0553957705984,
+        "yy": 2048.0478729844203,
+        "xy": 1679.0156386302922,
+        "cosine": 0.8198111856410538,
+        "relative_distance": 0.6003140568590923
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0553957705984,
+        "yy": 2048.0512986233343,
+        "xy": 1727.5852763070234,
+        "cosine": 0.843525525676525,
+        "relative_distance": 0.5594181223554144
+      }
+    },
+    {
+      "matrix": "block02.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.2154399265998212,
+      "whitened_delta_relative_to_CD": 0.765490130206683,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.08558060640842932,
+      "whitened_delta_bottom_block_share": 0.6774357219658084,
+      "reference_min_eigenvalue_over_mean": 0.05503580524729505,
+      "reference_max_eigenvalue_over_mean": 36.44743282920444,
+      "reference_condition": 662.2494695123188,
+      "stages": {
+        "entry": {
+          "xx": 512.0124782190055,
+          "yy": 512.0133827354811,
+          "xy": 489.36043200101074,
+          "cosine": 0.9557579562396452,
+          "relative_distance": 0.2974628811785393
+        },
+        "polar": {
+          "xx": 512.0100118804615,
+          "yy": 512.0114861544494,
+          "xy": 506.68518901769096,
+          "cosine": 0.9895987339924814,
+          "relative_distance": 0.14423093276526597
+        },
+        "final": {
+          "xx": 512.0159372407189,
+          "yy": 512.0149909744414,
+          "xy": 487.3448949307022,
+          "cosine": 0.9518167498716674,
+          "relative_distance": 0.31042939810705383
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0159372407189,
+        "yy": 512.0123140423736,
+        "xy": 506.6784425811555,
+        "cosine": 0.9895790315344645,
+        "relative_distance": 0.14436711260239993
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0159372407189,
+        "yy": 512.0147398577212,
+        "xy": 494.4548862211434,
+        "cosine": 0.9657032690124173,
+        "relative_distance": 0.26190338251217987
+      }
+    },
+    {
+      "matrix": "block02.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.37229590494371484,
+      "whitened_delta_relative_to_CD": 0.9888818288043917,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.04441050339253819,
+      "whitened_delta_bottom_block_share": 0.6228823539689483,
+      "reference_min_eigenvalue_over_mean": 0.05503580524729505,
+      "reference_max_eigenvalue_over_mean": 36.44743282920444,
+      "reference_condition": 662.2494695123188,
+      "stages": {
+        "entry": {
+          "xx": 512.0124782190055,
+          "yy": 512.0140402075415,
+          "xy": 481.93177421181014,
+          "cosine": 0.9412486210862507,
+          "relative_distance": 0.34278701413794826
+        },
+        "polar": {
+          "xx": 512.0100118804615,
+          "yy": 512.0127766552627,
+          "xy": 504.066571781282,
+          "cosine": 0.984483113903933,
+          "relative_distance": 0.17616428692585046
+        },
+        "final": {
+          "xx": 512.0159372407189,
+          "yy": 512.0155366309397,
+          "xy": 480.01988125681316,
+          "cosine": 0.9375100150818423,
+          "relative_distance": 0.3535249933784826
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0159372407189,
+        "yy": 512.0135740629914,
+        "xy": 504.66110771982085,
+        "cosine": 0.9856378202981114,
+        "relative_distance": 0.16948242717544187
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0159372407189,
+        "yy": 512.0151458609931,
+        "xy": 489.6445932874432,
+        "cosine": 0.9563080679240581,
+        "relative_distance": 0.29560750433899896
+      }
+    },
+    {
+      "matrix": "block03.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.31940319510943604,
+      "whitened_delta_relative_to_CD": 1.7205032568952205,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.14638092264211752,
+      "whitened_delta_bottom_block_share": 0.7790931906876772,
+      "reference_min_eigenvalue_over_mean": 0.06014089182370718,
+      "reference_max_eigenvalue_over_mean": 48.144092860619395,
+      "reference_condition": 800.5217648209414,
+      "stages": {
+        "entry": {
+          "xx": 512.0015643775859,
+          "yy": 512.0019943648709,
+          "xy": 486.07690187004664,
+          "cosine": 0.9493656496018894,
+          "relative_distance": 0.31822750245688064
+        },
+        "polar": {
+          "xx": 512.0019119982592,
+          "yy": 512.0015565958938,
+          "xy": 502.17628898016847,
+          "cosine": 0.9808097421186139,
+          "relative_distance": 0.19590942407682607
+        },
+        "final": {
+          "xx": 512.0018322095085,
+          "yy": 512.0018538341957,
+          "xy": 482.2051592881371,
+          "cosine": 0.9418035615695173,
+          "relative_distance": 0.34116400648211015
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0018322095085,
+        "yy": 512.0018676706678,
+        "xy": 502.6953942998631,
+        "cosine": 0.9818233945027469,
+        "relative_distance": 0.1906651836424678
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0018322095085,
+        "yy": 512.0000793874385,
+        "xy": 493.31202273620846,
+        "cosine": 0.963498245755427,
+        "relative_distance": 0.2701913831515888
+      }
+    },
+    {
+      "matrix": "block03.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.0304968975055238,
+      "whitened_delta_relative_to_CD": 3.507527965965789,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.07102679610624313,
+      "whitened_delta_bottom_block_share": 0.7126837916296186,
+      "reference_min_eigenvalue_over_mean": 0.06014089182370718,
+      "reference_max_eigenvalue_over_mean": 48.144092860619395,
+      "reference_condition": 800.5217648209414,
+      "stages": {
+        "entry": {
+          "xx": 512.0015643775859,
+          "yy": 512.0007256295366,
+          "xy": 422.06316866306827,
+          "cosine": 0.824340282794239,
+          "relative_distance": 0.5927218121941835
+        },
+        "polar": {
+          "xx": 512.0019119982592,
+          "yy": 512.001722931871,
+          "xy": 477.7945685503097,
+          "cosine": 0.9331892041241021,
+          "relative_distance": 0.3655428389131402
+        },
+        "final": {
+          "xx": 512.0018322095085,
+          "yy": 512.002561273114,
+          "xy": 426.1811478643204,
+          "cosine": 0.8323814830813239,
+          "relative_distance": 0.5789967810944221
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0018322095085,
+        "yy": 512.0015595886834,
+        "xy": 480.14700592441505,
+        "cosine": 0.9377840147214244,
+        "relative_distance": 0.3527491140026491
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0018322095085,
+        "yy": 512.0018058173285,
+        "xy": 463.54689147476364,
+        "cosine": 0.9053618058779106,
+        "relative_distance": 0.4350590573311401
+      }
+    },
+    {
+      "matrix": "block03.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.7271806122399218,
+      "whitened_delta_relative_to_CD": 4.828265252041212,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.19755109253343284,
+      "whitened_delta_bottom_block_share": 0.8373489143339796,
+      "reference_min_eigenvalue_over_mean": 0.05443920930298031,
+      "reference_max_eigenvalue_over_mean": 32.19996746184985,
+      "reference_condition": 591.4848484047883,
+      "stages": {
+        "entry": {
+          "xx": 512.0020720858427,
+          "yy": 512.0017818991504,
+          "xy": 429.43070742336147,
+          "cosine": 0.8387286937489831,
+          "relative_distance": 0.5679282710858745
+        },
+        "polar": {
+          "xx": 512.0010667864454,
+          "yy": 512.0019359110813,
+          "xy": 477.7624365500466,
+          "cosine": 0.933127022658432,
+          "relative_distance": 0.36571309547383823
+        },
+        "final": {
+          "xx": 512.002441826472,
+          "yy": 512.0018905977888,
+          "xy": 422.76051144230223,
+          "cosine": 0.8257006304680502,
+          "relative_distance": 0.5904223500267451
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.002441826472,
+        "yy": 512.0006516803999,
+        "xy": 481.1626616771066,
+        "cosine": 0.939767984547818,
+        "relative_distance": 0.34707898281844124
+      },
+      "post_only_vs_A0": {
+        "xx": 512.002441826472,
+        "yy": 512.0018950812317,
+        "xy": 458.73928860935604,
+        "cosine": 0.8959713783922555,
+        "relative_distance": 0.4561328009780526
+      }
+    },
+    {
+      "matrix": "block03.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.0573859258301481,
+      "whitened_delta_relative_to_CD": 5.467189028362329,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1319840306150445,
+      "whitened_delta_bottom_block_share": 0.7977872266624523,
+      "reference_min_eigenvalue_over_mean": 0.05443920930298031,
+      "reference_max_eigenvalue_over_mean": 32.19996746184985,
+      "reference_condition": 591.4848484047883,
+      "stages": {
+        "entry": {
+          "xx": 512.0020720858427,
+          "yy": 512.001400780031,
+          "xy": 384.84503781668786,
+          "cosine": 0.751647915294089,
+          "relative_distance": 0.7047721928311846
+        },
+        "polar": {
+          "xx": 512.0010667864454,
+          "yy": 512.0018755202711,
+          "xy": 467.73464223889425,
+          "cosine": 0.9135415982016601,
+          "relative_distance": 0.4158328271830488
+        },
+        "final": {
+          "xx": 512.002441826472,
+          "yy": 512.0013800298718,
+          "xy": 400.91761714400343,
+          "cosine": 0.783039298461648,
+          "relative_distance": 0.6587267666809414
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.002441826472,
+        "yy": 512.000761452715,
+        "xy": 470.55565191282267,
+        "cosine": 0.9190511326655736,
+        "relative_distance": 0.40236484563146324
+      },
+      "post_only_vs_A0": {
+        "xx": 512.002441826472,
+        "yy": 512.0019014962095,
+        "xy": 448.2843045258287,
+        "cosine": 0.8755515686023393,
+        "relative_distance": 0.4988955115670132
+      }
+    },
+    {
+      "matrix": "block03.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.480640307809475,
+      "whitened_delta_relative_to_CD": 13.490644992686185,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.13261643565718437,
+      "whitened_delta_bottom_block_share": 0.8090992489534188,
+      "reference_min_eigenvalue_over_mean": 0.01646289380402399,
+      "reference_max_eigenvalue_over_mean": 24.125336809754643,
+      "reference_condition": 1465.4371884399654,
+      "stages": {
+        "entry": {
+          "xx": 512.0017169255325,
+          "yy": 512.0013116722744,
+          "xy": 389.270299333921,
+          "cosine": 0.760291304737622,
+          "relative_distance": 0.6923995961824483
+        },
+        "polar": {
+          "xx": 512.0022919179636,
+          "yy": 512.0016807086356,
+          "xy": 437.43916353176894,
+          "cosine": 0.8543700517290046,
+          "relative_distance": 0.5396848364505615
+        },
+        "final": {
+          "xx": 512.0014081161364,
+          "yy": 512.001528319276,
+          "xy": 359.7580556089713,
+          "cosine": 0.7026504374319538,
+          "relative_distance": 0.7711674234206145
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0014081161364,
+        "yy": 512.001179707302,
+        "xy": 443.44584598789686,
+        "cosine": 0.8661029791545177,
+        "relative_distance": 0.5174881466838027
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0014081161364,
+        "yy": 512.0011091153701,
+        "xy": 449.68890647540405,
+        "cosine": 0.87829648640162,
+        "relative_distance": 0.4933629050951217
+      }
+    },
+    {
+      "matrix": "block03.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.4838564032322281,
+      "whitened_delta_relative_to_CD": 13.739378343081144,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.13523840242767038,
+      "whitened_delta_bottom_block_share": 0.8167396997005067,
+      "reference_min_eigenvalue_over_mean": 0.01646289380402399,
+      "reference_max_eigenvalue_over_mean": 24.125336809754643,
+      "reference_condition": 1465.4371884399654,
+      "stages": {
+        "entry": {
+          "xx": 512.0017169255325,
+          "yy": 512.0013001913375,
+          "xy": 386.4169174741886,
+          "cosine": 0.7547183182373743,
+          "relative_distance": 0.7004021444020229
+        },
+        "polar": {
+          "xx": 512.0022919179636,
+          "yy": 512.002463792615,
+          "xy": 437.020783952545,
+          "cosine": 0.8535522545484532,
+          "relative_distance": 0.5411982446981269
+        },
+        "final": {
+          "xx": 512.0014081161364,
+          "yy": 512.0011828549568,
+          "xy": 358.3845603343083,
+          "cosine": 0.6999680733120994,
+          "relative_distance": 0.7746378001189841
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0014081161364,
+        "yy": 512.0006221258582,
+        "xy": 442.39101080969476,
+        "cosine": 0.8640432298855466,
+        "relative_distance": 0.5214530961818964
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0014081161364,
+        "yy": 512.0017912798526,
+        "xy": 449.34817172659626,
+        "cosine": 0.8776304058262258,
+        "relative_distance": 0.4947113096794337
+      }
+    },
+    {
+      "matrix": "block03.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.20583255292547592,
+      "whitened_delta_relative_to_CD": 0.6950141443539221,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.06535554153322709,
+      "whitened_delta_bottom_block_share": 0.6314068739499101,
+      "reference_min_eigenvalue_over_mean": 0.04556511477847467,
+      "reference_max_eigenvalue_over_mean": 38.99955337941864,
+      "reference_condition": 855.9081562512018,
+      "stages": {
+        "entry": {
+          "xx": 512.000655299314,
+          "yy": 512.0007879511486,
+          "xy": 491.7864066670352,
+          "cosine": 0.9605189717428011,
+          "relative_distance": 0.2810018981134602
+        },
+        "polar": {
+          "xx": 512.0014824693194,
+          "yy": 512.0010469692418,
+          "xy": 501.2733606448725,
+          "cosine": 0.9790471141116328,
+          "relative_distance": 0.2047089493762538
+        },
+        "final": {
+          "xx": 512.000703696865,
+          "yy": 512.0019222054195,
+          "xy": 479.68773524202237,
+          "cosine": 0.9368877053800373,
+          "relative_distance": 0.3552812117773265
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.000703696865,
+        "yy": 512.0019929256143,
+        "xy": 501.1524485303635,
+        "cosine": 0.9788107984163276,
+        "relative_distance": 0.2058602839883413
+      },
+      "post_only_vs_A0": {
+        "xx": 512.000703696865,
+        "yy": 512.0016603338281,
+        "xy": 497.08826839812514,
+        "cosine": 0.9708732828344184,
+        "relative_distance": 0.24135759518443525
+      }
+    },
+    {
+      "matrix": "block03.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.35263911198611647,
+      "whitened_delta_relative_to_CD": 0.8892050079652253,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.0335919394956218,
+      "whitened_delta_bottom_block_share": 0.5764040884232177,
+      "reference_min_eigenvalue_over_mean": 0.04556511477847467,
+      "reference_max_eigenvalue_over_mean": 38.99955337941864,
+      "reference_condition": 855.9081562512018,
+      "stages": {
+        "entry": {
+          "xx": 512.000655299314,
+          "yy": 512.0008044569724,
+          "xy": 486.0695083449134,
+          "cosine": 0.9493531551421883,
+          "relative_distance": 0.3182667190741801
+        },
+        "polar": {
+          "xx": 512.0014824693194,
+          "yy": 512.0012506679122,
+          "xy": 496.2861464392521,
+          "cosine": 0.9693062926088011,
+          "relative_distance": 0.24776480962054867
+        },
+        "final": {
+          "xx": 512.000703696865,
+          "yy": 512.0014607326291,
+          "xy": 468.9850940745447,
+          "cosine": 0.9159845757473768,
+          "relative_distance": 0.40991581175841757
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.000703696865,
+        "yy": 512.0019377112442,
+        "xy": 496.80405373270594,
+        "cosine": 0.9703179145122319,
+        "relative_distance": 0.24364778372918652
+      },
+      "post_only_vs_A0": {
+        "xx": 512.000703696865,
+        "yy": 512.0021244934652,
+        "xy": 492.8731508564773,
+        "cosine": 0.9626402140470298,
+        "relative_distance": 0.27334899959723397
+      }
+    },
+    {
+      "matrix": "block03.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.38264889667112795,
+      "whitened_delta_relative_to_CD": 1.8910181286652492,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.02818287697268888,
+      "whitened_delta_bottom_block_share": 0.7052971409111376,
+      "reference_min_eigenvalue_over_mean": 0.029431678445423593,
+      "reference_max_eigenvalue_over_mean": 59.733063019916905,
+      "reference_condition": 2029.55000105354,
+      "stages": {
+        "entry": {
+          "xx": 2048.053457782198,
+          "yy": 2048.0509492153647,
+          "xy": 1593.4841785022554,
+          "cosine": 0.7780486140833384,
+          "relative_distance": 0.6662600843330876
+        },
+        "polar": {
+          "xx": 2048.0468800763506,
+          "yy": 2048.043951717023,
+          "xy": 1719.4945483704464,
+          "cosine": 0.8395783291837047,
+          "relative_distance": 0.5664301477298559
+        },
+        "final": {
+          "xx": 2048.0472394929125,
+          "yy": 2048.047414066695,
+          "xy": 1196.3070706911135,
+          "cosine": 0.5841208135419889,
+          "relative_distance": 0.9120078992888203
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0472394929125,
+        "yy": 2048.0415564077875,
+        "xy": 1732.1795653015329,
+        "cosine": 0.8457724681343519,
+        "relative_distance": 0.5553869243779922
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0472394929125,
+        "yy": 2048.048645947449,
+        "xy": 1755.4121090256122,
+        "cosine": 0.8571147542055138,
+        "relative_distance": 0.5345751487981767
+      }
+    },
+    {
+      "matrix": "block03.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.6023461322508492,
+      "whitened_delta_relative_to_CD": 2.2383200643926253,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.015530770738159992,
+      "whitened_delta_bottom_block_share": 0.6763086837405536,
+      "reference_min_eigenvalue_over_mean": 0.029431678445423593,
+      "reference_max_eigenvalue_over_mean": 59.733063019916905,
+      "reference_condition": 2029.55000105354,
+      "stages": {
+        "entry": {
+          "xx": 2048.053457782198,
+          "yy": 2048.0517706637615,
+          "xy": 1526.3409361937358,
+          "cosine": 0.745264514004173,
+          "relative_distance": 0.7137722060637729
+        },
+        "polar": {
+          "xx": 2048.0468800763506,
+          "yy": 2048.036752203927,
+          "xy": 1659.7915259089627,
+          "cosine": 0.8104285336527837,
+          "relative_distance": 0.6157450732588229
+        },
+        "final": {
+          "xx": 2048.0472394929125,
+          "yy": 2048.0587784695467,
+          "xy": 1105.1406652779021,
+          "cosine": 0.5396054987033864,
+          "relative_distance": 0.9595788641496503
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0472394929125,
+        "yy": 2048.0405778953573,
+        "xy": 1676.5435914861437,
+        "cosine": 0.8186072497622142,
+        "relative_distance": 0.6023162877335536
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0472394929125,
+        "yy": 2048.042275272929,
+        "xy": 1728.0714374801437,
+        "cosine": 0.8437664417498455,
+        "relative_distance": 0.5589872429762676
+      }
+    },
+    {
+      "matrix": "block03.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.18855612767437888,
+      "whitened_delta_relative_to_CD": 0.7109811518929767,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.08074481932570697,
+      "whitened_delta_bottom_block_share": 0.6522652684963341,
+      "reference_min_eigenvalue_over_mean": 0.055936368300211425,
+      "reference_max_eigenvalue_over_mean": 48.6195900577515,
+      "reference_condition": 869.1946140802232,
+      "stages": {
+        "entry": {
+          "xx": 512.0116058104691,
+          "yy": 512.0121986117474,
+          "xy": 490.1809534883955,
+          "cosine": 0.9573624194508873,
+          "relative_distance": 0.29201919536882776
+        },
+        "polar": {
+          "xx": 512.0113495965861,
+          "yy": 512.0111117716372,
+          "xy": 507.05470741175463,
+          "cosine": 0.9903195028247316,
+          "relative_distance": 0.13914377403995248
+        },
+        "final": {
+          "xx": 512.0139322040154,
+          "yy": 512.0136529132326,
+          "xy": 488.6423638751528,
+          "cosine": 0.9543539079940369,
+          "relative_distance": 0.3021459235422457
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0139322040154,
+        "yy": 512.0142439682893,
+        "xy": 507.08229492463056,
+        "cosine": 0.9903678565175175,
+        "relative_distance": 0.13879586748188916
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0139322040154,
+        "yy": 512.0159334356656,
+        "xy": 495.018860922798,
+        "cosine": 0.9668055152171167,
+        "relative_distance": 0.2576608222290232
+      }
+    },
+    {
+      "matrix": "block03.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.33739499027636244,
+      "whitened_delta_relative_to_CD": 0.918674998587583,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.03848501919517573,
+      "whitened_delta_bottom_block_share": 0.590370223939902,
+      "reference_min_eigenvalue_over_mean": 0.055936368300211425,
+      "reference_max_eigenvalue_over_mean": 48.6195900577515,
+      "reference_condition": 869.1946140802232,
+      "stages": {
+        "entry": {
+          "xx": 512.0116058104691,
+          "yy": 512.01351036914,
+          "xy": 483.46942871995634,
+          "cosine": 0.9442530677850958,
+          "relative_distance": 0.3339072802412472
+        },
+        "polar": {
+          "xx": 512.0113495965861,
+          "yy": 512.0088980805385,
+          "xy": 504.6247484458466,
+          "cosine": 0.9855757239019003,
+          "relative_distance": 0.16984841223353653
+        },
+        "final": {
+          "xx": 512.0139322040154,
+          "yy": 512.0145695850472,
+          "xy": 481.8823116044707,
+          "cosine": 0.9411501940867384,
+          "relative_distance": 0.34307387700920194
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0139322040154,
+        "yy": 512.0135997139513,
+        "xy": 505.2582103639053,
+        "cosine": 0.9868059102231391,
+        "relative_distance": 0.16244436273963989
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0139322040154,
+        "yy": 512.0149418538838,
+        "xy": 490.68788929256925,
+        "cosine": 0.9583477609344518,
+        "relative_distance": 0.2886252938792071
+      }
+    },
+    {
+      "matrix": "block04.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.3595959131983694,
+      "whitened_delta_relative_to_CD": 1.2538858176868495,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.09133755293653545,
+      "whitened_delta_bottom_block_share": 0.6760613820207046,
+      "reference_min_eigenvalue_over_mean": 0.052353320147417025,
+      "reference_max_eigenvalue_over_mean": 34.29020906490465,
+      "reference_condition": 654.9767802376224,
+      "stages": {
+        "entry": {
+          "xx": 512.0013672635739,
+          "yy": 512.000892468707,
+          "xy": 487.5420932120694,
+          "cosine": 0.9522285494557144,
+          "relative_distance": 0.30910007568555675
+        },
+        "polar": {
+          "xx": 512.000348203032,
+          "yy": 512.0010927511221,
+          "xy": 502.6864585646461,
+          "cosine": 0.9818081078018422,
+          "relative_distance": 0.1907454084673705
+        },
+        "final": {
+          "xx": 512.0012967369686,
+          "yy": 512.0006730446055,
+          "xy": 483.5310391911147,
+          "cosine": 0.9443947442685966,
+          "relative_distance": 0.3334822989722756
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0012967369686,
+        "yy": 512.0016201116839,
+        "xy": 502.99059668842096,
+        "cosine": 0.9824007108034205,
+        "relative_distance": 0.18761287138356464
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0012967369686,
+        "yy": 512.0019051497841,
+        "xy": 494.38538410490196,
+        "cosine": 0.965593434071439,
+        "relative_distance": 0.2623226500760049
+      }
+    },
+    {
+      "matrix": "block04.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.2336330278027217,
+      "whitened_delta_relative_to_CD": 3.623809180640055,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.06586916472806846,
+      "whitened_delta_bottom_block_share": 0.6803504596572539,
+      "reference_min_eigenvalue_over_mean": 0.052353320147417025,
+      "reference_max_eigenvalue_over_mean": 34.29020906490465,
+      "reference_condition": 654.9767802376224,
+      "stages": {
+        "entry": {
+          "xx": 512.0013672635739,
+          "yy": 512.0014074939514,
+          "xy": 425.72333313330984,
+          "cosine": 0.8314886319211735,
+          "relative_distance": 0.5805366047015403
+        },
+        "polar": {
+          "xx": 512.000348203032,
+          "yy": 512.0020830670508,
+          "xy": 478.12399088658765,
+          "cosine": 0.933833702512309,
+          "relative_distance": 0.36377578145914025
+        },
+        "final": {
+          "xx": 512.0012967369686,
+          "yy": 512.0020048821278,
+          "xy": 428.6577639240204,
+          "cosine": 0.8372194957698933,
+          "relative_distance": 0.5705797346568754
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0012967369686,
+        "yy": 512.0010239764831,
+        "xy": 480.4463610036015,
+        "cosine": 0.9383696721876135,
+        "relative_distance": 0.35108492247926343
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0012967369686,
+        "yy": 512.0011005729684,
+        "xy": 464.87223657474016,
+        "cosine": 0.9079514614340201,
+        "relative_distance": 0.4290653118876738
+      }
+    },
+    {
+      "matrix": "block04.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.577422885592233,
+      "whitened_delta_relative_to_CD": 2.732812979168995,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.13406962165327568,
+      "whitened_delta_bottom_block_share": 0.7679774363424856,
+      "reference_min_eigenvalue_over_mean": 0.054035142181548465,
+      "reference_max_eigenvalue_over_mean": 26.806932794269844,
+      "reference_condition": 496.10182766251114,
+      "stages": {
+        "entry": {
+          "xx": 512.0020394530396,
+          "yy": 512.0013132852274,
+          "xy": 439.94154247053615,
+          "cosine": 0.8592580117910901,
+          "relative_distance": 0.5305504469936642
+        },
+        "polar": {
+          "xx": 512.0014509179441,
+          "yy": 512.0013439646673,
+          "xy": 482.0628103489912,
+          "cosine": 0.9415263566819778,
+          "relative_distance": 0.3419755465254024
+        },
+        "final": {
+          "xx": 512.0012773804236,
+          "yy": 512.0010730554374,
+          "xy": 432.82159158789966,
+          "cosine": 0.845352730691839,
+          "relative_distance": 0.5561424969385792
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0012773804236,
+        "yy": 512.0015109942494,
+        "xy": 485.3270588466338,
+        "cosine": 0.9479018306521834,
+        "relative_distance": 0.32279461344145716
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0012773804236,
+        "yy": 512.0015395496341,
+        "xy": 462.710741733548,
+        "cosine": 0.9037294313716084,
+        "relative_distance": 0.43879515329136287
+      }
+    },
+    {
+      "matrix": "block04.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.7710289042675498,
+      "whitened_delta_relative_to_CD": 3.4811939866445765,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1228993931433454,
+      "whitened_delta_bottom_block_share": 0.7741375041013103,
+      "reference_min_eigenvalue_over_mean": 0.054035142181548465,
+      "reference_max_eigenvalue_over_mean": 26.806932794269844,
+      "reference_condition": 496.10182766251114,
+      "stages": {
+        "entry": {
+          "xx": 512.0020394530396,
+          "yy": 512.0019790893989,
+          "xy": 396.1403424644816,
+          "cosine": 0.7737085700666414,
+          "relative_distance": 0.6727427689597112
+        },
+        "polar": {
+          "xx": 512.0014509179441,
+          "yy": 512.0010905863589,
+          "xy": 470.8243275369156,
+          "cosine": 0.9195764823889673,
+          "relative_distance": 0.4010573258556306
+        },
+        "final": {
+          "xx": 512.0012773804236,
+          "yy": 512.0019907306208,
+          "xy": 410.4268347356732,
+          "cosine": 0.8016123532357037,
+          "relative_distance": 0.62990123823841
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0012773804236,
+        "yy": 512.0011715068559,
+        "xy": 474.60728969902493,
+        "cosine": 0.9269651458641608,
+        "relative_distance": 0.3821906502902236
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0012773804236,
+        "yy": 512.0029565210186,
+        "xy": 451.26046217404325,
+        "cosine": 0.8813644460342779,
+        "relative_distance": 0.48710522169919473
+      }
+    },
+    {
+      "matrix": "block04.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6446973693104785,
+      "whitened_delta_relative_to_CD": 14.333612820071648,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12300634057726038,
+      "whitened_delta_bottom_block_share": 0.795975204184402,
+      "reference_min_eigenvalue_over_mean": 0.015613508573482645,
+      "reference_max_eigenvalue_over_mean": 24.043953044893165,
+      "reference_condition": 1539.9455498252614,
+      "stages": {
+        "entry": {
+          "xx": 512.0014075067074,
+          "yy": 512.0016906555092,
+          "xy": 389.7488267642558,
+          "cosine": 0.7612258741477538,
+          "relative_distance": 0.6910487564218966
+        },
+        "polar": {
+          "xx": 512.002047654609,
+          "yy": 512.0015203433497,
+          "xy": 437.6496665414366,
+          "cosine": 0.8547815265861789,
+          "relative_distance": 0.5389218841977598
+        },
+        "final": {
+          "xx": 512.0013514351771,
+          "yy": 512.0016514000691,
+          "xy": 359.3284649589963,
+          "cosine": 0.7018113500919582,
+          "relative_distance": 0.7722547989589628
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013514351771,
+        "yy": 512.0002746558368,
+        "xy": 443.0947167324474,
+        "cosine": 0.8654179943525008,
+        "relative_distance": 0.5188099153440998
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013514351771,
+        "yy": 512.0017663403003,
+        "xy": 450.3365732807691,
+        "cosine": 0.8795609416875754,
+        "relative_distance": 0.4907934537296926
+      }
+    },
+    {
+      "matrix": "block04.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.596165517063028,
+      "whitened_delta_relative_to_CD": 13.643386454873912,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.11762151674892901,
+      "whitened_delta_bottom_block_share": 0.790182689103847,
+      "reference_min_eigenvalue_over_mean": 0.015613508573482645,
+      "reference_max_eigenvalue_over_mean": 24.043953044893165,
+      "reference_condition": 1539.9455498252614,
+      "stages": {
+        "entry": {
+          "xx": 512.0014075067074,
+          "yy": 512.0017923918833,
+          "xy": 382.8064195018078,
+          "cosine": 0.7476664517059028,
+          "relative_distance": 0.7103993850463195
+        },
+        "polar": {
+          "xx": 512.002047654609,
+          "yy": 512.0014871744266,
+          "xy": 437.7087665167309,
+          "cosine": 0.8548969835145637,
+          "relative_distance": 0.5387075961310127
+        },
+        "final": {
+          "xx": 512.0013514351771,
+          "yy": 512.0019267665191,
+          "xy": 357.999007852722,
+          "cosine": 0.6992145737687063,
+          "relative_distance": 0.7756102052272795
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013514351771,
+        "yy": 512.0020731868292,
+        "xy": 442.31688192710567,
+        "cosine": 0.8638972708328381,
+        "relative_distance": 0.5217333132878743
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013514351771,
+        "yy": 512.0014646422576,
+        "xy": 450.55555133957694,
+        "cosine": 0.8799888911741213,
+        "relative_distance": 0.4899206509089647
+      }
+    },
+    {
+      "matrix": "block04.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.18214604593996894,
+      "whitened_delta_relative_to_CD": 0.6827523242172782,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.07135932643481864,
+      "whitened_delta_bottom_block_share": 0.631302362779586,
+      "reference_min_eigenvalue_over_mean": 0.049271262783336225,
+      "reference_max_eigenvalue_over_mean": 50.507331224356086,
+      "reference_condition": 1025.0870055118194,
+      "stages": {
+        "entry": {
+          "xx": 512.0008946102564,
+          "yy": 512.0017243849493,
+          "xy": 491.69628531280017,
+          "cosine": 0.9603418510695501,
+          "relative_distance": 0.281631607128077
+        },
+        "polar": {
+          "xx": 512.0011986839389,
+          "yy": 512.0011592391879,
+          "xy": 501.19049952864054,
+          "cosine": 0.9788854403522105,
+          "relative_distance": 0.2054972449180469
+        },
+        "final": {
+          "xx": 512.000423604348,
+          "yy": 512.0015245726001,
+          "xy": 478.7134282401543,
+          "cosine": 0.9349853857069206,
+          "relative_distance": 0.3605958518756277
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.000423604348,
+        "yy": 512.0014300379091,
+        "xy": 501.0614040368957,
+        "cosine": 0.9786337832395903,
+        "relative_distance": 0.20671834829327645
+      },
+      "post_only_vs_A0": {
+        "xx": 512.000423604348,
+        "yy": 512.001575296799,
+        "xy": 496.77237316426437,
+        "cosine": 0.970256647345734,
+        "relative_distance": 0.24389910252885486
+      }
+    },
+    {
+      "matrix": "block04.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.3191774898115007,
+      "whitened_delta_relative_to_CD": 0.8639399747134353,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.034015238871816525,
+      "whitened_delta_bottom_block_share": 0.5708044068043742,
+      "reference_min_eigenvalue_over_mean": 0.049271262783336225,
+      "reference_max_eigenvalue_over_mean": 50.507331224356086,
+      "reference_condition": 1025.0870055118194,
+      "stages": {
+        "entry": {
+          "xx": 512.0008946102564,
+          "yy": 512.0015892686647,
+          "xy": 485.21431140892014,
+          "cosine": 0.9476819032138283,
+          "relative_distance": 0.3234752920324507
+        },
+        "polar": {
+          "xx": 512.0011986839389,
+          "yy": 512.0015312074418,
+          "xy": 496.3304156875562,
+          "cosine": 0.9693927588263944,
+          "relative_distance": 0.24741564668679394
+        },
+        "final": {
+          "xx": 512.000423604348,
+          "yy": 512.0015809580024,
+          "xy": 468.4267306362943,
+          "cosine": 0.9148941672956881,
+          "relative_distance": 0.4125673978729465
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.000423604348,
+        "yy": 512.0022385186189,
+        "xy": 496.6553177673063,
+        "cosine": 0.970027395706996,
+        "relative_distance": 0.2448373232056112
+      },
+      "post_only_vs_A0": {
+        "xx": 512.000423604348,
+        "yy": 512.0011033691897,
+        "xy": 493.0273903499183,
+        "cosine": 0.9629426858516154,
+        "relative_distance": 0.27224011000746734
+      }
+    },
+    {
+      "matrix": "block04.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.38292302118955474,
+      "whitened_delta_relative_to_CD": 1.8724533832605563,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.031222707138494298,
+      "whitened_delta_bottom_block_share": 0.7034149554995612,
+      "reference_min_eigenvalue_over_mean": 0.03282243093681431,
+      "reference_max_eigenvalue_over_mean": 70.332170862299,
+      "reference_condition": 2142.8080996710387,
+      "stages": {
+        "entry": {
+          "xx": 2048.04624190954,
+          "yy": 2048.047310304523,
+          "xy": 1588.121644830236,
+          "cosine": 0.7754323110964407,
+          "relative_distance": 0.6701757194619765
+        },
+        "polar": {
+          "xx": 2048.047802793845,
+          "yy": 2048.0429405593654,
+          "xy": 1718.0136026889004,
+          "cosine": 0.8388552453228523,
+          "relative_distance": 0.5677051407064523
+        },
+        "final": {
+          "xx": 2048.050953209673,
+          "yy": 2048.0510664386197,
+          "xy": 1188.84906045848,
+          "cosine": 0.5804782472486169,
+          "relative_distance": 0.9159931924946434
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.050953209673,
+        "yy": 2048.0458314899524,
+        "xy": 1730.6175208365044,
+        "cosine": 0.8450081195846386,
+        "relative_distance": 0.5567615048042012
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.050953209673,
+        "yy": 2048.053016666306,
+        "xy": 1751.4870465833512,
+        "cosine": 0.8551965767785941,
+        "relative_distance": 0.5381514585464585
+      }
+    },
+    {
+      "matrix": "block04.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.5890399043456003,
+      "whitened_delta_relative_to_CD": 2.207200925189656,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.018029603277046388,
+      "whitened_delta_bottom_block_share": 0.6760797004966453,
+      "reference_min_eigenvalue_over_mean": 0.03282243093681431,
+      "reference_max_eigenvalue_over_mean": 70.332170862299,
+      "reference_condition": 2142.8080996710387,
+      "stages": {
+        "entry": {
+          "xx": 2048.04624190954,
+          "yy": 2048.0474049597524,
+          "xy": 1516.482119875824,
+          "cosine": 0.7404528561181486,
+          "relative_distance": 0.7204820852430119
+        },
+        "polar": {
+          "xx": 2048.047802793845,
+          "yy": 2048.04146139304,
+          "xy": 1657.9497007980403,
+          "cosine": 0.8095281102860177,
+          "relative_distance": 0.6172059540128932
+        },
+        "final": {
+          "xx": 2048.050953209673,
+          "yy": 2048.048988226073,
+          "xy": 1095.6809043668486,
+          "cosine": 0.5349873880191125,
+          "relative_distance": 0.9643779227096793
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.050953209673,
+        "yy": 2048.0506481194807,
+        "xy": 1673.3235728826908,
+        "cosine": 0.8170322593266311,
+        "relative_distance": 0.6049259905895502
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.050953209673,
+        "yy": 2048.0449198888955,
+        "xy": 1724.535652018765,
+        "cosine": 0.8420387146436972,
+        "relative_distance": 0.5620694844757101
+      }
+    },
+    {
+      "matrix": "block04.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.1667060119277224,
+      "whitened_delta_relative_to_CD": 0.7063350212458614,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.09005452711925181,
+      "whitened_delta_bottom_block_share": 0.6545445124624011,
+      "reference_min_eigenvalue_over_mean": 0.06075848318778722,
+      "reference_max_eigenvalue_over_mean": 59.156477171149156,
+      "reference_condition": 973.633212473611,
+      "stages": {
+        "entry": {
+          "xx": 512.013135014249,
+          "yy": 512.0134253020717,
+          "xy": 490.17869671773803,
+          "cosine": 0.9573554353245332,
+          "relative_distance": 0.2920430679343566
+        },
+        "polar": {
+          "xx": 512.0110488475841,
+          "yy": 512.0101642651566,
+          "xy": 507.21889162934855,
+          "cosine": 0.9906413756561407,
+          "relative_distance": 0.1368109371355623
+        },
+        "final": {
+          "xx": 512.0150493054789,
+          "yy": 512.0158699947467,
+          "xy": 488.18385595192933,
+          "cosine": 0.9534553044271123,
+          "relative_distance": 0.30510566325634425
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0150493054789,
+        "yy": 512.0163402844915,
+        "xy": 507.2035716807621,
+        "cosine": 0.9906016101405899,
+        "relative_distance": 0.13710143477442563
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0150493054789,
+        "yy": 512.0151011867686,
+        "xy": 494.3994007459396,
+        "cosine": 0.9655953987454067,
+        "relative_distance": 0.26231508914915114
+      }
+    },
+    {
+      "matrix": "block04.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.3045356482642173,
+      "whitened_delta_relative_to_CD": 0.906330561228735,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.04032871478584397,
+      "whitened_delta_bottom_block_share": 0.5922994080292328,
+      "reference_min_eigenvalue_over_mean": 0.06075848318778722,
+      "reference_max_eigenvalue_over_mean": 59.156477171149156,
+      "reference_condition": 973.633212473611,
+      "stages": {
+        "entry": {
+          "xx": 512.013135014249,
+          "yy": 512.0126052878176,
+          "xy": 483.40633249954897,
+          "cosine": 0.9441292605731155,
+          "relative_distance": 0.3342774611762087
+        },
+        "polar": {
+          "xx": 512.0110488475841,
+          "yy": 512.0107180466117,
+          "xy": 504.8236947177171,
+          "cosine": 0.9859628203975529,
+          "relative_distance": 0.16755402154479057
+        },
+        "final": {
+          "xx": 512.0150493054789,
+          "yy": 512.0146193723755,
+          "xy": 481.46794634687444,
+          "cosine": 0.9403398379434649,
+          "relative_distance": 0.34542766828569016
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0150493054789,
+        "yy": 512.0154459185833,
+        "xy": 505.3883619586651,
+        "cosine": 0.9870572493998275,
+        "relative_distance": 0.16088974866692296
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0150493054789,
+        "yy": 512.013293709866,
+        "xy": 490.1385616803971,
+        "cosine": 0.957275382120498,
+        "relative_distance": 0.29231676186592537
+      }
+    },
+    {
+      "matrix": "block05.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.33560620865657415,
+      "whitened_delta_relative_to_CD": 1.582622623387988,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.031118149325655955,
+      "whitened_delta_bottom_block_share": 0.663058958531951,
+      "reference_min_eigenvalue_over_mean": 0.03361697129429513,
+      "reference_max_eigenvalue_over_mean": 92.70071285648346,
+      "reference_condition": 2757.556950771914,
+      "stages": {
+        "entry": {
+          "xx": 512.0014772904866,
+          "yy": 512.0011338372047,
+          "xy": 485.48875079620285,
+          "cosine": 0.9482177985104583,
+          "relative_distance": 0.3218141827878588
+        },
+        "polar": {
+          "xx": 512.0012044949758,
+          "yy": 512.0012279970636,
+          "xy": 501.4650112232986,
+          "cosine": 0.979421523448768,
+          "relative_distance": 0.20287176749628347
+        },
+        "final": {
+          "xx": 512.0016864438835,
+          "yy": 512.0009538099349,
+          "xy": 483.54990440857375,
+          "cosine": 0.944430971953042,
+          "relative_distance": 0.3333736291003109
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016864438835,
+        "yy": 512.0023296076054,
+        "xy": 502.29901030419643,
+        "cosine": 0.9810489069000664,
+        "relative_distance": 0.1946848992760971
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016864438835,
+        "yy": 512.001052060969,
+        "xy": 495.32111014242287,
+        "cosine": 0.9674214560514492,
+        "relative_distance": 0.25525878541558705
+      }
+    },
+    {
+      "matrix": "block05.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6354020072229543,
+      "whitened_delta_relative_to_CD": 3.9618115802563247,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.006896049999160418,
+      "whitened_delta_bottom_block_share": 0.5995121662107047,
+      "reference_min_eigenvalue_over_mean": 0.03361697129429513,
+      "reference_max_eigenvalue_over_mean": 92.70071285648346,
+      "reference_condition": 2757.556950771914,
+      "stages": {
+        "entry": {
+          "xx": 512.0014772904866,
+          "yy": 512.0016721152467,
+          "xy": 415.22371585419114,
+          "cosine": 0.8109813257804299,
+          "relative_distance": 0.6148474773175878
+        },
+        "polar": {
+          "xx": 512.0012044949758,
+          "yy": 512.0011174672645,
+          "xy": 474.54017025337157,
+          "cosine": 0.9268341683914106,
+          "relative_distance": 0.3825332021939786
+        },
+        "final": {
+          "xx": 512.0016864438835,
+          "yy": 512.0019695878834,
+          "xy": 424.17775525040395,
+          "cosine": 0.8284692203037627,
+          "relative_distance": 0.5857146525838558
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016864438835,
+        "yy": 512.0018006324038,
+        "xy": 478.12197628398815,
+        "cosine": 0.9338288049176758,
+        "relative_distance": 0.36378895657016025
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016864438835,
+        "yy": 512.0025266412167,
+        "xy": 463.72851289066324,
+        "cosine": 0.9057160253153783,
+        "relative_distance": 0.4342442907976201
+      }
+    },
+    {
+      "matrix": "block05.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.821677121071256,
+      "whitened_delta_relative_to_CD": 7.313685735293504,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.11971731753463939,
+      "whitened_delta_bottom_block_share": 0.8600333265334414,
+      "reference_min_eigenvalue_over_mean": 0.0315541619598114,
+      "reference_max_eigenvalue_over_mean": 32.77842060406969,
+      "reference_condition": 1038.7986423413035,
+      "stages": {
+        "entry": {
+          "xx": 512.0015071184409,
+          "yy": 512.0013539874678,
+          "xy": 426.94818812440667,
+          "cosine": 0.8338808500267535,
+          "relative_distance": 0.5764011192417041
+        },
+        "polar": {
+          "xx": 512.0018968329156,
+          "yy": 512.0012079117658,
+          "xy": 473.2334452249267,
+          "cosine": 0.9242812703053803,
+          "relative_distance": 0.38914953103757555
+        },
+        "final": {
+          "xx": 512.002079897478,
+          "yy": 512.001730895834,
+          "xy": 415.9459917042163,
+          "cosine": 0.8123914917504076,
+          "relative_distance": 0.6125494989122228
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.002079897478,
+        "yy": 512.0008833270952,
+        "xy": 476.0246246660341,
+        "cosine": 0.9297329046145788,
+        "relative_distance": 0.37487868244934447
+      },
+      "post_only_vs_A0": {
+        "xx": 512.002079897478,
+        "yy": 512.0012856601664,
+        "xy": 456.66537448809345,
+        "cosine": 0.8919216280886796,
+        "relative_distance": 0.46492642016544017
+      }
+    },
+    {
+      "matrix": "block05.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.2232040626765996,
+      "whitened_delta_relative_to_CD": 11.533973429352317,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12521975671217306,
+      "whitened_delta_bottom_block_share": 0.8882243897699462,
+      "reference_min_eigenvalue_over_mean": 0.0315541619598114,
+      "reference_max_eigenvalue_over_mean": 32.77842060406969,
+      "reference_condition": 1038.7986423413035,
+      "stages": {
+        "entry": {
+          "xx": 512.0015071184409,
+          "yy": 512.0015358271221,
+          "xy": 380.10142060148723,
+          "cosine": 0.7423833810261322,
+          "relative_distance": 0.7177975009657533
+        },
+        "polar": {
+          "xx": 512.0018968329156,
+          "yy": 512.0015001990773,
+          "xy": 462.23939476798705,
+          "cosine": 0.9028083229172726,
+          "relative_distance": 0.440889191151089
+        },
+        "final": {
+          "xx": 512.002079897478,
+          "yy": 512.0016043739122,
+          "xy": 393.69954014469516,
+          "cosine": 0.7689416477536735,
+          "relative_distance": 0.6797915047252627
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.002079897478,
+        "yy": 512.0021760617079,
+        "xy": 465.9029569354295,
+        "cosine": 0.9099629307673526,
+        "relative_distance": 0.4243514526616648
+      },
+      "post_only_vs_A0": {
+        "xx": 512.002079897478,
+        "yy": 512.0012431927847,
+        "xy": 446.3501824575827,
+        "cosine": 0.8717748710242953,
+        "relative_distance": 0.5064089734678546
+      }
+    },
+    {
+      "matrix": "block05.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6788324562109267,
+      "whitened_delta_relative_to_CD": 15.923584183865822,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1284588524023188,
+      "whitened_delta_bottom_block_share": 0.81704817995194,
+      "reference_min_eigenvalue_over_mean": 0.01390671237799048,
+      "reference_max_eigenvalue_over_mean": 23.126743429106174,
+      "reference_condition": 1662.9914246092999,
+      "stages": {
+        "entry": {
+          "xx": 512.0018477512251,
+          "yy": 512.0021985612757,
+          "xy": 382.21309610826717,
+          "cosine": 0.7465070035312098,
+          "relative_distance": 0.7120296107777597
+        },
+        "polar": {
+          "xx": 512.0016888449372,
+          "yy": 512.0018796217455,
+          "xy": 434.11935063455496,
+          "cosine": 0.8478864019675281,
+          "relative_distance": 0.5515679946697225
+        },
+        "final": {
+          "xx": 512.0016211588278,
+          "yy": 512.0018210487399,
+          "xy": 351.06651610580025,
+          "cosine": 0.6856744843532371,
+          "relative_distance": 0.7928752449212821
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016211588278,
+        "yy": 512.0024355571272,
+        "xy": 439.23928588455595,
+        "cosine": 0.8578858316115714,
+        "relative_distance": 0.5331309059007563
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016211588278,
+        "yy": 512.0016478120504,
+        "xy": 446.4117104907474,
+        "cosine": 0.8718950886541421,
+        "relative_distance": 0.5061717389982007
+      }
+    },
+    {
+      "matrix": "block05.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6556276426765757,
+      "whitened_delta_relative_to_CD": 16.417664792715556,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1412444974042885,
+      "whitened_delta_bottom_block_share": 0.8284584444661562,
+      "reference_min_eigenvalue_over_mean": 0.01390671237799048,
+      "reference_max_eigenvalue_over_mean": 23.126743429106174,
+      "reference_condition": 1662.9914246092999,
+      "stages": {
+        "entry": {
+          "xx": 512.0018477512251,
+          "yy": 512.002262436279,
+          "xy": 373.1225270514133,
+          "cosine": 0.7287520105424613,
+          "relative_distance": 0.7365434125744127
+        },
+        "polar": {
+          "xx": 512.0016888449372,
+          "yy": 512.0013559835927,
+          "xy": 433.02368640263427,
+          "cosine": 0.8457468727061593,
+          "relative_distance": 0.5554333032012818
+        },
+        "final": {
+          "xx": 512.0016211588278,
+          "yy": 512.0022272786907,
+          "xy": 350.06747628974904,
+          "cosine": 0.6837229700336821,
+          "relative_distance": 0.795332907875217
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016211588278,
+        "yy": 512.0026845802374,
+        "xy": 439.6035576205432,
+        "cosine": 0.8585970882290395,
+        "relative_distance": 0.5317951835387846
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016211588278,
+        "yy": 512.0030364682946,
+        "xy": 445.68883283238574,
+        "cosine": 0.8704820422703645,
+        "relative_distance": 0.5089560624289897
+      }
+    },
+    {
+      "matrix": "block05.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.1612439518084555,
+      "whitened_delta_relative_to_CD": 0.6764255486358253,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.07766158198766576,
+      "whitened_delta_bottom_block_share": 0.6295181520260638,
+      "reference_min_eigenvalue_over_mean": 0.052007147740742526,
+      "reference_max_eigenvalue_over_mean": 61.76193624153275,
+      "reference_condition": 1187.5663043360537,
+      "stages": {
+        "entry": {
+          "xx": 512.0006168612499,
+          "yy": 512.0016022544969,
+          "xy": 491.8265516094366,
+          "cosine": 0.9605966518986054,
+          "relative_distance": 0.2807254388884637
+        },
+        "polar": {
+          "xx": 512.0014746731061,
+          "yy": 512.0009916449362,
+          "xy": 501.0760365854214,
+          "cosine": 0.9786617768357,
+          "relative_distance": 0.20658273451111384
+        },
+        "final": {
+          "xx": 512.0009096347922,
+          "yy": 512.0017123512798,
+          "xy": 477.8734328142522,
+          "cosine": 0.9333441586068495,
+          "relative_distance": 0.36511886734335297
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0009096347922,
+        "yy": 512.0019735293663,
+        "xy": 500.97051915506916,
+        "cosine": 0.9784552902963433,
+        "relative_distance": 0.20758001873122037
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0009096347922,
+        "yy": 512.0018995999947,
+        "xy": 496.2827204187838,
+        "cosine": 0.9692995291485111,
+        "relative_distance": 0.24779225384166143
+      }
+    },
+    {
+      "matrix": "block05.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.27378540807470947,
+      "whitened_delta_relative_to_CD": 0.8264886357746044,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.03670723474107176,
+      "whitened_delta_bottom_block_share": 0.5715305281843484,
+      "reference_min_eigenvalue_over_mean": 0.052007147740742526,
+      "reference_max_eigenvalue_over_mean": 61.76193624153275,
+      "reference_condition": 1187.5663043360537,
+      "stages": {
+        "entry": {
+          "xx": 512.0006168612499,
+          "yy": 512.0012536409198,
+          "xy": 486.94573747611986,
+          "cosine": 0.951064156235215,
+          "relative_distance": 0.31284460742016484
+        },
+        "polar": {
+          "xx": 512.0014746731061,
+          "yy": 512.0014017543565,
+          "xy": 496.59203768459986,
+          "cosine": 0.9699035991326695,
+          "relative_distance": 0.24534220478418645
+        },
+        "final": {
+          "xx": 512.0009096347922,
+          "yy": 512.0009843145542,
+          "xy": 468.6432803071176,
+          "cosine": 0.915317213915819,
+          "relative_distance": 0.4115405016764252
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0009096347922,
+        "yy": 512.0020668425127,
+        "xy": 497.10077564087055,
+        "cosine": 0.9708971303018578,
+        "relative_distance": 0.2412587929483181
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0009096347922,
+        "yy": 512.0016413652011,
+        "xy": 492.7914615976485,
+        "cosine": 0.9624809256901501,
+        "relative_distance": 0.27393101730343
+      }
+    },
+    {
+      "matrix": "block05.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.3787565039654432,
+      "whitened_delta_relative_to_CD": 1.8177714422974856,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.029704153295733553,
+      "whitened_delta_bottom_block_share": 0.6990463153383837,
+      "reference_min_eigenvalue_over_mean": 0.03227432514331709,
+      "reference_max_eigenvalue_over_mean": 73.78556858988496,
+      "reference_condition": 2286.20019976354,
+      "stages": {
+        "entry": {
+          "xx": 2048.050597657144,
+          "yy": 2048.043055950086,
+          "xy": 1580.300703950493,
+          "cosine": 0.7716135604279838,
+          "relative_distance": 0.6758491237992885
+        },
+        "polar": {
+          "xx": 2048.0436216123135,
+          "yy": 2048.0437929254385,
+          "xy": 1717.51891059828,
+          "cosine": 0.8386143833271221,
+          "relative_distance": 0.5681296039155265
+        },
+        "final": {
+          "xx": 2048.0575613677474,
+          "yy": 2048.0510794150505,
+          "xy": 1181.5364434498294,
+          "cosine": 0.5769067898675208,
+          "relative_distance": 0.9198831888926301
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0575613677474,
+        "yy": 2048.050738239883,
+        "xy": 1728.343561016291,
+        "cosine": 0.8438954415264109,
+        "relative_distance": 0.5587562947165304
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0575613677474,
+        "yy": 2048.043706056794,
+        "xy": 1748.8071854489358,
+        "cosine": 0.8538886474154571,
+        "relative_distance": 0.5405753571160792
+      }
+    },
+    {
+      "matrix": "block05.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.5413308118771661,
+      "whitened_delta_relative_to_CD": 2.095776540672327,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.018851522271515736,
+      "whitened_delta_bottom_block_share": 0.6747016063864716,
+      "reference_min_eigenvalue_over_mean": 0.03227432514331709,
+      "reference_max_eigenvalue_over_mean": 73.78556858988496,
+      "reference_condition": 2286.20019976354,
+      "stages": {
+        "entry": {
+          "xx": 2048.050597657144,
+          "yy": 2048.0550935260144,
+          "xy": 1513.5392510618994,
+          "cosine": 0.7390137682827349,
+          "relative_distance": 0.7224770144100727
+        },
+        "polar": {
+          "xx": 2048.0436216123135,
+          "yy": 2048.041908173544,
+          "xy": 1659.4048852769915,
+          "cosine": 0.8102393727915588,
+          "relative_distance": 0.6160528351197403
+        },
+        "final": {
+          "xx": 2048.0575613677474,
+          "yy": 2048.054386574865,
+          "xy": 1092.0597931883556,
+          "cosine": 0.5332177474969655,
+          "relative_distance": 0.9662110439364109
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0575613677474,
+        "yy": 2048.0513424544506,
+        "xy": 1673.3205297582253,
+        "cosine": 0.817029316871302,
+        "relative_distance": 0.6049304180399636
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0575613677474,
+        "yy": 2048.045040650989,
+        "xy": 1721.3993419568205,
+        "cosine": 0.8405059683399935,
+        "relative_distance": 0.5647894194012301
+      }
+    },
+    {
+      "matrix": "block05.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.1507467348558674,
+      "whitened_delta_relative_to_CD": 0.7007862145785085,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.09595893720121687,
+      "whitened_delta_bottom_block_share": 0.6549874789794079,
+      "reference_min_eigenvalue_over_mean": 0.06669189609970408,
+      "reference_max_eigenvalue_over_mean": 68.88862482726739,
+      "reference_condition": 1032.9384656312548,
+      "stages": {
+        "entry": {
+          "xx": 512.0146288101262,
+          "yy": 512.0140673768216,
+          "xy": 490.25242877575806,
+          "cosine": 0.957497442408256,
+          "relative_distance": 0.2915562871538746
+        },
+        "polar": {
+          "xx": 512.0116758497313,
+          "yy": 512.0117912239496,
+          "xy": 507.32228774453756,
+          "cosine": 0.9908411360811865,
+          "relative_distance": 0.13534300832127655
+        },
+        "final": {
+          "xx": 512.0136240836174,
+          "yy": 512.0139056319526,
+          "xy": 488.4114575921251,
+          "cosine": 0.9539029829164903,
+          "relative_distance": 0.3036347468836938
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0136240836174,
+        "yy": 512.0151926558573,
+        "xy": 507.4243759267217,
+        "cosine": 0.9910353451633614,
+        "relative_distance": 0.13390047475325165
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0136240836174,
+        "yy": 512.0139023365161,
+        "xy": 494.26457270551265,
+        "cosine": 0.9653345441472951,
+        "relative_distance": 0.26330767277913114
+      }
+    },
+    {
+      "matrix": "block05.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.26258212063297703,
+      "whitened_delta_relative_to_CD": 0.8490811438786579,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.04202990444287054,
+      "whitened_delta_bottom_block_share": 0.5908987912059593,
+      "reference_min_eigenvalue_over_mean": 0.06669189609970408,
+      "reference_max_eigenvalue_over_mean": 68.88862482726739,
+      "reference_condition": 1032.9384656312548,
+      "stages": {
+        "entry": {
+          "xx": 512.0146288101262,
+          "yy": 512.0129048421203,
+          "xy": 483.6326950627573,
+          "cosine": 0.9445697096415797,
+          "relative_distance": 0.33295704540395765
+        },
+        "polar": {
+          "xx": 512.0116758497313,
+          "yy": 512.0112775101502,
+          "xy": 505.1912771624894,
+          "cosine": 0.986679596399601,
+          "relative_distance": 0.16322008711496425
+        },
+        "final": {
+          "xx": 512.0136240836174,
+          "yy": 512.0151430261558,
+          "xy": 482.3865765131466,
+          "cosine": 0.9421348149723742,
+          "relative_distance": 0.34019191895239426
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0136240836174,
+        "yy": 512.013251217639,
+        "xy": 505.7574716579414,
+        "cosine": 0.9877816370965599,
+        "relative_distance": 0.1563224772999014
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0136240836174,
+        "yy": 512.0131015311556,
+        "xy": 490.4892959944061,
+        "cosine": 0.9579619041680879,
+        "relative_distance": 0.28995887425754535
+      }
+    },
+    {
+      "matrix": "block06.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.4362085780854184,
+      "whitened_delta_relative_to_CD": 1.674164201440264,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.0885700202936931,
+      "whitened_delta_bottom_block_share": 0.7757829465952879,
+      "reference_min_eigenvalue_over_mean": 0.048966888297701454,
+      "reference_max_eigenvalue_over_mean": 33.05864309001572,
+      "reference_condition": 675.1223988142926,
+      "stages": {
+        "entry": {
+          "xx": 512.0014398311306,
+          "yy": 512.0015344713499,
+          "xy": 485.1523256137183,
+          "cosine": 0.9475603836877354,
+          "relative_distance": 0.32385064816620024
+        },
+        "polar": {
+          "xx": 512.0010859993164,
+          "yy": 512.0015560176811,
+          "xy": 501.6006987901839,
+          "cosine": 0.9796863371411313,
+          "relative_distance": 0.2015622592797082
+        },
+        "final": {
+          "xx": 512.0021443419832,
+          "yy": 512.0022119297082,
+          "xy": 481.79333183332363,
+          "cosine": 0.9409985980674755,
+          "relative_distance": 0.3435153732420644
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0021443419832,
+        "yy": 512.0016625523456,
+        "xy": 502.30075318078224,
+        "cosine": 0.9810525113265957,
+        "relative_distance": 0.19466627729938477
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0021443419832,
+        "yy": 512.0019423879952,
+        "xy": 493.42720587110546,
+        "cosine": 0.9637211653066924,
+        "relative_distance": 0.2693652818698786
+      }
+    },
+    {
+      "matrix": "block06.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.2718138279763007,
+      "whitened_delta_relative_to_CD": 3.6226959028142263,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.048478654756422976,
+      "whitened_delta_bottom_block_share": 0.7450398510246085,
+      "reference_min_eigenvalue_over_mean": 0.048966888297701454,
+      "reference_max_eigenvalue_over_mean": 33.05864309001572,
+      "reference_condition": 675.1223988142926,
+      "stages": {
+        "entry": {
+          "xx": 512.0014398311306,
+          "yy": 512.0020639459851,
+          "xy": 419.1507588716638,
+          "cosine": 0.8186510247780829,
+          "relative_distance": 0.6022442789294569
+        },
+        "polar": {
+          "xx": 512.0010859993164,
+          "yy": 512.002180546205,
+          "xy": 475.56580995758213,
+          "cosine": 0.9288365095986006,
+          "relative_distance": 0.37726268426113163
+        },
+        "final": {
+          "xx": 512.0021443419832,
+          "yy": 512.0008419090664,
+          "xy": 422.47759731817064,
+          "cosine": 0.8251491509126043,
+          "relative_distance": 0.5913554374400396
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0021443419832,
+        "yy": 512.0017039334292,
+        "xy": 478.18001681121166,
+        "cosine": 0.9339418355049898,
+        "relative_distance": 0.36347802157624975
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0021443419832,
+        "yy": 512.0011760274375,
+        "xy": 461.944846177895,
+        "cosine": 0.9022331021572269,
+        "relative_distance": 0.44219182577985683
+      }
+    },
+    {
+      "matrix": "block06.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.5665814934652916,
+      "whitened_delta_relative_to_CD": 3.6010158712042344,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12948621627691864,
+      "whitened_delta_bottom_block_share": 0.802093320979436,
+      "reference_min_eigenvalue_over_mean": 0.04538709372189163,
+      "reference_max_eigenvalue_over_mean": 33.63954847239836,
+      "reference_condition": 741.1699166843314,
+      "stages": {
+        "entry": {
+          "xx": 512.0011248452262,
+          "yy": 512.0013211778014,
+          "xy": 429.36275298767265,
+          "cosine": 0.8385971237768413,
+          "relative_distance": 0.5681600252904913
+        },
+        "polar": {
+          "xx": 512.0017289401388,
+          "yy": 512.0015026450073,
+          "xy": 476.06377317666886,
+          "cosine": 0.9298091226523548,
+          "relative_distance": 0.3746754911550642
+        },
+        "final": {
+          "xx": 512.0019907147431,
+          "yy": 512.0029655730617,
+          "xy": 418.13210233984194,
+          "cosine": 0.8166603096450483,
+          "relative_distance": 0.6055408572439615
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0019907147431,
+        "yy": 512.0024457472273,
+        "xy": 478.6804197046838,
+        "cosine": 0.9349186442172379,
+        "relative_distance": 0.36078077748902204
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0019907147431,
+        "yy": 512.0019432524216,
+        "xy": 455.4155135556547,
+        "cosine": 0.8894800077403967,
+        "relative_distance": 0.47014888522048226
+      }
+    },
+    {
+      "matrix": "block06.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.681981334448904,
+      "whitened_delta_relative_to_CD": 3.775381396941784,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.10291748579209077,
+      "whitened_delta_bottom_block_share": 0.7896691378575386,
+      "reference_min_eigenvalue_over_mean": 0.04538709372189163,
+      "reference_max_eigenvalue_over_mean": 33.63954847239836,
+      "reference_condition": 741.1699166843314,
+      "stages": {
+        "entry": {
+          "xx": 512.0011248452262,
+          "yy": 512.001633438399,
+          "xy": 388.40089966965485,
+          "cosine": 0.7585934637924572,
+          "relative_distance": 0.6948476899400132
+        },
+        "polar": {
+          "xx": 512.0017289401388,
+          "yy": 512.0017430785742,
+          "xy": 465.62300973150616,
+          "cosine": 0.9094168573736969,
+          "relative_distance": 0.42563633274659834
+        },
+        "final": {
+          "xx": 512.0019907147431,
+          "yy": 512.0020057576382,
+          "xy": 398.03582381051217,
+          "cosine": 0.7774106842975543,
+          "relative_distance": 0.6672170845719451
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0019907147431,
+        "yy": 512.0019459880057,
+        "xy": 469.1826295685888,
+        "cosine": 0.9163688004546904,
+        "relative_distance": 0.4089772509381012
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0019907147431,
+        "yy": 512.0009256321705,
+        "xy": 444.931598327031,
+        "cosine": 0.869004553062302,
+        "relative_distance": 0.5118501942712397
+      }
+    },
+    {
+      "matrix": "block06.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6842830593423208,
+      "whitened_delta_relative_to_CD": 17.295845484159383,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12282927459688849,
+      "whitened_delta_bottom_block_share": 0.8038247943158254,
+      "reference_min_eigenvalue_over_mean": 0.014579303894464579,
+      "reference_max_eigenvalue_over_mean": 26.607853180671565,
+      "reference_condition": 1825.0427711280472,
+      "stages": {
+        "entry": {
+          "xx": 512.0021113639871,
+          "yy": 512.0017576332154,
+          "xy": 380.31960544730805,
+          "cosine": 0.7428089228213056,
+          "relative_distance": 0.71720427820108
+        },
+        "polar": {
+          "xx": 512.0018870140531,
+          "yy": 512.0016505250308,
+          "xy": 433.53714310561986,
+          "cosine": 0.8467493074243103,
+          "relative_distance": 0.5536256084813289
+        },
+        "final": {
+          "xx": 512.001744839941,
+          "yy": 512.0019692911861,
+          "xy": 348.16196903801847,
+          "cosine": 0.6800013793571915,
+          "relative_distance": 0.7999983634774482
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001744839941,
+        "yy": 512.0015690022775,
+        "xy": 439.0085301867111,
+        "cosine": 0.8574357607095817,
+        "relative_distance": 0.5339741844132295
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001744839941,
+        "yy": 512.0001775264304,
+        "xy": 444.72930328353516,
+        "cosine": 0.8686102898250987,
+        "relative_distance": 0.512619759810708
+      }
+    },
+    {
+      "matrix": "block06.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6853787361157897,
+      "whitened_delta_relative_to_CD": 18.380442632320953,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.132578936126548,
+      "whitened_delta_bottom_block_share": 0.8137968297195791,
+      "reference_min_eigenvalue_over_mean": 0.014579303894464579,
+      "reference_max_eigenvalue_over_mean": 26.607853180671565,
+      "reference_condition": 1825.0427711280472,
+      "stages": {
+        "entry": {
+          "xx": 512.0021113639871,
+          "yy": 512.0018896897691,
+          "xy": 382.61293228764976,
+          "cosine": 0.7472879635117227,
+          "relative_distance": 0.710931757318155
+        },
+        "polar": {
+          "xx": 512.0018870140531,
+          "yy": 512.001864108823,
+          "xy": 433.7124465310758,
+          "cosine": 0.8470915190603285,
+          "relative_distance": 0.5530071925741434
+        },
+        "final": {
+          "xx": 512.001744839941,
+          "yy": 512.0018469924853,
+          "xy": 348.4901115358483,
+          "cosine": 0.6806423616390574,
+          "relative_distance": 0.7991966844518644
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001744839941,
+        "yy": 512.0016525362327,
+        "xy": 439.16799527920256,
+        "cosine": 0.8577471449889602,
+        "relative_distance": 0.5333907426800101
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001744839941,
+        "yy": 512.001023832996,
+        "xy": 445.5591458442237,
+        "cosine": 0.8702303538139049,
+        "relative_distance": 0.5094498107070634
+      }
+    },
+    {
+      "matrix": "block06.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.1458279271306997,
+      "whitened_delta_relative_to_CD": 0.6786421879940316,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.08681804759835911,
+      "whitened_delta_bottom_block_share": 0.6376137791654035,
+      "reference_min_eigenvalue_over_mean": 0.05999398931075716,
+      "reference_max_eigenvalue_over_mean": 71.17699502776954,
+      "reference_condition": 1186.4021020353653,
+      "stages": {
+        "entry": {
+          "xx": 512.0011473498674,
+          "yy": 512.0021264417967,
+          "xy": 492.0831401067388,
+          "cosine": 0.9610968103351576,
+          "relative_distance": 0.278938082241445
+        },
+        "polar": {
+          "xx": 512.0024864925356,
+          "yy": 512.0012230992038,
+          "xy": 501.2168634889502,
+          "cosine": 0.9789356401631829,
+          "relative_distance": 0.20525269230316492
+        },
+        "final": {
+          "xx": 512.0011693879371,
+          "yy": 512.00172509453,
+          "xy": 477.6095072691272,
+          "cosine": 0.9328284321121616,
+          "relative_distance": 0.3665285919016633
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0011693879371,
+        "yy": 512.0021552841392,
+        "xy": 501.0981945382739,
+        "cosine": 0.9787042335999764,
+        "relative_distance": 0.20637726087806063
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0011693879371,
+        "yy": 512.0008779605897,
+        "xy": 495.85978681488746,
+        "cosine": 0.9684742097905942,
+        "relative_distance": 0.25110070186010947
+      }
+    },
+    {
+      "matrix": "block06.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.25401772888158214,
+      "whitened_delta_relative_to_CD": 0.8155303179916966,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.03766650968730016,
+      "whitened_delta_bottom_block_share": 0.5799340023154869,
+      "reference_min_eigenvalue_over_mean": 0.05999398931075716,
+      "reference_max_eigenvalue_over_mean": 71.17699502776954,
+      "reference_condition": 1186.4021020353653,
+      "stages": {
+        "entry": {
+          "xx": 512.0011473498674,
+          "yy": 512.0020943017264,
+          "xy": 486.7574446171542,
+          "cosine": 0.9506951244261321,
+          "relative_distance": 0.3140220411666486
+        },
+        "polar": {
+          "xx": 512.0024864925356,
+          "yy": 511.9999571576012,
+          "xy": 497.15058298956785,
+          "cosine": 0.9709949152444447,
+          "relative_distance": 0.24085270650233423
+        },
+        "final": {
+          "xx": 512.0011693879371,
+          "yy": 512.0014406000505,
+          "xy": 469.1486661298461,
+          "cosine": 0.9163036530451149,
+          "relative_distance": 0.409136576517698
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0011693879371,
+        "yy": 512.0014617302263,
+        "xy": 497.501748873179,
+        "cosine": 0.9716806065819391,
+        "relative_distance": 0.23798908169494004
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0011693879371,
+        "yy": 512.0019541938678,
+        "xy": 492.5328105607705,
+        "cosine": 0.9619752112437144,
+        "relative_distance": 0.2757709843299603
+      }
+    },
+    {
+      "matrix": "block06.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.3588943170561892,
+      "whitened_delta_relative_to_CD": 1.843894688593454,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.032225219108097884,
+      "whitened_delta_bottom_block_share": 0.7027640291142725,
+      "reference_min_eigenvalue_over_mean": 0.03395229919083383,
+      "reference_max_eigenvalue_over_mean": 92.15153380776374,
+      "reference_condition": 2714.1470829357577,
+      "stages": {
+        "entry": {
+          "xx": 2048.052143779667,
+          "yy": 2048.04809931504,
+          "xy": 1583.3417670566268,
+          "cosine": 0.7730971768704293,
+          "relative_distance": 0.673650649948016
+        },
+        "polar": {
+          "xx": 2048.0391057024567,
+          "yy": 2048.0462689607634,
+          "xy": 1715.1368319587027,
+          "cosine": 0.8374517008705386,
+          "relative_distance": 0.5701729270960962
+        },
+        "final": {
+          "xx": 2048.0518746958032,
+          "yy": 2048.0561414604954,
+          "xy": 1177.400288273237,
+          "cosine": 0.5748873240792723,
+          "relative_distance": 0.9220771320726926
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0518746958032,
+        "yy": 2048.0529134663407,
+        "xy": 1728.8964893135321,
+        "cosine": 0.8441661425802124,
+        "relative_distance": 0.5582721503697431
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0518746958032,
+        "yy": 2048.040773683804,
+        "xy": 1744.5254336176606,
+        "cosine": 0.8517997923285219,
+        "relative_distance": 0.5444259472717851
+      }
+    },
+    {
+      "matrix": "block06.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.510865254360911,
+      "whitened_delta_relative_to_CD": 2.0875063527249313,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.019951530887604114,
+      "whitened_delta_bottom_block_share": 0.6791829325911842,
+      "reference_min_eigenvalue_over_mean": 0.03395229919083383,
+      "reference_max_eigenvalue_over_mean": 92.15153380776374,
+      "reference_condition": 2714.1470829357577,
+      "stages": {
+        "entry": {
+          "xx": 2048.052143779667,
+          "yy": 2048.0560139549816,
+          "xy": 1506.7733530321489,
+          "cosine": 0.7357097493568832,
+          "relative_distance": 0.7270357630216397
+        },
+        "polar": {
+          "xx": 2048.0391057024567,
+          "yy": 2048.044776986498,
+          "xy": 1660.3264552575217,
+          "cosine": 0.8106896747286139,
+          "relative_distance": 0.615322009007477
+        },
+        "final": {
+          "xx": 2048.0518746958032,
+          "yy": 2048.044985788838,
+          "xy": 1090.8890529931311,
+          "cosine": 0.5326480745699955,
+          "relative_distance": 0.9668000200963986
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0518746958032,
+        "yy": 2048.04400424802,
+        "xy": 1675.424471461564,
+        "cosine": 0.8180592061222279,
+        "relative_distance": 0.6032254044544574
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0518746958032,
+        "yy": 2048.048377610198,
+        "xy": 1719.5231217321007,
+        "cosine": 0.8395903497550771,
+        "relative_distance": 0.5664088863957557
+      }
+    },
+    {
+      "matrix": "block06.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.13368274581383988,
+      "whitened_delta_relative_to_CD": 0.701378800407115,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.10711847408664626,
+      "whitened_delta_bottom_block_share": 0.6630324515032964,
+      "reference_min_eigenvalue_over_mean": 0.07799976215655231,
+      "reference_max_eigenvalue_over_mean": 80.00473009842467,
+      "reference_condition": 1025.7047955844816,
+      "stages": {
+        "entry": {
+          "xx": 512.0130130453776,
+          "yy": 512.013551810534,
+          "xy": 489.5879599568548,
+          "cosine": 0.9562016782754289,
+          "relative_distance": 0.2959673791757208
+        },
+        "polar": {
+          "xx": 512.0097290649,
+          "yy": 512.0097778074062,
+          "xy": 507.45568203928303,
+          "cosine": 0.9911054987403921,
+          "relative_distance": 0.13337542264585456
+        },
+        "final": {
+          "xx": 512.0140516813876,
+          "yy": 512.0120190282494,
+          "xy": 487.8107477054168,
+          "cosine": 0.9527311103873191,
+          "relative_distance": 0.30746965960166106
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0140516813876,
+        "yy": 512.0119446042324,
+        "xy": 507.63362498561617,
+        "cosine": 0.9914467539456923,
+        "relative_distance": 0.1307916546033345
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0140516813876,
+        "yy": 512.0126079432582,
+        "xy": 493.3372902383402,
+        "cosine": 0.9635243098449446,
+        "relative_distance": 0.27009494156807107
+      }
+    },
+    {
+      "matrix": "block06.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.24556368280760318,
+      "whitened_delta_relative_to_CD": 0.8423470450730254,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.041487927864380186,
+      "whitened_delta_bottom_block_share": 0.6027923792885664,
+      "reference_min_eigenvalue_over_mean": 0.07799976215655231,
+      "reference_max_eigenvalue_over_mean": 80.00473009842467,
+      "reference_condition": 1025.7047955844816,
+      "stages": {
+        "entry": {
+          "xx": 512.0130130453776,
+          "yy": 512.0109964866167,
+          "xy": 483.008522673311,
+          "cosine": 0.9433539022097638,
+          "relative_distance": 0.3365887289912894
+        },
+        "polar": {
+          "xx": 512.0097290649,
+          "yy": 512.0107970310632,
+          "xy": 505.3765704504285,
+          "cosine": 0.9870438288525936,
+          "relative_distance": 0.16097319441534408
+        },
+        "final": {
+          "xx": 512.0140516813876,
+          "yy": 512.0118625894104,
+          "xy": 482.0425787334751,
+          "cosine": 0.9414655860107523,
+          "relative_distance": 0.34215285724609434
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0140516813876,
+        "yy": 512.013588984132,
+        "xy": 506.017170210753,
+        "cosine": 0.9882881088677297,
+        "relative_distance": 0.15304826585404882
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0140516813876,
+        "yy": 512.0123137516745,
+        "xy": 489.67626146267014,
+        "cosine": 0.9563743239292294,
+        "relative_distance": 0.295383147903918
+      }
+    },
+    {
+      "matrix": "block07.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.36344817176236754,
+      "whitened_delta_relative_to_CD": 1.4991081935974524,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.0640115514660731,
+      "whitened_delta_bottom_block_share": 0.7318296167982837,
+      "reference_min_eigenvalue_over_mean": 0.05270239245219193,
+      "reference_max_eigenvalue_over_mean": 49.81972807465839,
+      "reference_condition": 945.3029693073518,
+      "stages": {
+        "entry": {
+          "xx": 512.0016195575384,
+          "yy": 512.0012251796444,
+          "xy": 487.3432552002615,
+          "cosine": 0.9518396510419413,
+          "relative_distance": 0.31035570047920247
+        },
+        "polar": {
+          "xx": 512.002685250085,
+          "yy": 512.0013814355883,
+          "xy": 502.36686722617924,
+          "cosine": 0.9811813909149096,
+          "relative_distance": 0.19400301608530748
+        },
+        "final": {
+          "xx": 512.001123031524,
+          "yy": 512.001255350033,
+          "xy": 483.6369670189024,
+          "cosine": 0.9446012572418008,
+          "relative_distance": 0.33286258400927893
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001123031524,
+        "yy": 512.0007821810503,
+        "xy": 502.94390273384175,
+        "cosine": 0.9823104823803284,
+        "relative_distance": 0.18809312444411425
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001123031524,
+        "yy": 512.0012674146466,
+        "xy": 494.58650005632103,
+        "cosine": 0.9659870029030468,
+        "relative_distance": 0.26081795142495684
+      }
+    },
+    {
+      "matrix": "block07.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.5336642773281361,
+      "whitened_delta_relative_to_CD": 4.287195034622997,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.0313644724399479,
+      "whitened_delta_bottom_block_share": 0.727515624655393,
+      "reference_min_eigenvalue_over_mean": 0.05270239245219193,
+      "reference_max_eigenvalue_over_mean": 49.81972807465839,
+      "reference_condition": 945.3029693073518,
+      "stages": {
+        "entry": {
+          "xx": 512.0016195575384,
+          "yy": 512.0013717913954,
+          "xy": 416.77949210484155,
+          "cosine": 0.814020067569967,
+          "relative_distance": 0.6098850505310941
+        },
+        "polar": {
+          "xx": 512.002685250085,
+          "yy": 512.0016015676158,
+          "xy": 476.74650195099446,
+          "cosine": 0.9311416135431366,
+          "relative_distance": 0.37110190941589516
+        },
+        "final": {
+          "xx": 512.001123031524,
+          "yy": 512.0019845714831,
+          "xy": 424.979978727493,
+          "cosine": 0.8300365019837473,
+          "relative_distance": 0.5830328310045959
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001123031524,
+        "yy": 512.0015479467586,
+        "xy": 479.3312044302178,
+        "cosine": 0.9361913167127371,
+        "relative_distance": 0.35723580381898873
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001123031524,
+        "yy": 512.0009657775385,
+        "xy": 462.81691308050677,
+        "cosine": 0.9039374394612394,
+        "relative_distance": 0.43832076333807274
+      }
+    },
+    {
+      "matrix": "block07.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.8585142478948944,
+      "whitened_delta_relative_to_CD": 4.279090622622624,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.07520720247817561,
+      "whitened_delta_bottom_block_share": 0.7894160599447057,
+      "reference_min_eigenvalue_over_mean": 0.04719261014988542,
+      "reference_max_eigenvalue_over_mean": 45.71235365536878,
+      "reference_condition": 968.6337227414358,
+      "stages": {
+        "entry": {
+          "xx": 512.0011215073253,
+          "yy": 512.00115624012,
+          "xy": 426.8930496934817,
+          "cosine": 0.8337736330675792,
+          "relative_distance": 0.5765871531184137
+        },
+        "polar": {
+          "xx": 512.0021278179108,
+          "yy": 512.001161532821,
+          "xy": 477.41064825299304,
+          "cosine": 0.9324396771340594,
+          "relative_distance": 0.3675874293665316
+        },
+        "final": {
+          "xx": 512.0013000612214,
+          "yy": 512.0015352468783,
+          "xy": 421.1577081657981,
+          "cosine": 0.8225713711800265,
+          "relative_distance": 0.595699034027326
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013000612214,
+        "yy": 512.0022974872821,
+        "xy": 480.2348735461562,
+        "cosine": 0.9379554421411824,
+        "relative_distance": 0.35226302188433434
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013000612214,
+        "yy": 512.001301537635,
+        "xy": 456.28006533746117,
+        "cosine": 0.8911697384851072,
+        "relative_distance": 0.4665410200010391
+      }
+    },
+    {
+      "matrix": "block07.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.1186515469515002,
+      "whitened_delta_relative_to_CD": 4.871947821999002,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.059878283477083044,
+      "whitened_delta_bottom_block_share": 0.772701550367386,
+      "reference_min_eigenvalue_over_mean": 0.04719261014988542,
+      "reference_max_eigenvalue_over_mean": 45.71235365536878,
+      "reference_condition": 968.6337227414358,
+      "stages": {
+        "entry": {
+          "xx": 512.0011215073253,
+          "yy": 512.0015301219036,
+          "xy": 377.63144539880085,
+          "cosine": 0.737559506897769,
+          "relative_distance": 0.7244868498816307
+        },
+        "polar": {
+          "xx": 512.0021278179108,
+          "yy": 512.0015247558468,
+          "xy": 466.1688430605939,
+          "cosine": 0.9104827739412721,
+          "relative_distance": 0.42312450493896564
+        },
+        "final": {
+          "xx": 512.0013000612214,
+          "yy": 512.001313540667,
+          "xy": 398.02278213763634,
+          "cosine": 0.7773862622041698,
+          "relative_distance": 0.6672536859788837
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013000612214,
+        "yy": 512.0019496287139,
+        "xy": 468.78660404500494,
+        "cosine": 0.9155959303587098,
+        "relative_distance": 0.41086280723007934
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013000612214,
+        "yy": 512.0005848037691,
+        "xy": 445.94292524255815,
+        "cosine": 0.8709806726605044,
+        "relative_distance": 0.5079748757975374
+      }
+    },
+    {
+      "matrix": "block07.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6225949626708636,
+      "whitened_delta_relative_to_CD": 17.138457062125337,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.13854902495943275,
+      "whitened_delta_bottom_block_share": 0.8076050421849624,
+      "reference_min_eigenvalue_over_mean": 0.01536985724509477,
+      "reference_max_eigenvalue_over_mean": 30.582081621339714,
+      "reference_condition": 1989.7440251827886,
+      "stages": {
+        "entry": {
+          "xx": 512.0006438382493,
+          "yy": 512.00158459845,
+          "xy": 374.08183917618874,
+          "cosine": 0.7306270021451837,
+          "relative_distance": 0.7339935222204423
+        },
+        "polar": {
+          "xx": 512.0008010444667,
+          "yy": 512.0019643813208,
+          "xy": 435.14482464652167,
+          "cosine": 0.8498899404160617,
+          "relative_distance": 0.5479237722894077
+        },
+        "final": {
+          "xx": 512.0017935936389,
+          "yy": 512.0022518281205,
+          "xy": 352.1702128891729,
+          "cosine": 0.6878297297041611,
+          "relative_distance": 0.7901524030083463
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0017935936389,
+        "yy": 512.0017109391015,
+        "xy": 439.83503912723,
+        "cosine": 0.859049870787173,
+        "relative_distance": 0.5309427800351989
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0017935936389,
+        "yy": 512.0023459666106,
+        "xy": 445.4158368878638,
+        "cosine": 0.8699492896175378,
+        "relative_distance": 0.5100015304588259
+      }
+    },
+    {
+      "matrix": "block07.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6916891249944956,
+      "whitened_delta_relative_to_CD": 17.851420732738102,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1458307899351773,
+      "whitened_delta_bottom_block_share": 0.8075953940605963,
+      "reference_min_eigenvalue_over_mean": 0.01536985724509477,
+      "reference_max_eigenvalue_over_mean": 30.582081621339714,
+      "reference_condition": 1989.7440251827886,
+      "stages": {
+        "entry": {
+          "xx": 512.0006438382493,
+          "yy": 512.0016314824816,
+          "xy": 378.88509209623794,
+          "cosine": 0.7400083012076168,
+          "relative_distance": 0.7210990910456745
+        },
+        "polar": {
+          "xx": 512.0008010444667,
+          "yy": 512.001974374572,
+          "xy": 435.24032857391455,
+          "cosine": 0.8500764627246108,
+          "relative_distance": 0.5475832522321921
+        },
+        "final": {
+          "xx": 512.0017935936389,
+          "yy": 512.0019503585236,
+          "xy": 351.03098936922913,
+          "cosine": 0.6856048944009175,
+          "relative_distance": 0.7929629924906851
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0017935936389,
+        "yy": 512.0015577584861,
+        "xy": 439.28340847623065,
+        "cosine": 0.8579725992033117,
+        "relative_distance": 0.532967856604528
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0017935936389,
+        "yy": 512.0007070016935,
+        "xy": 445.8083690688103,
+        "cosine": 0.8707173445570262,
+        "relative_distance": 0.5084929070476671
+      }
+    },
+    {
+      "matrix": "block07.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.1274895559617717,
+      "whitened_delta_relative_to_CD": 0.6761408277043778,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.0967267791014978,
+      "whitened_delta_bottom_block_share": 0.6445978441152302,
+      "reference_min_eigenvalue_over_mean": 0.07022213194507682,
+      "reference_max_eigenvalue_over_mean": 83.51312101764859,
+      "reference_condition": 1189.2706573330345,
+      "stages": {
+        "entry": {
+          "xx": 512.0019961455671,
+          "yy": 512.0018000430094,
+          "xy": 491.5026590054131,
+          "cosine": 0.9599625720819278,
+          "relative_distance": 0.28297498211218486
+        },
+        "polar": {
+          "xx": 512.0012365004296,
+          "yy": 512.0014553339142,
+          "xy": 501.34451276542006,
+          "cosine": 0.9791859274653851,
+          "relative_distance": 0.20402978695616397
+        },
+        "final": {
+          "xx": 512.001775954161,
+          "yy": 512.0018721026107,
+          "xy": 477.071091997356,
+          "cosine": 0.9317761570531219,
+          "relative_distance": 0.36938827635087645
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001775954161,
+        "yy": 512.0007244181588,
+        "xy": 501.30669472119723,
+        "cosine": 0.9791122473610955,
+        "relative_distance": 0.2043904654824085
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001775954161,
+        "yy": 512.0008300178191,
+        "xy": 494.8362912909804,
+        "cosine": 0.9664746718520204,
+        "relative_distance": 0.2589412951961993
+      }
+    },
+    {
+      "matrix": "block07.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.23059409246777218,
+      "whitened_delta_relative_to_CD": 0.7879153484658563,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.036984211546778736,
+      "whitened_delta_bottom_block_share": 0.5926697626323983,
+      "reference_min_eigenvalue_over_mean": 0.07022213194507682,
+      "reference_max_eigenvalue_over_mean": 83.51312101764859,
+      "reference_condition": 1189.2706573330345,
+      "stages": {
+        "entry": {
+          "xx": 512.0019961455671,
+          "yy": 512.0015475589582,
+          "xy": 485.8818302407209,
+          "cosine": 0.948984665586212,
+          "relative_distance": 0.3194223287922518
+        },
+        "polar": {
+          "xx": 512.0012365004296,
+          "yy": 512.0018582827717,
+          "xy": 497.7781602732393,
+          "cosine": 0.9722200309926193,
+          "relative_distance": 0.23571162837575566
+        },
+        "final": {
+          "xx": 512.001775954161,
+          "yy": 512.0007953569966,
+          "xy": 469.2117726874745,
+          "cosine": 0.9164269423403879,
+          "relative_distance": 0.408834875296971
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.001775954161,
+        "yy": 512.0008089961419,
+        "xy": 498.148019892963,
+        "cosine": 0.9729428952903695,
+        "relative_distance": 0.23262450068840915
+      },
+      "post_only_vs_A0": {
+        "xx": 512.001775954161,
+        "yy": 512.0013050195455,
+        "xy": 491.682869467991,
+        "cosine": 0.9603152150685141,
+        "relative_distance": 0.2817259898579956
+      }
+    },
+    {
+      "matrix": "block07.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.3604273632905986,
+      "whitened_delta_relative_to_CD": 1.8343961968820128,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.03768972372743759,
+      "whitened_delta_bottom_block_share": 0.7019332635996874,
+      "reference_min_eigenvalue_over_mean": 0.03540626128290863,
+      "reference_max_eigenvalue_over_mean": 95.97611449933747,
+      "reference_condition": 2710.710225303207,
+      "stages": {
+        "entry": {
+          "xx": 2048.0502425067657,
+          "yy": 2048.056234082329,
+          "xy": 1571.4992930304422,
+          "cosine": 0.7673136926561249,
+          "relative_distance": 0.6821827434153583
+        },
+        "polar": {
+          "xx": 2048.044352217242,
+          "yy": 2048.041901070307,
+          "xy": 1711.2458270964353,
+          "cosine": 0.8355516565225076,
+          "relative_distance": 0.5734949783038176
+        },
+        "final": {
+          "xx": 2048.0531598475436,
+          "yy": 2048.053177623513,
+          "xy": 1162.2215625505503,
+          "cosine": 0.5674762649194836,
+          "relative_distance": 0.9300792836716125
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0531598475436,
+        "yy": 2048.0486565816527,
+        "xy": 1723.7763684271192,
+        "cosine": 0.8416667581426843,
+        "relative_distance": 0.5627309619809507
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0531598475436,
+        "yy": 2048.0465220445676,
+        "xy": 1735.21414910355,
+        "cosine": 0.8472519146820573,
+        "relative_distance": 0.5527166322600495
+      }
+    },
+    {
+      "matrix": "block07.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.4938786154279739,
+      "whitened_delta_relative_to_CD": 2.0427814609249664,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.024662168198390615,
+      "whitened_delta_bottom_block_share": 0.6833679191716507,
+      "reference_min_eigenvalue_over_mean": 0.03540626128290863,
+      "reference_max_eigenvalue_over_mean": 95.97611449933747,
+      "reference_condition": 2710.710225303207,
+      "stages": {
+        "entry": {
+          "xx": 2048.0502425067657,
+          "yy": 2048.0495288359025,
+          "xy": 1494.8188592459983,
+          "cosine": 0.7298742426657403,
+          "relative_distance": 0.7350179729364176
+        },
+        "polar": {
+          "xx": 2048.044352217242,
+          "yy": 2048.042060645744,
+          "xy": 1657.3588813950291,
+          "cosine": 0.8092401938546344,
+          "relative_distance": 0.6176725660481212
+        },
+        "final": {
+          "xx": 2048.0531598475436,
+          "yy": 2048.0513068637792,
+          "xy": 1075.8484008498776,
+          "cosine": 0.5253032043461353,
+          "relative_distance": 0.9743680833361352
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.0531598475436,
+        "yy": 2048.0530215337703,
+        "xy": 1669.4217023672263,
+        "cosine": 0.8151261849390118,
+        "relative_distance": 0.6080687606156554
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.0531598475436,
+        "yy": 2048.0546333476213,
+        "xy": 1709.0432219643876,
+        "cosine": 0.8344718001824657,
+        "relative_distance": 0.5753751113201905
+      }
+    },
+    {
+      "matrix": "block07.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.11566327421707061,
+      "whitened_delta_relative_to_CD": 0.6980061208592719,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.11941862670431816,
+      "whitened_delta_bottom_block_share": 0.6753729157002056,
+      "reference_min_eigenvalue_over_mean": 0.09256240929767146,
+      "reference_max_eigenvalue_over_mean": 92.84759067921495,
+      "reference_condition": 1003.0809632517924,
+      "stages": {
+        "entry": {
+          "xx": 512.0111118015133,
+          "yy": 512.0130644679537,
+          "xy": 488.2074117540086,
+          "cosine": 0.953507589114628,
+          "relative_distance": 0.3049344176756626
+        },
+        "polar": {
+          "xx": 512.0111723209357,
+          "yy": 512.0102483256115,
+          "xy": 507.49956011687163,
+          "cosine": 0.9911893440601133,
+          "relative_distance": 0.13274522959612142
+        },
+        "final": {
+          "xx": 512.0136837437097,
+          "yy": 512.0135673256348,
+          "xy": 486.71561393449815,
+          "cosine": 0.9505911359805055,
+          "relative_distance": 0.31435285397902857
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0136837437097,
+        "yy": 512.0134185989399,
+        "xy": 507.7922433679075,
+        "cosine": 0.9917554764053739,
+        "relative_distance": 0.1284096683272592
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0136837437097,
+        "yy": 512.0140513535929,
+        "xy": 491.87018147105215,
+        "cosine": 0.9606579287119534,
+        "relative_distance": 0.2805069889015231
+      }
+    },
+    {
+      "matrix": "block07.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.22502820310643884,
+      "whitened_delta_relative_to_CD": 0.7961702983297757,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.03809003532622805,
+      "whitened_delta_bottom_block_share": 0.6209884911876907,
+      "reference_min_eigenvalue_over_mean": 0.09256240929767146,
+      "reference_max_eigenvalue_over_mean": 92.84759067921495,
+      "reference_condition": 1003.0809632517924,
+      "stages": {
+        "entry": {
+          "xx": 512.0111118015133,
+          "yy": 512.0129242339078,
+          "xy": 481.33018522658523,
+          "cosine": 0.9400759519099606,
+          "relative_distance": 0.346191144173242
+        },
+        "polar": {
+          "xx": 512.0111723209357,
+          "yy": 512.0104506834693,
+          "xy": 505.7662702078091,
+          "cosine": 0.987803887820363,
+          "relative_distance": 0.1561800472863019
+        },
+        "final": {
+          "xx": 512.0136837437097,
+          "yy": 512.0136944490151,
+          "xy": 481.58926713207654,
+          "cosine": 0.9405788895644938,
+          "relative_distance": 0.3447350027389202
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0136837437097,
+        "yy": 512.0120258418617,
+        "xy": 506.44191872223985,
+        "cosine": 0.9891195386644409,
+        "relative_distance": 0.14751571930727966
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0136837437097,
+        "yy": 512.0139651262418,
+        "xy": 488.53547236623126,
+        "cosine": 0.954145081737519,
+        "relative_distance": 0.30283636129944624
+      }
+    },
+    {
+      "matrix": "block08.q",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.4652999554707353,
+      "whitened_delta_relative_to_CD": 1.9002619099146287,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.07479934537567946,
+      "whitened_delta_bottom_block_share": 0.7393390378692413,
+      "reference_min_eigenvalue_over_mean": 0.052491336586423715,
+      "reference_max_eigenvalue_over_mean": 46.26643629983829,
+      "reference_condition": 881.4109014668256,
+      "stages": {
+        "entry": {
+          "xx": 512.0020273849552,
+          "yy": 512.0012427041124,
+          "xy": 486.15526358528996,
+          "cosine": 0.949518966952414,
+          "relative_distance": 0.317745163188719
+        },
+        "polar": {
+          "xx": 512.0015127169884,
+          "yy": 512.0017156650083,
+          "xy": 501.97576658210403,
+          "cosine": 0.9804183281243635,
+          "relative_distance": 0.19789732568462834
+        },
+        "final": {
+          "xx": 512.0010600993224,
+          "yy": 512.0004879294502,
+          "xy": 482.4015829098578,
+          "cosine": 0.9421891672694591,
+          "relative_distance": 0.34003176448206934
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0010600993224,
+        "yy": 512.0009680290799,
+        "xy": 502.564058232333,
+        "cosine": 0.9815684821462427,
+        "relative_distance": 0.19199748017379595
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0010600993224,
+        "yy": 512.0005471859081,
+        "xy": 493.19059598689535,
+        "cosine": 0.9632613708380272,
+        "relative_distance": 0.27106682113473746
+      }
+    },
+    {
+      "matrix": "block08.q",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.3770867885288214,
+      "whitened_delta_relative_to_CD": 3.4174884651983946,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.03257519929419392,
+      "whitened_delta_bottom_block_share": 0.70095228647771,
+      "reference_min_eigenvalue_over_mean": 0.052491336586423715,
+      "reference_max_eigenvalue_over_mean": 46.26643629983829,
+      "reference_condition": 881.4109014668256,
+      "stages": {
+        "entry": {
+          "xx": 512.0020273849552,
+          "yy": 512.0014213593772,
+          "xy": 410.0581294583974,
+          "cosine": 0.8008920867625912,
+          "relative_distance": 0.6310432558891689
+        },
+        "polar": {
+          "xx": 512.0015127169884,
+          "yy": 512.001023929742,
+          "xy": 475.7271965709641,
+          "cosine": 0.9291523791120041,
+          "relative_distance": 0.37642419441479846
+        },
+        "final": {
+          "xx": 512.0010600993224,
+          "yy": 512.0020293409777,
+          "xy": 424.2303524183111,
+          "cosine": 0.8285724072382966,
+          "relative_distance": 0.5855386494882301
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0010600993224,
+        "yy": 512.0008884777742,
+        "xy": 478.6031619477509,
+        "cosine": 0.9347700218984961,
+        "relative_distance": 0.3611923785714471
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0010600993224,
+        "yy": 512.0015103304315,
+        "xy": 461.72893620054333,
+        "cosine": 0.901812064801379,
+        "relative_distance": 0.44314326886408684
+      }
+    },
+    {
+      "matrix": "block08.k",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.9481633111416499,
+      "whitened_delta_relative_to_CD": 5.427870399722837,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.12424675436653186,
+      "whitened_delta_bottom_block_share": 0.8022782213854874,
+      "reference_min_eigenvalue_over_mean": 0.047425445245779366,
+      "reference_max_eigenvalue_over_mean": 32.08607421603057,
+      "reference_condition": 676.5582073029893,
+      "stages": {
+        "entry": {
+          "xx": 512.002209131244,
+          "yy": 512.0025868811595,
+          "xy": 426.6129803746177,
+          "cosine": 0.8332245747987282,
+          "relative_distance": 0.5775387203017944
+        },
+        "polar": {
+          "xx": 512.000390761626,
+          "yy": 512.0016415975497,
+          "xy": 474.20642231317436,
+          "cosine": 0.9261825803626863,
+          "relative_distance": 0.3842330277509997
+        },
+        "final": {
+          "xx": 512.0023314358878,
+          "yy": 512.0014973443147,
+          "xy": 414.09289049513495,
+          "cosine": 0.8087721527145879,
+          "relative_distance": 0.6184297721215739
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0023314358878,
+        "yy": 512.0013431444072,
+        "xy": 476.87222518483486,
+        "cosine": 0.9313877225694741,
+        "relative_distance": 0.37043814925464585
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0023314358878,
+        "yy": 512.00152289087,
+        "xy": 453.3630668242172,
+        "cosine": 0.8854714069849412,
+        "relative_distance": 0.47859900247403686
+      }
+    },
+    {
+      "matrix": "block08.k",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.0789977211151203,
+      "whitened_delta_relative_to_CD": 5.170062814349737,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.09385587479795543,
+      "whitened_delta_bottom_block_share": 0.8002661401165312,
+      "reference_min_eigenvalue_over_mean": 0.047425445245779366,
+      "reference_max_eigenvalue_over_mean": 32.08607421603057,
+      "reference_condition": 676.5582073029893,
+      "stages": {
+        "entry": {
+          "xx": 512.002209131244,
+          "yy": 512.0019878519188,
+          "xy": 371.3002060308634,
+          "cosine": 0.7251927426172008,
+          "relative_distance": 0.7413598289617838
+        },
+        "polar": {
+          "xx": 512.000390761626,
+          "yy": 512.0014534150367,
+          "xy": 462.630018817581,
+          "cosine": 0.9035726282110412,
+          "relative_distance": 0.4391525289842479
+        },
+        "final": {
+          "xx": 512.0023314358878,
+          "yy": 512.0015158904981,
+          "xy": 388.54008721884384,
+          "cosine": 0.7588645066782171,
+          "relative_distance": 0.6944570559438578
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0023314358878,
+        "yy": 512.001918728292,
+        "xy": 464.7600111496002,
+        "cosine": 0.9077306291944051,
+        "relative_distance": 0.42957964015552236
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0023314358878,
+        "yy": 512.0007631676538,
+        "xy": 440.2118222882349,
+        "cosine": 0.8597861170706441,
+        "relative_distance": 0.5295539031904217
+      }
+    },
+    {
+      "matrix": "block08.v",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.6469382960035888,
+      "whitened_delta_relative_to_CD": 16.022802855805093,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.15025671723936052,
+      "whitened_delta_bottom_block_share": 0.7977376334965635,
+      "reference_min_eigenvalue_over_mean": 0.016268734291092518,
+      "reference_max_eigenvalue_over_mean": 29.4815636798152,
+      "reference_condition": 1812.1608695740388,
+      "stages": {
+        "entry": {
+          "xx": 512.0014680502546,
+          "yy": 512.0014414782789,
+          "xy": 365.2330260392994,
+          "cosine": 0.7133437271334675,
+          "relative_distance": 0.7571740426454866
+        },
+        "polar": {
+          "xx": 512.0011896738511,
+          "yy": 512.0016564534501,
+          "xy": 437.11998170371015,
+          "cosine": 0.8537475913409992,
+          "relative_distance": 0.5408372681806469
+        },
+        "final": {
+          "xx": 512.0013986477056,
+          "yy": 512.0020637899296,
+          "xy": 354.10621919731466,
+          "cosine": 0.6916113708335346,
+          "relative_distance": 0.7853519331876748
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013986477056,
+        "yy": 512.0017203610328,
+        "xy": 440.42341561925264,
+        "cosine": 0.8601993635441573,
+        "relative_distance": 0.5287734493663131
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013986477056,
+        "yy": 512.0018308280469,
+        "xy": 445.39121011048445,
+        "cosine": 0.869901963763427,
+        "relative_distance": 0.510094287645964
+      }
+    },
+    {
+      "matrix": "block08.v",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 1.7150468536162833,
+      "whitened_delta_relative_to_CD": 16.41523582640887,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.1468971339816145,
+      "whitened_delta_bottom_block_share": 0.7999231589646864,
+      "reference_min_eigenvalue_over_mean": 0.016268734291092518,
+      "reference_max_eigenvalue_over_mean": 29.4815636798152,
+      "reference_condition": 1812.1608695740388,
+      "stages": {
+        "entry": {
+          "xx": 512.0014680502546,
+          "yy": 512.0011657456429,
+          "xy": 357.51413747962937,
+          "cosine": 0.6982680037733263,
+          "relative_distance": 0.7768293340880433
+        },
+        "polar": {
+          "xx": 512.0011896738511,
+          "yy": 512.000818432161,
+          "xy": 436.55505992944194,
+          "cosine": 0.8526449293530591,
+          "relative_distance": 0.5428720240073321
+        },
+        "final": {
+          "xx": 512.0013986477056,
+          "yy": 512.000491314021,
+          "xy": 351.47709967893655,
+          "cosine": 0.6864774433027881,
+          "relative_distance": 0.7918614511338702
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0013986477056,
+        "yy": 512.0006515127872,
+        "xy": 439.43147425308507,
+        "cosine": 0.8582628798142142,
+        "relative_distance": 0.5324227958521309
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0013986477056,
+        "yy": 512.0014472058663,
+        "xy": 444.8862002807117,
+        "cosine": 0.8689159450721469,
+        "relative_distance": 0.512023556379691
+      }
+    },
+    {
+      "matrix": "block08.o",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.10939273239270479,
+      "whitened_delta_relative_to_CD": 0.6780952021646307,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.10563868122378435,
+      "whitened_delta_bottom_block_share": 0.6614291609148951,
+      "reference_min_eigenvalue_over_mean": 0.08286507031196758,
+      "reference_max_eigenvalue_over_mean": 97.86521308822184,
+      "reference_condition": 1181.018886724916,
+      "stages": {
+        "entry": {
+          "xx": 512.0026186513221,
+          "yy": 512.0014542779609,
+          "xy": 489.64811091499166,
+          "cosine": 0.9563401628171513,
+          "relative_distance": 0.2954988579972742
+        },
+        "polar": {
+          "xx": 512.0012196273217,
+          "yy": 512.0024224792012,
+          "xy": 501.5941465778066,
+          "cosine": 0.9796725830902345,
+          "relative_distance": 0.2016305571494003
+        },
+        "final": {
+          "xx": 512.0016986585833,
+          "yy": 512.0011039273973,
+          "xy": 476.80774293985405,
+          "cosine": 0.931262574156674,
+          "relative_distance": 0.3707759051541951
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016986585833,
+        "yy": 512.001742312038,
+        "xy": 501.7183989694516,
+        "cosine": 0.979915455154894,
+        "relative_distance": 0.20042228269987708
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016986585833,
+        "yy": 512.001101179127,
+        "xy": 492.9444384218124,
+        "cosine": 0.9627794738452294,
+        "relative_distance": 0.27283879649977083
+      }
+    },
+    {
+      "matrix": "block08.o",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.21770769605067883,
+      "whitened_delta_relative_to_CD": 0.7587947003741194,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.03153226474239799,
+      "whitened_delta_bottom_block_share": 0.617491847959954,
+      "reference_min_eigenvalue_over_mean": 0.08286507031196758,
+      "reference_max_eigenvalue_over_mean": 97.86521308822184,
+      "reference_condition": 1181.018886724916,
+      "stages": {
+        "entry": {
+          "xx": 512.0026186513221,
+          "yy": 512.0011945465657,
+          "xy": 481.52524354225443,
+          "cosine": 0.9404754891272379,
+          "relative_distance": 0.34503457244668273
+        },
+        "polar": {
+          "xx": 512.0012196273217,
+          "yy": 512.001102732863,
+          "xy": 498.5497893883406,
+          "cosine": 0.973727849052637,
+          "relative_distance": 0.2292254259382486
+        },
+        "final": {
+          "xx": 512.0016986585833,
+          "yy": 512.0019128612144,
+          "xy": 470.1892279324677,
+          "cosine": 0.9183350969527073,
+          "relative_distance": 0.4041408668524001
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0016986585833,
+        "yy": 512.0016550812363,
+        "xy": 498.8986040592148,
+        "cosine": 0.9744081447334325,
+        "relative_distance": 0.22623816732587326
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0016986585833,
+        "yy": 512.0013983169381,
+        "xy": 490.191742362349,
+        "cosine": 0.9574028512417438,
+        "relative_distance": 0.2918805792254543
+      }
+    },
+    {
+      "matrix": "block08.up",
+      "pair": "A0__A1",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.31053295812356485,
+      "whitened_delta_relative_to_CD": 1.8596218085912493,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.04629270179885312,
+      "whitened_delta_bottom_block_share": 0.7117133028373414,
+      "reference_min_eigenvalue_over_mean": 0.037418679751768526,
+      "reference_max_eigenvalue_over_mean": 124.23581824497268,
+      "reference_condition": 3320.155042057594,
+      "stages": {
+        "entry": {
+          "xx": 2048.0474882981325,
+          "yy": 2048.0479557692042,
+          "xy": 1571.7571367897863,
+          "cosine": 0.7674416566959068,
+          "relative_distance": 0.6819946771713976
+        },
+        "polar": {
+          "xx": 2048.042264882897,
+          "yy": 2048.0420396564787,
+          "xy": 1698.7756329818067,
+          "cosine": 0.8294632173948113,
+          "relative_distance": 0.5840150224576272
+        },
+        "final": {
+          "xx": 2048.053313617842,
+          "yy": 2048.047538837799,
+          "xy": 1130.3330636763603,
+          "cosine": 0.5519068520980587,
+          "relative_distance": 0.9466704982949903
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.053313617842,
+        "yy": 2048.0544135281434,
+        "xy": 1711.0976604285881,
+        "cosine": 0.8354749310369718,
+        "relative_distance": 0.5736289970743873
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.053313617842,
+        "yy": 2048.046384971975,
+        "xy": 1717.762407203391,
+        "cosine": 0.8387307602875146,
+        "relative_distance": 0.5679242324880267
+      }
+    },
+    {
+      "matrix": "block08.up",
+      "pair": "A0__B0",
+      "dimension": 2048,
+      "factor_delta_relative_to_CD": 0.4320367885243441,
+      "whitened_delta_relative_to_CD": 2.031665027912121,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.02851713287237598,
+      "whitened_delta_bottom_block_share": 0.696734390424388,
+      "reference_min_eigenvalue_over_mean": 0.037418679751768526,
+      "reference_max_eigenvalue_over_mean": 124.23581824497268,
+      "reference_condition": 3320.155042057594,
+      "stages": {
+        "entry": {
+          "xx": 2048.0474882981325,
+          "yy": 2048.045996302214,
+          "xy": 1486.4651891940662,
+          "cosine": 0.7257965155251814,
+          "relative_distance": 0.7405449136908504
+        },
+        "polar": {
+          "xx": 2048.042264882897,
+          "yy": 2048.041955448985,
+          "xy": 1645.4964123388459,
+          "cosine": 0.8034485248965537,
+          "relative_distance": 0.6269792026139264
+        },
+        "final": {
+          "xx": 2048.053313617842,
+          "yy": 2048.0572207026416,
+          "xy": 1045.1238846223814,
+          "cosine": 0.5103006258576153,
+          "relative_distance": 0.9896462410821132
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 2048.053313617842,
+        "yy": 2048.057752939921,
+        "xy": 1655.5236400339263,
+        "cosine": 0.8083392335482475,
+        "relative_distance": 0.6191299930909091
+      },
+      "post_only_vs_A0": {
+        "xx": 2048.053313617842,
+        "yy": 2048.0536105063347,
+        "xy": 1693.3559428140902,
+        "cosine": 0.8268123729099994,
+        "relative_distance": 0.5885365573059256
+      }
+    },
+    {
+      "matrix": "block08.down",
+      "pair": "A0__A1",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.09533208628530565,
+      "whitened_delta_relative_to_CD": 0.6984198613307376,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.11857600324992663,
+      "whitened_delta_bottom_block_share": 0.7099459392540861,
+      "reference_min_eigenvalue_over_mean": 0.12265738354342572,
+      "reference_max_eigenvalue_over_mean": 110.85018300555306,
+      "reference_condition": 903.7383629360362,
+      "stages": {
+        "entry": {
+          "xx": 512.0135807088453,
+          "yy": 512.0135303809226,
+          "xy": 484.5506759952094,
+          "cosine": 0.9463629834556861,
+          "relative_distance": 0.3275271405798717
+        },
+        "polar": {
+          "xx": 512.0117891159402,
+          "yy": 512.0114143462285,
+          "xy": 507.3020512763711,
+          "cosine": 0.9908018676944887,
+          "relative_distance": 0.1356328053183827
+        },
+        "final": {
+          "xx": 512.0159583235409,
+          "yy": 512.015474881156,
+          "xy": 483.2302159204439,
+          "cosine": 0.9437800447359966,
+          "relative_distance": 0.3353205294127902
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0159583235409,
+        "yy": 512.0133916133788,
+        "xy": 507.74037779142134,
+        "cosine": 0.9916520025999122,
+        "relative_distance": 0.12921282041003454
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0159583235409,
+        "yy": 512.0148967896042,
+        "xy": 487.9946177490209,
+        "cosine": 0.9530857694622191,
+        "relative_distance": 0.3063141586867085
+      }
+    },
+    {
+      "matrix": "block08.down",
+      "pair": "A0__B0",
+      "dimension": 512,
+      "factor_delta_relative_to_CD": 0.1995694950092218,
+      "whitened_delta_relative_to_CD": 0.7460193041952287,
+      "bottom_three_quarters_pair_dimension_share": 0.5625,
+      "raw_delta_bottom_block_share": 0.02987850993003507,
+      "whitened_delta_bottom_block_share": 0.6753371296715831,
+      "reference_min_eigenvalue_over_mean": 0.12265738354342572,
+      "reference_max_eigenvalue_over_mean": 110.85018300555306,
+      "reference_condition": 903.7383629360362,
+      "stages": {
+        "entry": {
+          "xx": 512.0135807088453,
+          "yy": 512.0118951672674,
+          "xy": 478.53366053232344,
+          "cosine": 0.93461280369721,
+          "relative_distance": 0.3616271247491987
+        },
+        "polar": {
+          "xx": 512.0117891159402,
+          "yy": 512.0095470454017,
+          "xy": 506.57540792065197,
+          "cosine": 0.9893844786883457,
+          "relative_distance": 0.14570860010063535
+        },
+        "final": {
+          "xx": 512.0159583235409,
+          "yy": 512.0134574989406,
+          "xy": 480.38507209912217,
+          "cosine": 0.9382251421258603,
+          "relative_distance": 0.3514959658783296
+        }
+      },
+      "pre_only_vs_A0": {
+        "xx": 512.0159583235409,
+        "yy": 512.014727351743,
+        "xy": 507.2870117888381,
+        "cosine": 0.9907652551538154,
+        "relative_distance": 0.13590241900692307
+      },
+      "post_only_vs_A0": {
+        "xx": 512.0159583235409,
+        "yy": 512.013403401882,
+        "xy": 485.7493933226714,
+        "cosine": 0.9487020811702648,
+        "relative_distance": 0.3203054506132632
+      }
+    }
+  ],
+  "summary": {
+    "A0__A1": {
+      "all": {
+        "entry": 0.8375436685311591,
+        "polar": 0.8990436143006973,
+        "final": 0.740573322392372,
+        "pre_only_vs_A0": 0.9037457631506293,
+        "post_only_vs_A0": 0.8980101072446827,
+        "median_factor_delta": 0.3604273498058319,
+        "median_whitened_delta": 1.7205032110214233
+      },
+      "q": {
+        "entry": 0.9477142741436205,
+        "polar": 0.9797794793576685,
+        "final": 0.9402971711839582,
+        "pre_only_vs_A0": 0.9807005032334448,
+        "post_only_vs_A0": 0.9640799697573817,
+        "median_factor_delta": 0.3571217954158783,
+        "median_whitened_delta": 1.4991081953048706
+      },
+      "k": {
+        "entry": 0.8446117683954246,
+        "polar": 0.934382995472072,
+        "final": 0.8283902330901002,
+        "pre_only_vs_A0": 0.9394513482974389,
+        "post_only_vs_A0": 0.8978478673002226,
+        "median_factor_delta": 0.8216771483421326,
+        "median_whitened_delta": 3.60101580619812
+      },
+      "v": {
+        "entry": 0.7433270542658618,
+        "polar": 0.8577923680429397,
+        "final": 0.7031324228986822,
+        "pre_only_vs_A0": 0.8662999547189805,
+        "post_only_vs_A0": 0.8793112514164566,
+        "median_factor_delta": 1.6446974277496338,
+        "median_whitened_delta": 14.333612442016602
+      },
+      "o": {
+        "entry": 0.9592580334258068,
+        "polar": 0.9791621974968714,
+        "final": 0.9352903158451166,
+        "pre_only_vs_A0": 0.979085683923654,
+        "post_only_vs_A0": 0.9688754371543236,
+        "median_factor_delta": 0.16124394536018372,
+        "median_whitened_delta": 0.678642213344574
+      },
+      "up": {
+        "entry": 0.772210190056938,
+        "polar": 0.8374677208728941,
+        "final": 0.5767094619426205,
+        "pre_only_vs_A0": 0.8443798699356059,
+        "post_only_vs_A0": 0.8522102471315842,
+        "median_factor_delta": 0.37875649333000183,
+        "median_whitened_delta": 1.8596217632293701
+      },
+      "down": {
+        "entry": 0.9541442640478902,
+        "polar": 0.9904074720486947,
+        "final": 0.951221064526576,
+        "pre_only_vs_A0": 0.9906579241796655,
+        "post_only_vs_A0": 0.9631377626534589,
+        "median_factor_delta": 0.15074673295021057,
+        "median_whitened_delta": 0.7013788223266602
+      }
+    },
+    "A0__B0": {
+      "all": {
+        "entry": 0.7947988251565319,
+        "polar": 0.8780808730850166,
+        "final": 0.7020683408274936,
+        "pre_only_vs_A0": 0.8839139822516142,
+        "post_only_vs_A0": 0.8825244545603522,
+        "median_factor_delta": 0.6071078777313232,
+        "median_whitened_delta": 2.309987783432007
+      },
+      "q": {
+        "entry": 0.8260245137451933,
+        "polar": 0.9338578115080137,
+        "final": 0.8360973338928557,
+        "pre_only_vs_A0": 0.9382974497518408,
+        "post_only_vs_A0": 0.9088649499138206,
+        "median_factor_delta": 1.233633041381836,
+        "median_whitened_delta": 3.507528066635132
+      },
+      "k": {
+        "entry": 0.7605234782162328,
+        "polar": 0.9154765980353159,
+        "final": 0.7891804297959273,
+        "pre_only_vs_A0": 0.920898142047792,
+        "post_only_vs_A0": 0.8787241071210647,
+        "median_factor_delta": 1.0573859214782715,
+        "median_whitened_delta": 3.775381326675415
+      },
+      "v": {
+        "entry": 0.7354709651566637,
+        "polar": 0.8572160476996139,
+        "final": 0.7010478932702082,
+        "pre_only_vs_A0": 0.8655164741511561,
+        "post_only_vs_A0": 0.8792391011394792,
+        "median_factor_delta": 1.5961655378341675,
+        "median_whitened_delta": 13.739377975463867
+      },
+      "o": {
+        "entry": 0.9468702271609688,
+        "polar": 0.9707887520920184,
+        "final": 0.9178469071455446,
+        "pre_only_vs_A0": 0.971761951572583,
+        "post_only_vs_A0": 0.9621197473674903,
+        "median_factor_delta": 0.27378541231155396,
+        "median_whitened_delta": 0.8264886140823364
+      },
+      "up": {
+        "entry": 0.7358972387247181,
+        "polar": 0.8097737380189873,
+        "final": 0.5337271970649964,
+        "pre_only_vs_A0": 0.8178067191807289,
+        "post_only_vs_A0": 0.839543857922533,
+        "median_factor_delta": 0.5413308143615723,
+        "median_whitened_delta": 2.0957765579223633
+      },
+      "down": {
+        "entry": 0.9407133888390008,
+        "polar": 0.9862967344378303,
+        "final": 0.9395427435601614,
+        "pre_only_vs_A0": 0.987528144661676,
+        "post_only_vs_A0": 0.9555986639832418,
+        "median_factor_delta": 0.26258212327957153,
+        "median_whitened_delta": 0.8490811586380005
+      }
+    }
+  },
+  "saved_direction_relative_errors": {
+    "block01.q:A0": 0.0,
+    "block01.q:B0": 0.0,
+    "block01.k:A0": 0.0,
+    "block01.k:B0": 0.0,
+    "block01.v:A0": 0.0,
+    "block01.v:B0": 0.0,
+    "block01.o:A0": 0.0,
+    "block01.o:B0": 0.0,
+    "block01.up:A0": 0.0,
+    "block01.up:B0": 0.0,
+    "block01.down:A0": 0.0,
+    "block01.down:B0": 0.0,
+    "block02.q:A0": 0.0,
+    "block02.q:B0": 0.0,
+    "block02.k:A0": 0.0,
+    "block02.k:B0": 0.0,
+    "block02.v:A0": 0.0,
+    "block02.v:B0": 0.0,
+    "block02.o:A0": 0.0,
+    "block02.o:B0": 0.0,
+    "block02.up:A0": 0.0,
+    "block02.up:B0": 0.0,
+    "block02.down:A0": 0.0,
+    "block02.down:B0": 0.0,
+    "block03.q:A0": 0.0,
+    "block03.q:B0": 0.0,
+    "block03.k:A0": 0.0,
+    "block03.k:B0": 0.0,
+    "block03.v:A0": 0.0,
+    "block03.v:B0": 0.0,
+    "block03.o:A0": 0.0,
+    "block03.o:B0": 0.0,
+    "block03.up:A0": 0.0,
+    "block03.up:B0": 0.0,
+    "block03.down:A0": 0.0,
+    "block03.down:B0": 0.0,
+    "block04.q:A0": 0.0,
+    "block04.q:B0": 0.0,
+    "block04.k:A0": 0.0,
+    "block04.k:B0": 0.0,
+    "block04.v:A0": 0.0,
+    "block04.v:B0": 0.0,
+    "block04.o:A0": 0.0,
+    "block04.o:B0": 0.0,
+    "block04.up:A0": 0.0,
+    "block04.up:B0": 0.0,
+    "block04.down:A0": 0.0,
+    "block04.down:B0": 0.0,
+    "block05.q:A0": 0.0,
+    "block05.q:B0": 0.0,
+    "block05.k:A0": 0.0,
+    "block05.k:B0": 0.0,
+    "block05.v:A0": 0.0,
+    "block05.v:B0": 0.0,
+    "block05.o:A0": 0.0,
+    "block05.o:B0": 0.0,
+    "block05.up:A0": 0.0,
+    "block05.up:B0": 0.0,
+    "block05.down:A0": 0.0,
+    "block05.down:B0": 0.0,
+    "block06.q:A0": 0.0,
+    "block06.q:B0": 0.0,
+    "block06.k:A0": 0.0,
+    "block06.k:B0": 0.0,
+    "block06.v:A0": 0.0,
+    "block06.v:B0": 0.0,
+    "block06.o:A0": 0.0,
+    "block06.o:B0": 0.0,
+    "block06.up:A0": 0.0,
+    "block06.up:B0": 0.0,
+    "block06.down:A0": 0.0,
+    "block06.down:B0": 0.0,
+    "block07.q:A0": 0.0,
+    "block07.q:B0": 0.0,
+    "block07.k:A0": 0.0,
+    "block07.k:B0": 0.0,
+    "block07.v:A0": 0.0,
+    "block07.v:B0": 0.0,
+    "block07.o:A0": 0.0,
+    "block07.o:B0": 0.0,
+    "block07.up:A0": 0.0,
+    "block07.up:B0": 0.0,
+    "block07.down:A0": 0.0,
+    "block07.down:B0": 0.0,
+    "block08.q:A0": 0.0,
+    "block08.q:B0": 0.0,
+    "block08.k:A0": 0.0,
+    "block08.k:B0": 0.0,
+    "block08.v:A0": 0.0,
+    "block08.v:B0": 0.0,
+    "block08.o:A0": 0.0,
+    "block08.o:B0": 0.0,
+    "block08.up:A0": 0.0,
+    "block08.up:B0": 0.0,
+    "block08.down:A0": 0.0,
+    "block08.down:B0": 0.0
+  },
+  "seconds": 65.69850826263428,
+  "source_sha256": "68a6d424393284ccc1bf1959d5da195223daf0b29edc43b267112ef0a7825888",
+  "scope": "Independent CD reference; finite-sample inverse metric, not true B. All stages normalized to identical per-matrix target solely for comparisons; hybrid maps are sensitivity diagnostics."
+}

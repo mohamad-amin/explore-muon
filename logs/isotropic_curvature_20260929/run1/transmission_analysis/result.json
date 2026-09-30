@@ -1,0 +1,105 @@
+{
+  "status": "complete",
+  "seconds": 17.956751875579357,
+  "panels": 18,
+  "rows": 270,
+  "contrasts": 216,
+  "gelu_derivative_error": 5.10702591327572e-15,
+  "max_archived_kick_energy_error": 4.996003610813204e-16,
+  "max_pooled_identity_error": 4.336808689942018e-19,
+  "source_tensor_records": [
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000010.pt",
+      "tensor": "blocks.0.mlp.down.weight",
+      "sha256": "9ba7ce10cb0ff78845244746399b28174da7ac4c08d5a405f44191271a777a00"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000010.pt",
+      "tensor": "blocks.3.mlp.down.weight",
+      "sha256": "f95b0945f640032e0c53c7f6fd0d8f1805bc2d9ebaf6d7a9bc08f7637cbf13bb"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000010.pt",
+      "tensor": "blocks.7.mlp.down.weight",
+      "sha256": "1f0f3d1b5b8b7d372b7342b43f7e56ffe8509f89794824f1ba2fa8ed7deba7a7"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000500.pt",
+      "tensor": "blocks.0.mlp.down.weight",
+      "sha256": "88972fcc8ec201c401f14ae68e31742157b49e8a949b483764c00086d0a5b296"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000500.pt",
+      "tensor": "blocks.3.mlp.down.weight",
+      "sha256": "b9b5fe74e251de8338e6145d0a75a4c2352e23710463a7667a8e8957df2f54b0"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step000500.pt",
+      "tensor": "blocks.7.mlp.down.weight",
+      "sha256": "80edc1d97bcf00e17e457e71f3434443d7efb3f21c556fea4fead8f2eee3f6f3"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step001300.pt",
+      "tensor": "blocks.0.mlp.down.weight",
+      "sha256": "23356786678885f399a4b9f917bc291abb6c3c6b8ba8109f7eed7048d439f42f"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step001300.pt",
+      "tensor": "blocks.3.mlp.down.weight",
+      "sha256": "246c4da4e92f41e61162783d4f2737f392990179a4eeea8b019824566282e444"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/M_lr0.007_s260925_l40s/scientific/kept/step001300.pt",
+      "tensor": "blocks.7.mlp.down.weight",
+      "sha256": "f7409d12abf8561d1daaaefebb39b7126d880c37537f5c9345ecea7b07b285f4"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000010.pt",
+      "tensor": "blocks.0.mlp.down.weight",
+      "sha256": "6c1251c8d89cf131fad39489b71ffe30a8fa81be042ca683a018164613d80983"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000010.pt",
+      "tensor": "blocks.3.mlp.down.weight",
+      "sha256": "3faaddee5b40e2298ee34cc8d72bcbc2b259f4c82a27c2b61672877c8dfbf276"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000010.pt",
+      "tensor": "blocks.7.mlp.down.weight",
+      "sha256": "eec5dd6ac9a47e00342047d3d2ef54e947d3622e648a3d14e384f3c67a19ac50"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000500.pt",
+      "tensor": "blocks.0.mlp.down.weight",
+      "sha256": "e772598ebe303e5406958e9b540edaedf28ad9ca43f240e9591d5dd8798a7f3a"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000500.pt",
+      "tensor": "blocks.3.mlp.down.weight",
+      "sha256": "813b97f1f9465923ddbc12c4dfc938ad84e10b4ed389a355da000131690b4cb7"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step000500.pt",
+      "tensor": "blocks.7.mlp.down.weight",
+      "sha256": "f06278143c7765956eb3a84f2117ea72638c66aaa07fa6c9e624569bd06d15c4"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step001300.pt",
+      "tensor": "blocks.0.mlp.down.weight",
+      "sha256": "76ed0b0ecb9f2a866ade0c7cd5077ab31ee2a953faf8af2124259f0484305814"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step001300.pt",
+      "tensor": "blocks.3.mlp.down.weight",
+      "sha256": "c4e083b05bb65e3cffe52bd3a97b418de59351a832ff3863ef5bccbc1951b072"
+    },
+    {
+      "checkpoint": "logs/muon_spectra/soaudit_traj_20260926/PD_a0.25_lr0.01_s260925_ada/scientific/kept/step001300.pt",
+      "tensor": "blocks.7.mlp.down.weight",
+      "sha256": "d79a17c37e665fe2ccb76fe04a6e9b537ce1ad5d6a8da0b316afd8db0becd8ef"
+    }
+  ],
+  "script_sha256": "5762ba936e11d1f70e2160f34acc619e15d1e1bf8cbd2fd95e5cc08f1e63974c",
+  "undefined_contrasts": 0,
+  "scope": "Retrospective individual-up tangent decomposition only; pooled sequence energies, not tokenwise early-layer causal attributions or finite joint displacements."
+}
